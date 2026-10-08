@@ -1,0 +1,488 @@
+<!-- include document-head.html"-->
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Leave management</h1>
+          <ol class="breadcrumb mb-1">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">
+              <a href="hrm-dashboard.html">HRM</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Leaves</li>
+          </ol>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xxl-3 col-sm-6">
+              <section
+                class="card custom-card border border-opacity-25 border-4 border-warning"
+              >
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <div>
+                      <span class="text-muted fs-12">PENDING REVIEW</span>
+                      <div class="d-flex align-items-baseline gap-2 mt-2">
+                        <strong class="fs-28 fw-semibold lh-1">6</strong
+                        ><span class="text-muted fs-12">requests</span>
+                      </div>
+                      <span class="text-muted fs-12 d-block mt-2"
+                        >Across 4 departments</span
+                      >
+                    </div>
+                    <span
+                      class="avatar avatar-md bg-warning-transparent text-warning rounded-circle"
+                      ><i class="ri-calendar-event-line fs-18"></i
+                    ></span>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-3 col-sm-6">
+              <section
+                class="card custom-card border border-opacity-25 border-4 border-success"
+              >
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <div>
+                      <span class="text-muted fs-12">APPROVED THIS MONTH</span>
+                      <div class="d-flex align-items-baseline gap-2 mt-2">
+                        <strong class="fs-28 fw-semibold lh-1">42</strong
+                        ><span class="text-muted fs-12">requests</span>
+                      </div>
+                      <span class="text-muted fs-12 d-block mt-2"
+                        >Processed in September</span
+                      >
+                    </div>
+                    <span
+                      class="avatar avatar-md bg-success-transparent text-success rounded-circle"
+                      ><i class="ri-checkbox-circle-line fs-18"></i
+                    ></span>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-3 col-sm-6">
+              <section
+                class="card custom-card border border-opacity-25 border-4 border-info"
+              >
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <div>
+                      <span class="text-muted fs-12">PEOPLE AWAY TODAY</span>
+                      <div class="d-flex align-items-baseline gap-2 mt-2">
+                        <strong class="fs-28 fw-semibold lh-1">38</strong
+                        ><span class="text-muted fs-12">employees</span>
+                      </div>
+                      <span class="text-muted fs-12 d-block mt-2"
+                        >Across all locations</span
+                      >
+                    </div>
+                    <span
+                      class="avatar avatar-md bg-info-transparent text-info rounded-circle"
+                      ><i class="ri-user-unfollow-line fs-18"></i
+                    ></span>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-3 col-sm-6">
+              <section
+                class="card custom-card border border-opacity-25 border-4 border-secondary"
+              >
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <div>
+                      <span class="text-muted fs-12">NEXT SCHEDULED LEAVE</span>
+                      <div class="fs-24 fw-semibold lh-1 mt-2">Oct 02</div>
+                      <span class="text-muted fs-12 d-block mt-2"
+                        >Sofia Martinez</span
+                      >
+                    </div>
+                    <span
+                      class="avatar avatar-md bg-secondary-transparent text-secondary rounded-circle"
+                      ><i class="ri-calendar-check-line fs-18"></i
+                    ></span>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xxl-8">
+              <section class="card custom-card">
+                <div
+                  class="card-header justify-content-between flex-wrap gap-2"
+                >
+                  <div>
+                    <div class="card-title mb-1">Leave requests</div>
+                    <span class="text-muted fs-12"
+                      >Review upcoming and recently processed time off</span
+                    >
+                  </div>
+                  <span class="badge bg-warning-transparent text-warning"
+                    >6 pending</span
+                  >
+                </div>
+                <div class="table-responsive">
+                  <table
+                    class="table text-nowrap table-hover align-middle mb-0"
+                  >
+                    <thead>
+                      <tr>
+                        <th scope="col">Employee</th>
+                        <th scope="col">Leave type</th>
+                        <th scope="col">Dates</th>
+                        <th scope="col">Days</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">
+                          <span class="visually-hidden">Employee profile</span>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="d-flex align-items-center gap-2">
+                            <span class="avatar avatar-sm avatar-rounded"
+                              ><img src="../assets/images/users/1.jpg" alt=""
+                            /></span>
+                            <div>
+                              <div class="fw-semibold fs-13">
+                                Sofia Martinez
+                              </div>
+                              <div class="text-muted fs-12">
+                                Product &amp; Engineering
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td>Annual leave</td>
+                        <td>Oct 02&ndash;04, 2026</td>
+                        <td>3</td>
+                        <td>
+                          <span
+                            class="badge bg-warning-transparent text-warning"
+                            >Pending</span
+                          >
+                        </td>
+                        <td>
+                          <a
+                            href="staff-profile.html"
+                            class="btn btn-sm btn-light"
+                            aria-label="View Sofia Martinez leave details"
+                            ><i class="ri-arrow-right-up-line"></i
+                          ></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex align-items-center gap-2">
+                            <span class="avatar avatar-sm avatar-rounded"
+                              ><img src="../assets/images/users/10.jpg" alt=""
+                            /></span>
+                            <div>
+                              <div class="fw-semibold fs-13">Ethan Wilson</div>
+                              <div class="text-muted fs-12">
+                                General &amp; Administration
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td>Personal leave</td>
+                        <td>Oct 03, 2026</td>
+                        <td>1</td>
+                        <td>
+                          <span
+                            class="badge bg-success-transparent text-success"
+                            >Approved</span
+                          >
+                        </td>
+                        <td>
+                          <a
+                            href="staff-profile.html"
+                            class="btn btn-sm btn-light"
+                            aria-label="View Ethan Wilson leave details"
+                            ><i class="ri-arrow-right-up-line"></i
+                          ></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex align-items-center gap-2">
+                            <span class="avatar avatar-sm avatar-rounded"
+                              ><img src="../assets/images/users/12.jpg" alt=""
+                            /></span>
+                            <div>
+                              <div class="fw-semibold fs-13">Priya Nair</div>
+                              <div class="text-muted fs-12">Operations</div>
+                            </div>
+                          </div>
+                        </td>
+                        <td>Annual leave</td>
+                        <td>Oct 07&ndash;11, 2026</td>
+                        <td>5</td>
+                        <td>
+                          <span
+                            class="badge bg-warning-transparent text-warning"
+                            >Pending</span
+                          >
+                        </td>
+                        <td>
+                          <a
+                            href="staff-profile.html"
+                            class="btn btn-sm btn-light"
+                            aria-label="View Priya Nair leave details"
+                            ><i class="ri-arrow-right-up-line"></i
+                          ></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex align-items-center gap-2">
+                            <span class="avatar avatar-sm avatar-rounded"
+                              ><img src="../assets/images/users/13.jpg" alt=""
+                            /></span>
+                            <div>
+                              <div class="fw-semibold fs-13">Amir Patel</div>
+                              <div class="text-muted fs-12">
+                                Product &amp; Engineering
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td>Sick leave</td>
+                        <td>Sep 24, 2026</td>
+                        <td>1</td>
+                        <td>
+                          <span
+                            class="badge bg-success-transparent text-success"
+                            >Approved</span
+                          >
+                        </td>
+                        <td>
+                          <a
+                            href="staff-profile.html"
+                            class="btn btn-sm btn-light"
+                            aria-label="View Amir Patel leave details"
+                            ><i class="ri-arrow-right-up-line"></i
+                          ></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex align-items-center gap-2">
+                            <span class="avatar avatar-sm avatar-rounded"
+                              ><img src="../assets/images/users/18.jpg" alt=""
+                            /></span>
+                            <div>
+                              <div class="fw-semibold fs-13">Nina Park</div>
+                              <div class="text-muted fs-12">
+                                General &amp; Administration
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td>Annual leave</td>
+                        <td>Oct 14&ndash;18, 2026</td>
+                        <td>5</td>
+                        <td>
+                          <span
+                            class="badge bg-warning-transparent text-warning"
+                            >Pending</span
+                          >
+                        </td>
+                        <td>
+                          <a
+                            href="staff-profile.html"
+                            class="btn btn-sm btn-light"
+                            aria-label="View Nina Park leave details"
+                            ><i class="ri-arrow-right-up-line"></i
+                          ></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex align-items-center gap-2">
+                            <span class="avatar avatar-sm avatar-rounded"
+                              ><img src="../assets/images/users/15.jpg" alt=""
+                            /></span>
+                            <div>
+                              <div class="fw-semibold fs-13">Liam Cooper</div>
+                              <div class="text-muted fs-12">
+                                Sales &amp; Marketing
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td>Unpaid leave</td>
+                        <td>Oct 06&ndash;07, 2026</td>
+                        <td>2</td>
+                        <td>
+                          <span
+                            class="badge bg-warning-transparent text-warning"
+                            >Pending</span
+                          >
+                        </td>
+                        <td>
+                          <a
+                            href="staff-profile.html"
+                            class="btn btn-sm btn-light"
+                            aria-label="View Liam Cooper leave details"
+                            ><i class="ri-arrow-right-up-line"></i
+                          ></a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div
+                  class="card-footer d-flex justify-content-between align-items-center"
+                >
+                  <span class="text-muted fs-12">Showing 6 recent requests</span
+                  ><a href="leave-create.html" class="btn btn-sm btn-light"
+                    >Create request <i class="ri-arrow-right-line ms-1"></i
+                  ></a>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-xxl-4">
+              <section class="card custom-card mb-3">
+                <div class="card-header justify-content-between">
+                  <div class="card-title">Away today</div>
+                  <span class="badge bg-info-transparent text-info"
+                    >38 people</span
+                  >
+                </div>
+                <div class="card-body p-0">
+                  <p class="text-muted fs-12 mb-0 pt-3 px-3">
+                    A sample of approved leave across the team.
+                  </p>
+                  <div
+                    class="d-flex align-items-center gap-3 p-3 border-bottom"
+                  >
+                    <span class="avatar avatar-md avatar-rounded"
+                      ><img src="../assets/images/users/15.jpg" alt=""
+                    /></span>
+                    <div class="flex-fill">
+                      <div class="fw-semibold fs-13">Liam Cooper</div>
+                      <div class="text-muted fs-12">
+                        Sales &amp; Marketing &middot; Personal leave
+                      </div>
+                    </div>
+                    <span class="text-muted fs-12">Returns Sep 28</span>
+                  </div>
+                  <div
+                    class="d-flex align-items-center gap-3 p-3 border-bottom"
+                  >
+                    <span class="avatar avatar-md avatar-rounded"
+                      ><img src="../assets/images/users/6.jpg" alt=""
+                    /></span>
+                    <div class="flex-fill">
+                      <div class="fw-semibold fs-13">Grace Kim</div>
+                      <div class="text-muted fs-12">
+                        Operations &middot; Annual leave
+                      </div>
+                    </div>
+                    <span class="text-muted fs-12">Returns Sep 29</span>
+                  </div>
+                  <div class="d-flex align-items-center p-3 gap-3">
+                    <span class="avatar avatar-md avatar-rounded"
+                      ><img src="../assets/images/users/11.jpg" alt=""
+                    /></span>
+                    <div class="flex-fill">
+                      <div class="fw-semibold fs-13">Daniel Brooks</div>
+                      <div class="text-muted fs-12">
+                        Engineering &middot; Sick leave
+                      </div>
+                    </div>
+                    <span class="text-muted fs-12">Returns Sep 28</span>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <a href="attendance.html" class="fs-12 fw-medium"
+                    >View attendance <i class="ri-arrow-right-line"></i
+                  ></a>
+                </div>
+              </section>
+
+              <section class="card custom-card">
+                <div class="card-header justify-content-between">
+                  <div class="card-title">Upcoming team leave</div>
+                  <span class="text-muted fs-12">Next 2 weeks</span>
+                </div>
+                <div class="card-body p-0">
+                  <div class="d-flex gap-3 align-items-start p-3 border-bottom">
+                    <span
+                      class="avatar avatar-sm bg-secondary-transparent text-secondary rounded-circle"
+                      ><i class="ri-calendar-event-line fs-16"></i
+                    ></span>
+                    <div class="flex-fill">
+                      <div class="fw-semibold fs-13">Sofia Martinez</div>
+                      <div class="text-muted fs-12">
+                        Oct 02&ndash;04 &middot; Annual leave
+                      </div>
+                    </div>
+                    <span class="badge bg-warning-transparent text-warning"
+                      >Pending</span
+                    >
+                  </div>
+                  <div class="d-flex gap-3 align-items-start p-3 border-bottom">
+                    <span
+                      class="avatar avatar-sm bg-info-transparent text-info rounded-circle"
+                      ><i class="ri-calendar-event-line fs-16"></i
+                    ></span>
+                    <div class="flex-fill">
+                      <div class="fw-semibold fs-13">Ethan Wilson</div>
+                      <div class="text-muted fs-12">
+                        Oct 03 &middot; Personal leave
+                      </div>
+                    </div>
+                    <span class="badge bg-success-transparent text-success"
+                      >Approved</span
+                    >
+                  </div>
+                  <div class="d-flex gap-3 align-items-start p-3">
+                    <span
+                      class="avatar avatar-sm bg-success-transparent text-success rounded-circle"
+                      ><i class="ri-calendar-event-line fs-16"></i
+                    ></span>
+                    <div class="flex-fill">
+                      <div class="fw-semibold fs-13">Liam Cooper</div>
+                      <div class="text-muted fs-12">
+                        Oct 06&ndash;07 &middot; Unpaid leave
+                      </div>
+                    </div>
+                    <span class="badge bg-warning-transparent text-warning"
+                      >Pending</span
+                    >
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <a href="leave-create.html" class="btn btn-light w-100"
+                    >Submit a leave request</a
+                  >
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"-->
+    <script src="../assets/js/app-interactions.js"></script>
+    <!-- include appearance-customizer-scripts.html"-->
+  </body>
+</html>

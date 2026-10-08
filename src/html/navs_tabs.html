@@ -1,0 +1,1939 @@
+<!-- include document-head.html"-->
+    <link
+      rel="stylesheet"
+      href="../assets/libs/prismjs/themes/prism-coy.min.css"
+    />
+  </head>
+
+  <body class="navs-tabs-demo-page">
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main data-markup-examples class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Navigation & tabs</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Components</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Navigation & tabs
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Project workspace</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Switch between a project summary, delivery tasks, and
+                      documents.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="">
+                    <div class="">
+                      <ul
+                        class="nav nav-tabs mb-3 flex-wrap gap-1"
+                        role="tablist"
+                        aria-label="Project workspace"
+                      >
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link active"
+                            id="nav-demo-0-0-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#nav-demo-0-0"
+                            type="button"
+                            role="tab"
+                            aria-controls="nav-demo-0-0"
+                            aria-selected="true"
+                          >
+                            <i
+                              class="ri-layout-line me-1"
+                              aria-hidden="true"
+                            ></i
+                            >Overview
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="nav-demo-0-1-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#nav-demo-0-1"
+                            type="button"
+                            role="tab"
+                            aria-controls="nav-demo-0-1"
+                            aria-selected="false"
+                          >
+                            <i class="ri-task-line me-1" aria-hidden="true"></i
+                            >Tasks
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="nav-demo-0-2-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#nav-demo-0-2"
+                            type="button"
+                            role="tab"
+                            aria-controls="nav-demo-0-2"
+                            aria-selected="false"
+                          >
+                            <i
+                              class="ri-folder-line me-1"
+                              aria-hidden="true"
+                            ></i
+                            >Files
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="">
+                      <div class="tab-content">
+                        <div
+                          class="tab-pane p-0 border-0 fade show active"
+                          id="nav-demo-0-0"
+                          role="tabpanel"
+                          aria-labelledby="nav-demo-0-0-tab"
+                          tabindex="0"
+                        >
+                          <div class="border rounded p-3">
+                            <h3 class="fs-16 fw-semibold mb-2">
+                              Onboarding refresh
+                            </h3>
+                            <p class="text-muted fs-13 mb-3">
+                              A cross-functional project to simplify setup for
+                              new workspace administrators.
+                            </p>
+                            <a href="profile.html" class="btn btn-light btn-sm"
+                              >Meet the project lead<i
+                                class="ri-arrow-right-line ms-1"
+                                aria-hidden="true"
+                              ></i
+                            ></a>
+                          </div>
+                        </div>
+                        <div
+                          class="tab-pane p-0 border-0 fade"
+                          id="nav-demo-0-1"
+                          role="tabpanel"
+                          aria-labelledby="nav-demo-0-1-tab"
+                          tabindex="0"
+                        >
+                          <div class="border rounded p-3">
+                            <h3 class="fs-16 fw-semibold mb-2">
+                              Delivery checklist
+                            </h3>
+                            <p class="text-muted fs-13 mb-3">
+                              Research and design are complete. Implementation
+                              and release preparation are underway.
+                            </p>
+                            <a
+                              href="to-do-list.html"
+                              class="btn btn-light btn-sm"
+                              >Open tasks<i
+                                class="ri-arrow-right-line ms-1"
+                                aria-hidden="true"
+                              ></i
+                            ></a>
+                          </div>
+                        </div>
+                        <div
+                          class="tab-pane p-0 border-0 fade"
+                          id="nav-demo-0-2"
+                          role="tabpanel"
+                          aria-labelledby="nav-demo-0-2-tab"
+                          tabindex="0"
+                        >
+                          <div class="border rounded p-3">
+                            <h3 class="fs-16 fw-semibold mb-2">
+                              Shared project files
+                            </h3>
+                            <p class="text-muted fs-13 mb-3">
+                              Review the research summary, product roadmap, and
+                              release notes.
+                            </p>
+                            <a
+                              href="file-manager.html"
+                              class="btn btn-light btn-sm"
+                              >Browse files<i
+                                class="ri-arrow-right-line ms-1"
+                                aria-hidden="true"
+                              ></i
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Account navigation</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Vertical tabs for profile and security.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="row g-3">
+                    <div class="col-sm-4">
+                      <ul
+                        class="nav nav-pills flex-column gap-1"
+                        role="tablist"
+                        aria-label="Account navigation"
+                        aria-orientation="vertical"
+                      >
+                        <li class="nav-item" role="presentation">
+                          <button
+                            type="button"
+                            class="nav-link active"
+                            id="account-clean-0-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#account-clean-0"
+                            role="tab"
+                            aria-controls="account-clean-0"
+                            aria-selected="true"
+                          >
+                            Personal
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            type="button"
+                            class="nav-link"
+                            id="account-clean-1-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#account-clean-1"
+                            role="tab"
+                            aria-controls="account-clean-1"
+                            aria-selected="false"
+                          >
+                            Security
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            type="button"
+                            class="nav-link"
+                            id="account-clean-2-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#account-clean-2"
+                            role="tab"
+                            aria-controls="account-clean-2"
+                            aria-selected="false"
+                          >
+                            Activity
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-sm-8">
+                      <div class="tab-content">
+                        <div
+                          class="tab-pane p-0 border-0 fade show active"
+                          id="account-clean-0"
+                          role="tabpanel"
+                          aria-labelledby="account-clean-0-tab"
+                          tabindex="0"
+                        >
+                          <div class="border rounded p-3">
+                            <h3 class="fs-14 fw-semibold mb-2">
+                              Personal details
+                            </h3>
+                            <p class="text-muted fs-13 mb-3">
+                              Keep your role and contact details up to date.
+                            </p>
+                            <a
+                              class="btn btn-light btn-sm"
+                              href="profile-settings.html"
+                              >Open settings</a
+                            >
+                          </div>
+                        </div>
+                        <div
+                          class="tab-pane p-0 border-0 fade"
+                          id="account-clean-1"
+                          role="tabpanel"
+                          aria-labelledby="account-clean-1-tab"
+                          tabindex="0"
+                        >
+                          <div class="border rounded p-3">
+                            <h3 class="fs-14 fw-semibold mb-2">
+                              Security preferences
+                            </h3>
+                            <p class="text-muted fs-13 mb-3">
+                              Review sign-in and notification settings.
+                            </p>
+                            <a
+                              class="btn btn-light btn-sm"
+                              href="profile-settings.html"
+                              >Open settings</a
+                            >
+                          </div>
+                        </div>
+                        <div
+                          class="tab-pane p-0 border-0 fade"
+                          id="account-clean-2"
+                          role="tabpanel"
+                          aria-labelledby="account-clean-2-tab"
+                          tabindex="0"
+                        >
+                          <div class="border rounded p-3">
+                            <h3 class="fs-14 fw-semibold mb-2">
+                              Team activity
+                            </h3>
+                            <p class="text-muted fs-13 mb-3">
+                              Explore your latest contributions and milestones.
+                            </p>
+                            <a
+                              class="btn btn-light btn-sm"
+                              href="profile-settings.html"
+                              >Open settings</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Segmented tabs</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      A soft background keeps related choices together.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="">
+                    <div class="">
+                      <ul
+                        class="nav nav-pills bg-light p-2 rounded gap-1 mb-3"
+                        role="tablist"
+                        aria-label="Segmented tabs"
+                      >
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link active"
+                            type="button"
+                            id="tab-style-0-0-button"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-style-0-0"
+                            role="tab"
+                            aria-controls="tab-style-0-0"
+                            aria-selected="true"
+                          >
+                            <i
+                              class="ri-layout-line me-1"
+                              aria-hidden="true"
+                            ></i
+                            >Overview
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            type="button"
+                            id="tab-style-0-1-button"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-style-0-1"
+                            role="tab"
+                            aria-controls="tab-style-0-1"
+                            aria-selected="false"
+                          >
+                            <i class="ri-task-line me-1" aria-hidden="true"></i
+                            >Tasks
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            type="button"
+                            id="tab-style-0-2-button"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-style-0-2"
+                            role="tab"
+                            aria-controls="tab-style-0-2"
+                            aria-selected="false"
+                          >
+                            <i
+                              class="ri-folder-line me-1"
+                              aria-hidden="true"
+                            ></i
+                            >Files
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="">
+                      <div class="tab-content">
+                        <div
+                          class="tab-pane p-0 border-0 fade show active"
+                          id="tab-style-0-0"
+                          role="tabpanel"
+                          aria-labelledby="tab-style-0-0-button"
+                          tabindex="0"
+                        >
+                          <div class="border rounded p-3">
+                            <h3 class="fs-14 fw-semibold mb-2">
+                              Workspace summary
+                            </h3>
+                            <p class="text-muted fs-13 mb-3">
+                              Keep your project priorities, team updates, and
+                              next milestones in view.
+                            </p>
+                            <a href="profile.html" class="text-muted fs-13"
+                              >Open overview<i
+                                class="ri-arrow-right-line ms-1"
+                                aria-hidden="true"
+                              ></i
+                            ></a>
+                          </div>
+                        </div>
+                        <div
+                          class="tab-pane p-0 border-0 fade"
+                          id="tab-style-0-1"
+                          role="tabpanel"
+                          aria-labelledby="tab-style-0-1-button"
+                          tabindex="0"
+                        >
+                          <div class="border rounded p-3">
+                            <h3 class="fs-14 fw-semibold mb-2">
+                              Delivery tasks
+                            </h3>
+                            <p class="text-muted fs-13 mb-3">
+                              Review assigned work and plan the next project
+                              milestone.
+                            </p>
+                            <a href="to-do-list.html" class="text-muted fs-13"
+                              >Open tasks<i
+                                class="ri-arrow-right-line ms-1"
+                                aria-hidden="true"
+                              ></i
+                            ></a>
+                          </div>
+                        </div>
+                        <div
+                          class="tab-pane p-0 border-0 fade"
+                          id="tab-style-0-2"
+                          role="tabpanel"
+                          aria-labelledby="tab-style-0-2-button"
+                          tabindex="0"
+                        >
+                          <div class="border rounded p-3">
+                            <h3 class="fs-14 fw-semibold mb-2">
+                              Shared documents
+                            </h3>
+                            <p class="text-muted fs-13 mb-3">
+                              Organize research notes, roadmaps, and release
+                              documents.
+                            </p>
+                            <a href="file-manager.html" class="text-muted fs-13"
+                              >Open files<i
+                                class="ri-arrow-right-line ms-1"
+                                aria-hidden="true"
+                              ></i
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Underline tabs</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      A minimal navigation style with a subtle active indicator.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="">
+                    <div class="">
+                      <ul
+                        class="nav nav-underline gap-1 mb-3"
+                        role="tablist"
+                        aria-label="Underline tabs"
+                      >
+                        <li class="nav-item me-4" role="presentation">
+                          <button
+                            class="nav-link active"
+                            type="button"
+                            id="tab-style-1-0-button"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-style-1-0"
+                            role="tab"
+                            aria-controls="tab-style-1-0"
+                            aria-selected="true"
+                          >
+                            <i
+                              class="ri-layout-line me-1"
+                              aria-hidden="true"
+                            ></i
+                            >Overview
+                          </button>
+                        </li>
+                        <li class="nav-item me-4" role="presentation">
+                          <button
+                            class="nav-link"
+                            type="button"
+                            id="tab-style-1-1-button"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-style-1-1"
+                            role="tab"
+                            aria-controls="tab-style-1-1"
+                            aria-selected="false"
+                          >
+                            <i class="ri-task-line me-1" aria-hidden="true"></i
+                            >Tasks
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            type="button"
+                            id="tab-style-1-2-button"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-style-1-2"
+                            role="tab"
+                            aria-controls="tab-style-1-2"
+                            aria-selected="false"
+                          >
+                            <i
+                              class="ri-folder-line me-1"
+                              aria-hidden="true"
+                            ></i
+                            >Files
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="">
+                      <div class="tab-content">
+                        <div
+                          class="tab-pane p-0 border-0 fade show active"
+                          id="tab-style-1-0"
+                          role="tabpanel"
+                          aria-labelledby="tab-style-1-0-button"
+                          tabindex="0"
+                        >
+                          <div class="border rounded p-3">
+                            <h3 class="fs-14 fw-semibold mb-2">
+                              Workspace summary
+                            </h3>
+                            <p class="text-muted fs-13 mb-3">
+                              Keep your project priorities, team updates, and
+                              next milestones in view.
+                            </p>
+                            <a href="profile.html" class="text-muted fs-13"
+                              >Open overview<i
+                                class="ri-arrow-right-line ms-1"
+                                aria-hidden="true"
+                              ></i
+                            ></a>
+                          </div>
+                        </div>
+                        <div
+                          class="tab-pane p-0 border-0 fade"
+                          id="tab-style-1-1"
+                          role="tabpanel"
+                          aria-labelledby="tab-style-1-1-button"
+                          tabindex="0"
+                        >
+                          <div class="border rounded p-3">
+                            <h3 class="fs-14 fw-semibold mb-2">
+                              Delivery tasks
+                            </h3>
+                            <p class="text-muted fs-13 mb-3">
+                              Review assigned work and plan the next project
+                              milestone.
+                            </p>
+                            <a href="to-do-list.html" class="text-muted fs-13"
+                              >Open tasks<i
+                                class="ri-arrow-right-line ms-1"
+                                aria-hidden="true"
+                              ></i
+                            ></a>
+                          </div>
+                        </div>
+                        <div
+                          class="tab-pane p-0 border-0 fade"
+                          id="tab-style-1-2"
+                          role="tabpanel"
+                          aria-labelledby="tab-style-1-2-button"
+                          tabindex="0"
+                        >
+                          <div class="border rounded p-3">
+                            <h3 class="fs-14 fw-semibold mb-2">
+                              Shared documents
+                            </h3>
+                            <p class="text-muted fs-13 mb-3">
+                              Organize research notes, roadmaps, and release
+                              documents.
+                            </p>
+                            <a href="file-manager.html" class="text-muted fs-13"
+                              >Open files<i
+                                class="ri-arrow-right-line ms-1"
+                                aria-hidden="true"
+                              ></i
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Rounded pills</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Rounded buttons for compact section switching.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="">
+                    <div class="">
+                      <ul
+                        class="nav nav-pills gap-1 mb-3"
+                        role="tablist"
+                        aria-label="Rounded pills"
+                      >
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link rounded-pill active"
+                            type="button"
+                            id="tab-style-2-0-button"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-style-2-0"
+                            role="tab"
+                            aria-controls="tab-style-2-0"
+                            aria-selected="true"
+                          >
+                            <i
+                              class="ri-layout-line me-1"
+                              aria-hidden="true"
+                            ></i
+                            >Overview
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link rounded-pill"
+                            type="button"
+                            id="tab-style-2-1-button"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-style-2-1"
+                            role="tab"
+                            aria-controls="tab-style-2-1"
+                            aria-selected="false"
+                          >
+                            <i class="ri-task-line me-1" aria-hidden="true"></i
+                            >Tasks
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link rounded-pill"
+                            type="button"
+                            id="tab-style-2-2-button"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-style-2-2"
+                            role="tab"
+                            aria-controls="tab-style-2-2"
+                            aria-selected="false"
+                          >
+                            <i
+                              class="ri-folder-line me-1"
+                              aria-hidden="true"
+                            ></i
+                            >Files
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="">
+                      <div class="tab-content">
+                        <div
+                          class="tab-pane p-0 fade show active"
+                          id="tab-style-2-0"
+                          role="tabpanel"
+                          aria-labelledby="tab-style-2-0-button"
+                          tabindex="0"
+                        >
+                          <div class="border rounded p-3">
+                            <h3 class="fs-14 fw-semibold mb-2">
+                              Workspace summary
+                            </h3>
+                            <p class="text-muted fs-13 mb-3">
+                              Keep your project priorities, team updates, and
+                              next milestones in view.
+                            </p>
+                            <a href="profile.html" class="text-muted fs-13"
+                              >Open overview<i
+                                class="ri-arrow-right-line ms-1"
+                                aria-hidden="true"
+                              ></i
+                            ></a>
+                          </div>
+                        </div>
+                        <div
+                          class="tab-pane p-0 fade"
+                          id="tab-style-2-1"
+                          role="tabpanel"
+                          aria-labelledby="tab-style-2-1-button"
+                          tabindex="0"
+                        >
+                          <div class="border rounded p-3">
+                            <h3 class="fs-14 fw-semibold mb-2">
+                              Delivery tasks
+                            </h3>
+                            <p class="text-muted fs-13 mb-3">
+                              Review assigned work and plan the next project
+                              milestone.
+                            </p>
+                            <a href="to-do-list.html" class="text-muted fs-13"
+                              >Open tasks<i
+                                class="ri-arrow-right-line ms-1"
+                                aria-hidden="true"
+                              ></i
+                            ></a>
+                          </div>
+                        </div>
+                        <div
+                          class="tab-pane p-0 fade"
+                          id="tab-style-2-2"
+                          role="tabpanel"
+                          aria-labelledby="tab-style-2-2-button"
+                          tabindex="0"
+                        >
+                          <div class="border rounded p-3">
+                            <h3 class="fs-14 fw-semibold mb-2">
+                              Shared documents
+                            </h3>
+                            <p class="text-muted fs-13 mb-3">
+                              Organize research notes, roadmaps, and release
+                              documents.
+                            </p>
+                            <a href="file-manager.html" class="text-muted fs-13"
+                              >Open files<i
+                                class="ri-arrow-right-line ms-1"
+                                aria-hidden="true"
+                              ></i
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Right-aligned tabs</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Place navigation at the end of a section header.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="">
+                    <div class="">
+                      <ul
+                        class="nav nav-tabs justify-content-end gap-1 mb-3"
+                        role="tablist"
+                        aria-label="Right-aligned tabs"
+                      >
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link active"
+                            type="button"
+                            id="tab-style-3-0-button"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-style-3-0"
+                            role="tab"
+                            aria-controls="tab-style-3-0"
+                            aria-selected="true"
+                          >
+                            <i
+                              class="ri-layout-line me-1"
+                              aria-hidden="true"
+                            ></i
+                            >Overview
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            type="button"
+                            id="tab-style-3-1-button"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-style-3-1"
+                            role="tab"
+                            aria-controls="tab-style-3-1"
+                            aria-selected="false"
+                          >
+                            <i class="ri-task-line me-1" aria-hidden="true"></i
+                            >Tasks
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            type="button"
+                            id="tab-style-3-2-button"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-style-3-2"
+                            role="tab"
+                            aria-controls="tab-style-3-2"
+                            aria-selected="false"
+                          >
+                            <i
+                              class="ri-folder-line me-1"
+                              aria-hidden="true"
+                            ></i
+                            >Files
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="">
+                      <div class="tab-content">
+                        <div
+                          class="tab-pane p-0 border-0 fade show active"
+                          id="tab-style-3-0"
+                          role="tabpanel"
+                          aria-labelledby="tab-style-3-0-button"
+                          tabindex="0"
+                        >
+                          <div class="border rounded p-3">
+                            <h3 class="fs-14 fw-semibold mb-2">
+                              Workspace summary
+                            </h3>
+                            <p class="text-muted fs-13 mb-3">
+                              Keep your project priorities, team updates, and
+                              next milestones in view.
+                            </p>
+                            <a href="profile.html" class="text-muted fs-13"
+                              >Open overview<i
+                                class="ri-arrow-right-line ms-1"
+                                aria-hidden="true"
+                              ></i
+                            ></a>
+                          </div>
+                        </div>
+                        <div
+                          class="tab-pane p-0 border-0 fade"
+                          id="tab-style-3-1"
+                          role="tabpanel"
+                          aria-labelledby="tab-style-3-1-button"
+                          tabindex="0"
+                        >
+                          <div class="border rounded p-3">
+                            <h3 class="fs-14 fw-semibold mb-2">
+                              Delivery tasks
+                            </h3>
+                            <p class="text-muted fs-13 mb-3">
+                              Review assigned work and plan the next project
+                              milestone.
+                            </p>
+                            <a href="to-do-list.html" class="text-muted fs-13"
+                              >Open tasks<i
+                                class="ri-arrow-right-line ms-1"
+                                aria-hidden="true"
+                              ></i
+                            ></a>
+                          </div>
+                        </div>
+                        <div
+                          class="tab-pane p-0 border-0 fade"
+                          id="tab-style-3-2"
+                          role="tabpanel"
+                          aria-labelledby="tab-style-3-2-button"
+                          tabindex="0"
+                        >
+                          <div class="border rounded p-3">
+                            <h3 class="fs-14 fw-semibold mb-2">
+                              Shared documents
+                            </h3>
+                            <p class="text-muted fs-13 mb-3">
+                              Organize research notes, roadmaps, and release
+                              documents.
+                            </p>
+                            <a href="file-manager.html" class="text-muted fs-13"
+                              >Open files<i
+                                class="ri-arrow-right-line ms-1"
+                                aria-hidden="true"
+                              ></i
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Equal-width tabs</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Distribute tab controls evenly across the available width.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="">
+                    <div class="">
+                      <ul
+                        class="nav nav-tabs nav-justified gap-1 mb-3"
+                        role="tablist"
+                        aria-label="Equal-width tabs"
+                      >
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link active"
+                            type="button"
+                            id="tab-style-4-0-button"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-style-4-0"
+                            role="tab"
+                            aria-controls="tab-style-4-0"
+                            aria-selected="true"
+                          >
+                            <i
+                              class="ri-layout-line me-1"
+                              aria-hidden="true"
+                            ></i
+                            >Overview
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            type="button"
+                            id="tab-style-4-1-button"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-style-4-1"
+                            role="tab"
+                            aria-controls="tab-style-4-1"
+                            aria-selected="false"
+                          >
+                            <i class="ri-task-line me-1" aria-hidden="true"></i
+                            >Tasks
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            type="button"
+                            id="tab-style-4-2-button"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-style-4-2"
+                            role="tab"
+                            aria-controls="tab-style-4-2"
+                            aria-selected="false"
+                          >
+                            <i
+                              class="ri-folder-line me-1"
+                              aria-hidden="true"
+                            ></i
+                            >Files
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="">
+                      <div class="tab-content">
+                        <div
+                          class="tab-pane p-0 border-0 fade show active"
+                          id="tab-style-4-0"
+                          role="tabpanel"
+                          aria-labelledby="tab-style-4-0-button"
+                          tabindex="0"
+                        >
+                          <div class="border rounded p-3">
+                            <h3 class="fs-14 fw-semibold mb-2">
+                              Workspace summary
+                            </h3>
+                            <p class="text-muted fs-13 mb-3">
+                              Keep your project priorities, team updates, and
+                              next milestones in view.
+                            </p>
+                            <a href="profile.html" class="text-muted fs-13"
+                              >Open overview<i
+                                class="ri-arrow-right-line ms-1"
+                                aria-hidden="true"
+                              ></i
+                            ></a>
+                          </div>
+                        </div>
+                        <div
+                          class="tab-pane p-0 border-0 fade"
+                          id="tab-style-4-1"
+                          role="tabpanel"
+                          aria-labelledby="tab-style-4-1-button"
+                          tabindex="0"
+                        >
+                          <div class="border rounded p-3">
+                            <h3 class="fs-14 fw-semibold mb-2">
+                              Delivery tasks
+                            </h3>
+                            <p class="text-muted fs-13 mb-3">
+                              Review assigned work and plan the next project
+                              milestone.
+                            </p>
+                            <a href="to-do-list.html" class="text-muted fs-13"
+                              >Open tasks<i
+                                class="ri-arrow-right-line ms-1"
+                                aria-hidden="true"
+                              ></i
+                            ></a>
+                          </div>
+                        </div>
+                        <div
+                          class="tab-pane p-0 border-0 fade"
+                          id="tab-style-4-2"
+                          role="tabpanel"
+                          aria-labelledby="tab-style-4-2-button"
+                          tabindex="0"
+                        >
+                          <div class="border rounded p-3">
+                            <h3 class="fs-14 fw-semibold mb-2">
+                              Shared documents
+                            </h3>
+                            <p class="text-muted fs-13 mb-3">
+                              Organize research notes, roadmaps, and release
+                              documents.
+                            </p>
+                            <a href="file-manager.html" class="text-muted fs-13"
+                              >Open files<i
+                                class="ri-arrow-right-line ms-1"
+                                aria-hidden="true"
+                              ></i
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Icon-only tabs</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Compact navigation with accessible names.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="">
+                    <div class="">
+                      <ul
+                        class="nav nav-pills nav-icon-pills gap-1 mb-3"
+                        role="tablist"
+                        aria-label="Icon-only tabs"
+                      >
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link active"
+                            type="button"
+                            id="tab-style-5-0-button"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-style-5-0"
+                            role="tab"
+                            aria-controls="tab-style-5-0"
+                            aria-selected="true"
+                            aria-label="Overview"
+                          >
+                            <i class="ri-layout-line" aria-hidden="true"></i>
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            type="button"
+                            id="tab-style-5-1-button"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-style-5-1"
+                            role="tab"
+                            aria-controls="tab-style-5-1"
+                            aria-selected="false"
+                            aria-label="Tasks"
+                          >
+                            <i class="ri-task-line" aria-hidden="true"></i>
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            type="button"
+                            id="tab-style-5-2-button"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-style-5-2"
+                            role="tab"
+                            aria-controls="tab-style-5-2"
+                            aria-selected="false"
+                            aria-label="Files"
+                          >
+                            <i class="ri-folder-line" aria-hidden="true"></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="">
+                      <div class="tab-content">
+                        <div
+                          class="tab-pane p-0 border-0 fade show active"
+                          id="tab-style-5-0"
+                          role="tabpanel"
+                          aria-labelledby="tab-style-5-0-button"
+                          tabindex="0"
+                        >
+                          <div class="border rounded p-3">
+                            <h3 class="fs-14 fw-semibold mb-2">
+                              Workspace summary
+                            </h3>
+                            <p class="text-muted fs-13 mb-3">
+                              Keep your project priorities, team updates, and
+                              next milestones in view.
+                            </p>
+                            <a href="profile.html" class="text-muted fs-13"
+                              >Open overview<i
+                                class="ri-arrow-right-line ms-1"
+                                aria-hidden="true"
+                              ></i
+                            ></a>
+                          </div>
+                        </div>
+                        <div
+                          class="tab-pane p-0 border-0 fade"
+                          id="tab-style-5-1"
+                          role="tabpanel"
+                          aria-labelledby="tab-style-5-1-button"
+                          tabindex="0"
+                        >
+                          <div class="border rounded p-3">
+                            <h3 class="fs-14 fw-semibold mb-2">
+                              Delivery tasks
+                            </h3>
+                            <p class="text-muted fs-13 mb-3">
+                              Review assigned work and plan the next project
+                              milestone.
+                            </p>
+                            <a href="to-do-list.html" class="text-muted fs-13"
+                              >Open tasks<i
+                                class="ri-arrow-right-line ms-1"
+                                aria-hidden="true"
+                              ></i
+                            ></a>
+                          </div>
+                        </div>
+                        <div
+                          class="tab-pane p-0 border-0 fade"
+                          id="tab-style-5-2"
+                          role="tabpanel"
+                          aria-labelledby="tab-style-5-2-button"
+                          tabindex="0"
+                        >
+                          <div class="border rounded p-3">
+                            <h3 class="fs-14 fw-semibold mb-2">
+                              Shared documents
+                            </h3>
+                            <p class="text-muted fs-13 mb-3">
+                              Organize research notes, roadmaps, and release
+                              documents.
+                            </p>
+                            <a href="file-manager.html" class="text-muted fs-13"
+                              >Open files<i
+                                class="ri-arrow-right-line ms-1"
+                                aria-hidden="true"
+                              ></i
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Tabs with counts</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Show a small count beside each section label.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="">
+                    <div class="">
+                      <ul
+                        class="nav nav-tabs gap-1 mb-3"
+                        role="tablist"
+                        aria-label="Tabs with counts"
+                      >
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link active"
+                            type="button"
+                            id="tab-style-6-0-button"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-style-6-0"
+                            role="tab"
+                            aria-controls="tab-style-6-0"
+                            aria-selected="true"
+                          >
+                            <i
+                              class="ri-layout-line me-1"
+                              aria-hidden="true"
+                            ></i
+                            >Overview<span class="badge bg-light text-dark ms-2"
+                              >3</span
+                            >
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            type="button"
+                            id="tab-style-6-1-button"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-style-6-1"
+                            role="tab"
+                            aria-controls="tab-style-6-1"
+                            aria-selected="false"
+                          >
+                            <i class="ri-task-line me-1" aria-hidden="true"></i
+                            >Tasks<span class="badge bg-light text-dark ms-2"
+                              >12</span
+                            >
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            type="button"
+                            id="tab-style-6-2-button"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-style-6-2"
+                            role="tab"
+                            aria-controls="tab-style-6-2"
+                            aria-selected="false"
+                          >
+                            <i
+                              class="ri-folder-line me-1"
+                              aria-hidden="true"
+                            ></i
+                            >Files<span class="badge bg-light text-dark ms-2"
+                              >8</span
+                            >
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="">
+                      <div class="tab-content">
+                        <div
+                          class="tab-pane p-0 border-0 fade show active"
+                          id="tab-style-6-0"
+                          role="tabpanel"
+                          aria-labelledby="tab-style-6-0-button"
+                          tabindex="0"
+                        >
+                          <div class="border rounded p-3">
+                            <h3 class="fs-14 fw-semibold mb-2">
+                              Workspace summary
+                            </h3>
+                            <p class="text-muted fs-13 mb-3">
+                              Keep your project priorities, team updates, and
+                              next milestones in view.
+                            </p>
+                            <a href="profile.html" class="text-muted fs-13"
+                              >Open overview<i
+                                class="ri-arrow-right-line ms-1"
+                                aria-hidden="true"
+                              ></i
+                            ></a>
+                          </div>
+                        </div>
+                        <div
+                          class="tab-pane p-0 border-0 fade"
+                          id="tab-style-6-1"
+                          role="tabpanel"
+                          aria-labelledby="tab-style-6-1-button"
+                          tabindex="0"
+                        >
+                          <div class="border rounded p-3">
+                            <h3 class="fs-14 fw-semibold mb-2">
+                              Delivery tasks
+                            </h3>
+                            <p class="text-muted fs-13 mb-3">
+                              Review assigned work and plan the next project
+                              milestone.
+                            </p>
+                            <a href="to-do-list.html" class="text-muted fs-13"
+                              >Open tasks<i
+                                class="ri-arrow-right-line ms-1"
+                                aria-hidden="true"
+                              ></i
+                            ></a>
+                          </div>
+                        </div>
+                        <div
+                          class="tab-pane p-0 border-0 fade"
+                          id="tab-style-6-2"
+                          role="tabpanel"
+                          aria-labelledby="tab-style-6-2-button"
+                          tabindex="0"
+                        >
+                          <div class="border rounded p-3">
+                            <h3 class="fs-14 fw-semibold mb-2">
+                              Shared documents
+                            </h3>
+                            <p class="text-muted fs-13 mb-3">
+                              Organize research notes, roadmaps, and release
+                              documents.
+                            </p>
+                            <a href="file-manager.html" class="text-muted fs-13"
+                              >Open files<i
+                                class="ri-arrow-right-line ms-1"
+                                aria-hidden="true"
+                              ></i
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Vertical outline tabs</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      A stacked layout for a narrow settings column.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="row g-3">
+                    <div class="col-sm-4">
+                      <ul
+                        class="nav nav-pills flex-column gap-1 mb-3"
+                        role="tablist"
+                        aria-label="Vertical outline tabs"
+                        aria-orientation="vertical"
+                      >
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link active"
+                            type="button"
+                            id="tab-style-7-0-button"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-style-7-0"
+                            role="tab"
+                            aria-controls="tab-style-7-0"
+                            aria-selected="true"
+                          >
+                            <i
+                              class="ri-layout-line me-1"
+                              aria-hidden="true"
+                            ></i
+                            >Overview
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            type="button"
+                            id="tab-style-7-1-button"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-style-7-1"
+                            role="tab"
+                            aria-controls="tab-style-7-1"
+                            aria-selected="false"
+                          >
+                            <i class="ri-task-line me-1" aria-hidden="true"></i
+                            >Tasks
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            type="button"
+                            id="tab-style-7-2-button"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-style-7-2"
+                            role="tab"
+                            aria-controls="tab-style-7-2"
+                            aria-selected="false"
+                          >
+                            <i
+                              class="ri-folder-line me-1"
+                              aria-hidden="true"
+                            ></i
+                            >Files
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-sm-8">
+                      <div class="tab-content">
+                        <div
+                          class="tab-pane p-0 border-0 fade show active"
+                          id="tab-style-7-0"
+                          role="tabpanel"
+                          aria-labelledby="tab-style-7-0-button"
+                          tabindex="0"
+                        >
+                          <div class="border rounded p-3">
+                            <h3 class="fs-14 fw-semibold mb-2">
+                              Workspace summary
+                            </h3>
+                            <p class="text-muted fs-13 mb-3">
+                              Keep your project priorities, team updates, and
+                              next milestones in view.
+                            </p>
+                            <a href="profile.html" class="text-muted fs-13"
+                              >Open overview<i
+                                class="ri-arrow-right-line ms-1"
+                                aria-hidden="true"
+                              ></i
+                            ></a>
+                          </div>
+                        </div>
+                        <div
+                          class="tab-pane p-0 border-0 fade"
+                          id="tab-style-7-1"
+                          role="tabpanel"
+                          aria-labelledby="tab-style-7-1-button"
+                          tabindex="0"
+                        >
+                          <div class="border rounded p-3">
+                            <h3 class="fs-14 fw-semibold mb-2">
+                              Delivery tasks
+                            </h3>
+                            <p class="text-muted fs-13 mb-3">
+                              Review assigned work and plan the next project
+                              milestone.
+                            </p>
+                            <a href="to-do-list.html" class="text-muted fs-13"
+                              >Open tasks<i
+                                class="ri-arrow-right-line ms-1"
+                                aria-hidden="true"
+                              ></i
+                            ></a>
+                          </div>
+                        </div>
+                        <div
+                          class="tab-pane p-0 border-0 fade"
+                          id="tab-style-7-2"
+                          role="tabpanel"
+                          aria-labelledby="tab-style-7-2-button"
+                          tabindex="0"
+                        >
+                          <div class="border rounded p-3">
+                            <h3 class="fs-14 fw-semibold mb-2">
+                              Shared documents
+                            </h3>
+                            <p class="text-muted fs-13 mb-3">
+                              Organize research notes, roadmaps, and release
+                              documents.
+                            </p>
+                            <a href="file-manager.html" class="text-muted fs-13"
+                              >Open files<i
+                                class="ri-arrow-right-line ms-1"
+                                aria-hidden="true"
+                              ></i
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Billing views</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Full-width tabs distribute navigation evenly.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="">
+                    <div class="">
+                      <ul
+                        class="nav nav-pills nav-fill mb-3 flex-wrap gap-1"
+                        role="tablist"
+                        aria-label="Billing views"
+                      >
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link active"
+                            id="nav-demo-2-0-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#nav-demo-2-0"
+                            type="button"
+                            role="tab"
+                            aria-controls="nav-demo-2-0"
+                            aria-selected="true"
+                          >
+                            <i
+                              class="ri-file-list-line me-1"
+                              aria-hidden="true"
+                            ></i
+                            >Invoices
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="nav-demo-2-1-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#nav-demo-2-1"
+                            type="button"
+                            role="tab"
+                            aria-controls="nav-demo-2-1"
+                            aria-selected="false"
+                          >
+                            <i class="ri-add-line me-1" aria-hidden="true"></i
+                            >Create
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="nav-demo-2-2-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#nav-demo-2-2"
+                            type="button"
+                            role="tab"
+                            aria-controls="nav-demo-2-2"
+                            aria-selected="false"
+                          >
+                            <i
+                              class="ri-file-text-line me-1"
+                              aria-hidden="true"
+                            ></i
+                            >Details
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="">
+                      <div class="tab-content">
+                        <div
+                          class="tab-pane p-0 border-0 fade show active"
+                          id="nav-demo-2-0"
+                          role="tabpanel"
+                          aria-labelledby="nav-demo-2-0-tab"
+                          tabindex="0"
+                        >
+                          <div class="border rounded p-3">
+                            <h3 class="fs-16 fw-semibold mb-2">
+                              Client invoices
+                            </h3>
+                            <p class="text-muted fs-13 mb-3">
+                              Review payment status and upcoming due dates for
+                              client billing records.
+                            </p>
+                            <a
+                              href="invoice-list.html"
+                              class="btn btn-light btn-sm"
+                              >View invoices<i
+                                class="ri-arrow-right-line ms-1"
+                                aria-hidden="true"
+                              ></i
+                            ></a>
+                          </div>
+                        </div>
+                        <div
+                          class="tab-pane p-0 border-0 fade"
+                          id="nav-demo-2-1"
+                          role="tabpanel"
+                          aria-labelledby="nav-demo-2-1-tab"
+                          tabindex="0"
+                        >
+                          <div class="border rounded p-3">
+                            <h3 class="fs-16 fw-semibold mb-2">
+                              Prepare an invoice
+                            </h3>
+                            <p class="text-muted fs-13 mb-3">
+                              Add business details, client information, and line
+                              items in a clean editor.
+                            </p>
+                            <a
+                              href="invoice-create.html"
+                              class="btn btn-light btn-sm"
+                              >Create invoice<i
+                                class="ri-arrow-right-line ms-1"
+                                aria-hidden="true"
+                              ></i
+                            ></a>
+                          </div>
+                        </div>
+                        <div
+                          class="tab-pane p-0 border-0 fade"
+                          id="nav-demo-2-2"
+                          role="tabpanel"
+                          aria-labelledby="nav-demo-2-2-tab"
+                          tabindex="0"
+                        >
+                          <div class="border rounded p-3">
+                            <h3 class="fs-16 fw-semibold mb-2">
+                              Invoice breakdown
+                            </h3>
+                            <p class="text-muted fs-13 mb-3">
+                              Inspect services, totals, and payment instructions
+                              for an invoice.
+                            </p>
+                            <a
+                              href="invoice-details.html"
+                              class="btn btn-light btn-sm"
+                              >View details<i
+                                class="ri-arrow-right-line ms-1"
+                                aria-hidden="true"
+                              ></i
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Resource center</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Compact tabs with icons and clear destinations.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="">
+                    <div class="">
+                      <ul
+                        class="nav nav-tabs mb-3 flex-wrap gap-1"
+                        role="tablist"
+                        aria-label="Resource center"
+                      >
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link active"
+                            id="nav-demo-3-0-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#nav-demo-3-0"
+                            type="button"
+                            role="tab"
+                            aria-controls="nav-demo-3-0"
+                            aria-selected="true"
+                          >
+                            <i class="ri-team-line me-1" aria-hidden="true"></i
+                            >People
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="nav-demo-3-1-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#nav-demo-3-1"
+                            type="button"
+                            role="tab"
+                            aria-controls="nav-demo-3-1"
+                            aria-selected="false"
+                          >
+                            <i
+                              class="ri-calendar-line me-1"
+                              aria-hidden="true"
+                            ></i
+                            >Calendar
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="nav-demo-3-2-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#nav-demo-3-2"
+                            type="button"
+                            role="tab"
+                            aria-controls="nav-demo-3-2"
+                            aria-selected="false"
+                          >
+                            <i
+                              class="ri-folder-line me-1"
+                              aria-hidden="true"
+                            ></i
+                            >Documents
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="">
+                      <div class="tab-content">
+                        <div
+                          class="tab-pane p-0 border-0 fade show active"
+                          id="nav-demo-3-0"
+                          role="tabpanel"
+                          aria-labelledby="nav-demo-3-0-tab"
+                          tabindex="0"
+                        >
+                          <div class="border rounded p-3">
+                            <h3 class="fs-16 fw-semibold mb-2">
+                              Connect with your team
+                            </h3>
+                            <p class="text-muted fs-13 mb-3">
+                              Find profile details, project ownership, and
+                              professional experience.
+                            </p>
+                            <a href="profile.html" class="btn btn-light btn-sm"
+                              >Open profile<i
+                                class="ri-arrow-right-line ms-1"
+                                aria-hidden="true"
+                              ></i
+                            ></a>
+                          </div>
+                        </div>
+                        <div
+                          class="tab-pane p-0 border-0 fade"
+                          id="nav-demo-3-1"
+                          role="tabpanel"
+                          aria-labelledby="nav-demo-3-1-tab"
+                          tabindex="0"
+                        >
+                          <div class="border rounded p-3">
+                            <h3 class="fs-16 fw-semibold mb-2">
+                              Plan the next milestone
+                            </h3>
+                            <p class="text-muted fs-13 mb-3">
+                              Review events and make room for workshops,
+                              reviews, and team sessions.
+                            </p>
+                            <a
+                              href="full-calendar.html"
+                              class="btn btn-light btn-sm"
+                              >View calendar<i
+                                class="ri-arrow-right-line ms-1"
+                                aria-hidden="true"
+                              ></i
+                            ></a>
+                          </div>
+                        </div>
+                        <div
+                          class="tab-pane p-0 border-0 fade"
+                          id="nav-demo-3-2"
+                          role="tabpanel"
+                          aria-labelledby="nav-demo-3-2-tab"
+                          tabindex="0"
+                        >
+                          <div class="border rounded p-3">
+                            <h3 class="fs-16 fw-semibold mb-2">
+                              Organize workspace assets
+                            </h3>
+                            <p class="text-muted fs-13 mb-3">
+                              Keep related project documents and shared files
+                              easy to find.
+                            </p>
+                            <a
+                              href="file-manager.html"
+                              class="btn btn-light btn-sm"
+                              >Browse documents<i
+                                class="ri-arrow-right-line ms-1"
+                                aria-hidden="true"
+                              ></i
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Simple workspace links</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Lightweight navigation with a disabled destination.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <nav class="nav flex-wrap gap-2" aria-label="Workspace links">
+                    <a class="nav-link" href="profile.html">Profile</a
+                    ><a class="nav-link" href="file-manager.html">Files</a
+                    ><a class="nav-link" href="to-do-list.html">Tasks</a
+                    ><span class="nav-link disabled" aria-disabled="true"
+                      >Archive unavailable</span
+                    >
+                  </nav>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Centered navigation</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      A balanced layout for related sections.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <nav
+                    class="nav nav-pills justify-content-center flex-wrap gap-2"
+                    aria-label="Centered workspace navigation"
+                  >
+                    <a class="nav-link" href="invoice-list.html">Invoices</a
+                    ><a class="nav-link" href="full-calendar.html">Calendar</a
+                    ><a class="nav-link" href="profile.html">People</a>
+                  </nav>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Navigation with a menu</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Keep secondary destinations in a dropdown.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <nav
+                    class="nav nav-pills gap-2"
+                    aria-label="Navigation with resources"
+                  >
+                    <a class="nav-link" href="profile.html">Team profile</a>
+                    <div class="nav-item dropdown">
+                      <button
+                        type="button"
+                        class="nav-link dropdown-toggle"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        Resources
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a class="dropdown-item" href="file-manager.html"
+                            >Shared files</a
+                          >
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="to-do-list.html"
+                            >Task workspace</a
+                          >
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="full-calendar.html"
+                            >Team calendar</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </nav>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Navigation toolbar</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Pair section links with a primary action.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="d-flex align-items-center justify-content-between flex-wrap gap-3"
+                  >
+                    <nav class="nav gap-1" aria-label="Billing navigation">
+                      <a class="nav-link" href="invoice-list.html"
+                        >All invoices</a
+                      ><a class="nav-link" href="invoice-details.html"
+                        >Invoice details</a
+                      >
+                    </nav>
+                    <a class="btn btn-dark btn-sm" href="invoice-create.html"
+                      ><i class="ri-add-line me-1" aria-hidden="true"></i>Create
+                      invoice</a
+                    >
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"-->
+    <!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/js/app-interactions.js"></script>
+    <script src="../assets/libs/prismjs/prism.js"></script>
+    <script src="../assets/js/prism-custom.js"></script>
+  </body>
+</html>

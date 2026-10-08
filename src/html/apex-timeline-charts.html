@@ -1,0 +1,174 @@
+<!-- include document-head.html"-->
+    <link rel="stylesheet" href="../assets/css/apex-timeline-charts.css" />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+
+      <div class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Timeline Charts</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">Charts</li>
+            <li class="breadcrumb-item">Apex Charts</li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Timeline Charts
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid timeline-workspace">
+          <div class="row">
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Project schedule</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Explore the planned dates for each delivery phase.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="timeline-basic"
+                    class="timeline-demo"
+                    role="group"
+                    aria-label="Project schedule chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Release roadmap</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Distinct colors identify milestones across the release
+                      window.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="timeline-colors"
+                    class="timeline-demo"
+                    role="group"
+                    aria-label="Release roadmap chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Team assignments</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Compare design and engineering schedules across projects.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="timeline-multi"
+                    class="timeline-demo"
+                    role="group"
+                    aria-label="Team assignments chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Overlapping work</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Track overlapping assignments within the same workstream.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="timeline-advanced"
+                    class="timeline-demo"
+                    role="group"
+                    aria-label="Overlapping work chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Shared resources</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Grouped rows show multiple bookings for each resource.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="timeline-grouped"
+                    class="timeline-demo"
+                    role="group"
+                    aria-label="Shared resources chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Estimate comparison</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Endpoints compare initial and revised effort estimates.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="dumbbell-chart"
+                    class="timeline-demo"
+                    role="group"
+                    aria-label="Estimate comparison chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <!-- include common-scripts.html"-->
+
+    <!-- include appearance-customizer-scripts.html"-->
+
+    <!-- Apex Charts JS -->
+    <script src="../assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- Used For Multiple Colored TImeline Chart -->
+
+    <!-- Internal Apex Timeline Charts JS -->
+    <script src="../assets/js/apexcharts-timeline.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

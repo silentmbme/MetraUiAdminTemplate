@@ -1,0 +1,308 @@
+<!-- include document-head.html"-->
+  </head>
+
+  <body class="invoice-details-page">
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Invoice details</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Pages</a></li>
+            <li class="breadcrumb-item">
+              <a href="invoice-list.html">Invoices</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Invoice details
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid invoice-details-workspace">
+          <div class="row align-items-start">
+            <div class="col-xl-8">
+              <article
+                class="card custom-card invoice-document"
+                id="invoice-document"
+              >
+                <div class="card-body p-0">
+                  <div class="invoice-document-top">
+                    <div class="invoice-brand-lockup">
+                      <span
+                        class="avatar avatar-lg avatar-rounded bg-primary text-white"
+                      >
+                        <img
+                          src="../assets/images/brand-logos/toggle-dark.png"
+                        />
+                      </span>
+                      <div>
+                        <strong>NexoraUI</strong><span>Technologies</span>
+                      </div>
+                    </div>
+                    <div class="invoice-document-heading">
+                      <span>Invoice</span>
+                      <h2>#INV-2026-0148</h2>
+                      <span
+                        class="badge bg-warning-transparent text-warning rounded-pill"
+                        ><i class="ri-time-line me-1" aria-hidden="true"></i
+                        >Payment pending</span
+                      >
+                    </div>
+                  </div>
+
+                  <div class="invoice-parties-grid">
+                    <section class="invoice-address-block">
+                      <span class="invoice-overline">Issued by</span>
+                      <h3>NexoraUI Technologies</h3>
+                      <p>
+                        1200 Market Street, Suite 400<br />San Francisco, CA
+                        94103, United States
+                      </p>
+                      <a href="mailto:billing@nexora.io">billing@nexora.io</a>
+                      <span>+1 (415) 555-0186</span>
+                    </section>
+                    <section class="invoice-address-block">
+                      <span class="invoice-overline">Billed to</span>
+                      <h3>Jack Miller</h3>
+                      <p>
+                        48 Covington Place<br />New Castle, DE 19720, United
+                        States
+                      </p>
+                      <a href="mailto:jack.miller@example.com"
+                        >jack.miller@example.com</a
+                      >
+                      <span>+1 (302) 555-0132</span>
+                    </section>
+                  </div>
+
+                  <div class="invoice-meta-strip">
+                    <div>
+                      <span>Invoice date</span><strong>Sep 28, 2026</strong>
+                    </div>
+                    <div>
+                      <span>Due date</span><strong>Oct 28, 2026</strong>
+                    </div>
+                    <div><span>Payment terms</span><strong>Net 30</strong></div>
+                    <div>
+                      <span>Currency</span><strong>USD / US Dollar</strong>
+                    </div>
+                  </div>
+
+                  <div
+                    class="invoice-document-items border-top mt-3 table-responsive"
+                  >
+                    <table
+                      class="table table-hover text-nowrap align-middle mb-0"
+                    >
+                      <thead>
+                        <tr>
+                          <th scope="col">Description</th>
+                          <th scope="col" class="text-center">Qty</th>
+                          <th scope="col" class="text-end">Rate</th>
+                          <th scope="col" class="text-end">Amount</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <strong>Product design</strong
+                            ><span class="d-block"
+                              >Website interface and component system</span
+                            >
+                          </td>
+                          <td class="text-center">8 hrs</td>
+                          <td class="text-end">$85.00</td>
+                          <td class="text-end fw-semibold">$680.00</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <strong>Frontend development</strong
+                            ><span class="d-block"
+                              >Responsive implementation and handoff</span
+                            >
+                          </td>
+                          <td class="text-center">12 hrs</td>
+                          <td class="text-end">$110.00</td>
+                          <td class="text-end fw-semibold">$1,320.00</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <div class="invoice-document-bottom">
+                    <section class="invoice-payment-note">
+                      <span class="invoice-overline">Payment instructions</span>
+                      <h3>
+                        <i
+                          class="ri-bank-line me-2 text-muted"
+                          aria-hidden="true"
+                        ></i
+                        >Bank transfer
+                      </h3>
+                      <p>
+                        Please include <strong>INV-2026-0148</strong> as the
+                        payment reference. Contact
+                        <a href="mailto:billing@nexora.io">billing@nexora.io</a>
+                        if you need assistance.
+                      </p>
+                    </section>
+                    <div class="invoice-totals">
+                      <div><span>Subtotal</span><strong>$2,000.00</strong></div>
+                      <div><span>Discount</span><strong>-$0.00</strong></div>
+                      <div>
+                        <span>Tax <small>(10%)</small></span
+                        ><strong>$200.00</strong>
+                      </div>
+                      <div class="invoice-grand-total">
+                        <span>Total due</span><strong>$2,200.00</strong>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="d-flex flex-wrap justify-content-end gap-2">
+                    <a href="invoice-create.html" class="btn btn-light btn-sm"
+                      ><i class="ri-edit-line me-1" aria-hidden="true"></i
+                      >Create invoice</a
+                    >
+                    <button
+                      class="btn btn-outline-light btn-sm"
+                      type="button"
+                      id="invoice-print"
+                    >
+                      <i class="ri-printer-line me-1" aria-hidden="true"></i
+                      >Print invoice
+                    </button>
+                    <button
+                      class="btn btn-dark btn-sm"
+                      type="button"
+                      id="invoice-send"
+                    >
+                      <i class="ri-mail-send-line me-1" aria-hidden="true"></i
+                      >Send reminder
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-xl-4">
+              <aside class="invoice-details-aside">
+                <section class="card custom-card invoice-payment-card">
+                  <div class="card-header justify-content-between">
+                    <div>
+                      <h2 class="card-title mb-1">Payment status</h2>
+                      <span class="text-muted fs-12"
+                        >Invoice #INV-2026-0148</span
+                      >
+                    </div>
+                    <span
+                      class="badge bg-warning-transparent text-warning rounded-pill"
+                      >Pending</span
+                    >
+                  </div>
+                  <div class="card-body">
+                    <div class="invoice-balance">
+                      <span>Outstanding balance</span><strong>$2,200.00</strong>
+                      <div class="progress progress-xs mt-3">
+                        <div
+                          class="progress-bar bg-dark"
+                          role="progressbar"
+                          style="width: 50%"
+                          aria-valuenow="0"
+                          aria-valuemin="50"
+                          aria-valuemax="100"
+                          aria-label="Invoice amount paid"
+                        ></div>
+                      </div>
+                      <div class="d-flex justify-content-between mt-2">
+                        <span>$0.00 paid</span><span>$2,200.00 total</span>
+                      </div>
+                    </div>
+                    <div class="invoice-aside-detail">
+                      <span
+                        ><i
+                          class="ri-calendar-event-line"
+                          aria-hidden="true"
+                        ></i
+                        >Due date</span
+                      ><strong>Oct 28, 2026</strong>
+                    </div>
+                    <div class="invoice-aside-detail">
+                      <span
+                        ><i class="ri-bank-card-line" aria-hidden="true"></i
+                        >Method</span
+                      ><strong>Bank transfer</strong>
+                    </div>
+                    <button
+                      class="btn btn-success w-100 mt-3"
+                      type="button"
+                      id="invoice-mark-paid"
+                    >
+                      <i class="ri-check-line me-1" aria-hidden="true"></i>Mark
+                      as paid
+                    </button>
+                  </div>
+                </section>
+
+                <section class="card custom-card invoice-client-card mt-3">
+                  <div class="card-header">
+                    <h2 class="card-title mb-0">Client</h2>
+                  </div>
+                  <div class="card-body">
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                      <span
+                        class="avatar avatar-md avatar-rounded bg-secondary-transparent text-secondary fw-semibold"
+                      >
+                        <img src="../assets/images/users/12.jpg" />
+                      </span>
+                      <div>
+                        <strong class="d-block">Jack Miller</strong
+                        ><span class="text-muted fs-12">Individual client</span>
+                      </div>
+                    </div>
+                    <a
+                      class="invoice-client-link"
+                      href="mailto:jack.miller@example.com"
+                      ><i class="ri-mail-line" aria-hidden="true"></i
+                      >jack.miller@example.com</a
+                    >
+                    <a class="invoice-client-link" href="tel:+13025550132"
+                      ><i class="ri-phone-line" aria-hidden="true"></i>+1 (302)
+                      555-0132</a
+                    >
+                    <a
+                      href="customers-list.html"
+                      class="btn btn-light w-100 mt-3"
+                      >View client record<i
+                        class="ri-arrow-right-line ms-1"
+                        aria-hidden="true"
+                      ></i
+                    ></a>
+                  </div>
+                </section>
+
+                <p
+                  class="invoice-details-feedback text-muted fs-12 mt-2 mb-0"
+                  id="invoice-details-feedback"
+                  role="status"
+                  aria-live="polite"
+                ></p>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"-->
+    <!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/js/invoice-details.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

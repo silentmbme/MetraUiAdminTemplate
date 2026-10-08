@@ -1,0 +1,174 @@
+<!-- include document-head.html"-->
+    <link rel="stylesheet" href="../assets/css/apex-rangearea-charts.css" />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+
+      <div class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Range Area Charts</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">Charts</li>
+            <li class="breadcrumb-item">Apex Charts</li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Range Area Charts
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid rangearea-workspace">
+          <div class="row">
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Delivery estimate</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      A shaded band shows the lower and upper task estimates.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="rangearea-basic"
+                    class="rangearea-demo"
+                    role="group"
+                    aria-label="Delivery estimate chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Actual within range</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Compare completed work against the estimated delivery
+                      band.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="rangearea-combo"
+                    class="rangearea-demo"
+                    role="group"
+                    aria-label="Actual within range chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Team capacity bands</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Compare available capacity ranges across two teams.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="rangearea-teams"
+                    class="rangearea-demo"
+                    role="group"
+                    aria-label="Team capacity bands chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Forecast window</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      A shaded future window shows the range of forecast
+                      outcomes.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="rangearea-forecast"
+                    class="rangearea-demo"
+                    role="group"
+                    aria-label="Forecast window chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Planned capacity</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Stepped ranges reflect changes between planning periods.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="rangearea-step"
+                    class="rangearea-demo"
+                    role="group"
+                    aria-label="Planned capacity chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Daily response range</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Explore the daily spread of response times with zoom
+                      controls.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="rangearea-datetime"
+                    class="rangearea-demo"
+                    role="group"
+                    aria-label="Daily response range chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <!-- include common-scripts.html"-->
+
+    <!-- include appearance-customizer-scripts.html"-->
+
+    <!-- Apex Charts JS -->
+    <script src="../assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- Internal Apex Range Area Charts JS -->
+    <script src="../assets/js/apexcharts-rangearea.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

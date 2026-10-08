@@ -1,0 +1,586 @@
+<!-- include document-head.html"-->
+    <link
+      rel="stylesheet"
+      href="../assets/libs/prismjs/themes/prism-coy.min.css"
+    />
+  </head>
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"--><!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"--><!-- include side-navigation.html"-->
+      <main data-markup-examples class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Ratings</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Base UI</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Ratings</li>
+          </ol>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6 col-xxl-4">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Detailed scoring</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Ten steps for a more granular quality assessment.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="overflow-auto py-2">
+                    <div
+                      id="rating-ten"
+                      data-rating-widget
+                      data-rating="7"
+                      data-step="1"
+                      data-max="10"
+                      data-readonly="false"
+                      data-size="22"
+                      role="slider"
+                      tabindex="0"
+                      aria-valuemin="0"
+                      aria-valuemax="10"
+                      aria-valuenow="7"
+                      aria-label="Quality score out of ten"
+                    ></div>
+                  </div>
+                  <p
+                    class="text-muted fs-12 mt-2 mb-0"
+                    id="rating-ten-feedback"
+                    role="status"
+                    aria-live="polite"
+                  >
+                    Your rating: 7 / 10
+                  </p>
+                </div>
+              </section>
+            </div>
+            <div class="col-md-6 col-xxl-4">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Half-star precision</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Use smaller steps for a more nuanced response.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="overflow-auto py-2">
+                    <div
+                      id="rating-half"
+                      data-rating-widget
+                      data-rating="3.5"
+                      data-step="0.5"
+                      data-max="5"
+                      data-readonly="false"
+                      data-size="28"
+                      role="slider"
+                      tabindex="0"
+                      aria-valuemin="0"
+                      aria-valuemax="5"
+                      aria-valuenow="3.5"
+                      aria-label="Half-star experience rating"
+                    ></div>
+                  </div>
+                  <p
+                    class="text-muted fs-12 mt-2 mb-0"
+                    id="rating-half-feedback"
+                    role="status"
+                    aria-live="polite"
+                  >
+                    Your rating: 3.5 / 5
+                  </p>
+                </div>
+              </section>
+            </div>
+            <div class="col-md-6 col-xxl-4">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Rate your experience</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      A straightforward five-star rating with instant feedback.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h3 class="fs-15 fw-semibold mb-3">
+                    How was your workspace experience?
+                  </h3>
+                  <div class="overflow-auto py-2">
+                    <div
+                      id="rating-basic"
+                      data-rating-widget
+                      data-rating="0"
+                      data-step="1"
+                      data-max="5"
+                      data-readonly="false"
+                      data-size="28"
+                      role="slider"
+                      tabindex="0"
+                      aria-valuemin="0"
+                      aria-valuemax="5"
+                      aria-valuenow="0"
+                      aria-label="Workspace experience"
+                    ></div>
+                  </div>
+                  <p
+                    class="text-muted fs-12 mt-2 mb-0"
+                    id="rating-basic-feedback"
+                    role="status"
+                    aria-live="polite"
+                  >
+                    Select a rating to get started.
+                  </p>
+                </div>
+              </section>
+            </div>
+            <div class="col-md-6 col-xxl-4">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Clear &amp; try again</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Reset your selection whenever you change your mind.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="overflow-auto py-2">
+                    <div
+                      id="rating-reset"
+                      data-rating-widget
+                      data-rating="4"
+                      data-step="1"
+                      data-max="5"
+                      data-readonly="false"
+                      data-size="28"
+                      role="slider"
+                      tabindex="0"
+                      aria-valuemin="0"
+                      aria-valuemax="5"
+                      aria-valuenow="4"
+                      aria-label="Resettable rating"
+                    ></div>
+                  </div>
+                  <p
+                    class="text-muted fs-12 mt-2 mb-0"
+                    id="rating-reset-feedback"
+                    role="status"
+                    aria-live="polite"
+                  >
+                    Your rating: 4 / 5
+                  </p>
+                  <button
+                    type="button"
+                    class="btn btn-outline-light btn-sm mt-3"
+                    data-reset-rating="rating-reset"
+                  >
+                    Clear rating
+                  </button>
+                </div>
+              </section>
+            </div>
+            <div class="col-md-6 col-xxl-4">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Community score</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      A read-only summary of customer feedback.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <span class="badge bg-success-transparent mb-3"
+                    >Highly rated</span
+                  >
+                  <div class="d-flex align-items-baseline gap-2 mb-2">
+                    <strong class="fs-32 fw-semibold">4.8</strong
+                    ><span class="text-muted fs-13">/ 5</span>
+                  </div>
+                  <div class="overflow-auto py-2">
+                    <div
+                      id="rating-community"
+                      data-rating-widget
+                      data-rating="4.8"
+                      data-step="0.1"
+                      data-max="5"
+                      data-readonly="true"
+                      data-size="28"
+                      role="img"
+                      aria-label="Community rating 4.8 out of 5"
+                    ></div>
+                  </div>
+                  <p
+                    class="text-muted fs-12 mt-2 mb-0"
+                    id="rating-community-feedback"
+                  >
+                    4.8 out of 5
+                  </p>
+                  <p class="text-muted fs-12 mt-3 mb-0">
+                    Based on 284 sample reviews
+                  </p>
+                </div>
+              </section>
+            </div>
+            <div class="col-md-6 col-xxl-4">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Compact presentation</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Smaller stars suit lists and supporting details.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="border rounded p-3">
+                    <h3 class="fs-14 fw-semibold mb-1">Atlas design system</h3>
+                    <p class="text-muted fs-12 mb-2">Component quality</p>
+                    <div class="overflow-auto py-2">
+                      <div
+                        id="rating-compact"
+                        data-rating-widget
+                        data-rating="4"
+                        data-step="1"
+                        data-max="5"
+                        data-readonly="false"
+                        data-size="20"
+                        role="slider"
+                        tabindex="0"
+                        aria-valuemin="0"
+                        aria-valuemax="5"
+                        aria-valuenow="4"
+                        aria-label="Component quality"
+                      ></div>
+                    </div>
+                    <p
+                      class="text-muted fs-12 mt-2 mb-0"
+                      id="rating-compact-feedback"
+                      role="status"
+                      aria-live="polite"
+                    >
+                      Your rating: 4 / 5
+                    </p>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-md-6 col-xxl-4">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Product feedback</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Pair a product image with a focused question.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex gap-3 align-items-center mb-3">
+                    <img
+                      src="../assets/images/ecommerce/png/1.png"
+                      alt="White lace-up sneakers"
+                      class="bg-light rounded p-2"
+                      style="width: 100px; height: 100px; object-fit: contain"
+                      loading="lazy"
+                    />
+                    <div>
+                      <h3 class="fs-15 fw-semibold mb-1">Everyday sneakers</h3>
+                      <p class="text-muted fs-12 mb-0">
+                        How would you rate this product?
+                      </p>
+                    </div>
+                  </div>
+                  <div class="overflow-auto py-2">
+                    <div
+                      id="rating-product"
+                      data-rating-widget
+                      data-rating="0"
+                      data-step="1"
+                      data-max="5"
+                      data-readonly="false"
+                      data-size="28"
+                      role="slider"
+                      tabindex="0"
+                      aria-valuemin="0"
+                      aria-valuemax="5"
+                      aria-valuenow="0"
+                      aria-label="Everyday sneakers rating"
+                    ></div>
+                  </div>
+                  <p
+                    class="text-muted fs-12 mt-2 mb-0"
+                    id="rating-product-feedback"
+                    role="status"
+                    aria-live="polite"
+                  >
+                    Select a rating to get started.
+                  </p>
+                </div>
+              </section>
+            </div>
+            <div class="col-md-6 col-xxl-4">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Review breakdown</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      A sample distribution puts the overall score in context.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex align-items-center gap-3 mb-3">
+                    <strong class="fs-28 fw-semibold">4.5</strong
+                    ><span class="text-muted fs-12">100 sample reviews</span>
+                  </div>
+                  <div class="d-flex align-items-center gap-3 mb-2">
+                    <span class="fs-12 text-muted text-nowrap">5 stars</span>
+                    <div
+                      class="progress progress-sm flex-grow-1"
+                      role="progressbar"
+                      aria-label="5-star reviews"
+                      aria-valuenow="65"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    >
+                      <div
+                        class="progress-bar bg-warning"
+                        style="width: 65%"
+                      ></div>
+                    </div>
+                    <span class="fs-12 text-muted" style="width: 32px"
+                      >65%</span
+                    >
+                  </div>
+                  <div class="d-flex align-items-center gap-3 mb-2">
+                    <span class="fs-12 text-muted text-nowrap">4 stars</span>
+                    <div
+                      class="progress progress-sm flex-grow-1"
+                      role="progressbar"
+                      aria-label="4-star reviews"
+                      aria-valuenow="25"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    >
+                      <div
+                        class="progress-bar bg-warning"
+                        style="width: 25%"
+                      ></div>
+                    </div>
+                    <span class="fs-12 text-muted" style="width: 32px"
+                      >25%</span
+                    >
+                  </div>
+                  <div class="d-flex align-items-center gap-3 mb-2">
+                    <span class="fs-12 text-muted text-nowrap">3 stars</span>
+                    <div
+                      class="progress progress-sm flex-grow-1"
+                      role="progressbar"
+                      aria-label="3-star reviews"
+                      aria-valuenow="5"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    >
+                      <div
+                        class="progress-bar bg-warning"
+                        style="width: 5%"
+                      ></div>
+                    </div>
+                    <span class="fs-12 text-muted" style="width: 32px">5%</span>
+                  </div>
+                  <div class="d-flex align-items-center gap-3 mb-2">
+                    <span class="fs-12 text-muted text-nowrap">2 stars</span>
+                    <div
+                      class="progress progress-sm flex-grow-1"
+                      role="progressbar"
+                      aria-label="2-star reviews"
+                      aria-valuenow="3"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    >
+                      <div
+                        class="progress-bar bg-warning"
+                        style="width: 3%"
+                      ></div>
+                    </div>
+                    <span class="fs-12 text-muted" style="width: 32px">3%</span>
+                  </div>
+                  <div class="d-flex align-items-center gap-3 mb-2">
+                    <span class="fs-12 text-muted text-nowrap">1 stars</span>
+                    <div
+                      class="progress progress-sm flex-grow-1"
+                      role="progressbar"
+                      aria-label="1-star reviews"
+                      aria-valuenow="2"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    >
+                      <div
+                        class="progress-bar bg-warning"
+                        style="width: 2%"
+                      ></div>
+                    </div>
+                    <span class="fs-12 text-muted" style="width: 32px">2%</span>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-md-12 col-xl-5">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Quick sentiment</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      A simple alternative when a star score feels too precise.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <fieldset>
+                    <legend class="fs-14 fw-semibold mb-3">
+                      How are you feeling about the update?
+                    </legend>
+                    <div class="d-flex flex-wrap gap-2">
+                      <input
+                        class="btn-check"
+                        type="radio"
+                        name="rating-sentiment"
+                        id="sentiment-0"
+                        value="Needs work"
+                      /><label
+                        class="btn btn-outline-success btn-sm"
+                        for="sentiment-0"
+                        ><i
+                          class="ri-emotion-unhappy-line me-1"
+                          aria-hidden="true"
+                        ></i
+                        >Needs work</label
+                      ><input
+                        class="btn-check"
+                        type="radio"
+                        name="rating-sentiment"
+                        id="sentiment-1"
+                        value="Good"
+                      /><label
+                        class="btn btn-outline-success btn-sm"
+                        for="sentiment-1"
+                        ><i
+                          class="ri-emotion-normal-line me-1"
+                          aria-hidden="true"
+                        ></i
+                        >Good</label
+                      ><input
+                        class="btn-check"
+                        type="radio"
+                        name="rating-sentiment"
+                        id="sentiment-2"
+                        value="Love it"
+                      /><label
+                        class="btn btn-outline-success btn-sm"
+                        for="sentiment-2"
+                        ><i
+                          class="ri-emotion-happy-line me-1"
+                          aria-hidden="true"
+                        ></i
+                        >Love it</label
+                      >
+                    </div>
+                  </fieldset>
+                  <p
+                    id="sentiment-feedback"
+                    role="status"
+                    aria-live="polite"
+                    class="text-muted fs-12 mt-3 mb-0"
+                  >
+                    Choose the response that fits best.
+                  </p>
+                </div>
+              </section>
+            </div>
+            <div class="col-md-12 col-xl-7">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Write a short review</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      A rating and a little context help make feedback useful.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <form id="rating-review-form">
+                    <h3 class="fs-15 fw-semibold mb-2">
+                      Share your workspace feedback
+                    </h3>
+                    <div class="overflow-auto py-2">
+                      <div
+                        id="rating-review"
+                        data-rating-widget
+                        data-rating="0"
+                        data-step="1"
+                        data-max="5"
+                        data-readonly="false"
+                        data-size="28"
+                        role="slider"
+                        tabindex="0"
+                        aria-valuemin="0"
+                        aria-valuemax="5"
+                        aria-valuenow="0"
+                        aria-label="Review rating"
+                      ></div>
+                    </div>
+                    <p
+                      class="text-muted fs-12 mt-2 mb-0"
+                      id="rating-review-feedback"
+                      role="status"
+                      aria-live="polite"
+                    >
+                      Select a rating to get started.
+                    </p>
+                    <label for="rating-review-comment" class="form-label mt-3"
+                      >Your review</label
+                    ><textarea
+                      id="rating-review-comment"
+                      class="form-control mb-3"
+                      rows="3"
+                      maxlength="500"
+                      placeholder="What worked well? What could improve?"
+                      required
+                    ></textarea
+                    ><button class="btn btn-primary btn-sm" type="submit">
+                      Submit demo review
+                    </button>
+                    <p
+                      id="review-feedback"
+                      role="status"
+                      aria-live="polite"
+                      class="text-muted fs-12 mt-2 mb-0"
+                    >
+                      Preview only. Reviews are not stored.
+                    </p>
+                  </form>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"--><!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"--><!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/js/app-interactions.js"></script>
+    <script src="../assets/libs/prismjs/prism.js"></script>
+    <script src="../assets/js/prism-custom.js"></script>
+    <script src="../assets/libs/rater-js/index.js"></script>
+    <script src="../assets/js/ratings.js"></script>
+  </body>
+</html>

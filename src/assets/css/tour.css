@@ -1,0 +1,19 @@
+body.tour-reference-active .shepherd-modal-overlay-container.shepherd-modal-is-visible { opacity:.55 !important; }
+.shepherd-element.workspace-tour { width:460px; max-width:calc(100vw - 32px); border-radius:16px; box-shadow:0 20px 70px rgba(0,0,0,.2); overflow:hidden; }
+.workspace-tour .shepherd-content { border-radius:16px; }
+.workspace-tour.shepherd-has-title .shepherd-content .shepherd-header { background:var(--theme-custom-white) !important; padding:30px 30px 12px !important; align-items:flex-start; }
+.workspace-tour .shepherd-title { font-size:19px; line-height:1.6; font-weight:600 !important; padding-right:16px; }
+.workspace-tour .shepherd-cancel-icon { width:26px; height:26px; border-radius:50%; background:var(--theme-default-background); color:var(--theme-text-muted); font-size:24px; line-height:1; margin-top:5px; flex-shrink:0; }
+.workspace-tour .shepherd-text { padding:20px 30px 30px; font-size:14px !important; line-height:1.85; }
+.workspace-tour .shepherd-text p { margin:0 0 20px; }
+.workspace-tour .shepherd-text p:last-child { margin-bottom:0; color:var(--theme-text-muted); }
+.workspace-tour .shepherd-footer { display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:16px; padding:24px 30px 30px; }
+.workspace-tour .shepherd-button { margin:0; border-radius:5px; background:var(--theme-primary-color) !important; color:var(--theme-default-text-color) !important; font-weight:500; }
+.workspace-tour .shepherd-button.shepherd-button-secondary { background:rgba(var(--theme-primary-rgb), 0.1) !important; }
+.workspace-tour .shepherd-button:disabled { opacity:.45; cursor:not-allowed; }
+.workspace-tour .shepherd-button:focus-visible { outline:2px solid var(--theme-primary-color); outline-offset:3px; }
+.workspace-tour-progress { display:flex; flex-direction:column; align-items:center; gap:9px; color:var(--theme-text-muted); font-size:12px; }
+.workspace-tour-dots { display:flex; gap:7px; }
+.workspace-tour-dot { width:9px; height:9px; border-radius:50%; background:var(--theme-default-border); }
+.workspace-tour-dot.is-active { background:var(--theme-primary-color); }
+@media (max-width:480px) { .workspace-tour.shepherd-has-title .shepherd-content .shepherd-header { padding:22px 22px 10px !important; } .workspace-tour .shepherd-text { padding:14px 22px 22px; } .workspace-tour .shepherd-footer { padding:16px 22px 22px; gap:10px; } }

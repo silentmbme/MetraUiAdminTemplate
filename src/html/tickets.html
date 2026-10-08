@@ -1,0 +1,513 @@
+<!-- include document-head.html"-->
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Ticket queue</h1>
+          <ol class="breadcrumb mb-1">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">
+              <a href="support-dashboard.html">Support center</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Tickets</li>
+          </ol>
+        </div>
+        <div class="container-fluid">
+          <div class="row g-3 mb-3">
+            <div class="col-sm-6 col-xxl-3">
+              <section class="card custom-card h-100">
+                <div class="card-body d-flex align-items-center gap-3">
+                  <span class="avatar avatar-lg bg-color-1 text-black rounded"
+                    ><i
+                      class="ri-inbox-archive-line fs-20"
+                      aria-hidden="true"
+                    ></i
+                  ></span>
+                  <div class="flex-fill">
+                    <span class="text-muted fs-12">Open tickets</span>
+                    <div class="d-flex align-items-baseline gap-2">
+                      <strong class="fs-24">186</strong
+                      ><span class="text-success fs-12"
+                        ><i class="ri-arrow-down-line" aria-hidden="true"></i>
+                        8.2%</span
+                      >
+                    </div>
+                  </div>
+                  <span class="badge bg-success-transparent text-success"
+                    >Queue</span
+                  >
+                </div>
+              </section>
+            </div>
+            <div class="col-sm-6 col-xxl-3">
+              <section class="card custom-card h-100">
+                <div class="card-body d-flex align-items-center gap-3">
+                  <span class="avatar avatar-lg bg-color-2 text-black rounded"
+                    ><i
+                      class="ri-alarm-warning-line fs-20"
+                      aria-hidden="true"
+                    ></i
+                  ></span>
+                  <div class="flex-fill">
+                    <span class="text-muted fs-12">SLA at risk</span>
+                    <div class="d-flex align-items-baseline gap-2">
+                      <strong class="fs-24">12</strong
+                      ><span class="text-muted fs-12">next hour</span>
+                    </div>
+                  </div>
+                  <span class="badge bg-danger-transparent text-danger"
+                    >Review</span
+                  >
+                </div>
+              </section>
+            </div>
+            <div class="col-sm-6 col-xxl-3">
+              <section class="card custom-card h-100">
+                <div class="card-body d-flex align-items-center gap-3">
+                  <span class="avatar avatar-lg bg-color-3 text-black rounded"
+                    ><i class="ri-user-follow-line fs-20" aria-hidden="true"></i
+                  ></span>
+                  <div class="flex-fill">
+                    <span class="text-muted fs-12">Unassigned</span>
+                    <div class="d-flex align-items-baseline gap-2">
+                      <strong class="fs-24">23</strong
+                      ><span class="text-muted fs-12">tickets</span>
+                    </div>
+                  </div>
+                  <span class="badge bg-warning-transparent text-warning"
+                    >Assign</span
+                  >
+                </div>
+              </section>
+            </div>
+            <div class="col-sm-6 col-xxl-3">
+              <section class="card custom-card h-100">
+                <div class="card-body d-flex align-items-center gap-3">
+                  <span class="avatar avatar-lg bg-color-4 text-black rounded"
+                    ><i
+                      class="ri-check-double-line fs-20"
+                      aria-hidden="true"
+                    ></i
+                  ></span>
+                  <div class="flex-fill">
+                    <span class="text-muted fs-12">Resolved today</span>
+                    <div class="d-flex align-items-baseline gap-2">
+                      <strong class="fs-24">74</strong
+                      ><span class="text-success fs-12">+11 vs avg.</span>
+                    </div>
+                  </div>
+                  <span class="badge bg-success-transparent text-success"
+                    >Today</span
+                  >
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <section class="card custom-card">
+            <div class="card-header justify-content-between flex-wrap gap-2">
+              <div>
+                <h2 class="card-title">All tickets</h2>
+              </div>
+              <div class="d-flex align-items-center gap-2 flex-wrap">
+                <button type="button" class="btn btn-sm btn-light">
+                  <i class="ri-download-2-line me-1" aria-hidden="true"></i
+                  >Export
+                </button>
+                <a href="ticket-create.html" class="btn btn-sm btn-dark"
+                  ><i class="ri-add-line me-1" aria-hidden="true"></i>New
+                  ticket</a
+                >
+              </div>
+            </div>
+            <div class="card-body border-bottom">
+              <div class="row g-3 align-items-end">
+                <div class="col-lg-5 col-xl-4">
+                  <label for="ticket-search" class="form-label"
+                    >Search tickets</label
+                  >
+                  <div class="input-group">
+                    <span class="input-group-text"
+                      ><i class="ri-search-line" aria-hidden="true"></i></span
+                    ><input
+                      id="ticket-search"
+                      type="search"
+                      class="form-control"
+                      placeholder="Ticket ID, subject, or customer"
+                      autocomplete="off"
+                    />
+                  </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                  <label for="ticket-status" class="form-label">Status</label>
+                  <select id="ticket-status" data-trigger class="form-select">
+                    <option value="">All statuses</option>
+                    <option>Open</option>
+                    <option>In progress</option>
+                    <option>Waiting on customer</option>
+                    <option>Waiting on engineering</option>
+                  </select>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                  <label for="ticket-priority" class="form-label"
+                    >Priority</label
+                  >
+                  <select id="ticket-priority" data-trigger class="form-select">
+                    <option value="">All priorities</option>
+                    <option>Urgent</option>
+                    <option>High</option>
+                    <option>Normal</option>
+                    <option>Low</option>
+                  </select>
+                </div>
+                <div class="col-lg-2 text-lg-end">
+                  <button
+                    type="button"
+                    id="ticket-reset"
+                    class="btn btn-light w-100"
+                  >
+                    Reset
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="card-body p-0">
+              <div class="table-responsive">
+                <table class="table table-hover text-nowrap align-middle mb-0">
+                  <thead>
+                    <tr>
+                      <th scope="col" class="ps-4">Ticket</th>
+                      <th scope="col">Customer</th>
+                      <th scope="col">Assigned to</th>
+                      <th scope="col">Created</th>
+                      <th scope="col">SLA due</th>
+                      <th scope="col">Priority</th>
+                      <th scope="col">Status</th>
+                      <th scope="col" class="text-end pe-4">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="ticket-rows">
+                    <tr data-status="In progress" data-priority="Urgent">
+                      <td class="ps-4">
+                        <a href="ticket-details.html" class="fw-semibold"
+                          >#SUP-2841</a
+                        ><span class="d-block text-muted fs-12"
+                          >Cannot access account after reset</span
+                        >
+                      </td>
+                      <td>Northstar Labs</td>
+                      <td>
+                        <div class="d-flex align-items-center gap-2">
+                          <span class="avatar avatar-xs avatar-rounded"
+                            ><img
+                              src="../assets/images/users/10.jpg"
+                              alt="" /></span
+                          >Priya Nair
+                        </div>
+                      </td>
+                      <td>Sep 26, 9:42 AM</td>
+                      <td><span class="text-danger fw-medium">18 min</span></td>
+                      <td>
+                        <span class="badge bg-danger-transparent text-danger"
+                          >Urgent</span
+                        >
+                      </td>
+                      <td>
+                        <span class="badge bg-warning-transparent text-warning"
+                          >In progress</span
+                        >
+                      </td>
+                      <td class="text-end pe-4">
+                        <a
+                          href="ticket-details.html"
+                          class="btn btn-sm btn-light"
+                          aria-label="View ticket SUP-2841"
+                          ><i class="ri-arrow-right-line" aria-hidden="true"></i
+                        ></a>
+                      </td>
+                    </tr>
+                    <tr data-status="Open" data-priority="High">
+                      <td class="ps-4">
+                        <a href="ticket-details.html" class="fw-semibold"
+                          >#SUP-2836</a
+                        ><span class="d-block text-muted fs-12"
+                          >Duplicate charge on September invoice</span
+                        >
+                      </td>
+                      <td>Meridian Works</td>
+                      <td>
+                        <div class="d-flex align-items-center gap-2">
+                          <span class="avatar avatar-xs avatar-rounded"
+                            ><img
+                              src="../assets/images/users/6.jpg"
+                              alt="" /></span
+                          >Daniel Kim
+                        </div>
+                      </td>
+                      <td>Sep 26, 8:16 AM</td>
+                      <td><span class="text-danger fw-medium">42 min</span></td>
+                      <td>
+                        <span class="badge bg-danger-transparent text-danger"
+                          >High</span
+                        >
+                      </td>
+                      <td>
+                        <span class="badge bg-info-transparent text-info"
+                          >Open</span
+                        >
+                      </td>
+                      <td class="text-end pe-4">
+                        <a
+                          href="ticket-details.html"
+                          class="btn btn-sm btn-light"
+                          aria-label="View ticket SUP-2836"
+                          ><i class="ri-arrow-right-line" aria-hidden="true"></i
+                        ></a>
+                      </td>
+                    </tr>
+                    <tr data-status="In progress" data-priority="High">
+                      <td class="ps-4">
+                        <a href="ticket-details.html" class="fw-semibold"
+                          >#SUP-2829</a
+                        ><span class="d-block text-muted fs-12"
+                          >Export report times out for large teams</span
+                        >
+                      </td>
+                      <td>Brightpath Health</td>
+                      <td>
+                        <div class="d-flex align-items-center gap-2">
+                          <span class="avatar avatar-xs avatar-rounded"
+                            ><img
+                              src="../assets/images/users/8.jpg"
+                              alt="" /></span
+                          >Mia Chen
+                        </div>
+                      </td>
+                      <td>Sep 25, 4:28 PM</td>
+                      <td>
+                        <span class="text-warning fw-medium">1h 24m</span>
+                      </td>
+                      <td>
+                        <span class="badge bg-warning-transparent text-warning"
+                          >High</span
+                        >
+                      </td>
+                      <td>
+                        <span class="badge bg-warning-transparent text-warning"
+                          >In progress</span
+                        >
+                      </td>
+                      <td class="text-end pe-4">
+                        <a
+                          href="ticket-details.html"
+                          class="btn btn-sm btn-light"
+                          aria-label="View ticket SUP-2829"
+                          ><i class="ri-arrow-right-line" aria-hidden="true"></i
+                        ></a>
+                      </td>
+                    </tr>
+                    <tr
+                      data-status="Waiting on engineering"
+                      data-priority="Normal"
+                    >
+                      <td class="ps-4">
+                        <a href="ticket-details.html" class="fw-semibold"
+                          >#SUP-2824</a
+                        ><span class="d-block text-muted fs-12"
+                          >Team member permissions not updating</span
+                        >
+                      </td>
+                      <td>Oak &amp; Vale</td>
+                      <td>
+                        <div class="d-flex align-items-center gap-2">
+                          <span class="avatar avatar-xs avatar-rounded"
+                            ><img
+                              src="../assets/images/users/12.jpg"
+                              alt="" /></span
+                          >Owen Brooks
+                        </div>
+                      </td>
+                      <td>Sep 25, 2:05 PM</td>
+                      <td><span class="text-muted">2h 10m</span></td>
+                      <td>
+                        <span class="badge bg-info-transparent text-info"
+                          >Normal</span
+                        >
+                      </td>
+                      <td>
+                        <span class="badge bg-light text-muted"
+                          >Waiting on engineering</span
+                        >
+                      </td>
+                      <td class="text-end pe-4">
+                        <a
+                          href="ticket-details.html"
+                          class="btn btn-sm btn-light"
+                          aria-label="View ticket SUP-2824"
+                          ><i class="ri-arrow-right-line" aria-hidden="true"></i
+                        ></a>
+                      </td>
+                    </tr>
+                    <tr
+                      data-status="Waiting on customer"
+                      data-priority="Normal"
+                    >
+                      <td class="ps-4">
+                        <a href="ticket-details.html" class="fw-semibold"
+                          >#SUP-2818</a
+                        ><span class="d-block text-muted fs-12"
+                          >Need help updating billing contact</span
+                        >
+                      </td>
+                      <td>Juniper Studio</td>
+                      <td>
+                        <div class="d-flex align-items-center gap-2">
+                          <span class="avatar avatar-xs avatar-rounded"
+                            ><img
+                              src="../assets/images/users/4.jpg"
+                              alt="" /></span
+                          >Elena Garcia
+                        </div>
+                      </td>
+                      <td>Sep 25, 11:37 AM</td>
+                      <td><span class="text-muted">5h 35m</span></td>
+                      <td>
+                        <span class="badge bg-info-transparent text-info"
+                          >Normal</span
+                        >
+                      </td>
+                      <td>
+                        <span
+                          class="badge bg-secondary-transparent text-secondary"
+                          >Waiting on customer</span
+                        >
+                      </td>
+                      <td class="text-end pe-4">
+                        <a
+                          href="ticket-details.html"
+                          class="btn btn-sm btn-light"
+                          aria-label="View ticket SUP-2818"
+                          ><i class="ri-arrow-right-line" aria-hidden="true"></i
+                        ></a>
+                      </td>
+                    </tr>
+                    <tr data-status="Open" data-priority="Low">
+                      <td class="ps-4">
+                        <a href="ticket-details.html" class="fw-semibold"
+                          >#SUP-2812</a
+                        ><span class="d-block text-muted fs-12"
+                          >Question about workspace notifications</span
+                        >
+                      </td>
+                      <td>Redwood Supply</td>
+                      <td>
+                        <span class="badge bg-light text-muted"
+                          >Unassigned</span
+                        >
+                      </td>
+                      <td>Sep 25, 10:12 AM</td>
+                      <td><span class="text-muted">7h 20m</span></td>
+                      <td>
+                        <span class="badge bg-success-transparent text-success"
+                          >Low</span
+                        >
+                      </td>
+                      <td>
+                        <span class="badge bg-info-transparent text-info"
+                          >Open</span
+                        >
+                      </td>
+                      <td class="text-end pe-4">
+                        <a
+                          href="ticket-details.html"
+                          class="btn btn-sm btn-light"
+                          aria-label="View ticket SUP-2812"
+                          ><i class="ri-arrow-right-line" aria-hidden="true"></i
+                        ></a>
+                      </td>
+                    </tr>
+                    <tr data-status="In progress" data-priority="Normal">
+                      <td class="ps-4">
+                        <a href="ticket-details.html" class="fw-semibold"
+                          >#SUP-2807</a
+                        ><span class="d-block text-muted fs-12"
+                          >Import stopped before all records synced</span
+                        >
+                      </td>
+                      <td>Atlas Learning</td>
+                      <td>
+                        <div class="d-flex align-items-center gap-2">
+                          <span class="avatar avatar-xs avatar-rounded"
+                            ><img
+                              src="../assets/images/users/13.jpg"
+                              alt="" /></span
+                          >Marcus Reed
+                        </div>
+                      </td>
+                      <td>Sep 24, 3:51 PM</td>
+                      <td><span class="text-muted">Tomorrow</span></td>
+                      <td>
+                        <span class="badge bg-info-transparent text-info"
+                          >Normal</span
+                        >
+                      </td>
+                      <td>
+                        <span class="badge bg-warning-transparent text-warning"
+                          >In progress</span
+                        >
+                      </td>
+                      <td class="text-end pe-4">
+                        <a
+                          href="ticket-details.html"
+                          class="btn btn-sm btn-light"
+                          aria-label="View ticket SUP-2807"
+                          ><i class="ri-arrow-right-line" aria-hidden="true"></i
+                        ></a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div
+              class="card-footer d-flex align-items-center justify-content-between flex-wrap gap-2"
+            >
+              <span
+                id="ticket-count"
+                class="text-muted fs-12"
+                role="status"
+                aria-live="polite"
+                >Showing 7 sample tickets</span
+              >
+              <a href="ticket-create.html" class="btn btn-sm btn-light"
+                ><i class="ri-add-line me-1" aria-hidden="true"></i>Create a
+                ticket</a
+              >
+            </div>
+          </section>
+          <p
+            id="ticket-feedback"
+            class="visually-hidden"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"-->
+    <script src="../assets/js/tickets.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+    <!-- include appearance-customizer-scripts.html"-->
+  </body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme-color="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NexoraUI - Changelog</title>
+    <meta
+      name="description"
+      content="Release notes and update guidance for the NexoraUI Bootstrap template."
+    />
+    <link rel="icon" href="../assets/images/brand-logos/favicon.ico?v=2" />
+    <link
+      rel="stylesheet"
+      href="../assets/libs/bootstrap/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/demo.css" />
+    <link rel="stylesheet" href="../assets/css/icons.css" />
+    <link rel="stylesheet" href="../assets/css/documentation.css" />
+  </head>
+  <body class="docs-standalone">
+    <a class="docs-skip" href="#docs-content">Skip to release notes</a>
+    <header class="docs-header">
+      <a class="docs-brand" href="#welcome" aria-label="NexoraUI changelog home"
+        ><img
+          src="../assets/images/brand-logos/desktop-logo.png"
+          alt="NexoraUI"
+        /><span>Changelog</span></a
+      >
+      <div class="d-flex align-items-center gap-2">
+        <a class="btn btn-light btn-sm" href="documentation.html"
+          >Documentation</a
+        ><span class="docs-version">HTML / Bootstrap 5</span
+        ><button
+          class="btn btn-light btn-sm"
+          id="docs-theme"
+          type="button"
+          aria-label="Switch to dark theme"
+        >
+          <i class="ri-moon-line" aria-hidden="true"></i></button
+        ><a
+          class="btn btn-secondary btn-sm"
+          href="index.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          >View demo
+          <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a
+        ><button
+          class="btn btn-light btn-sm docs-menu-toggle"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#docs-navigation"
+          aria-controls="docs-navigation"
+          aria-label="Open documentation navigation"
+        >
+          <i class="ri-menu-line" aria-hidden="true"></i>
+        </button>
+      </div>
+    </header>
+    <div class="docs-shell">
+      <aside
+        class="offcanvas-lg offcanvas-start docs-navigation"
+        id="docs-navigation"
+        tabindex="-1"
+        aria-labelledby="docs-navigation-title"
+      >
+        <div class="offcanvas-header">
+          <h2 class="fs-16 mb-0" id="docs-navigation-title">Changelog</h2>
+          <button
+            class="btn-close"
+            type="button"
+            data-bs-dismiss="offcanvas"
+            data-bs-target="#docs-navigation"
+            aria-label="Close navigation"
+          ></button>
+        </div>
+        <div class="docs-nav-inner">
+          <label for="docs-search" class="visually-hidden"
+            >Search release notes</label
+          ><input
+            class="form-control form-control-sm mb-4"
+            id="docs-search"
+            type="search"
+            placeholder="Find in release notes..."
+          />
+          <nav aria-label="Release notes">
+            <div class="docs-nav-group">
+              <h2>Release history</h2>
+              <a class="docs-nav-link" href="#welcome">Overview</a
+              ><a class="docs-nav-link" href="#release-1-0-0">Version 1.0.0</a
+              ><a class="docs-nav-link" href="#updating">Update checklist</a
+              ><a class="docs-nav-link" href="#reference">Release categories</a>
+            </div>
+          </nav>
+          <p class="text-muted fs-12" id="docs-status" role="status">
+            4 guide sections
+          </p>
+          <div class="docs-nav-bottom">
+            <a href="documentation.html"
+              >Open documentation
+              <i class="ri-arrow-right-line" aria-hidden="true"></i
+            ></a>
+            <p class="text-muted mb-0">Setup, customization, and deployment</p>
+          </div>
+        </div>
+      </aside>
+      <main class="docs-content" id="docs-content">
+        <div class="docs-hero">
+          <div class="docs-kicker">PRODUCT UPDATES</div>
+          <h1>What's included. What's changed.</h1>
+          <p>
+            Review your current package, understand its capabilities, and
+            prepare your custom application for future updates.
+          </p>
+          <a class="btn btn-secondary" href="#release-1-0-0"
+            >Explore version 1.0.0
+            <i class="ri-arrow-down-line" aria-hidden="true"></i
+          ></a>
+        </div>
+        <section
+          class="card custom-card docs-section"
+          id="welcome"
+          aria-labelledby="welcome-title"
+        >
+          <div class="card-header">
+            <div>
+              <h2 class="card-title mb-1" id="welcome-title">
+                About these release notes
+              </h2>
+              <p class="text-muted mb-0">
+                A clear record of the package you are using
+              </p>
+            </div>
+          </div>
+          <div class="card-body">
+            <p>
+              This page summarizes the current NexoraUI package and explains how
+              to review updates. Its version comes from package.json.
+            </p>
+            <div class="docs-note">
+              <strong>Release history</strong>
+              <p class="mb-0 mt-2">
+                The project currently declares version 1.0.0. Earlier versions
+                and release dates have not been recorded here. Add dated release
+                entries when a new package is published.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section
+          class="card custom-card docs-section"
+          id="release-1-0-0"
+          aria-labelledby="release-1-0-0-title"
+        >
+          <div class="card-header">
+            <div>
+              <h2 class="card-title mb-1" id="release-1-0-0-title">
+                Version 1.0.0
+              </h2>
+              <p class="text-muted mb-0">Current release overview</p>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="release-heading">
+              <span class="release-version">v1.0.0</span
+              ><span class="text-muted fs-12">Current package version</span>
+            </div>
+            <p class="text-muted">
+              The initial package brings together the template foundations,
+              dashboard pages, application examples, and third-party
+              integrations.
+            </p>
+            <h3 class="fs-14 fw-semibold mt-4">Included in this package</h3>
+            <ul class="release-list">
+              <li>
+                <strong>Responsive template foundations</strong>
+                <p>
+                  Bootstrap 5 layouts, shared HTML template parts, theme colors,
+                  typography utilities, light and dark modes, and layout
+                  customization.
+                </p>
+              </li>
+              <li>
+                <strong>Dashboards & application examples</strong>
+                <p>
+                  Dashboard variations and example pages for projects, tasks,
+                  mail, files, calendars, profiles, and invoices.
+                </p>
+              </li>
+              <li>
+                <strong>Reusable UI & forms</strong>
+                <p>
+                  Cards, navigation, alerts, tabs, modal dialogs, offcanvas
+                  panels, form controls, advanced inputs, and upload examples.
+                </p>
+              </li>
+              <li>
+                <strong>Charts, tables & maps</strong>
+                <p>
+                  ApexCharts, Chart.js, ECharts, Grid.js, DataTables,
+                  jsVectorMap, Leaflet, and configurable Google Maps examples.
+                </p>
+              </li>
+              <li>
+                <strong>Development workflow</strong>
+                <p>
+                  SCSS compilation, HTML template-part assembly, dependency and
+                  asset copying, and BrowserSync preview through npm run dev.
+                </p>
+              </li>
+              <li>
+                <strong>Customer reference pages</strong>
+                <p>
+                  Standalone documentation and this changelog, with responsive
+                  navigation and theme-aware styling.
+                </p>
+              </li>
+            </ul>
+            <div class="docs-note">
+              <strong>Integration reminder</strong>
+              <p class="mb-0 mt-2">
+                Application records and interface actions are examples.
+                Production authentication, storage, API connections, and server
+                validation are supplied by your application.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section
+          class="card custom-card docs-section"
+          id="updating"
+          aria-labelledby="updating-title"
+        >
+          <div class="card-header">
+            <div>
+              <h2 class="card-title mb-1" id="updating-title">
+                Before installing an update
+              </h2>
+              <p class="text-muted mb-0">Protect your custom work</p>
+            </div>
+          </div>
+          <div class="card-body">
+            <ol class="docs-steps">
+              <li>
+                <strong>Back up your application.</strong>
+                <p>
+                  Keep your existing source, configuration, and lockfile before
+                  replacing files.
+                </p>
+              </li>
+              <li>
+                <strong>Review the changed files.</strong>
+                <p>
+                  Compare shared template parts, theme variables, page scripts,
+                  and dependency changes against your customizations. Avoid
+                  replacing the entire source folder without reviewing it.
+                </p>
+              </li>
+              <li>
+                <strong>Install and rebuild.</strong>
+                <p>
+                  Run npm install, then npm run dev. The workflow recreates
+                  dist, so keep all changes in src.
+                </p>
+              </li>
+              <li>
+                <strong>Verify your application.</strong>
+                <p>
+                  Check navigation, forms, charts, tables, light and dark modes,
+                  mobile layouts, and external API connections before
+                  deployment.
+                </p>
+              </li>
+            </ol>
+            <a class="btn btn-light btn-sm" href="documentation.html#deployment"
+              >Read the deployment guide
+              <i class="ri-arrow-right-line" aria-hidden="true"></i
+            ></a>
+          </div>
+        </section>
+        <section
+          class="card custom-card docs-section"
+          id="reference"
+          aria-labelledby="reference-title"
+        >
+          <div class="card-header">
+            <div>
+              <h2 class="card-title mb-1" id="reference-title">
+                How to read future updates
+              </h2>
+              <p class="text-muted mb-0">Consistent release categories</p>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-bordered mb-0">
+                <thead>
+                  <tr>
+                    <th>Category</th>
+                    <th>Meaning</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Added</td>
+                    <td>New pages, components, or supported features.</td>
+                  </tr>
+                  <tr>
+                    <td>Changed</td>
+                    <td>
+                      Updates to existing behavior, design, or configuration.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Fixed</td>
+                    <td>Corrections to a documented issue.</td>
+                  </tr>
+                  <tr>
+                    <td>Removed</td>
+                    <td>Features or files that are no longer included.</td>
+                  </tr>
+                  <tr>
+                    <td>Migration notes</td>
+                    <td>Steps customers need to apply when updating.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="mt-3 mb-0">
+              For each future release, record its version, publication date,
+              affected features, and any migration instructions. Keep earlier
+              entries available so customers can compare versions.
+            </p>
+          </div>
+        </section>
+        <footer class="docs-footer">
+          <span>NexoraUI - Release notes</span
+          ><a href="documentation.html"
+            >Documentation <i class="ri-arrow-right-line" aria-hidden="true"></i
+          ></a>
+        </footer>
+      </main>
+    </div>
+    <script src="../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/documentation.js"></script>
+  </body>
+</html>

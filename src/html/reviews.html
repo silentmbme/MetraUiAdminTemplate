@@ -1,0 +1,294 @@
+<!-- include document-head.html"-->
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content reviews-page">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Product reviews</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">
+              <a href="ecommerce-dashboard.html">Ecommerce</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Product reviews
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid commerce-dashboard">
+          <div class="row">
+            <div class="col-xl-4">
+              <section class="card custom-card">
+                <div class="card-body">
+                  <div>
+                    <span class="text-muted fs-12">Overall rating</span>
+                    <div class="review-score-line">
+                      <strong>4.8</strong>
+                      <div>
+                        <div
+                          class="review-stars"
+                          aria-label="4.8 out of 5 stars"
+                        >
+                          <i class="ri-star-fill"></i
+                          ><i class="ri-star-fill"></i
+                          ><i class="ri-star-fill"></i
+                          ><i class="ri-star-fill"></i
+                          ><i class="ri-star-half-fill"></i>
+                        </div>
+                        <small class="text-muted">Based on 2,486 reviews</small>
+                      </div>
+                    </div>
+                    <div
+                      class="review-rating-breakdown"
+                      aria-label="Rating distribution"
+                    >
+                      <div>
+                        <span>5</span><i class="ri-star-fill"></i>
+                        <div class="progress">
+                          <div
+                            class="progress-bar bg-warning"
+                            style="width: 78%"
+                          ></div>
+                        </div>
+                        <small>1,939</small>
+                      </div>
+                      <div>
+                        <span>4</span><i class="ri-star-fill"></i>
+                        <div class="progress">
+                          <div
+                            class="progress-bar bg-warning"
+                            style="width: 15%"
+                          ></div>
+                        </div>
+                        <small>373</small>
+                      </div>
+                      <div>
+                        <span>3</span><i class="ri-star-fill"></i>
+                        <div class="progress">
+                          <div
+                            class="progress-bar bg-warning"
+                            style="width: 5%"
+                          ></div>
+                        </div>
+                        <small>124</small>
+                      </div>
+                      <div>
+                        <span>2</span><i class="ri-star-fill"></i>
+                        <div class="progress">
+                          <div
+                            class="progress-bar bg-warning"
+                            style="width: 1.5%"
+                          ></div>
+                        </div>
+                        <small>37</small>
+                      </div>
+                      <div>
+                        <span>1</span><i class="ri-star-fill"></i>
+                        <div class="progress">
+                          <div
+                            class="progress-bar bg-warning"
+                            style="width: 0.5%"
+                          ></div>
+                        </div>
+                        <small>13</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xl-8">
+              <div class="row">
+                <div class="col-xxl-4 col-md-4 col-sm-6">
+                  <section class="card custom-card py-3 review-stat-card">
+                    <div class="card-body text-center">
+                      <span class="review-stat-icon bg-color-1 text-black">
+                        <i class="ri-chat-quote-line"></i>
+                      </span>
+                      <span class="text-muted fs-12 d-block"
+                        >New this week</span
+                      >
+                      <h3 class="my-2 fw-semibold">164</h3>
+                      <small class="d-block">
+                        <span class="text-success"
+                          ><i class="ri-arrow-up-line"></i>
+                          12.5%
+                        </span>
+                        from last week
+                      </small>
+                    </div>
+                  </section>
+                </div>
+                <div class="col-xxl-4 col-md-4 col-sm-6">
+                  <section class="card custom-card py-3 review-stat-card">
+                    <div class="card-body text-center">
+                      <span class="review-stat-icon bg-color-2 text-black"
+                        ><i class="ri-chat-check-line"></i
+                      ></span>
+                      <span class="text-muted fs-12 d-block"
+                        >Awaiting a reply</span
+                      >
+                      <h3 class="my-2 fw-semibold" id="unanswered-count">13</h3>
+                      <small>Customer need attention</small>
+                    </div>
+                  </section>
+                </div>
+                <div class="col-xxl-4 col-md-4 col-sm-6">
+                  <section class="card custom-card py-3 review-stat-card">
+                    <div class="card-body text-center">
+                      <span class="review-stat-icon bg-color-3 text-black"
+                        ><i class="ri-check-double-line"></i
+                      ></span>
+                      <span class="text-muted fs-12 d-block"
+                        >Response rate</span
+                      >
+                      <h3 class="my-2 fw-semibold">92%</h3>
+                      <small>Replies sent within 48 hours</small>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="card custom-card review-list-card">
+            <div
+              class="card-header justify-content-between align-items-start flex-wrap gap-3"
+            >
+              <div>
+                <h2 class="card-title mb-1">
+                  Customer feedback
+                  <span
+                    class="badge bg-light text-default ms-1"
+                    id="review-count"
+                    >6</span
+                  >
+                </h2>
+                <p class="text-muted fs-12 mb-0">
+                  Recent reviews from verified product buyers
+                </p>
+              </div>
+              <div class="review-controls">
+                <div class="review-search">
+                  <i class="ri-search-line" aria-hidden="true"></i
+                  ><input
+                    class="form-control"
+                    id="review-search"
+                    type="search"
+                    placeholder="Search reviews or products"
+                    aria-label="Search reviews"
+                  />
+                </div>
+                <select
+                  class="form-select"
+                  data-trigger
+                  id="review-rating-filter"
+                  aria-label="Filter reviews by rating"
+                >
+                  <option value="">All ratings</option>
+                  <option value="5">5 stars</option>
+                  <option value="4">4 stars</option>
+                  <option value="3">3 stars</option>
+                  <option value="2">2 stars</option>
+                  <option value="1">1 star</option></select
+                ><select
+                  class="form-select"
+                  data-trigger
+                  id="review-reply-filter"
+                  aria-label="Filter reviews by reply status"
+                >
+                  <option value="">All replies</option>
+                  <option value="unanswered">Needs a reply</option>
+                  <option value="replied">Replied</option>
+                </select>
+              </div>
+            </div>
+            <div id="review-list" class="review-list"></div>
+            <div
+              class="card-footer bg-transparent d-flex justify-content-between align-items-center flex-wrap gap-2"
+            >
+              <span class="text-muted fs-12" id="review-results"
+                >Showing 6 reviews</span
+              ><span class="text-muted fs-12"
+                ><i class="ri-verified-badge-line text-success me-1"></i>Reviews
+                are from verified purchases</span
+              >
+            </div>
+          </section>
+          <p
+            id="review-feedback"
+            class="text-muted fs-12 mt-3 mb-0"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <div
+      class="modal fade"
+      id="review-reply-modal"
+      tabindex="-1"
+      aria-labelledby="review-reply-title"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <form class="modal-content" id="review-reply-form">
+          <div class="modal-header">
+            <div>
+              <h2 class="modal-title fs-16 fw-semibold" id="review-reply-title">
+                Reply to review
+              </h2>
+              <p
+                class="text-muted fs-12 mb-0 mt-1"
+                id="reply-review-context"
+              ></p>
+            </div>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <label for="review-reply-text" class="form-label">Your reply</label
+            ><textarea
+              class="form-control"
+              id="review-reply-text"
+              rows="4"
+              maxlength="500"
+              required
+              placeholder="Thank the customer and address their feedback..."
+            ></textarea
+            ><small class="text-muted"
+              >Your reply will appear below the review in this demo.</small
+            >
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-light" data-bs-dismiss="modal">
+              Cancel</button
+            ><button type="submit" class="btn btn-dark">
+              <i class="ri-send-plane-line me-1"></i>Post reply
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- include common-scripts.html"-->
+    <!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/js/reviews.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

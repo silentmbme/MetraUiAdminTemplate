@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme-color="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Under maintenance | NexoraUI</title>
+    <meta
+      name="description"
+      content="NexoraUI is undergoing scheduled maintenance. We'll be back soon."
+    />
+    <link
+      rel="icon"
+      href="../assets/images/brand-logos/favicon.ico?v=2"
+      type="image/x-icon"
+    />
+    <link
+      href="../assets/libs/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="../assets/css/demo.css" rel="stylesheet" />
+    <link href="../assets/css/icons.css" rel="stylesheet" />
+    <script src="../assets/js/authentication.js"></script>
+  </head>
+  <body class="coming-soon-body maintenance-page">
+    <main class="launch-split">
+      <section class="launch-signup" aria-labelledby="maintenance-title">
+        <div class="launch-signup-inner">
+          <a class="launch-brand" href="index.html" aria-label="NexoraUI home">
+            <picture class="auth-brand-logos"
+              ><img
+                class="auth-logo-light"
+                src="../assets/images/brand-logos/desktop-logo.png"
+                alt="NexoraUI" /><img
+                class="auth-logo-dark"
+                src="../assets/images/brand-logos/desktop-dark.png"
+                alt="NexoraUI"
+            /></picture>
+          </a>
+
+          <span class="launch-eyebrow">
+            <span class="launch-maintenance-dot" aria-hidden="true"></span>
+            SCHEDULED MAINTENANCE
+          </span>
+          <h1 id="maintenance-title">We'll be back <span>shortly.</span></h1>
+          <p class="launch-description">
+            We're making a few improvements to keep your workspace running
+            smoothly. Thanks for giving us a little time.
+          </p>
+
+          <section
+            class="maintenance-status"
+            aria-labelledby="maintenance-status-title"
+          >
+            <div class="maintenance-status-heading">
+              <div>
+                <h2 id="maintenance-status-title mb-0">Maintenance progress</h2>
+              </div>
+              <span class="badge bg-warning-transparent text-warning"
+                >In progress</span
+              >
+            </div>
+            <div
+              class="maintenance-progress-track"
+              role="img"
+              aria-label="Step 2 of 3: platform updates in progress"
+            >
+              <span class="is-complete"></span>
+              <span class="is-active"></span>
+              <span></span>
+            </div>
+            <div class="maintenance-progress-label">
+              <span>Update sequence</span>
+              <span>Step 2 of 3</span>
+            </div>
+            <div class="maintenance-status-list">
+              <div class="maintenance-status-item is-complete">
+                <span
+                  class="avatar avatar-sm avatar-rounded bg-success-transparent text-success"
+                >
+                  <i class="ri-check-line" aria-hidden="true"></i>
+                </span>
+                <span class="maintenance-status-label">Backups secured</span>
+                <span class="badge bg-success-transparent text-success"
+                  >Complete</span
+                >
+              </div>
+              <div class="maintenance-status-item is-active">
+                <span
+                  class="avatar avatar-sm avatar-rounded bg-warning-transparent text-warning"
+                >
+                  <i class="ri-settings-3-line" aria-hidden="true"></i>
+                </span>
+                <span class="maintenance-status-label">Platform updates</span>
+                <span class="badge bg-warning-transparent text-warning"
+                  >In progress</span
+                >
+              </div>
+              <div class="maintenance-status-item is-upcoming">
+                <span
+                  class="avatar avatar-sm avatar-rounded bg-light text-muted"
+                >
+                  <i class="ri-refresh-line" aria-hidden="true"></i>
+                </span>
+                <span class="maintenance-status-label">Service checks</span>
+                <span class="badge bg-light text-muted">Next</span>
+              </div>
+            </div>
+          </section>
+
+          <form
+            class="launch-form"
+            id="coming-soon-signup"
+            data-notice-kind="maintenance"
+          >
+            <label for="coming-soon-email" class="form-label">
+              Get an email when we're back
+            </label>
+            <input
+              class="form-control"
+              id="coming-soon-email"
+              name="email"
+              type="email"
+              placeholder="you@example.com"
+              autocomplete="email"
+              required
+            />
+            <button class="btn btn-dark w-100" type="submit">
+              Notify me
+              <i class="ri-arrow-right-line ms-1" aria-hidden="true"></i>
+            </button>
+          </form>
+
+          <div class="launch-signup-footer">
+            <span>&copy; <span id="coming-soon-year"></span> NexoraUI</span>
+            <a href="mailto:hello@nexoraui.com">
+              Contact support
+              <i class="ri-arrow-right-up-line" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <aside class="launch-showcase" aria-label="Maintenance information">
+        <div class="launch-showcase-frame" aria-hidden="true"></div>
+        <div class="launch-showcase-inner">
+          <span class="launch-showcase-mark">
+            <i class="ri-tools-line" aria-hidden="true"></i>
+          </span>
+          <span class="launch-showcase-kicker"
+            >A SHORT PAUSE, A BETTER WORKSPACE</span
+          >
+          <h2>Taking care of the details.</h2>
+          <p>
+            We're tuning the tools your team relies on every day. Your work will
+            be ready as soon as service returns.
+          </p>
+          <div class="password-security-note">
+            <i class="ri-shield-check-line" aria-hidden="true"></i>
+            <span>
+              <strong>Your workspace is safe</strong>
+              <small>Your projects and account data remain protected.</small>
+            </span>
+          </div>
+        </div>
+        <span class="launch-showcase-caption">
+          <i class="ri-heart-pulse-line me-1" aria-hidden="true"></i>
+          Thanks for your patience
+        </span>
+      </aside>
+    </main>
+
+    <script src="../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/coming-soon.js"></script>
+  </body>
+</html>

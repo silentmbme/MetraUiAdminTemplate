@@ -1,0 +1,1059 @@
+<!-- include document-head.html"-->
+    <link rel="stylesheet" href="../assets/libs/swiper/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="../assets/libs/prismjs/themes/prism-coy.min.css"
+    />
+  </head>
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main data-markup-examples class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Swiper</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Base UI</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Swiper</li>
+          </ol>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Visual stories</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Touch-friendly slides with independent navigation and
+                      pagination.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="position-relative">
+                    <div
+                      id="visual-stories"
+                      data-swiper-demo="basic"
+                      class="swiper rounded"
+                      style="
+                        --swiper-theme-color: var(--theme-primary-color);
+                        --swiper-navigation-size: 20px;
+                      "
+                      aria-label="visual stories"
+                    >
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <img
+                            src="../assets/images/cards/1.jpg"
+                            alt="Mountain lake at sunrise"
+                            class="w-100 rounded"
+                            style="height: 250px; object-fit: cover"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="../assets/images/cards/2.jpg"
+                            alt="Beach loungers at sunset"
+                            class="w-100 rounded"
+                            style="height: 250px; object-fit: cover"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="../assets/images/cards/17.png"
+                            alt="Sunlit creative studio desk"
+                            class="w-100 rounded"
+                            style="height: 250px; object-fit: cover"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="../assets/images/cards/16.png"
+                            alt="Comfortable reading corner"
+                            class="w-100 rounded"
+                            style="height: 250px; object-fit: cover"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      type="button"
+                      class="btn btn-light rounded-circle d-inline-flex align-items-center justify-content-center shadow-sm"
+                      style="
+                        position: absolute;
+                        top: 125px;
+                        left: 12px;
+                        transform: translateY(-50%);
+                        z-index: 5;
+                        width: 36px;
+                        height: 36px;
+                        padding: 0;
+                      "
+                      data-swiper-prev
+                      aria-label="Previous slide"
+                    >
+                      <i
+                        class="ri-arrow-left-line"
+                        aria-hidden="true"
+                      ></i></button
+                    ><button
+                      type="button"
+                      class="btn btn-light rounded-circle d-inline-flex align-items-center justify-content-center shadow-sm"
+                      style="
+                        position: absolute;
+                        top: 125px;
+                        right: 12px;
+                        transform: translateY(-50%);
+                        z-index: 5;
+                        width: 36px;
+                        height: 36px;
+                        padding: 0;
+                      "
+                      data-swiper-next
+                      aria-label="Next slide"
+                    >
+                      <i class="ri-arrow-right-line" aria-hidden="true"></i>
+                    </button>
+                    <div
+                      class="d-flex justify-content-center swiper-bullet-position"
+                      data-swiper-controls="visual-stories"
+                    >
+                      <div
+                        data-swiper-pagination
+                        class="text-center fs-12"
+                        style="width: auto; min-width: 80px"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Gentle crossfade</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      A soft transition keeps the focus on each photograph.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="position-relative">
+                    <div
+                      id="crossfade-gallery"
+                      data-swiper-demo="fade"
+                      class="swiper rounded"
+                      style="
+                        --swiper-theme-color: var(--theme-primary-color);
+                        --swiper-navigation-size: 20px;
+                      "
+                      aria-label="crossfade gallery"
+                    >
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <img
+                            src="../assets/images/cards/1.jpg"
+                            alt="Mountain lake at sunrise"
+                            class="w-100 rounded"
+                            style="height: 250px; object-fit: cover"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="../assets/images/cards/2.jpg"
+                            alt="Beach loungers at sunset"
+                            class="w-100 rounded"
+                            style="height: 250px; object-fit: cover"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="../assets/images/cards/17.png"
+                            alt="Sunlit creative studio desk"
+                            class="w-100 rounded"
+                            style="height: 250px; object-fit: cover"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="../assets/images/cards/16.png"
+                            alt="Comfortable reading corner"
+                            class="w-100 rounded"
+                            style="height: 250px; object-fit: cover"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      type="button"
+                      class="btn btn-light rounded-circle d-inline-flex align-items-center justify-content-center shadow-sm"
+                      style="
+                        position: absolute;
+                        top: 125px;
+                        left: 12px;
+                        transform: translateY(-50%);
+                        z-index: 5;
+                        width: 36px;
+                        height: 36px;
+                        padding: 0;
+                      "
+                      data-swiper-prev
+                      aria-label="Previous slide"
+                    >
+                      <i
+                        class="ri-arrow-left-line"
+                        aria-hidden="true"
+                      ></i></button
+                    ><button
+                      type="button"
+                      class="btn btn-light rounded-circle d-inline-flex align-items-center justify-content-center shadow-sm"
+                      style="
+                        position: absolute;
+                        top: 125px;
+                        right: 12px;
+                        transform: translateY(-50%);
+                        z-index: 5;
+                        width: 36px;
+                        height: 36px;
+                        padding: 0;
+                      "
+                      data-swiper-next
+                      aria-label="Next slide"
+                    >
+                      <i class="ri-arrow-right-line" aria-hidden="true"></i>
+                    </button>
+                    <div
+                      class="d-flex justify-content-center swiper-bullet-position"
+                      data-swiper-controls="crossfade-gallery"
+                    >
+                      <div
+                        data-swiper-pagination
+                        class="text-center fs-12"
+                        style="width: auto; min-width: 80px"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Editorial collection</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Multiple cards adapt to the space inside the preview.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="position-relative">
+                    <div
+                      id="editorial-collection"
+                      data-swiper-demo="multiple"
+                      class="swiper rounded"
+                      style="
+                        --swiper-theme-color: var(--theme-primary-color);
+                        --swiper-navigation-size: 20px;
+                      "
+                      aria-label="editorial collection"
+                    >
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <img
+                            src="../assets/images/cards/1.jpg"
+                            alt="Mountain lake at sunrise"
+                            class="w-100 rounded"
+                            style="height: 160px; object-fit: cover"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                          <div class="pt-3 pb-1">
+                            <span class="text-muted fs-11"
+                              >Nature &amp; escape</span
+                            >
+                            <h3 class="fs-15 fw-semibold mt-2 mb-1">
+                              Find a fresh perspective
+                            </h3>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="../assets/images/cards/2.jpg"
+                            alt="Beach loungers at sunset"
+                            class="w-100 rounded"
+                            style="height: 160px; object-fit: cover"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                          <div class="pt-3 pb-1">
+                            <span class="text-muted fs-11"
+                              >Weekend inspiration</span
+                            >
+                            <h3 class="fs-15 fw-semibold mt-2 mb-1">
+                              Slow down by the shore
+                            </h3>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="../assets/images/cards/17.png"
+                            alt="Sunlit creative studio desk"
+                            class="w-100 rounded"
+                            style="height: 160px; object-fit: cover"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                          <div class="pt-3 pb-1">
+                            <span class="text-muted fs-11"
+                              >Workspace journal</span
+                            >
+                            <h3 class="fs-15 fw-semibold mt-2 mb-1">
+                              Make room for good ideas
+                            </h3>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="../assets/images/cards/16.png"
+                            alt="Comfortable reading corner"
+                            class="w-100 rounded"
+                            style="height: 160px; object-fit: cover"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                          <div class="pt-3 pb-1">
+                            <span class="text-muted fs-11"
+                              >Reading &amp; reflection</span
+                            >
+                            <h3 class="fs-15 fw-semibold mt-2 mb-1">
+                              A quieter moment
+                            </h3>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      type="button"
+                      class="btn btn-light rounded-circle d-inline-flex align-items-center justify-content-center shadow-sm"
+                      style="
+                        position: absolute;
+                        top: 80px;
+                        left: 12px;
+                        transform: translateY(-50%);
+                        z-index: 5;
+                        width: 36px;
+                        height: 36px;
+                        padding: 0;
+                      "
+                      data-swiper-prev
+                      aria-label="Previous slide"
+                    >
+                      <i
+                        class="ri-arrow-left-line"
+                        aria-hidden="true"
+                      ></i></button
+                    ><button
+                      type="button"
+                      class="btn btn-light rounded-circle d-inline-flex align-items-center justify-content-center shadow-sm"
+                      style="
+                        position: absolute;
+                        top: 80px;
+                        right: 12px;
+                        transform: translateY(-50%);
+                        z-index: 5;
+                        width: 36px;
+                        height: 36px;
+                        padding: 0;
+                      "
+                      data-swiper-next
+                      aria-label="Next slide"
+                    >
+                      <i class="ri-arrow-right-line" aria-hidden="true"></i>
+                    </button>
+                    <div
+                      class="d-flex justify-content-center swiper-bullet-position"
+                      data-swiper-controls="editorial-collection"
+                    >
+                      <div
+                        data-swiper-pagination
+                        class="text-center fs-12"
+                        style="width: auto; min-width: 80px"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Counted gallery</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Fraction pagination shows exactly where you are.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="position-relative">
+                    <div
+                      id="counted-gallery"
+                      data-swiper-demo="fraction"
+                      class="swiper rounded"
+                      style="
+                        --swiper-theme-color: var(--theme-primary-color);
+                        --swiper-navigation-size: 20px;
+                      "
+                      aria-label="counted gallery"
+                    >
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <img
+                            src="../assets/images/cards/1.jpg"
+                            alt="Mountain lake at sunrise"
+                            class="w-100 rounded"
+                            style="height: 250px; object-fit: cover"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="../assets/images/cards/2.jpg"
+                            alt="Beach loungers at sunset"
+                            class="w-100 rounded"
+                            style="height: 250px; object-fit: cover"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="../assets/images/cards/17.png"
+                            alt="Sunlit creative studio desk"
+                            class="w-100 rounded"
+                            style="height: 250px; object-fit: cover"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="../assets/images/cards/16.png"
+                            alt="Comfortable reading corner"
+                            class="w-100 rounded"
+                            style="height: 250px; object-fit: cover"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      type="button"
+                      class="btn btn-light rounded-circle d-inline-flex align-items-center justify-content-center shadow-sm"
+                      style="
+                        position: absolute;
+                        top: 125px;
+                        left: 12px;
+                        transform: translateY(-50%);
+                        z-index: 5;
+                        width: 36px;
+                        height: 36px;
+                        padding: 0;
+                      "
+                      data-swiper-prev
+                      aria-label="Previous slide"
+                    >
+                      <i
+                        class="ri-arrow-left-line"
+                        aria-hidden="true"
+                      ></i></button
+                    ><button
+                      type="button"
+                      class="btn btn-light rounded-circle d-inline-flex align-items-center justify-content-center shadow-sm"
+                      style="
+                        position: absolute;
+                        top: 125px;
+                        right: 12px;
+                        transform: translateY(-50%);
+                        z-index: 5;
+                        width: 36px;
+                        height: 36px;
+                        padding: 0;
+                      "
+                      data-swiper-next
+                      aria-label="Next slide"
+                    >
+                      <i class="ri-arrow-right-line" aria-hidden="true"></i>
+                    </button>
+                    <div
+                      class="d-flex justify-content-center swiper-bullet-position"
+                      data-swiper-controls="counted-gallery"
+                    >
+                      <div
+                        data-swiper-pagination
+                        class="text-center fs-12 text-white"
+                        style="width: auto; min-width: 80px"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Vertical discovery</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Explore a gallery that moves upward and downward.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="position-relative">
+                    <div
+                      id="vertical-discovery"
+                      data-swiper-demo="vertical"
+                      class="swiper rounded"
+                      style="
+                        --swiper-theme-color: var(--theme-primary-color);
+                        --swiper-navigation-size: 20px;
+                        height: 250px;
+                      "
+                      aria-label="vertical discovery"
+                    >
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <img
+                            src="../assets/images/cards/1.jpg"
+                            alt="Mountain lake at sunrise"
+                            class="w-100 rounded"
+                            style="height: 250px; object-fit: cover"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="../assets/images/cards/2.jpg"
+                            alt="Beach loungers at sunset"
+                            class="w-100 rounded"
+                            style="height: 250px; object-fit: cover"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="../assets/images/cards/17.png"
+                            alt="Sunlit creative studio desk"
+                            class="w-100 rounded"
+                            style="height: 250px; object-fit: cover"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="../assets/images/cards/16.png"
+                            alt="Comfortable reading corner"
+                            class="w-100 rounded"
+                            style="height: 250px; object-fit: cover"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      type="button"
+                      class="btn btn-light rounded-circle d-inline-flex align-items-center justify-content-center shadow-sm"
+                      style="
+                        position: absolute;
+                        top: 125px;
+                        left: 12px;
+                        transform: translateY(-50%);
+                        z-index: 5;
+                        width: 36px;
+                        height: 36px;
+                        padding: 0;
+                      "
+                      data-swiper-prev
+                      aria-label="Previous slide"
+                    >
+                      <i
+                        class="ri-arrow-up-line"
+                        aria-hidden="true"
+                      ></i></button
+                    ><button
+                      type="button"
+                      class="btn btn-light rounded-circle d-inline-flex align-items-center justify-content-center shadow-sm"
+                      style="
+                        position: absolute;
+                        top: 125px;
+                        right: 12px;
+                        transform: translateY(-50%);
+                        z-index: 5;
+                        width: 36px;
+                        height: 36px;
+                        padding: 0;
+                      "
+                      data-swiper-next
+                      aria-label="Next slide"
+                    >
+                      <i class="ri-arrow-down-line" aria-hidden="true"></i>
+                    </button>
+                    <div
+                      class="swiper-bullet-position ms-3"
+                      data-swiper-controls="vertical-discovery"
+                    >
+                      <div
+                        data-swiper-pagination
+                        class="text-center fs-12"
+                        style="width: auto; min-width: 80px"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Free-flow browsing</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      A flexible strip that moves freely with your swipe.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="position-relative">
+                    <div
+                      id="freeflow-gallery"
+                      data-swiper-demo="free"
+                      class="swiper rounded"
+                      style="
+                        --swiper-theme-color: var(--theme-primary-color);
+                        --swiper-navigation-size: 20px;
+                      "
+                      aria-label="freeflow gallery"
+                    >
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <img
+                            src="../assets/images/cards/1.jpg"
+                            alt="Mountain lake at sunrise"
+                            class="w-100 rounded"
+                            style="height: 160px; object-fit: cover"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                          <div class="pt-3 pb-1">
+                            <span class="text-muted fs-11"
+                              >Nature &amp; escape</span
+                            >
+                            <h3 class="fs-15 fw-semibold mt-2 mb-1">
+                              Find a fresh perspective
+                            </h3>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="../assets/images/cards/2.jpg"
+                            alt="Beach loungers at sunset"
+                            class="w-100 rounded"
+                            style="height: 160px; object-fit: cover"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                          <div class="pt-3 pb-1">
+                            <span class="text-muted fs-11"
+                              >Weekend inspiration</span
+                            >
+                            <h3 class="fs-15 fw-semibold mt-2 mb-1">
+                              Slow down by the shore
+                            </h3>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="../assets/images/cards/17.png"
+                            alt="Sunlit creative studio desk"
+                            class="w-100 rounded"
+                            style="height: 160px; object-fit: cover"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                          <div class="pt-3 pb-1">
+                            <span class="text-muted fs-11"
+                              >Workspace journal</span
+                            >
+                            <h3 class="fs-15 fw-semibold mt-2 mb-1">
+                              Make room for good ideas
+                            </h3>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="../assets/images/cards/16.png"
+                            alt="Comfortable reading corner"
+                            class="w-100 rounded"
+                            style="height: 160px; object-fit: cover"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                          <div class="pt-3 pb-1">
+                            <span class="text-muted fs-11"
+                              >Reading &amp; reflection</span
+                            >
+                            <h3 class="fs-15 fw-semibold mt-2 mb-1">
+                              A quieter moment
+                            </h3>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      type="button"
+                      class="btn btn-light rounded-circle d-inline-flex align-items-center justify-content-center shadow-sm"
+                      style="
+                        position: absolute;
+                        top: 80px;
+                        left: 12px;
+                        transform: translateY(-50%);
+                        z-index: 5;
+                        width: 36px;
+                        height: 36px;
+                        padding: 0;
+                      "
+                      data-swiper-prev
+                      aria-label="Previous slide"
+                    >
+                      <i
+                        class="ri-arrow-left-line"
+                        aria-hidden="true"
+                      ></i></button
+                    ><button
+                      type="button"
+                      class="btn btn-light rounded-circle d-inline-flex align-items-center justify-content-center shadow-sm"
+                      style="
+                        position: absolute;
+                        top: 80px;
+                        right: 12px;
+                        transform: translateY(-50%);
+                        z-index: 5;
+                        width: 36px;
+                        height: 36px;
+                        padding: 0;
+                      "
+                      data-swiper-next
+                      aria-label="Next slide"
+                    >
+                      <i class="ri-arrow-right-line" aria-hidden="true"></i>
+                    </button>
+                    <div
+                      class="d-flex justify-content-center swiper-bullet-position"
+                      data-swiper-controls="freeflow-gallery"
+                    >
+                      <div
+                        data-swiper-pagination
+                        class="text-center fs-12"
+                        style="width: auto; min-width: 80px"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Coverflow showcase</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      A dimensional arrangement with a clear center slide.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="position-relative">
+                    <div
+                      id="coverflow-showcase"
+                      data-swiper-demo="coverflow"
+                      class="swiper rounded"
+                      style="
+                        --swiper-theme-color: var(--theme-primary-color);
+                        --swiper-navigation-size: 20px;
+                      "
+                      aria-label="coverflow showcase"
+                    >
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <img
+                            src="../assets/images/cards/1.jpg"
+                            alt="Mountain lake at sunrise"
+                            class="w-100 rounded"
+                            style="height: 250px; object-fit: cover"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="../assets/images/cards/2.jpg"
+                            alt="Beach loungers at sunset"
+                            class="w-100 rounded"
+                            style="height: 250px; object-fit: cover"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="../assets/images/cards/17.png"
+                            alt="Sunlit creative studio desk"
+                            class="w-100 rounded"
+                            style="height: 250px; object-fit: cover"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="../assets/images/cards/16.png"
+                            alt="Comfortable reading corner"
+                            class="w-100 rounded"
+                            style="height: 250px; object-fit: cover"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      type="button"
+                      class="btn btn-light rounded-circle d-inline-flex align-items-center justify-content-center shadow-sm"
+                      style="
+                        position: absolute;
+                        top: 125px;
+                        left: 12px;
+                        transform: translateY(-50%);
+                        z-index: 5;
+                        width: 36px;
+                        height: 36px;
+                        padding: 0;
+                      "
+                      data-swiper-prev
+                      aria-label="Previous slide"
+                    >
+                      <i
+                        class="ri-arrow-left-line"
+                        aria-hidden="true"
+                      ></i></button
+                    ><button
+                      type="button"
+                      class="btn btn-light rounded-circle d-inline-flex align-items-center justify-content-center shadow-sm"
+                      style="
+                        position: absolute;
+                        top: 125px;
+                        right: 12px;
+                        transform: translateY(-50%);
+                        z-index: 5;
+                        width: 36px;
+                        height: 36px;
+                        padding: 0;
+                      "
+                      data-swiper-next
+                      aria-label="Next slide"
+                    >
+                      <i class="ri-arrow-right-line" aria-hidden="true"></i>
+                    </button>
+                    <div
+                      class="d-flex justify-content-center swiper-bullet-position"
+                      data-swiper-controls="coverflow-showcase"
+                    >
+                      <div
+                        data-swiper-pagination
+                        class="text-center fs-12"
+                        style="width: auto; min-width: 80px"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Playback on your terms</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Start or pause automatic slides whenever you like.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="position-relative">
+                    <div
+                      id="timed-gallery"
+                      data-swiper-demo="autoplay"
+                      class="swiper rounded"
+                      style="
+                        --swiper-theme-color: var(--theme-primary-color);
+                        --swiper-navigation-size: 20px;
+                      "
+                      aria-label="timed gallery"
+                    >
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <img
+                            src="../assets/images/cards/1.jpg"
+                            alt="Mountain lake at sunrise"
+                            class="w-100 rounded"
+                            style="height: 250px; object-fit: cover"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="../assets/images/cards/2.jpg"
+                            alt="Beach loungers at sunset"
+                            class="w-100 rounded"
+                            style="height: 250px; object-fit: cover"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="../assets/images/cards/17.png"
+                            alt="Sunlit creative studio desk"
+                            class="w-100 rounded"
+                            style="height: 250px; object-fit: cover"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="../assets/images/cards/16.png"
+                            alt="Comfortable reading corner"
+                            class="w-100 rounded"
+                            style="height: 250px; object-fit: cover"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      type="button"
+                      class="btn btn-light rounded-circle d-inline-flex align-items-center justify-content-center shadow-sm"
+                      style="
+                        position: absolute;
+                        top: 125px;
+                        left: 12px;
+                        transform: translateY(-50%);
+                        z-index: 5;
+                        width: 36px;
+                        height: 36px;
+                        padding: 0;
+                      "
+                      data-swiper-prev
+                      aria-label="Previous slide"
+                    >
+                      <i
+                        class="ri-arrow-left-line"
+                        aria-hidden="true"
+                      ></i></button
+                    ><button
+                      type="button"
+                      class="btn btn-light rounded-circle d-inline-flex align-items-center justify-content-center shadow-sm"
+                      style="
+                        position: absolute;
+                        top: 125px;
+                        right: 12px;
+                        transform: translateY(-50%);
+                        z-index: 5;
+                        width: 36px;
+                        height: 36px;
+                        padding: 0;
+                      "
+                      data-swiper-next
+                      aria-label="Next slide"
+                    >
+                      <i class="ri-arrow-right-line" aria-hidden="true"></i>
+                    </button>
+                    <div
+                      class="d-flex justify-content-center swiper-bullet-position"
+                      data-swiper-controls="timed-gallery"
+                    >
+                      <div
+                        data-swiper-pagination
+                        class="text-center fs-12"
+                        style="width: auto; min-width: 80px"
+                      ></div>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex align-items-center mt-3 justify-content-between gap-2"
+                  >
+                    <button
+                      type="button"
+                      class="btn btn-outline-success btn-sm"
+                      id="swiper-autoplay-toggle"
+                      aria-pressed="false"
+                    >
+                      Start slideshow</button
+                    ><span
+                      class="text-muted fs-12"
+                      id="swiper-autoplay-status"
+                      role="status"
+                      aria-live="polite"
+                      >Paused</span
+                    >
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"--><!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"--><!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/js/app-interactions.js"></script>
+    <script src="../assets/libs/prismjs/prism.js"></script>
+    <script src="../assets/js/prism-custom.js"></script>
+    <script src="../assets/libs/swiper/swiper-bundle.min.js"></script>
+    <script src="../assets/js/swiper.js"></script>
+  </body>
+</html>

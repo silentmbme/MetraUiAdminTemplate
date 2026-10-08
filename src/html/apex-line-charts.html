@@ -1,0 +1,318 @@
+<!-- include document-head.html"-->
+    <link rel="stylesheet" href="../assets/libs/apexcharts/apexcharts.css" />
+
+    <link rel="stylesheet" href="../assets/css/apex-line-charts.css" />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+
+      <div class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <div>
+            <h1 class="page-title">Line Charts</h1>
+          </div>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">Charts</li>
+            <li class="breadcrumb-item">Apex Charts</li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Line Charts
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid line-charts-workspace">
+          <div class="row">
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header justify-content-between gap-2">
+                  <div>
+                    <div class="card-title">Weekly output</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Straight lines show completed tasks across the week.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="line-chart"
+                    class="line-demo"
+                    role="group"
+                    aria-label="Weekly output chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header justify-content-between gap-2">
+                  <div>
+                    <div class="card-title">Team comparison</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Compare two teams with visible values at each point.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="line-chart-datalabels"
+                    class="line-demo"
+                    role="group"
+                    aria-label="Team comparison chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header justify-content-between gap-2">
+                  <div>
+                    <div class="card-title">Delivery trend</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Drag to zoom into a daily time range.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="zoom-chart"
+                    class="line-demo"
+                    role="group"
+                    aria-label="Delivery trend chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header justify-content-between gap-2">
+                  <div>
+                    <div class="card-title">Milestone tracking</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      A target line and release marker add context.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="annotation-chart"
+                    class="line-demo"
+                    role="group"
+                    aria-label="Milestone tracking chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header justify-content-between gap-2">
+                  <div>
+                    <div class="card-title">Range explorer</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Drag the selection below to explore the delivery trend.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="brush-chart1"
+                    class="line-demo"
+                    role="group"
+                    aria-label="Range explorer chart"
+                  ></div>
+                  <div
+                    id="brush-chart"
+                    role="group"
+                    aria-label="Select delivery date range"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header justify-content-between gap-2">
+                  <div>
+                    <div class="card-title">Capacity changes</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Steps show changes in available project capacity.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="stepline-chart"
+                    class="line-demo"
+                    role="group"
+                    aria-label="Capacity changes chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header justify-content-between gap-2">
+                  <div>
+                    <div class="card-title">Growth curve</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      A smooth gradient line highlights gradual growth.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="gradient-chart"
+                    class="line-demo"
+                    role="group"
+                    aria-label="Growth curve chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header justify-content-between gap-2">
+                  <div>
+                    <div class="card-title">Incomplete reporting</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Gaps preserve days with no submitted data.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="null-chart"
+                    class="line-demo"
+                    role="group"
+                    aria-label="Incomplete reporting chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header justify-content-between gap-2">
+                  <div>
+                    <div class="card-title">Live activity</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Start a simulated activity stream with a rolling window.
+                    </p>
+                  </div>
+                  <button
+                    class="btn btn-sm btn-light"
+                    type="button"
+                    id="line-live-toggle"
+                    aria-pressed="false"
+                  >
+                    Start live
+                  </button>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="dynamic-chart"
+                    class="line-demo"
+                    role="group"
+                    aria-label="Live activity chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header justify-content-between gap-2">
+                  <div>
+                    <div class="card-title">Actual vs forecast</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Different line patterns distinguish observed and forecast
+                      values.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="dashed-chart"
+                    class="line-demo"
+                    role="group"
+                    aria-label="Actual vs forecast chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header justify-content-between gap-2">
+                  <div>
+                    <div class="card-title">Linked trends</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Zoom in either chart to compare the same time range.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="chart-line"
+                    class="line-demo"
+                    role="group"
+                    aria-label="Linked trends chart"
+                  ></div>
+                  <div
+                    id="chart-line2"
+                    role="group"
+                    aria-label="Linked review trend"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header justify-content-between gap-2">
+                  <div>
+                    <div class="card-title">Net change</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Positive and negative values around a zero baseline.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="negative-chart"
+                    class="line-demo"
+                    role="group"
+                    aria-label="Net change chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <!-- include common-scripts.html"-->
+
+    <!-- include appearance-customizer-scripts.html"-->
+
+    <!-- Apex Charts JS -->
+    <script src="../assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- Used In Zoomable TIme Series Chart -->
+
+    <!---Used In Annotations Chart-->
+
+    <!-- Internal Apex Line Charts JS -->
+    <script src="../assets/js/apexcharts-line.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

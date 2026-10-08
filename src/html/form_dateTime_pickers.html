@@ -1,0 +1,694 @@
+<!-- include document-head.html"-->
+    <link
+      rel="stylesheet"
+      href="../assets/libs/prismjs/themes/prism-coy.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/libs/@simonwep/pickr/themes/classic.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/libs/@simonwep/pickr/themes/monolith.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/libs/@simonwep/pickr/themes/nano.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/libs/prismjs/themes/prism-coy.min.css"
+    />
+    <link rel="stylesheet" href="../assets/libs/flatpickr/flatpickr.min.css" />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Date and time pickers</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">
+              <a href="javascript:void(0);">Forms</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="javascript:void(0);">Form Elements</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Date and time pickers
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid">
+          <section aria-labelledby="date-pickers-heading">
+            <div class="row">
+              <div class="col-xl-6">
+                <section class="card custom-card">
+                  <div class="card-header justify-content-between">
+                    <div>
+                      <h3 class="card-title mb-1">Calendar date</h3>
+                      <p class="text-muted fs-12 mb-0">
+                        Select a date and display it in a friendly format.
+                      </p>
+                    </div>
+                    <div class="prism-toggle">
+                      <button
+                        class="btn btn-sm btn-outline-light rounded-pill"
+                        type="button"
+                      >
+                        View markup<i
+                          class="ri-code-line ms-2 d-inline-block align-middle"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label for="date" class="form-label">Start date</label>
+                        <div class="input-group">
+                          <span class="input-group-text"
+                            ><i
+                              class="ri-calendar-line"
+                              aria-hidden="true"
+                            ></i></span
+                          ><input
+                            type="text"
+                            class="form-control"
+                            id="date"
+                            placeholder="Choose a date"
+                            autocomplete="off"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="humanfrienndlydate" class="form-label"
+                          >Readable date</label
+                        >
+                        <div class="input-group">
+                          <span class="input-group-text"
+                            ><i
+                              class="ri-calendar-line"
+                              aria-hidden="true"
+                            ></i></span
+                          ><input
+                            type="text"
+                            class="form-control"
+                            id="humanfrienndlydate"
+                            placeholder="Choose a date"
+                            autocomplete="off"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-text mt-3">
+                      The second field stores a standard date while showing a
+                      friendly label.
+                    </div>
+                  </div>
+                  <div class="card-footer d-none border-top-0">
+                    <pre
+                      class="language-html"
+                    ><code class="language-html">&lt;input type="text" class="form-control" id="date"
+       placeholder="Choose a date"&gt;
+&lt;input type="text" class="form-control" id="humanfrienndlydate"
+       placeholder="Choose a date"&gt;</code></pre>
+                  </div>
+                </section>
+              </div>
+              <div class="col-xl-6">
+                <section class="card custom-card">
+                  <div class="card-header justify-content-between">
+                    <div>
+                      <h3 class="card-title mb-1">Date interval</h3>
+                      <p class="text-muted fs-12 mb-0">
+                        Select a range or review dates by calendar week.
+                      </p>
+                    </div>
+                    <div class="prism-toggle">
+                      <button
+                        class="btn btn-sm btn-outline-light rounded-pill"
+                        type="button"
+                      >
+                        View markup<i
+                          class="ri-code-line ms-2 d-inline-block align-middle"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-md-7">
+                        <label for="daterange" class="form-label"
+                          >Reporting period</label
+                        >
+                        <div class="input-group">
+                          <span class="input-group-text"
+                            ><i
+                              class="ri-calendar-2-line"
+                              aria-hidden="true"
+                            ></i></span
+                          ><input
+                            type="text"
+                            class="form-control"
+                            id="daterange"
+                            placeholder="Choose start and end dates"
+                            autocomplete="off"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-5">
+                        <label for="weeknum" class="form-label"
+                          >Week number</label
+                        >
+                        <div class="input-group">
+                          <span class="input-group-text"
+                            ><i
+                              class="ri-calendar-todo-line"
+                              aria-hidden="true"
+                            ></i></span
+                          ><input
+                            type="text"
+                            class="form-control"
+                            id="weeknum"
+                            placeholder="Choose a date"
+                            autocomplete="off"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-text mt-3">
+                      Use a date range for reports and week numbers for
+                      planning.
+                    </div>
+                  </div>
+                  <div class="card-footer d-none border-top-0">
+                    <pre
+                      class="language-html"
+                    ><code class="language-html">&lt;input type="text" class="form-control" id="daterange"
+       placeholder="Choose start and end dates"&gt;
+&lt;input type="text" class="form-control" id="weeknum"
+       placeholder="Choose a date"&gt;</code></pre>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </section>
+
+          <section aria-labelledby="schedule-pickers-heading">
+            <div class="row">
+              <div class="col-xl-6">
+                <section class="card custom-card">
+                  <div class="card-header justify-content-between">
+                    <div>
+                      <h3 class="card-title mb-1">Meeting schedule</h3>
+                      <p class="text-muted fs-12 mb-0">
+                        Choose a date and time for the appointment.
+                      </p>
+                    </div>
+                    <div class="prism-toggle">
+                      <button
+                        class="btn btn-sm btn-outline-light rounded-pill"
+                        type="button"
+                      >
+                        View markup<i
+                          class="ri-code-line ms-2 d-inline-block align-middle"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <label for="datetime" class="form-label"
+                      >Meeting date and time</label
+                    >
+                    <div class="input-group">
+                      <span class="input-group-text"
+                        ><i
+                          class="ri-calendar-schedule-line"
+                          aria-hidden="true"
+                        ></i></span
+                      ><input
+                        type="text"
+                        class="form-control"
+                        id="datetime"
+                        placeholder="Choose date and time"
+                        autocomplete="off"
+                      />
+                    </div>
+                    <label for="limitdatetime" class="form-label mt-3"
+                      >Evening appointment</label
+                    >
+                    <div class="input-group">
+                      <span class="input-group-text"
+                        ><i class="ri-moon-line" aria-hidden="true"></i></span
+                      ><input
+                        type="text"
+                        class="form-control"
+                        id="limitdatetime"
+                        placeholder="Available 16:00–22:00"
+                        autocomplete="off"
+                      />
+                    </div>
+                  </div>
+                  <div class="card-footer d-none border-top-0">
+                    <pre
+                      class="language-html"
+                    ><code class="language-html">&lt;input type="text" class="form-control" id="datetime"
+       placeholder="Choose date and time"&gt;
+&lt;input type="text" class="form-control" id="limitdatetime"
+       placeholder="Available 16:00–22:00"&gt;</code></pre>
+                  </div>
+                </section>
+              </div>
+              <div class="col-xl-6">
+                <section class="card custom-card">
+                  <div class="card-header justify-content-between">
+                    <div>
+                      <h3 class="card-title mb-1">Time formats</h3>
+                      <p class="text-muted fs-12 mb-0">
+                        Choose a standard or 24-hour time value.
+                      </p>
+                    </div>
+                    <div class="prism-toggle">
+                      <button
+                        class="btn btn-sm btn-outline-light rounded-pill"
+                        type="button"
+                      >
+                        View markup<i
+                          class="ri-code-line ms-2 d-inline-block align-middle"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label for="timepikcr" class="form-label"
+                          >Standard time</label
+                        >
+                        <div class="input-group">
+                          <span class="input-group-text"
+                            ><i
+                              class="ri-time-line"
+                              aria-hidden="true"
+                            ></i></span
+                          ><input
+                            type="text"
+                            class="form-control"
+                            id="timepikcr"
+                            placeholder="Choose time"
+                            autocomplete="off"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="timepickr1" class="form-label"
+                          >24-hour time</label
+                        >
+                        <div class="input-group">
+                          <span class="input-group-text"
+                            ><i
+                              class="ri-time-line"
+                              aria-hidden="true"
+                            ></i></span
+                          ><input
+                            type="text"
+                            class="form-control"
+                            id="timepickr1"
+                            placeholder="HH:MM"
+                            autocomplete="off"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer d-none border-top-0">
+                    <pre
+                      class="language-html"
+                    ><code class="language-html">&lt;input type="text" class="form-control" id="timepikcr"
+       placeholder="Choose time"&gt;
+&lt;input type="text" class="form-control" id="timepickr1"
+       placeholder="HH:MM"&gt;</code></pre>
+                  </div>
+                </section>
+              </div>
+              <div class="col-xl-12">
+                <section class="card custom-card">
+                  <div class="card-header justify-content-between">
+                    <div>
+                      <h3 class="card-title mb-1">Availability window</h3>
+                      <p class="text-muted fs-12 mb-0">
+                        Set allowed hours or start from a suggested time.
+                      </p>
+                    </div>
+                    <div class="prism-toggle">
+                      <button
+                        class="btn btn-sm btn-outline-light rounded-pill"
+                        type="button"
+                      >
+                        View markup<i
+                          class="ri-code-line ms-2 d-inline-block align-middle"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label for="limittime" class="form-label"
+                          >Allowed booking time</label
+                        >
+                        <div class="input-group">
+                          <span class="input-group-text"
+                            ><i
+                              class="ri-time-line"
+                              aria-hidden="true"
+                            ></i></span
+                          ><input
+                            type="text"
+                            class="form-control"
+                            id="limittime"
+                            placeholder="16:00–22:30"
+                            autocomplete="off"
+                          />
+                        </div>
+                        <div class="form-text">
+                          Between 4:00 PM and 10:30 PM.
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="pretime" class="form-label"
+                          >Suggested start time</label
+                        >
+                        <div class="input-group">
+                          <span class="input-group-text"
+                            ><i
+                              class="ri-timer-line"
+                              aria-hidden="true"
+                            ></i></span
+                          ><input
+                            type="text"
+                            class="form-control"
+                            id="pretime"
+                            placeholder="Choose time"
+                            autocomplete="off"
+                          />
+                        </div>
+                        <div class="form-text">
+                          Starts at 1:45 PM. You can change it.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer d-none border-top-0">
+                    <pre
+                      class="language-html"
+                    ><code class="language-html">&lt;input type="text" class="form-control" id="limittime"
+       placeholder="16:00–22:30"&gt;
+&lt;input type="text" class="form-control" id="pretime"
+       placeholder="Choose time"&gt;</code></pre>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </section>
+
+          <section aria-labelledby="inline-pickers-heading">
+            <div class="row">
+              <div class="col-xl-7">
+                <section class="card custom-card">
+                  <div class="card-header justify-content-between">
+                    <div>
+                      <h3 class="card-title mb-1">Inline calendar</h3>
+                      <p class="text-muted fs-12 mb-0">
+                        A persistent calendar for date-focused workflows.
+                      </p>
+                    </div>
+                    <div class="prism-toggle">
+                      <button
+                        class="btn btn-sm btn-outline-light rounded-pill"
+                        type="button"
+                      >
+                        View markup<i
+                          class="ri-code-line ms-2 d-inline-block align-middle"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <label for="inlinecalendar" class="form-label"
+                      >Select a date</label
+                    ><input
+                      type="text"
+                      class="form-control"
+                      id="inlinecalendar"
+                      placeholder="Choose date"
+                      autocomplete="off"
+                    />
+                  </div>
+                  <div class="card-footer d-none border-top-0">
+                    <pre
+                      class="language-html"
+                    ><code class="language-html">&lt;input type="text" class="form-control" id="inlinecalendar"
+       placeholder="Choose date"&gt;</code></pre>
+                  </div>
+                </section>
+              </div>
+              <div class="col-xl-5">
+                <section class="card custom-card">
+                  <div class="card-header justify-content-between">
+                    <div>
+                      <h3 class="card-title mb-1">Inline time</h3>
+                      <p class="text-muted fs-12 mb-0">
+                        Select a time without opening a popup.
+                      </p>
+                    </div>
+                    <div class="prism-toggle">
+                      <button
+                        class="btn btn-sm btn-outline-light rounded-pill"
+                        type="button"
+                      >
+                        View markup<i
+                          class="ri-code-line ms-2 d-inline-block align-middle"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <label for="inlinetime" class="form-label"
+                      >Choose a time</label
+                    ><input
+                      type="text"
+                      class="form-control"
+                      id="inlinetime"
+                      placeholder="Choose time"
+                      autocomplete="off"
+                    />
+                  </div>
+                  <div class="card-footer d-none border-top-0">
+                    <pre
+                      class="language-html"
+                    ><code class="language-html">&lt;input type="text" class="form-control" id="inlinetime"
+       placeholder="Choose time"&gt;</code></pre>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </section>
+          <section aria-labelledby="native-color-heading">
+            <div class="row">
+              <div class="col-xl-6">
+                <section class="card custom-card">
+                  <div
+                    class="card-header justify-content-between flex-wrap gap-2"
+                  >
+                    <div>
+                      <h3 class="card-title mb-1">Brand color</h3>
+                      <p class="text-muted fs-12 mb-0">
+                        Choose a color for a product or workspace accent.
+                      </p>
+                    </div>
+                    <div class="prism-toggle">
+                      <button
+                        class="btn btn-sm btn-outline-light rounded-pill"
+                        type="button"
+                      >
+                        View markup<i
+                          class="ri-code-line ms-2 d-inline-block align-middle"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="d-flex align-items-center gap-3">
+                      <input
+                        type="color"
+                        class="form-control form-control-color border-0"
+                        id="exampleColorInput"
+                        value="#136ad0"
+                        title="Choose your color"
+                        aria-label="Choose brand color"
+                      />
+                      <div>
+                        <label for="exampleColorInput" class="form-label mb-1"
+                          >Selected color</label
+                        >
+                        <p class="text-muted fs-12 mb-0">
+                          Click the swatch to open the system color chooser.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer d-none border-top-0">
+                    <pre
+                      class="language-html"
+                    ><code class="language-html">&lt;input type="color"
+       class="form-control form-control-color border-0"
+       id="exampleColorInput" value="#136ad0"
+       title="Choose your color"&gt;</code></pre>
+                  </div>
+                </section>
+              </div>
+              <div class="col-xl-6">
+                <section class="card custom-card">
+                  <div
+                    class="card-header justify-content-between flex-wrap gap-2"
+                  >
+                    <div>
+                      <h3 class="card-title mb-1">Classic - Full Controls</h3>
+                      <p class="text-muted fs-12 mb-0">
+                        Swatches, opacity, hue and value inputs.
+                      </p>
+                    </div>
+                    <div class="prism-toggle">
+                      <button
+                        class="btn btn-sm btn-outline-light rounded-pill"
+                        type="button"
+                      >
+                        View markup<i
+                          class="ri-code-line ms-2 d-inline-block align-middle"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <p class="text-muted fs-13">
+                      A complete picker for detailed color editing.
+                    </p>
+                    <div class="theme-container"></div>
+                    <div class="pickr-container example-picker"></div>
+                  </div>
+                  <div class="card-footer d-none border-top-0">
+                    <pre
+                      class="language-html"
+                    ><code class="language-html">&lt;div class="theme-container"&gt;&lt;/div&gt;
+&lt;div class="pickr-container example-picker"&gt;&lt;/div&gt;</code></pre>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </section>
+
+          <section aria-labelledby="pickr-color-heading">
+            <div class="row">
+              <div class="col-xl-6">
+                <section class="card custom-card">
+                  <div
+                    class="card-header justify-content-between flex-wrap gap-2"
+                  >
+                    <div>
+                      <h3 class="card-title mb-1">Monolith - Compact</h3>
+                      <p class="text-muted fs-12 mb-0">
+                        Focused picker with HEX-oriented input.
+                      </p>
+                    </div>
+                    <div class="prism-toggle">
+                      <button
+                        class="btn btn-sm btn-outline-light rounded-pill"
+                        type="button"
+                      >
+                        View markup<i
+                          class="ri-code-line ms-2 d-inline-block align-middle"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <p class="text-muted fs-13">
+                      A smaller palette for settings panels.
+                    </p>
+                    <div class="theme-container1"></div>
+                    <div class="pickr-container1 example-picker"></div>
+                  </div>
+                  <div class="card-footer d-none border-top-0">
+                    <pre
+                      class="language-html"
+                    ><code class="language-html">&lt;div class="theme-container1"&gt;&lt;/div&gt;
+&lt;div class="pickr-container1 example-picker"&gt;&lt;/div&gt;</code></pre>
+                  </div>
+                </section>
+              </div>
+              <div class="col-xl-6">
+                <section class="card custom-card">
+                  <div
+                    class="card-header justify-content-between flex-wrap gap-2"
+                  >
+                    <div>
+                      <h3 class="card-title mb-1">Nano - Minimal</h3>
+                      <p class="text-muted fs-12 mb-0">
+                        A lightweight layout with essential controls.
+                      </p>
+                    </div>
+                    <div class="prism-toggle">
+                      <button
+                        class="btn btn-sm btn-outline-light rounded-pill"
+                        type="button"
+                      >
+                        View markup<i
+                          class="ri-code-line ms-2 d-inline-block align-middle"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <p class="text-muted fs-13">
+                      Use a simple picker where space is limited.
+                    </p>
+                    <div class="theme-container2"></div>
+                    <div class="pickr-container2 example-picker"></div>
+                  </div>
+                  <div class="card-footer d-none border-top-0">
+                    <pre
+                      class="language-html"
+                    ><code class="language-html">&lt;div class="theme-container2"&gt;&lt;/div&gt;
+&lt;div class="pickr-container2 example-picker"&gt;&lt;/div&gt;</code></pre>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <!-- include common-scripts.html"-->
+    <!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/libs/prismjs/prism.js"></script>
+    <script src="../assets/js/prism-custom.js"></script>
+    <script src="../assets/libs/flatpickr/flatpickr.min.js"></script>
+    <script src="../assets/js/date&amp;time_pickers.js"></script>
+    <script src="../assets/js/color-picker.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

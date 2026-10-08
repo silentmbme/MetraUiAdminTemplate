@@ -1,0 +1,568 @@
+<!-- include document-head.html"-->
+    <link rel="stylesheet" href="../assets/css/echarts.css" />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+
+      <div class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">ECharts</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">Charts</li>
+            <li class="breadcrumb-item active" aria-current="page">ECharts</li>
+          </ol>
+        </div>
+        <div class="container-fluid echarts-workspace">
+          <div class="row">
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Weekly delivery</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Straight lines track completed tasks.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="echart-basic-line"
+                    class="echart-demo"
+                    role="group"
+                    aria-label="Weekly delivery chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Team comparison</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Smooth trends compare two delivery teams.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="echart-smoothed-line"
+                    class="echart-demo"
+                    role="group"
+                    aria-label="Team comparison chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Delivery volume</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      A filled area emphasizes changes in task output.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="echart-basic-area"
+                    class="echart-demo"
+                    role="group"
+                    aria-label="Delivery volume chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Cumulative workload</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Stacked trends compare workstream contributions.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="echart-stacked-line"
+                    class="echart-demo"
+                    role="group"
+                    aria-label="Cumulative workload chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Workstream volume</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Filled layers show combined team output.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="echart-stacked-area"
+                    class="echart-demo"
+                    role="group"
+                    aria-label="Workstream volume chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Capacity changes</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Steps show changes in planned capacity.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="echart-step-line"
+                    class="echart-demo"
+                    role="group"
+                    aria-label="Capacity changes chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Weekly workload</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Grouped columns compare hours by team.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="echart-bar-basic"
+                    class="echart-demo"
+                    role="group"
+                    aria-label="Weekly workload chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Project completion</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Background columns show the full completion scale.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="echart-bar-background"
+                    class="echart-demo"
+                    role="group"
+                    aria-label="Project completion chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Milestone progress</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Different colors identify individual milestones.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="echart-bar-single"
+                    class="echart-demo"
+                    role="group"
+                    aria-label="Milestone progress chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Budget changes</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Floating columns show successive budget changes.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="echart-waterfall"
+                    class="echart-demo"
+                    role="group"
+                    aria-label="Budget changes chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Budget variance</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Green marks positive changes and red marks negatives.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="echart-negative-values"
+                    class="echart-demo"
+                    role="group"
+                    aria-label="Budget variance chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Labeled delivery</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Values above columns make comparisons easier.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="echart-bar-labels"
+                    class="echart-demo"
+                    role="group"
+                    aria-label="Labeled delivery chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Project ranking</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Horizontal bars compare project completion.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="echart-bar-horizontal"
+                    class="echart-demo"
+                    role="group"
+                    aria-label="Project ranking chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Work allocation</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Stacked horizontal bars compare workstreams.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="echart-stacked-horizontal"
+                    class="echart-demo"
+                    role="group"
+                    aria-label="Work allocation chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Budget allocation</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Segments show the share of each spending category.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="echart-pie"
+                    class="echart-demo"
+                    role="group"
+                    aria-label="Budget allocation chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Project status</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      A donut summarizes the distribution of work.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="echart-doughnut"
+                    class="echart-demo"
+                    role="group"
+                    aria-label="Project status chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Effort & output</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Compare hours with completed tasks.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="echart-scatter"
+                    class="echart-demo"
+                    role="group"
+                    aria-label="Effort & output chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Project impact</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Bubble size represents project reach.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="echart-bubble"
+                    class="echart-demo"
+                    role="group"
+                    aria-label="Project impact chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Price movement</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Sample candles show open, close, low and high values.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="echart-candlestick"
+                    class="echart-demo"
+                    role="group"
+                    aria-label="Price movement chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Project health</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Compare six delivery dimensions.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="echart-basic-radar"
+                    class="echart-demo"
+                    role="group"
+                    aria-label="Project health chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Weekly activity</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Color intensity shows activity across teams and days.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="echart-heatmap"
+                    class="echart-demo"
+                    role="group"
+                    aria-label="Weekly activity chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Resource allocation</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Tile size represents planned work hours.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="echart-treemap"
+                    class="echart-demo"
+                    role="group"
+                    aria-label="Resource allocation chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Sales pipeline</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Compare prospect counts across conversion stages.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="echart-funnel"
+                    class="echart-demo"
+                    role="group"
+                    aria-label="Sales pipeline chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Release readiness</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      A gauge shows progress toward release.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="echart-gauge-basic"
+                    class="echart-demo"
+                    role="group"
+                    aria-label="Release readiness chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Workspace connections</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Explore relationships between project workstreams.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="echart-simple-graph"
+                    class="echart-demo"
+                    role="group"
+                    aria-label="Workspace connections chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Capacity units</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Repeated symbols show available capacity by team.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="echart-pictorial"
+                    class="echart-demo"
+                    role="group"
+                    aria-label="Capacity units chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <!-- include common-scripts.html"-->
+
+    <!-- include appearance-customizer-scripts.html"-->
+
+    <!-- Echarts JS -->
+    <script src="../assets/libs/echarts/echarts.min.js"></script>
+
+    <!-- Internal Echarts JS -->
+    <script src="../assets/js/echarts.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

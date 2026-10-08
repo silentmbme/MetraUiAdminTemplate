@@ -1,0 +1,104 @@
+.sitemap-page {
+  .sitemap-grid {
+    align-items: flex-start;
+  }
+
+  .sitemap-panel {
+    border: 1px solid var(--theme-default-border);
+    border-radius: 0.45rem;
+    box-shadow: 0 0.12rem 0.35rem rgba(20, 35, 60, 0.045);
+
+    > .card-body {
+      padding: 1.2rem 1.35rem;
+    }
+  }
+
+  .sitemap-tree-group {
+    + .sitemap-tree-group {
+      margin-top: 1.4rem;
+      padding-top: 1.15rem;
+      border-top: 1px solid var(--theme-default-border);
+    }
+
+    h2 {
+      margin: 0 0 0.65rem;
+      color: var(--theme-default-text-color);
+      font-size: 0.82rem;
+      font-weight: 600;
+      line-height: 1.4;
+      text-transform: uppercase;
+    }
+
+    ul {
+      position: relative;
+      margin: 0 0 0 0.55rem;
+      padding: 0 0 0 1.15rem;
+      list-style: none;
+
+      &::before {
+        position: absolute;
+        top: 0.2rem;
+        bottom: 0.8rem;
+        left: 0;
+        border-left: 1px dashed var(--theme-default-border);
+        content: "";
+      }
+
+      ul {
+        margin-left: 0.4rem;
+      }
+    }
+
+    li {
+      position: relative;
+      min-height: 1.8rem;
+
+      &::before {
+        position: absolute;
+        top: 0.86rem;
+        left: -1.15rem;
+        width: 0.72rem;
+        border-top: 1px dashed var(--theme-default-border);
+        content: "";
+      }
+    }
+
+    .sitemap-node-label{
+      color: var(--theme-default-text-color) !important;
+    }
+
+    .sitemap-node-label,
+    .sitemap-node-link {
+      display: inline-flex;
+      align-items: center;
+      min-height: 1.8rem;
+      color: var(--theme-text-muted);
+      font-size: 0.8rem;
+      line-height: 1.35;
+    }
+
+    .sitemap-node-label {
+      font-weight: 500;
+    }
+
+    .sitemap-node-link {
+      text-decoration: none;
+      transition: color 0.16s ease, transform 0.16s ease;
+
+      &:hover,
+      &:focus-visible {
+        color: var(--theme-default-text-color);
+        outline: 0;
+        transform: translateX(2px);
+      }
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .sitemap-page {
+    .sitemap-panel > .card-body {
+      padding: 1rem;
+    }
+  }
+}

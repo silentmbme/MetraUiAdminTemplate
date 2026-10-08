@@ -1,0 +1,678 @@
+<!-- include document-head.html"-->
+  </head>
+
+  <body class="projects-list-page">
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Project directory</h1>
+          <ol class="breadcrumb mb-1">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">
+              <a href="projects-dashboard.html">Projects</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              All projects
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid">
+          <section
+            class="card custom-card project-directory-overview-card mb-3"
+            aria-labelledby="project-directory-overview-title"
+          >
+            <div class="card-body">
+              <div class="row align-items-center g-4">
+                <div class="col-xl-5">
+                  <div class="project-directory-intro">
+                    <span class="project-directory-icon"
+                      ><i class="ri-folder-chart-line"></i
+                    ></span>
+                    <div class="min-w-0">
+                      <span class="project-directory-eyebrow"
+                        >PROJECT WORKSPACE</span
+                      >
+                      <h2 id="project-directory-overview-title">
+                        Keep delivery moving
+                      </h2>
+                      <p>
+                        Track ownership, progress, and project health in one
+                        place.
+                      </p>
+                      <a
+                        href="projects-create.html"
+                        class="btn btn-sm btn-dark mt-2"
+                        ><i class="ri-add-line me-1"></i>Create project</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-7">
+                  <div
+                    class="project-directory-metrics"
+                    aria-label="Project portfolio summary"
+                  >
+                    <div class="project-directory-metric">
+                      <span class="project-directory-metric-icon is-active"
+                        ><i class="ri-loader-4-line"></i
+                      ></span>
+                      <span class="project-directory-metric-label"
+                        >Active projects</span
+                      >
+                      <strong>4</strong>
+                      <span class="project-directory-metric-note"
+                        >In progress</span
+                      >
+                    </div>
+                    <div class="project-directory-metric">
+                      <span class="project-directory-metric-icon is-risk"
+                        ><i class="ri-error-warning-line"></i
+                      ></span>
+                      <span class="project-directory-metric-label"
+                        >Need attention</span
+                      >
+                      <strong>1</strong>
+                      <span class="project-directory-metric-note">At risk</span>
+                    </div>
+                    <div class="project-directory-metric">
+                      <span class="project-directory-metric-icon is-complete"
+                        ><i class="ri-checkbox-circle-line"></i
+                      ></span>
+                      <span class="project-directory-metric-label"
+                        >Completed</span
+                      >
+                      <strong>1</strong>
+                      <span class="project-directory-metric-note"
+                        >This portfolio</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section
+            class="card custom-card project-directory-list-card overflow-hidden"
+          >
+            <div class="card-header justify-content-between flex-wrap gap-3">
+              <div>
+                <div class="card-title mb-1">All projects</div>
+                <span id="project-result-count" class="text-muted fs-12"
+                  >Showing 6 projects in the portfolio</span
+                >
+              </div>
+              <div class="d-flex gap-2 align-items-center">
+                <div>
+                  <div class="input-group">
+                    <span class="input-group-text bg-light border-end-0"
+                      ><i class="ri-search-line text-muted"></i
+                    ></span>
+                    <input
+                      id="project-search"
+                      class="form-control border-start-0"
+                      type="search"
+                      placeholder="Search projects or owners"
+                      aria-label="Search projects or owners"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <select
+                    id="project-status-filter"
+                    data-trigger
+                    class="form-select form-select-sm"
+                    aria-label="Filter projects by status"
+                    style="width: auto; min-width: 145px"
+                  >
+                    <option value="all">All statuses</option>
+                    <option value="active">Active</option>
+                    <option value="at-risk">At risk</option>
+                    <option value="completed">Completed</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="project-directory-filterbar d-flex flex-wrap align-items-center gap-2 px-3 pt-2 pb-3 border-bottom"
+              role="group"
+              aria-label="Quick project filters"
+            >
+              <button
+                type="button"
+                class="btn btn-sm btn-primary project-filter-button"
+                data-status="all"
+                aria-pressed="true"
+              >
+                All <span class="ms-1">6</span>
+              </button>
+              <button
+                type="button"
+                class="btn btn-sm btn-light project-filter-button"
+                data-status="active"
+                aria-pressed="false"
+              >
+                Active <span class="ms-1">4</span>
+              </button>
+              <button
+                type="button"
+                class="btn btn-sm btn-light project-filter-button"
+                data-status="at-risk"
+                aria-pressed="false"
+              >
+                At risk <span class="ms-1">1</span>
+              </button>
+              <button
+                type="button"
+                class="btn btn-sm btn-light project-filter-button"
+                data-status="completed"
+                aria-pressed="false"
+              >
+                Completed <span class="ms-1">1</span>
+              </button>
+              <span class="text-muted fs-12 ms-auto"
+                >Q3 portfolio <span class="mx-1">&middot;</span> Updated Sep 26,
+                2026</span
+              >
+            </div>
+
+            <div class="table-responsive">
+              <table
+                class="table table-hover text-nowrap align-middle mb-0 project-directory-table"
+              >
+                <thead>
+                  <tr>
+                    <th scope="col" class="ps-4">Project</th>
+                    <th scope="col">Owner</th>
+                    <th scope="col">Timeline</th>
+                    <th scope="col">Progress</th>
+                    <th scope="col">Budget</th>
+                    <th scope="col">Health</th>
+                    <th scope="col" class="text-end pe-4">Details</th>
+                  </tr>
+                </thead>
+                <tbody id="projects-table-body">
+                  <tr
+                    data-status="active"
+                    data-search="atlas client portal product engineering jenna foster"
+                  >
+                    <td class="ps-4">
+                      <div class="d-flex align-items-center gap-3">
+                        <span class="project-company-logo"
+                          ><img src="../assets/images/logos/1.png" alt=""
+                        /></span>
+                        <div>
+                          <a
+                            href="projects-overview.html"
+                            class="fw-semibold fs-13 text-default"
+                            >Atlas client portal</a
+                          ><span class="text-muted fs-12 d-block"
+                            >Product &amp; Engineering</span
+                          >
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="avatar avatar-xs avatar-rounded"
+                          ><img
+                            src="../assets/images/users/1.jpg"
+                            alt="" /></span
+                        ><span class="fs-13">Jenna Foster</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="fs-13">Sep 02 &ndash; Oct 18</div>
+                      <span class="text-muted fs-11">22 days left</span>
+                    </td>
+                    <td>
+                      <div class="d-flex align-items-center gap-2">
+                        <div
+                          class="progress flex-fill"
+                          style="height: 5px; min-width: 72px"
+                        >
+                          <div
+                            class="progress-bar bg-primary"
+                            style="width: 68%"
+                          ></div>
+                        </div>
+                        <span class="text-muted fs-12">68%</span>
+                      </div>
+                    </td>
+                    <td class="fw-medium">$410,000</td>
+                    <td>
+                      <span class="badge bg-success-transparent text-success"
+                        ><i class="ri-checkbox-circle-line me-1"></i>On
+                        track</span
+                      >
+                    </td>
+                    <td class="text-end pe-4">
+                      <a
+                        href="projects-overview.html"
+                        class="btn btn-sm btn-light"
+                        aria-label="View Atlas client portal"
+                        >View <i class="ri-arrow-right-line ms-1"></i
+                      ></a>
+                    </td>
+                  </tr>
+                  <tr
+                    data-status="active"
+                    data-search="cloud migration infrastructure marcus reed"
+                  >
+                    <td class="ps-4">
+                      <div class="d-flex align-items-center gap-3">
+                        <span class="project-company-logo"
+                          ><img src="../assets/images/logos/4.png" alt=""
+                        /></span>
+                        <div>
+                          <a
+                            href="projects-overview.html"
+                            class="fw-semibold fs-13 text-default"
+                            >Cloud migration</a
+                          ><span class="text-muted fs-12 d-block"
+                            >Infrastructure</span
+                          >
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="avatar avatar-xs avatar-rounded"
+                          ><img
+                            src="../assets/images/users/6.jpg"
+                            alt="" /></span
+                        ><span class="fs-13">Marcus Reed</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="fs-13">Aug 11 &ndash; Nov 06</div>
+                      <span class="text-muted fs-11">41 days left</span>
+                    </td>
+                    <td>
+                      <div class="d-flex align-items-center gap-2">
+                        <div
+                          class="progress flex-fill"
+                          style="height: 5px; min-width: 72px"
+                        >
+                          <div
+                            class="progress-bar bg-info"
+                            style="width: 52%"
+                          ></div>
+                        </div>
+                        <span class="text-muted fs-12">52%</span>
+                      </div>
+                    </td>
+                    <td class="fw-medium">$630,000</td>
+                    <td>
+                      <span class="badge bg-warning-transparent text-warning"
+                        ><i class="ri-eye-line me-1"></i>Watch</span
+                      >
+                    </td>
+                    <td class="text-end pe-4">
+                      <a
+                        href="projects-overview.html"
+                        class="btn btn-sm btn-light"
+                        aria-label="View Cloud migration"
+                        >View <i class="ri-arrow-right-line ms-1"></i
+                      ></a>
+                    </td>
+                  </tr>
+                  <tr
+                    data-status="active"
+                    data-search="mobile app refresh customer experience priya shah"
+                  >
+                    <td class="ps-4">
+                      <div class="d-flex align-items-center gap-3">
+                        <span class="project-company-logo"
+                          ><img src="../assets/images/logos/5.png" alt=""
+                        /></span>
+                        <div>
+                          <a
+                            href="projects-overview.html"
+                            class="fw-semibold fs-13 text-default"
+                            >Mobile app refresh</a
+                          ><span class="text-muted fs-12 d-block"
+                            >Customer experience</span
+                          >
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="avatar avatar-xs avatar-rounded"
+                          ><img
+                            src="../assets/images/users/10.jpg"
+                            alt="" /></span
+                        ><span class="fs-13">Priya Shah</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="fs-13">Jul 20 &ndash; Nov 22</div>
+                      <span class="text-muted fs-11">57 days left</span>
+                    </td>
+                    <td>
+                      <div class="d-flex align-items-center gap-2">
+                        <div
+                          class="progress flex-fill"
+                          style="height: 5px; min-width: 72px"
+                        >
+                          <div
+                            class="progress-bar bg-success"
+                            style="width: 81%"
+                          ></div>
+                        </div>
+                        <span class="text-muted fs-12">81%</span>
+                      </div>
+                    </td>
+                    <td class="fw-medium">$280,000</td>
+                    <td>
+                      <span class="badge bg-success-transparent text-success"
+                        ><i class="ri-checkbox-circle-line me-1"></i>On
+                        track</span
+                      >
+                    </td>
+                    <td class="text-end pe-4">
+                      <a
+                        href="projects-overview.html"
+                        class="btn btn-sm btn-light"
+                        aria-label="View Mobile app refresh"
+                        >View <i class="ri-arrow-right-line ms-1"></i
+                      ></a>
+                    </td>
+                  </tr>
+                  <tr
+                    data-status="at-risk"
+                    data-search="security review compliance owen brooks"
+                  >
+                    <td class="ps-4">
+                      <div class="d-flex align-items-center gap-3">
+                        <span class="project-company-logo"
+                          ><img src="../assets/images/logos/6.png" alt=""
+                        /></span>
+                        <div>
+                          <a
+                            href="projects-overview.html"
+                            class="fw-semibold fs-13 text-default"
+                            >Security review</a
+                          ><span class="text-muted fs-12 d-block"
+                            >Compliance</span
+                          >
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="avatar avatar-xs avatar-rounded"
+                          ><img
+                            src="../assets/images/users/12.jpg"
+                            alt="" /></span
+                        ><span class="fs-13">Owen Brooks</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="fs-13">Aug 04 &ndash; Oct 02</div>
+                      <span class="text-danger fs-11">6 days left</span>
+                    </td>
+                    <td>
+                      <div class="d-flex align-items-center gap-2">
+                        <div
+                          class="progress flex-fill"
+                          style="height: 5px; min-width: 72px"
+                        >
+                          <div
+                            class="progress-bar bg-danger"
+                            style="width: 39%"
+                          ></div>
+                        </div>
+                        <span class="text-muted fs-12">39%</span>
+                      </div>
+                    </td>
+                    <td class="fw-medium">$145,000</td>
+                    <td>
+                      <span class="badge bg-danger-transparent text-danger"
+                        ><i class="ri-error-warning-line me-1"></i>At risk</span
+                      >
+                    </td>
+                    <td class="text-end pe-4">
+                      <a
+                        href="projects-overview.html"
+                        class="btn btn-sm btn-light"
+                        aria-label="View Security review"
+                        >View <i class="ri-arrow-right-line ms-1"></i
+                      ></a>
+                    </td>
+                  </tr>
+                  <tr
+                    data-status="active"
+                    data-search="customer onboarding workflow operations liam cooper"
+                  >
+                    <td class="ps-4">
+                      <div class="d-flex align-items-center gap-3">
+                        <span class="project-company-logo"
+                          ><img src="../assets/images/logos/2.png" alt=""
+                        /></span>
+                        <div>
+                          <a
+                            href="projects-overview.html"
+                            class="fw-semibold fs-13 text-default"
+                            >Customer onboarding workflow</a
+                          ><span class="text-muted fs-12 d-block"
+                            >Operations</span
+                          >
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="avatar avatar-xs avatar-rounded"
+                          ><img
+                            src="../assets/images/users/8.jpg"
+                            alt="" /></span
+                        ><span class="fs-13">Liam Cooper</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="fs-13">Sep 08 &ndash; Dec 11</div>
+                      <span class="text-muted fs-11">76 days left</span>
+                    </td>
+                    <td>
+                      <div class="d-flex align-items-center gap-2">
+                        <div
+                          class="progress flex-fill"
+                          style="height: 5px; min-width: 72px"
+                        >
+                          <div
+                            class="progress-bar bg-warning"
+                            style="width: 34%"
+                          ></div>
+                        </div>
+                        <span class="text-muted fs-12">34%</span>
+                      </div>
+                    </td>
+                    <td class="fw-medium">$220,000</td>
+                    <td>
+                      <span class="badge bg-success-transparent text-success"
+                        ><i class="ri-checkbox-circle-line me-1"></i>On
+                        track</span
+                      >
+                    </td>
+                    <td class="text-end pe-4">
+                      <a
+                        href="projects-overview.html"
+                        class="btn btn-sm btn-light"
+                        aria-label="View Customer onboarding workflow"
+                        >View <i class="ri-arrow-right-line ms-1"></i
+                      ></a>
+                    </td>
+                  </tr>
+                  <tr
+                    data-status="completed"
+                    data-search="data warehouse analytics emily clark"
+                  >
+                    <td class="ps-4">
+                      <div class="d-flex align-items-center gap-3">
+                        <span class="project-company-logo"
+                          ><img src="../assets/images/logos/3.png" alt=""
+                        /></span>
+                        <div>
+                          <a
+                            href="projects-overview.html"
+                            class="fw-semibold fs-13 text-default"
+                            >Data warehouse foundation</a
+                          ><span class="text-muted fs-12 d-block"
+                            >Analytics</span
+                          >
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="avatar avatar-xs avatar-rounded"
+                          ><img
+                            src="../assets/images/users/3.jpg"
+                            alt="" /></span
+                        ><span class="fs-13">Emily Clark</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="fs-13">May 12 &ndash; Sep 18</div>
+                      <span class="text-success fs-11">Completed Sep 18</span>
+                    </td>
+                    <td>
+                      <div class="d-flex align-items-center gap-2">
+                        <div
+                          class="progress flex-fill"
+                          style="height: 5px; min-width: 72px"
+                        >
+                          <div
+                            class="progress-bar bg-success"
+                            style="width: 100%"
+                          ></div>
+                        </div>
+                        <span class="text-muted fs-12">100%</span>
+                      </div>
+                    </td>
+                    <td class="fw-medium">$360,000</td>
+                    <td>
+                      <span
+                        class="badge bg-secondary-transparent text-secondary"
+                        ><i class="ri-checkbox-circle-line me-1"></i
+                        >Complete</span
+                      >
+                    </td>
+                    <td class="text-end pe-4">
+                      <a
+                        href="projects-overview.html"
+                        class="btn btn-sm btn-light"
+                        aria-label="View Data warehouse foundation"
+                        >View <i class="ri-arrow-right-line ms-1"></i
+                      ></a>
+                    </td>
+                  </tr>
+                  <tr id="projects-empty-state" class="d-none">
+                    <td colspan="7" class="text-center py-5">
+                      <span
+                        class="avatar avatar-lg bg-light text-muted rounded-circle mb-3"
+                        ><i class="ri-search-line fs-20"></i
+                      ></span>
+                      <div class="fw-semibold">No projects found</div>
+                      <span class="text-muted fs-12"
+                        >Try a different name or status filter.</span
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div
+              class="card-footer border-top-0 d-flex justify-content-between align-items-center flex-wrap gap-2"
+            >
+              <span id="project-result-footer" class="text-muted fs-12"
+                >Showing 6 projects</span
+              ><a href="projects-create.html" class="fs-12 fw-medium"
+                >Add a project <i class="ri-add-line ms-1"></i
+              ></a>
+            </div>
+          </section>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"-->
+    <script src="../assets/js/app-interactions.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const search = document.getElementById("project-search");
+        const statusSelect = document.getElementById("project-status-filter");
+        const filterButtons = document.querySelectorAll(
+          ".project-filter-button"
+        );
+        const rows = [
+          ...document.querySelectorAll("#projects-table-body tr[data-status]"),
+        ];
+        const emptyState = document.getElementById("projects-empty-state");
+        const resultCount = document.getElementById("project-result-count");
+        const resultFooter = document.getElementById("project-result-footer");
+        let selectedStatus = "all";
+
+        function filterProjects() {
+          const query = search.value.trim().toLowerCase();
+          const status =
+            statusSelect.value !== "all" ? statusSelect.value : selectedStatus;
+          let visibleCount = 0;
+
+          rows.forEach(function (row) {
+            const matchesStatus =
+              status === "all" || row.dataset.status === status;
+            const matchesSearch = row.dataset.search.includes(query);
+            const isVisible = matchesStatus && matchesSearch;
+            row.classList.toggle("d-none", !isVisible);
+            if (isVisible) visibleCount += 1;
+          });
+
+          emptyState.classList.toggle("d-none", visibleCount > 0);
+          const summary = `Showing ${visibleCount} ${
+            visibleCount === 1 ? "project" : "projects"
+          }`;
+          resultCount.textContent = `${summary} in the portfolio`;
+          resultFooter.textContent = summary;
+        }
+
+        filterButtons.forEach(function (button) {
+          button.addEventListener("click", function () {
+            selectedStatus = button.dataset.status;
+            statusSelect.value = "all";
+            filterButtons.forEach(function (item) {
+              const isActive = item === button;
+              item.classList.toggle("btn-primary", isActive);
+              item.classList.toggle("btn-light", !isActive);
+              item.setAttribute("aria-pressed", String(isActive));
+            });
+            filterProjects();
+          });
+        });
+
+        search.addEventListener("input", filterProjects);
+        statusSelect.addEventListener("change", function () {
+          selectedStatus = "all";
+          filterButtons.forEach(function (button) {
+            const isActive = button.dataset.status === "all";
+            button.classList.toggle("btn-primary", isActive);
+            button.classList.toggle("btn-light", !isActive);
+            button.setAttribute("aria-pressed", String(isActive));
+          });
+          filterProjects();
+        });
+      });
+    </script>
+  </body>
+</html>

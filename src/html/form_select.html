@@ -1,0 +1,637 @@
+<!-- include document-head.html"-->
+    <link
+      rel="stylesheet"
+      href="../assets/libs/prismjs/themes/prism-coy.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Select controls</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">
+              <a href="javascript:void(0);">Forms</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="javascript:void(0);">Form Elements</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Select controls
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid">
+          <section aria-labelledby="native-controls-title">
+            <div class="row">
+              <div class="col-xl-4 col-md-6">
+                <section class="card custom-card">
+                  <div class="card-header justify-content-between">
+                    <h3 class="card-title mb-0">Standard dropdown</h3>
+                    <div class="prism-toggle">
+                      <button
+                        class="btn btn-sm btn-outline-light rounded-pill"
+                        type="button"
+                      >
+                        View markup<i
+                          class="ri-code-line ms-2 d-inline-block align-middle"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <label class="form-label" for="native-select"
+                      >Project status</label
+                    ><select class="form-select" id="native-select">
+                      <option selected>Choose status</option>
+                      <option>Planning</option>
+                      <option>In progress</option>
+                      <option>On hold</option>
+                      <option>Complete</option>
+                    </select>
+                  </div>
+                  <div class="card-footer d-none border-top-0">
+                    <pre
+                      class="language-html"
+                    ><code class="language-html">&lt;select class="form-select"&gt;
+  &lt;option selected&gt;Choose status&lt;/option&gt;
+  &lt;option&gt;Planning&lt;/option&gt;
+  &lt;option&gt;In progress&lt;/option&gt;
+  &lt;option&gt;On hold&lt;/option&gt;
+  &lt;option&gt;Complete&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+                  </div>
+                </section>
+              </div>
+              <div class="col-xl-4 col-md-6">
+                <section class="card custom-card">
+                  <div class="card-header justify-content-between">
+                    <h3 class="card-title mb-0">Disabled state</h3>
+                    <div class="prism-toggle">
+                      <button
+                        class="btn btn-sm btn-outline-light rounded-pill"
+                        type="button"
+                      >
+                        View markup<i
+                          class="ri-code-line ms-2 d-inline-block align-middle"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <label class="form-label" for="native-select-disabled"
+                      >Department</label
+                    ><select
+                      class="form-select"
+                      id="native-select-disabled"
+                      disabled
+                    >
+                      <option selected>Choose an owner first</option>
+                    </select>
+                    <div class="form-text">
+                      Unavailable until an owner is selected.
+                    </div>
+                  </div>
+                  <div class="card-footer d-none border-top-0">
+                    <pre
+                      class="language-html"
+                    ><code class="language-html">&lt;select class="form-select" disabled&gt;
+  &lt;option selected&gt;Choose an owner first&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+                  </div>
+                </section>
+              </div>
+              <div class="col-xl-4 col-md-6">
+                <section class="card custom-card">
+                  <div class="card-header justify-content-between">
+                    <h3 class="card-title mb-0">Pill-shaped dropdown</h3>
+                    <div class="prism-toggle">
+                      <button
+                        class="btn btn-sm btn-outline-light rounded-pill"
+                        type="button"
+                      >
+                        View markup<i
+                          class="ri-code-line ms-2 d-inline-block align-middle"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <label class="form-label" for="native-select-rounded"
+                      >Priority</label
+                    ><select
+                      class="form-select rounded-pill"
+                      id="native-select-rounded"
+                    >
+                      <option selected>Normal</option>
+                      <option>Low</option>
+                      <option>High</option>
+                      <option>Urgent</option>
+                    </select>
+                  </div>
+                  <div class="card-footer d-none border-top-0">
+                    <pre
+                      class="language-html"
+                    ><code class="language-html">&lt;select class="form-select rounded-pill"&gt;
+  &lt;option selected&gt;Normal&lt;/option&gt;
+  &lt;option&gt;Low&lt;/option&gt;
+  &lt;option&gt;High&lt;/option&gt;
+  &lt;option&gt;Urgent&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+                  </div>
+                </section>
+              </div>
+              <div class="col-xl-6 col-md-6">
+                <section class="card custom-card">
+                  <div class="card-header justify-content-between">
+                    <h3 class="card-title mb-0">Multi-option list</h3>
+                    <div class="prism-toggle">
+                      <button
+                        class="btn btn-sm btn-outline-light rounded-pill"
+                        type="button"
+                      >
+                        View markup<i
+                          class="ri-code-line ms-2 d-inline-block align-middle"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <label class="form-label" for="native-select-multiple"
+                      >Project teams</label
+                    ><select
+                      class="form-select"
+                      id="native-select-multiple"
+                      multiple
+                      size="4"
+                      aria-label="Select project teams"
+                    >
+                      <option selected>Design</option>
+                      <option>Product</option>
+                      <option>Engineering</option>
+                      <option>Customer success</option>
+                    </select>
+                    <div class="form-text">
+                      Use Ctrl or Command to select more than one option.
+                    </div>
+                  </div>
+                  <div class="card-footer d-none border-top-0">
+                    <pre
+                      class="language-html"
+                    ><code class="language-html">&lt;select class="form-select" multiple size="4"&gt;
+  &lt;option selected&gt;Design&lt;/option&gt;
+  &lt;option&gt;Product&lt;/option&gt;
+  &lt;option&gt;Engineering&lt;/option&gt;
+  &lt;option&gt;Customer success&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+                  </div>
+                </section>
+              </div>
+              <div class="col-xl-6 col-md-6">
+                <section class="card custom-card">
+                  <div class="card-header justify-content-between">
+                    <h3 class="card-title mb-0">
+                      Compact, default &amp; large
+                    </h3>
+                    <div class="prism-toggle">
+                      <button
+                        class="btn btn-sm btn-outline-light rounded-pill"
+                        type="button"
+                      >
+                        View markup<i
+                          class="ri-code-line ms-2 d-inline-block align-middle"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <label for="select-size-small" class="form-label"
+                      >Compact</label
+                    ><select
+                      class="form-select form-select-sm mb-3"
+                      id="select-size-small"
+                    >
+                      <option selected>Small select</option>
+                      <option>Option two</option></select
+                    ><label for="select-size-default" class="form-label"
+                      >Default</label
+                    ><select class="form-select mb-3" id="select-size-default">
+                      <option selected>Standard select</option>
+                      <option>Option two</option></select
+                    ><label for="select-size-large" class="form-label"
+                      >Large</label
+                    ><select
+                      class="form-select form-select-lg"
+                      id="select-size-large"
+                    >
+                      <option selected>Large select</option>
+                      <option>Option two</option>
+                    </select>
+                  </div>
+                  <div class="card-footer d-none border-top-0">
+                    <pre
+                      class="language-html"
+                    ><code class="language-html">&lt;select class="form-select form-select-sm"&gt;...&lt;/select&gt;
+&lt;select class="form-select"&gt;...&lt;/select&gt;
+&lt;select class="form-select form-select-lg"&gt;...&lt;/select&gt;</code></pre>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </section>
+
+          <section aria-labelledby="choices-controls-title">
+            <div class="row">
+              <div class="col-xl-6 col-md-6">
+                <section class="card custom-card">
+                  <div class="card-header justify-content-between">
+                    <h3 class="card-title mb-0">Searchable single choice</h3>
+                    <div class="prism-toggle">
+                      <button
+                        class="btn btn-sm btn-outline-light rounded-pill"
+                        type="button"
+                      >
+                        View markup<i
+                          class="ri-code-line ms-2 d-inline-block align-middle"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <label class="form-label" for="choices-single-default"
+                      >Workflow template</label
+                    ><select
+                      class="form-control"
+                      data-trigger
+                      name="choices-single-default"
+                      id="choices-single-default"
+                    >
+                      <option value="">Choose a workflow</option>
+                      <option value="Choice 1">Standard delivery</option>
+                      <option value="Choice 2">Product launch</option>
+                      <option value="Choice 3">Client engagement</option>
+                    </select>
+                  </div>
+                  <div class="card-footer d-none border-top-0">
+                    <pre
+                      class="language-html"
+                    ><code class="language-html">&lt;select class="form-control" data-trigger id="choices-single-default"&gt;
+  &lt;option value=""&gt;Choose a workflow&lt;/option&gt;
+  &lt;option value="Choice 1"&gt;Standard delivery&lt;/option&gt;
+  &lt;option value="Choice 2"&gt;Product launch&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+                  </div>
+                </section>
+              </div>
+              <div class="col-xl-6 col-md-6">
+                <section class="card custom-card">
+                  <div class="card-header justify-content-between">
+                    <h3 class="card-title mb-0">Grouped single choice</h3>
+                    <div class="prism-toggle">
+                      <button
+                        class="btn btn-sm btn-outline-light rounded-pill"
+                        type="button"
+                      >
+                        View markup<i
+                          class="ri-code-line ms-2 d-inline-block align-middle"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <label class="form-label" for="choices-single-groups"
+                      >Project category</label
+                    ><select
+                      class="form-control"
+                      data-trigger
+                      name="choices-single-groups"
+                      id="choices-single-groups"
+                    >
+                      <option value="">Select a category</option>
+                      <optgroup label="Internal">
+                        <option value="Operations">Operations</option>
+                        <option value="Research">Research</option>
+                        <option value="Infrastructure">Infrastructure</option>
+                      </optgroup>
+                      <optgroup label="Customer work">
+                        <option value="Implementation">Implementation</option>
+                        <option value="Consulting">Consulting</option>
+                        <option value="Support">Support</option>
+                      </optgroup>
+                    </select>
+                  </div>
+                  <div class="card-footer d-none border-top-0">
+                    <pre
+                      class="language-html"
+                    ><code class="language-html">&lt;select class="form-control" data-trigger id="choices-single-groups"&gt;
+  &lt;optgroup label="Internal"&gt;...&lt;/optgroup&gt;
+  &lt;optgroup label="Customer work"&gt;...&lt;/optgroup&gt;
+&lt;/select&gt;</code></pre>
+                  </div>
+                </section>
+              </div>
+              <div class="col-xl-6 col-md-6">
+                <section class="card custom-card">
+                  <div class="card-header justify-content-between">
+                    <h3 class="card-title mb-0">Removable multi-choice tags</h3>
+                    <div class="prism-toggle">
+                      <button
+                        class="btn btn-sm btn-outline-light rounded-pill"
+                        type="button"
+                      >
+                        View markup<i
+                          class="ri-code-line ms-2 d-inline-block align-middle"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <label class="form-label" for="choices-multiple-default"
+                      >Project teams</label
+                    ><select
+                      class="form-control"
+                      data-trigger
+                      name="choices-multiple-default"
+                      id="choices-multiple-default"
+                      multiple
+                    >
+                      <option value="Choice 1">Design</option>
+                      <option value="Choice 2">Product</option>
+                      <option value="Choice 3">Engineering</option>
+                      <option value="Choice 4">Customer success</option>
+                    </select>
+                    <div class="form-text">
+                      Choose multiple teams and remove tags individually.
+                    </div>
+                  </div>
+                  <div class="card-footer d-none border-top-0">
+                    <pre
+                      class="language-html"
+                    ><code class="language-html">&lt;select class="form-control" data-trigger id="choices-multiple-default" multiple&gt;
+  &lt;option value="Choice 1"&gt;Design&lt;/option&gt;
+  &lt;option value="Choice 2"&gt;Product&lt;/option&gt;
+  &lt;option value="Choice 3"&gt;Engineering&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+                  </div>
+                </section>
+              </div>
+              <div class="col-xl-6 col-md-6">
+                <section class="card custom-card">
+                  <div class="card-header justify-content-between">
+                    <h3 class="card-title mb-0">Preselected workstream tags</h3>
+                    <div class="prism-toggle">
+                      <button
+                        class="btn btn-sm btn-outline-light rounded-pill"
+                        type="button"
+                      >
+                        View markup<i
+                          class="ri-code-line ms-2 d-inline-block align-middle"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <label
+                      class="form-label"
+                      for="choices-multiple-remove-button"
+                      >Assigned workstreams</label
+                    ><select
+                      class="form-control"
+                      name="choices-multiple-remove-button"
+                      id="choices-multiple-remove-button"
+                      multiple
+                    >
+                      <option value="Choice 1" selected>Research</option>
+                      <option value="Choice 2">Design system</option>
+                      <option value="Choice 3" selected>
+                        Frontend delivery
+                      </option>
+                      <option value="Choice 4">Quality review</option>
+                    </select>
+                  </div>
+                  <div class="card-footer d-none border-top-0">
+                    <pre
+                      class="language-html"
+                    ><code class="language-html">&lt;select class="form-control" id="choices-multiple-remove-button" multiple&gt;
+  &lt;option value="Choice 1" selected&gt;Research&lt;/option&gt;
+  &lt;option value="Choice 2"&gt;Design system&lt;/option&gt;
+  &lt;option value="Choice 3"&gt;Frontend delivery&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+                  </div>
+                </section>
+              </div>
+              <div class="col-xl-6 col-md-6">
+                <section class="card custom-card">
+                  <div class="card-header justify-content-between">
+                    <h3 class="card-title mb-0">Grouped location tags</h3>
+                    <div class="prism-toggle">
+                      <button
+                        class="btn btn-sm btn-outline-light rounded-pill"
+                        type="button"
+                      >
+                        View markup<i
+                          class="ri-code-line ms-2 d-inline-block align-middle"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <label class="form-label" for="choices-multiple-groups"
+                      >Office locations</label
+                    ><select
+                      class="form-control"
+                      name="choices-multiple-groups"
+                      id="choices-multiple-groups"
+                      multiple
+                    >
+                      <optgroup label="North America">
+                        <option value="New York">New York</option>
+                        <option value="San Francisco">San Francisco</option>
+                        <option value="Toronto">Toronto</option>
+                      </optgroup>
+                      <optgroup label="Europe">
+                        <option value="London">London</option>
+                        <option value="Paris">Paris</option>
+                        <option value="Berlin">Berlin</option>
+                      </optgroup>
+                      <optgroup label="Asia Pacific">
+                        <option value="Singapore">Singapore</option>
+                        <option value="Tokyo">Tokyo</option>
+                        <option value="Sydney">Sydney</option>
+                      </optgroup>
+                    </select>
+                  </div>
+                  <div class="card-footer d-none border-top-0">
+                    <pre
+                      class="language-html"
+                    ><code class="language-html">&lt;select class="form-control" id="choices-multiple-groups" multiple&gt;
+  &lt;optgroup label="North America"&gt;...&lt;/optgroup&gt;
+  &lt;optgroup label="Europe"&gt;...&lt;/optgroup&gt;
+  &lt;optgroup label="Asia Pacific"&gt;...&lt;/optgroup&gt;
+&lt;/select&gt;</code></pre>
+                  </div>
+                </section>
+              </div>
+              <div class="col-xl-6 col-md-6">
+                <section class="card custom-card">
+                  <div class="card-header justify-content-between">
+                    <h3 class="card-title mb-0">Email address tags</h3>
+                    <div class="prism-toggle">
+                      <button
+                        class="btn btn-sm btn-outline-light rounded-pill"
+                        type="button"
+                      >
+                        View markup<i
+                          class="ri-code-line ms-2 d-inline-block align-middle"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <label class="form-label" for="choices-text-email-filter"
+                      >Invite contributors</label
+                    ><input
+                      class="form-control"
+                      id="choices-text-email-filter"
+                      type="text"
+                      placeholder="name@example.com"
+                    />
+                    <div class="form-text">
+                      Enter valid email addresses as tags.
+                    </div>
+                  </div>
+                  <div class="card-footer d-none border-top-0">
+                    <pre
+                      class="language-html"
+                    ><code class="language-html">&lt;input class="form-control" id="choices-text-email-filter"
+       type="text" placeholder="name@example.com"&gt;</code></pre>
+                  </div>
+                </section>
+              </div>
+              <div class="col-xl-6 col-md-6">
+                <section class="card custom-card">
+                  <div class="card-header justify-content-between">
+                    <h3 class="card-title mb-0">Preset label tags</h3>
+                    <div class="prism-toggle">
+                      <button
+                        class="btn btn-sm btn-outline-light rounded-pill"
+                        type="button"
+                      >
+                        View markup<i
+                          class="ri-code-line ms-2 d-inline-block align-middle"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <label class="form-label" for="choices-text-preset-values"
+                      >Project labels</label
+                    ><input
+                      class="form-control"
+                      id="choices-text-preset-values"
+                      type="text"
+                      value="Planning"
+                      placeholder="Add project labels"
+                    />
+                  </div>
+                  <div class="card-footer d-none border-top-0">
+                    <pre
+                      class="language-html"
+                    ><code class="language-html">&lt;input class="form-control" id="choices-text-preset-values"
+       type="text" value="Planning"&gt;</code></pre>
+                  </div>
+                </section>
+              </div>
+              <div class="col-xl-6 col-md-6">
+                <section class="card custom-card">
+                  <div class="card-header justify-content-between">
+                    <h3 class="card-title mb-0">Unique-value tags</h3>
+                    <div class="prism-toggle">
+                      <button
+                        class="btn btn-sm btn-outline-light rounded-pill"
+                        type="button"
+                      >
+                        View markup<i
+                          class="ri-code-line ms-2 d-inline-block align-middle"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <label class="form-label" for="choices-text-unique-values"
+                      >Milestone labels</label
+                    ><input
+                      class="form-control"
+                      id="choices-text-unique-values"
+                      type="text"
+                      value="Kickoff, Prototype"
+                      placeholder="Add a label"
+                    />
+                    <div class="form-text">Duplicate entries are ignored.</div>
+                  </div>
+                  <div class="card-footer d-none border-top-0">
+                    <pre
+                      class="language-html"
+                    ><code class="language-html">&lt;input class="form-control" id="choices-text-unique-values"
+       type="text" value="Kickoff, Prototype"&gt;</code></pre>
+                  </div>
+                </section>
+              </div>
+              <div class="col-xl-6 col-md-6">
+                <section class="card custom-card">
+                  <div class="card-header justify-content-between">
+                    <h3 class="card-title mb-0">Search-free single choice</h3>
+                    <div class="prism-toggle">
+                      <button
+                        class="btn btn-sm btn-outline-light rounded-pill"
+                        type="button"
+                      >
+                        View markup<i
+                          class="ri-code-line ms-2 d-inline-block align-middle"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <label class="form-label" for="choices-single-no-search"
+                      >Project visibility</label
+                    ><select
+                      class="form-control"
+                      name="choices-single-no-search"
+                      id="choices-single-no-search"
+                    >
+                      <option value="0">Private to project team</option>
+                    </select>
+                  </div>
+                  <div class="card-footer d-none border-top-0">
+                    <pre
+                      class="language-html"
+                    ><code class="language-html">&lt;select class="form-control" id="choices-single-no-search"&gt;
+  &lt;option value="0"&gt;Private to project team&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"-->
+    <!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/libs/prismjs/prism.js"></script>
+    <script src="../assets/js/prism-custom.js"></script>
+    <script src="../assets/js/choices.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

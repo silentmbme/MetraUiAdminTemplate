@@ -1,0 +1,370 @@
+<!-- include document-head.html"-->
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">AI chat</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">
+              <a href="ai-dashboard.html">Gen AI</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">AI chat</li>
+          </ol>
+        </div>
+        <div class="container-fluid ai-chat-page" id="ai-chat-app">
+          <section
+            class="card custom-card chatgpt-shell mb-3"
+            aria-label="AI chat workspace"
+          >
+            <div class="chatgpt-main">
+              <div class="chatgpt-mobilebar d-lg-none">
+                <span class="d-flex align-items-center gap-2"
+                  ><i class="ri-sparkling-2-line text-primary"></i
+                  ><strong>NexoraUI AI</strong></span
+                >
+                <div class="d-flex align-items-center gap-2">
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-light btn-icon"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#ai-chat-history-panel"
+                    aria-controls="ai-chat-history-panel"
+                  >
+                    <i class="ri-history-line" aria-hidden="true"></i>
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-light"
+                    id="ai-new-chat-mobile"
+                  >
+                    <i class="ri-add-line me-1" aria-hidden="true"></i>New chat
+                  </button>
+                </div>
+              </div>
+              <section
+                class="chatgpt-home"
+                id="ai-chat-home"
+                aria-labelledby="ai-chat-welcome"
+              >
+                <div class="chatgpt-welcome">
+                  <span class="chatgpt-orbit" aria-hidden="true"
+                    ><i class="ri-sparkling-2-line"></i
+                  ></span>
+                  <h1 id="ai-chat-welcome">
+                    Welcome to your AI workspace.<br />What should we
+                    <span>solve?</span>
+                  </h1>
+                </div>
+                <div
+                  class="chatgpt-suggestions"
+                  aria-label="Prompt suggestions"
+                >
+                  <button
+                    type="button"
+                    class="chatgpt-suggestion ai-prompt-suggestion"
+                    data-prompt="Create a launch plan for a new analytics feature, including milestones, owners, and risks."
+                  >
+                    <i class="ri-route-line" aria-hidden="true"></i
+                    ><span
+                      ><strong>Plan a launch</strong
+                      ><span class="text-muted"
+                        >Turn a product goal into clear milestones</span
+                      ></span
+                    >
+                  </button>
+                  <button
+                    type="button"
+                    class="chatgpt-suggestion ai-prompt-suggestion"
+                    data-prompt="Draft a concise follow-up email for a sales lead after a product demo, with a clear next step."
+                  >
+                    <i class="ri-mail-send-line" aria-hidden="true"></i
+                    ><span
+                      ><strong>Draft a follow-up</strong
+                      ><span class="text-muted"
+                        >Write a customer-ready sales message</span
+                      ></span
+                    >
+                  </button>
+                  <button
+                    type="button"
+                    class="chatgpt-suggestion ai-prompt-suggestion"
+                    data-prompt="Summarize this week's support trends and identify the top three issues the team should address."
+                  >
+                    <i class="ri-line-chart-line" aria-hidden="true"></i
+                    ><span
+                      ><strong>Analyze trends</strong
+                      ><span class="text-muted"
+                        >Find useful signals in team activity</span
+                      ></span
+                    >
+                  </button>
+                  <button
+                    type="button"
+                    class="chatgpt-suggestion ai-prompt-suggestion"
+                    data-prompt="Review this SQL query for performance issues and suggest a clearer, safer version."
+                  >
+                    <i class="ri-code-s-slash-line" aria-hidden="true"></i
+                    ><span
+                      ><strong>Review code</strong
+                      ><span class="text-muted"
+                        >Improve a query or explain an error</span
+                      ></span
+                    >
+                  </button>
+                </div>
+                <div class="chatgpt-prompt-wrap">
+                  <form class="chatgpt-composer" id="ai-chat-form">
+                    <label for="ai-chat-input" class="visually-hidden"
+                      >Message NexoraUI AI</label
+                    >
+                    <textarea
+                      id="ai-chat-input"
+                      class="form-control"
+                      rows="2"
+                      placeholder="Ask about a customer, workflow, report, or product task..."
+                      aria-describedby="ai-chat-help"
+                    ></textarea>
+                    <input
+                      class="visually-hidden"
+                      type="file"
+                      id="ai-chat-attachment"
+                      aria-label="Attach a file"
+                    />
+                    <div class="chatgpt-composer-actions">
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-light btn-icon rounded-pill chatgpt-tool"
+                        id="ai-attach-button"
+                        aria-label="Attach a file"
+                      >
+                        <i class="ri-attachment-2 fs-16"></i>
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-light rounded-pill chatgpt-tool"
+                        id="ai-search-toggle"
+                        aria-pressed="false"
+                      >
+                        <i class="ri-global-line me-1"></i>Search
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-light rounded-pill chatgpt-tool"
+                        id="ai-reason-toggle"
+                        aria-pressed="false"
+                      >
+                        <i class="ri-lightbulb-line me-1"></i>Reason
+                      </button>
+                      <span
+                        class="text-muted fs-12 ms-1 d-none d-sm-inline"
+                        id="ai-chat-feedback"
+                        role="status"
+                        aria-live="polite"
+                        >Sample mode</span
+                      >
+                      <button
+                        type="submit"
+                        class="btn btn-primary btn-icon chatgpt-send text-black d-flex justify-content-center justify-content-center"
+                        id="ai-send-message"
+                        aria-label="Send message"
+                      >
+                        <i
+                          class="ri-arrow-up-line fs-18"
+                          aria-hidden="true"
+                        ></i>
+                      </button>
+                    </div>
+                  </form>
+                  <p id="ai-chat-help" class="chatgpt-footer-note">
+                    NexoraUI AI can make mistakes. Check important information.
+                  </p>
+                </div>
+              </section>
+
+              <section
+                class="chatgpt-thread"
+                id="ai-chat-thread"
+                aria-label="Conversation"
+                aria-live="polite"
+              ></section>
+              <div class="chatgpt-prompt-wrap d-none" id="ai-chat-followup">
+                <form class="chatgpt-composer" id="ai-chat-followup-form">
+                  <label for="ai-chat-followup-input" class="visually-hidden"
+                    >Write a follow-up message</label
+                  >
+                  <textarea
+                    id="ai-chat-followup-input"
+                    class="form-control"
+                    rows="2"
+                    placeholder="Message NexoraUI AI"
+                    aria-describedby="ai-chat-followup-help"
+                  ></textarea>
+                  <div class="chatgpt-composer-actions">
+                    <span
+                      id="ai-chat-feedback-followup"
+                      class="text-muted fs-12"
+                      role="status"
+                      aria-live="polite"
+                      >Sample response only</span
+                    ><button
+                      type="submit"
+                      class="btn btn-primary chatgpt-send text-dark btn-icon d-flex justify-content-center justify-content-center"
+                      aria-label="Send message"
+                    >
+                      <i class="ri-arrow-up-line fs-18" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </form>
+                <p id="ai-chat-followup-help" class="chatgpt-footer-note">
+                  Sample mode <span class="mx-1">&middot;</span> Responses are
+                  not generated by a live model.
+                </p>
+              </div>
+            </div>
+
+            <aside
+              class="chatgpt-rail offcanvas offcanvas-lg offcanvas-end"
+              id="ai-chat-history-panel"
+              tabindex="-1"
+              aria-labelledby="ai-chat-history-title"
+            >
+              <div class="offcanvas-header chatgpt-rail-header">
+                <h2
+                  class="offcanvas-title fs-16 fw-semibold"
+                  id="ai-chat-history-title"
+                >
+                  Conversation history
+                </h2>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close history"
+                ></button>
+              </div>
+              <div class="offcanvas-body chatgpt-rail-body">
+                <label class="chatgpt-search" for="ai-chat-search"
+                  ><i class="ri-search-line" aria-hidden="true"></i
+                  ><span class="visually-hidden">Search chats</span
+                  ><input
+                    type="search"
+                    class="form-control form-control-sm"
+                    id="ai-chat-search"
+                    placeholder="Search chat"
+                  /><span class="chatgpt-shortcut" aria-hidden="true"
+                    ><kbd>Ctrl</kbd> <kbd>K</kbd></span
+                  ></label
+                >
+                <nav
+                  class="chatgpt-history"
+                  id="ai-chat-history"
+                  aria-label="Recent conversations"
+                >
+                  <span class="chatgpt-section-label">Today</span>
+                  <button type="button" data-chat-example="campaign">
+                    <i class="ri-message-3-line" aria-hidden="true"></i
+                    ><span class="chatgpt-history-copy"
+                      ><strong>Q4 campaign brief</strong
+                      ><span
+                        >Turn these launch notes into a campaign plan...</span
+                      ></span
+                    >
+                  </button>
+                  <button type="button" data-chat-example="sales">
+                    <i class="ri-message-3-line" aria-hidden="true"></i
+                    ><span class="chatgpt-history-copy"
+                      ><strong>Sales call summary</strong
+                      ><span
+                        >Summarize the call and list next steps...</span
+                      ></span
+                    >
+                  </button>
+                  <button type="button" data-chat-example="inventory">
+                    <i class="ri-message-3-line" aria-hidden="true"></i
+                    ><span class="chatgpt-history-copy"
+                      ><strong>Inventory anomaly</strong
+                      ><span
+                        >Explain the unexpected stock movement...</span
+                      ></span
+                    >
+                  </button>
+                  <span class="chatgpt-section-label chatgpt-history-divider"
+                    >Last week</span
+                  >
+                  <button type="button" data-chat-example="support">
+                    <i class="ri-message-3-line" aria-hidden="true"></i
+                    ><span class="chatgpt-history-copy"
+                      ><strong>Support response draft</strong
+                      ><span
+                        >Help respond to a delayed order complaint...</span
+                      ></span
+                    >
+                  </button>
+                  <button type="button" data-chat-example="sql">
+                    <i class="ri-message-3-line" aria-hidden="true"></i
+                    ><span class="chatgpt-history-copy"
+                      ><strong>SQL query optimization</strong
+                      ><span
+                        >Review this slow customer report query...</span
+                      ></span
+                    >
+                  </button>
+                  <button type="button" data-chat-example="product">
+                    <i class="ri-message-3-line" aria-hidden="true"></i
+                    ><span class="chatgpt-history-copy"
+                      ><strong>Product launch plan</strong
+                      ><span
+                        >Map owners and milestones for the release...</span
+                      ></span
+                    >
+                  </button>
+                  <button type="button" data-chat-example="kpis">
+                    <i class="ri-message-3-line" aria-hidden="true"></i
+                    ><span class="chatgpt-history-copy"
+                      ><strong>Weekly KPI insights</strong
+                      ><span
+                        >Find the biggest changes in this report...</span
+                      ></span
+                    >
+                  </button>
+                  <button type="button" data-chat-example="sentiment">
+                    <i class="ri-message-3-line" aria-hidden="true"></i
+                    ><span class="chatgpt-history-copy"
+                      ><strong>Customer sentiment analysis</strong
+                      ><span>Group feedback by theme and urgency...</span></span
+                    >
+                  </button>
+                </nav>
+                <div class="chatgpt-rail-footer">
+                  <button
+                    type="button"
+                    class="btn btn-light w-100"
+                    id="ai-new-chat"
+                  >
+                    <i class="ri-add-line me-2" aria-hidden="true"></i>New chat
+                  </button>
+                </div>
+              </div>
+            </aside>
+          </section>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"-->
+    <script src="../assets/js/ai-chat.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+    <!-- include appearance-customizer-scripts.html"-->
+  </body>
+</html>

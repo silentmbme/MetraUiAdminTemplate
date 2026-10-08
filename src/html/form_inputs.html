@@ -1,0 +1,647 @@
+<!-- include document-head.html"-->
+    <link
+      rel="stylesheet"
+      href="../assets/libs/prismjs/themes/prism-coy.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Form inputs</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">
+              <a href="javascript:void(0);">Forms</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="javascript:void(0);">Form Elements</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Inputs</li>
+          </ol>
+        </div>
+        <div class="container-fluid form-inputs-page">
+          <div class="row">
+            <div class="col-xxl-8">
+              <section class="card custom-card">
+                <div class="card-header justify-content-between">
+                  <div>
+                    <h3 class="card-title mb-1">Identity and contact</h3>
+                    <p class="text-muted fs-12 mb-0">
+                      Basic information for your account profile.
+                    </p>
+                  </div>
+                  <div class="prism-toggle">
+                    <button
+                      class="btn btn-sm btn-outline-light rounded-pill"
+                      type="button"
+                    >
+                      View markup<i
+                        class="ri-code-line ms-2 d-inline-block align-middle"
+                      ></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <form>
+                    <div class="row g-3">
+                      <div class="col-md-6">
+                        <label for="profile-name" class="form-label"
+                          >Full name</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="profile-name"
+                          value="Amelia Hart"
+                          autocomplete="name"
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label for="profile-role" class="form-label"
+                          >Job title</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="profile-role"
+                          value="Product Admin"
+                          autocomplete="organization-title"
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label for="profile-email" class="form-label"
+                          >Work email</label
+                        >
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="profile-email"
+                          value="amelia.hart@example.com"
+                          autocomplete="email"
+                        />
+                        <div class="form-text">
+                          Used for account updates and notifications.
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="profile-phone" class="form-label"
+                          >Phone number</label
+                        >
+                        <input
+                          type="tel"
+                          class="form-control"
+                          id="profile-phone"
+                          value="+1 415 555 0148"
+                          autocomplete="tel"
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label for="profile-website" class="form-label"
+                          >Portfolio URL</label
+                        >
+                        <input
+                          type="url"
+                          class="form-control"
+                          id="profile-website"
+                          placeholder="https://your-site.com"
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label for="profile-location" class="form-label"
+                          >Office location</label
+                        >
+                        <input
+                          class="form-control"
+                          list="office-locations"
+                          id="profile-location"
+                          placeholder="Choose an office"
+                        />
+                        <datalist id="office-locations">
+                          <option value="San Francisco"></option>
+                          <option value="New York"></option>
+                          <option value="London"></option>
+                          <option value="Singapore"></option>
+                        </datalist>
+                      </div>
+                      <div class="col-12">
+                        <label for="profile-bio" class="form-label"
+                          >Short introduction</label
+                        >
+                        <textarea
+                          class="form-control"
+                          id="profile-bio"
+                          rows="3"
+                          placeholder="Share a little about your role and focus"
+                        ></textarea>
+                        <div class="form-text">
+                          A short summary helps teammates know what you work on.
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="card-footer d-none border-top-0">
+                  <pre
+                    class="language-html"
+                  ><code class="language-html">&lt;form&gt;
+                                    &lt;div class="row g-3"&gt;
+                                        &lt;div class="col-md-6"&gt;
+                                            &lt;label for="profile-name" class="form-label"&gt;Full name&lt;/label&gt;
+                                            &lt;input type="text" class="form-control" id="profile-name" value="Amelia Hart" autocomplete="name"&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class="col-md-6"&gt;
+                                            &lt;label for="profile-role" class="form-label"&gt;Job title&lt;/label&gt;
+                                            &lt;input type="text" class="form-control" id="profile-role" value="Product Admin" autocomplete="organization-title"&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class="col-md-6"&gt;
+                                            &lt;label for="profile-email" class="form-label"&gt;Work email&lt;/label&gt;
+                                            &lt;input type="email" class="form-control" id="profile-email" value="amelia.hart@example.com" autocomplete="email"&gt;
+                                            &lt;div class="form-text"&gt;Used for account updates and notifications.&lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class="col-md-6"&gt;
+                                            &lt;label for="profile-phone" class="form-label"&gt;Phone number&lt;/label&gt;
+                                            &lt;input type="tel" class="form-control" id="profile-phone" value="+1 415 555 0148" autocomplete="tel"&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class="col-md-6"&gt;
+                                            &lt;label for="profile-website" class="form-label"&gt;Portfolio URL&lt;/label&gt;
+                                            &lt;input type="url" class="form-control" id="profile-website" placeholder="https://your-site.com"&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class="col-md-6"&gt;
+                                            &lt;label for="profile-location" class="form-label"&gt;Office location&lt;/label&gt;
+                                            &lt;input class="form-control" list="office-locations" id="profile-location" placeholder="Choose an office"&gt;
+                                            &lt;datalist id="office-locations"&gt;
+                                                &lt;option value="San Francisco"&gt;&lt;/option&gt;
+                                                &lt;option value="New York"&gt;&lt;/option&gt;
+                                                &lt;option value="London"&gt;&lt;/option&gt;
+                                                &lt;option value="Singapore"&gt;&lt;/option&gt;
+                                            &lt;/datalist&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class="col-12"&gt;
+                                            &lt;label for="profile-bio" class="form-label"&gt;Short introduction&lt;/label&gt;
+                                            &lt;textarea class="form-control" id="profile-bio" rows="3" placeholder="Share a little about your role and focus"&gt;&lt;/textarea&gt;
+                                            &lt;div class="form-text"&gt;A short summary helps teammates know what you work on.&lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/form&gt;</code></pre>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-xxl-4">
+              <section class="card custom-card">
+                <div class="card-header justify-content-between">
+                  <div>
+                    <h3 class="card-title mb-1">Profile appearance</h3>
+                    <p class="text-muted fs-12 mb-0">
+                      Choose how your profile is presented.
+                    </p>
+                  </div>
+                  <div class="prism-toggle">
+                    <button
+                      class="btn btn-sm btn-outline-light rounded-pill"
+                      type="button"
+                    >
+                      View markup<i
+                        class="ri-code-line ms-2 d-inline-block align-middle"
+                      ></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="mb-4">
+                    <label for="profile-photo" class="form-label"
+                      >Profile photo</label
+                    >
+                    <input
+                      class="form-control"
+                      type="file"
+                      id="profile-photo"
+                      accept="image/*"
+                    />
+                    <div class="form-text">PNG or JPG, up to 5 MB.</div>
+                  </div>
+                  <div class="mb-4">
+                    <label for="profile-color" class="form-label"
+                      >Profile accent</label
+                    >
+                    <div class="d-flex align-items-center gap-3">
+                      <input
+                        class="form-control form-input-color"
+                        type="color"
+                        id="profile-color"
+                        value="#6759d1"
+                        title="Choose profile accent"
+                      />
+                      <span class="text-muted fs-13"
+                        >Used for your workspace profile badge.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <label for="profile-search" class="form-label"
+                      >Preview a teammate</label
+                    >
+                    <input
+                      type="search"
+                      class="form-control"
+                      id="profile-search"
+                      placeholder="Search team directory"
+                    />
+                  </div>
+                  <div class="form-check form-switch">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      role="switch"
+                      id="show-profile"
+                      checked
+                    />
+                    <label class="form-check-label" for="show-profile"
+                      >Show my profile in directory</label
+                    >
+                  </div>
+                </div>
+                <div class="card-footer d-none border-top-0">
+                  <pre
+                    class="language-html"
+                  ><code class="language-html">&lt;div class="mb-4"&gt;
+                                    &lt;label for="profile-photo" class="form-label"&gt;Profile photo&lt;/label&gt;
+                                    &lt;input class="form-control" type="file" id="profile-photo" accept="image/*"&gt;
+                                    &lt;div class="form-text"&gt;PNG or JPG, up to 5 MB.&lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;div class="mb-4"&gt;
+                                    &lt;label for="profile-color" class="form-label"&gt;Profile accent&lt;/label&gt;
+                                    &lt;div class="d-flex align-items-center gap-3"&gt;
+                                        &lt;input class="form-control form-input-color" type="color" id="profile-color" value="#6759d1" title="Choose profile accent"&gt;
+                                        &lt;span class="text-muted fs-13"&gt;Used for your workspace profile badge.&lt;/span&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;div class="mb-4"&gt;
+                                    &lt;label for="profile-search" class="form-label"&gt;Preview a teammate&lt;/label&gt;
+                                    &lt;input type="search" class="form-control" id="profile-search" placeholder="Search team directory"&gt;
+                                &lt;/div&gt;
+                                &lt;div class="form-check form-switch"&gt;
+                                    &lt;input class="form-check-input" type="checkbox" role="switch" id="show-profile" checked&gt;
+                                    &lt;label class="form-check-label" for="show-profile"&gt;Show my profile in directory&lt;/label&gt;
+                                &lt;/div&gt;</code></pre>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-xl-7">
+              <section class="card custom-card">
+                <div class="card-header justify-content-between">
+                  <div>
+                    <h3 class="card-title mb-1">Working preferences</h3>
+                    <p class="text-muted fs-12 mb-0">
+                      Set your availability and regional defaults.
+                    </p>
+                  </div>
+                  <div class="prism-toggle">
+                    <button
+                      class="btn btn-sm btn-outline-light rounded-pill"
+                      type="button"
+                    >
+                      View markup<i
+                        class="ri-code-line ms-2 d-inline-block align-middle"
+                      ></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label for="start-date" class="form-label"
+                        >Start date</label
+                      >
+                      <input
+                        type="date"
+                        class="form-control"
+                        id="start-date"
+                        value="2023-04-17"
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="work-time" class="form-label"
+                        >Daily start time</label
+                      >
+                      <input
+                        type="time"
+                        class="form-control"
+                        id="work-time"
+                        value="09:00"
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="review-week" class="form-label"
+                        >Planning week</label
+                      >
+                      <input
+                        type="week"
+                        class="form-control"
+                        id="review-week"
+                        value="2026-W40"
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="review-month" class="form-label"
+                        >Review month</label
+                      >
+                      <input
+                        type="month"
+                        class="form-control"
+                        id="review-month"
+                        value="2026-09"
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="weekly-capacity" class="form-label"
+                        >Weekly focus hours</label
+                      >
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="weekly-capacity"
+                        min="1"
+                        max="60"
+                        value="32"
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="reminder-time" class="form-label"
+                        >Next reminder</label
+                      >
+                      <input
+                        type="datetime-local"
+                        class="form-control"
+                        id="reminder-time"
+                        value="2026-09-30T09:00"
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="week-start" class="form-label"
+                        >First day of the week</label
+                      >
+                      <select class="form-select" id="week-start">
+                        <option>Monday</option>
+                        <option>Sunday</option>
+                        <option>Saturday</option>
+                      </select>
+                    </div>
+                    <div class="col-12">
+                      <fieldset>
+                        <legend class="form-label mb-2">
+                          Preferred work mode
+                        </legend>
+                        <div class="d-flex flex-wrap gap-4">
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="work-mode"
+                              id="work-mode-office"
+                              value="office"
+                              checked
+                            />
+                            <label
+                              class="form-check-label"
+                              for="work-mode-office"
+                              >Office</label
+                            >
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="work-mode"
+                              id="work-mode-hybrid"
+                              value="hybrid"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="work-mode-hybrid"
+                              >Hybrid</label
+                            >
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="work-mode"
+                              id="work-mode-remote"
+                              value="remote"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="work-mode-remote"
+                              >Remote</label
+                            >
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer d-none border-top-0">
+                  <pre
+                    class="language-html"
+                  ><code class="language-html">&lt;div class="row g-3"&gt;
+                                    &lt;div class="col-md-6"&gt;
+                                        &lt;label for="start-date" class="form-label"&gt;Start date&lt;/label&gt;
+                                        &lt;input type="date" class="form-control" id="start-date" value="2023-04-17"&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="col-md-6"&gt;
+                                        &lt;label for="work-time" class="form-label"&gt;Daily start time&lt;/label&gt;
+                                        &lt;input type="time" class="form-control" id="work-time" value="09:00"&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="col-md-6"&gt;
+                                        &lt;label for="review-week" class="form-label"&gt;Planning week&lt;/label&gt;
+                                        &lt;input type="week" class="form-control" id="review-week" value="2026-W40"&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="col-md-6"&gt;
+                                        &lt;label for="review-month" class="form-label"&gt;Review month&lt;/label&gt;
+                                        &lt;input type="month" class="form-control" id="review-month" value="2026-09"&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="col-md-6"&gt;
+                                        &lt;label for="weekly-capacity" class="form-label"&gt;Weekly focus hours&lt;/label&gt;
+                                        &lt;input type="number" class="form-control" id="weekly-capacity" min="1" max="60" value="32"&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="col-md-6"&gt;
+                                        &lt;label for="reminder-time" class="form-label"&gt;Next reminder&lt;/label&gt;
+                                        &lt;input type="datetime-local" class="form-control" id="reminder-time" value="2026-09-30T09:00"&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="col-md-6"&gt;
+                                        &lt;label for="week-start" class="form-label"&gt;First day of the week&lt;/label&gt;
+                                        &lt;select class="form-select" id="week-start"&gt;
+                                            &lt;option&gt;Monday&lt;/option&gt;
+                                            &lt;option&gt;Sunday&lt;/option&gt;
+                                            &lt;option&gt;Saturday&lt;/option&gt;
+                                        &lt;/select&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="col-12"&gt;
+                                        &lt;fieldset&gt;
+                                            &lt;legend class="form-label mb-2"&gt;Preferred work mode&lt;/legend&gt;
+                                            &lt;div class="d-flex flex-wrap gap-4"&gt;
+                                                &lt;div class="form-check"&gt;
+                                                    &lt;input class="form-check-input" type="radio" name="work-mode" id="work-mode-office" value="office" checked&gt;
+                                                    &lt;label class="form-check-label" for="work-mode-office"&gt;Office&lt;/label&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class="form-check"&gt;
+                                                    &lt;input class="form-check-input" type="radio" name="work-mode" id="work-mode-hybrid" value="hybrid"&gt;
+                                                    &lt;label class="form-check-label" for="work-mode-hybrid"&gt;Hybrid&lt;/label&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class="form-check"&gt;
+                                                    &lt;input class="form-check-input" type="radio" name="work-mode" id="work-mode-remote" value="remote"&gt;
+                                                    &lt;label class="form-check-label" for="work-mode-remote"&gt;Remote&lt;/label&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/fieldset&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;</code></pre>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-xl-5">
+              <section class="card custom-card">
+                <div class="card-header justify-content-between">
+                  <div>
+                    <h3 class="card-title mb-1">Access and security</h3>
+                    <p class="text-muted fs-12 mb-0">
+                      Review sign-in and account status fields.
+                    </p>
+                  </div>
+                  <div class="prism-toggle">
+                    <button
+                      class="btn btn-sm btn-outline-light rounded-pill"
+                      type="button"
+                    >
+                      View markup<i
+                        class="ri-code-line ms-2 d-inline-block align-middle"
+                      ></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="mb-3">
+                    <label for="account-password" class="form-label"
+                      >Current password</label
+                    >
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="account-password"
+                      value="workspace2026"
+                      autocomplete="current-password"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="account-id" class="form-label"
+                      >Account ID</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="account-id"
+                      value="NX-2048-AC"
+                      readonly
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="account-email-locked" class="form-label"
+                      >Verified email</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="account-email-locked"
+                      value="amelia.hart@example.com"
+                      disabled
+                    />
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="security-updates"
+                      checked
+                    />
+                    <label class="form-check-label" for="security-updates"
+                      >Email me about security changes</label
+                    >
+                  </div>
+                </div>
+                <div class="card-footer d-none border-top-0">
+                  <pre
+                    class="language-html"
+                  ><code class="language-html">&lt;div class="mb-3"&gt;
+                                    &lt;label for="account-password" class="form-label"&gt;Current password&lt;/label&gt;
+                                    &lt;input type="password" class="form-control" id="account-password" value="workspace2026" autocomplete="current-password"&gt;
+                                &lt;/div&gt;
+                                &lt;div class="mb-3"&gt;
+                                    &lt;label for="account-id" class="form-label"&gt;Account ID&lt;/label&gt;
+                                    &lt;input type="text" class="form-control" id="account-id" value="NX-2048-AC" readonly&gt;
+                                &lt;/div&gt;
+                                &lt;div class="mb-3"&gt;
+                                    &lt;label for="account-email-locked" class="form-label"&gt;Verified email&lt;/label&gt;
+                                    &lt;input type="email" class="form-control" id="account-email-locked" value="amelia.hart@example.com" disabled&gt;
+                                &lt;/div&gt;
+                                &lt;div class="form-check"&gt;
+                                    &lt;input class="form-check-input" type="checkbox" value="" id="security-updates" checked&gt;
+                                    &lt;label class="form-check-label" for="security-updates"&gt;Email me about security changes&lt;/label&gt;
+                                &lt;/div&gt;</code></pre>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-12">
+              <section class="card custom-card">
+                <div
+                  class="card-body d-flex align-items-center justify-content-between flex-wrap gap-3"
+                >
+                  <div>
+                    <h3 class="fs-14 fw-semibold mb-1">
+                      Ready to update your profile?
+                    </h3>
+                    <p class="text-muted fs-12 mb-0">
+                      Changes are shown here as a form preview.
+                    </p>
+                  </div>
+                  <div class="d-flex gap-2">
+                    <button type="button" class="btn btn-light">
+                      Discard changes
+                    </button>
+                    <button type="button" class="btn btn-dark">
+                      <i class="ri-save-line me-1" aria-hidden="true"></i>Save
+                      profile
+                    </button>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <!-- include common-scripts.html"-->
+    <!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/libs/prismjs/prism.js"></script>
+    <script src="../assets/js/prism-custom.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

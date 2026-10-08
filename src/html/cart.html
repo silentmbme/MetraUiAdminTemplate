@@ -1,0 +1,429 @@
+<!-- include document-head.html"-->
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content shopping-cart-page">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Your cart</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">
+              <a href="ecommerce-dashboard.html">Ecommerce</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Your cart
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid commerce-dashboard">
+          <div class="row g-4 align-items-start">
+            <div class="col-xl-8">
+              <section class="card custom-card cart-items-card">
+                <div
+                  class="card-header justify-content-between flex-wrap gap-2"
+                >
+                  <div>
+                    <h2 class="card-title mb-1">
+                      Cart items
+                      <span
+                        id="cart-product-count"
+                        class="badge bg-light text-default ms-1"
+                        >3</span
+                      >
+                    </h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Your selected products are reserved while you check out.
+                    </p>
+                  </div>
+                  <span class="cart-delivery-promise"
+                    ><i class="ri-truck-line me-1"></i>Free standard
+                    delivery</span
+                  >
+                </div>
+                <div class="table-responsive cart-items-table-wrap">
+                  <table
+                    class="table table-hover align-middle mb-0 cart-items-table"
+                  >
+                    <thead>
+                      <tr>
+                        <th scope="col" colspan="2">Product</th>
+                        <th scope="col" class="text-end">Price</th>
+                        <th scope="col" class="text-center">Quantity</th>
+                        <th scope="col" class="text-end">Subtotal</th>
+                        <th scope="col" class="text-end">
+                          <span class="visually-hidden">Actions</span>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody id="cart-items-list">
+                      <tr
+                        class="cart-item"
+                        data-unit-price="159.99"
+                        data-item-name="Adidas UltraBoost 2023"
+                      >
+                        <td class="cart-product-image-cell">
+                          <a href="product-details.html" class="cart-item-image"
+                            ><img
+                              src="../assets/images/ecommerce/jpg/1.jpg"
+                              alt="Adidas UltraBoost 2023"
+                          /></a>
+                        </td>
+                        <td class="cart-item-details">
+                          <span class="cart-item-brand">Adidas</span
+                          ><a href="product-details.html" class="cart-item-name"
+                            >UltraBoost 2023</a
+                          ><span class="cart-item-variant"
+                            >Green <i></i> Size 10 US <i></i> SKU
+                            ADI-UB-2023</span
+                          ><span class="cart-stock-state"
+                            ><i class="ri-checkbox-circle-fill"></i>In
+                            stock</span
+                          >
+                        </td>
+                        <td class="cart-item-price text-end">
+                          <strong>$159.99</strong>
+                        </td>
+                        <td>
+                          <div class="cart-quantity">
+                            <button
+                              type="button"
+                              class="cart-qty-button"
+                              data-quantity-step="-1"
+                              aria-label="Decrease Adidas quantity"
+                            >
+                              <i class="ri-subtract-line"></i></button
+                            ><input
+                              class="cart-qty-input"
+                              type="number"
+                              min="1"
+                              max="30"
+                              value="1"
+                              aria-label="Adidas quantity"
+                            /><button
+                              type="button"
+                              class="cart-qty-button"
+                              data-quantity-step="1"
+                              aria-label="Increase Adidas quantity"
+                            >
+                              <i class="ri-add-line"></i>
+                            </button>
+                          </div>
+                        </td>
+                        <td class="cart-item-total text-end">
+                          <strong>$159.99</strong>
+                        </td>
+                        <td>
+                          <div class="cart-item-actions">
+                            <button
+                              type="button"
+                              class="cart-save-button"
+                              aria-label="Save Adidas UltraBoost for later"
+                            >
+                              <i class="ri-heart-line"></i
+                              ><span>Save</span></button
+                            ><button
+                              type="button"
+                              class="cart-remove-button"
+                              aria-label="Remove Adidas UltraBoost"
+                            >
+                              <i class="ri-delete-bin-line"></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr
+                        class="cart-item"
+                        data-unit-price="119.99"
+                        data-item-name="Puma RS-X Sneakers"
+                      >
+                        <td class="cart-product-image-cell">
+                          <a href="product-details.html" class="cart-item-image"
+                            ><img
+                              src="../assets/images/ecommerce/jpg/2.jpg"
+                              alt="Puma RS-X Sneakers"
+                          /></a>
+                        </td>
+                        <td class="cart-item-details">
+                          <span class="cart-item-brand">Puma</span
+                          ><a href="product-details.html" class="cart-item-name"
+                            >RS-X Sneakers</a
+                          ><span class="cart-item-variant"
+                            >Gray <i></i> Size 8 US <i></i> SKU PM-RSX-082</span
+                          ><span class="cart-stock-state is-limited"
+                            ><i class="ri-error-warning-fill"></i>Only 4
+                            left</span
+                          >
+                        </td>
+                        <td class="cart-item-price text-end">
+                          <strong>$119.99</strong>
+                        </td>
+                        <td>
+                          <div class="cart-quantity">
+                            <button
+                              type="button"
+                              class="cart-qty-button"
+                              data-quantity-step="-1"
+                              aria-label="Decrease Puma quantity"
+                            >
+                              <i class="ri-subtract-line"></i></button
+                            ><input
+                              class="cart-qty-input"
+                              type="number"
+                              min="1"
+                              max="30"
+                              value="2"
+                              aria-label="Puma quantity"
+                            /><button
+                              type="button"
+                              class="cart-qty-button"
+                              data-quantity-step="1"
+                              aria-label="Increase Puma quantity"
+                            >
+                              <i class="ri-add-line"></i>
+                            </button>
+                          </div>
+                        </td>
+                        <td class="cart-item-total text-end">
+                          <strong>$239.98</strong>
+                        </td>
+                        <td>
+                          <div class="cart-item-actions">
+                            <button
+                              type="button"
+                              class="cart-save-button"
+                              aria-label="Save Puma RS-X Sneakers for later"
+                            >
+                              <i class="ri-heart-line"></i
+                              ><span>Save</span></button
+                            ><button
+                              type="button"
+                              class="cart-remove-button"
+                              aria-label="Remove Puma RS-X Sneakers"
+                            >
+                              <i class="ri-delete-bin-line"></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr
+                        class="cart-item"
+                        data-unit-price="89.99"
+                        data-item-name="Reebok Classic Leather"
+                      >
+                        <td class="cart-product-image-cell">
+                          <a href="product-details.html" class="cart-item-image"
+                            ><img
+                              src="../assets/images/ecommerce/jpg/3.jpg"
+                              alt="Reebok Classic Leather"
+                          /></a>
+                        </td>
+                        <td class="cart-item-details">
+                          <span class="cart-item-brand">Reebok</span
+                          ><a href="product-details.html" class="cart-item-name"
+                            >Classic Leather</a
+                          ><span class="cart-item-variant"
+                            >Blue <i></i> Size 11 US <i></i> SKU RB-CL-110</span
+                          ><span class="cart-stock-state"
+                            ><i class="ri-checkbox-circle-fill"></i>In
+                            stock</span
+                          >
+                        </td>
+                        <td class="cart-item-price text-end">
+                          <strong>$89.99</strong>
+                        </td>
+                        <td>
+                          <div class="cart-quantity">
+                            <button
+                              type="button"
+                              class="cart-qty-button"
+                              data-quantity-step="-1"
+                              aria-label="Decrease Reebok quantity"
+                            >
+                              <i class="ri-subtract-line"></i></button
+                            ><input
+                              class="cart-qty-input"
+                              type="number"
+                              min="1"
+                              max="30"
+                              value="1"
+                              aria-label="Reebok quantity"
+                            /><button
+                              type="button"
+                              class="cart-qty-button"
+                              data-quantity-step="1"
+                              aria-label="Increase Reebok quantity"
+                            >
+                              <i class="ri-add-line"></i>
+                            </button>
+                          </div>
+                        </td>
+                        <td class="cart-item-total text-end">
+                          <strong>$89.99</strong>
+                        </td>
+                        <td>
+                          <div class="cart-item-actions">
+                            <button
+                              type="button"
+                              class="cart-save-button"
+                              aria-label="Save Reebok Classic Leather for later"
+                            >
+                              <i class="ri-heart-line"></i
+                              ><span>Save</span></button
+                            ><button
+                              type="button"
+                              class="cart-remove-button"
+                              aria-label="Remove Reebok Classic Leather"
+                            >
+                              <i class="ri-delete-bin-line"></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="cart-empty-state" id="cart-empty-state" hidden>
+                  <span><i class="ri-shopping-cart-2-line"></i></span>
+                  <h3>Your cart is empty</h3>
+                  <p>Find something you love and it will show up here.</p>
+                  <a href="products.html" class="btn btn-dark"
+                    >Browse products</a
+                  >
+                </div>
+              </section>
+
+              <section
+                class="card custom-card cart-saved-card"
+                id="cart-saved-section"
+                hidden
+              >
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">
+                      Saved for later
+                      <span
+                        id="cart-saved-count"
+                        class="badge bg-light text-default ms-1"
+                        >0</span
+                      >
+                    </h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Keep favorites here and move them back when ready.
+                    </p>
+                  </div>
+                </div>
+                <div class="table-responsive cart-items-table-wrap">
+                  <table
+                    class="table table-hover align-middle mb-0 cart-items-table"
+                  >
+                    <thead>
+                      <tr>
+                        <th scope="col" colspan="6">Saved products</th>
+                      </tr>
+                    </thead>
+                    <tbody id="cart-saved-list" class="cart-saved-list"></tbody>
+                  </table>
+                </div>
+              </section>
+
+              <div class="cart-assurance-strip">
+                <span
+                  ><i class="ri-shield-check-line"></i
+                  ><strong>Secure checkout</strong
+                  ><small>Your details are protected</small></span
+                ><span
+                  ><i class="ri-refresh-line"></i><strong>Easy returns</strong
+                  ><small>30-day return window</small></span
+                ><span
+                  ><i class="ri-customer-service-2-line"></i
+                  ><strong>Need help?</strong
+                  ><small>Our team is here for you</small></span
+                >
+              </div>
+            </div>
+
+            <aside class="col-xl-4">
+              <section class="card custom-card cart-summary-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Order summary</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      <span id="cart-summary-products">3 products</span>
+                      &middot;
+                      <span id="cart-unit-count">4 units</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <form id="cart-coupon-form" class="cart-coupon-form">
+                    <label for="cart-coupon" class="form-label"
+                      >Promo code</label
+                    >
+                    <div class="input-group">
+                      <input
+                        class="form-control"
+                        id="cart-coupon"
+                        placeholder="Enter code"
+                        aria-label="Promo code"
+                      /><button class="btn btn-light" type="submit">
+                        Apply
+                      </button>
+                    </div>
+                    <small id="cart-coupon-feedback" aria-live="polite"
+                      >Try code <strong>STYLE10</strong> for 10% off.</small
+                    >
+                  </form>
+                  <div class="cart-summary-lines">
+                    <div>
+                      <span>Subtotal</span
+                      ><strong id="cart-subtotal">$489.96</strong>
+                    </div>
+                    <div>
+                      <span>Discount</span
+                      ><strong id="cart-discount">-$0.00</strong>
+                    </div>
+                    <div>
+                      <span>Shipping</span
+                      ><strong class="text-success">Free</strong>
+                    </div>
+                    <div><span>Estimated tax</span><strong>$0.00</strong></div>
+                  </div>
+                  <div class="cart-summary-grand-total">
+                    <span>Total</span
+                    ><strong id="cart-grand-total">$489.96</strong>
+                  </div>
+                  <a
+                    href="checkout.html"
+                    class="btn btn-dark w-100 mt-3 cart-checkout-button"
+                    >Continue to checkout
+                    <i class="ri-arrow-right-line ms-1"></i
+                  ></a>
+                  <a href="products.html" class="btn btn-light mt-2 w-100"
+                    >Continue shopping</a
+                  >
+                  <div class="cart-payment-methods">
+                    <span>We accept</span><b>VISA</b><b>AMEX</b><b>PayPal</b>
+                  </div>
+                </div>
+              </section>
+            </aside>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"-->
+    <!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/js/cart-page.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

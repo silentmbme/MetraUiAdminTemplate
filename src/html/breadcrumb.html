@@ -1,0 +1,409 @@
+<!-- include document-head.html"-->
+    <link
+      rel="stylesheet"
+      href="../assets/libs/prismjs/themes/prism-coy.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"--><!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"--><!-- include side-navigation.html"-->
+      <main data-markup-examples class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Breadcrumbs</h1>
+          <nav aria-label="Breadcrumbs breadcrumb">
+            <ol class="breadcrumb mb-0">
+              <li class="breadcrumb-item">
+                <a href="index.html">Components</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Breadcrumbs
+              </li>
+            </ol>
+          </nav>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Minimal navigation</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      A simple path above the page content.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <nav aria-label="Profile breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                      <li class="breadcrumb-item">
+                        <a href="index.html">Home</a>
+                      </li>
+                      <li class="breadcrumb-item">
+                        <a href="profile.html">Workspace</a>
+                      </li>
+                      <li class="breadcrumb-item active" aria-current="page">
+                        Profile
+                      </li>
+                    </ol>
+                  </nav>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Icon navigation</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Add context with the project icon system.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <nav aria-label="Documents breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                      <li class="breadcrumb-item">
+                        <a href="index.html"
+                          ><i class="ri-home-4-line me-1" aria-hidden="true"></i
+                          >Home</a
+                        >
+                      </li>
+                      <li class="breadcrumb-item">
+                        <a href="file-manager.html"
+                          ><i class="ri-folder-line me-1" aria-hidden="true"></i
+                          >Files</a
+                        >
+                      </li>
+                      <li class="breadcrumb-item active" aria-current="page">
+                        Documents
+                      </li>
+                    </ol>
+                  </nav>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Soft surface</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Keep the navigation separate from surrounding content.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="bg-light rounded p-3">
+                    <nav aria-label="Invoice details breadcrumb">
+                      <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item">
+                          <a href="index.html">Home</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                          <a href="invoice-list.html">Invoices</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">
+                          Invoice details
+                        </li>
+                      </ol>
+                    </nav>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Compact page header</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Pair a title with its parent navigation.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="d-flex align-items-center justify-content-between flex-wrap gap-3 border rounded p-3"
+                  >
+                    <h3 class="fs-16 fw-semibold mb-0">Profile settings</h3>
+                    <nav aria-label="Settings breadcrumb">
+                      <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item">
+                          <a href="profile.html">Profile</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">
+                          Settings
+                        </li>
+                      </ol>
+                    </nav>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Back navigation</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Use a short return link alongside a detailed path.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex flex-column gap-3">
+                    <a href="invoice-list.html" class="fs-13 text-muted"
+                      ><i class="ri-arrow-left-line me-1" aria-hidden="true"></i
+                      >Back to invoices</a
+                    >
+                    <nav aria-label="Create invoice breadcrumb">
+                      <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item">
+                          <a href="index.html">Workspace</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                          <a href="invoice-list.html">Invoices</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">
+                          Create invoice
+                        </li>
+                      </ol>
+                    </nav>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Right aligned path</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Place navigation at the end of a toolbar.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <nav aria-label="Profile breadcrumb">
+                    <ol class="breadcrumb mb-0 justify-content-end">
+                      <li class="breadcrumb-item">
+                        <a href="index.html">Home</a>
+                      </li>
+                      <li class="breadcrumb-item">
+                        <a href="profile.html">Workspace</a>
+                      </li>
+                      <li class="breadcrumb-item active" aria-current="page">
+                        Profile
+                      </li>
+                    </ol>
+                  </nav>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Centered navigation</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      A balanced path for focused layouts.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="bg-light rounded p-3">
+                    <nav aria-label="Security breadcrumb">
+                      <ol class="breadcrumb mb-0 justify-content-center">
+                        <li class="breadcrumb-item">
+                          <a href="index.html">Home</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                          <a href="profile.html">Account</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">
+                          Security
+                        </li>
+                      </ol>
+                    </nav>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Responsive long path</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Allow longer navigation to wrap on smaller screens.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <nav aria-label="Onboarding breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                      <li class="breadcrumb-item">
+                        <a href="index.html">Home</a>
+                      </li>
+                      <li class="breadcrumb-item">
+                        <a href="profile.html">Workspace</a>
+                      </li>
+                      <li class="breadcrumb-item">
+                        <a href="profile.html">Projects</a>
+                      </li>
+                      <li class="breadcrumb-item">
+                        <a href="profile.html">Product experience</a>
+                      </li>
+                      <li class="breadcrumb-item active" aria-current="page">
+                        Onboarding
+                      </li>
+                    </ol>
+                  </nav>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Collapsed hierarchy</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Reveal intermediate locations through a dropdown.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <nav aria-label="Collapsed invoice breadcrumb">
+                    <ol class="breadcrumb mb-0 align-items-center">
+                      <li class="breadcrumb-item">
+                        <a href="index.html">Home</a>
+                      </li>
+                      <li class="breadcrumb-item">
+                        <div class="dropdown d-inline-block">
+                          <button
+                            class="btn btn-light btn-sm py-0"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                            aria-label="Show parent pages"
+                          >
+                            <i class="ri-more-line" aria-hidden="true"></i>
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <a class="dropdown-item" href="profile.html"
+                                >Workspace</a
+                              >
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="invoice-list.html"
+                                >Invoices</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="breadcrumb-item active" aria-current="page">
+                        Invoice details
+                      </li>
+                    </ol>
+                  </nav>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Navigation with actions</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Keep the page path and useful actions together.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="d-flex justify-content-between align-items-center flex-wrap gap-3"
+                  >
+                    <nav aria-label="Invoices breadcrumb">
+                      <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item">
+                          <a href="index.html">Home</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">
+                          Invoices
+                        </li>
+                      </ol>
+                    </nav>
+                    <a href="invoice-create.html" class="btn btn-primary btn-sm"
+                      ><i class="ri-add-line me-1" aria-hidden="true"></i>Create
+                      invoice</a
+                    >
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-12">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Section header</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      A complete reusable header for application pages.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="border rounded p-3">
+                    <div
+                      class="d-flex justify-content-between align-items-start flex-wrap gap-3"
+                    >
+                      <div>
+                        <nav aria-label="People breadcrumb">
+                          <ol class="breadcrumb mb-0">
+                            <li class="breadcrumb-item">
+                              <a href="index.html">Workspace</a>
+                            </li>
+                            <li
+                              class="breadcrumb-item active"
+                              aria-current="page"
+                            >
+                              People
+                            </li>
+                          </ol>
+                        </nav>
+                        <h3 class="fs-20 fw-semibold mt-3 mb-1">
+                          Team directory
+                        </h3>
+                        <p class="text-muted fs-13 mb-0">
+                          Find people and explore their professional profiles.
+                        </p>
+                      </div>
+                      <a href="profile.html" class="btn btn-light btn-sm"
+                        >View profile<i
+                          class="ri-arrow-right-line ms-1"
+                          aria-hidden="true"
+                        ></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"--><!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"--><!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/js/app-interactions.js"></script>
+    <script src="../assets/libs/prismjs/prism.js"></script>
+    <script src="../assets/js/prism-custom.js"></script>
+  </body>
+</html>

@@ -1,0 +1,590 @@
+<!-- include document-head.html"-->
+  </head>
+
+  <body class="ticket-details-page">
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Support case</h1>
+          <ol class="breadcrumb mb-1">
+            <li class="breadcrumb-item">
+              <a href="support-dashboard.html">Support center</a>
+            </li>
+            <li class="breadcrumb-item"><a href="tickets.html">Tickets</a></li>
+            <li class="breadcrumb-item active" aria-current="page">SUP-2841</li>
+          </ol>
+        </div>
+        <div class="container-fluid">
+          <section class="card custom-card mb-3 ticket-summary-card">
+            <div class="card-body p-4">
+              <div
+                class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-4"
+              >
+                <a href="tickets.html" class="btn btn-sm btn-light"
+                  ><i class="ri-arrow-left-line me-1" aria-hidden="true"></i
+                  >Back to tickets</a
+                >
+                <div class="d-flex flex-wrap gap-2">
+                  <button type="button" class="btn btn-sm btn-light">
+                    <i class="ri-share-line me-1" aria-hidden="true"></i>Share
+                  </button>
+                  <button type="button" class="btn btn-sm btn-light">
+                    <i class="ri-more-2-fill" aria-hidden="true"></i
+                    ><span class="visually-hidden">More ticket actions</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-success"
+                    id="resolve-ticket"
+                  >
+                    <i class="ri-check-double-line me-1" aria-hidden="true"></i
+                    >Resolve ticket
+                  </button>
+                </div>
+              </div>
+              <div
+                class="d-flex align-items-start justify-content-between flex-wrap gap-3"
+              >
+                <div
+                  class="d-flex flex-sm-nowrap flex-wrap align-items-start gap-3"
+                >
+                  <div>
+                    <span
+                      class="avatar avatar-xl bg-secondary-transparent text-secondary rounded"
+                      ><i
+                        class="ri-lock-password-line fs-30"
+                        aria-hidden="true"
+                      ></i>
+                    </span>
+                  </div>
+                  <div>
+                    <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+                      <span class="badge bg-danger-transparent text-danger"
+                        >Urgent</span
+                      ><span
+                        class="badge bg-warning-transparent text-warning"
+                        id="ticket-status-badge"
+                        >In progress</span
+                      ><span class="badge bg-info-transparent text-info"
+                        ><i class="ri-mail-line me-1"></i>Email</span
+                      ><span class="text-muted fs-12"
+                        >#SUP-2841 <span class="mx-1">&middot;</span> Opened Sep
+                        26, 2026 at 9:42 AM</span
+                      >
+                    </div>
+                    <h2 class="fs-20 fw-semibold mb-1">
+                      Cannot access account after password reset
+                    </h2>
+                    <p class="text-muted fs-13 mb-0">
+                      Customer is locked out after resetting their password.
+                      Verification email was received, but the new credentials
+                      return an invalid session error.
+                    </p>
+                  </div>
+                </div>
+                <div class="dropdown">
+                  <button
+                    type="button"
+                    class="btn btn-light d-flex align-items-center gap-2 p-2"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    aria-label="Assigned agent options"
+                  >
+                    <span class="avatar avatar-sm avatar-rounded"
+                      ><img src="../assets/images/users/10.jpg" alt=""
+                    /></span>
+                    <span class="text-start"
+                      ><span class="text-muted fs-12 d-block">Assigned to</span
+                      ><span class="fw-medium fs-13">Priya Nair</span></span
+                    ><i class="ri-arrow-down-s-line ms-1"></i>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li>
+                      <a class="dropdown-item" href="tickets.html"
+                        >Reassign ticket</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="tickets.html"
+                        >View agent queue</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="col-md-3 col-6">
+                  <div class="rounded border p-3 h-100">
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                      <span
+                        class="avatar avatar-xs bg-danger-transparent text-danger rounded-circle"
+                        ><i class="ri-timer-flash-line"></i></span
+                      ><span class="text-muted fs-12">First response due</span>
+                    </div>
+                    <strong class="text-danger fs-15">18 minutes</strong>
+                    <div
+                      class="progress mt-2"
+                      role="progressbar"
+                      aria-label="82 percent of the response window has elapsed"
+                      aria-valuenow="82"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    >
+                      <div
+                        class="progress-bar bg-danger"
+                        style="width: 82%"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="rounded border p-3 h-100">
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                      <span
+                        class="avatar avatar-sm bg-warning-transparent text-warning rounded-circle"
+                        ><i class="ri-user-forbid-line fs-16"></i></span
+                      ><span class="text-muted fs-12">Customer impact</span>
+                    </div>
+                    <strong class="fs-15">1 user blocked</strong>
+                  </div>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="rounded border p-3 h-100">
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                      <span
+                        class="avatar avatar-sm bg-secondary-transparent text-secondary rounded-circle"
+                        ><i class="ri-shield-keyhole-line fs-16"></i></span
+                      ><span class="text-muted fs-12">Product area</span>
+                    </div>
+                    <strong class="fs-15">Account access</strong>
+                  </div>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="rounded border p-3 h-100">
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                      <span
+                        class="avatar avatar-sm bg-info-transparent text-info rounded-circle"
+                        ><i class="ri-history-line fs-16"></i></span
+                      ><span class="text-muted fs-12">Last activity</span>
+                    </div>
+                    <strong class="fs-15">4 minutes ago</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div class="row">
+            <div class="col-xl-8">
+              <section class="card custom-card mb-3 ticket-conversation-card">
+                <div
+                  class="card-header justify-content-between flex-wrap gap-2"
+                >
+                  <div>
+                    <h2 class="card-title mb-1">Customer conversation</h2>
+                    <span class="text-muted fs-12"
+                      >3 messages <span class="mx-1">&middot;</span> Email
+                      thread</span
+                    >
+                  </div>
+                  <div class="d-flex flex-wrap gap-2">
+                    <span
+                      class="badge bg-info-transparent text-info align-self-center"
+                      ><i class="ri-mail-line me-1"></i>Email</span
+                    ><button type="button" class="btn btn-sm btn-light">
+                      <i class="ri-more-fill me-1" aria-hidden="true"></i>More
+                      actions
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex gap-3 mb-4">
+                    <span class="avatar avatar-md avatar-rounded flex-shrink-0"
+                      ><img src="../assets/images/users/4.jpg" alt=""
+                    /></span>
+                    <div class="flex-fill">
+                      <div
+                        class="d-flex justify-content-between flex-wrap gap-2 mb-2"
+                      >
+                        <div>
+                          <strong class="fs-14">Ava Thompson</strong
+                          ><span class="text-muted fs-12 ms-2"
+                            >Customer
+                            <span class="mx-1">&middot;</span> Northstar
+                            Labs</span
+                          >
+                        </div>
+                        <time
+                          class="text-muted fs-13"
+                          datetime="2026-09-26T09:42"
+                          >Sep 26, 9:42 AM</time
+                        >
+                      </div>
+                      <div class="rounded bg-light p-3">
+                        <p class="fs-14 mb-2">
+                          Hi team, I reset my password this morning and received
+                          the confirmation email. When I try to sign in with the
+                          new password, I see an &ldquo;Invalid session&rdquo;
+                          message and get sent back to the login page. I need
+                          access before our client review at noon. Could you
+                          help?
+                        </p>
+                        <a
+                          href="#attachments"
+                          class="d-inline-flex align-items-center gap-2 rounded border bg-white px-2 py-1 text-muted fs-12"
+                          ><i class="ri-attachment-2" aria-hidden="true"></i
+                          >login-error.png
+                          <span class="text-muted">248 KB</span></a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-3 mb-4">
+                    <span class="avatar avatar-md avatar-rounded flex-shrink-0"
+                      ><img src="../assets/images/users/10.jpg" alt=""
+                    /></span>
+                    <div class="flex-fill">
+                      <div
+                        class="d-flex justify-content-between flex-wrap gap-2 mb-2"
+                      >
+                        <div>
+                          <strong class="fs-14">Priya Nair</strong
+                          ><span class="text-muted fs-12 ms-2"
+                            >Support agent</span
+                          >
+                        </div>
+                        <time
+                          class="text-muted fs-12"
+                          datetime="2026-09-26T09:51"
+                          >Sep 26, 9:51 AM</time
+                        >
+                      </div>
+                      <div class="rounded border p-3">
+                        <p class="fs-14 mb-0">
+                          Hi Ava, I am sorry you are running into this. I have
+                          confirmed your account is active and I am checking the
+                          session logs now. In the meantime, please try signing
+                          in from a private browser window while I investigate.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-3">
+                    <span class="avatar avatar-md avatar-rounded flex-shrink-0"
+                      ><img src="../assets/images/users/4.jpg" alt=""
+                    /></span>
+                    <div class="flex-fill">
+                      <div
+                        class="d-flex justify-content-between flex-wrap gap-2 mb-2"
+                      >
+                        <div>
+                          <strong class="fs-14">Ava Thompson</strong
+                          ><span class="text-muted fs-12 ms-2">Customer</span>
+                        </div>
+                        <time
+                          class="text-muted fs-12"
+                          datetime="2026-09-26T10:06"
+                          >Sep 26, 10:06 AM</time
+                        >
+                      </div>
+                      <div class="rounded bg-light p-3">
+                        <p class="fs-14 mb-0">
+                          Private browsing gives me the same error. I also tried
+                          another browser with no luck. Thanks for looking into
+                          this.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body border-top">
+                  <form id="ticket-reply-form">
+                    <label for="ticket-reply" class="form-label fw-medium"
+                      >Write a reply</label
+                    >
+                    <textarea
+                      id="ticket-reply"
+                      class="form-control mb-3"
+                      rows="4"
+                      placeholder="Reply to Ava Thompson..."
+                    ></textarea>
+                    <div
+                      class="d-flex align-items-center justify-content-between flex-wrap gap-2"
+                    >
+                      <div class="d-flex gap-2">
+                        <button
+                          type="button"
+                          class="btn btn-sm btn-light"
+                          aria-label="Attach a file"
+                        >
+                          <i class="ri-attachment-2 me-1" aria-hidden="true"></i
+                          >Attach</button
+                        ><button
+                          type="button"
+                          class="btn btn-sm btn-light"
+                          id="internal-note-toggle"
+                        >
+                          <i
+                            class="ri-sticky-note-line me-1"
+                            aria-hidden="true"
+                          ></i
+                          >Add internal note
+                        </button>
+                      </div>
+                      <button type="submit" class="btn btn-dark">
+                        <i
+                          class="ri-send-plane-line me-1"
+                          aria-hidden="true"
+                        ></i
+                        >Send reply
+                      </button>
+                    </div>
+                    <p
+                      id="reply-feedback"
+                      class="text-muted fs-12 mt-2 mb-0"
+                      role="status"
+                      aria-live="polite"
+                    ></p>
+                  </form>
+                </div>
+              </section>
+
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Case timeline</h2>
+                    <span class="text-muted fs-12"
+                      >Updates from your support team</span
+                    >
+                  </div>
+                  <span class="badge bg-light text-muted">Today</span>
+                </div>
+                <div class="card-body p-0">
+                  <div class="d-flex gap-3 p-3 border-bottom">
+                    <span
+                      class="avatar avatar-sm bg-secondary-transparent text-secondary rounded-circle"
+                      ><i class="ri-user-add-line fs-16"></i
+                    ></span>
+                    <div class="flex-fill">
+                      <div class="fs-13">
+                        <strong>Priya Nair</strong> assigned this ticket to
+                        herself
+                      </div>
+                      <time class="text-muted fs-12" datetime="2026-09-26T09:48"
+                        >Sep 26, 9:48 AM</time
+                      >
+                    </div>
+                  </div>
+                  <div class="d-flex gap-3 p-3 border-bottom">
+                    <span
+                      class="avatar avatar-sm bg-warning-transparent text-warning rounded-circle"
+                      ><i class="ri-flag-line fs-16"></i
+                    ></span>
+                    <div class="flex-fill">
+                      <div class="fs-13">
+                        Priority changed from <strong>High</strong> to
+                        <strong>Urgent</strong>
+                      </div>
+                      <time class="text-muted fs-12" datetime="2026-09-26T09:46"
+                        >Sep 26, 9:46 AM</time
+                      >
+                    </div>
+                  </div>
+                  <div class="d-flex gap-3 p-3">
+                    <span
+                      class="avatar avatar-sm bg-info-transparent text-info rounded-circle"
+                      ><i class="ri-mail-open-line fs-16"></i
+                    ></span>
+                    <div class="flex-fill">
+                      <div class="fs-13">
+                        Ticket created from an <strong>email</strong> by Ava
+                        Thompson
+                      </div>
+                      <time class="text-muted fs-12" datetime="2026-09-26T09:42"
+                        >Sep 26, 9:42 AM</time
+                      >
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-xl-4">
+              <section class="card custom-card mb-3 ticket-customer-card">
+                <div class="card-header justify-content-between">
+                  <h2 class="card-title mb-0">Customer profile</h2>
+                  <a
+                    href="customers-list.html"
+                    class="fs-13 text-muted fw-medium"
+                    >View profile</a
+                  >
+                </div>
+                <div class="card-body">
+                  <div class="d-flex align-items-center gap-3 mb-3">
+                    <span class="avatar avatar-lg avatar-rounded"
+                      ><img src="../assets/images/users/4.jpg" alt=""
+                    /></span>
+                    <div class="flex-fill">
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="fw-semibold">Ava Thompson</span
+                        ><span class="badge bg-success-transparent text-success"
+                          >Active</span
+                        >
+                      </div>
+                      <span class="text-muted fs-12">Workspace admin</span>
+                    </div>
+                  </div>
+                  <div class="rounded bg-light p-3 mb-2">
+                    <span class="text-muted fs-12 d-block">Customer since</span
+                    ><strong class="fs-13">March 2023</strong
+                    ><span class="text-muted fs-12 ms-2"
+                      >· 8 previous tickets</span
+                    >
+                  </div>
+                  <div class="border rounded">
+                    <div
+                      class="d-flex justify-content-between p-2 border-bottom"
+                    >
+                      <span class="text-muted fs-12">Company</span
+                      ><span class="fs-12 fw-medium">Northstar Labs</span>
+                    </div>
+                    <div
+                      class="d-flex justify-content-between p-2 border-bottom"
+                    >
+                      <span class="text-muted fs-12">Email</span
+                      ><a class="fs-12" href="mailto:ava@northstarlabs.com"
+                        >ava@northstarlabs.com</a
+                      >
+                    </div>
+                    <div
+                      class="d-flex justify-content-between p-2 border-bottom"
+                    >
+                      <span class="text-muted fs-12">Plan</span
+                      ><span class="badge bg-primary-transparent text-primary"
+                        >Business</span
+                      >
+                    </div>
+                    <div class="d-flex justify-content-between p-2">
+                      <span class="text-muted fs-12">Customer health</span
+                      ><span class="text-success fs-12 fw-medium"
+                        ><i class="ri-checkbox-circle-line me-1"></i>Good
+                        standing</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="card custom-card mb-3">
+                <div class="card-header">
+                  <h2 class="card-title mb-0">Ticket properties</h2>
+                </div>
+                <div class="card-body">
+                  <div class="mb-3">
+                    <label for="ticket-owner" class="form-label"
+                      >Assignee</label
+                    >
+                    <select
+                      id="ticket-owner"
+                      data-trigger
+                      class="form-select form-select-sm mb-3"
+                    >
+                      <option>Priya Nair</option>
+                      <option>Daniel Kim</option>
+                      <option>Mia Chen</option>
+                      <option>Owen Brooks</option>
+                      <option>Unassigned</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="ticket-priority-detail" class="form-label"
+                      >Priority</label
+                    >
+                    <select
+                      id="ticket-priority-detail"
+                      data-trigger
+                      class="form-select form-select-sm mb-3"
+                    >
+                      <option>Urgent</option>
+                      <option>High</option>
+                      <option>Normal</option>
+                      <option>Low</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="ticket-type" class="form-label">Type</label>
+                    <select
+                      id="ticket-type"
+                      data-trigger
+                      class="form-select form-select-sm mb-3"
+                    >
+                      <option>Account access</option>
+                      <option>Billing</option>
+                      <option>Bug report</option>
+                      <option>How-to question</option>
+                    </select>
+                  </div>
+                  <label for="ticket-tags" class="form-label">Tags</label>
+                  <div id="ticket-tags" class="d-flex flex-wrap gap-1">
+                    <span class="badge bg-light text-muted">login</span
+                    ><span class="badge bg-light text-muted"
+                      >password-reset</span
+                    ><span class="badge bg-light text-muted">account</span>
+                  </div>
+                </div>
+              </section>
+
+              <section class="card custom-card">
+                <div class="card-header">
+                  <h2 class="card-title mb-0">Related help articles</h2>
+                </div>
+                <div class="list-group list-group-flush">
+                  <a
+                    href="faq's.html"
+                    class="list-group-item list-group-item-action"
+                    ><span class="fw-medium fs-13 d-block"
+                      >Resetting your password</span
+                    ><span class="text-muted fs-12"
+                      >Account access
+                      <i class="ri-arrow-right-up-line ms-1"></i></span
+                  ></a>
+                  <a
+                    href="faq's.html"
+                    class="list-group-item list-group-item-action"
+                    ><span class="fw-medium fs-13 d-block"
+                      >Troubleshoot sign-in sessions</span
+                    ><span class="text-muted fs-12"
+                      >Login help
+                      <i class="ri-arrow-right-up-line ms-1"></i></span
+                  ></a>
+                  <a
+                    href="faq's.html"
+                    class="list-group-item list-group-item-action"
+                    ><span class="fw-medium fs-13 d-block"
+                      >Manage team account security</span
+                    ><span class="text-muted fs-12"
+                      >Security
+                      <i class="ri-arrow-right-up-line ms-1"></i></span
+                  ></a>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"-->
+    <script src="../assets/js/ticket-details.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+    <!-- include appearance-customizer-scripts.html"-->
+  </body>
+</html>

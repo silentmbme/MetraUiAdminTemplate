@@ -1,0 +1,434 @@
+<!-- include document-head.html"-->
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content ecommerce-settings-page">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Store settings</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">
+              <a href="ecommerce-dashboard.html">Ecommerce</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Store settings
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid commerce-dashboard">
+          <div class="row">
+            <div class="col-xl-3">
+              <nav
+                class="card custom-card settings-nav-card"
+                aria-label="Store settings sections"
+              >
+                <div class="card-body">
+                  <span
+                    class="text-muted fs-11 fw-semibold text-uppercase mb-2 d-block"
+                    >Store preferences</span
+                  ><a class="settings-nav-link active" href="#store-profile"
+                    ><i class="ri-store-2-line"></i>Store profile</a
+                  ><a class="settings-nav-link" href="#checkout-settings"
+                    ><i class="ri-shopping-cart-2-line"></i>Checkout</a
+                  ><a class="settings-nav-link" href="#shipping-settings"
+                    ><i class="ri-truck-line"></i>Shipping</a
+                  ><a class="settings-nav-link" href="#notification-settings"
+                    ><i class="ri-notification-3-line"></i>Notifications</a
+                  >
+                  <div class="settings-nav-help">
+                    <i class="ri-information-line"></i
+                    ><span
+                      >Settings are saved in this browser for this demo.</span
+                    >
+                  </div>
+                </div>
+              </nav>
+            </div>
+            <div class="col-xl-9">
+              <form id="ecommerce-settings-form">
+                <section
+                  class="card custom-card settings-section-card mb-4"
+                  id="store-profile"
+                >
+                  <div class="card-header">
+                    <div>
+                      <h2 class="card-title mb-1">Store profile</h2>
+                      <p class="text-muted fs-12 mb-0">
+                        Information shown to customers across your storefront.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="row g-3">
+                      <div class="col-md-6">
+                        <label class="form-label" for="store-name"
+                          >Store name</label
+                        ><input
+                          class="form-control"
+                          id="store-name"
+                          name="storeName"
+                          value="NexoraUI Market"
+                          required
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label" for="store-email"
+                          >Support email</label
+                        ><input
+                          class="form-control"
+                          id="store-email"
+                          name="supportEmail"
+                          type="email"
+                          value="help@nexoramarket.com"
+                          required
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label" for="store-currency"
+                          >Default currency</label
+                        >
+                        <select
+                          class="form-select"
+                          data-trigger
+                          id="store-currency"
+                          name="currency"
+                        >
+                          <option value="USD">USD - US Dollar</option>
+                          <option value="EUR">EUR - Euro</option>
+                          <option value="GBP">GBP - British Pound</option>
+                          <option value="CAD">CAD - Canadian Dollar</option>
+                        </select>
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label" for="store-timezone"
+                          >Store time zone</label
+                        >
+                        <select
+                          class="form-select"
+                          data-trigger
+                          id="store-timezone"
+                          name="timezone"
+                        >
+                          <option value="America/Los_Angeles">
+                            Pacific Time (US &amp; Canada)
+                          </option>
+                          <option value="America/New_York">
+                            Eastern Time (US &amp; Canada)
+                          </option>
+                          <option value="Europe/London">London</option>
+                          <option value="Asia/Kolkata">
+                            India Standard Time
+                          </option>
+                        </select>
+                      </div>
+                      <div class="col-12">
+                        <label class="form-label" for="store-description"
+                          >Store description</label
+                        ><textarea
+                          class="form-control"
+                          id="store-description"
+                          name="description"
+                          rows="3"
+                          maxlength="240"
+                        >
+Thoughtful essentials for everyday living, sourced from independent makers.</textarea
+                        ><small class="text-muted"
+                          >A short description to help shoppers get to know your
+                          store.</small
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <section
+                  class="card custom-card settings-section-card mb-4"
+                  id="checkout-settings"
+                >
+                  <div class="card-header">
+                    <div>
+                      <h2 class="card-title mb-1">Checkout</h2>
+                      <p class="text-muted fs-12 mb-0">
+                        Control the customer checkout experience.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="settings-option-row">
+                      <div>
+                        <strong>Guest checkout</strong>
+                        <p>
+                          Let customers place orders without creating an
+                          account.
+                        </p>
+                      </div>
+                      <div class="form-check form-switch">
+                        <input
+                          class="form-check-input form-checked-success"
+                          type="checkbox"
+                          role="switch"
+                          id="guest-checkout"
+                          name="guestCheckout"
+                          checked
+                        /><label
+                          class="form-check-label visually-hidden"
+                          for="guest-checkout"
+                          >Allow guest checkout</label
+                        >
+                      </div>
+                    </div>
+                    <div class="settings-option-row">
+                      <div>
+                        <strong>Require phone number</strong>
+                        <p>Ask customers for a phone number during checkout.</p>
+                      </div>
+                      <div class="form-check form-switch">
+                        <input
+                          class="form-check-input form-checked-success"
+                          type="checkbox"
+                          role="switch"
+                          id="require-phone"
+                          name="requirePhone"
+                        /><label
+                          class="form-check-label visually-hidden"
+                          for="require-phone"
+                          >Require a phone number</label
+                        >
+                      </div>
+                    </div>
+                    <div class="row g-3 mt-1">
+                      <div class="col-md-6">
+                        <label class="form-label" for="tax-display"
+                          >Tax display</label
+                        >
+                        <select
+                          class="form-select"
+                          data-trigger
+                          id="tax-display"
+                          name="taxDisplay"
+                        >
+                          <option value="exclusive">
+                            Show tax at checkout
+                          </option>
+                          <option value="inclusive">Prices include tax</option>
+                        </select>
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label" for="order-prefix"
+                          >Order number prefix</label
+                        ><input
+                          class="form-control"
+                          id="order-prefix"
+                          name="orderPrefix"
+                          value="ORD-"
+                          maxlength="8"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <section
+                  class="card custom-card settings-section-card mb-4"
+                  id="shipping-settings"
+                >
+                  <div class="card-header">
+                    <div>
+                      <h2 class="card-title mb-1">Shipping</h2>
+                      <p class="text-muted fs-12 mb-0">
+                        Set a default delivery estimate and free-shipping
+                        threshold.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="row g-3">
+                      <div class="col-md-6">
+                        <label class="form-label" for="delivery-estimate"
+                          >Standard delivery estimate</label
+                        >
+                        <select
+                          class="form-select"
+                          id="delivery-estimate"
+                          data-trigger
+                          name="deliveryEstimate"
+                        >
+                          <option value="3-5">3 to 5 business days</option>
+                          <option value="5-7">5 to 7 business days</option>
+                          <option value="7-10">7 to 10 business days</option>
+                        </select>
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label" for="free-shipping-minimum"
+                          >Free shipping minimum (USD)</label
+                        >
+                        <div class="input-group">
+                          <span class="input-group-text">$</span
+                          ><input
+                            class="form-control"
+                            id="free-shipping-minimum"
+                            name="freeShippingMinimum"
+                            type="number"
+                            min="0"
+                            step="1"
+                            value="75"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div
+                          class="settings-option-row settings-option-row-last"
+                        >
+                          <div>
+                            <strong>Enable local pickup</strong>
+                            <p>
+                              Allow customers to collect eligible orders from a
+                              store location.
+                            </p>
+                          </div>
+                          <div class="form-check form-switch">
+                            <input
+                              class="form-check-input form-checked-success"
+                              type="checkbox"
+                              role="switch"
+                              id="local-pickup"
+                              name="localPickup"
+                            /><label
+                              class="form-check-label visually-hidden"
+                              for="local-pickup"
+                              >Enable local pickup</label
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <section
+                  class="card custom-card settings-section-card mb-4"
+                  id="notification-settings"
+                >
+                  <div class="card-header">
+                    <div>
+                      <h2 class="card-title mb-1">Notifications</h2>
+                      <p class="text-muted fs-12 mb-0">
+                        Choose which store events send you an email update.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="settings-option-row">
+                      <div>
+                        <strong>New order received</strong>
+                        <p>Send an alert when a customer places an order.</p>
+                      </div>
+                      <div class="form-check form-switch">
+                        <input
+                          class="form-check-input form-checked-success"
+                          type="checkbox"
+                          role="switch"
+                          id="notify-new-order"
+                          name="notifyNewOrder"
+                          checked
+                        /><label
+                          class="form-check-label visually-hidden"
+                          for="notify-new-order"
+                          >Notify me about new orders</label
+                        >
+                      </div>
+                    </div>
+                    <div class="settings-option-row">
+                      <div>
+                        <strong>Low inventory warning</strong>
+                        <p>
+                          Get notified when a product reaches its reorder point.
+                        </p>
+                      </div>
+                      <div class="form-check form-switch">
+                        <input
+                          class="form-check-input form-checked-success"
+                          type="checkbox"
+                          role="switch"
+                          id="notify-low-stock"
+                          name="notifyLowStock"
+                          checked
+                        /><label
+                          class="form-check-label visually-hidden"
+                          for="notify-low-stock"
+                          >Notify me about low inventory</label
+                        >
+                      </div>
+                    </div>
+                    <div class="settings-option-row settings-option-row-last">
+                      <div>
+                        <strong>Customer review received</strong>
+                        <p>
+                          Get an alert when a shopper leaves a product review.
+                        </p>
+                      </div>
+                      <div class="form-check form-switch">
+                        <input
+                          class="form-check-input form-checked-success"
+                          type="checkbox"
+                          role="switch"
+                          id="notify-review"
+                          name="notifyReview"
+                        /><label
+                          class="form-check-label visually-hidden"
+                          for="notify-review"
+                          >Notify me about new reviews</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <div class="settings-save-bar">
+                  <span
+                    class="text-muted fs-12"
+                    id="settings-feedback"
+                    role="status"
+                    aria-live="polite"
+                    >Settings apply to this browser demo.</span
+                  >
+                  <div class="d-flex gap-2">
+                    <button
+                      class="btn btn-light"
+                      type="button"
+                      id="settings-reset"
+                    >
+                      Reset changes</button
+                    ><button
+                      class="btn btn-dark"
+                      type="submit"
+                      id="settings-save"
+                      disabled
+                    >
+                      <i class="ri-save-line me-1" aria-hidden="true"></i>Save
+                      changes
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"-->
+    <!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/js/ecommerce-settings.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

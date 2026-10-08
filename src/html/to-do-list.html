@@ -1,0 +1,738 @@
+<!-- include document-head.html"-->
+    <link rel="stylesheet" href="../assets/libs/dragula/dragula.min.css" />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">To-do list</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">
+              <a href="index.html">Applications</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              To-do list
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid todo-workspace">
+          <div class="todo-list-grid">
+            <aside class="todo-list-aside">
+              <button
+                class="btn btn-dark mb-3 w-100"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#addtask"
+              >
+                <i class="ri-add-line"></i> New task
+              </button>
+              <nav aria-label="Task views">
+                <button
+                  type="button"
+                  class="drive-nav-item todo-sidebar-filter active"
+                  data-todo-sidebar-filter="all"
+                  aria-pressed="true"
+                >
+                  <i class="ri-list-check-2" aria-hidden="true"></i
+                  ><span>All tasks</span
+                  ><span
+                    class="badge bg-light text-muted ms-auto"
+                    id="drive-total"
+                    >0</span
+                  >
+                </button>
+                <button
+                  type="button"
+                  class="drive-nav-item todo-sidebar-filter"
+                  data-todo-sidebar-filter="open"
+                  aria-pressed="false"
+                >
+                  <i
+                    class="ri-checkbox-blank-circle-line"
+                    aria-hidden="true"
+                  ></i
+                  ><span>In progress</span
+                  ><span
+                    class="badge bg-light text-muted ms-auto"
+                    id="todo-open-count"
+                    >0</span
+                  >
+                </button>
+                <button
+                  type="button"
+                  class="drive-nav-item todo-sidebar-filter"
+                  data-todo-sidebar-filter="today"
+                  aria-pressed="false"
+                >
+                  <i class="ri-time-line" aria-hidden="true"></i
+                  ><span>Due today</span
+                  ><span
+                    class="badge bg-light text-muted ms-auto"
+                    id="todo-today-count"
+                    >0</span
+                  >
+                </button>
+                <button
+                  type="button"
+                  class="drive-nav-item todo-sidebar-filter"
+                  data-todo-sidebar-filter="upcoming"
+                  aria-pressed="false"
+                >
+                  <i class="ri-calendar-line" aria-hidden="true"></i
+                  ><span>Upcoming</span>
+                </button>
+                <button
+                  type="button"
+                  class="drive-nav-item todo-sidebar-filter"
+                  data-todo-sidebar-filter="starred"
+                  aria-pressed="false"
+                >
+                  <i class="ri-star-line" aria-hidden="true"></i
+                  ><span>Starred</span>
+                </button>
+                <button
+                  type="button"
+                  class="drive-nav-item todo-sidebar-filter"
+                  data-todo-sidebar-filter="completed"
+                  aria-pressed="false"
+                >
+                  <i class="ri-checkbox-circle-line" aria-hidden="true"></i
+                  ><span>Completed</span
+                  ><span
+                    class="badge bg-light text-muted ms-auto"
+                    id="todo-completed-count"
+                    >0</span
+                  >
+                </button>
+              </nav>
+              <h2
+                class="drive-category-heading fs-13 fw-medium my-3 text-muted"
+              >
+                Categories
+              </h2>
+              <nav aria-label="Task categories">
+                <button
+                  type="button"
+                  class="drive-nav-item todo-sidebar-filter"
+                  data-todo-sidebar-filter="work"
+                  aria-pressed="false"
+                >
+                  <i
+                    class="ri-price-tag-3-line text-primary"
+                    aria-hidden="true"
+                  ></i
+                  ><span>Work</span></button
+                ><button
+                  type="button"
+                  class="drive-nav-item todo-sidebar-filter"
+                  data-todo-sidebar-filter="personal"
+                  aria-pressed="false"
+                >
+                  <i
+                    class="ri-price-tag-3-line text-info"
+                    aria-hidden="true"
+                  ></i
+                  ><span>Personal</span>
+                </button>
+              </nav>
+              <h2
+                class="drive-category-heading fs-13 fw-medium my-3 text-muted"
+              >
+                Priority
+              </h2>
+              <nav aria-label="Task priority">
+                <button
+                  type="button"
+                  class="drive-nav-item todo-sidebar-filter"
+                  data-todo-sidebar-filter="high"
+                  aria-pressed="false"
+                >
+                  <i class="ri-flag-line text-danger" aria-hidden="true"></i
+                  ><span>High</span
+                  ><span
+                    class="badge bg-light text-muted ms-auto"
+                    id="todo-high-count"
+                    >0</span
+                  ></button
+                ><button
+                  type="button"
+                  class="drive-nav-item todo-sidebar-filter"
+                  data-todo-sidebar-filter="medium"
+                  aria-pressed="false"
+                >
+                  <i class="ri-flag-line text-warning" aria-hidden="true"></i
+                  ><span>Medium</span
+                  ><span
+                    class="badge bg-light text-muted ms-auto"
+                    id="todo-medium-count"
+                    >0</span
+                  ></button
+                ><button
+                  type="button"
+                  class="drive-nav-item todo-sidebar-filter"
+                  data-todo-sidebar-filter="low"
+                  aria-pressed="false"
+                >
+                  <i class="ri-flag-line text-success" aria-hidden="true"></i
+                  ><span>Low</span
+                  ><span
+                    class="badge bg-light text-muted ms-auto"
+                    id="todo-low-count"
+                    >0</span
+                  >
+                </button>
+              </nav>
+              <section class="card custom-card todo-focus-card mt-3 mb-0">
+                <div class="card-body">
+                  <div
+                    class="d-flex align-items-start justify-content-between gap-3"
+                  >
+                    <div>
+                      <span class="todo-focus-kicker">DAILY FOCUS</span>
+                      <h2 class="fs-16 fw-semibold mt-2 mb-1">
+                        Focus on your next milestone
+                      </h2>
+                    </div>
+                    <div>
+                      <span class="avatar avatar-sm bg-light text-dark">
+                        <i class="ri-focus-3-line fs-20" aria-hidden="true"></i>
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex align-items-center justify-content-between fs-12 mb-2"
+                  >
+                    <span class="text-muted">Today's progress</span
+                    ><strong
+                      id="todo-progress-label"
+                      role="status"
+                      aria-live="polite"
+                      >1/2</strong
+                    >
+                  </div>
+                  <div
+                    class="progress progress-sm"
+                    role="progressbar"
+                    aria-label="Today's task progress"
+                    aria-valuenow="20"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    id="todo-progress"
+                  >
+                    <div
+                      class="progress-bar bg-success"
+                      style="width: 20%"
+                    ></div>
+                  </div>
+                </div>
+              </section>
+            </aside>
+            <section class="card custom-card todo-list-card">
+              <div
+                class="card-header justify-content-between align-items-start flex-wrap gap-3"
+              >
+                <div>
+                  <h2 class="card-title mb-1">Team action list</h2>
+                  <p class="text-muted fs-12 mb-0">
+                    Check off completed work, star priorities, and drag tasks to
+                    reorder.
+                  </p>
+                </div>
+                <div
+                  class="todo-toolbar d-flex align-items-center flex-wrap gap-2"
+                >
+                  <div class="input-group todo-search">
+                    <span class="input-group-text"
+                      ><i class="ri-search-line" aria-hidden="true"></i
+                    ></span>
+                    <input
+                      class="form-control"
+                      id="todo-search"
+                      type="search"
+                      placeholder="Find a task..."
+                      aria-label="Search tasks"
+                    />
+                  </div>
+                  <select
+                    class="form-select w-auto"
+                    data-trigger
+                    id="todo-sort"
+                    aria-label="Sort tasks"
+                  >
+                    <option value="priority">Priority</option>
+                    <option value="created">Recently added</option>
+                    <option value="due">Due date</option>
+                  </select>
+                </div>
+              </div>
+              <div class="card-body pt-0">
+                <div
+                  class="todo-filter-bar d-flex gap-2 overflow-auto my-3"
+                  role="group"
+                  aria-label="Filter tasks"
+                >
+                  <button
+                    class="btn btn-primary btn-sm todo-filter is-active"
+                    type="button"
+                    data-filter="all"
+                    aria-pressed="true"
+                  >
+                    All tasks <span class="todo-filter-count">6</span>
+                  </button>
+                  <button
+                    class="btn btn-light btn-sm todo-filter"
+                    type="button"
+                    data-filter="today"
+                    aria-pressed="false"
+                  >
+                    Today
+                  </button>
+                  <button
+                    class="btn btn-light btn-sm todo-filter"
+                    type="button"
+                    data-filter="upcoming"
+                    aria-pressed="false"
+                  >
+                    Upcoming
+                  </button>
+                  <button
+                    class="btn btn-light btn-sm todo-filter"
+                    type="button"
+                    data-filter="completed"
+                    aria-pressed="false"
+                  >
+                    Completed
+                  </button>
+                  <button
+                    class="btn btn-light btn-sm todo-filter"
+                    type="button"
+                    data-filter="starred"
+                    aria-pressed="false"
+                  >
+                    <i class="ri-star-line me-1" aria-hidden="true"></i> Starred
+                  </button>
+                </div>
+
+                <div class="todo-section-label">
+                  <span>TASKS</span><span id="todo-visible-count">6 tasks</span>
+                </div>
+                <div class="todo-task-list" id="todo-task-list">
+                  <article
+                    class="todo-task"
+                    data-status="open"
+                    data-priority="high"
+                    data-due="2026-09-27"
+                    data-title="Confirm October delivery milestones"
+                    data-starred="true"
+                  >
+                    <button
+                      class="todo-drag-handle"
+                      type="button"
+                      aria-label="Drag to reorder"
+                    >
+                      <i class="ri-draggable" aria-hidden="true"></i>
+                    </button>
+                    <input
+                      class="form-check-input todo-complete"
+                      type="checkbox"
+                      aria-label="Mark Confirm October delivery milestones complete"
+                    />
+                    <div class="todo-task-copy">
+                      <div class="d-flex align-items-center gap-2 flex-wrap">
+                        <h3>Confirm October delivery milestones</h3>
+                        <span class="todo-label todo-label-work">Work</span>
+                      </div>
+                      <p>
+                        Confirm owners and target dates for the next release.
+                      </p>
+                    </div>
+                    <span class="todo-priority todo-priority-high"
+                      ><i class="ri-flag-fill" aria-hidden="true"></i>
+                      High</span
+                    >
+                    <span class="todo-due todo-due-today"
+                      ><i class="ri-time-line" aria-hidden="true"></i>
+                      Today</span
+                    >
+                    <button
+                      class="todo-star is-starred"
+                      type="button"
+                      aria-label="Remove from starred"
+                    >
+                      <i class="ri-star-fill" aria-hidden="true"></i>
+                    </button>
+                  </article>
+                  <article
+                    class="todo-task"
+                    data-status="open"
+                    data-priority="medium"
+                    data-due="2026-09-27"
+                    data-title="Collect homepage design feedback"
+                  >
+                    <button
+                      class="todo-drag-handle"
+                      type="button"
+                      aria-label="Drag to reorder"
+                    >
+                      <i class="ri-draggable" aria-hidden="true"></i>
+                    </button>
+                    <input
+                      class="form-check-input todo-complete"
+                      type="checkbox"
+                      aria-label="Mark Collect homepage design feedback complete"
+                    />
+                    <div class="todo-task-copy">
+                      <div class="d-flex align-items-center gap-2 flex-wrap">
+                        <h3>Collect homepage design feedback</h3>
+                        <span class="todo-label todo-label-work">Work</span>
+                      </div>
+                      <p>Gather comments before the next design review.</p>
+                    </div>
+                    <span class="todo-priority todo-priority-medium"
+                      ><i class="ri-flag-fill" aria-hidden="true"></i>
+                      Medium</span
+                    >
+                    <span class="todo-due todo-due-today"
+                      ><i class="ri-time-line" aria-hidden="true"></i>
+                      Today</span
+                    >
+                    <button
+                      class="todo-star"
+                      type="button"
+                      aria-label="Add to starred"
+                    >
+                      <i class="ri-star-line" aria-hidden="true"></i>
+                    </button>
+                  </article>
+                  <article
+                    class="todo-task"
+                    data-status="open"
+                    data-priority="medium"
+                    data-due="2026-09-29"
+                    data-title="Schedule the quarterly planning workshop"
+                  >
+                    <button
+                      class="todo-drag-handle"
+                      type="button"
+                      aria-label="Drag to reorder"
+                    >
+                      <i class="ri-draggable" aria-hidden="true"></i>
+                    </button>
+                    <input
+                      class="form-check-input todo-complete"
+                      type="checkbox"
+                      aria-label="Mark Schedule the quarterly planning workshop complete"
+                    />
+                    <div class="todo-task-copy">
+                      <div class="d-flex align-items-center gap-2 flex-wrap">
+                        <h3>Schedule the quarterly planning workshop</h3>
+                        <span class="todo-label todo-label-personal"
+                          >Personal</span
+                        >
+                      </div>
+                      <p>
+                        Reserve a meeting room and share the workshop agenda.
+                      </p>
+                    </div>
+                    <span class="todo-priority todo-priority-medium"
+                      ><i class="ri-flag-fill" aria-hidden="true"></i>
+                      Medium</span
+                    >
+                    <span class="todo-due"
+                      ><i class="ri-calendar-line" aria-hidden="true"></i> Sep
+                      29</span
+                    >
+                    <button
+                      class="todo-star"
+                      type="button"
+                      aria-label="Add to starred"
+                    >
+                      <i class="ri-star-line" aria-hidden="true"></i>
+                    </button>
+                  </article>
+                  <article
+                    class="todo-task"
+                    data-status="open"
+                    data-priority="low"
+                    data-due="2026-10-01"
+                    data-title="Archive completed project documents"
+                  >
+                    <button
+                      class="todo-drag-handle"
+                      type="button"
+                      aria-label="Drag to reorder"
+                    >
+                      <i class="ri-draggable" aria-hidden="true"></i>
+                    </button>
+                    <input
+                      class="form-check-input todo-complete"
+                      type="checkbox"
+                      aria-label="Mark Archive completed project documents complete"
+                    />
+                    <div class="todo-task-copy">
+                      <div class="d-flex align-items-center gap-2 flex-wrap">
+                        <h3>Archive completed project documents</h3>
+                        <span class="todo-label todo-label-work">Work</span>
+                      </div>
+                      <p>
+                        Store approved files in the shared workspace library.
+                      </p>
+                    </div>
+                    <span class="todo-priority todo-priority-low"
+                      ><i class="ri-flag-fill" aria-hidden="true"></i> Low</span
+                    >
+                    <span class="todo-due"
+                      ><i class="ri-calendar-line" aria-hidden="true"></i> Oct
+                      01</span
+                    >
+                    <button
+                      class="todo-star"
+                      type="button"
+                      aria-label="Add to starred"
+                    >
+                      <i class="ri-star-line" aria-hidden="true"></i>
+                    </button>
+                  </article>
+                  <article
+                    class="todo-task is-complete"
+                    data-status="completed"
+                    data-priority="low"
+                    data-due="2026-09-26"
+                    data-title="Send the campaign brief for approval"
+                  >
+                    <button
+                      class="todo-drag-handle"
+                      type="button"
+                      aria-label="Drag to reorder"
+                    >
+                      <i class="ri-draggable" aria-hidden="true"></i>
+                    </button>
+                    <input
+                      class="form-check-input todo-complete"
+                      type="checkbox"
+                      checked
+                      aria-label="Mark Send the campaign brief for approval incomplete"
+                    />
+                    <div class="todo-task-copy">
+                      <div class="d-flex align-items-center gap-2 flex-wrap">
+                        <h3>Send the campaign brief for approval</h3>
+                        <span class="todo-label todo-label-personal"
+                          >Personal</span
+                        >
+                      </div>
+                      <p>
+                        Share the final brief with marketing and record
+                        feedback.
+                      </p>
+                    </div>
+                    <span class="todo-priority todo-priority-low"
+                      ><i class="ri-flag-fill" aria-hidden="true"></i> Low</span
+                    >
+                    <span class="todo-due"
+                      ><i class="ri-check-line" aria-hidden="true"></i>
+                      Completed</span
+                    >
+                    <button
+                      class="todo-star"
+                      type="button"
+                      aria-label="Add to starred"
+                    >
+                      <i class="ri-star-line" aria-hidden="true"></i>
+                    </button>
+                  </article>
+                  <article
+                    class="todo-task is-complete"
+                    data-status="completed"
+                    data-priority="high"
+                    data-due="2026-09-25"
+                    data-title="Review the customer support summary"
+                    data-starred="true"
+                  >
+                    <button
+                      class="todo-drag-handle"
+                      type="button"
+                      aria-label="Drag to reorder"
+                    >
+                      <i class="ri-draggable" aria-hidden="true"></i>
+                    </button>
+                    <input
+                      class="form-check-input todo-complete"
+                      type="checkbox"
+                      checked
+                      aria-label="Mark Review the customer support summary incomplete"
+                    />
+                    <div class="todo-task-copy">
+                      <div class="d-flex align-items-center gap-2 flex-wrap">
+                        <h3>Review the customer support summary</h3>
+                        <span class="todo-label todo-label-work">Work</span>
+                      </div>
+                      <p>
+                        Identify recurring issues and agree on follow-up
+                        actions.
+                      </p>
+                    </div>
+                    <span class="todo-priority todo-priority-high"
+                      ><i class="ri-flag-fill" aria-hidden="true"></i>
+                      High</span
+                    >
+                    <span class="todo-due"
+                      ><i class="ri-check-line" aria-hidden="true"></i>
+                      Completed</span
+                    >
+                    <button
+                      class="todo-star is-starred"
+                      type="button"
+                      aria-label="Remove from starred"
+                    >
+                      <i class="ri-star-fill" aria-hidden="true"></i>
+                    </button>
+                  </article>
+                </div>
+                <div class="todo-empty d-none" id="todo-empty">
+                  <i
+                    class="ri-checkbox-circle-line fs-24"
+                    aria-hidden="true"
+                  ></i
+                  ><strong>1/2</strong
+                  ><span>Try another filter or create a new task.</span>
+                </div>
+              </div>
+              <div
+                class="card-footer d-flex align-items-center justify-content-between flex-wrap gap-2"
+              >
+                <span class="text-muted fs-12" id="todo-footer-count"
+                  >Showing 6 tasks</span
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </main>
+
+      <div
+        class="modal fade"
+        id="addtask"
+        tabindex="-1"
+        aria-labelledby="addtask-title"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <form class="modal-content" id="todo-create-form">
+            <div class="modal-header">
+              <div>
+                <h2 class="modal-title fs-16 fw-semibold" id="addtask-title">
+                  Create a task
+                </h2>
+                <p class="text-muted fs-12 mb-0 mt-1">
+                  Capture a task, set its priority, and choose a due date.
+                </p>
+              </div>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body px-4">
+              <div class="mb-3">
+                <label class="form-label" for="todo-task-title">Task name</label
+                ><input
+                  class="form-control"
+                  id="todo-task-title"
+                  name="title"
+                  type="text"
+                  placeholder="e.g. Review the October project brief"
+                  required
+                  maxlength="100"
+                />
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="todo-task-note"
+                  >Notes
+                  <span class="text-muted fw-normal">(optional)</span></label
+                ><textarea
+                  class="form-control"
+                  id="todo-task-note"
+                  name="note"
+                  rows="2"
+                  placeholder="Add useful details, links, or next steps"
+                ></textarea>
+              </div>
+              <div class="row g-3">
+                <div class="col-6">
+                  <label class="form-label" for="todo-task-due">Due date</label
+                  ><input
+                    class="form-control"
+                    id="todo-task-due"
+                    name="due"
+                    type="date"
+                  />
+                </div>
+                <div class="col-6">
+                  <label class="form-label" for="todo-task-priority"
+                    >Priority</label
+                  >
+                  <select
+                    class="form-select"
+                    id="todo-task-priority"
+                    data-trigger
+                    name="priority"
+                  >
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                    <option value="low">Low</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="todo-task-category"
+                    >Category</label
+                  >
+                  <select
+                    class="form-select"
+                    id="todo-task-category"
+                    data-trigger
+                    name="category"
+                  >
+                    <option value="work">Work</option>
+                    <option value="personal">Personal</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-light"
+                data-bs-dismiss="modal"
+              >
+                Cancel</button
+              ><button type="submit" class="btn btn-dark">
+                <i class="ri-add-line me-1" aria-hidden="true"></i>Create task
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <!-- include common-scripts.html"-->
+    <!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/libs/dragula/dragula.min.js"></script>
+    <script src="../assets/js/todolist.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

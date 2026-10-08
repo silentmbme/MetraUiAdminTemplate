@@ -1,0 +1,677 @@
+<!-- include document-head.html"-->
+    <link
+      rel="stylesheet"
+      href="../assets/libs/prismjs/themes/prism-coy.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Input Group</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">
+              <a href="javascript:void(0);">Forms</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="javascript:void(0);">Form Elements</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Input Group
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xxl-12">
+              <section class="card custom-card">
+                <div class="card-header justify-content-between">
+                  <div>
+                    <h3 class="card-title mb-1">Request details</h3>
+                    <p class="text-muted fs-12 mb-0">
+                      Add the customer and payment information.
+                    </p>
+                  </div>
+                  <div class="prism-toggle">
+                    <button
+                      class="btn btn-sm btn-outline-light rounded-pill"
+                      type="button"
+                    >
+                      View markup<i
+                        class="ri-code-line ms-2 d-inline-block align-middle"
+                      ></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label for="customer-name" class="form-label"
+                        >Customer name</label
+                      >
+                      <div class="input-group">
+                        <span class="input-group-text"
+                          ><i class="ri-user-line" aria-hidden="true"></i
+                        ></span>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="customer-name"
+                          placeholder="Name or company"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="customer-email" class="form-label"
+                        >Email address</label
+                      >
+                      <div class="input-group">
+                        <span class="input-group-text"
+                          ><i class="ri-mail-line" aria-hidden="true"></i
+                        ></span>
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="customer-email"
+                          placeholder="customer@example.com"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-8">
+                      <label for="request-title" class="form-label"
+                        >Request title</label
+                      >
+                      <div class="input-group">
+                        <span class="input-group-text"
+                          ><i class="ri-file-text-line" aria-hidden="true"></i
+                        ></span>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="request-title"
+                          placeholder="e.g. Website design milestone"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <label for="request-reference" class="form-label"
+                        >Reference</label
+                      >
+                      <div class="input-group">
+                        <span class="input-group-text">#</span>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="request-reference"
+                          value="PR-2048"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-7">
+                      <label for="request-amount" class="form-label"
+                        >Amount due</label
+                      >
+                      <div class="input-group">
+                        <select
+                          class="form-select flex-grow-0 w-auto"
+                          aria-label="Select currency"
+                        >
+                          <option selected>USD</option>
+                          <option>EUR</option>
+                          <option>GBP</option>
+                        </select>
+                        <span class="input-group-text">$</span>
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="request-amount"
+                          placeholder="0.00"
+                          min="0"
+                          step="0.01"
+                        />
+                        <span class="input-group-text">.00</span>
+                      </div>
+                    </div>
+                    <div class="col-md-5">
+                      <label for="due-date" class="form-label">Due date</label>
+                      <div class="input-group">
+                        <span class="input-group-text"
+                          ><i class="ri-calendar-line" aria-hidden="true"></i
+                        ></span>
+                        <input type="date" class="form-control" id="due-date" />
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <label for="request-note" class="form-label"
+                        >Note to customer</label
+                      >
+                      <div class="input-group">
+                        <span class="input-group-text align-items-start pt-2"
+                          ><i class="ri-sticky-note-line" aria-hidden="true"></i
+                        ></span>
+                        <textarea
+                          class="form-control"
+                          id="request-note"
+                          rows="1"
+                          placeholder="Add details about the work or payment terms"
+                        ></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer d-none border-top-0">
+                  <pre
+                    class="language-html"
+                  ><code class="language-html">&lt;div class="row g-3"&gt;
+                                    &lt;div class="col-md-6"&gt;
+                                        &lt;label for="customer-name" class="form-label"&gt;Customer name&lt;/label&gt;
+                                        &lt;div class="input-group"&gt;
+                                            &lt;span class="input-group-text"&gt;&lt;i class="ri-user-line" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
+                                            &lt;input type="text" class="form-control" id="customer-name" placeholder="Name or company"&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="col-md-6"&gt;
+                                        &lt;label for="customer-email" class="form-label"&gt;Email address&lt;/label&gt;
+                                        &lt;div class="input-group"&gt;
+                                            &lt;span class="input-group-text"&gt;&lt;i class="ri-mail-line" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
+                                            &lt;input type="email" class="form-control" id="customer-email" placeholder="customer@example.com"&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="col-md-8"&gt;
+                                        &lt;label for="request-title" class="form-label"&gt;Request title&lt;/label&gt;
+                                        &lt;div class="input-group"&gt;
+                                            &lt;span class="input-group-text"&gt;&lt;i class="ri-file-text-line" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
+                                            &lt;input type="text" class="form-control" id="request-title" placeholder="e.g. Website design milestone"&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="col-md-4"&gt;
+                                        &lt;label for="request-reference" class="form-label"&gt;Reference&lt;/label&gt;
+                                        &lt;div class="input-group"&gt;
+                                            &lt;span class="input-group-text"&gt;#&lt;/span&gt;
+                                            &lt;input type="text" class="form-control" id="request-reference" value="PR-2048"&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="col-md-7"&gt;
+                                        &lt;label for="request-amount" class="form-label"&gt;Amount due&lt;/label&gt;
+                                        &lt;div class="input-group"&gt;
+                                            &lt;select class="form-select flex-grow-0 w-auto" aria-label="Select currency"&gt;
+                                                &lt;option selected&gt;USD&lt;/option&gt;
+                                                &lt;option&gt;EUR&lt;/option&gt;
+                                                &lt;option&gt;GBP&lt;/option&gt;
+                                            &lt;/select&gt;
+                                            &lt;span class="input-group-text"&gt;$&lt;/span&gt;
+                                            &lt;input type="number" class="form-control" id="request-amount" placeholder="0.00" min="0" step="0.01"&gt;
+                                            &lt;span class="input-group-text"&gt;.00&lt;/span&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="col-md-5"&gt;
+                                        &lt;label for="due-date" class="form-label"&gt;Due date&lt;/label&gt;
+                                        &lt;div class="input-group"&gt;
+                                            &lt;span class="input-group-text"&gt;&lt;i class="ri-calendar-line" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
+                                            &lt;input type="date" class="form-control" id="due-date"&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="col-12"&gt;
+                                        &lt;label for="request-note" class="form-label"&gt;Note to customer&lt;/label&gt;
+                                        &lt;div class="input-group"&gt;
+                                            &lt;span class="input-group-text align-items-start pt-2"&gt;&lt;i class="ri-sticky-note-line" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
+                                            &lt;textarea class="form-control" id="request-note" rows="3" placeholder="Add details about the work or payment terms"&gt;&lt;/textarea&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;</code></pre>
+                </div>
+              </section>
+
+              <section class="card custom-card mb-4">
+                <div class="card-header justify-content-between">
+                  <div>
+                    <h3 class="card-title mb-1">Line item and adjustments</h3>
+                    <p class="text-muted fs-12 mb-0">
+                      Break down the work and any applied discount or tax.
+                    </p>
+                  </div>
+                  <div class="prism-toggle">
+                    <button
+                      class="btn btn-sm btn-outline-light rounded-pill"
+                      type="button"
+                    >
+                      View markup<i
+                        class="ri-code-line ms-2 d-inline-block align-middle"
+                      ></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="row g-3">
+                    <div class="col-12">
+                      <label for="line-item-name" class="form-label"
+                        >Item description</label
+                      >
+                      <div class="input-group">
+                        <span class="input-group-text"
+                          ><i class="ri-briefcase-line" aria-hidden="true"></i
+                        ></span>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="line-item-name"
+                          value="Product design services"
+                        />
+                        <span class="input-group-text">Service</span>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <label for="line-item-quantity" class="form-label"
+                        >Quantity</label
+                      >
+                      <div class="input-group">
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="line-item-quantity"
+                          value="1"
+                          min="1"
+                        />
+                        <span class="input-group-text">unit</span>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <label for="line-item-rate" class="form-label"
+                        >Unit price</label
+                      >
+                      <div class="input-group">
+                        <span class="input-group-text">$</span>
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="line-item-rate"
+                          placeholder="0.00"
+                          min="0"
+                          step="0.01"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <label for="line-item-tax" class="form-label"
+                        >Tax rate</label
+                      >
+                      <div class="input-group">
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="line-item-tax"
+                          placeholder="0"
+                          min="0"
+                          max="100"
+                        />
+                        <span class="input-group-text">%</span>
+                      </div>
+                    </div>
+                    <div class="col-md-7">
+                      <label for="discount-code" class="form-label"
+                        >Discount code</label
+                      >
+                      <div class="input-group">
+                        <span class="input-group-text"
+                          ><i class="ri-coupon-3-line" aria-hidden="true"></i
+                        ></span>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="discount-code"
+                          placeholder="Enter code"
+                        />
+                        <button class="btn btn-light" type="button">
+                          Apply
+                        </button>
+                      </div>
+                    </div>
+                    <div class="col-md-5">
+                      <label for="purchase-order" class="form-label"
+                        >Purchase order</label
+                      >
+                      <div class="input-group">
+                        <span class="input-group-text">PO-</span>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="purchase-order"
+                          placeholder="Reference"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer d-none border-top-0">
+                  <pre
+                    class="language-html"
+                  ><code class="language-html">&lt;div class="row g-3"&gt;
+                                    &lt;div class="col-12"&gt;
+                                        &lt;label for="line-item-name" class="form-label"&gt;Item description&lt;/label&gt;
+                                        &lt;div class="input-group"&gt;
+                                            &lt;span class="input-group-text"&gt;&lt;i class="ri-briefcase-line" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
+                                            &lt;input type="text" class="form-control" id="line-item-name" value="Product design services"&gt;
+                                            &lt;span class="input-group-text"&gt;Service&lt;/span&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="col-md-4"&gt;
+                                        &lt;label for="line-item-quantity" class="form-label"&gt;Quantity&lt;/label&gt;
+                                        &lt;div class="input-group"&gt;
+                                            &lt;input type="number" class="form-control" id="line-item-quantity" value="1" min="1"&gt;
+                                            &lt;span class="input-group-text"&gt;unit&lt;/span&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="col-md-4"&gt;
+                                        &lt;label for="line-item-rate" class="form-label"&gt;Unit price&lt;/label&gt;
+                                        &lt;div class="input-group"&gt;
+                                            &lt;span class="input-group-text"&gt;$&lt;/span&gt;
+                                            &lt;input type="number" class="form-control" id="line-item-rate" placeholder="0.00" min="0" step="0.01"&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="col-md-4"&gt;
+                                        &lt;label for="line-item-tax" class="form-label"&gt;Tax rate&lt;/label&gt;
+                                        &lt;div class="input-group"&gt;
+                                            &lt;input type="number" class="form-control" id="line-item-tax" placeholder="0" min="0" max="100"&gt;
+                                            &lt;span class="input-group-text"&gt;%&lt;/span&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="col-md-7"&gt;
+                                        &lt;label for="discount-code" class="form-label"&gt;Discount code&lt;/label&gt;
+                                        &lt;div class="input-group"&gt;
+                                            &lt;span class="input-group-text"&gt;&lt;i class="ri-coupon-3-line" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
+                                            &lt;input type="text" class="form-control" id="discount-code" placeholder="Enter code"&gt;
+                                            &lt;button class="btn btn-light" type="button"&gt;Apply&lt;/button&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="col-md-5"&gt;
+                                        &lt;label for="purchase-order" class="form-label"&gt;Purchase order&lt;/label&gt;
+                                        &lt;div class="input-group"&gt;
+                                            &lt;span class="input-group-text"&gt;PO-&lt;/span&gt;
+                                            &lt;input type="text" class="form-control" id="purchase-order" placeholder="Reference"&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;</code></pre>
+                </div>
+              </section>
+
+              <section class="card custom-card mb-4">
+                <div class="card-header justify-content-between">
+                  <div>
+                    <h3 class="card-title mb-1">Billing contact</h3>
+                    <p class="text-muted fs-12 mb-0">
+                      Add contact details for the payment record.
+                    </p>
+                  </div>
+                  <div class="prism-toggle">
+                    <button
+                      class="btn btn-sm btn-outline-light rounded-pill"
+                      type="button"
+                    >
+                      View markup<i
+                        class="ri-code-line ms-2 d-inline-block align-middle"
+                      ></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label for="billing-company" class="form-label"
+                        >Company</label
+                      >
+                      <div class="input-group">
+                        <span class="input-group-text"
+                          ><i class="ri-building-line" aria-hidden="true"></i
+                        ></span>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="billing-company"
+                          placeholder="Company name"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="billing-phone" class="form-label"
+                        >Phone number</label
+                      >
+                      <div class="input-group">
+                        <select
+                          class="form-select flex-grow-0 w-auto"
+                          aria-label="Phone country code"
+                        >
+                          <option selected>+1</option>
+                          <option>+44</option>
+                          <option>+61</option>
+                        </select>
+                        <input
+                          type="tel"
+                          class="form-control"
+                          id="billing-phone"
+                          placeholder="555 0100"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer d-none border-top-0">
+                  <pre
+                    class="language-html"
+                  ><code class="language-html">&lt;div class="row g-3"&gt;
+                                    &lt;div class="col-md-6"&gt;
+                                        &lt;label for="billing-company" class="form-label"&gt;Company&lt;/label&gt;
+                                        &lt;div class="input-group"&gt;
+                                            &lt;span class="input-group-text"&gt;&lt;i class="ri-building-line" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
+                                            &lt;input type="text" class="form-control" id="billing-company" placeholder="Company name"&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="col-md-6"&gt;
+                                        &lt;label for="billing-phone" class="form-label"&gt;Phone number&lt;/label&gt;
+                                        &lt;div class="input-group"&gt;
+                                            &lt;select class="form-select flex-grow-0 w-auto" aria-label="Phone country code"&gt;
+                                                &lt;option selected&gt;+1&lt;/option&gt;
+                                                &lt;option&gt;+44&lt;/option&gt;
+                                                &lt;option&gt;+61&lt;/option&gt;
+                                            &lt;/select&gt;
+                                            &lt;input type="tel" class="form-control" id="billing-phone" placeholder="555 0100"&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;</code></pre>
+                </div>
+              </section>
+
+              <section class="card custom-card">
+                <div class="card-header justify-content-between">
+                  <div>
+                    <h3 class="card-title mb-1">Delivery options</h3>
+                    <p class="text-muted fs-12 mb-0">
+                      Choose how the request is delivered.
+                    </p>
+                  </div>
+                  <div class="prism-toggle">
+                    <button
+                      class="btn btn-sm btn-outline-light rounded-pill"
+                      type="button"
+                    >
+                      View markup<i
+                        class="ri-code-line ms-2 d-inline-block align-middle"
+                      ></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="row g-3">
+                    <div class="col-lg-6">
+                      <div class="input-group">
+                        <span class="input-group-text"
+                          ><input
+                            class="form-check-input form-checked-success mt-0"
+                            type="checkbox"
+                            id="send-email"
+                            checked
+                            aria-label="Send email copy"
+                        /></span>
+                        <input
+                          type="text"
+                          class="form-control"
+                          value="Email a copy to the customer"
+                          aria-label="Email delivery option"
+                          readonly
+                        />
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="input-group">
+                        <span class="input-group-text"
+                          ><input
+                            class="form-check-input form-checked-success mt-0"
+                            type="checkbox"
+                            id="send-reminder"
+                            checked
+                            aria-label="Send due date reminder"
+                        /></span>
+                        <input
+                          type="text"
+                          class="form-control"
+                          value="Send a reminder before due date"
+                          aria-label="Reminder option"
+                          readonly
+                        />
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <label for="payment-link" class="form-label"
+                        >Payment link preview</label
+                      >
+                      <div class="input-group">
+                        <span class="input-group-text">pay.example.com/</span>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="payment-link"
+                          value="request/PR-2048"
+                          readonly
+                        />
+                        <button type="button" class="btn btn-outline-light">
+                          Copy link
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer d-none border-top-0">
+                  <pre
+                    class="language-html"
+                  ><code class="language-html">&lt;div class="row g-3"&gt;
+                                    &lt;div class="col-lg-6"&gt;
+                                        &lt;div class="input-group"&gt;
+                                            &lt;span class="input-group-text"&gt;&lt;input class="form-check-input mt-0" type="checkbox" id="send-email" checked aria-label="Send email copy"&gt;&lt;/span&gt;
+                                            &lt;input type="text" class="form-control" value="Email a copy to the customer" aria-label="Email delivery option" readonly&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="col-lg-6"&gt;
+                                        &lt;div class="input-group"&gt;
+                                            &lt;span class="input-group-text"&gt;&lt;input class="form-check-input mt-0" type="checkbox" id="send-reminder" checked aria-label="Send due date reminder"&gt;&lt;/span&gt;
+                                            &lt;input type="text" class="form-control" value="Send a reminder before due date" aria-label="Reminder option" readonly&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="col-12"&gt;
+                                        &lt;label for="payment-link" class="form-label"&gt;Payment link preview&lt;/label&gt;
+                                        &lt;div class="input-group"&gt;
+                                            &lt;span class="input-group-text"&gt;pay.example.com/&lt;/span&gt;
+                                            &lt;input type="text" class="form-control" id="payment-link" value="request/PR-2048" readonly&gt;
+                                            &lt;button type="button" class="btn btn-outline-light"&gt;Copy link&lt;/button&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;</code></pre>
+                </div>
+              </section>
+
+              <section class="card custom-card">
+                <div class="card-header justify-content-between">
+                  <h3 class="card-title mb-0">Payment settings</h3>
+                  <div class="prism-toggle">
+                    <button
+                      class="btn btn-sm btn-outline-light rounded-pill"
+                      type="button"
+                    >
+                      View markup<i
+                        class="ri-code-line ms-2 d-inline-block align-middle"
+                      ></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <label for="payment-category" class="form-label"
+                    >Category</label
+                  >
+                  <div class="input-group mb-3">
+                    <span class="input-group-text"
+                      ><i class="ri-price-tag-3-line" aria-hidden="true"></i
+                    ></span>
+                    <select class="form-select" id="payment-category">
+                      <option selected>Select category</option>
+                      <option>Services</option>
+                      <option>Subscription</option>
+                      <option>Consulting</option>
+                    </select>
+                  </div>
+                  <label for="invoice-code" class="form-label"
+                    >Internal invoice code</label
+                  >
+                  <div class="input-group">
+                    <span class="input-group-text">INV-</span>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="invoice-code"
+                      placeholder="0000"
+                    />
+                  </div>
+                </div>
+                <div class="card-footer d-none border-top-0">
+                  <pre
+                    class="language-html"
+                  ><code class="language-html">&lt;label for="payment-category" class="form-label"&gt;Category&lt;/label&gt;
+                                &lt;div class="input-group mb-3"&gt;
+                                    &lt;span class="input-group-text"&gt;&lt;i class="ri-price-tag-3-line" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
+                                    &lt;select class="form-select" id="payment-category"&gt;
+                                        &lt;option selected&gt;Select category&lt;/option&gt;
+                                        &lt;option&gt;Services&lt;/option&gt;
+                                        &lt;option&gt;Subscription&lt;/option&gt;
+                                        &lt;option&gt;Consulting&lt;/option&gt;
+                                    &lt;/select&gt;
+                                &lt;/div&gt;
+                                &lt;label for="invoice-code" class="form-label"&gt;Internal invoice code&lt;/label&gt;
+                                &lt;div class="input-group"&gt;
+                                    &lt;span class="input-group-text"&gt;INV-&lt;/span&gt;
+                                    &lt;input type="text" class="form-control" id="invoice-code" placeholder="0000"&gt;
+                                &lt;/div&gt;</code></pre>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <!-- include common-scripts.html"-->
+    <!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/libs/prismjs/prism.js"></script>
+    <script src="../assets/js/prism-custom.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

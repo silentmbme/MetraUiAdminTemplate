@@ -1,0 +1,366 @@
+<!-- include document-head.html"-->
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content order-edit-page">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Edit order <span>#SPK001</span></h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">
+              <a href="ecommerce-dashboard.html">Ecommerce</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Edit order
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid commerce-dashboard">
+          <form id="order-edit-form">
+            <div class="row g-3 align-items-start">
+              <div class="col-xl-8">
+                <section class="card custom-card">
+                  <div
+                    class="card-header justify-content-between flex-wrap gap-2"
+                  >
+                    <div>
+                      <h2 class="card-title mb-1">Order items</h2>
+                      <p class="text-muted fs-12 mb-0">
+                        Add products or update quantities in this order.
+                      </p>
+                    </div>
+                    <button
+                      type="button"
+                      class="btn btn-light btn-sm"
+                      id="add-order-item"
+                    >
+                      <i class="ri-add-line me-1"></i>Add item
+                    </button>
+                  </div>
+                  <div class="table-responsive">
+                    <table
+                      class="table align-middle text-nowrap mb-0 order-edit-items-table"
+                    >
+                      <thead>
+                        <tr>
+                          <th>Product</th>
+                          <th class="text-end">Unit price</th>
+                          <th class="text-center">Quantity</th>
+                          <th class="text-end">Total</th>
+                          <th><span class="visually-hidden">Remove</span></th>
+                        </tr>
+                      </thead>
+                      <tbody id="order-edit-items">
+                        <tr class="order-edit-item-row" data-price="350">
+                          <td>
+                            <div class="order-edit-product">
+                              <span class="order-edit-product-image"
+                                ><img
+                                  src="../assets/images/ecommerce/png/1.png"
+                                  alt="AeroFlex Runner" /></span
+                              ><span
+                                ><strong>AeroFlex Runner</strong
+                                ><small
+                                  >AFX-RUN-2401 | Slate / US 10</small
+                                ></span
+                              >
+                            </div>
+                          </td>
+                          <td class="text-end">
+                            <span class="order-edit-unit-price">$350.00</span>
+                          </td>
+                          <td>
+                            <div class="order-qty-control">
+                              <button
+                                type="button"
+                                class="order-qty-decrease"
+                                aria-label="Decrease quantity"
+                              >
+                                <i class="ri-subtract-line"></i></button
+                              ><input
+                                class="order-item-quantity"
+                                type="number"
+                                min="1"
+                                value="2"
+                                aria-label="AeroFlex Runner quantity"
+                              /><button
+                                type="button"
+                                class="order-qty-increase"
+                                aria-label="Increase quantity"
+                              >
+                                <i class="ri-add-line"></i>
+                              </button>
+                            </div>
+                          </td>
+                          <td class="text-end fw-semibold order-line-total">
+                            $700.00
+                          </td>
+                          <td class="text-end">
+                            <button
+                              type="button"
+                              class="btn btn-icon btn-sm btn-danger-light order-remove-item"
+                              aria-label="Remove AeroFlex Runner"
+                            >
+                              <i class="ri-delete-bin-line"></i>
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="card-body order-edit-note">
+                    <i class="ri-information-line me-1"></i>Changes to item
+                    quantities will update the order totals automatically.
+                  </div>
+                </section>
+
+                <section class="card custom-card">
+                  <div class="card-header">
+                    <div>
+                      <h2 class="card-title mb-1">Customer information</h2>
+                      <p class="text-muted fs-12 mb-0">
+                        Contact details for order updates.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="row g-3">
+                      <div class="col-md-6">
+                        <label class="form-label" for="order-customer-name"
+                          >Customer name</label
+                        ><input
+                          class="form-control"
+                          id="order-customer-name"
+                          value="John Doe"
+                          required
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label" for="order-customer-email"
+                          >Email address</label
+                        ><input
+                          class="form-control"
+                          type="email"
+                          id="order-customer-email"
+                          value="john.doe@example.com"
+                          required
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label" for="order-customer-phone"
+                          >Phone number</label
+                        ><input
+                          class="form-control"
+                          type="tel"
+                          id="order-customer-phone"
+                          placeholder="Add phone number"
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label" for="order-customer-note"
+                          >Customer note</label
+                        ><input
+                          class="form-control"
+                          id="order-customer-note"
+                          placeholder="No note added"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="card custom-card">
+                  <div class="card-header">
+                    <div>
+                      <h2 class="card-title mb-1">Shipping details</h2>
+                      <p class="text-muted fs-12 mb-0">
+                        Where this order should be delivered.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="row g-3">
+                      <div class="col-md-6">
+                        <label class="form-label" for="shipping-name"
+                          >Recipient name</label
+                        ><input
+                          class="form-control"
+                          id="shipping-name"
+                          value="John Doe"
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label" for="shipping-method"
+                          >Shipping method</label
+                        >
+                        <select
+                          class="form-select"
+                          id="shipping-method"
+                          data-trigger
+                        >
+                          <option>Standard shipping</option>
+                          <option>Express shipping</option>
+                          <option>Local pickup</option>
+                        </select>
+                      </div>
+                      <div class="col-12">
+                        <label class="form-label" for="shipping-address"
+                          >Street address</label
+                        ><input
+                          class="form-control"
+                          id="shipping-address"
+                          placeholder="Enter delivery address"
+                        />
+                      </div>
+                      <div class="col-md-5">
+                        <label class="form-label" for="shipping-city"
+                          >City</label
+                        ><input
+                          class="form-control"
+                          id="shipping-city"
+                          placeholder="City"
+                        />
+                      </div>
+                      <div class="col-md-4">
+                        <label class="form-label" for="shipping-region"
+                          >State / Region</label
+                        ><input
+                          class="form-control"
+                          id="shipping-region"
+                          placeholder="State or region"
+                        />
+                      </div>
+                      <div class="col-md-3">
+                        <label class="form-label" for="shipping-postal"
+                          >Postal code</label
+                        ><input
+                          class="form-control"
+                          id="shipping-postal"
+                          placeholder="Postal code"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+
+              <aside class="col-xl-4">
+                <section class="card custom-card order-status-card">
+                  <div class="card-header">
+                    <div>
+                      <h2 class="card-title mb-1">Order status</h2>
+                      <p class="text-muted fs-12 mb-0">
+                        Manage the order lifecycle.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="mb-3">
+                      <label class="form-label" for="order-fulfillment-status"
+                        >Fulfillment status</label
+                      >
+                      <select
+                        class="form-select mb-3"
+                        data-trigger
+                        id="order-fulfillment-status"
+                      >
+                        <option selected>Pending</option>
+                        <option>Processing</option>
+                        <option>Shipped</option>
+                        <option>Delivered</option>
+                        <option>Cancelled</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label class="form-label" for="order-payment-status"
+                        >Payment status</label
+                      >
+                      <select
+                        class="form-select"
+                        data-trigger
+                        id="order-payment-status"
+                      >
+                        <option selected>Pending</option>
+                        <option>Completed</option>
+                        <option>Failed</option>
+                        <option>Refunded</option>
+                      </select>
+                    </div>
+                    <div class="order-edit-order-meta mt-3">
+                      <span>Order reference</span><strong>#SPK001</strong
+                      ><span>Placed on</span><strong>Jan 15, 2025</strong>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="card custom-card order-summary-card">
+                  <div class="card-header">
+                    <div>
+                      <h2 class="card-title mb-1">Order summary</h2>
+                      <p class="text-muted fs-12 mb-0">
+                        Review the amount before saving.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="order-summary-line">
+                      <span>Items subtotal</span
+                      ><strong id="order-subtotal">$700.00</strong>
+                    </div>
+                    <div class="order-summary-line">
+                      <span>Discount</span><strong>-$0.01</strong>
+                    </div>
+                    <div class="order-summary-line">
+                      <span>Shipping</span
+                      ><strong class="text-success">Free</strong>
+                    </div>
+                    <div class="order-summary-total">
+                      <span>Total</span
+                      ><strong id="order-total">$699.99</strong>
+                    </div>
+                    <button class="btn btn-dark w-100 mt-3" type="submit">
+                      <i class="ri-save-line me-1"></i>Save order changes
+                    </button>
+                    <p
+                      id="order-edit-feedback"
+                      class="order-edit-feedback mb-0"
+                      role="status"
+                      aria-live="polite"
+                    ></p>
+                  </div>
+                </section>
+
+                <section class="order-edit-help">
+                  <span class="order-edit-help-icon"
+                    ><i class="ri-shield-check-line"></i
+                  ></span>
+                  <div>
+                    <strong>Review before saving</strong>
+                    <p>
+                      Check quantities, contact details, and payment status
+                      before applying changes.
+                    </p>
+                  </div>
+                </section>
+              </aside>
+            </div>
+          </form>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"-->
+    <script src="../assets/js/order-edit.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+    <!-- include appearance-customizer-scripts.html"-->
+  </body>
+</html>

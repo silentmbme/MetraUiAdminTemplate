@@ -1,0 +1,194 @@
+<!-- include document-head.html"-->
+    <link rel="stylesheet" href="../assets/css/apex-radar-charts.css" />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+
+      <div class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Radar Charts</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">Charts</li>
+            <li class="breadcrumb-item">Apex Charts</li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Radar Charts
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid radar-workspace">
+          <div class="row">
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Project health</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Compare six delivery dimensions on a consistent 0?100
+                      scale.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="radar-basic"
+                    class="radar-demo"
+                    role="group"
+                    aria-label="Project health chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Team comparison</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Compare design and engineering capability profiles.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="radar-multiple"
+                    class="radar-demo"
+                    role="group"
+                    aria-label="Team comparison chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Readiness profile</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Alternating polygon bands make score levels easier to
+                      read.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="radar-polygon"
+                    class="radar-demo"
+                    role="group"
+                    aria-label="Readiness profile chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Actual vs target</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      A dashed target profile adds context to current scores.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="radar-target"
+                    class="radar-demo"
+                    role="group"
+                    aria-label="Actual vs target chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Quality coverage</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      A light outline highlights coverage across quality checks.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="radar-minimal"
+                    class="radar-demo"
+                    role="group"
+                    aria-label="Quality coverage chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Review comparison</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Switch between baseline and current project assessments.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="btn-group mb-2"
+                    role="group"
+                    aria-label="Assessment period"
+                  >
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-light"
+                      data-radar-period="baseline"
+                      aria-pressed="false"
+                    >
+                      Baseline</button
+                    ><button
+                      type="button"
+                      class="btn btn-sm btn-secondary"
+                      data-radar-period="current"
+                      aria-pressed="true"
+                    >
+                      Current
+                    </button>
+                  </div>
+                  <div
+                    id="radar-interactive"
+                    class="radar-demo"
+                    role="group"
+                    aria-label="Review comparison chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <!-- include common-scripts.html"-->
+
+    <!-- include appearance-customizer-scripts.html"-->
+
+    <!-- Apex Charts JS -->
+    <script src="../assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- Internal Apex Radar Charts JS -->
+    <script src="../assets/js/apexcharts-radar.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

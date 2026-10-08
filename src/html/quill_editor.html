@@ -1,0 +1,167 @@
+<!-- include document-head.html"-->
+    <link rel="stylesheet" href="../assets/libs/quill/quill.snow.css" />
+    <link rel="stylesheet" href="../assets/libs/quill/quill.bubble.css" />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+
+      <!--APP-CONTENT START-->
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Quill Editor</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">
+              <a href="javascript:void(0);">Pages</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="javascript:void(0);">Forms</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Quill Editor
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid quill-workspace">
+          <section class="card custom-card quill-editor-card mb-4">
+            <div
+              class="card-header d-flex align-items-center justify-content-between flex-wrap gap-2"
+            >
+              <div>
+                <h2 class="card-title mb-1">Snow editor</h2>
+                <p class="text-muted fs-13 mb-0">
+                  Format headings, lists, links and other document content.
+                </p>
+              </div>
+              <span class="badge bg-light text-default rounded-pill px-3 py-2"
+                >Full toolbar</span
+              >
+            </div>
+            <div class="card-body">
+              <label for="document-title" class="form-label"
+                >Document title</label
+              >
+              <input
+                id="document-title"
+                type="text"
+                class="form-control mb-3"
+                value="Atlas portal beta release"
+                aria-label="Document title"
+              />
+              <div id="editor" class="quill-snow-editor">
+                <h2>Atlas client portal</h2>
+                <p><strong>Objective</strong></p>
+                <p>
+                  Give beta customers one place to follow project progress,
+                  review shared files and keep up with team decisions.
+                </p>
+                <h3>Before the beta</h3>
+                <ol>
+                  <li>Confirm account security and recovery.</li>
+                  <li>Publish the project activity stream and shared files.</li>
+                  <li>
+                    Complete keyboard and screen reader accessibility checks.
+                  </li>
+                </ol>
+                <blockquote>
+                  Keep the beta focused: make the next step clear, keep project
+                  information easy to find, and make every interaction reliable.
+                </blockquote>
+              </div>
+            </div>
+            <div
+              class="card-footer d-flex align-items-center justify-content-between flex-wrap gap-2"
+            >
+              <span class="text-muted fs-12"
+                ><i class="ri-edit-line me-1"></i>Click in the document to begin
+                editing.</span
+              >
+              <span class="text-muted fs-12"
+                >Headings · Lists · Links · Media</span
+              >
+            </div>
+          </section>
+
+          <section class="card custom-card quill-bubble-card">
+            <div
+              class="card-header d-flex align-items-center justify-content-between flex-wrap gap-2"
+            >
+              <div>
+                <h2 class="card-title mb-1">Bubble editor</h2>
+                <p class="text-muted fs-13 mb-0">
+                  Select a word or sentence to open the inline toolbar.
+                </p>
+              </div>
+              <span class="badge bg-light text-default rounded-pill px-3 py-2"
+                >Inline toolbar</span
+              >
+            </div>
+            <div class="card-body">
+              <div
+                class="quill-document-meta d-flex align-items-center gap-3 mb-3"
+              >
+                <span
+                  class="avatar avatar-md avatar-rounded bg-success-transparent text-success"
+                  ><i class="ri-megaphone-line fs-18"></i
+                ></span>
+                <div>
+                  <span class="d-block fw-semibold fs-13"
+                    >Atlas portal beta invitation</span
+                  ><span class="text-muted fs-12">Customer email draft</span>
+                </div>
+              </div>
+              <div id="editor1" class="quill-bubble-editor">
+                <h3>Join the Atlas portal beta</h3>
+                <p>
+                  We’re inviting a small group of customers to try the new Atlas
+                  portal. Follow project updates, find shared documents and keep
+                  conversations connected to your work.
+                </p>
+                <p><strong>Start with these three things</strong></p>
+                <ul>
+                  <li>Open the project overview and check current progress.</li>
+                  <li>Browse the activity stream for recent team updates.</li>
+                  <li>Share feedback in the project conversation.</li>
+                </ul>
+                <p>
+                  Thanks for helping us shape the next release. Reply to this
+                  email with any feedback.
+                </p>
+              </div>
+            </div>
+            <div class="card-footer text-muted fs-12">
+              <i class="ri-cursor-line me-1"></i>Select text to format it in
+              place.
+            </div>
+          </section>
+        </div>
+      </main>
+      <!--APP-CONTENT CLOSE-->
+
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <!-- include common-scripts.html"-->
+
+    <!-- include appearance-customizer-scripts.html"-->
+
+    <!-- Quill Editor JS -->
+    <script src="../assets/libs/quill/quill.js"></script>
+
+    <!-- Internal Quill JS -->
+    <script src="../assets/js/quill-editor.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+/*!
+ * ============================================================
+ * NexoraUI
+ * HTML + Bootstrap Admin Dashboard Template
+ * ============================================================
+ *
+ * Project     : NexoraUI Html Bootstrap Admin Dashboard Template
+ * Version     : 1.0.0
+ * Author      : SramaTech Solutions
+ * Website     : sramatech.com
+ * Copyright   : © 2026 SramaTech Solutions
+ *
+ * Technology
+ * ------------------------------------------------------------
+ * HTML5
+ * CSS3
+ * SCSS
+ * Bootstrap 5
+ * JavaScript
+ *
+ * Features
+ * ------------------------------------------------------------
+ * - Responsive Design
+ * - Light & Dark Mode
+ * - RTL Support
+ * - Multiple Dashboard Layouts
+ * - Application Pages
+ * - Reusable UI Components
+ * - Interactive Charts
+ * - Modern UI Design
+ *
+ * Credits
+ * ------------------------------------------------------------
+ * Bootstrap
+ * ApexCharts
+ * Remix Icon
+ * Google Fonts
+ *
+ * Support
+ * ------------------------------------------------------------
+ * For support and documentation, please refer to the
+ * documentation included with the product.
+ *
+ * ============================================================
+ */
+
+/* BOOTSTRAP */
+@forward "bootstrap-styles/accordion";
+@forward "bootstrap-styles/alerts";
+@forward "bootstrap-styles/badge";
+@forward "bootstrap-styles/breadcrumb";
+@forward "bootstrap-styles/buttons";
+@forward "bootstrap-styles/cards";
+@forward "custom-pages-styles/widgets-page";
+@forward "custom-pages-styles/cards-showcase";
+@forward "bootstrap-styles/dropdown";
+@forward "bootstrap-styles/forms";
+@forward "bootstrap-styles/input_group";
+@forward "bootstrap-styles/list_group";
+@forward "bootstrap-styles/modals";
+@forward "bootstrap-styles/navbar";
+@forward "bootstrap-styles/navs_tabs";
+@forward "bootstrap-styles/pagination";
+@forward "bootstrap-styles/popovers";
+@forward "bootstrap-styles/progress";
+@forward "bootstrap-styles/tables";
+@forward "bootstrap-styles/toast";
+@forward "bootstrap-styles/tooltips";
+
+/* CUSTOM */
+@forward "components/custom";
+@forward "components/header";
+@forward "components/plugins";
+@forward "components/ribbons";
+@forward "components/widgets";
+@forward "components/sidenav-bar";
+@forward "components/utilities";
+
+
+/* PAGES */
+@forward "custom-pages-styles/dashboard";
+@forward "custom-pages-styles/crm-leads";
+@forward "custom-pages-styles/authentication";
+@forward "custom-pages-styles/error";
+@forward "custom-pages-styles/crm-contacts";
+@forward "custom-pages-styles/chat";
+@forward "custom-pages-styles/ai-tools";
+@forward "custom-pages-styles/calendar";
+@forward "custom-pages-styles/ecommerce";
+@forward "custom-pages-styles/file-manager";
+@forward "custom-pages-styles/landing";
+@forward "custom-pages-styles/mail";
+@forward "custom-pages-styles/task";
+@forward "custom-pages-styles/sweet-alerts";
+@forward "custom-pages-styles/todo-workspace";
+@forward "custom-pages-styles/coming-soon";
+@forward "custom-pages-styles/password-create";
+@forward "custom-pages-styles/form-advanced";
+@forward "custom-pages-styles/sitemap";
+@forward "custom-pages-styles/invoice-create";
+@forward "custom-pages-styles/invoice-details";
+@forward "custom-pages-styles/invoice-list";
+@forward "custom-pages-styles/profile";
+@forward "custom-pages-styles/profile-settings";
+@forward "custom-pages-styles/search-results";
+@forward "custom-pages-styles/terms";
+@forward "custom-pages-styles/page-header";
+@forward "custom-pages-styles/faq";
+
+/* FONT */
+@forward "components/brand";
+@forward "components/switcher-panel";
+
+@forward "components/footer";
+
+/* Shared responsive safeguards */
+@forward "components/responsive";
+
+/* Geist sans-serif */
+@import url("https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap");

@@ -1,0 +1,258 @@
+<!-- include document-head.html"-->
+
+    <link rel="stylesheet" href="../assets/libs/gridjs/theme/mermaid.min.css" />
+
+    <link
+      rel="stylesheet"
+      href="../assets/libs/sweetalert2/sweetalert2.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+
+      <!-- Start::app-content -->
+      <main class="main-content app-content orders-management-page">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Orders</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">
+              <a href="ecommerce-dashboard.html">Ecommerce</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Orders</li>
+          </ol>
+        </div>
+        <div class="container-fluid commerce-dashboard">
+          <div class="row orders-summary-grid">
+            <div class="col-xxl-3 col-sm-6">
+              <section class="card custom-card orders-summary-card">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <span class="orders-summary-icon bg-color-1 text-black"
+                      ><i class="ri-file-list-3-line"></i></span
+                    ><span class="badge bg-success-transparent">+16.7%</span>
+                  </div>
+                  <p class="text-muted mb-1 mt-3">Total orders</p>
+                  <div class="d-flex align-items-end justify-content-between">
+                    <h3 class="fw-semibold mb-0">2,450</h3>
+                    <span class="text-muted fs-12">vs last month</span>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-3 col-sm-6">
+              <section class="card custom-card orders-summary-card">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <span class="orders-summary-icon bg-color-2 text-black"
+                      ><i class="ri-time-line"></i></span
+                    ><span class="badge bg-warning-transparent"
+                      >Needs attention</span
+                    >
+                  </div>
+                  <p class="text-muted mb-1 mt-3">Awaiting fulfillment</p>
+                  <div class="d-flex align-items-end justify-content-between">
+                    <h3 class="fw-semibold mb-0">300</h3>
+                    <a href="#orders-table" class="fs-12 fw-medium"
+                      >Review <i class="ri-arrow-right-line"></i
+                    ></a>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-3 col-sm-6">
+              <section class="card custom-card orders-summary-card">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <span class="orders-summary-icon bg-color-3 text-black"
+                      ><i class="ri-checkbox-circle-line"></i></span
+                    ><span class="badge bg-success-transparent">+5.9%</span>
+                  </div>
+                  <p class="text-muted mb-1 mt-3">Successfully delivered</p>
+                  <div class="d-flex align-items-end justify-content-between">
+                    <h3 class="fw-semibold mb-0">1,800</h3>
+                    <span class="text-muted fs-12">this month</span>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-3 col-sm-6">
+              <section class="card custom-card orders-summary-card">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <span class="orders-summary-icon bg-color-4 text-black"
+                      ><i class="ri-arrow-go-back-line"></i></span
+                    ><span class="badge bg-success-transparent"
+                      >2.0% of orders</span
+                    >
+                  </div>
+                  <p class="text-muted mb-1 mt-3">
+                    Returns &amp; cancellations
+                  </p>
+                  <div class="d-flex align-items-end justify-content-between">
+                    <h3 class="fw-semibold mb-0">150</h3>
+                    <a href="refunds.html" class="fs-12 fw-medium"
+                      >View returns <i class="ri-arrow-right-line"></i
+                    ></a>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <div class="row g-3">
+            <div class="col-12">
+              <section class="card custom-card orders-fulfillment-card">
+                <div
+                  class="card-body d-flex align-items-center justify-content-between flex-wrap gap-5"
+                >
+                  <div class="d-flex align-items-center gap-3">
+                    <span class="orders-summary-icon bg-dark text-white"
+                      ><i class="ri-route-line"></i
+                    ></span>
+                    <div>
+                      <h2 class="fs-15 fw-semibold mb-1">
+                        Fulfillment overview
+                      </h2>
+                      <p class="text-muted fs-12 mb-0">
+                        Your order pipeline is moving steadily today.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="orders-pipeline flex-fill">
+                    <div class="d-flex justify-content-between fs-12 mb-2">
+                      <span
+                        ><i class="ri-circle-fill text-warning me-1"></i>Pending
+                        <strong>300</strong></span
+                      ><span
+                        ><i class="ri-circle-fill text-info me-1"></i>In transit
+                        <strong>250</strong></span
+                      ><span
+                        ><i class="ri-circle-fill text-success me-1"></i
+                        >Delivered <strong>1,800</strong></span
+                      >
+                    </div>
+                    <div class="progress progress-sm">
+                      <div
+                        class="progress-bar bg-warning"
+                        style="width: 13%"
+                        role="progressbar"
+                        aria-label="Pending orders"
+                      ></div>
+                      <div
+                        class="progress-bar bg-info"
+                        style="width: 11%"
+                        role="progressbar"
+                        aria-label="Orders in transit"
+                      ></div>
+                      <div
+                        class="progress-bar bg-success"
+                        style="width: 76%"
+                        role="progressbar"
+                        aria-label="Delivered orders"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <section class="card custom-card orders-table-card">
+            <div
+              class="card-header border-bottom-0 align-items-start flex-wrap gap-3"
+            >
+              <div>
+                <h2 class="card-title mb-1">
+                  All orders
+                  <span
+                    class="badge bg-light text-default ms-1"
+                    id="orders-count"
+                    >10</span
+                  >
+                </h2>
+                <p class="text-muted fs-12 mb-0">
+                  Search and filter recent customer orders.
+                </p>
+              </div>
+              <div
+                class="d-flex align-items-center gap-2 flex-wrap orders-table-filters"
+              >
+                <div class="orders-search">
+                  <i class="ri-search-line"></i
+                  ><input
+                    class="form-control"
+                    type="search"
+                    id="search-input"
+                    placeholder="Search order, customer, email"
+                    aria-label="Search orders"
+                  />
+                </div>
+                <select
+                  class="form-control"
+                  data-trigger
+                  name="choices-single-default"
+                  id="delivery-status-filter"
+                  aria-label="Filter by delivery status"
+                >
+                  <option value="">All delivery</option>
+                  <option value="pending">Pending</option>
+                  <option value="shipped">Shipped</option>
+                  <option value="delivered">Delivered</option>
+                  <option value="cancelled">Cancelled</option>
+                </select>
+                <select
+                  class="form-control"
+                  data-trigger
+                  name="choices-single-default"
+                  id="payment-status-filter"
+                  aria-label="Filter by payment status"
+                >
+                  <option value="">All payments</option>
+                  <option value="pending">Pending</option>
+                  <option value="completed">Completed</option>
+                  <option value="failed">Failed</option>
+                  <option value="refunded">Refunded</option>
+                  <option value="cancelled">Cancelled</option>
+                </select>
+              </div>
+            </div>
+            <div class="card-body p-0">
+              <div id="orders-table" class="grid-card-table"></div>
+            </div>
+          </section>
+        </div>
+      </main>
+      <!-- End::app-content -->
+
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <!-- include common-scripts.html"-->
+
+    <!-- include appearance-customizer-scripts.html"-->
+
+    <!-- Grid JS -->
+    <script src="../assets/libs/gridjs/gridjs.umd.js"></script>
+
+    <!-- Sweetalerts JS -->
+    <script src="../assets/libs/sweetalert2/sweetalert2.min.js"></script>
+
+    <!-- Internal Orders JS -->
+    <script src="../assets/js/orders.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

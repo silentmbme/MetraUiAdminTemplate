@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme-color="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Unlock account | NexoraUI</title>
+    <meta name="description" content="Unlock your NexoraUI workspace." />
+    <link
+      rel="icon"
+      href="../assets/images/brand-logos/favicon.ico?v=2"
+      type="image/x-icon"
+    />
+    <link
+      href="../assets/libs/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="../assets/css/demo.css" rel="stylesheet" />
+    <link href="../assets/css/icons.css" rel="stylesheet" />
+    <script src="../assets/js/authentication.js"></script>
+  </head>
+  <body class="password-create-page password-create-basic">
+    <main class="password-basic-shell">
+      <section
+        class="card custom-card password-basic-card lockscreen-card"
+        aria-labelledby="lockscreen-title"
+      >
+        <div class="card-body">
+          <a class="password-brand" href="index.html" aria-label="NexoraUI home"
+            ><picture class="auth-brand-logos"
+              ><img
+                class="auth-logo-light"
+                src="../assets/images/brand-logos/desktop-logo.png"
+                alt="NexoraUI" /><img
+                class="auth-logo-dark"
+                src="../assets/images/brand-logos/desktop-dark.png"
+                alt="NexoraUI" /></picture
+          ></a>
+          <span class="password-step"
+            ><i class="ri-lock-line" aria-hidden="true"></i> WORKSPACE
+            LOCKED</span
+          >
+          <div class="lockscreen-profile">
+            <span class="avatar avatar-lg avatar-rounded"
+              ><img src="../assets/images/users/12.jpg" alt=""
+            /></span>
+            <div>
+              <h1 id="lockscreen-title">Welcome back, Tom</h1>
+              <p>liamcarter32@gmail.com</p>
+            </div>
+          </div>
+          <p class="password-intro">
+            Enter your password to return to your workspace.
+          </p>
+
+          <form class="password-form lockscreen-form" data-lockscreen-form>
+            <label class="form-label" for="lockscreen-password">Password</label>
+            <div class="password-input-wrap">
+              <input
+                class="form-control"
+                id="lockscreen-password"
+                type="password"
+                autocomplete="current-password"
+                placeholder="Enter your password"
+                required
+              /><button
+                class="btn btn-link password-visibility"
+                type="button"
+                data-lockscreen-toggle
+                aria-label="Show password"
+              >
+                <i class="ri-eye-off-line" aria-hidden="true"></i>
+              </button>
+            </div>
+            <button class="btn btn-primary w-100 btn-lg" type="submit">
+              Unlock workspace
+              <i class="ri-arrow-right-line ms-1" aria-hidden="true"></i>
+            </button>
+            <p
+              class="password-form-status"
+              data-lockscreen-status
+              aria-live="polite"
+            ></p>
+          </form>
+          <div class="password-back-link">
+            <a href="sign-in-basic.html"
+              ><i class="ri-user-line me-1" aria-hidden="true"></i> Sign in as
+              another user</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/lockscreen.js"></script>
+  </body>
+</html>

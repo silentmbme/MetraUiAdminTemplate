@@ -1,0 +1,617 @@
+<!-- include document-head.html"-->
+    <link rel="stylesheet" href="../assets/libs/dragula/dragula.min.css" />
+    <link
+      rel="stylesheet"
+      href="../assets/libs/prismjs/themes/prism-coy.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main data-markup-examples class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Draggable Cards</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Base UI</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Draggable Cards
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid">
+          <div
+            class="d-flex justify-content-between align-items-start flex-wrap gap-3 mb-3"
+          >
+            <div>
+              <h2 class="fs-18 fw-semibold mb-0">Shape your team workspace</h2>
+            </div>
+            <button
+              type="button"
+              id="reset-card-board"
+              class="btn btn-outline-danger btn-sm"
+            >
+              <i class="ri-restart-line me-1" aria-hidden="true"></i>Reset board
+            </button>
+          </div>
+          <div class="row g-3 mb-4">
+            <div class="col-lg-4">
+              <section class="bg-light border rounded p-3">
+                <div
+                  class="d-flex align-items-center justify-content-between mb-1"
+                >
+                  <h2 class="fs-14 fw-semibold mb-0">Planned</h2>
+                  <span
+                    class="badge bg-secondary-transparent"
+                    data-lane-count="planned"
+                    aria-label="Planned card count"
+                    >3</span
+                  >
+                </div>
+                <p class="text-muted fs-12 mb-3">
+                  Ideas and tasks ready to start
+                </p>
+                <div
+                  data-card-lane="planned"
+                  aria-label="Planned cards"
+                  style="min-height: 160px"
+                >
+                  <article
+                    class="card custom-card mb-3"
+                    data-draggable-card="brief"
+                  >
+                    <div class="card-header justify-content-between gap-2">
+                      <span class="badge bg-secondary-transparent">Project</span
+                      ><span
+                        data-drag-handle
+                        class="text-muted p-1"
+                        style="cursor: grab; touch-action: none"
+                        aria-hidden="true"
+                        ><i class="ri-draggable fs-18"></i
+                      ></span>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="fs-15 fw-semibold mb-2">
+                        Workspace launch brief
+                      </h3>
+                      <p class="text-muted fs-13 mb-3">
+                        Align the goals, audience, and scope before the team
+                        starts.
+                      </p>
+                      <div
+                        class="d-flex justify-content-between align-items-center mb-3"
+                      >
+                        <div class="d-flex align-items-center gap-2">
+                          <span class="avatar avatar-xs avatar-rounded"
+                            ><img
+                              src="../assets/images/users/12.jpg"
+                              alt=""
+                              loading="lazy" /></span
+                          ><span class="fs-12">Liam Carter</span>
+                        </div>
+                        <span class="text-muted fs-12"
+                          ><i
+                            class="ri-calendar-line me-1"
+                            aria-hidden="true"
+                          ></i
+                          >Oct 12</span
+                        >
+                      </div>
+                      <label for="move-brief" class="fs-12 text-muted mb-1"
+                        >Move to</label
+                      ><select
+                        id="move-brief"
+                        class="form-select form-select-sm"
+                        data-move-card
+                        aria-label="Move Workspace launch brief to a column"
+                      >
+                        <option value="planned" selected>Planned</option>
+                        <option value="active">In progress</option>
+                        <option value="complete">Completed</option>
+                      </select>
+                    </div>
+                  </article>
+                  <article
+                    class="card custom-card mb-3"
+                    data-draggable-card="research"
+                  >
+                    <div class="card-header justify-content-between gap-2">
+                      <span class="badge bg-info-transparent">Research</span
+                      ><span
+                        data-drag-handle
+                        class="text-muted p-1"
+                        style="cursor: grab; touch-action: none"
+                        aria-hidden="true"
+                        ><i class="ri-draggable fs-18"></i
+                      ></span>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="fs-15 fw-semibold mb-2">
+                        Customer interview notes
+                      </h3>
+                      <p class="text-muted fs-13 mb-3">
+                        Bring the key insights from six customer conversations
+                        together.
+                      </p>
+                      <div
+                        class="d-flex justify-content-between align-items-center mb-3"
+                      >
+                        <div class="d-flex align-items-center gap-2">
+                          <span class="avatar avatar-xs avatar-rounded"
+                            ><img
+                              src="../assets/images/users/5.jpg"
+                              alt=""
+                              loading="lazy" /></span
+                          ><span class="fs-12">Amelia Hart</span>
+                        </div>
+                        <span class="text-muted fs-12"
+                          ><i
+                            class="ri-calendar-line me-1"
+                            aria-hidden="true"
+                          ></i
+                          >Oct 14</span
+                        >
+                      </div>
+                      <label for="move-research" class="fs-12 text-muted mb-1"
+                        >Move to</label
+                      ><select
+                        id="move-research"
+                        class="form-select form-select-sm"
+                        data-move-card
+                        aria-label="Move Customer interview notes to a column"
+                      >
+                        <option value="planned" selected>Planned</option>
+                        <option value="active">In progress</option>
+                        <option value="complete">Completed</option>
+                      </select>
+                    </div>
+                  </article>
+                  <article
+                    class="card custom-card mb-3"
+                    data-draggable-card="assets"
+                  >
+                    <div class="card-header justify-content-between gap-2">
+                      <span class="badge bg-warning-transparent">Files</span
+                      ><span
+                        data-drag-handle
+                        class="text-muted p-1"
+                        style="cursor: grab; touch-action: none"
+                        aria-hidden="true"
+                        ><i class="ri-draggable fs-18"></i
+                      ></span>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="fs-15 fw-semibold mb-2">
+                        Shared asset library
+                      </h3>
+                      <p class="text-muted fs-13 mb-3">
+                        Organize reusable visuals and templates in one place.
+                      </p>
+                      <div
+                        class="d-flex justify-content-between align-items-center mb-3"
+                      >
+                        <div class="d-flex align-items-center gap-2">
+                          <span class="avatar avatar-xs avatar-rounded"
+                            ><img
+                              src="../assets/images/users/10.jpg"
+                              alt=""
+                              loading="lazy" /></span
+                          ><span class="fs-12">Noah Ellis</span>
+                        </div>
+                        <span class="text-muted fs-12"
+                          ><i
+                            class="ri-calendar-line me-1"
+                            aria-hidden="true"
+                          ></i
+                          >Oct 16</span
+                        >
+                      </div>
+                      <label for="move-assets" class="fs-12 text-muted mb-1"
+                        >Move to</label
+                      ><select
+                        id="move-assets"
+                        class="form-select form-select-sm"
+                        data-move-card
+                        aria-label="Move Shared asset library to a column"
+                      >
+                        <option value="planned" selected>Planned</option>
+                        <option value="active">In progress</option>
+                        <option value="complete">Completed</option>
+                      </select>
+                    </div>
+                  </article>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-4">
+              <section class="bg-light border rounded p-3">
+                <div
+                  class="d-flex align-items-center justify-content-between mb-1"
+                >
+                  <h2 class="fs-14 fw-semibold mb-0">In progress</h2>
+                  <span
+                    class="badge bg-info-transparent"
+                    data-lane-count="active"
+                    aria-label="In progress card count"
+                    >3</span
+                  >
+                </div>
+                <p class="text-muted fs-12 mb-3">
+                  Work moving toward the next milestone
+                </p>
+                <div
+                  data-card-lane="active"
+                  aria-label="In progress cards"
+                  style="min-height: 160px"
+                >
+                  <article
+                    class="card custom-card mb-3"
+                    data-draggable-card="design"
+                  >
+                    <div class="card-header justify-content-between gap-2">
+                      <span class="badge bg-secondary-transparent">Design</span
+                      ><span
+                        data-drag-handle
+                        class="text-muted p-1"
+                        style="cursor: grab; touch-action: none"
+                        aria-hidden="true"
+                        ><i class="ri-draggable fs-18"></i
+                      ></span>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="fs-15 fw-semibold mb-2">
+                        Dashboard layout refresh
+                      </h3>
+                      <p class="text-muted fs-13 mb-3">
+                        Refine the hierarchy and spacing across the main
+                        workspace.
+                      </p>
+                      <div
+                        class="d-flex justify-content-between align-items-center mb-3"
+                      >
+                        <div class="d-flex align-items-center gap-2">
+                          <span class="avatar avatar-xs avatar-rounded"
+                            ><img
+                              src="../assets/images/users/5.jpg"
+                              alt=""
+                              loading="lazy" /></span
+                          ><span class="fs-12">Amelia Hart</span>
+                        </div>
+                        <span class="text-muted fs-12"
+                          ><i
+                            class="ri-calendar-line me-1"
+                            aria-hidden="true"
+                          ></i
+                          >Oct 10</span
+                        >
+                      </div>
+                      <label for="move-design" class="fs-12 text-muted mb-1"
+                        >Move to</label
+                      ><select
+                        id="move-design"
+                        class="form-select form-select-sm"
+                        data-move-card
+                        aria-label="Move Dashboard layout refresh to a column"
+                      >
+                        <option value="planned">Planned</option>
+                        <option value="active" selected>In progress</option>
+                        <option value="complete">Completed</option>
+                      </select>
+                    </div>
+                  </article>
+                  <article
+                    class="card custom-card mb-3"
+                    data-draggable-card="review"
+                  >
+                    <div class="card-header justify-content-between gap-2">
+                      <span class="badge bg-warning-transparent">Review</span
+                      ><span
+                        data-drag-handle
+                        class="text-muted p-1"
+                        style="cursor: grab; touch-action: none"
+                        aria-hidden="true"
+                        ><i class="ri-draggable fs-18"></i
+                      ></span>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="fs-15 fw-semibold mb-2">
+                        Component accessibility
+                      </h3>
+                      <p class="text-muted fs-13 mb-3">
+                        Check focus states, keyboard navigation, and readable
+                        labels.
+                      </p>
+                      <div
+                        class="d-flex justify-content-between align-items-center mb-3"
+                      >
+                        <div class="d-flex align-items-center gap-2">
+                          <span class="avatar avatar-xs avatar-rounded"
+                            ><img
+                              src="../assets/images/users/10.jpg"
+                              alt=""
+                              loading="lazy" /></span
+                          ><span class="fs-12">Noah Ellis</span>
+                        </div>
+                        <span class="text-muted fs-12"
+                          ><i
+                            class="ri-calendar-line me-1"
+                            aria-hidden="true"
+                          ></i
+                          >Oct 11</span
+                        >
+                      </div>
+                      <label for="move-review" class="fs-12 text-muted mb-1"
+                        >Move to</label
+                      ><select
+                        id="move-review"
+                        class="form-select form-select-sm"
+                        data-move-card
+                        aria-label="Move Component accessibility to a column"
+                      >
+                        <option value="planned">Planned</option>
+                        <option value="active" selected>In progress</option>
+                        <option value="complete">Completed</option>
+                      </select>
+                    </div>
+                  </article>
+                  <article
+                    class="card custom-card mb-3"
+                    data-draggable-card="docs"
+                  >
+                    <div class="card-header justify-content-between gap-2">
+                      <span class="badge bg-info-transparent">Content</span
+                      ><span
+                        data-drag-handle
+                        class="text-muted p-1"
+                        style="cursor: grab; touch-action: none"
+                        aria-hidden="true"
+                        ><i class="ri-draggable fs-18"></i
+                      ></span>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="fs-15 fw-semibold mb-2">
+                        Team onboarding guide
+                      </h3>
+                      <p class="text-muted fs-13 mb-3">
+                        Create a useful introduction for new workspace members.
+                      </p>
+                      <div
+                        class="d-flex justify-content-between align-items-center mb-3"
+                      >
+                        <div class="d-flex align-items-center gap-2">
+                          <span class="avatar avatar-xs avatar-rounded"
+                            ><img
+                              src="../assets/images/users/12.jpg"
+                              alt=""
+                              loading="lazy" /></span
+                          ><span class="fs-12">Liam Carter</span>
+                        </div>
+                        <span class="text-muted fs-12"
+                          ><i
+                            class="ri-calendar-line me-1"
+                            aria-hidden="true"
+                          ></i
+                          >Oct 13</span
+                        >
+                      </div>
+                      <label for="move-docs" class="fs-12 text-muted mb-1"
+                        >Move to</label
+                      ><select
+                        id="move-docs"
+                        class="form-select form-select-sm"
+                        data-move-card
+                        aria-label="Move Team onboarding guide to a column"
+                      >
+                        <option value="planned">Planned</option>
+                        <option value="active" selected>In progress</option>
+                        <option value="complete">Completed</option>
+                      </select>
+                    </div>
+                  </article>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-4">
+              <section class="bg-light border rounded p-3">
+                <div
+                  class="d-flex align-items-center justify-content-between mb-1"
+                >
+                  <h2 class="fs-14 fw-semibold mb-0">Completed</h2>
+                  <span
+                    class="badge bg-success-transparent"
+                    data-lane-count="complete"
+                    aria-label="Completed card count"
+                    >3</span
+                  >
+                </div>
+                <p class="text-muted fs-12 mb-3">
+                  Finished work ready to share
+                </p>
+                <div
+                  data-card-lane="complete"
+                  aria-label="Completed cards"
+                  style="min-height: 160px"
+                >
+                  <article
+                    class="card custom-card mb-3"
+                    data-draggable-card="icons"
+                  >
+                    <div class="card-header justify-content-between gap-2">
+                      <span class="badge bg-success-transparent">Design</span
+                      ><span
+                        data-drag-handle
+                        class="text-muted p-1"
+                        style="cursor: grab; touch-action: none"
+                        aria-hidden="true"
+                        ><i class="ri-draggable fs-18"></i
+                      ></span>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="fs-15 fw-semibold mb-2">Icon set cleanup</h3>
+                      <p class="text-muted fs-13 mb-3">
+                        The shared icon library now follows a consistent visual
+                        style.
+                      </p>
+                      <div
+                        class="d-flex justify-content-between align-items-center mb-3"
+                      >
+                        <div class="d-flex align-items-center gap-2">
+                          <span class="avatar avatar-xs avatar-rounded"
+                            ><img
+                              src="../assets/images/users/5.jpg"
+                              alt=""
+                              loading="lazy" /></span
+                          ><span class="fs-12">Amelia Hart</span>
+                        </div>
+                        <span class="text-muted fs-12"
+                          ><i
+                            class="ri-calendar-line me-1"
+                            aria-hidden="true"
+                          ></i
+                          >Oct 6</span
+                        >
+                      </div>
+                      <label for="move-icons" class="fs-12 text-muted mb-1"
+                        >Move to</label
+                      ><select
+                        id="move-icons"
+                        class="form-select form-select-sm"
+                        data-move-card
+                        aria-label="Move Icon set cleanup to a column"
+                      >
+                        <option value="planned">Planned</option>
+                        <option value="active">In progress</option>
+                        <option value="complete" selected>Completed</option>
+                      </select>
+                    </div>
+                  </article>
+                  <article
+                    class="card custom-card mb-3"
+                    data-draggable-card="handoff"
+                  >
+                    <div class="card-header justify-content-between gap-2">
+                      <span class="badge bg-success-transparent">Delivery</span
+                      ><span
+                        data-drag-handle
+                        class="text-muted p-1"
+                        style="cursor: grab; touch-action: none"
+                        aria-hidden="true"
+                        ><i class="ri-draggable fs-18"></i
+                      ></span>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="fs-15 fw-semibold mb-2">Release handoff</h3>
+                      <p class="text-muted fs-13 mb-3">
+                        Final files and implementation notes are ready for the
+                        team.
+                      </p>
+                      <div
+                        class="d-flex justify-content-between align-items-center mb-3"
+                      >
+                        <div class="d-flex align-items-center gap-2">
+                          <span class="avatar avatar-xs avatar-rounded"
+                            ><img
+                              src="../assets/images/users/12.jpg"
+                              alt=""
+                              loading="lazy" /></span
+                          ><span class="fs-12">Liam Carter</span>
+                        </div>
+                        <span class="text-muted fs-12"
+                          ><i
+                            class="ri-calendar-line me-1"
+                            aria-hidden="true"
+                          ></i
+                          >Oct 7</span
+                        >
+                      </div>
+                      <label for="move-handoff" class="fs-12 text-muted mb-1"
+                        >Move to</label
+                      ><select
+                        id="move-handoff"
+                        class="form-select form-select-sm"
+                        data-move-card
+                        aria-label="Move Release handoff to a column"
+                      >
+                        <option value="planned">Planned</option>
+                        <option value="active">In progress</option>
+                        <option value="complete" selected>Completed</option>
+                      </select>
+                    </div>
+                  </article>
+                  <article
+                    class="card custom-card mb-3"
+                    data-draggable-card="checks"
+                  >
+                    <div class="card-header justify-content-between gap-2">
+                      <span class="badge bg-success-transparent">Quality</span
+                      ><span
+                        data-drag-handle
+                        class="text-muted p-1"
+                        style="cursor: grab; touch-action: none"
+                        aria-hidden="true"
+                        ><i class="ri-draggable fs-18"></i
+                      ></span>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="fs-15 fw-semibold mb-2">
+                        Responsive layout checks
+                      </h3>
+                      <p class="text-muted fs-13 mb-3">
+                        Core layouts have been reviewed across common screen
+                        sizes.
+                      </p>
+                      <div
+                        class="d-flex justify-content-between align-items-center mb-3"
+                      >
+                        <div class="d-flex align-items-center gap-2">
+                          <span class="avatar avatar-xs avatar-rounded"
+                            ><img
+                              src="../assets/images/users/10.jpg"
+                              alt=""
+                              loading="lazy" /></span
+                          ><span class="fs-12">Noah Ellis</span>
+                        </div>
+                        <span class="text-muted fs-12"
+                          ><i
+                            class="ri-calendar-line me-1"
+                            aria-hidden="true"
+                          ></i
+                          >Oct 8</span
+                        >
+                      </div>
+                      <label for="move-checks" class="fs-12 text-muted mb-1"
+                        >Move to</label
+                      ><select
+                        id="move-checks"
+                        class="form-select form-select-sm"
+                        data-move-card
+                        aria-label="Move Responsive layout checks to a column"
+                      >
+                        <option value="planned">Planned</option>
+                        <option value="active">In progress</option>
+                        <option value="complete" selected>Completed</option>
+                      </select>
+                    </div>
+                  </article>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"--><!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"--><!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/libs/dragula/dragula.min.js"></script>
+    <script src="../assets/js/draggable-cards.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+    <script src="../assets/libs/prismjs/prism.js"></script>
+    <script src="../assets/js/prism-custom.js"></script>
+  </body>
+</html>

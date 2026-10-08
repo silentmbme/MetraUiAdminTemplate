@@ -1,0 +1,484 @@
+<!-- include document-head.html"-->
+    <link rel="stylesheet" href="../assets/css/ai-tools.css" />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <div>
+            <h1 class="page-title">AI Writer</h1>
+          </div>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">
+              <a href="ai-dashboard.html">AI tools</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              AI Writer
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid ai-writer-page">
+          <div class="writer-studio">
+            <section class="writer-document" aria-label="Document editor">
+              <div
+                class="writer-editor-toolbar"
+                role="toolbar"
+                aria-label="Text formatting"
+              >
+                <div class="writer-format-actions">
+                  <button
+                    type="button"
+                    class="writer-tool-button"
+                    data-writer-command="formatBlock"
+                    data-writer-value="h2"
+                    aria-label="Heading"
+                    title="Heading"
+                  >
+                    <i class="ri-heading"></i>
+                  </button>
+                  <button
+                    type="button"
+                    class="writer-tool-button fw-bold"
+                    data-writer-command="bold"
+                    aria-label="Bold"
+                    title="Bold"
+                  >
+                    B
+                  </button>
+                  <button
+                    type="button"
+                    class="writer-tool-button fst-italic"
+                    data-writer-command="italic"
+                    aria-label="Italic"
+                    title="Italic"
+                  >
+                    I
+                  </button>
+                  <button
+                    type="button"
+                    class="writer-tool-button text-decoration-line-through"
+                    data-writer-command="strikeThrough"
+                    aria-label="Strikethrough"
+                    title="Strikethrough"
+                  >
+                    S
+                  </button>
+                  <span class="writer-tool-divider"></span>
+                  <button
+                    type="button"
+                    class="writer-tool-button"
+                    data-writer-command="insertUnorderedList"
+                    aria-label="Bulleted list"
+                    title="Bulleted list"
+                  >
+                    <i class="ri-list-unordered"></i>
+                  </button>
+                  <button
+                    type="button"
+                    class="writer-tool-button"
+                    data-writer-command="insertOrderedList"
+                    aria-label="Numbered list"
+                    title="Numbered list"
+                  >
+                    <i class="ri-list-ordered"></i>
+                  </button>
+                  <button
+                    type="button"
+                    class="writer-tool-button"
+                    data-writer-command="formatBlock"
+                    data-writer-value="blockquote"
+                    aria-label="Quote"
+                    title="Quote"
+                  >
+                    <i class="ri-double-quotes-l"></i>
+                  </button>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-light"
+                    id="writer-copy"
+                  >
+                    <i class="ri-file-copy-line me-1"></i>Copy
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-light"
+                    id="writer-download"
+                  >
+                    <i class="ri-download-2-line me-1"></i>Export
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-secondary"
+                    id="writer-ask-selection"
+                  >
+                    <i class="ri-sparkling-2-line me-1"></i>Ask AI
+                  </button>
+                </div>
+              </div>
+
+              <div
+                class="writer-document-meta d-flex align-items-center gap-2 flex-wrap"
+              >
+                <span
+                  class="badge bg-secondary-transparent text-secondary"
+                  id="draft-type-badge"
+                  >Blog post</span
+                >
+                <span
+                  class="badge bg-light text-muted border"
+                  id="draft-tone-badge"
+                  >Professional tone</span
+                >
+                <span class="text-muted fs-12 ms-auto"
+                  ><span id="draft-word-count">0</span> words</span
+                >
+              </div>
+
+              <div class="writer-editor-scroll">
+                <div
+                  id="writer-editor"
+                  class="writer-editor"
+                  contenteditable="true"
+                  role="textbox"
+                  aria-multiline="true"
+                  aria-label="Editable document"
+                >
+                  <h1>
+                    A Better Welcome: Designing Thoughtful Customer Onboarding
+                  </h1>
+                  <p class="writer-document-deck">
+                    The first few moments after sign-up can turn a new account
+                    into a confident start. A useful onboarding experience makes
+                    the next step obvious and keeps the welcome human.
+                  </p>
+                  <h2>Start with one clear next step</h2>
+                  <p>
+                    New customers do not need to learn every feature at once.
+                    Guide them toward one meaningful action, explain why it
+                    matters, and let them explore the rest when they are ready.
+                  </p>
+                  <ul>
+                    <li>Show the shortest path to an early success.</li>
+                    <li>Use examples that feel familiar to the customer.</li>
+                    <li>Make it easy to pause and return later.</li>
+                  </ul>
+                  <h2>Offer help at the right moment</h2>
+                  <p>
+                    Helpful prompts work best when they respond to what someone
+                    is doing. A small tip beside a confusing step can be more
+                    useful than a long tour that interrupts the whole
+                    experience.
+                  </p>
+                  <p>
+                    Good onboarding is not a checklist to finish. It is a steady
+                    introduction to the value a product can provide.
+                  </p>
+                </div>
+              </div>
+
+              <div class="writer-document-footer">
+                <div class="min-w-0">
+                  <p class="text-muted fs-12 mb-0" id="draft-description">
+                    Edit the document directly or select a passage to ask the
+                    assistant.
+                  </p>
+                  <p
+                    class="writer-status text-muted fs-12 mb-0"
+                    id="writer-status"
+                    role="status"
+                    aria-live="polite"
+                  ></p>
+                </div>
+                <div class="d-flex gap-2 flex-wrap">
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-light"
+                    id="writer-clear"
+                  >
+                    <i class="ri-delete-bin-line me-1"></i>Clear draft
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-danger"
+                    id="writer-rewrite"
+                  >
+                    <i class="ri-refresh-line me-1"></i>Refresh sample
+                  </button>
+                </div>
+              </div>
+            </section>
+
+            <aside class="writer-assistant" aria-label="AI writing assistant">
+              <div class="writer-assistant-header">
+                <div>
+                  <h2 class="fs-16 fw-semibold mb-0">AI Assistant</h2>
+                  <span class="text-muted fs-11">Writing companion</span>
+                </div>
+                <button
+                  type="button"
+                  class="btn btn-sm btn-light"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#writer-brief-offcanvas"
+                  aria-controls="writer-brief-offcanvas"
+                >
+                  <i class="ri-edit-line me-1"></i>Generate New
+                </button>
+              </div>
+
+              <div class="writer-assistant-main">
+                <div class="writer-assistant-empty" id="writer-assistant-empty">
+                  <span class="writer-assistant-orb"
+                    ><i class="ri-sparkling-2-line"></i
+                  ></span>
+                  <h3 class="fs-15 fw-semibold mb-2">Ready to assist</h3>
+                  <p class="text-muted fs-12 mb-0">
+                    Select a passage in your document or ask for a writing
+                    suggestion below.
+                  </p>
+                </div>
+                <section
+                  class="writer-assistant-response d-none"
+                  id="writer-assistant-response"
+                  aria-live="polite"
+                >
+                  <span
+                    class="badge bg-secondary-transparent text-secondary mb-2"
+                    ><i class="ri-sparkling-2-line me-1"></i>Sample
+                    guidance</span
+                  >
+                  <h3
+                    class="fs-14 fw-semibold mb-2"
+                    id="writer-assistant-response-title"
+                  >
+                    Writing suggestion
+                  </h3>
+                  <p
+                    class="text-muted fs-12 mb-2"
+                    id="writer-assistant-response-text"
+                  ></p>
+                  <div
+                    class="writer-selected-passage d-none"
+                    id="writer-selected-passage"
+                  ></div>
+                  <small class="text-muted"
+                    >Local demo response; no AI service is connected.</small
+                  >
+                </section>
+              </div>
+
+              <div class="writer-assistant-compose">
+                <div
+                  class="writer-assistant-suggestions"
+                  aria-label="Quick writing requests"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-light"
+                    data-writer-prompt="Improve clarity"
+                  >
+                    Improve clarity
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-light"
+                    data-writer-prompt="Make this more concise"
+                  >
+                    Shorten
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-light"
+                    data-writer-prompt="Continue this section"
+                  >
+                    Continue
+                  </button>
+                </div>
+                <form
+                  id="writer-assistant-form"
+                  class="writer-assistant-promptbox"
+                >
+                  <textarea
+                    id="writer-assistant-prompt"
+                    class="form-control"
+                    rows="2"
+                    placeholder="Write your prompt"
+                    aria-label="Ask the writing assistant"
+                  ></textarea>
+                  <button
+                    type="submit"
+                    class="btn btn-primary text-black rounded-3 btn-icon"
+                    aria-label="Send prompt"
+                  >
+                    <i class="ri-arrow-up-line"></i>
+                  </button>
+                </form>
+              </div>
+            </aside>
+          </div>
+
+          <div
+            class="offcanvas offcanvas-end writer-brief-offcanvas"
+            tabindex="-1"
+            id="writer-brief-offcanvas"
+            aria-labelledby="writer-brief-title"
+          >
+            <div class="offcanvas-header border-bottom">
+              <div>
+                <h2
+                  class="offcanvas-title fs-16 fw-semibold"
+                  id="writer-brief-title"
+                >
+                  Create a new draft
+                </h2>
+                <p class="text-muted fs-12 mb-0">
+                  Set the format and give it a useful brief.
+                </p>
+              </div>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <form id="writer-form">
+                <div class="mb-3">
+                  <label for="writer-type" class="form-label fw-medium"
+                    >Draft format</label
+                  ><select id="writer-type" class="form-select" data-trigger>
+                    <option value="Email">Email</option>
+                    <option value="Blog post" selected>Blog post</option>
+                    <option value="Product description">
+                      Product description
+                    </option>
+                    <option value="Social post">Social post</option>
+                    <option value="Meeting summary">Meeting summary</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="writer-topic" class="form-label fw-medium"
+                    >What should it cover?</label
+                  ><textarea
+                    id="writer-topic"
+                    class="form-control writer-prompt"
+                    maxlength="500"
+                    placeholder="Share the topic, key details, and goal."
+                  >
+Explain how thoughtful customer onboarding can help new users reach an early win, find support at the right time, and build confidence using a product.</textarea
+                  >
+                  <div class="d-flex justify-content-between mt-1">
+                    <span class="text-muted fs-11"
+                      >Add the details readers need.</span
+                    ><span class="text-muted fs-11"
+                      ><span id="brief-count">0</span>/500</span
+                    >
+                  </div>
+                </div>
+                <div class="row g-3 mb-3">
+                  <div class="col-6">
+                    <label for="writer-tone" class="form-label fw-medium"
+                      >Voice</label
+                    ><select id="writer-tone" class="form-select" data-trigger>
+                      <option>Professional</option>
+                      <option>Friendly</option>
+                      <option>Confident</option>
+                      <option>Concise</option>
+                    </select>
+                  </div>
+                  <div class="col-6">
+                    <label for="writer-length" class="form-label fw-medium"
+                      >Length</label
+                    ><select
+                      id="writer-length"
+                      class="form-select"
+                      data-trigger
+                    >
+                      <option>Short</option>
+                      <option selected>Medium</option>
+                      <option>Long</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="writer-audience" class="form-label fw-medium"
+                    >Audience
+                    <span class="text-muted fw-normal">(optional)</span></label
+                  ><input
+                    id="writer-audience"
+                    class="form-control"
+                    type="text"
+                    placeholder="For example, new customers"
+                  />
+                </div>
+                <button class="btn btn-dark btn-wave w-100" type="submit">
+                  <i class="ri-sparkling-2-line me-1"></i>Create draft
+                </button>
+                <p class="text-muted fs-11 mb-0 mt-2">
+                  <i class="ri-information-line me-1"></i>Creates a local sample
+                  draft; no AI service is connected.
+                </p>
+              </form>
+              <hr class="my-4" />
+              <h3 class="fs-13 fw-semibold mb-2">Start with an example</h3>
+              <div class="d-grid gap-2">
+                <button
+                  type="button"
+                  class="template-choice quick-prompt"
+                  data-type="Email"
+                  data-prompt="Invite customers to our spring product preview. Mention early access and a limited-time 15% launch offer."
+                >
+                  <span class="d-block fs-12 fw-semibold"
+                    >Product launch email</span
+                  ><span class="text-muted fs-11"
+                    >Email &middot; customer announcement</span
+                  >
+                </button>
+                <button
+                  type="button"
+                  class="template-choice quick-prompt"
+                  data-type="Social post"
+                  data-prompt="Share three practical tips for keeping a home workspace comfortable and organized."
+                >
+                  <span class="d-block fs-12 fw-semibold">Workspace tips</span
+                  ><span class="text-muted fs-11"
+                    >Social post &middot; helpful advice</span
+                  >
+                </button>
+                <button
+                  type="button"
+                  class="template-choice quick-prompt"
+                  data-type="Meeting summary"
+                  data-prompt="Summarize the launch planning discussion, decisions, owners, and next steps."
+                >
+                  <span class="d-block fs-12 fw-semibold"
+                    >Meeting follow-up</span
+                  ><span class="text-muted fs-11"
+                    >Summary &middot; decisions and actions</span
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"-->
+    <script src="../assets/js/ai-writer.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+    <!-- include appearance-customizer-scripts.html"-->
+  </body>
+</html>

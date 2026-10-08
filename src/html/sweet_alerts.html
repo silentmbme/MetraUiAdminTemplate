@@ -1,0 +1,558 @@
+<!-- include document-head.html"-->
+    <link
+      rel="stylesheet"
+      href="../assets/libs/sweetalert2/sweetalert2.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Sweet Alerts</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">
+              <a href="index.html">Applications</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Sweet Alerts
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid sweet-alerts-page">
+          <section class="card custom-card">
+            <div class="card-header justify-content-between flex-wrap gap-3">
+              <h2 class="card-title mb-0">SweetAlert examples</h2>
+              <div class="d-flex flex-wrap gap-2">
+                <input
+                  class="form-control form-control-sm w-auto"
+                  id="alert-table-search"
+                  type="search"
+                  placeholder="Search examples"
+                  aria-label="Search alert examples"
+                />
+                <select
+                  class="form-select form-select-sm w-auto"
+                  data-trigger
+                  id="alert-table-category"
+                  aria-label="Filter example category"
+                >
+                  <option value="all">All categories</option>
+                  <option>Confirmation</option>
+                  <option>Appearance</option>
+                  <option>Feedback</option>
+                  <option>Input and data</option>
+                </select>
+                <select
+                  class="form-select form-select-sm w-auto"
+                  data-trigger
+                  id="alert-table-size"
+                  aria-label="Examples per page"
+                >
+                  <option value="5">5 per page</option>
+                  <option value="10" selected>10 per page</option>
+                </select>
+              </div>
+            </div>
+            <div class="card-body p-0">
+              <div class="table-responsive">
+                <table
+                  class="table table-hover text-nowrap mb-0 sweet-alert-demo-table"
+                >
+                  <thead class="bg-light">
+                    <tr>
+                      <th scope="col" class="ps-4">#</th>
+                      <th scope="col">
+                        <button
+                          type="button"
+                          class="btn btn-link text-muted p-0 fs-12 text-decoration-none"
+                          id="alert-table-sort"
+                        >
+                          EXAMPLE
+                          <i
+                            class="ri-arrow-up-down-line"
+                            aria-hidden="true"
+                          ></i>
+                        </button>
+                      </th>
+                      <th scope="col">CATEGORY</th>
+                      <th scope="col" class="text-end pe-4">ACTION</th>
+                    </tr>
+                  </thead>
+                  <tbody id="alert-table-body">
+                    <tr
+                      data-alert-category="Confirmation"
+                      data-alert-name="Confirm deletion"
+                    >
+                      <td class="ps-4 text-muted fs-12">01</td>
+                      <td>
+                        <div class="d-flex align-items-center gap-3">
+                          <span
+                            class="avatar avatar-sm bg-warning-transparent text-warning rounded"
+                            ><i
+                              class="ri-delete-bin-line fs-18"
+                              aria-hidden="true"
+                            ></i
+                          ></span>
+                          <div>
+                            <strong class="d-block fs-13 fw-medium"
+                              >Confirm deletion</strong
+                            ><span class="text-muted fs-12"
+                              >A warning message, with a function attached to
+                              the Confirm button.</span
+                            >
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <span class="badge bg-light text-muted"
+                          >Confirmation</span
+                        >
+                      </td>
+                      <td class="text-end pe-4">
+                        <button
+                          type="button"
+                          class="btn btn-dark btn-sm"
+                          id="alert-confirm"
+                        >
+                          Preview<span class="visually-hidden"
+                            >: A warning message, with a function attached to
+                            the Confirm button.</span
+                          >
+                        </button>
+                      </td>
+                    </tr>
+                    <tr
+                      data-alert-category="Confirmation"
+                      data-alert-name="Handle cancellation"
+                    >
+                      <td class="ps-4 text-muted fs-12">02</td>
+                      <td>
+                        <div class="d-flex align-items-center gap-3">
+                          <span
+                            class="avatar avatar-sm bg-warning-transparent text-warning rounded"
+                            ><i
+                              class="ri-arrow-go-back-line fs-18"
+                              aria-hidden="true"
+                            ></i
+                          ></span>
+                          <div>
+                            <strong class="d-block fs-13 fw-medium"
+                              >Handle cancellation</strong
+                            ><span class="text-muted fs-12"
+                              >Run a different action when the Cancel button is
+                              selected.</span
+                            >
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <span class="badge bg-light text-muted"
+                          >Confirmation</span
+                        >
+                      </td>
+                      <td class="text-end pe-4">
+                        <button
+                          type="button"
+                          class="btn btn-dark btn-sm"
+                          id="alert-cancel"
+                        >
+                          Preview<span class="visually-hidden"
+                            >: Run a different action when the Cancel button is
+                            selected.</span
+                          >
+                        </button>
+                      </td>
+                    </tr>
+                    <tr
+                      data-alert-category="Appearance"
+                      data-alert-name="Image header"
+                    >
+                      <td class="ps-4 text-muted fs-12">03</td>
+                      <td>
+                        <div class="d-flex align-items-center gap-3">
+                          <span
+                            class="avatar avatar-sm bg-info-transparent text-info rounded"
+                            ><i
+                              class="ri-image-line fs-18"
+                              aria-hidden="true"
+                            ></i
+                          ></span>
+                          <div>
+                            <strong class="d-block fs-13 fw-medium"
+                              >Image header</strong
+                            ><span class="text-muted fs-12"
+                              >A message with a custom image header</span
+                            >
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <span class="badge bg-light text-muted"
+                          >Appearance</span
+                        >
+                      </td>
+                      <td class="text-end pe-4">
+                        <button
+                          type="button"
+                          class="btn btn-dark btn-sm"
+                          id="alert-image"
+                        >
+                          Preview<span class="visually-hidden"
+                            >: A message with a custom image header</span
+                          >
+                        </button>
+                      </td>
+                    </tr>
+                    <tr
+                      data-alert-category="Feedback"
+                      data-alert-name="Auto-close timer"
+                    >
+                      <td class="ps-4 text-muted fs-12">04</td>
+                      <td>
+                        <div class="d-flex align-items-center gap-3">
+                          <span
+                            class="avatar avatar-sm bg-success-transparent text-success rounded"
+                            ><i
+                              class="ri-timer-line fs-18"
+                              aria-hidden="true"
+                            ></i
+                          ></span>
+                          <div>
+                            <strong class="d-block fs-13 fw-medium"
+                              >Auto-close timer</strong
+                            ><span class="text-muted fs-12"
+                              >A message with an auto close timer</span
+                            >
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <span class="badge bg-light text-muted">Feedback</span>
+                      </td>
+                      <td class="text-end pe-4">
+                        <button
+                          type="button"
+                          class="btn btn-dark btn-sm"
+                          id="alert-timer"
+                        >
+                          Preview<span class="visually-hidden"
+                            >: A message with an auto close timer</span
+                          >
+                        </button>
+                      </td>
+                    </tr>
+                    <tr
+                      data-alert-category="Appearance"
+                      data-alert-name="Formatted content"
+                    >
+                      <td class="ps-4 text-muted fs-12">05</td>
+                      <td>
+                        <div class="d-flex align-items-center gap-3">
+                          <span
+                            class="avatar avatar-sm bg-info-transparent text-info rounded"
+                            ><i
+                              class="ri-code-line fs-18"
+                              aria-hidden="true"
+                            ></i
+                          ></span>
+                          <div>
+                            <strong class="d-block fs-13 fw-medium"
+                              >Formatted content</strong
+                            ><span class="text-muted fs-12"
+                              >Custom HTML description and buttons</span
+                            >
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <span class="badge bg-light text-muted"
+                          >Appearance</span
+                        >
+                      </td>
+                      <td class="text-end pe-4">
+                        <button
+                          type="button"
+                          class="btn btn-dark btn-sm"
+                          id="alert-html"
+                        >
+                          Preview<span class="visually-hidden"
+                            >: Custom HTML description and buttons</span
+                          >
+                        </button>
+                      </td>
+                    </tr>
+                    <tr
+                      data-alert-category="Confirmation"
+                      data-alert-name="Save or discard changes"
+                    >
+                      <td class="ps-4 text-muted fs-12">06</td>
+                      <td>
+                        <div class="d-flex align-items-center gap-3">
+                          <span
+                            class="avatar avatar-sm bg-warning-transparent text-warning rounded"
+                            ><i
+                              class="ri-save-line fs-18"
+                              aria-hidden="true"
+                            ></i
+                          ></span>
+                          <div>
+                            <strong class="d-block fs-13 fw-medium"
+                              >Save or discard changes</strong
+                            ><span class="text-muted fs-12"
+                              >A dialog with three buttons</span
+                            >
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <span class="badge bg-light text-muted"
+                          >Confirmation</span
+                        >
+                      </td>
+                      <td class="text-end pe-4">
+                        <button
+                          type="button"
+                          class="btn btn-dark btn-sm"
+                          id="alert-changes"
+                        >
+                          Preview<span class="visually-hidden"
+                            >: A dialog with three buttons</span
+                          >
+                        </button>
+                      </td>
+                    </tr>
+                    <tr
+                      data-alert-category="Feedback"
+                      data-alert-name="Positioned notification"
+                    >
+                      <td class="ps-4 text-muted fs-12">07</td>
+                      <td>
+                        <div class="d-flex align-items-center gap-3">
+                          <span
+                            class="avatar avatar-sm bg-success-transparent text-success rounded"
+                            ><i
+                              class="ri-notification-line fs-18"
+                              aria-hidden="true"
+                            ></i
+                          ></span>
+                          <div>
+                            <strong class="d-block fs-13 fw-medium"
+                              >Positioned notification</strong
+                            ><span class="text-muted fs-12"
+                              >A custom positioned dialog</span
+                            >
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <span class="badge bg-light text-muted">Feedback</span>
+                      </td>
+                      <td class="text-end pe-4">
+                        <button
+                          type="button"
+                          class="btn btn-dark btn-sm"
+                          id="alert-position"
+                        >
+                          Preview<span class="visually-hidden"
+                            >: A custom positioned dialog</span
+                          >
+                        </button>
+                      </td>
+                    </tr>
+                    <tr
+                      data-alert-category="Appearance"
+                      data-alert-name="Custom dialog layout"
+                    >
+                      <td class="ps-4 text-muted fs-12">08</td>
+                      <td>
+                        <div class="d-flex align-items-center gap-3">
+                          <span
+                            class="avatar avatar-sm bg-info-transparent text-info rounded"
+                            ><i
+                              class="ri-layout-line fs-18"
+                              aria-hidden="true"
+                            ></i
+                          ></span>
+                          <div>
+                            <strong class="d-block fs-13 fw-medium"
+                              >Custom dialog layout</strong
+                            ><span class="text-muted fs-12"
+                              >A message with custom width, padding and
+                              background</span
+                            >
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <span class="badge bg-light text-muted"
+                          >Appearance</span
+                        >
+                      </td>
+                      <td class="text-end pe-4">
+                        <button
+                          type="button"
+                          class="btn btn-dark btn-sm"
+                          id="alert-custom"
+                        >
+                          Preview<span class="visually-hidden"
+                            >: A message with custom width, padding and
+                            background</span
+                          >
+                        </button>
+                      </td>
+                    </tr>
+                    <tr
+                      data-alert-category="Input and data"
+                      data-alert-name="Async request"
+                    >
+                      <td class="ps-4 text-muted fs-12">09</td>
+                      <td>
+                        <div class="d-flex align-items-center gap-3">
+                          <span
+                            class="avatar avatar-sm bg-primary-transparent text-primary rounded"
+                            ><i
+                              class="ri-cloud-line fs-18"
+                              aria-hidden="true"
+                            ></i
+                          ></span>
+                          <div>
+                            <strong class="d-block fs-13 fw-medium"
+                              >Async request</strong
+                            ><span class="text-muted fs-12"
+                              >Ajax request example</span
+                            >
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <span class="badge bg-light text-muted"
+                          >Input and data</span
+                        >
+                      </td>
+                      <td class="text-end pe-4">
+                        <button
+                          type="button"
+                          class="btn btn-dark btn-sm"
+                          id="alert-ajax"
+                        >
+                          Preview<span class="visually-hidden"
+                            >: Ajax request example</span
+                          >
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div
+              class="text-center text-muted py-4"
+              id="alert-table-empty"
+              hidden
+            >
+              No examples match your search.
+            </div>
+            <div
+              class="card-footer d-flex align-items-center justify-content-between flex-wrap gap-2"
+            >
+              <span
+                class="text-muted fs-12"
+                id="alert-table-count"
+                role="status"
+                aria-live="polite"
+              ></span>
+              <div class="d-flex gap-2">
+                <button
+                  class="btn btn-light btn-sm"
+                  id="alert-table-prev"
+                  type="button"
+                >
+                  Previous</button
+                ><button
+                  class="btn btn-light btn-sm"
+                  id="alert-table-next"
+                  type="button"
+                >
+                  Next
+                </button>
+              </div>
+            </div>
+          </section>
+          <h2 class="fs-16 fw-semibold mb-3">Custom SweetAlert examples</h2>
+          <div class="row g-4">
+            <div class="col-md-4">
+              <section class="card custom-card">
+                <div class="card-body text-center py-4">
+                  <h3 class="fs-16 fw-medium mb-4">Success Message</h3>
+                  <p class="text-muted fs-13 mb-3">
+                    Here is an example of a sweet alert with a success message.
+                  </p>
+                  <button
+                    type="button"
+                    class="btn btn-success"
+                    id="alert-success"
+                  >
+                    Click me<span class="visually-hidden"
+                      >: Success message</span
+                    >
+                  </button>
+                </div>
+              </section>
+            </div>
+            <div class="col-md-4">
+              <section class="card custom-card">
+                <div class="card-body text-center py-4">
+                  <h3 class="fs-16 fw-medium mb-4">Error Message</h3>
+                  <p class="text-muted fs-13 mb-3">
+                    Here is an example of a sweet alert with a error message.
+                  </p>
+                  <button type="button" class="btn btn-danger" id="alert-error">
+                    Click me<span class="visually-hidden">: Error message</span>
+                  </button>
+                </div>
+              </section>
+            </div>
+            <div class="col-md-4">
+              <section class="card custom-card">
+                <div class="card-body text-center py-4">
+                  <h3 class="fs-16 fw-medium mb-4">Warning Message</h3>
+                  <p class="text-muted fs-13 mb-3">
+                    Here is an example of a sweet alert with a warning message.
+                  </p>
+                  <button
+                    type="button"
+                    class="btn btn-warning text-fixed-white"
+                    id="alert-warning"
+                  >
+                    Click me<span class="visually-hidden"
+                      >: Warning message</span
+                    >
+                  </button>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <!-- include common-scripts.html"-->
+    <!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/libs/sweetalert2/sweetalert2.min.js"></script>
+    <script src="../assets/js/sweet-alerts.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

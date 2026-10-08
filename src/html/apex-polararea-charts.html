@@ -1,0 +1,194 @@
+<!-- include document-head.html"-->
+    <link rel="stylesheet" href="../assets/css/apex-polararea-charts.css" />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+
+      <div class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Polar Area Charts</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">Charts</li>
+            <li class="breadcrumb-item">Apex Charts</li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Polar Area Charts
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid polararea-workspace">
+          <div class="row">
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Workstream effort</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Equal-angle segments compare allocated hours by radius.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="polararea-basic"
+                    class="polararea-demo"
+                    role="group"
+                    aria-label="Workstream effort chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Channel reach</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Theme color shades compare the reach of each channel.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="polararea-monochrome"
+                    class="polararea-demo"
+                    role="group"
+                    aria-label="Channel reach chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Team capacity</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Compare available hours across the delivery teams.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="polararea-capacity"
+                    class="polararea-demo"
+                    role="group"
+                    aria-label="Team capacity chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Project readiness</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Gradient sectors highlight readiness scores for active
+                      projects.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="polararea-gradient"
+                    class="polararea-demo"
+                    role="group"
+                    aria-label="Project readiness chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Quality coverage</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      A light outline style compares coverage across quality
+                      checks.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="polararea-minimal"
+                    class="polararea-demo"
+                    role="group"
+                    aria-label="Quality coverage chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Assessment comparison</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Switch between baseline and current readiness scores.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="btn-group mb-2"
+                    role="group"
+                    aria-label="Readiness assessment"
+                  >
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-light"
+                      data-polar-period="baseline"
+                      aria-pressed="false"
+                    >
+                      Baseline</button
+                    ><button
+                      type="button"
+                      class="btn btn-sm btn-secondary"
+                      data-polar-period="current"
+                      aria-pressed="true"
+                    >
+                      Current
+                    </button>
+                  </div>
+                  <div
+                    id="polararea-interactive"
+                    class="polararea-demo"
+                    role="group"
+                    aria-label="Assessment comparison chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <!-- include common-scripts.html"-->
+
+    <!-- include appearance-customizer-scripts.html"-->
+
+    <!-- Apex Charts JS -->
+    <script src="../assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- Internal Apex Polararea Charts JS -->
+    <script src="../assets/js/apexcharts-polararea.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

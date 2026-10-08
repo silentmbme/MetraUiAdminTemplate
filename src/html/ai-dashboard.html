@@ -1,0 +1,1073 @@
+<!-- include document-head.html"-->
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Gen AI Dashboard</h1>
+          <ol class="breadcrumb mb-1">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">
+              <a href="ai-dashboard.html">Gen AI</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Dashboard
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid ai-dashboard-page">
+          <div class="row ai-overview-row">
+            <div class="col-xxl-8">
+              <section
+                class="card custom-card ai-dashboard-widget ai-control-card"
+                aria-labelledby="ai-control-title"
+              >
+                <div class="card-body">
+                  <div class="row align-items-center ai-workspace-layout h-100">
+                    <div class="col-lg-6">
+                      <div class="ai-workspace-content">
+                        <span
+                          class="badge bg-secondary-transparent text-secondary mb-3"
+                          ><i class="ri-sparkling-2-line me-1"></i>AI
+                          WORKSPACE</span
+                        >
+                        <h2
+                          class="ai-workspace-title text-black"
+                          id="ai-control-title"
+                        >
+                          One workspace for every AI workflow
+                        </h2>
+                        <p class="text-muted mb-3 text-black">
+                          Connect models, knowledge, and tools in one place.
+                          Give each team a clear path from prompt to reliable
+                          output.
+                        </p>
+                        <div class="d-flex align-items-center gap-2 flex-wrap">
+                          <span
+                            class="badge bg-success-transparent text-success"
+                            ><span class="ai-live-indicator"></span>All systems
+                            operational</span
+                          ><span class="text-muted fs-12"
+                            >18 apps <span class="mx-1">&middot;</span> 3 model
+                            routes <span class="mx-1">&middot;</span> 362
+                            sources</span
+                          >
+                        </div>
+                        <div
+                          class="d-flex align-items-center gap-2 flex-wrap mt-4"
+                        >
+                          <a class="btn btn-dark" href="ai-chat.html"
+                            ><i class="ri-chat-3-line me-1"></i>Open
+                            assistant</a
+                          >
+                          <a class="btn btn-white" href="ai-writer.html"
+                            ><i class="ri-quill-pen-line me-1"></i>Create with
+                            AI</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 d-lg-block d-none">
+                      <div class="ai-workspace-visual">
+                        <img
+                          class="ai-orchestration-robot"
+                          src="../assets/images/ai/ai-orchestration-robot.png"
+                          alt="AI assistant robot illustration"
+                          width="360"
+                          height="360"
+                        />
+                        <div class="ai-float-card ai-float-apps">
+                          <span
+                            class="avatar avatar-xs bg-secondary-transparent text-secondary rounded"
+                            ><i class="ri-apps-2-line"></i></span
+                          ><span
+                            ><strong>Applications</strong
+                            ><small>18 active</small></span
+                          >
+                        </div>
+                        <div class="ai-float-card ai-float-routing">
+                          <span
+                            class="avatar avatar-xs bg-info-transparent text-info rounded"
+                            ><i class="ri-route-line"></i></span
+                          ><span
+                            ><strong>Model routing</strong
+                            ><small>3 endpoints</small></span
+                          >
+                        </div>
+                        <div class="ai-float-card ai-float-knowledge">
+                          <span
+                            class="avatar avatar-xs bg-warning-transparent text-warning rounded"
+                            ><i class="ri-database-2-line"></i></span
+                          ><span
+                            ><strong>Knowledge</strong
+                            ><small>362 sources</small></span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-4">
+              <section
+                class="card custom-card ai-cost-card"
+                aria-labelledby="ai-cost-title"
+              >
+                <div
+                  class="card-header border-bottom-0 pb-0 justify-content-between"
+                >
+                  <h2 class="card-title mb-0" id="ai-cost-title">
+                    Cost &amp; value
+                  </h2>
+                  <div class="dropdown">
+                    <a
+                      href="javascript:void(0);"
+                      class="btn btn-light btn-sm btn-wave waves-effect waves-light"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      >This Month<i
+                        class="ri-arrow-down-s-line align-middle ms-1 d-inline-block"
+                      ></i>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                      <li>
+                        <a class="dropdown-item" href="javascript:void(0);"
+                          >This Weak</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="javascript:void(0);"
+                          >This Month</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="javascript:void(0);"
+                          >This Year</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="d-flex align-items-end justify-content-between gap-3 mb-3"
+                  >
+                    <div>
+                      <strong class="ai-cost-total">$12,37,842</strong>
+                      <span class="text-muted fs-12 d-block"
+                        >of $50,00,000 budget</span
+                      >
+                    </div>
+                    <div class="text-end">
+                      <span class="text-success fs-12 fw-semibold"
+                        ><i class="ri-arrow-down-line"></i> 3.8%</span
+                      ><span class="text-muted fs-11 d-block"
+                        >vs. last month</span
+                      >
+                    </div>
+                  </div>
+                  <div class="row g-2">
+                    <div class="col-6">
+                      <div class="ai-cost-detail">
+                        <span class="text-muted fs-11">Verified savings</span
+                        ><strong>$124</strong><small>from cached context</small>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="ai-cost-detail">
+                        <span class="text-muted fs-11">Budget remaining</span
+                        ><strong>$1,158</strong><small>23% available</small>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="ai-cost-chart-wrap">
+                    <div
+                      id="ai-cost-chart"
+                      role="img"
+                      aria-label="Monthly AI inference spend for the last twelve months"
+                    ></div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-6 col-xxl-3">
+              <section class="card custom-card">
+                <div class="card-body p-0">
+                  <div class="ai-metric-main">
+                    <div class="ai-metric-heading">
+                      <span
+                        class="avatar avatar-md bg-color-1 text-black rounded"
+                      >
+                        <i class="ri-swap-box-line fs-20"></i>
+                      </span>
+                      <div>
+                        <h2 class="ai-metric-title">AI requests</h2>
+                        <span class="text-muted fs-12"
+                          >Automated model calls</span
+                        >
+                      </div>
+                    </div>
+                    <div class="ai-metric-value-row">
+                      <strong class="ai-metric-value">248.6k</strong
+                      ><span class="badge bg-success-transparent text-success"
+                        ><i class="ri-arrow-up-line"></i>18.4%</span
+                      >
+                    </div>
+                    <span class="text-muted fs-12 d-block mt-1"
+                      >Compared with previous 30 days</span
+                    >
+                  </div>
+                  <a class="ai-metric-action" href="#ai-request-chart"
+                    ><span>View request activity</span
+                    ><i class="ri-arrow-right-line"></i
+                  ></a>
+                </div>
+              </section>
+            </div>
+            <div class="col-sm-6 col-xxl-3">
+              <section class="card custom-card">
+                <div class="card-body p-0">
+                  <div class="ai-metric-main">
+                    <div class="ai-metric-heading">
+                      <span
+                        class="avatar avatar-md bg-color-2 text-black rounded"
+                        ><i class="ri-cpu-line fs-20"></i
+                      ></span>
+                      <div>
+                        <h2 class="ai-metric-title">Tokens processed</h2>
+                        <span class="text-muted fs-12"
+                          >Input and output combined</span
+                        >
+                      </div>
+                    </div>
+                    <div class="ai-metric-value-row">
+                      <strong class="ai-metric-value">18.4M</strong
+                      ><span class="badge bg-success-transparent text-success"
+                        ><i class="ri-arrow-up-line"></i>12.1%</span
+                      >
+                    </div>
+                    <span class="text-muted fs-12 d-block mt-1"
+                      >Compared with previous 30 days</span
+                    >
+                  </div>
+                  <a class="ai-metric-action" href="#ai-model-chart"
+                    ><span>Explore model usage</span
+                    ><i class="ri-arrow-right-line"></i
+                  ></a>
+                </div>
+              </section>
+            </div>
+            <div class="col-sm-6 col-xxl-3">
+              <section class="card custom-card">
+                <div class="card-body p-0">
+                  <div class="ai-metric-main">
+                    <div class="ai-metric-heading">
+                      <span
+                        class="avatar avatar-md bg-color-3 text-black rounded"
+                        ><i class="ri-speed-line fs-20"></i
+                      ></span>
+                      <div>
+                        <h2 class="ai-metric-title">Median latency</h2>
+                        <span class="text-muted fs-12"
+                          >P50 across active models</span
+                        >
+                      </div>
+                    </div>
+                    <div class="ai-metric-value-row">
+                      <strong class="ai-metric-value">842 ms</strong
+                      ><span class="badge bg-success-transparent text-success"
+                        ><i class="ri-arrow-down-line"></i>9.6%</span
+                      >
+                    </div>
+                    <span class="text-muted fs-12 d-block mt-1"
+                      >Faster than previous 30 days</span
+                    >
+                  </div>
+                  <a class="ai-metric-action" href="#ai-latency-chart"
+                    ><span>View response times</span
+                    ><i class="ri-arrow-right-line"></i
+                  ></a>
+                </div>
+              </section>
+            </div>
+            <div class="col-sm-6 col-xxl-3">
+              <section class="card custom-card">
+                <div class="card-body p-0">
+                  <div class="ai-metric-main">
+                    <div class="ai-metric-heading">
+                      <span
+                        class="avatar avatar-md bg-color-4 text-black rounded"
+                        ><i class="ri-shield-star-line fs-20"></i
+                      ></span>
+                      <div>
+                        <h2 class="ai-metric-title">Quality score</h2>
+                        <span class="text-muted fs-12"
+                          >Evaluation pass rate</span
+                        >
+                      </div>
+                    </div>
+                    <div class="ai-metric-value-row">
+                      <strong class="ai-metric-value">94.8%</strong
+                      ><span class="badge bg-success-transparent text-success"
+                        ><i class="ri-arrow-up-line"></i>2.3 pts</span
+                      >
+                    </div>
+                    <span class="text-muted fs-12 d-block mt-1"
+                      >Above the 90% quality target</span
+                    >
+                  </div>
+                  <a class="ai-metric-action" href="#ai-evaluation-chart"
+                    ><span>Review evaluations</span
+                    ><i class="ri-arrow-right-line"></i
+                  ></a>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xxl-8">
+              <section
+                class="card custom-card ai-request-activity-card"
+                aria-labelledby="ai-request-activity-title"
+              >
+                <div
+                  class="card-header justify-content-between flex-wrap gap-3"
+                >
+                  <div>
+                    <h2 class="card-title mb-1" id="ai-request-activity-title">
+                      AI request pipeline
+                    </h2>
+                    <span class="text-muted fs-12" data-ai-period-description
+                      >Requests moving through each completion stage</span
+                    >
+                  </div>
+                  <div class="d-flex align-items-center gap-2">
+                    <span class="badge bg-success-transparent text-success"
+                      ><span class="ai-live-indicator"></span>Live</span
+                    >
+                    <select
+                      class="form-select form-select-sm w-auto"
+                      data-trigger
+                      id="ai-period"
+                      aria-label="Choose AI activity period"
+                    >
+                      <option value="7">Last 7 days</option>
+                      <option value="30" selected>Last 30 days</option>
+                      <option value="90">Last 90 days</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="ai-request-stage-grid" aria-hidden="true">
+                    <div class="ai-request-stage">
+                      <div class="ai-request-stage-top">
+                        <span>Submitted</span>
+                      </div>
+                      <strong data-ai-stage-value="0">248.6k</strong>
+                    </div>
+                    <div class="ai-request-stage">
+                      <div class="ai-request-stage-top">
+                        <span>Routed</span
+                        ><span
+                          class="badge bg-success-transparent text-success"
+                          data-ai-stage-rate="1"
+                          >75%</span
+                        >
+                      </div>
+                      <strong data-ai-stage-value="1">186.5k</strong>
+                    </div>
+                    <div class="ai-request-stage">
+                      <div class="ai-request-stage-top">
+                        <span>Completed</span
+                        ><span
+                          class="badge bg-success-transparent text-success"
+                          data-ai-stage-rate="2"
+                          >55%</span
+                        >
+                      </div>
+                      <strong data-ai-stage-value="2">136.7k</strong>
+                    </div>
+                    <div class="ai-request-stage">
+                      <div class="ai-request-stage-top">
+                        <span>Reviewed</span
+                        ><span
+                          class="badge bg-success-transparent text-success"
+                          data-ai-stage-rate="3"
+                          >30%</span
+                        >
+                      </div>
+                      <strong data-ai-stage-value="3">74.6k</strong>
+                    </div>
+                  </div>
+                  <div class="ai-request-chart-wrap">
+                    <svg
+                      id="ai-request-chart"
+                      class="ai-request-funnel"
+                      viewBox="0 0 1000 280"
+                      preserveAspectRatio="none"
+                      role="img"
+                      aria-label="AI request funnel area showing volume decreasing through submitted, routed, completed, and reviewed stages"
+                    >
+                      <polygon
+                        class="ai-request-funnel-segment ai-request-funnel-segment-1"
+                        data-funnel-segment="0"
+                        points="0,36 246,100 246,280 0,280"
+                      ></polygon>
+                      <polygon
+                        class="ai-request-funnel-segment ai-request-funnel-segment-2"
+                        data-funnel-segment="1"
+                        points="254,100 496,170 496,280 254,280"
+                      ></polygon>
+                      <polygon
+                        class="ai-request-funnel-segment ai-request-funnel-segment-3"
+                        data-funnel-segment="2"
+                        points="504,170 746,225 746,280 504,280"
+                      ></polygon>
+                      <polygon
+                        class="ai-request-funnel-segment ai-request-funnel-segment-4"
+                        data-funnel-segment="3"
+                        points="754,225 1000,258 1000,280 754,280"
+                      ></polygon>
+                      <path
+                        class="ai-request-funnel-line"
+                        data-funnel-line
+                        d="M0 36 L250 100 L500 170 L750 225 L1000 258"
+                      ></path>
+                      <path
+                        class="ai-request-funnel-separator"
+                        d="M250 0V280 M500 0V280 M750 0V280"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="card-footer ai-request-activity-footer">
+                  <div class="d-flex align-items-center flex-wrap gap-3">
+                    <span class="text-muted fs-12"
+                      ><i class="ri-flow-chart me-1 text-secondary"></i>Stage
+                      conversion</span
+                    >
+                    <span class="ms-auto text-muted fs-12"
+                      >Counts for
+                      <span data-ai-range-label>the last 30 days</span></span
+                    >
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-4">
+              <section class="card custom-card ai-model-usage-card">
+                <div class="card-header justify-content-between">
+                  <div>
+                    <h2 class="card-title">Model usage</h2>
+                  </div>
+                  <span class="badge bg-success-transparent text-success"
+                    >3 active</span
+                  >
+                </div>
+                <div class="card-body">
+                  <div class="ai-model-usage-layout">
+                    <div class="ai-model-chart-wrap">
+                      <div
+                        id="ai-model-chart"
+                        role="img"
+                        aria-label="Donut chart showing request share by AI model"
+                      ></div>
+                      <span class="text-muted fs-11">Requests</span>
+                    </div>
+                    <div class="ai-model-usage-list">
+                      <div class="ai-model-usage-item">
+                        <div
+                          class="d-flex justify-content-between align-items-center gap-2"
+                        >
+                          <span class="ai-model-name"
+                            ><i class="ai-model-dot bg-dark"></i>Claude
+                            Sonnet</span
+                          ><strong>32%</strong>
+                        </div>
+                        <div
+                          class="progress"
+                          role="progressbar"
+                          aria-label="Claude Sonnet usage share"
+                          aria-valuenow="32"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        >
+                          <div
+                            class="progress-bar bg-dark"
+                            style="width: 32%"
+                          ></div>
+                        </div>
+                        <span class="text-muted fs-11"
+                          >79.6k requests <span class="mx-1">·</span> 940
+                          ms</span
+                        >
+                      </div>
+                      <div class="ai-model-usage-item">
+                        <div
+                          class="d-flex justify-content-between align-items-center gap-2"
+                        >
+                          <span class="ai-model-name"
+                            ><i class="ai-model-dot bg-primary"></i>Nexora
+                            GPT</span
+                          ><strong>48%</strong>
+                        </div>
+                        <div
+                          class="progress"
+                          role="progressbar"
+                          aria-label="NexoraUI GPT usage share"
+                          aria-valuenow="48"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        >
+                          <div
+                            class="progress-bar bg-primary"
+                            style="width: 48%"
+                          ></div>
+                        </div>
+                        <span class="text-muted fs-11"
+                          >119.3k requests <span class="mx-1">·</span> 612
+                          ms</span
+                        >
+                      </div>
+                      <div class="ai-model-usage-item">
+                        <div
+                          class="d-flex justify-content-between align-items-center gap-2"
+                        >
+                          <span class="ai-model-name"
+                            ><i class="ai-model-dot bg-secondary"></i>Gemini
+                            Pro</span
+                          ><strong>20%</strong>
+                        </div>
+                        <div
+                          class="progress"
+                          role="progressbar"
+                          aria-label="Gemini Pro usage share"
+                          aria-valuenow="20"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        >
+                          <div
+                            class="progress-bar bg-secondary"
+                            style="width: 20%"
+                          ></div>
+                        </div>
+                        <span class="text-muted fs-11"
+                          >49.7k requests <span class="mx-1">·</span> 780
+                          ms</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xxl-8">
+              <section class="card custom-card">
+                <div
+                  class="card-header justify-content-between flex-wrap gap-2"
+                >
+                  <div>
+                    <h2 class="card-title mb-1">Recent inference runs</h2>
+                    <span class="text-muted fs-12"
+                      >Latest model executions across your AI agents</span
+                    >
+                  </div>
+                  <button
+                    class="btn btn-sm btn-light"
+                    type="button"
+                    id="ai-export"
+                  >
+                    <i class="ri-download-2-line me-1"></i>Export CSV
+                  </button>
+                </div>
+                <div class="table-responsive">
+                  <table
+                    class="table table-hover text-nowrap align-middle mb-0"
+                  >
+                    <thead>
+                      <tr>
+                        <th scope="col" class="ps-4">Run</th>
+                        <th scope="col">Agent</th>
+                        <th scope="col">Model</th>
+                        <th scope="col">Duration</th>
+                        <th scope="col">Tokens</th>
+                        <th scope="col">Status</th>
+                        <th scope="col" class="text-end pe-4">Cost</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="ps-4">
+                          <span class="fw-semibold">#RUN-84021</span
+                          ><span class="text-muted fs-12 d-block"
+                            >Customer email summary</span
+                          >
+                        </td>
+                        <td>Support copilot</td>
+                        <td>NexoraUI GPT</td>
+                        <td>724 ms</td>
+                        <td>1,284</td>
+                        <td>
+                          <span
+                            class="badge bg-success-transparent text-success"
+                            >Completed</span
+                          >
+                        </td>
+                        <td class="text-end pe-4">$0.012</td>
+                      </tr>
+                      <tr>
+                        <td class="ps-4">
+                          <span class="fw-semibold">#RUN-84020</span
+                          ><span class="text-muted fs-12 d-block"
+                            >Quarterly report draft</span
+                          >
+                        </td>
+                        <td>Report writer</td>
+                        <td>Claude Sonnet</td>
+                        <td>1.42 s</td>
+                        <td>4,820</td>
+                        <td>
+                          <span
+                            class="badge bg-success-transparent text-success"
+                            >Completed</span
+                          >
+                        </td>
+                        <td class="text-end pe-4">$0.038</td>
+                      </tr>
+                      <tr>
+                        <td class="ps-4">
+                          <span class="fw-semibold">#RUN-84019</span
+                          ><span class="text-muted fs-12 d-block"
+                            >Product description rewrite</span
+                          >
+                        </td>
+                        <td>Commerce writer</td>
+                        <td>Gemini Pro</td>
+                        <td>986 ms</td>
+                        <td>962</td>
+                        <td>
+                          <span
+                            class="badge bg-success-transparent text-success"
+                            >Completed</span
+                          >
+                        </td>
+                        <td class="text-end pe-4">$0.009</td>
+                      </tr>
+                      <tr>
+                        <td class="ps-4">
+                          <span class="fw-semibold">#RUN-84018</span
+                          ><span class="text-muted fs-12 d-block"
+                            >Policy question response</span
+                          >
+                        </td>
+                        <td>Support copilot</td>
+                        <td>NexoraUI GPT</td>
+                        <td>2.08 s</td>
+                        <td>2,106</td>
+                        <td>
+                          <span
+                            class="badge bg-warning-transparent text-warning"
+                            >Review required</span
+                          >
+                        </td>
+                        <td class="text-end pe-4">$0.021</td>
+                      </tr>
+                      <tr>
+                        <td class="ps-4">
+                          <span class="fw-semibold">#RUN-84017</span
+                          ><span class="text-muted fs-12 d-block"
+                            >Lead call notes extraction</span
+                          >
+                        </td>
+                        <td>Sales assistant</td>
+                        <td>Claude Sonnet</td>
+                        <td>1.16 s</td>
+                        <td>1,772</td>
+                        <td>
+                          <span
+                            class="badge bg-success-transparent text-success"
+                            >Completed</span
+                          >
+                        </td>
+                        <td class="text-end pe-4">$0.017</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div
+                  class="card-footer border-top-0 d-flex justify-content-between flex-wrap gap-2"
+                >
+                  <span class="text-muted fs-12"
+                    >Showing the 5 most recent runs</span
+                  ><span class="text-muted fs-12"
+                    ><i class="ri-refresh-line me-1"></i>Updated just now</span
+                  >
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-4">
+              <section class="card custom-card mb-3">
+                <div class="card-header justify-content-between">
+                  <div>
+                    <h2 class="card-title mb-1">Active model fleet</h2>
+                    <span class="text-muted fs-12"
+                      >Endpoint health and traffic share</span
+                    >
+                  </div>
+                  <span class="badge bg-success-transparent text-success"
+                    >All healthy</span
+                  >
+                </div>
+                <div class="card-body p-0">
+                  <div
+                    class="d-flex justify-content-between align-items-center p-3 border-bottom"
+                  >
+                    <div class="d-flex align-items-center gap-2">
+                      <span
+                        class="avatar avatar-sm bg-success-transparent text-success rounded"
+                        ><i class="ri-cpu-line fs-18"></i
+                      ></span>
+                      <div>
+                        <strong class="fs-13 d-block"
+                          >NexoraUI GPT
+                          <span
+                            class="badge bg-success-transparent text-success ms-1"
+                            >Primary</span
+                          ></strong
+                        ><span class="text-muted fs-12"
+                          >99.98% uptime · 48% traffic</span
+                        >
+                      </div>
+                    </div>
+                    <div class="text-end">
+                      <strong class="fs-13">612 ms</strong
+                      ><span class="text-success fs-12 d-block"
+                        >P50 latency</span
+                      >
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center p-3 border-bottom"
+                  >
+                    <div class="d-flex align-items-center gap-2">
+                      <span
+                        class="avatar avatar-sm bg-info-transparent text-info rounded"
+                        ><i class="ri-cpu-line fs-18"></i
+                      ></span>
+                      <div>
+                        <strong class="fs-13 d-block">Claude Sonnet</strong
+                        ><span class="text-muted fs-12"
+                          >99.95% uptime · 32% traffic</span
+                        >
+                      </div>
+                    </div>
+                    <div class="text-end">
+                      <strong class="fs-13">940 ms</strong
+                      ><span class="text-success fs-12 d-block"
+                        >P50 latency</span
+                      >
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center p-3"
+                  >
+                    <div class="d-flex align-items-center gap-2">
+                      <span
+                        class="avatar avatar-sm bg-warning-transparent text-warning rounded"
+                        ><i class="ri-cpu-line fs-18"></i
+                      ></span>
+                      <div>
+                        <strong class="fs-13 d-block">Gemini Pro</strong
+                        ><span class="text-muted fs-12"
+                          >99.91% uptime · 20% traffic</span
+                        >
+                      </div>
+                    </div>
+                    <div class="text-end">
+                      <strong class="fs-13">1.1 s</strong
+                      ><span class="text-success fs-12 d-block"
+                        >P50 latency</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="card custom-card">
+                <div class="card-header justify-content-between">
+                  <div>
+                    <h2 class="card-title mb-1">Human review queue</h2>
+                    <span class="text-muted fs-12"
+                      >Escalated outputs awaiting validation</span
+                    >
+                  </div>
+                  <span class="badge bg-warning-transparent text-warning"
+                    >8 pending</span
+                  >
+                </div>
+                <div class="card-body">
+                  <div
+                    class="d-flex align-items-center justify-content-between mb-2"
+                  >
+                    <span class="fs-13">Waiting for review</span
+                    ><strong class="fs-13">8</strong>
+                  </div>
+                  <div class="progress mb-1" style="height: 7px">
+                    <div
+                      class="progress-bar bg-warning"
+                      style="width: 40%"
+                    ></div>
+                  </div>
+                  <div class="d-flex justify-content-between text-muted fs-12">
+                    <span>2 urgent</span><span>Oldest: 24 min</span>
+                  </div>
+                  <hr />
+                  <div class="d-flex align-items-center gap-2">
+                    <span class="avatar avatar-xs bg-success rounded-circle"
+                      ><i class="ri-check-line text-white"></i></span
+                    ><span class="text-muted fs-12"
+                      >Safety filter blocked
+                      <strong class="text-default">14</strong> outputs this
+                      week</span
+                    >
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xxl-8 col-xl-7">
+              <section
+                class="card custom-card ai-response-time-card"
+                aria-labelledby="ai-response-time-title"
+              >
+                <div
+                  class="card-header justify-content-between flex-wrap gap-2"
+                >
+                  <div>
+                    <h2 class="card-title mb-1" id="ai-response-time-title">
+                      Model response time
+                    </h2>
+                    <span class="text-muted fs-12"
+                      >Compare median and tail latency across active
+                      models</span
+                    >
+                  </div>
+                  <div class="dropdown">
+                    <a
+                      href="javascript:void(0);"
+                      class="btn btn-light btn-sm btn-wave waves-effect waves-light"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      >This Month<i
+                        class="ri-arrow-down-s-line align-middle ms-1 d-inline-block"
+                      ></i>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                      <li>
+                        <a class="dropdown-item" href="javascript:void(0);"
+                          >This Weak</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="javascript:void(0);"
+                          >This Month</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="javascript:void(0);"
+                          >This Year</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="card-body pb-0">
+                  <div class="ai-latency-summary">
+                    <div class="ai-latency-stat">
+                      <span class="text-muted fs-12">Overall median</span
+                      ><strong>842 <small>ms</small></strong
+                      ><span class="text-success fs-11"
+                        ><i class="ri-arrow-down-line me-1"></i>9.6% this
+                        month</span
+                      >
+                    </div>
+                    <div class="ai-latency-stat">
+                      <span class="text-muted fs-12">P95 latency</span
+                      ><strong>1.86 <small>s</small></strong
+                      ><span class="text-muted fs-11">Across all models</span>
+                    </div>
+                    <div class="ai-latency-stat">
+                      <span class="text-muted fs-12">Under 2s SLA</span
+                      ><strong>96.8<small>%</small></strong
+                      ><span class="text-muted fs-11">Target performance</span>
+                    </div>
+                  </div>
+                  <div
+                    id="ai-latency-chart"
+                    role="img"
+                    aria-label="Horizontal bar chart comparing median and ninety-fifth percentile response time by model"
+                  ></div>
+                </div>
+                <div
+                  class="card-footer d-flex justify-content-between flex-wrap gap-2"
+                >
+                  <span class="text-muted fs-12"
+                    ><i class="ri-flashlight-line text-warning me-1"></i>Fastest
+                    model: NexoraUI GPT <span class="mx-1">&middot;</span> 612
+                    ms median</span
+                  ><span class="text-muted fs-12"
+                    >Latency shown in milliseconds</span
+                  >
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-4 col-xl-5">
+              <section class="card custom-card">
+                <div class="card-header justify-content-between">
+                  <div>
+                    <h2 class="card-title mb-1">Token efficiency</h2>
+                    <span class="text-muted fs-12"
+                      >Input, output, and cached context</span
+                    >
+                  </div>
+                </div>
+                <div class="card-body p-0">
+                  <div class="p-3">
+                    <div
+                      class="d-flex align-items-end justify-content-between mb-2"
+                    >
+                      <div>
+                        <span class="text-muted fs-12 d-block"
+                          >Total tokens</span
+                        ><strong class="fs-24">18.4M</strong>
+                      </div>
+                      <span class="text-success fs-12"
+                        ><i class="ri-arrow-up-line"></i> 12.1%</span
+                      >
+                    </div>
+                    <div
+                      class="progress-stacked progress-sm gap-2"
+                      role="img"
+                      aria-label="Token distribution: 39 percent input, 40 percent output, 15 percent cached context, and 6 percent reasoning"
+                    >
+                      <div
+                        class="progress-bar bg-dark"
+                        style="width: 39%"
+                      ></div>
+                      <div
+                        class="progress-bar bg-secondary"
+                        style="width: 40%"
+                      ></div>
+                      <div
+                        class="progress-bar bg-success"
+                        style="width: 15%"
+                      ></div>
+                      <div
+                        class="progress-bar bg-warning"
+                        style="width: 6%"
+                      ></div>
+                    </div>
+                  </div>
+                  <div class="table-responsive border-top">
+                    <table class="table text-nowrap align-middle mb-0">
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div class="d-flex align-items-center gap-2">
+                              <span class="text-dark align-middle"
+                                ><i class="ri-login-box-line"></i></span
+                              ><span class="fw-semibold">Input tokens</span>
+                            </div>
+                          </td>
+                          <td class="text-end">
+                            <span class="fw-medium">7.2M</span>
+                          </td>
+                          <td class="text-end text-muted">39%</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="d-flex align-items-center gap-2">
+                              <span class="text-secondary align-middle"
+                                ><i class="ri-chat-upload-line"></i></span
+                              ><span class="fw-semibold">Output tokens</span>
+                            </div>
+                          </td>
+                          <td class="text-end">
+                            <span class="fw-medium">7.3M</span>
+                          </td>
+                          <td class="text-end text-muted">40%</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="d-flex align-items-center gap-2">
+                              <span class="text-success align-middle"
+                                ><i class="ri-database-2-line"></i></span
+                              ><span class="fw-semibold">Cached context</span>
+                            </div>
+                          </td>
+                          <td class="text-end">
+                            <span class="fw-medium">2.8M</span>
+                          </td>
+                          <td class="text-end text-muted">15%</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="d-flex align-items-center gap-2">
+                              <span class="text-warning align-middle"
+                                ><i class="ri-brain-line"></i></span
+                              ><span class="fw-semibold">Reasoning tokens</span>
+                            </div>
+                          </td>
+                          <td class="text-end">
+                            <span class="fw-medium">1.1M</span>
+                          </td>
+                          <td class="text-end text-muted">6%</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="rounded bg-success-transparent p-3 m-3">
+                    <div class="d-flex align-items-center gap-2">
+                      <i class="ri-leaf-line text-success"></i
+                      ><span class="fw-medium fs-13"
+                        >$124 saved with caching</span
+                      >
+                    </div>
+                    <span class="text-muted fs-12"
+                      >Estimated savings this month</span
+                    >
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <!-- include common-scripts.html"-->
+    <script src="../assets/libs/apexcharts/apexcharts.min.js"></script>
+    <script src="../assets/js/ai-dashboard.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+    <!-- include appearance-customizer-scripts.html"-->
+  </body>
+</html>

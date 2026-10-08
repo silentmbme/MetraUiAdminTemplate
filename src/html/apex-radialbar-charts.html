@@ -1,0 +1,244 @@
+<!-- include document-head.html"-->
+    <link rel="stylesheet" href="../assets/css/apex-radialbar-charts.css" />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+
+      <div class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Radial Bar Charts</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">Charts</li>
+            <li class="breadcrumb-item">Apex Charts</li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Radial Bar Charts
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid radialbar-workspace">
+          <div class="row">
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Release readiness</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      A single ring shows overall readiness for the next
+                      release.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="radialbar-basic"
+                    class="radialbar-demo"
+                    role="group"
+                    aria-label="Release readiness chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Workstream progress</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Compare completion across design, engineering and quality.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="radialbar-multiple"
+                    class="radialbar-demo"
+                    role="group"
+                    aria-label="Workstream progress chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Sprint capacity</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      A partial arc tracks allocated hours against sprint
+                      capacity.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="circle-custom"
+                    class="radialbar-demo"
+                    role="group"
+                    aria-label="Sprint capacity chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Delivery goal</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      A gradient ring highlights progress toward the delivery
+                      target.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="gradient-circle"
+                    class="radialbar-demo"
+                    role="group"
+                    aria-label="Delivery goal chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Review coverage</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Dashed strokes present review coverage in a distinct
+                      style.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="circular-stroked"
+                    class="radialbar-demo"
+                    role="group"
+                    aria-label="Review coverage chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Workspace completion</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      An existing project image adds context inside the progress
+                      ring.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="workspace-completion-chart">
+                    <div
+                      id="circle-image"
+                      class="radialbar-demo"
+                      role="group"
+                      aria-label="Workspace completion chart"
+                    ></div>
+                    <div class="workspace-completion-center">
+                      <img
+                        src="../assets/images/cards/17.png"
+                        alt="Creative workspace"
+                        width="64"
+                        height="64"
+                      /><span>Workspace complete</span><strong>68%</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Budget utilization</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      A half-circle shows the share of the planned budget used.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="circular-semi"
+                    class="radialbar-demo"
+                    role="group"
+                    aria-label="Budget utilization chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Adjustable target</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Change the sample completion value with the slider.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="radialbar-interactive"
+                    class="radialbar-demo"
+                    role="group"
+                    aria-label="Adjustable target chart"
+                  ></div>
+                  <div class="px-3">
+                    <label
+                      for="radialbar-value"
+                      class="form-label d-flex justify-content-between"
+                      ><span>Completion</span
+                      ><output id="radialbar-value-label" for="radialbar-value"
+                        >65%</output
+                      ></label
+                    ><input
+                      id="radialbar-value"
+                      class="form-range"
+                      type="range"
+                      min="0"
+                      max="100"
+                      value="65"
+                      aria-describedby="radialbar-value-label"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <!-- include common-scripts.html"-->
+
+    <!-- include appearance-customizer-scripts.html"-->
+
+    <!-- Apex Charts JS -->
+    <script src="../assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- Internal Apex Radialbar Charts JS -->
+    <script src="../assets/js/apexcharts-radialbar.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

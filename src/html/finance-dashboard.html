@@ -1,0 +1,1009 @@
+<!-- include document-head.html"-->
+    <link rel="stylesheet" href="../assets/libs/swiper/swiper-bundle.min.css" />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content finance-dashboard-page">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Finance Dashboard</h1>
+          <ol class="breadcrumb mb-0 mt-1">
+            <li class="breadcrumb-item">
+              <a href="index.html">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="finance-dashboard.html">Finance</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Dashboard
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid commerce-dashboard">
+          <div class="row finance-dashboard-overview">
+            <div class="col-xxl-6 col-xl-6">
+              <section
+                class="card custom-card"
+                aria-labelledby="finance-balance-title"
+              >
+                <div class="card-body">
+                  <div
+                    class="d-flex align-items-start justify-content-between gap-3"
+                  >
+                    <div>
+                      <span class="text-muted mb-2" id="finance-balance-title"
+                        >Total balance</span
+                      >
+                      <h2 class="fs-24 fw-semibold my-1">$48,290.00</h2>
+                      <span class="text-success fs-13"
+                        ><i class="ri-arrow-up-line" aria-hidden="true"></i>
+                        5.2%
+                        <span class="text-muted">than last month</span></span
+                      >
+                    </div>
+                    <label class="visually-hidden" for="finance-currency"
+                      >Balance currency</label
+                    >
+                    <select
+                      class="form-select form-select-sm w-auto"
+                      id="finance-currency"
+                      aria-label="Balance currency"
+                    >
+                      <option selected>USD</option>
+                      <option>EUR</option>
+                      <option>GBP</option>
+                    </select>
+                  </div>
+                  <div class="d-flex gap-2 mt-3">
+                    <a
+                      class="btn btn-dark rounded-pill flex-fill"
+                      href="finance-transactions.html"
+                      ><i
+                        class="ri-arrow-left-right-line me-1"
+                        aria-hidden="true"
+                      ></i
+                      >Transfer</a
+                    >
+                    <a
+                      class="btn btn-light rounded-pill flex-fill"
+                      href="finance-transactions.html"
+                      ><i class="ri-download-2-line me-1" aria-hidden="true"></i
+                      >Request</a
+                    >
+                  </div>
+                  <div class="p-3 mt-3 bg-light rounded">
+                    <div
+                      class="d-flex align-items-center justify-content-between mb-2"
+                    >
+                      <strong>Wallets</strong
+                      ><span class="text-muted fs-12"
+                        >3 connected accounts</span
+                      >
+                    </div>
+                    <div class="row g-2">
+                      <div class="col-sm-4">
+                        <div class="card custom-card h-100 mb-0">
+                          <div class="card-body p-2">
+                            <span class="badge bg-light text-default mb-1"
+                              >USD</span
+                            ><strong class="d-block fs-14">$22,678.00</strong
+                            ><small class="d-block text-muted"
+                              >Business checking</small
+                            ><span class="text-success fs-12">Active</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="card custom-card h-100 mb-0">
+                          <div class="card-body p-2">
+                            <span class="badge bg-light text-default mb-1"
+                              >EUR</span
+                            ><strong class="d-block fs-14">$18,345.00</strong
+                            ><small class="d-block text-muted"
+                              >Operations wallet</small
+                            ><span class="text-success fs-12">Active</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="card custom-card h-100 mb-0">
+                          <div class="card-body p-2">
+                            <span class="badge bg-light text-default mb-1"
+                              >GBP</span
+                            ><strong class="d-block fs-14">$15,000.00</strong
+                            ><small class="d-block text-muted"
+                              >Reserve account</small
+                            ><span class="text-danger fs-12">Inactive</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-xxl-6 col-xl-6">
+              <div class="row finance-stat-grid" aria-label="Finance summary">
+                <div class="col-sm-6">
+                  <article class="card custom-card bg-black">
+                    <div class="card-body">
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <span class="text-fixed-white">Total earnings</span
+                        ><span
+                          class="avatar avatar-lg avatar-rounded bg-primary text-black"
+                          ><i class="ri-funds-line fs-20" aria-hidden="true"></i
+                        ></span>
+                      </div>
+                      <h3 class="fs-22 fw-semibold text-fixed-white mt-3 mb-2">
+                        $32,840
+                      </h3>
+                      <small class="text-fixed-white">
+                        <span class="text-success"
+                          ><i class="ri-arrow-up-line" aria-hidden="true"></i>
+                          12.4%</span
+                        >
+                        this month
+                      </small>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-sm-6">
+                  <article class="card custom-card">
+                    <div class="card-body">
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <span class="text-muted">Total spending</span
+                        ><span
+                          class="avatar avatar-lg avatar-rounded bg-color-1 text-black"
+                          ><i
+                            class="ri-wallet-3-line fs-20"
+                            aria-hidden="true"
+                          ></i
+                        ></span>
+                      </div>
+                      <h3 class="fs-22 fw-semibold mt-3 mb-2">$18,465</h3>
+                      <small class="text-muted"
+                        ><span class="text-danger"
+                          ><i class="ri-arrow-down-line" aria-hidden="true"></i>
+                          4.6%</span
+                        >
+                        this month</small
+                      >
+                    </div>
+                  </article>
+                </div>
+                <div class="col-sm-6">
+                  <article class="card custom-card">
+                    <div class="card-body">
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <span class="text-muted">Net income</span
+                        ><span
+                          class="avatar avatar-lg avatar-rounded bg-color-2 text-black"
+                          ><i
+                            class="ri-line-chart-line fs-20"
+                            aria-hidden="true"
+                          ></i
+                        ></span>
+                      </div>
+                      <h3 class="fs-22 fw-semibold mt-3 mb-2">$14,375</h3>
+                      <small class="text-muted"
+                        ><span class="text-success"
+                          ><i class="ri-arrow-up-line" aria-hidden="true"></i>
+                          8.0%</span
+                        >
+                        this month</small
+                      >
+                    </div>
+                  </article>
+                </div>
+                <div class="col-sm-6">
+                  <article class="card custom-card">
+                    <div class="card-body">
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <span class="text-muted">Outstanding</span
+                        ><span
+                          class="avatar avatar-lg avatar-rounded bg-color-3 text-black"
+                          ><i class="ri-time-line fs-20" aria-hidden="true"></i
+                        ></span>
+                      </div>
+                      <h3 class="fs-22 fw-semibold mt-3 mb-2">$24,680</h3>
+                      <small class="text-muted">Across 18 invoices</small>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xxl-3 col-xl-6 order-xxl-1 order-1">
+              <section
+                class="card custom-card finance-my-cards"
+                aria-labelledby="finance-cards-title"
+              >
+                <div
+                  class="card-header justify-content-between flex-wrap gap-2"
+                >
+                  <h2 class="card-title mb-0" id="finance-cards-title">
+                    My cards
+                  </h2>
+                  <div>
+                    <a href="banks-cards.html" class="btn btn-light btn-sm"
+                      ><i class="ri-add-line me-1" aria-hidden="true"></i>Add
+                      new</a
+                    >
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="swiper finance-cards-swiper"
+                    aria-label="Company payment cards"
+                  >
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <article class="card custom-card mb-0 overflow-hidden">
+                          <div class="card-body bg-black rounded">
+                            <div
+                              class="d-flex align-items-center justify-content-between"
+                            >
+                              <div>
+                                <span class="text-fixed-white fs-13"
+                                  >Business card</span
+                                >
+                                <h3
+                                  class="fs-16 fw-semibold mb-0 mt-1 text-fixed-white"
+                                >
+                                  NexoraUI Business
+                                </h3>
+                              </div>
+                              <i
+                                class="ri-visa-line fs-40 text-primary"
+                                aria-hidden="true"
+                              ></i>
+                            </div>
+                            <p class="fs-22 fw-medium text-fixed-white my-3">
+                              &#8226;&#8226;&#8226;&#8226;
+                              &nbsp;&#8226;&#8226;&#8226;&#8226;
+                              &nbsp;&#8226;&#8226;&#8226;&#8226; &nbsp;9031
+                            </p>
+                            <div
+                              class="d-flex align-items-end justify-content-between"
+                            >
+                              <div>
+                                <span class="text-fixed-white fs-13 d-block"
+                                  >CARDHOLDER</span
+                                >
+                                <span class="fw-medium text-fixed-white op-6"
+                                  >Amelia Hart</span
+                                >
+                              </div>
+                              <div class="text-end">
+                                <span class="text-fixed-white fs-13 d-block"
+                                  >EXPIRES</span
+                                ><span class="fw-medium text-fixed-white op-6"
+                                  >08/28</span
+                                >
+                              </div>
+                              <span
+                                class="badge bg-success-transparent text-success"
+                                >Active</span
+                              >
+                            </div>
+                          </div>
+                        </article>
+                      </div>
+                      <div class="swiper-slide">
+                        <article class="card custom-card mb-0">
+                          <div class="card-body bg-color-1 rounded">
+                            <div
+                              class="d-flex align-items-center justify-content-between"
+                            >
+                              <div>
+                                <span class="text-black op-8 fs-13"
+                                  >Travel card</span
+                                >
+                                <h3
+                                  class="fs-16 fw-semibold mb-0 mt-1 text-black"
+                                >
+                                  NexoraUI Travel
+                                </h3>
+                              </div>
+                              <i
+                                class="ri-mastercard-line text-black fs-40"
+                                aria-hidden="true"
+                              ></i>
+                            </div>
+                            <p class="fs-22 fw-medium text-black my-3">
+                              &#8226;&#8226;&#8226;&#8226;
+                              &nbsp;&#8226;&#8226;&#8226;&#8226;
+                              &nbsp;&#8226;&#8226;&#8226;&#8226; &nbsp;4829
+                            </p>
+                            <div
+                              class="d-flex align-items-end justify-content-between"
+                            >
+                              <div>
+                                <span class="text-black op-8 fs-13 d-block"
+                                  >CARDHOLDER</span
+                                ><span class="fw-medium text-black"
+                                  >David Dev</span
+                                >
+                              </div>
+                              <div class="text-end">
+                                <span class="text-black op-8 fs-12 d-block"
+                                  >EXPIRES</span
+                                ><span class="fw-medium text-black">11/27</span>
+                              </div>
+                              <span
+                                class="badge bg-success-transparent text-success"
+                                >Active</span
+                              >
+                            </div>
+                          </div>
+                        </article>
+                      </div>
+                      <div class="swiper-slide">
+                        <article class="card custom-card mb-0">
+                          <div class="card-body bg-color-2 rounded">
+                            <div
+                              class="d-flex align-items-center justify-content-between"
+                            >
+                              <div>
+                                <span class="text-black op-8 fs-13"
+                                  >Operations card</span
+                                >
+                                <h3
+                                  class="fs-16 fw-semibold mb-0 mt-1 text-black"
+                                >
+                                  NexoraUI Operations
+                                </h3>
+                              </div>
+                              <i
+                                class="ri-bank-card-line text-black fs-40"
+                                aria-hidden="true"
+                              ></i>
+                            </div>
+                            <p class="fs-22 fw-medium my-3 text-black">
+                              &#8226;&#8226;&#8226;&#8226;
+                              &nbsp;&#8226;&#8226;&#8226;&#8226;
+                              &nbsp;&#8226;&#8226;&#8226;&#8226; &nbsp;1608
+                            </p>
+                            <div
+                              class="d-flex align-items-end justify-content-between"
+                            >
+                              <div>
+                                <span
+                                  class="text-black op-8 fs-13 d-block text-black"
+                                  >CARDHOLDER</span
+                                ><span class="fw-medium text-black"
+                                  >Tom Phillip</span
+                                >
+                              </div>
+                              <div class="text-end">
+                                <span class="text-black op-8 fs-13 d-block"
+                                  >EXPIRES</span
+                                ><span class="fw-medium text-black">03/29</span>
+                              </div>
+                              <span
+                                class="badge bg-success-transparent text-success"
+                                >Active</span
+                              >
+                            </div>
+                          </div>
+                        </article>
+                      </div>
+                    </div>
+                    <div
+                      class="swiper-pagination finance-cards-pagination"
+                    ></div>
+                  </div>
+                  <div class="p-3 rounded bg-light">
+                    <p class="fw-semibold mb-0">Quick Send</p>
+                    <span class="text-muted fs-13"
+                      >View your income in a centrain period of time</span
+                    >
+                    <div
+                      class="avatar-list-stacked mt-2"
+                      aria-label="Meeting attendees"
+                    >
+                      <span class="avatar avatar-md avatar-rounded"
+                        ><img src="../assets/images/users/1.png" alt=""
+                      /></span>
+                      <span class="avatar avatar-md avatar-rounded"
+                        ><img src="../assets/images/users/4.png" alt=""
+                      /></span>
+                      <span class="avatar avatar-md avatar-rounded"
+                        ><img src="../assets/images/users/5.png" alt=""
+                      /></span>
+                      <span class="avatar avatar-md avatar-rounded"
+                        ><img src="../assets/images/users/2.png" alt=""
+                      /></span>
+                      <span
+                        class="avatar avatar-md avatar-rounded bg-primary text-black"
+                        >+7</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6 col-xl-12 order-xxl-2 order-3">
+              <section
+                class="card custom-card"
+                aria-labelledby="finance-income-title"
+              >
+                <div
+                  class="card-header justify-content-between flex-wrap gap-2"
+                >
+                  <div>
+                    <h2 class="card-title" id="finance-income-title">
+                      Total income
+                    </h2>
+                  </div>
+                  <label class="visually-hidden" for="finance-period"
+                    >Chart period</label
+                  >
+                  <select
+                    class="form-select form-select-sm w-auto"
+                    id="finance-period"
+                  >
+                    <option value="month" selected>Monthly</option>
+                    <option value="quarter">Quarterly</option>
+                  </select>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="finance-overview"
+                    class="finance-income-chart"
+                    role="img"
+                    aria-label="Monthly operating and investment income chart"
+                  ></div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-3 col-xl-6 order-xxl-3 order-2">
+              <section
+                class="card custom-card"
+                aria-labelledby="card-spending-title"
+              >
+                <div
+                  class="card-header justify-content-between flex-wrap gap-2"
+                >
+                  <div>
+                    <h2 class="card-title" id="card-spending-title">
+                      Card spending
+                    </h2>
+                  </div>
+                  <a
+                    href="finance-transactions.html"
+                    class="btn btn-light btn-sm"
+                    >View transactions</a
+                  >
+                </div>
+                <div class="card-body">
+                  <div
+                    class="d-flex align-items-end justify-content-between flex-wrap gap-2 mb-2"
+                  >
+                    <div>
+                      <span class="text-muted fs-12 d-block"
+                        >SPENT THIS MONTH</span
+                      >
+                      <h3 class="fw-semibold mb-2 mt-2">$8,420.00</h3>
+                    </div>
+                    <span class="text-muted fs-13">of $12,000.00 limit</span>
+                  </div>
+                  <div class="progress-stacked progress-sm gap-2 mb-3">
+                    <div
+                      class="progress-bar bg-dark"
+                      role="progressbar"
+                      style="width: 15%"
+                      aria-valuenow="15"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                    <div
+                      class="progress-bar bg-secondary"
+                      role="progressbar"
+                      style="width: 30%"
+                      aria-valuenow="30"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                    <div
+                      class="progress-bar bg-success"
+                      role="progressbar"
+                      style="width: 20%"
+                      aria-valuenow="20"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                    <div
+                      class="progress-bar bg-warning"
+                      role="progressbar"
+                      style="width: 12%"
+                      aria-valuenow="12"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                  <div
+                    class="d-flex align-items-center justify-content-between mb-4"
+                  >
+                    <span class="fs-12 fw-medium"
+                      >70% of monthly limit used</span
+                    >
+                    <span class="text-muted fs-12">$3,580 remaining</span>
+                  </div>
+                  <h3 class="fs-13 fw-semibold mb-2">Recent card activity</h3>
+                  <div class="border rounded">
+                    <div
+                      class="d-flex align-items-center justify-content-between py-2 px-3 border-bottom"
+                    >
+                      <div class="d-flex align-items-center gap-2">
+                        <span
+                          class="avatar avatar-sm avatar-rounded bg-secondary"
+                          ><i
+                            class="ri-flight-takeoff-line fs-14"
+                            aria-hidden="true"
+                          ></i
+                        ></span>
+                        <div>
+                          <span class="d-block fw-medium">Airline booking</span
+                          ><span class="text-muted fs-12"
+                            >Travel card &middot; Today</span
+                          >
+                        </div>
+                      </div>
+                      <span class="fw-medium">-$420.00</span>
+                    </div>
+                    <div
+                      class="d-flex align-items-center justify-content-between py-2 px-3 border-bottom"
+                    >
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="avatar avatar-sm avatar-rounded bg-warning"
+                          ><i
+                            class="ri-computer-line fs-14"
+                            aria-hidden="true"
+                          ></i
+                        ></span>
+                        <div>
+                          <span class="d-block fw-medium">Cloud services</span
+                          ><span class="text-muted fs-12"
+                            >Business card &middot; Yesterday</span
+                          >
+                        </div>
+                      </div>
+                      <span class="fw-medium">-$189.00</span>
+                    </div>
+                    <div
+                      class="d-flex align-items-center justify-content-between py-2 px-3"
+                    >
+                      <div class="d-flex align-items-center gap-2">
+                        <span
+                          class="avatar avatar-sm avatar-rounded bg-success fs-14"
+                          ><i
+                            class="ri-restaurant-line fs-14"
+                            aria-hidden="true"
+                          ></i
+                        ></span>
+                        <div>
+                          <span class="d-block fw-medium">Team lunch</span
+                          ><span class="text-muted fs-12"
+                            >Operations card &middot; Sep 28</span
+                          >
+                        </div>
+                      </div>
+                      <span class="fw-medium">-$96.50</span>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <section
+                class="card custom-card"
+                aria-labelledby="finance-goals-title"
+              >
+                <div
+                  class="card-header justify-content-between flex-wrap gap-2"
+                >
+                  <div>
+                    <h2 class="card-title mb-1" id="finance-goals-title">
+                      My Targets &amp; Goals
+                    </h2>
+                  </div>
+                  <a
+                    href="finance-transactions.html"
+                    class="btn btn-light btn-sm"
+                    >View transactions</a
+                  >
+                </div>
+                <div class="card-body">
+                  <div class="row gx-4">
+                    <div class="col-md-4">
+                      <div class="card custom-card">
+                        <div class="card-body">
+                          <div
+                            class="d-flex align-items-start justify-content-between gap-2 mb-2"
+                          >
+                            <div>
+                              <span class="text-muted fs-12">CASH RESERVE</span>
+                              <h3 class="fs-15 fw-semibold mb-0 mt-1">
+                                Build operating reserve
+                              </h3>
+                            </div>
+                            <span
+                              class="badge bg-secondary-transparent text-secondary"
+                              >78%</span
+                            >
+                          </div>
+                          <div
+                            class="progress progress-xs mb-2"
+                            role="progressbar"
+                            aria-label="Cash reserve goal progress"
+                            aria-valuenow="78"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          >
+                            <div
+                              class="progress-bar bg-secondary"
+                              style="width: 78%"
+                            ></div>
+                          </div>
+                          <div class="d-flex justify-content-between fs-12">
+                            <span class="fw-medium">$78,000 saved</span
+                            ><span class="text-muted">$100,000 goal</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card custom-card">
+                        <div class="card-body">
+                          <div
+                            class="d-flex align-items-start justify-content-between gap-2 mb-2"
+                          >
+                            <div>
+                              <span class="text-muted fs-12"
+                                >MONTHLY SAVINGS</span
+                              >
+                              <h3 class="fs-15 fw-semibold mb-0 mt-1">
+                                Increase monthly savings
+                              </h3>
+                            </div>
+                            <span
+                              class="badge bg-success-transparent text-success"
+                              >80%</span
+                            >
+                          </div>
+                          <div
+                            class="progress progress-xs mb-2"
+                            role="progressbar"
+                            aria-label="Monthly savings goal progress"
+                            aria-valuenow="80"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          >
+                            <div
+                              class="progress-bar bg-success"
+                              style="width: 80%"
+                            ></div>
+                          </div>
+                          <div class="d-flex justify-content-between fs-12">
+                            <span class="fw-medium">$9,600 saved</span
+                            ><span class="text-muted">$12,000 goal</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card custom-card">
+                        <div class="card-body">
+                          <div
+                            class="d-flex align-items-start justify-content-between gap-2 mb-2"
+                          >
+                            <div>
+                              <span class="text-muted fs-12">INVESTMENTS</span>
+                              <h3 class="fs-15 fw-semibold mb-0 mt-1">
+                                Grow investment portfolio
+                              </h3>
+                            </div>
+                            <span
+                              class="badge bg-warning-transparent text-warning"
+                              >65%</span
+                            >
+                          </div>
+                          <div
+                            class="progress progress-xs mb-2"
+                            role="progressbar"
+                            aria-label="Investment portfolio goal progress"
+                            aria-valuenow="65"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          >
+                            <div
+                              class="progress-bar bg-warning"
+                              style="width: 65%"
+                            ></div>
+                          </div>
+                          <div class="d-flex justify-content-between fs-12">
+                            <span class="fw-medium">$130,000 invested</span
+                            ><span class="text-muted">$200,000 goal</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xxl-12 col-xl-12">
+              <section
+                class="card custom-card"
+                aria-labelledby="finance-activity-title"
+              >
+                <div
+                  class="card-header justify-content-between flex-wrap gap-3"
+                >
+                  <div>
+                    <h2 class="card-title mb-1" id="finance-activity-title">
+                      Recent activities
+                    </h2>
+                  </div>
+                  <div class="finance-actions">
+                    <label class="visually-hidden" for="finance-activity-search"
+                      >Search activities</label
+                    >
+                    <div
+                      class="input-group input-group-sm finance-activity-search"
+                    >
+                      <span class="input-group-text"
+                        ><i class="ri-search-line" aria-hidden="true"></i
+                      ></span>
+                      <input
+                        class="form-control"
+                        type="search"
+                        id="finance-activity-search"
+                        placeholder="Search activity"
+                        autocomplete="off"
+                      />
+                    </div>
+                    <label class="visually-hidden" for="finance-activity-filter"
+                      >Filter activity status</label
+                    >
+                    <select
+                      class="form-select form-select-sm finance-activity-filter"
+                      data-trigger
+                      id="finance-activity-filter"
+                    >
+                      <option value="">All statuses</option>
+                      <option value="Completed">Completed</option>
+                      <option value="Pending">Pending</option>
+                      <option value="In progress">In progress</option>
+                    </select>
+                    <a href="finance-transactions.html" class="btn btn-light"
+                      >View all</a
+                    >
+                  </div>
+                </div>
+                <div class="card-body p-0">
+                  <div class="table-responsive">
+                    <table
+                      class="table table-hover align-middle text-nowrap mb-0 finance-activity-table"
+                    >
+                      <thead>
+                        <tr>
+                          <th scope="col">
+                            <span class="visually-hidden">Select</span
+                            ><input
+                              class="form-check-input"
+                              type="checkbox"
+                              aria-label="Select all activities"
+                            />
+                          </th>
+                          <th scope="col">Reference</th>
+                          <th scope="col">Activity</th>
+                          <th scope="col">Amount</th>
+                          <th scope="col">Status</th>
+                          <th scope="col">Date</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr data-status="Completed">
+                          <td>
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              aria-label="Select invoice INV-00076"
+                            />
+                          </td>
+                          <td class="text-muted">INV-00076</td>
+                          <td>
+                            <span
+                              class="avatar avatar-xs avatar-rounded bg-info-transparent text-info me-2"
+                              ><i
+                                class="ri-smartphone-line"
+                                aria-hidden="true"
+                              ></i></span
+                            >Mobile app purchase
+                          </td>
+                          <td class="fw-medium">$25,500</td>
+                          <td>
+                            <span
+                              class="badge bg-success-transparent text-success"
+                              >Completed</span
+                            >
+                          </td>
+                          <td>
+                            Sep 24, 2026
+                            <small class="text-muted">03:45 PM</small>
+                          </td>
+                        </tr>
+                        <tr data-status="Pending">
+                          <td>
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              aria-label="Select invoice INV-00075"
+                            />
+                          </td>
+                          <td class="text-muted">INV-00075</td>
+                          <td>
+                            <span
+                              class="avatar avatar-xs avatar-rounded bg-primary-transparent text-primary me-2"
+                              ><i
+                                class="ri-hotel-line"
+                                aria-hidden="true"
+                              ></i></span
+                            >Hotel booking
+                          </td>
+                          <td class="fw-medium">$3,250</td>
+                          <td>
+                            <span
+                              class="badge bg-danger-transparent text-danger"
+                              >Pending</span
+                            >
+                          </td>
+                          <td>
+                            Sep 23, 2026
+                            <small class="text-muted">11:30 AM</small>
+                          </td>
+                        </tr>
+                        <tr data-status="Completed">
+                          <td>
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              aria-label="Select invoice INV-00074"
+                            />
+                          </td>
+                          <td class="text-muted">INV-00074</td>
+                          <td>
+                            <span
+                              class="avatar avatar-xs avatar-rounded bg-warning-transparent text-warning me-2"
+                              ><i
+                                class="ri-plane-line"
+                                aria-hidden="true"
+                              ></i></span
+                            >Flight ticket booking
+                          </td>
+                          <td class="fw-medium">$4,020</td>
+                          <td>
+                            <span
+                              class="badge bg-success-transparent text-success"
+                              >Completed</span
+                            >
+                          </td>
+                          <td>
+                            Sep 22, 2026
+                            <small class="text-muted">12:00 PM</small>
+                          </td>
+                        </tr>
+                        <tr data-status="In progress">
+                          <td>
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              aria-label="Select invoice INV-00073"
+                            />
+                          </td>
+                          <td class="text-muted">INV-00073</td>
+                          <td>
+                            <span
+                              class="avatar avatar-xs avatar-rounded bg-success-transparent text-success me-2"
+                              ><i
+                                class="ri-shopping-bag-3-line"
+                                aria-hidden="true"
+                              ></i></span
+                            >Office supplies
+                          </td>
+                          <td class="fw-medium">$520</td>
+                          <td>
+                            <span
+                              class="badge bg-warning-transparent text-warning"
+                              >In progress</span
+                            >
+                          </td>
+                          <td>
+                            Sep 21, 2026
+                            <small class="text-muted">09:15 AM</small>
+                          </td>
+                        </tr>
+                        <tr data-status="Completed">
+                          <td>
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              aria-label="Select invoice INV-00072"
+                            />
+                          </td>
+                          <td class="text-muted">INV-00072</td>
+                          <td>
+                            <span
+                              class="avatar avatar-xs avatar-rounded bg-secondary-transparent text-secondary me-2"
+                              ><i
+                                class="ri-customer-service-line"
+                                aria-hidden="true"
+                              ></i></span
+                            >Support renewal
+                          </td>
+                          <td class="fw-medium">$1,850</td>
+                          <td>
+                            <span
+                              class="badge bg-success-transparent text-success"
+                              >Completed</span
+                            >
+                          </td>
+                          <td>
+                            Sep 20, 2026
+                            <small class="text-muted">04:20 PM</small>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div
+                  class="card-footer border-top-0 d-flex align-items-center justify-content-between flex-wrap gap-2"
+                >
+                  <span
+                    class="text-muted fs-12"
+                    id="finance-activity-count"
+                    role="status"
+                    >Showing 5 activities</span
+                  ><span class="text-muted fs-12">Updated just now</span>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"-->
+    <!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/libs/apexcharts/apexcharts.min.js"></script>
+    <script src="../assets/libs/swiper/swiper-bundle.min.js"></script>
+    <script src="../assets/js/finance-dashboard.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

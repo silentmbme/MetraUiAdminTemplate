@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme-color="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Unlock account | NexoraUI</title>
+    <meta name="description" content="Unlock your NexoraUI workspace." />
+    <link
+      rel="icon"
+      href="../assets/images/brand-logos/favicon.ico?v=2"
+      type="image/x-icon"
+    />
+    <link
+      href="../assets/libs/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="../assets/css/demo.css" rel="stylesheet" />
+    <link href="../assets/css/icons.css" rel="stylesheet" />
+    <script src="../assets/js/authentication.js"></script>
+  </head>
+  <body class="password-create-page password-create-cover">
+    <main class="password-cover-shell lockscreen-cover-shell">
+      <section class="password-cover-form-side lockscreen-cover-form-side">
+        <div class="card custom-card password-cover-form-inner shadow-none">
+          <div class="card-body">
+            <a
+              class="password-brand"
+              href="index.html"
+              aria-label="NexoraUI home"
+              ><picture class="auth-brand-logos"
+                ><img
+                  class="auth-logo-light"
+                  src="../assets/images/brand-logos/desktop-logo.png"
+                  alt="NexoraUI" /><img
+                  class="auth-logo-dark"
+                  src="../assets/images/brand-logos/desktop-dark.png"
+                  alt="NexoraUI" /></picture
+            ></a>
+            <span class="password-step"
+              ><i class="ri-lock-line" aria-hidden="true"></i> WORKSPACE
+              LOCKED</span
+            >
+            <div class="lockscreen-profile">
+              <span class="avatar avatar-lg avatar-rounded"
+                ><img src="../assets/images/users/12.jpg" alt=""
+              /></span>
+              <div>
+                <h1>Welcome back, Tom</h1>
+                <p>liamcarter32@gmail.com</p>
+              </div>
+            </div>
+            <p class="password-intro">
+              Enter your password to return to your workspace.
+            </p>
+
+            <form class="password-form lockscreen-form" data-lockscreen-form>
+              <label class="form-label" for="lockscreen-password"
+                >Password</label
+              >
+              <div class="password-input-wrap">
+                <input
+                  class="form-control"
+                  id="lockscreen-password"
+                  type="password"
+                  autocomplete="current-password"
+                  placeholder="Enter your password"
+                  required
+                /><button
+                  class="btn btn-link password-visibility"
+                  type="button"
+                  data-lockscreen-toggle
+                  aria-label="Show password"
+                >
+                  <i class="ri-eye-off-line" aria-hidden="true"></i>
+                </button>
+              </div>
+              <button class="btn btn-primary w-100 btn-lg" type="submit">
+                Unlock workspace
+                <i class="ri-arrow-right-line ms-1" aria-hidden="true"></i>
+              </button>
+              <p
+                class="password-form-status"
+                data-lockscreen-status
+                aria-live="polite"
+              ></p>
+            </form>
+            <div class="password-back-link">
+              <a href="sign-in-cover.html"
+                ><i class="ri-user-line me-1" aria-hidden="true"></i> Sign in as
+                another user</a
+              >
+            </div>
+          </div>
+        </div>
+        <footer class="password-page-footer">
+          &copy; <span data-current-year></span> NexoraUI <span>Â·</span> Your
+          workspace stays yours
+        </footer>
+      </section>
+
+      <aside
+        class="launch-showcase lockscreen-showcase"
+        aria-label="Workspace security"
+      >
+        <div class="launch-showcase-frame" aria-hidden="true"></div>
+        <div class="launch-showcase-inner">
+          <span class="launch-showcase-mark"
+            ><i class="ri-shield-keyhole-line" aria-hidden="true"></i
+          ></span>
+          <span class="launch-showcase-kicker"
+            >A PRIVATE SPACE FOR YOUR WORK</span
+          >
+          <h2>Your workspace is right where you left it.</h2>
+          <p>
+            Your projects, conversations, and team updates are waiting. Unlock
+            securely and pick up where you left off.
+          </p>
+          <div class="password-security-note">
+            <i class="ri-lock-2-line" aria-hidden="true"></i
+            ><span
+              ><strong>Protected session</strong
+              ><small>Your workspace is locked while you are away.</small></span
+            >
+          </div>
+        </div>
+        <span class="launch-showcase-caption"
+          ><i class="ri-shield-check-line me-1" aria-hidden="true"></i> Secure
+          access to work that matters</span
+        >
+      </aside>
+    </main>
+    <script src="../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/lockscreen.js"></script>
+  </body>
+</html>

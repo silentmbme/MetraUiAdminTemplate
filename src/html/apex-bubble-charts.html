@@ -1,0 +1,176 @@
+<!-- include document-head.html"-->
+    <link rel="stylesheet" href="../assets/css/apex-bubble-charts.css" />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+
+      <div class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Bubble Charts</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">Charts</li>
+            <li class="breadcrumb-item">Apex Charts</li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Bubble Charts
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid bubble-workspace">
+          <div class="row">
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Project impact</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Compare effort and impact; bubble size represents team
+                      capacity.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="bubble-simple"
+                    class="bubble-demo"
+                    role="group"
+                    aria-label="Project impact chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Portfolio investment</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Gradient-filled bubbles compare cost, value and project
+                      reach.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="bubble-3d"
+                    class="bubble-demo"
+                    role="group"
+                    aria-label="Portfolio investment chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Risk & opportunity</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Compare delivery risk and opportunity; size represents
+                      budget.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="bubble-risk"
+                    class="bubble-demo"
+                    role="group"
+                    aria-label="Risk & opportunity chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Team capacity</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Explore available hours, task throughput and team size.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="bubble-capacity"
+                    class="bubble-demo"
+                    role="group"
+                    aria-label="Team capacity chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Delivery over time</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Track completion rates over dates; size represents
+                      completed tasks.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="bubble-timeline"
+                    class="bubble-demo"
+                    role="group"
+                    aria-label="Delivery over time chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Priority matrix</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Reference lines divide effort and impact into planning
+                      quadrants.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="bubble-priority"
+                    class="bubble-demo"
+                    role="group"
+                    aria-label="Priority matrix chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <!-- include common-scripts.html"-->
+
+    <!-- include appearance-customizer-scripts.html"-->
+
+    <!-- Apex Charts JS -->
+    <script src="../assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- Internal Apex Bubble Charts JS -->
+    <script src="../assets/js/apexcharts-bubble.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

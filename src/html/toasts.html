@@ -1,0 +1,403 @@
+<!-- include document-head.html"-->
+    <link rel="stylesheet" href="../assets/libs/toastify-js/src/toastify.css" />
+    <link
+      rel="stylesheet"
+      href="../assets/libs/prismjs/themes/prism-coy.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"--><!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"--><!-- include side-navigation.html"-->
+      <main data-markup-examples class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Toasts</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Components</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Toasts</li>
+          </ol>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Toast playground</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Choose a notification type and screen position.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <label class="form-label" for="toast-type">Type</label>
+                      <select class="form-select" id="toast-type" data-trigger>
+                        <option value="success">Success</option>
+                        <option value="info">Information</option>
+                        <option value="warning">Warning</option>
+                        <option value="danger">Error</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-6">
+                      <label class="form-label" for="toast-position"
+                        >Position</label
+                      >
+                      <select
+                        class="form-select"
+                        id="toast-position"
+                        data-trigger
+                      >
+                        <option value="top-end">Top right</option>
+                        <option value="top-start">Top left</option>
+                        <option value="bottom-end">Bottom right</option>
+                        <option value="bottom-start">Bottom left</option>
+                      </select>
+                    </div>
+                    <div class="col-12">
+                      <label class="form-label" for="toast-message"
+                        >Message</label
+                      ><input
+                        class="form-control"
+                        id="toast-message"
+                        maxlength="180"
+                        value="Your workspace changes have been saved."
+                      />
+                    </div>
+                  </div>
+                  <button
+                    class="btn btn-dark btn-sm mt-3"
+                    type="button"
+                    id="toast-show"
+                  >
+                    Show notification
+                  </button>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Workspace update</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      A standard notification with context.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="toast show w-100 shadow-none"
+                    role="status"
+                    aria-live="polite"
+                    aria-atomic="true"
+                  >
+                    <div class="toast-header">
+                      <i
+                        class="ri-notification-line text-success me-2"
+                        aria-hidden="true"
+                      ></i
+                      ><strong class="me-auto">Workspace</strong
+                      ><small class="text-muted">Just now</small
+                      ><button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="toast"
+                        aria-label="Dismiss notification"
+                      ></button>
+                    </div>
+                    <div class="toast-body fs-13">
+                      Your latest project updates are ready to review.
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Success message</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Confirm a completed action.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="toast show w-100 shadow-none border border-success"
+                    role="status"
+                    aria-live="polite"
+                    aria-atomic="true"
+                  >
+                    <div class="toast-body d-flex gap-3 align-items-start">
+                      <i
+                        class="ri-checkbox-circle-line text-success fs-22"
+                        aria-hidden="true"
+                      ></i>
+                      <div class="flex-grow-1">
+                        <strong class="fs-14 d-block mb-1">Changes saved</strong
+                        ><span class="text-muted fs-13"
+                          >Your profile details are up to date.</span
+                        >
+                      </div>
+                      <button
+                        class="btn-close"
+                        type="button"
+                        data-bs-dismiss="toast"
+                        aria-label="Dismiss success notification"
+                      ></button>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Warning notice</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Explain an action that needs attention.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="toast show w-100 shadow-none"
+                    role="status"
+                    aria-live="polite"
+                    aria-atomic="true"
+                  >
+                    <div class="toast-header">
+                      <i
+                        class="ri-notification-line text-warning me-2"
+                        aria-hidden="true"
+                      ></i
+                      ><strong class="me-auto">Invoice review</strong
+                      ><small class="text-muted">Just now</small
+                      ><button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="toast"
+                        aria-label="Dismiss notification"
+                      ></button>
+                    </div>
+                    <div class="toast-body fs-13">
+                      Confirm the client details before preparing your invoice.
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Action notification</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Include a useful destination.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="toast show w-100 shadow-none"
+                    role="status"
+                    aria-live="polite"
+                    aria-atomic="true"
+                  >
+                    <div class="toast-body">
+                      <div class="d-flex justify-content-between gap-2">
+                        <strong class="fs-14">New project files</strong
+                        ><button
+                          class="btn-close"
+                          type="button"
+                          data-bs-dismiss="toast"
+                          aria-label="Dismiss file notification"
+                        ></button>
+                      </div>
+                      <p class="text-muted fs-13 mt-2">
+                        Research notes and release documents were added to the
+                        workspace.
+                      </p>
+                      <a href="file-manager.html" class="btn btn-success btn-sm"
+                        >Browse files</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Team notification</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Add an avatar and a clear author.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="toast show w-100 shadow-none"
+                    role="status"
+                    aria-live="polite"
+                    aria-atomic="true"
+                  >
+                    <div class="toast-header">
+                      <span class="avatar avatar-xs avatar-rounded me-2"
+                        ><img
+                          src="../assets/images/users/12.jpg"
+                          alt="" /></span
+                      ><strong class="me-auto">Liam Carter</strong
+                      ><small>5 min ago</small
+                      ><button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="toast"
+                        aria-label="Dismiss team notification"
+                      ></button>
+                    </div>
+                    <div class="toast-body fs-13">
+                      The onboarding roadmap is ready for team review.
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Dark notification</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      A contrasting surface for compact feedback.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="toast show w-100 text-bg-dark shadow-none"
+                    role="status"
+                    aria-live="polite"
+                    aria-atomic="true"
+                  >
+                    <div class="toast-body d-flex align-items-center gap-3">
+                      <span class="flex-grow-1 fs-13"
+                        ><i
+                          class="ri-shield-check-line me-2"
+                          aria-hidden="true"
+                        ></i
+                        >Your session is securely connected.</span
+                      ><button
+                        type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="toast"
+                        aria-label="Dismiss session notification"
+                      ></button>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Persistent notification</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Stay visible until dismissed.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <p class="text-muted fs-13">
+                    Use a persistent message when the user needs time to review
+                    it.
+                  </p>
+                  <button
+                    type="button"
+                    class="btn btn-outline-success btn-sm"
+                    data-toast-demo="persistent"
+                  >
+                    Show persistent toast
+                  </button>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Stacked notifications</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Show a small group of related messages.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <p class="text-muted fs-13">
+                    Preview three short workspace updates in a notification
+                    stack.
+                  </p>
+                  <button
+                    type="button"
+                    class="btn btn-light btn-sm"
+                    data-toast-demo="stack"
+                  >
+                    Preview stack
+                  </button>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Toastify notification</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Use the existing Toastify plugin for a compact notice.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <p class="text-muted fs-13">
+                    An alternative notification style using the project plugin.
+                  </p>
+                  <button
+                    type="button"
+                    class="btn btn-secondary btn-sm"
+                    id="toastify-preview"
+                  >
+                    Preview Toastify
+                  </button>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"--><!-- include responsive-search-dialog.html"-->
+    </div>
+    <div id="toast-live-region" aria-live="polite" aria-atomic="false">
+      <div
+        class="toast-container position-fixed top-0 end-0 p-3"
+        id="toast-live-container"
+        style="z-index: 1090"
+      ></div>
+    </div>
+    <!-- include common-scripts.html"--><!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/libs/toastify-js/src/toastify.js"></script>
+    <script src="../assets/js/toasts.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+    <script src="../assets/libs/prismjs/prism.js"></script>
+    <script src="../assets/js/prism-custom.js"></script>
+  </body>
+</html>

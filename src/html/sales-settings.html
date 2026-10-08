@@ -1,0 +1,242 @@
+<!-- include document-head.html"-->
+  </head>
+
+  <body class="sales-workspace" data-sales-view="settings">
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Sales settings</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Sales</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Sales settings
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid settings-page settings-workspace">
+          <section class="card custom-card settings-welcome">
+            <div class="card-body d-flex align-items-center gap-3">
+              <span
+                class="avatar avatar-xl avatar-rounded bg-secondary-transparent flex-shrink-0"
+              >
+                <i class="ri-settings-3-line fs-28" aria-hidden="true"></i>
+              </span>
+              <div>
+                <h2 class="fs-20 fw-medium mb-1">
+                  Your workspace, your preferences
+                </h2>
+                <p class="text-muted mb-0 fs-13">
+                  Manage your sales identity and choose how you review
+                  performance.
+                </p>
+              </div>
+            </div>
+          </section>
+          <form id="sales-settings-form">
+            <section class="card custom-card settings-group">
+              <div class="card-body">
+                <div class="row g-4">
+                  <div class="col-lg-4">
+                    <span class="badge bg-danger-transparent mb-3">
+                      01 / Workspace
+                    </span>
+                    <h2 class="fs-18 fw-medium">Business details</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      The name and contact information associated with your
+                      sales workspace.
+                    </p>
+                  </div>
+                  <div class="col-lg-8">
+                    <div class="row g-4">
+                      <div class="col-md-6">
+                        <label for="sales-workspace-name" class="form-label">
+                          Workspace name
+                          <span class="text-danger" aria-hidden="true">*</span>
+                        </label>
+                        <input
+                          id="sales-workspace-name"
+                          name="workspace"
+                          class="form-control"
+                          required
+                          maxlength="60"
+                          autocomplete="organization"
+                          value="NexoraUI Sales"
+                        />
+                        <div class="form-text">
+                          A familiar name for your team.
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="sales-contact-email" class="form-label">
+                          Contact email
+                          <span class="text-danger" aria-hidden="true">*</span>
+                        </label>
+                        <div class="input-group">
+                          <span class="input-group-text">
+                            <i class="ri-mail-line" aria-hidden="true"></i>
+                          </span>
+                          <input
+                            id="sales-contact-email"
+                            name="email"
+                            type="email"
+                            class="form-control"
+                            required
+                            autocomplete="email"
+                            value="sales@example.com"
+                            aria-describedby="settings-email-help"
+                          />
+                        </div>
+                        <div id="settings-email-help" class="form-text">
+                          Stored for reference. No emails are sent.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="card custom-card settings-group">
+              <div class="card-body">
+                <div class="row g-4">
+                  <div class="col-lg-4">
+                    <span class="badge bg-secondary-transparent mb-3">
+                      02 / Reporting
+                    </span>
+                    <h2 class="fs-18 fw-medium">Performance preferences</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Set your planning target and the time range used when
+                      opening sales pages.
+                    </p>
+                  </div>
+                  <div class="col-lg-8">
+                    <div class="row g-4">
+                      <div class="col-md-6">
+                        <label for="sales-revenue-target" class="form-label">
+                          Revenue target
+                        </label>
+                        <div class="input-group">
+                          <span class="input-group-text">USD</span>
+                          <input
+                            id="sales-revenue-target"
+                            name="target"
+                            type="number"
+                            class="form-control"
+                            min="1"
+                            max="100000000"
+                            step="1"
+                            required
+                            value="20000"
+                            aria-describedby="settings-target-help"
+                          />
+                        </div>
+                        <div id="settings-target-help" class="form-text">
+                          A planning preference; recorded revenue is unchanged.
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="sales-default-period" class="form-label">
+                          Default reporting period
+                        </label>
+                        <select
+                          id="sales-default-period"
+                          name="period"
+                          class="form-select"
+                        >
+                          <option value="7">Last 7 days</option>
+                          <option value="30" selected>Last 30 days</option>
+                          <option value="90">Last 90 days</option>
+                        </select>
+                        <div class="form-text">
+                          You can adjust this on individual pages.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="settings-info mt-4">
+                      <i class="ri-computer-line fs-20" aria-hidden="true"></i>
+                      <div>
+                        <span class="fw-medium fs-12 d-block">
+                          Only saved in this browser
+                        </span>
+                        <span class="text-muted fs-12">
+                          These preferences do not sync across devices or change
+                          other users' settings.
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="card custom-card settings-group">
+              <div
+                class="card-body d-flex align-items-center justify-content-between flex-wrap gap-3"
+              >
+                <div>
+                  <h2 class="fs-15 mb-1">Restore workspace defaults</h2>
+                  <p class="text-muted fs-12 mb-0">
+                    Reset these four preferences to their original values. Sales
+                    records stay unchanged.
+                  </p>
+                </div>
+                <button
+                  id="sales-settings-reset"
+                  type="button"
+                  class="btn btn-outline-danger btn-wave"
+                >
+                  Restore defaults
+                </button>
+              </div>
+            </section>
+            <div
+              class="settings-action-panel d-flex align-items-center justify-content-between flex-wrap gap-3"
+            >
+              <div>
+                <span
+                  id="settings-save-state"
+                  class="fw-medium fs-13"
+                  role="status"
+                >
+                  All changes saved
+                </span>
+                <p
+                  id="sales-feedback"
+                  class="text-muted fs-12 mb-0 mt-1"
+                  role="status"
+                  aria-live="polite"
+                ></p>
+              </div>
+              <div class="d-flex flex-wrap gap-2">
+                <button
+                  id="sales-settings-discard"
+                  type="button"
+                  class="btn btn-outline-secondary btn-wave"
+                  disabled
+                >
+                  Discard changes
+                </button>
+                <button type="submit" class="btn btn-success btn-wave">
+                  <i class="ri-check-line me-1" aria-hidden="true"></i>
+                  Save preferences
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"-->
+    <script src="../assets/js/sales-workspace.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+    <!-- include appearance-customizer-scripts.html"-->
+  </body>
+</html>

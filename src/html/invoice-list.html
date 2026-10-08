@@ -1,0 +1,545 @@
+<!-- include document-head.html"-->
+  </head>
+  <body class="invoice-list-page">
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Invoices</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Pages</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Invoices</li>
+          </ol>
+        </div>
+        <div class="container-fluid">
+          <section class="card custom-card invoice-table-card">
+            <div class="card-header justify-content-between flex-wrap gap-3">
+              <div>
+                <h2 class="card-title mb-0">All invoices</h2>
+              </div>
+              <div class="d-flex align-items-center gap-2 flex-wrap">
+                <button
+                  class="btn btn-light btn-sm"
+                  id="invoice-export"
+                  type="button"
+                >
+                  <i class="ri-download-2-line me-1" aria-hidden="true"></i
+                  >Export
+                </button>
+                <a href="invoice-create.html" class="btn btn-primary btn-sm"
+                  ><i class="ri-add-line me-1" aria-hidden="true"></i>Create
+                  invoice</a
+                >
+              </div>
+            </div>
+            <div class="card-body border-bottom">
+              <div class="row g-3 align-items-end">
+                <div class="col-md-6 col-xl-6">
+                  <label class="form-label" for="invoice-search"
+                    >Search invoices</label
+                  >
+                  <div class="input-group">
+                    <span class="input-group-text"
+                      ><i class="ri-search-line" aria-hidden="true"></i></span
+                    ><input
+                      class="form-control"
+                      id="invoice-search"
+                      type="search"
+                      placeholder="Client name, email, or invoice ID"
+                      autocomplete="off"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-4 col-xl-4">
+                  <label class="form-label" for="invoice-status-filter"
+                    >Payment status</label
+                  >
+                  <select
+                    class="form-select"
+                    data-trigger
+                    id="invoice-status-filter"
+                  >
+                    <option value="">All statuses</option>
+                    <option value="paid">Paid</option>
+                    <option value="pending">Pending</option>
+                    <option value="overdue">Overdue</option>
+                  </select>
+                </div>
+                <div class="col-md-2 col-xl-2 text-md-end">
+                  <button
+                    class="btn btn-light"
+                    id="invoice-reset-filters"
+                    type="button"
+                  >
+                    <i class="ri-refresh-line me-1" aria-hidden="true"></i>Reset
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="card-body p-0">
+              <div class="table-responsive">
+                <table
+                  class="table table-hover align-middle mb-0 invoice-list-table"
+                >
+                  <thead>
+                    <tr>
+                      <th scope="col">Client</th>
+                      <th scope="col">Invoice</th>
+                      <th scope="col">Issue date</th>
+                      <th scope="col" class="text-end">Amount</th>
+                      <th scope="col">Status</th>
+                      <th scope="col">Due date</th>
+                      <th scope="col" class="text-end">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody id="invoice-list-rows">
+                    <tr class="invoice-list-row" data-status="paid">
+                      <td>
+                        <div class="invoice-client-cell">
+                          <img src="../assets/images/users/11.jpg" alt="" />
+                          <div>
+                            <strong>John Doe</strong
+                            ><span>jhondoe32@gmail.com</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <a href="invoice-details.html" class="invoice-id-link"
+                          >INV-2026-0141</a
+                        >
+                      </td>
+                      <td>Sep 02, 2026</td>
+                      <td class="text-end fw-semibold">$1,250.00</td>
+                      <td>
+                        <span
+                          class="badge bg-success-transparent text-success rounded-pill"
+                          >Paid</span
+                        >
+                      </td>
+                      <td>Sep 12, 2026</td>
+                      <td>
+                        <div class="invoice-row-actions">
+                          <a
+                            href="invoice-details.html"
+                            class="btn btn-icon btn-sm btn-success-light"
+                            aria-label="View invoice INV-2026-0141"
+                            ><i class="ri-eye-line" aria-hidden="true"></i></a
+                          ><button
+                            class="btn btn-icon btn-sm btn-light invoice-print-row"
+                            type="button"
+                            aria-label="Print invoice INV-2026-0141"
+                          >
+                            <i class="ri-printer-line" aria-hidden="true"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="invoice-list-row" data-status="pending">
+                      <td>
+                        <div class="invoice-client-cell">
+                          <img src="../assets/images/users/12.jpg" alt="" />
+                          <div>
+                            <strong>Sarah Smith</strong
+                            ><span>sarahsmith99@gmail.com</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <a href="invoice-details.html" class="invoice-id-link"
+                          >INV-2026-0142</a
+                        >
+                      </td>
+                      <td>Sep 04, 2026</td>
+                      <td class="text-end fw-semibold">$3,499.50</td>
+                      <td>
+                        <span
+                          class="badge bg-warning-transparent text-warning rounded-pill"
+                          >Pending</span
+                        >
+                      </td>
+                      <td>Oct 04, 2026</td>
+                      <td>
+                        <div class="invoice-row-actions">
+                          <a
+                            href="invoice-details.html"
+                            class="btn btn-icon btn-sm btn-success-light"
+                            aria-label="View invoice INV-2026-0142"
+                            ><i class="ri-eye-line" aria-hidden="true"></i></a
+                          ><button
+                            class="btn btn-icon btn-sm btn-light invoice-print-row"
+                            type="button"
+                            aria-label="Print invoice INV-2026-0142"
+                          >
+                            <i class="ri-printer-line" aria-hidden="true"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="invoice-list-row" data-status="overdue">
+                      <td>
+                        <div class="invoice-client-cell">
+                          <img src="../assets/images/users/13.jpg" alt="" />
+                          <div>
+                            <strong>Robert Brown</strong
+                            ><span>robertbrown865@gmail.com</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <a href="invoice-details.html" class="invoice-id-link"
+                          >INV-2026-0143</a
+                        >
+                      </td>
+                      <td>Aug 05, 2026</td>
+                      <td class="text-end fw-semibold">$2,875.00</td>
+                      <td>
+                        <span
+                          class="badge bg-danger-transparent text-danger rounded-pill"
+                          >Overdue</span
+                        >
+                      </td>
+                      <td>Sep 04, 2026</td>
+                      <td>
+                        <div class="invoice-row-actions">
+                          <a
+                            href="invoice-details.html"
+                            class="btn btn-icon btn-sm btn-success-light"
+                            aria-label="View invoice INV-2026-0143"
+                            ><i class="ri-eye-line" aria-hidden="true"></i></a
+                          ><button
+                            class="btn btn-icon btn-sm btn-light invoice-print-row"
+                            type="button"
+                            aria-label="Print invoice INV-2026-0143"
+                          >
+                            <i class="ri-printer-line" aria-hidden="true"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="invoice-list-row" data-status="paid">
+                      <td>
+                        <div class="invoice-client-cell">
+                          <img src="../assets/images/users/4.jpg" alt="" />
+                          <div>
+                            <strong>Emma Wilson</strong
+                            ><span>emmawilson04@gmail.com</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <a href="invoice-details.html" class="invoice-id-link"
+                          >INV-2026-0144</a
+                        >
+                      </td>
+                      <td>Aug 28, 2026</td>
+                      <td class="text-end fw-semibold">$4,150.75</td>
+                      <td>
+                        <span
+                          class="badge bg-success-transparent text-success rounded-pill"
+                          >Paid</span
+                        >
+                      </td>
+                      <td>Sep 27, 2026</td>
+                      <td>
+                        <div class="invoice-row-actions">
+                          <a
+                            href="invoice-details.html"
+                            class="btn btn-icon btn-sm btn-success-light"
+                            aria-label="View invoice INV-2026-0144"
+                            ><i class="ri-eye-line" aria-hidden="true"></i></a
+                          ><button
+                            class="btn btn-icon btn-sm btn-light invoice-print-row"
+                            type="button"
+                            aria-label="Print invoice INV-2026-0144"
+                          >
+                            <i class="ri-printer-line" aria-hidden="true"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="invoice-list-row" data-status="pending">
+                      <td>
+                        <div class="invoice-client-cell">
+                          <img src="../assets/images/users/5.jpg" alt="" />
+                          <div>
+                            <strong>David Johnson</strong
+                            ><span>davidjohnson444@gmail.com</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <a href="invoice-details.html" class="invoice-id-link"
+                          >INV-2026-0145</a
+                        >
+                      </td>
+                      <td>Sep 08, 2026</td>
+                      <td class="text-end fw-semibold">$1,999.99</td>
+                      <td>
+                        <span
+                          class="badge bg-warning-transparent text-warning rounded-pill"
+                          >Pending</span
+                        >
+                      </td>
+                      <td>Oct 08, 2026</td>
+                      <td>
+                        <div class="invoice-row-actions">
+                          <a
+                            href="invoice-details.html"
+                            class="btn btn-icon btn-sm btn-success-light"
+                            aria-label="View invoice INV-2026-0145"
+                            ><i class="ri-eye-line" aria-hidden="true"></i></a
+                          ><button
+                            class="btn btn-icon btn-sm btn-light invoice-print-row"
+                            type="button"
+                            aria-label="Print invoice INV-2026-0145"
+                          >
+                            <i class="ri-printer-line" aria-hidden="true"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="invoice-list-row" data-status="paid">
+                      <td>
+                        <div class="invoice-client-cell">
+                          <img src="../assets/images/users/6.jpg" alt="" />
+                          <div>
+                            <strong>Olivia Martin</strong
+                            ><span>oliviamartin97@gmail.com</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <a href="invoice-details.html" class="invoice-id-link"
+                          >INV-2026-0146</a
+                        >
+                      </td>
+                      <td>Aug 25, 2026</td>
+                      <td class="text-end fw-semibold">$3,750.00</td>
+                      <td>
+                        <span
+                          class="badge bg-success-transparent text-success rounded-pill"
+                          >Paid</span
+                        >
+                      </td>
+                      <td>Sep 24, 2026</td>
+                      <td>
+                        <div class="invoice-row-actions">
+                          <a
+                            href="invoice-details.html"
+                            class="btn btn-icon btn-sm btn-success-light"
+                            aria-label="View invoice INV-2026-0146"
+                            ><i class="ri-eye-line" aria-hidden="true"></i></a
+                          ><button
+                            class="btn btn-icon btn-sm btn-light invoice-print-row"
+                            type="button"
+                            aria-label="Print invoice INV-2026-0146"
+                          >
+                            <i class="ri-printer-line" aria-hidden="true"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="invoice-list-row" data-status="overdue">
+                      <td>
+                        <div class="invoice-client-cell">
+                          <img src="../assets/images/users/7.jpg" alt="" />
+                          <div>
+                            <strong>James White</strong
+                            ><span>jameswhite123@gmail.com</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <a href="invoice-details.html" class="invoice-id-link"
+                          >INV-2026-0147</a
+                        >
+                      </td>
+                      <td>Aug 18, 2026</td>
+                      <td class="text-end fw-semibold">$2,250.00</td>
+                      <td>
+                        <span
+                          class="badge bg-danger-transparent text-danger rounded-pill"
+                          >Overdue</span
+                        >
+                      </td>
+                      <td>Sep 17, 2026</td>
+                      <td>
+                        <div class="invoice-row-actions">
+                          <a
+                            href="invoice-details.html"
+                            class="btn btn-icon btn-sm btn-success-light"
+                            aria-label="View invoice INV-2026-0147"
+                            ><i class="ri-eye-line" aria-hidden="true"></i></a
+                          ><button
+                            class="btn btn-icon btn-sm btn-light invoice-print-row"
+                            type="button"
+                            aria-label="Print invoice INV-2026-0147"
+                          >
+                            <i class="ri-printer-line" aria-hidden="true"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="invoice-list-row" data-status="pending">
+                      <td>
+                        <div class="invoice-client-cell">
+                          <img src="../assets/images/users/4.jpg" alt="" />
+                          <div>
+                            <strong>Sophia Lewis</strong
+                            ><span>sophialewis97@gmail.com</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <a href="invoice-details.html" class="invoice-id-link"
+                          >INV-2026-0148</a
+                        >
+                      </td>
+                      <td>Sep 28, 2026</td>
+                      <td class="text-end fw-semibold">$5,100.25</td>
+                      <td>
+                        <span
+                          class="badge bg-warning-transparent text-warning rounded-pill"
+                          >Pending</span
+                        >
+                      </td>
+                      <td>Oct 28, 2026</td>
+                      <td>
+                        <div class="invoice-row-actions">
+                          <a
+                            href="invoice-details.html"
+                            class="btn btn-icon btn-sm btn-success-light"
+                            aria-label="View invoice INV-2026-0148"
+                            ><i class="ri-eye-line" aria-hidden="true"></i></a
+                          ><button
+                            class="btn btn-icon btn-sm btn-light invoice-print-row"
+                            type="button"
+                            aria-label="Print invoice INV-2026-0148"
+                          >
+                            <i class="ri-printer-line" aria-hidden="true"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="invoice-list-row" data-status="paid">
+                      <td>
+                        <div class="invoice-client-cell">
+                          <img src="../assets/images/users/15.jpg" alt="" />
+                          <div>
+                            <strong>Michael Green</strong
+                            ><span>michaelgreen15@gmail.com</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <a href="invoice-details.html" class="invoice-id-link"
+                          >INV-2026-0149</a
+                        >
+                      </td>
+                      <td>Aug 20, 2026</td>
+                      <td class="text-end fw-semibold">$3,600.00</td>
+                      <td>
+                        <span
+                          class="badge bg-success-transparent text-success rounded-pill"
+                          >Paid</span
+                        >
+                      </td>
+                      <td>Sep 19, 2026</td>
+                      <td>
+                        <div class="invoice-row-actions">
+                          <a
+                            href="invoice-details.html"
+                            class="btn btn-icon btn-sm btn-success-light"
+                            aria-label="View invoice INV-2026-0149"
+                            ><i class="ri-eye-line" aria-hidden="true"></i></a
+                          ><button
+                            class="btn btn-icon btn-sm btn-light invoice-print-row"
+                            type="button"
+                            aria-label="Print invoice INV-2026-0149"
+                          >
+                            <i class="ri-printer-line" aria-hidden="true"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="invoice-list-row" data-status="pending">
+                      <td>
+                        <div class="invoice-client-cell">
+                          <img src="../assets/images/users/5.jpg" alt="" />
+                          <div>
+                            <strong>Emily Harris</strong
+                            ><span>emilyharris@gmail.com</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <a href="invoice-details.html" class="invoice-id-link"
+                          >INV-2026-0150</a
+                        >
+                      </td>
+                      <td>Sep 25, 2026</td>
+                      <td class="text-end fw-semibold">$2,980.40</td>
+                      <td>
+                        <span
+                          class="badge bg-warning-transparent text-warning rounded-pill"
+                          >Pending</span
+                        >
+                      </td>
+                      <td>Oct 25, 2026</td>
+                      <td>
+                        <div class="invoice-row-actions">
+                          <a
+                            href="invoice-details.html"
+                            class="btn btn-icon btn-sm btn-success-light"
+                            aria-label="View invoice INV-2026-0150"
+                            ><i class="ri-eye-line" aria-hidden="true"></i></a
+                          ><button
+                            class="btn btn-icon btn-sm btn-light invoice-print-row"
+                            type="button"
+                            aria-label="Print invoice INV-2026-0150"
+                          >
+                            <i class="ri-printer-line" aria-hidden="true"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div
+                  class="invoice-empty-state d-none"
+                  id="invoice-empty-state"
+                >
+                  <i class="ri-file-search-line" aria-hidden="true"></i
+                  ><strong>No invoices match</strong
+                  ><span>Try another name, email, or payment status.</span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="card-footer border-top-0 d-flex align-items-center justify-content-between flex-wrap gap-2"
+            >
+              <span
+                class="text-muted fs-12"
+                id="invoice-list-count"
+                role="status"
+                aria-live="polite"
+              ></span>
+            </div>
+          </section>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"-->
+    <!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/js/invoice-list.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

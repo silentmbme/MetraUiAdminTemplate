@@ -1,0 +1,426 @@
+<!-- include document-head.html"-->
+
+    <!-- Prism CSS -->
+    <link
+      rel="stylesheet"
+      href="../assets/libs/prismjs/themes/prism-coy.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+
+      <!--APP-CONTENT START-->
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Validation patterns</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">
+              <a href="javascript:void(0);">Pages</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="javascript:void(0);">Forms</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Validation
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid validation-workspace">
+          <div class="row align-items-stretch">
+            <div class="col-xxl-8">
+              <section class="card custom-card">
+                <div
+                  class="card-header justify-content-between flex-wrap gap-2"
+                >
+                  <div>
+                    <h2 class="card-title mb-1">Request workspace access</h2>
+                    <p class="text-muted fs-13 mb-0">
+                      Required fields are checked when the form is submitted.
+                    </p>
+                  </div>
+                  <div class="prism-toggle">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-light rounded-pill"
+                    >
+                      View code<i
+                        class="ri-code-line ms-2 d-inline-block align-middle"
+                      ></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <form class="row g-3 needs-validation" novalidate>
+                    <div class="col-md-6">
+                      <label for="access-name" class="form-label"
+                        >Full name</label
+                      >
+                      <input
+                        id="access-name"
+                        name="name"
+                        type="text"
+                        class="form-control"
+                        placeholder="e.g. Jordan Lee"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Enter your full name to continue.
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="access-email" class="form-label"
+                        >Work email</label
+                      >
+                      <input
+                        id="access-email"
+                        name="email"
+                        type="email"
+                        class="form-control"
+                        placeholder="jordan@company.com"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Enter a valid work email address.
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="access-department" class="form-label"
+                        >Department</label
+                      >
+                      <select
+                        id="access-department"
+                        data-trigger
+                        name="department"
+                        class="form-select"
+                        required
+                      >
+                        <option value="" selected disabled>
+                          Select a department
+                        </option>
+                        <option>Product</option>
+                        <option>Engineering</option>
+                        <option>Design</option>
+                        <option>Operations</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Choose the department you work with.
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="access-role" class="form-label"
+                        >Requested role</label
+                      >
+                      <select
+                        id="access-role"
+                        data-trigger
+                        name="role"
+                        class="form-select"
+                        required
+                      >
+                        <option value="" selected disabled>
+                          Select an access level
+                        </option>
+                        <option>Contributor</option>
+                        <option>Project lead</option>
+                        <option>Workspace admin</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Choose the access level you need.
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <label for="access-reason" class="form-label"
+                        >Why do you need access?</label
+                      >
+                      <textarea
+                        id="access-reason"
+                        name="reason"
+                        class="form-control"
+                        rows="3"
+                        minlength="12"
+                        placeholder="Tell the workspace owner what you will be working on."
+                        required
+                      ></textarea>
+                      <div class="form-text">
+                        Add at least 12 characters so the owner has enough
+                        context.
+                      </div>
+                      <div class="invalid-feedback">
+                        Please add a short reason for your request.
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-check">
+                        <input
+                          id="access-policy"
+                          class="form-check-input"
+                          type="checkbox"
+                          required
+                        /><label class="form-check-label" for="access-policy"
+                          >I understand access is reviewed by a workspace
+                          administrator.</label
+                        >
+                        <div class="invalid-feedback">
+                          Confirm the access review policy before submitting.
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="col-12 d-flex align-items-center justify-content-between flex-wrap gap-2 pt-2"
+                    >
+                      <span class="text-muted fs-12"
+                        ><i class="ri-lock-line me-1"></i>Your request is shared
+                        with workspace admins.</span
+                      >
+                      <button class="btn btn-dark" type="submit">
+                        Submit access request<i
+                          class="ri-arrow-right-line ms-2"
+                        ></i>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+                <div class="card-footer d-none border-top-0">
+                  <pre
+                    class="language-html"
+                  ><code class="language-html">&lt;form class="needs-validation" novalidate&gt;
+  &lt;input class="form-control" type="email" required&gt;
+  &lt;div class="invalid-feedback"&gt;Enter a valid email.&lt;/div&gt;
+  &lt;button type="submit"&gt;Submit request&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-xxl-4">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Field states</h2>
+                    <p class="text-muted fs-13 mb-0">
+                      Show users what needs attention.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="validation-state-item mb-4">
+                    <div
+                      class="d-flex align-items-center justify-content-between mb-2"
+                    >
+                      <label for="state-valid-email" class="form-label mb-0"
+                        >Work email</label
+                      ><span class="text-success fs-12"
+                        ><i class="ri-checkbox-circle-fill me-1"></i
+                        >Verified</span
+                      >
+                    </div>
+                    <input
+                      id="state-valid-email"
+                      type="email"
+                      class="form-control is-valid"
+                      value="jordan@northstar.io"
+                      readonly
+                    />
+                    <div class="valid-feedback">
+                      Email address is ready to use.
+                    </div>
+                  </div>
+                  <div class="validation-state-item">
+                    <div
+                      class="d-flex align-items-center justify-content-between mb-2"
+                    >
+                      <label for="state-invalid-email" class="form-label mb-0"
+                        >Invite email</label
+                      ><span class="text-danger fs-12"
+                        ><i class="ri-error-warning-fill me-1"></i>Needs
+                        attention</span
+                      >
+                    </div>
+                    <input
+                      id="state-invalid-email"
+                      type="email"
+                      class="form-control is-invalid"
+                      value="jordan@"
+                      readonly
+                    />
+                    <div class="invalid-feedback">
+                      Enter a complete email address.
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-xl-6">
+              <section class="card custom-card">
+                <div
+                  class="card-header justify-content-between flex-wrap gap-2"
+                >
+                  <div>
+                    <h2 class="card-title mb-1">Browser validation</h2>
+                    <p class="text-muted fs-13 mb-0">
+                      Let the browser check required fields and formats.
+                    </p>
+                  </div>
+                  <div class="prism-toggle">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-light rounded-pill"
+                    >
+                      View code<i
+                        class="ri-code-line ms-2 d-inline-block align-middle"
+                      ></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <form class="row g-3" onsubmit="event.preventDefault()">
+                    <div class="col-md-6">
+                      <label for="native-email" class="form-label"
+                        >Email address</label
+                      ><input
+                        id="native-email"
+                        class="form-control"
+                        type="email"
+                        placeholder="name@example.com"
+                        required
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="native-url" class="form-label"
+                        >Portfolio URL</label
+                      ><input
+                        id="native-url"
+                        class="form-control"
+                        type="url"
+                        placeholder="https://example.com"
+                        required
+                      />
+                    </div>
+                    <div
+                      class="col-12 d-flex align-items-center justify-content-between flex-wrap gap-2"
+                    >
+                      <span class="text-muted fs-12"
+                        >Try submitting with an empty or invalid field.</span
+                      ><button type="submit" class="btn btn-light">
+                        Check fields<i class="ri-arrow-right-line ms-1"></i>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+                <div class="card-footer d-none border-top-0">
+                  <pre
+                    class="language-html"
+                  ><code class="language-html">&lt;input type="email" class="form-control" required&gt;
+&lt;input type="url" class="form-control" required&gt;</code></pre>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-xl-6">
+              <section class="card custom-card">
+                <div
+                  class="card-header justify-content-between flex-wrap gap-2"
+                >
+                  <div>
+                    <h2 class="card-title mb-1">Contextual feedback</h2>
+                    <p class="text-muted fs-13 mb-0">
+                      Place validation messages beside the relevant controls.
+                    </p>
+                  </div>
+                  <div class="prism-toggle">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-light rounded-pill"
+                    >
+                      View code<i
+                        class="ri-code-line ms-2 d-inline-block align-middle"
+                      ></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <form class="row g-3 needs-validation" novalidate>
+                    <div class="col-md-6 position-relative">
+                      <label for="tooltip-project" class="form-label"
+                        >Project name</label
+                      ><input
+                        id="tooltip-project"
+                        class="form-control"
+                        type="text"
+                        placeholder="Project name"
+                        required
+                      />
+                      <div class="invalid-tooltip">
+                        Add a name for this project.
+                      </div>
+                    </div>
+                    <div class="col-md-6 position-relative">
+                      <label for="tooltip-owner" class="form-label"
+                        >Owner email</label
+                      ><input
+                        id="tooltip-owner"
+                        class="form-control"
+                        type="email"
+                        placeholder="owner@example.com"
+                        required
+                      />
+                      <div class="invalid-tooltip">
+                        Enter a valid owner email.
+                      </div>
+                    </div>
+                    <div
+                      class="col-12 d-flex align-items-center justify-content-between flex-wrap gap-2"
+                    >
+                      <span class="text-muted fs-12"
+                        >Submit to preview the tooltip states.</span
+                      ><button type="submit" class="btn btn-light">
+                        Validate project<i class="ri-check-line ms-1"></i>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+                <div class="card-footer d-none border-top-0">
+                  <pre
+                    class="language-html"
+                  ><code class="language-html">&lt;div class="position-relative"&gt;
+  &lt;input class="form-control" required&gt;
+  &lt;div class="invalid-tooltip"&gt;Add a project name.&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!--APP-CONTENT CLOSE-->
+
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <!-- include common-scripts.html"-->
+
+    <!-- include appearance-customizer-scripts.html"-->
+
+    <!-- Prism JS -->
+    <script src="../assets/libs/prismjs/prism.js"></script>
+    <script src="../assets/js/prism-custom.js"></script>
+
+    <!-- Form Validation JS -->
+    <script src="../assets/js/validation.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

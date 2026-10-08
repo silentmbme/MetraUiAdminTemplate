@@ -1,0 +1,235 @@
+<!-- include document-head.html"-->
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main
+        class="main-content app-content crm-workspace-page crm-pipeline-page"
+      >
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Sales pipeline</h1>
+          <div class="d-flex align-items-center gap-2 flex-wrap">
+            <ol class="breadcrumb mb-0">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item">
+                <a href="crm-dashboard.html">CRM</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Pipeline
+              </li>
+            </ol>
+          </div>
+        </div>
+        <div class="container-fluid commerce-dashboard">
+          <div class="row">
+            <div class="col-sm-6 col-xl-3">
+              <section class="card custom-card crm-pipeline-metric">
+                <div class="card-body">
+                  <span
+                    class="avatar avatar-md bg-secondary-transparent text-secondary"
+                    ><i class="ri-stack-line fs-20"></i
+                  ></span>
+                  <div>
+                    <small>Open opportunities</small
+                    ><strong id="pipeline-total-count">&mdash;</strong>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+              <section class="card custom-card crm-pipeline-metric">
+                <div class="card-body">
+                  <span
+                    class="avatar avatar-md bg-success-transparent text-success"
+                    ><i class="ri-money-dollar-circle-line fs-20"></i
+                  ></span>
+                  <div>
+                    <small>Open value</small
+                    ><strong id="pipeline-total-value">&mdash;</strong>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+              <section class="card custom-card crm-pipeline-metric">
+                <div class="card-body">
+                  <span
+                    class="avatar avatar-md bg-warning-transparent text-warning"
+                    ><i class="ri-alarm-warning-line fs-20"></i
+                  ></span>
+                  <div>
+                    <small>Weighted forecast</small
+                    ><strong id="pipeline-weighted-value">&mdash;</strong>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+              <section class="card custom-card crm-pipeline-metric">
+                <div class="card-body">
+                  <span class="avatar avatar-md bg-info-transparent text-info"
+                    ><i
+                      class="ri-calendar-check-line fs-20"
+                      aria-hidden="true"
+                    ></i
+                  ></span>
+                  <div>
+                    <small>Closing in 14 days</small
+                    ><strong id="pipeline-closing-soon">&mdash;</strong>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <section class="card custom-card crm-pipeline-toolbar mb-3">
+            <div class="card-body">
+              <div>
+                <h2 class="fs-16 fw-semibold mb-1">Pipeline board</h2>
+                <p class="text-muted fs-12 mb-0">
+                  Track deal value and move opportunities through each stage.
+                </p>
+              </div>
+              <div class="crm-pipeline-controls">
+                <div class="crm-pipeline-search">
+                  <i class="ri-search-line"></i
+                  ><input
+                    class="form-control"
+                    type="search"
+                    id="pipeline-search"
+                    placeholder="Search opportunity or company"
+                    aria-label="Search pipeline"
+                  />
+                </div>
+                <label class="visually-hidden" data-trigger for="pipeline-owner"
+                  >Filter by owner</label
+                >
+                <select
+                  class="form-select"
+                  data-trigger
+                  id="pipeline-owner"
+                  aria-label="Filter by owner"
+                >
+                  <option value="">All owners</option>
+                  <option>Alex Morgan</option>
+                  <option>Jamie Lee</option>
+                  <option>Jordan Blake</option>
+                  <option>Riley Chen</option>
+                </select>
+                <label class="visually-hidden" data-trigger for="pipeline-sort"
+                  >Sort opportunities</label
+                >
+                <select
+                  class="form-select"
+                  id="pipeline-sort"
+                  aria-label="Sort opportunities"
+                >
+                  <option value="stage">Default order</option>
+                  <option value="value-high">Highest value</option>
+                  <option value="close-soon">Closing soon</option>
+                  <option value="name">Name A–Z</option>
+                </select>
+                <a class="btn btn-dark btn-wave" href="crm-opportunities.html"
+                  ><i class="ri-external-link-line me-1" aria-hidden="true"></i
+                  >View opportunities</a
+                >
+              </div>
+            </div>
+          </section>
+          <section class="card custom-card crm-kanban-scroll">
+            <div class="card-body">
+              <div class="crm-kanban-board" id="crm-kanban-board">
+                <section class="crm-kanban-column" data-stage="Qualification">
+                  <header>
+                    <div>
+                      <h3>Qualification</h3>
+                      <p class="crm-stage-description">Fit and budget check</p>
+                      <span class="crm-stage-count">0 deals</span>
+                    </div>
+                    <strong class="crm-stage-total">$0</strong>
+                  </header>
+                  <div
+                    class="crm-kanban-cards"
+                    data-stage-list="Qualification"
+                  ></div>
+                </section>
+                <section class="crm-kanban-column" data-stage="Proposal">
+                  <header>
+                    <div>
+                      <h3>Proposal</h3>
+                      <p class="crm-stage-description">Solution shared</p>
+                      <span class="crm-stage-count">0 deals</span>
+                    </div>
+                    <strong class="crm-stage-total">$0</strong>
+                  </header>
+                  <div
+                    class="crm-kanban-cards"
+                    data-stage-list="Proposal"
+                  ></div>
+                </section>
+                <section class="crm-kanban-column" data-stage="Negotiation">
+                  <header>
+                    <div>
+                      <h3>Negotiation</h3>
+                      <p class="crm-stage-description">Terms in review</p>
+                      <span class="crm-stage-count">0 deals</span>
+                    </div>
+                    <strong class="crm-stage-total">$0</strong>
+                  </header>
+                  <div
+                    class="crm-kanban-cards"
+                    data-stage-list="Negotiation"
+                  ></div>
+                </section>
+                <section class="crm-kanban-column" data-stage="Closing">
+                  <header>
+                    <div>
+                      <h3>Closing</h3>
+                      <p class="crm-stage-description">Decision expected</p>
+                      <span class="crm-stage-count">0 deals</span>
+                    </div>
+                    <strong class="crm-stage-total">$0</strong>
+                  </header>
+                  <div class="crm-kanban-cards" data-stage-list="Closing"></div>
+                </section>
+                <section
+                  class="crm-kanban-column crm-won-column"
+                  data-stage="Won"
+                >
+                  <header>
+                    <div>
+                      <h3>Won</h3>
+                      <p class="crm-stage-description">Successfully closed</p>
+                      <span class="crm-stage-count">0 deals</span>
+                    </div>
+                    <strong class="crm-stage-total">$0</strong>
+                  </header>
+                  <div class="crm-kanban-cards" data-stage-list="Won"></div>
+                </section>
+              </div>
+            </div>
+          </section>
+          <p
+            class="text-muted fs-12 mt-3 mb-0"
+            id="pipeline-feedback"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"-->
+    <!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/js/crm-pipeline.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

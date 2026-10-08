@@ -1,0 +1,7 @@
+.widgets-page .card-header { padding:1.25rem 1.25rem 0; border-bottom:0; }
+.widgets-page .card-body { padding:1.25rem; }
+.widgets-page .card-title { font-size:14px; font-weight:600; }
+.widgets-page .card-body > p:empty { display:none; }
+.widgets-page .card { box-shadow:none; }
+.widgets-page .apexcharts-canvas { max-width:100%; }
+@media (max-width:575.98px) { .widgets-page .card-header { padding:1rem 1rem 0; } .widgets-page .card-body { padding:1rem; } }

@@ -1,0 +1,679 @@
+<!-- include document-head.html"-->
+    <link
+      rel="stylesheet"
+      href="../assets/libs/prismjs/themes/prism-coy.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main data-markup-examples class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">List groups</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Components</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+              List groups
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div
+                  class="card-header justify-content-between flex-wrap gap-2"
+                >
+                  <h2 class="card-title mb-0">Work queue</h2>
+                  <span class="text-muted fs-12">4 tasks</span>
+                </div>
+                <div class="card-body p-0">
+                  <div class="p-3 border-bottom">
+                    <label for="list-task-search" class="visually-hidden"
+                      >Search work queue</label
+                    ><input
+                      id="list-task-search"
+                      class="form-control"
+                      type="search"
+                      placeholder="Find a task or project"
+                      autocomplete="off"
+                    />
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item px-3 py-3" data-work-item>
+                      <div class="d-flex gap-3 align-items-start">
+                        <input
+                          class="form-check-input mt-1 flex-shrink-0"
+                          type="checkbox"
+                          id="work-item-0"
+                        />
+                        <div class="flex-grow-1">
+                          <div
+                            class="d-flex justify-content-between flex-wrap gap-2"
+                          >
+                            <label class="fs-14 fw-medium" for="work-item-0"
+                              >Research synthesis</label
+                            ><span
+                              class="badge bg-danger-transparent text-danger"
+                              >High</span
+                            >
+                          </div>
+                          <div
+                            class="d-flex justify-content-between flex-wrap gap-2 mt-1"
+                          >
+                            <span class="text-muted fs-12"
+                              >Product discovery</span
+                            ><span class="text-muted fs-12"
+                              ><i
+                                class="ri-calendar-line me-1"
+                                aria-hidden="true"
+                              ></i
+                              >Oct 9, 2026</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item px-3 py-3" data-work-item>
+                      <div class="d-flex gap-3 align-items-start">
+                        <input
+                          class="form-check-input mt-1 flex-shrink-0"
+                          type="checkbox"
+                          id="work-item-1"
+                        />
+                        <div class="flex-grow-1">
+                          <div
+                            class="d-flex justify-content-between flex-wrap gap-2"
+                          >
+                            <label class="fs-14 fw-medium" for="work-item-1"
+                              >Onboarding handoff</label
+                            ><span
+                              class="badge bg-warning-transparent text-warning"
+                              >Medium</span
+                            >
+                          </div>
+                          <div
+                            class="d-flex justify-content-between flex-wrap gap-2 mt-1"
+                          >
+                            <span class="text-muted fs-12"
+                              >Product experience</span
+                            ><span class="text-muted fs-12"
+                              ><i
+                                class="ri-calendar-line me-1"
+                                aria-hidden="true"
+                              ></i
+                              >Oct 16, 2026</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item px-3 py-3" data-work-item>
+                      <div class="d-flex gap-3 align-items-start">
+                        <input
+                          class="form-check-input mt-1 flex-shrink-0"
+                          type="checkbox"
+                          id="work-item-2"
+                        />
+                        <div class="flex-grow-1">
+                          <div
+                            class="d-flex justify-content-between flex-wrap gap-2"
+                          >
+                            <label class="fs-14 fw-medium" for="work-item-2"
+                              >Component audit</label
+                            ><span
+                              class="badge bg-warning-transparent text-warning"
+                              >Medium</span
+                            >
+                          </div>
+                          <div
+                            class="d-flex justify-content-between flex-wrap gap-2 mt-1"
+                          >
+                            <span class="text-muted fs-12">Design system</span
+                            ><span class="text-muted fs-12"
+                              ><i
+                                class="ri-calendar-line me-1"
+                                aria-hidden="true"
+                              ></i
+                              >Oct 22, 2026</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item px-3 py-3" data-work-item>
+                      <div class="d-flex gap-3 align-items-start">
+                        <input
+                          class="form-check-input mt-1 flex-shrink-0"
+                          type="checkbox"
+                          id="work-item-3"
+                        />
+                        <div class="flex-grow-1">
+                          <div
+                            class="d-flex justify-content-between flex-wrap gap-2"
+                          >
+                            <label class="fs-14 fw-medium" for="work-item-3"
+                              >Roadmap review</label
+                            ><span class="badge bg-info-transparent text-info"
+                              >Low</span
+                            >
+                          </div>
+                          <div
+                            class="d-flex justify-content-between flex-wrap gap-2 mt-1"
+                          >
+                            <span class="text-muted fs-12">Strategy</span
+                            ><span class="text-muted fs-12"
+                              ><i
+                                class="ri-calendar-line me-1"
+                                aria-hidden="true"
+                              ></i
+                              >Oct 28, 2026</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                  <p
+                    class="px-3 py-3 mb-0 text-muted fs-12"
+                    id="work-queue-feedback"
+                    role="status"
+                    aria-live="polite"
+                  >
+                    0 of 4 tasks complete
+                  </p>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card overflow-hidden">
+                <div
+                  class="card-header justify-content-between flex-wrap gap-2"
+                >
+                  <h2 class="card-title mb-0">Team activity</h2>
+                  <span class="text-muted fs-12">Recent updates</span>
+                </div>
+                <div class="card-body p-0">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item p-3">
+                      <div class="d-flex gap-3">
+                        <span
+                          class="avatar avatar-sm bg-danger-transparent text-danger"
+                          ><i
+                            class="ri-rocket-line fs-16"
+                            aria-hidden="true"
+                          ></i
+                        ></span>
+                        <div class="flex-grow-1">
+                          <div
+                            class="d-flex justify-content-between flex-wrap gap-2"
+                          >
+                            <h3 class="fs-14 fw-medium mb-0">
+                              Release ready for review
+                            </h3>
+                            <time class="text-muted fs-12">10:30 AM</time>
+                          </div>
+                          <p class="text-muted fs-13 mt-2 mb-0">
+                            Liam Carter submitted the onboarding release.
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item p-3">
+                      <div class="d-flex gap-3">
+                        <span
+                          class="avatar avatar-sm bg-info-transparent text-info"
+                          ><i
+                            class="ri-file-text-line fs-16"
+                            aria-hidden="true"
+                          ></i
+                        ></span>
+                        <div class="flex-grow-1">
+                          <div
+                            class="d-flex justify-content-between flex-wrap gap-2"
+                          >
+                            <h3 class="fs-14 fw-medium mb-0">
+                              Roadmap updated
+                            </h3>
+                            <time class="text-muted fs-12">9:15 AM</time>
+                          </div>
+                          <p class="text-muted fs-13 mt-2 mb-0">
+                            Quarterly milestones were shared with the team.
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item p-3">
+                      <div class="d-flex gap-3">
+                        <span
+                          class="avatar avatar-sm bg-success-transparent text-success"
+                          ><i
+                            class="ri-chat-3-line fs-16"
+                            aria-hidden="true"
+                          ></i
+                        ></span>
+                        <div class="flex-grow-1">
+                          <div
+                            class="d-flex justify-content-between flex-wrap gap-2"
+                          >
+                            <h3 class="fs-14 fw-medium mb-0">
+                              Research notes added
+                            </h3>
+                            <time class="text-muted fs-12">Yesterday</time>
+                          </div>
+                          <p class="text-muted fs-13 mt-2 mb-0">
+                            12 customer interviews are ready to explore.
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item p-3">
+                      <div class="d-flex gap-3">
+                        <div>
+                          <span
+                            class="avatar avatar-sm bg-secondary-transparent text-secondary"
+                            ><i
+                              class="ri-layout-masonry-line fs-16"
+                              aria-hidden="true"
+                            ></i>
+                          </span>
+                        </div>
+                        <div class="flex-grow-1">
+                          <div
+                            class="d-flex justify-content-between flex-wrap gap-2"
+                          >
+                            <h3 class="fs-14 fw-medium mb-0">
+                              Component library reviewed
+                            </h3>
+                            <time class="text-muted fs-12">Yesterday</time>
+                          </div>
+                          <p class="text-muted fs-13 mt-2 mb-0">
+                            Emma Wilson reviewed reusable components and logged
+                            accessibility improvements.
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item p-3">
+                      <div class="d-flex gap-3">
+                        <div>
+                          <span
+                            class="avatar avatar-sm bg-warning-transparent text-warning"
+                            ><i
+                              class="ri-calendar-check-line fs-16"
+                              aria-hidden="true"
+                            ></i>
+                          </span>
+                        </div>
+                        <div class="flex-grow-1">
+                          <div
+                            class="d-flex justify-content-between flex-wrap gap-2"
+                          >
+                            <h3 class="fs-14 fw-medium mb-0">
+                              Sprint planning scheduled
+                            </h3>
+                            <time class="text-muted fs-12">Oct 2</time>
+                          </div>
+                          <p class="text-muted fs-13 mt-2 mb-0">
+                            James Taylor shared the agenda for the next delivery
+                            planning session.
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card overflow-hidden">
+                <div
+                  class="card-header justify-content-between flex-wrap gap-2"
+                >
+                  <h2 class="card-title mb-0">People & availability</h2>
+                  <span class="text-muted fs-12">4 team members</span>
+                </div>
+                <div class="card-body p-0">
+                  <ul class="list-group list-group-flush">
+                    <li
+                      class="list-group-item p-3 d-flex gap-3 align-items-center"
+                    >
+                      <span class="avatar avatar-md avatar-rounded"
+                        ><img src="../assets/images/users/12.jpg" alt=""
+                      /></span>
+                      <div class="flex-grow-1">
+                        <a href="profile.html" class="fs-14 fw-medium"
+                          >Liam Carter</a
+                        >
+                        <p class="text-muted fs-12 mb-0">Product manager</p>
+                      </div>
+                      <span class="badge bg-success-transparent text-success"
+                        >Available</span
+                      >
+                    </li>
+                    <li
+                      class="list-group-item p-3 d-flex gap-3 align-items-center"
+                    >
+                      <span class="avatar avatar-md avatar-rounded"
+                        ><img src="../assets/images/users/4.jpg" alt=""
+                      /></span>
+                      <div class="flex-grow-1">
+                        <a href="profile.html" class="fs-14 fw-medium"
+                          >Sarah Smith</a
+                        >
+                        <p class="text-muted fs-12 mb-0">UX researcher</p>
+                      </div>
+                      <span class="badge bg-warning-transparent text-warning"
+                        >In a meeting</span
+                      >
+                    </li>
+                    <li
+                      class="list-group-item p-3 d-flex gap-3 align-items-center"
+                    >
+                      <span class="avatar avatar-md avatar-rounded"
+                        ><img src="../assets/images/users/5.jpg" alt=""
+                      /></span>
+                      <div class="flex-grow-1">
+                        <a href="profile.html" class="fs-14 fw-medium"
+                          >Emma Wilson</a
+                        >
+                        <p class="text-muted fs-12 mb-0">Product designer</p>
+                      </div>
+                      <span class="badge bg-success-transparent text-success"
+                        >Available</span
+                      >
+                    </li>
+                    <li
+                      class="list-group-item p-3 d-flex gap-3 align-items-center"
+                    >
+                      <span class="avatar avatar-md avatar-rounded"
+                        ><img src="../assets/images/users/11.jpg" alt=""
+                      /></span>
+                      <div class="flex-grow-1">
+                        <a href="profile.html" class="fs-14 fw-medium"
+                          >James Taylor</a
+                        >
+                        <p class="text-muted fs-12 mb-0">Engineer</p>
+                      </div>
+                      <span
+                        class="badge bg-secondary-transparent text-secondary"
+                        >Offline</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card overflow-hidden">
+                <div
+                  class="card-header justify-content-between flex-wrap gap-2"
+                >
+                  <h2 class="card-title mb-0">Document library</h2>
+                  <span class="text-muted fs-12">3 shared files</span>
+                </div>
+                <div class="card-body p-0">
+                  <div class="list-group list-group-flush">
+                    <a
+                      href="file-manager.html"
+                      class="list-group-item list-group-item-action p-3 d-flex align-items-center gap-3"
+                      ><span class="avatar avatar-md bg-light text-default"
+                        ><i
+                          class="ri-file-pdf-line fs-20"
+                          aria-hidden="true"
+                        ></i
+                      ></span>
+                      <div class="flex-grow-1">
+                        <h3 class="fs-14 fw-medium mb-1">
+                          Customer research.pdf
+                        </h3>
+                        <span class="text-muted fs-12">Research / 2.4 MB</span>
+                      </div>
+                      <span class="text-muted fs-12">Sep 30</span
+                      ><i
+                        class="ri-arrow-right-s-line text-muted"
+                        aria-hidden="true"
+                      ></i> </a
+                    ><a
+                      href="file-manager.html"
+                      class="list-group-item list-group-item-action p-3 d-flex align-items-center gap-3"
+                      ><span class="avatar avatar-md bg-light text-default"
+                        ><i
+                          class="ri-file-excel-line fs-20"
+                          aria-hidden="true"
+                        ></i
+                      ></span>
+                      <div class="flex-grow-1">
+                        <h3 class="fs-14 fw-medium mb-1">
+                          Quarterly roadmap.xlsx
+                        </h3>
+                        <span class="text-muted fs-12">Planning / 840 KB</span>
+                      </div>
+                      <span class="text-muted fs-12">Oct 1</span
+                      ><i
+                        class="ri-arrow-right-s-line text-muted"
+                        aria-hidden="true"
+                      ></i> </a
+                    ><a
+                      href="file-manager.html"
+                      class="list-group-item list-group-item-action p-3 d-flex align-items-center gap-3"
+                      ><span class="avatar avatar-md bg-light text-default"
+                        ><i
+                          class="ri-file-text-line fs-20"
+                          aria-hidden="true"
+                        ></i
+                      ></span>
+                      <div class="flex-grow-1">
+                        <h3 class="fs-14 fw-medium mb-1">Release notes.docx</h3>
+                        <span class="text-muted fs-12">Delivery / 120 KB</span>
+                      </div>
+                      <span class="text-muted fs-12">Oct 3</span
+                      ><i
+                        class="ri-arrow-right-s-line text-muted"
+                        aria-hidden="true"
+                      ></i> </a
+                    ><a
+                      href="file-manager.html"
+                      class="list-group-item list-group-item-action p-3 d-flex align-items-center gap-3"
+                      ><span class="avatar avatar-md bg-light text-default"
+                        ><i
+                          class="ri-file-ppt-line fs-20"
+                          aria-hidden="true"
+                        ></i
+                      ></span>
+                      <div class="flex-grow-1">
+                        <h3 class="fs-14 fw-medium mb-1">
+                          Design workshop.pptx
+                        </h3>
+                        <span class="text-muted fs-12">Design / 3.1 MB</span>
+                      </div>
+                      <span class="text-muted fs-12">Oct 4</span
+                      ><i
+                        class="ri-arrow-right-s-line text-muted"
+                        aria-hidden="true"
+                      ></i>
+                    </a>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card overflow-hidden">
+                <div
+                  class="card-header justify-content-between flex-wrap gap-2"
+                >
+                  <h2 class="card-title mb-0">Notification preferences</h2>
+                  <span class="text-muted fs-12">Interactive preview</span>
+                </div>
+                <div class="card-body p-0">
+                  <ul class="list-group list-group-flush">
+                    <li
+                      class="list-group-item p-3 d-flex align-items-center justify-content-between gap-3"
+                    >
+                      <div>
+                        <label class="fs-14 fw-medium" for="list-pref-digest"
+                          >Email digest</label
+                        >
+                        <p class="text-muted fs-12 mb-0 mt-1">
+                          A weekly summary of team activity.
+                        </p>
+                      </div>
+                      <div class="form-check form-switch mb-0">
+                        <input
+                          class="form-check-input form-checked-success"
+                          role="switch"
+                          type="checkbox"
+                          id="list-pref-digest"
+                          checked
+                        />
+                      </div>
+                    </li>
+                    <li
+                      class="list-group-item p-3 d-flex align-items-center justify-content-between gap-3"
+                    >
+                      <div>
+                        <label class="fs-14 fw-medium" for="list-pref-mentions"
+                          >Mention alerts</label
+                        >
+                        <p class="text-muted fs-12 mb-0 mt-1">
+                          Updates when a teammate mentions you.
+                        </p>
+                      </div>
+                      <div class="form-check form-switch mb-0">
+                        <input
+                          class="form-check-input form-checked-success"
+                          role="switch"
+                          type="checkbox"
+                          id="list-pref-mentions"
+                          checked
+                        />
+                      </div>
+                    </li>
+                    <li
+                      class="list-group-item p-3 d-flex align-items-center justify-content-between gap-3"
+                    >
+                      <div>
+                        <label class="fs-14 fw-medium" for="list-pref-tips"
+                          >Product tips</label
+                        >
+                        <p class="text-muted fs-12 mb-0 mt-1">
+                          Suggestions for getting more from your workspace.
+                        </p>
+                      </div>
+                      <div class="form-check form-switch mb-0">
+                        <input
+                          class="form-check-input form-checked-success"
+                          role="switch"
+                          type="checkbox"
+                          id="list-pref-tips"
+                        />
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card overflow-hidden">
+                <div
+                  class="card-header justify-content-between flex-wrap gap-2"
+                >
+                  <h2 class="card-title mb-0">Project details</h2>
+                  <span class="text-muted fs-12">Expand a row</span>
+                </div>
+                <div class="card-body p-0">
+                  <div class="list-group list-group-flush">
+                    <div class="list-group-item p-3">
+                      <button
+                        type="button"
+                        class="btn p-0 border-0 w-100 text-start d-flex justify-content-between align-items-center"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#list-detail-0"
+                        aria-expanded="false"
+                        aria-controls="list-detail-0"
+                      >
+                        <span
+                          ><strong class="fs-14 fw-medium d-block"
+                            >Workspace onboarding</strong
+                          ><span class="text-muted fs-12"
+                            >Delivery / 75% complete</span
+                          ></span
+                        ><i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+                      </button>
+                      <div class="collapse" id="list-detail-0">
+                        <p class="text-muted fs-13 mt-3 mb-0">
+                          18 of 24 tasks are complete. Next review: October 16.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="list-group-item p-3">
+                      <button
+                        type="button"
+                        class="btn p-0 border-0 w-100 text-start d-flex justify-content-between align-items-center"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#list-detail-1"
+                        aria-expanded="false"
+                        aria-controls="list-detail-1"
+                      >
+                        <span
+                          ><strong class="fs-14 fw-medium d-block"
+                            >Customer insights</strong
+                          ><span class="text-muted fs-12"
+                            >Research / 45% complete</span
+                          ></span
+                        ><i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+                      </button>
+                      <div class="collapse" id="list-detail-1">
+                        <p class="text-muted fs-13 mt-3 mb-0">
+                          9 of 20 tasks are complete. Interview synthesis is in
+                          progress.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="list-group-item p-3">
+                      <button
+                        type="button"
+                        class="btn p-0 border-0 w-100 text-start d-flex justify-content-between align-items-center"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#list-detail-2"
+                        aria-expanded="false"
+                        aria-controls="list-detail-2"
+                      >
+                        <span
+                          ><strong class="fs-14 fw-medium d-block"
+                            >Component library</strong
+                          ><span class="text-muted fs-12"
+                            >Design / 62% complete</span
+                          ></span
+                        ><i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+                      </button>
+                      <div class="collapse" id="list-detail-2">
+                        <p class="text-muted fs-13 mt-3 mb-0">
+                          20 of 32 tasks are complete. Accessibility review is
+                          next.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"--><!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"--><!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/js/listgroup.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+    <script src="../assets/libs/prismjs/prism.js"></script>
+    <script src="../assets/js/prism-custom.js"></script>
+  </body>
+</html>

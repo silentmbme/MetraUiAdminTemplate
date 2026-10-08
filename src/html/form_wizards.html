@@ -1,0 +1,346 @@
+<!-- include document-head.html"-->
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+
+      <!-- Start::app-content -->
+      <div class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Form Wizards</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">
+              <a href="javascript:void(0);">Pages</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="javascript:void(0);">Forms</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Form Wizards
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid">
+          <div class="row g-4 align-items-start">
+            <div class="col-12">
+              <section class="card custom-card overflow-hidden">
+                <div
+                  class="card-header justify-content-between flex-wrap gap-3"
+                >
+                  <div>
+                    <h2 class="card-title mb-1">Create a workspace</h2>
+                    <p class="text-muted fs-13 mb-0">
+                      A four-step setup flow for a new team workspace.
+                    </p>
+                  </div>
+                  <span
+                    class="badge bg-secondary-transparent text-secondary rounded-pill px-3 py-2"
+                    >Setup wizard</span
+                  >
+                </div>
+                <div class="card-body p-0">
+                  <form class="wizard wizard-tab horizontal" method="POST">
+                    <aside class="wizard-content container-fluid p-4">
+                      <div
+                        class="wizard-step"
+                        data-title="Workspace"
+                        data-id="workspace-setup"
+                      >
+                        <div class="mb-4">
+                          <span
+                            class="text-muted fw-semibold fs-12 text-uppercase"
+                            >Step 1 of 4</span
+                          >
+                          <h3 class="fs-18 fw-semibold mt-1 mb-1">
+                            Name your workspace
+                          </h3>
+                          <p class="text-muted mb-0">
+                            Start with the basic details your team will see.
+                          </p>
+                        </div>
+                        <div class="row g-3">
+                          <div class="col-md-6">
+                            <label for="workspace-name" class="form-label"
+                              >Workspace name</label
+                            >
+                            <input
+                              id="workspace-name"
+                              class="form-control"
+                              type="text"
+                              placeholder="e.g. Northstar Studio"
+                              required
+                            />
+                          </div>
+                          <div class="col-md-6">
+                            <label for="workspace-url" class="form-label"
+                              >Workspace URL</label
+                            >
+                            <div class="input-group">
+                              <input
+                                id="workspace-url"
+                                class="form-control"
+                                type="text"
+                                placeholder="northstar"
+                                required
+                              /><span class="input-group-text"
+                                >.workspace.app</span
+                              >
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <label for="workspace-purpose" class="form-label"
+                              >What will your team use it for?</label
+                            >
+                            <select
+                              id="workspace-purpose"
+                              data-trigger
+                              class="form-select"
+                              required
+                            >
+                              <option value="" selected disabled>
+                                Select a primary use
+                              </option>
+                              <option>Project management</option>
+                              <option>Product development</option>
+                              <option>Marketing and campaigns</option>
+                              <option>Operations</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="wizard-step"
+                        data-title="Team"
+                        data-id="workspace-team"
+                      >
+                        <div class="mb-4">
+                          <span
+                            class="text-muted fw-semibold fs-12 text-uppercase"
+                            >Step 2 of 4</span
+                          >
+                          <h3 class="fs-18 fw-semibold mt-1 mb-1">
+                            Set up your team
+                          </h3>
+                          <p class="text-muted mb-0">
+                            Choose how people will join and collaborate.
+                          </p>
+                        </div>
+                        <div class="row g-3">
+                          <div class="col-md-6">
+                            <label for="team-size" class="form-label"
+                              >Team size</label
+                            >
+                            <select
+                              id="team-size"
+                              data-trigger
+                              class="form-select"
+                              required
+                            >
+                              <option value="" selected disabled>
+                                Choose a range
+                              </option>
+                              <option>Just me</option>
+                              <option>2 to 10 people</option>
+                              <option>11 to 50 people</option>
+                              <option>51+ people</option>
+                            </select>
+                          </div>
+                          <div class="col-md-6">
+                            <label for="team-email" class="form-label"
+                              >Invite a teammate</label
+                            >
+                            <input
+                              id="team-email"
+                              class="form-control"
+                              type="email"
+                              placeholder="name@company.com"
+                            />
+                          </div>
+                          <div class="col-12">
+                            <label for="team-note" class="form-label"
+                              >Welcome note
+                              <span class="text-muted fw-normal"
+                                >(optional)</span
+                              ></label
+                            >
+                            <textarea
+                              id="team-note"
+                              class="form-control"
+                              rows="3"
+                              placeholder="Share a short note with your team"
+                            ></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="wizard-step"
+                        data-title="Preferences"
+                        data-id="workspace-preferences"
+                      >
+                        <div class="mb-4">
+                          <span
+                            class="text-muted fw-semibold fs-12 text-uppercase"
+                            >Step 3 of 4</span
+                          >
+                          <h3 class="fs-18 fw-semibold mt-1 mb-1">
+                            Choose your defaults
+                          </h3>
+                          <p class="text-muted mb-0">
+                            These preferences can be changed later in settings.
+                          </p>
+                        </div>
+                        <div class="row g-3">
+                          <div class="col-md-6">
+                            <label for="workspace-timezone" class="form-label"
+                              >Time zone</label
+                            >
+                            <select
+                              id="workspace-timezone"
+                              data-trigger
+                              class="form-select"
+                              required
+                            >
+                              <option value="" selected disabled>
+                                Select a time zone
+                              </option>
+                              <option>Asia/Kolkata (UTC +05:30)</option>
+                              <option>Europe/London (UTC +00:00)</option>
+                              <option>America/New_York (UTC -05:00)</option>
+                              <option>Australia/Sydney (UTC +10:00)</option>
+                            </select>
+                          </div>
+                          <div class="col-md-6">
+                            <label for="workspace-language" class="form-label"
+                              >Language</label
+                            >
+                            <select
+                              id="workspace-language"
+                              data-trigger
+                              class="form-select"
+                              required
+                            >
+                              <option>English</option>
+                              <option>Espa&ntilde;ol</option>
+                              <option>Fran&ccedil;ais</option>
+                              <option>Deutsch</option>
+                            </select>
+                          </div>
+                          <div class="col-12">
+                            <div class="form-check form-switch mt-2">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                role="switch"
+                                id="weekly-digest"
+                                checked
+                              /><label
+                                class="form-check-label"
+                                for="weekly-digest"
+                                >Send a weekly activity summary</label
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="wizard-step"
+                        data-title="Review"
+                        data-id="workspace-review"
+                      >
+                        <div class="mb-4">
+                          <span
+                            class="text-muted fw-semibold fs-12 text-uppercase"
+                            >Step 4 of 4</span
+                          >
+                          <h3 class="fs-18 fw-semibold mt-1 mb-1">
+                            Review and create
+                          </h3>
+                          <p class="text-muted mb-0">
+                            Your workspace is ready to be created with these
+                            details.
+                          </p>
+                        </div>
+                        <div class="border rounded-3 p-3 p-md-4">
+                          <div
+                            class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3"
+                          >
+                            <div>
+                              <span class="text-muted fs-12 d-block"
+                                >WORKSPACE</span
+                              ><strong>Northstar Studio</strong>
+                            </div>
+                            <i
+                              class="ri-building-line fs-20 text-secondary"
+                            ></i>
+                          </div>
+                          <div class="row g-3">
+                            <div class="col-sm-6">
+                              <span class="text-muted fs-12 d-block"
+                                >TEAM SIZE</span
+                              ><strong>11 to 50 people</strong>
+                            </div>
+                            <div class="col-sm-6">
+                              <span class="text-muted fs-12 d-block"
+                                >PRIMARY USE</span
+                              ><strong>Project management</strong>
+                            </div>
+                            <div class="col-sm-6">
+                              <span class="text-muted fs-12 d-block"
+                                >TIME ZONE</span
+                              ><strong>Asia/Kolkata</strong>
+                            </div>
+                            <div class="col-sm-6">
+                              <span class="text-muted fs-12 d-block"
+                                >WEEKLY SUMMARY</span
+                              ><strong>Enabled</strong>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-check mt-3">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="terms-confirm"
+                            required
+                          /><label class="form-check-label" for="terms-confirm"
+                            >I confirm these workspace details are
+                            correct.</label
+                          >
+                        </div>
+                      </div>
+                    </aside>
+                  </form>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End::app-content -->
+
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <!-- include common-scripts.html"-->
+
+    <!-- include appearance-customizer-scripts.html"-->
+    <!-- Vanilla-Wizard JS -->
+    <script src="../assets/libs/vanilla-wizard/js/wizard.min.js"></script>
+
+    <!-- Internal Form Wizard JS -->
+    <script src="../assets/js/form-wizard.js"></script>
+    <script src="../assets/js/form-wizard-init.js"></script>
+    <!-- Custom JS -->
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

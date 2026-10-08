@@ -1,0 +1,288 @@
+<!-- include document-head.html"-->
+    <link
+      rel="stylesheet"
+      href="../assets/libs/prismjs/themes/prism-coy.min.css"
+    />
+    <link rel="stylesheet" href="../assets/libs/filepond/filepond.min.css" />
+    <link
+      rel="stylesheet"
+      href="../assets/libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.css"
+    />
+    <link rel="stylesheet" href="../assets/libs/dropzone/dropzone.css" />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">File uploads</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">
+              <a href="javascript:void(0);">Forms</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="javascript:void(0);">Form Elements</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              File uploads
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid">
+          <section aria-labelledby="native-upload-title">
+            <div class="row">
+              <div class="col-xl-12">
+                <section class="card custom-card">
+                  <div class="card-header justify-content-between">
+                    <div>
+                      <h3 class="card-title mb-1">Picker options</h3>
+                      <p class="text-muted fs-12 mb-0">
+                        Single file, multiple files, disabled state and size
+                        variants.
+                      </p>
+                    </div>
+                    <div class="prism-toggle">
+                      <button
+                        class="btn btn-sm btn-outline-light rounded-pill"
+                        type="button"
+                      >
+                        View markup<i
+                          class="ri-code-line ms-2 d-inline-block align-middle"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="row gy-3">
+                      <div class="col-md-6">
+                        <label for="formFile" class="form-label"
+                          >Single document</label
+                        ><input
+                          class="form-control"
+                          type="file"
+                          id="formFile"
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label for="formFileMultiple" class="form-label"
+                          >Multiple documents</label
+                        ><input
+                          class="form-control"
+                          type="file"
+                          id="formFileMultiple"
+                          multiple
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label for="formFileDisabled" class="form-label"
+                          >Unavailable field</label
+                        ><input
+                          class="form-control"
+                          type="file"
+                          id="formFileDisabled"
+                          disabled
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label for="formFileSm" class="form-label"
+                          >Compact picker</label
+                        ><input
+                          class="form-control form-control-sm"
+                          id="formFileSm"
+                          type="file"
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label for="formFileLg" class="form-label"
+                          >Large picker</label
+                        ><input
+                          class="form-control form-control-lg"
+                          id="formFileLg"
+                          type="file"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer d-none border-top-0">
+                    <pre
+                      class="language-html"
+                    ><code class="language-html">&lt;input class="form-control" type="file"&gt;
+&lt;input class="form-control" type="file" multiple&gt;
+&lt;input class="form-control" type="file" disabled&gt;
+&lt;input class="form-control form-control-sm" type="file"&gt;
+&lt;input class="form-control form-control-lg" type="file"&gt;</code></pre>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </section>
+
+          <section aria-labelledby="filepond-title">
+            <div class="row">
+              <div class="col-xl-7">
+                <section class="card custom-card">
+                  <div class="card-header justify-content-between">
+                    <div>
+                      <h3 class="card-title mb-1">Project attachments</h3>
+                      <p class="text-muted fs-12 mb-0">
+                        Add up to six files and reorder them before submission.
+                      </p>
+                    </div>
+                    <div class="prism-toggle">
+                      <button
+                        class="btn btn-sm btn-outline-light rounded-pill"
+                        type="button"
+                      >
+                        View markup<i
+                          class="ri-code-line ms-2 d-inline-block align-middle"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <label class="form-label" for="project-attachments"
+                      >Attachments</label
+                    ><input
+                      type="file"
+                      class="multiple-filepond"
+                      id="project-attachments"
+                      name="filepond"
+                      multiple
+                      data-allow-reorder="true"
+                      data-max-file-size="3MB"
+                      data-max-files="6"
+                    />
+                    <div class="form-text">
+                      Maximum 6 files · 3 MB per file.
+                    </div>
+                  </div>
+                  <div class="card-footer d-none border-top-0">
+                    <pre
+                      class="language-html"
+                    ><code class="language-html">&lt;input type="file" class="multiple-filepond"
+       name="filepond" multiple data-allow-reorder="true"
+       data-max-file-size="3MB" data-max-files="6"&gt;</code></pre>
+                  </div>
+                </section>
+              </div>
+              <div class="col-xl-5">
+                <section class="card custom-card">
+                  <div class="card-header justify-content-between">
+                    <div>
+                      <h3 class="card-title mb-1">Profile image</h3>
+                      <p class="text-muted fs-12 mb-0">
+                        Single image with a square crop preview.
+                      </p>
+                    </div>
+                    <div class="prism-toggle">
+                      <button
+                        class="btn btn-sm btn-outline-light rounded-pill"
+                        type="button"
+                      >
+                        View markup<i
+                          class="ri-code-line ms-2 d-inline-block align-middle"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <label class="form-label" for="profile-image-upload"
+                      >Image file</label
+                    ><input
+                      type="file"
+                      class="single-fileupload"
+                      id="profile-image-upload"
+                      name="filepond"
+                      accept="image/png, image/jpeg, image/gif"
+                    />
+                    <div class="form-text">PNG, JPG or GIF.</div>
+                  </div>
+                  <div class="card-footer d-none border-top-0">
+                    <pre
+                      class="language-html"
+                    ><code class="language-html">&lt;input type="file" class="single-fileupload"
+       accept="image/png, image/jpeg, image/gif"&gt;</code></pre>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </section>
+
+          <section aria-labelledby="dropzone-title">
+            <section class="card custom-card">
+              <div class="card-header justify-content-between">
+                <div>
+                  <h3 class="card-title mb-1">
+                    Drag files into the upload area
+                  </h3>
+                  <p class="text-muted fs-12 mb-0">
+                    You can also choose files from your device.
+                  </p>
+                </div>
+                <div class="prism-toggle">
+                  <button
+                    class="btn btn-sm btn-outline-light rounded-pill"
+                    type="button"
+                  >
+                    View markup<i
+                      class="ri-code-line ms-2 d-inline-block align-middle"
+                    ></i>
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+                <form
+                  data-single="true"
+                  method="post"
+                  action="https://httpbin.org/post"
+                  class="dropzone"
+                  aria-label="Drop files to upload"
+                ></form>
+              </div>
+              <div class="card-footer d-none border-top-0">
+                <pre
+                  class="language-html"
+                ><code class="language-html">&lt;form class="dropzone" method="post"
+      action="https://httpbin.org/post" data-single="true"&gt;
+&lt;/form&gt;</code></pre>
+              </div>
+            </section>
+          </section>
+        </div>
+      </main>
+
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <!-- include common-scripts.html"-->
+    <!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/libs/prismjs/prism.js"></script>
+    <script src="../assets/js/prism-custom.js"></script>
+    <script src="../assets/libs/filepond/filepond.min.js"></script>
+    <script src="../assets/libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.js"></script>
+    <script src="../assets/libs/filepond-plugin-image-exif-orientation/filepond-plugin-image-exif-orientation.min.js"></script>
+    <script src="../assets/libs/filepond-plugin-file-validate-size/filepond-plugin-file-validate-size.min.js"></script>
+    <script src="../assets/libs/filepond-plugin-file-encode/filepond-plugin-file-encode.min.js"></script>
+    <script src="../assets/libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.js"></script>
+    <script src="../assets/libs/filepond-plugin-file-validate-type/filepond-plugin-file-validate-type.min.js"></script>
+    <script src="../assets/libs/filepond-plugin-image-crop/filepond-plugin-image-crop.min.js"></script>
+    <script src="../assets/libs/filepond-plugin-image-resize/filepond-plugin-image-resize.min.js"></script>
+    <script src="../assets/libs/filepond-plugin-image-transform/filepond-plugin-image-transform.min.js"></script>
+    <script src="../assets/libs/dropzone/dropzone-min.js"></script>
+    <script src="../assets/js/fileupload.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

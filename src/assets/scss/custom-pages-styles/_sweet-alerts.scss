@@ -1,0 +1,44 @@
+@use "../variables";
+
+.sweet-alerts-page {
+  font-family: variables.$default-font-family;
+  font-size: variables.$default-font-size;
+  .sweet-alerts-intro { border-radius: variables.$default-radius; }
+  .sweet-alerts-guide { color: variables.$text-muted; font-size: 0.75rem; }
+  .sweet-alert-example .card-body { display: flex; flex-direction: column; align-items: flex-start; padding: 1.25rem; }
+  .sweet-alert-example p { flex: 1; }
+  .sweet-alert-example { border-radius: variables.$default-radius; }
+  .sweet-alert-action-row, .sweet-alert-quick-action { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+  .sweet-alert-action-row { padding: 1.1rem 0; border-bottom: 1px solid variables.$default-border; }
+  .sweet-alert-action-row:first-child { padding-top: 0; }
+  .sweet-alert-action-row:last-child { padding-bottom: 0; border-bottom: 0; }
+  .sweet-alert-quick-action { padding: 1rem; background: variables.$default-body-color; border-radius: variables.$default-radius; }
+  .sweet-alert-action-row .btn, .sweet-alert-quick-action .btn { flex-shrink: 0; }
+}
+.swal2-popup.project-swal {
+  background: variables.$custom-white;
+  color: variables.$default-text-color;
+  font-family: variables.$default-font-family;
+  font-size: variables.$default-font-size;
+  border: 1px solid variables.$default-border;
+  border-radius: variables.$default-radius;
+  .swal2-title { font-size: 1.125rem; font-weight: 600; color: variables.$default-text-color; }
+  .swal2-html-container { font-size: 0.8125rem; line-height: 1.6; color: variables.$text-muted; }
+  .swal2-actions { gap: 0.5rem; }
+  .swal2-input { width: calc(100% - 3rem); margin: 1rem 1.5rem; height: auto; padding: 0.6rem 0.75rem; }
+  .swal2-validation-message { background: variables.$default-body-color; color: variables.$danger; font-size: 0.8125rem; }
+  .swal2-timer-progress-bar { background: variables.$primary; }
+}
+@media (max-width: 575.98px) {
+  .sweet-alerts-page {
+    .sweet-alert-action-row, .sweet-alert-quick-action { align-items: flex-start; flex-direction: column; }
+    .sweet-alerts-intro .avatar-xl { width: 2.75rem; height: 2.75rem; flex-shrink: 0; }
+  }
+}
+
+.sweet-alerts-page .sweet-alert-demo-table {
+  td { padding: 0.85rem 1rem; vertical-align: middle; font-size: 0.8125rem; }
+  td:last-child { width: 25%; text-align: start; white-space: nowrap; }
+  tr:last-child td { border-bottom: 0; }
+}
+@media (max-width:575.98px) { .sweet-alerts-page .sweet-alert-demo-table td { padding:0.75rem; } }

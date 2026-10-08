@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme-color="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Create account | NexoraUI</title>
+    <meta
+      name="description"
+      content="Create a NexoraUI account and bring your team into one workspace."
+    />
+    <link
+      rel="icon"
+      href="../assets/images/brand-logos/favicon.ico?v=2"
+      type="image/x-icon"
+    />
+    <link
+      id="style"
+      href="../assets/libs/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="../assets/css/demo.css" rel="stylesheet" />
+    <link href="../assets/css/icons.css" rel="stylesheet" />
+    <script src="../assets/js/authentication.js"></script>
+  </head>
+  <body class="password-create-page password-create-basic password-signup-page">
+    <main class="password-basic-shell">
+      <section
+        class="card custom-card password-basic-card"
+        aria-labelledby="signup-title"
+      >
+        <div class="card-body">
+          <a
+            class="password-brand"
+            href="index.html"
+            aria-label="NexoraUI home"
+          >
+            <picture class="auth-brand-logos"
+              ><img
+                class="auth-logo-light"
+                src="../assets/images/brand-logos/desktop-logo.png"
+                alt="NexoraUI" /><img
+                class="auth-logo-dark"
+                src="../assets/images/brand-logos/desktop-dark.png"
+                alt="NexoraUI"
+            /></picture>
+          </a>
+
+          <h1 id="signup-title">Create your account</h1>
+          <p class="password-intro">
+            Set up your workspace and get your team moving.
+          </p>
+
+          <form class="password-form signup-form">
+            <div class="mb-3">
+              <label class="form-label" for="signup-name">Full name</label>
+              <input
+                class="form-control"
+                id="signup-name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                placeholder="Enter your full name"
+                required
+              />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label" for="signup-email">Work email</label>
+              <input
+                class="form-control"
+                id="signup-email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                placeholder="name@company.com"
+                required
+              />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label" for="signup-password">Password</label>
+              <div class="password-input-wrap">
+                <input
+                  class="form-control"
+                  id="signup-password"
+                  name="password"
+                  type="password"
+                  autocomplete="new-password"
+                  placeholder="Create a password"
+                  required
+                />
+                <button
+                  class="btn btn-link password-visibility"
+                  type="button"
+                  onclick="createpassword('signup-password', this)"
+                  aria-label="Show password"
+                >
+                  <i class="ri-eye-off-line" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label" for="signup-confirm-password">
+                Confirm password
+              </label>
+              <div class="password-input-wrap">
+                <input
+                  class="form-control"
+                  id="signup-confirm-password"
+                  name="confirmPassword"
+                  type="password"
+                  autocomplete="new-password"
+                  placeholder="Re-enter your password"
+                  required
+                />
+                <button
+                  class="btn btn-link password-visibility"
+                  type="button"
+                  onclick="createpassword('signup-confirm-password', this)"
+                  aria-label="Show password confirmation"
+                >
+                  <i class="ri-eye-off-line" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="form-check mb-3">
+              <input
+                class="form-check-input"
+                id="signup-terms"
+                type="checkbox"
+                required
+              />
+              <label
+                class="form-check-label text-muted fs-12"
+                for="signup-terms"
+              >
+                I agree to the
+                <a href="terms_conditions.html">Terms of Service</a>.
+              </label>
+            </div>
+          </form>
+
+          <a class="btn btn-primary w-100 btn-lg" href="index.html">
+            Create account
+            <i class="ri-arrow-right-line ms-1" aria-hidden="true"></i>
+          </a>
+
+          <div class="password-back-link">
+            Already have an account?
+            <a href="sign-in-basic.html">Sign in</a>
+          </div>
+        </div>
+      </section>
+
+      <footer class="password-page-footer">
+        &copy; <span data-current-year></span> NexoraUI
+        <span>&middot;</span> Workspace for your next idea
+      </footer>
+    </main>
+
+    <script src="../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/show-password.js"></script>
+    <script>
+      document.querySelectorAll("[data-current-year]").forEach((element) => {
+        element.textContent = String(new Date().getFullYear());
+      });
+    </script>
+  </body>
+</html>

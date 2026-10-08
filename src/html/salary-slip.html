@@ -1,0 +1,748 @@
+<!-- include document-head.html"-->
+  </head>
+
+  <body class="salary-slip-page">
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <div>
+            <h1 class="page-title">Salary statement</h1>
+          </div>
+          <ol class="breadcrumb mb-1">
+            <li class="breadcrumb-item">
+              <a href="hrm-dashboard.html">HRM</a>
+            </li>
+            <li class="breadcrumb-item"><a href="payroll.html">Payroll</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Salary slip
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xxl-8">
+              <section
+                class="card custom-card hrm-salary-slip-card overflow-hidden"
+              >
+                <div
+                  class="card-header d-flex align-items-center justify-content-between flex-wrap gap-3 py-3"
+                >
+                  <div class="d-flex align-items-center gap-3">
+                    <div>
+                      <span class="text-muted fs-11 text-uppercase"
+                        >Payroll statement</span
+                      >
+                      <h2 class="card-title mb-0">Salary slip</h2>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center gap-2">
+                    <span
+                      class="badge bg-warning-transparent text-warning rounded-pill"
+                      ><i class="ri-edit-line me-1"></i>Draft</span
+                    ><button
+                      type="button"
+                      class="btn btn-sm btn-light"
+                      onclick="window.print()"
+                    >
+                      <i class="ri-printer-line me-1"></i>Print
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body p-3 p-md-4">
+                  <div
+                    class="d-flex align-items-center justify-content-between flex-wrap gap-3 pb-4 mb-4 border-bottom"
+                  >
+                    <div class="d-flex align-items-center gap-3">
+                      <span
+                        id="slip-employee-avatar"
+                        class="avatar avatar-xl avatar-rounded bg-color-1 text-dark fw-semibold"
+                      >
+                        <img src="../assets/images/users/1.png" alt="" />
+                      </span>
+                      <div>
+                        <span class="text-muted fs-12"
+                          >EMPLOYEE PAY ADVICE</span
+                        >
+                        <h3
+                          id="slip-employee-name"
+                          class="fs-18 fw-semibold mb-1 mt-1"
+                        >
+                          Sofia Martinez
+                        </h3>
+                        <div class="text-muted fs-12">
+                          <span id="slip-employee-id">EMP-10482</span
+                          ><span class="mx-1">&middot;</span
+                          ><span id="slip-employee-department"
+                            >Product &amp; Engineering</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="text-md-end">
+                      <span class="text-muted fs-12 d-block">STATEMENT ID</span
+                      ><strong id="slip-statement-id" class="fs-13"
+                        >PAY-2026-09-10482</strong
+                      >
+                    </div>
+                  </div>
+                  <div
+                    class="hrm-salary-slip-net d-flex align-items-center justify-content-between flex-wrap gap-3 p-3 p-md-4 mb-4"
+                  >
+                    <div>
+                      <span class="text-muted fs-12 d-block mb-1"
+                        >NET PAY THIS PERIOD</span
+                      ><strong id="slip-net-pay" class="fs-28 fw-semibold"
+                        >$7,167.00</strong
+                      ><span class="text-muted fs-12 d-block mt-1"
+                        >Estimated take-home after deductions</span
+                      >
+                    </div>
+                    <div class="text-md-end">
+                      <span class="text-muted fs-12 d-block mb-1"
+                        >DEPOSIT ACCOUNT</span
+                      ><strong id="slip-account" class="fs-13"
+                        >Checking account &middot;&middot;&middot;&middot;
+                        4821</strong
+                      ><span
+                        id="slip-pay-method"
+                        class="text-muted fs-12 d-block mt-1"
+                        >Direct deposit</span
+                      >
+                    </div>
+                  </div>
+                  <div class="row g-2 mb-4">
+                    <div class="col-md-4">
+                      <div class="hrm-salary-slip-meta h-100">
+                        <span class="text-muted fs-12 d-block mb-1"
+                          >Pay period</span
+                        ><strong id="slip-pay-period" class="fs-13"
+                          >Sep 1&ndash;30, 2026</strong
+                        >
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="hrm-salary-slip-meta h-100">
+                        <span class="text-muted fs-12 d-block mb-1"
+                          >Pay date</span
+                        ><strong id="slip-pay-date" class="fs-13"
+                          >October 5, 2026</strong
+                        >
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="hrm-salary-slip-meta h-100">
+                        <span class="text-muted fs-12 d-block mb-1"
+                          >Currency</span
+                        ><strong class="fs-13">USD &middot; US Dollar</strong>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row g-3 hrm-salary-slip-breakdown">
+                    <div class="col-md-6">
+                      <section
+                        class="hrm-salary-slip-lines hrm-salary-slip-earnings p-3 p-lg-4"
+                      >
+                        <div
+                          class="d-flex align-items-center justify-content-between gap-2 mb-3"
+                        >
+                          <div class="d-flex align-items-center gap-2">
+                            <span
+                              class="avatar avatar-sm bg-success-transparent text-success rounded-circle"
+                              ><i class="ri-arrow-down-circle-line fs-16"></i
+                            ></span>
+                            <h3 class="fs-15 fw-semibold mb-0">Earnings</h3>
+                          </div>
+                          <span class="text-muted fs-12">USD</span>
+                        </div>
+                        <div class="table-responsive">
+                          <table
+                            class="table table-sm table-borderless align-middle mb-0 hrm-salary-slip-table"
+                          >
+                            <thead>
+                              <tr>
+                                <th
+                                  scope="col"
+                                  class="text-muted fs-12 fw-medium"
+                                >
+                                  Description
+                                </th>
+                                <th
+                                  scope="col"
+                                  class="text-end text-muted fs-12 fw-medium"
+                                >
+                                  Amount
+                                </th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <div class="fw-medium fs-13">Base salary</div>
+                                  <div class="text-muted fs-11">
+                                    Monthly compensation
+                                  </div>
+                                </td>
+                                <td
+                                  id="slip-base-salary"
+                                  class="text-end fw-medium"
+                                >
+                                  $8,500.00
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <div class="fw-medium fs-13">Overtime</div>
+                                  <div class="text-muted fs-11">
+                                    Approved additional hours
+                                  </div>
+                                </td>
+                                <td
+                                  id="slip-overtime"
+                                  class="text-end fw-medium"
+                                >
+                                  $420.00
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <div class="fw-medium fs-13">
+                                    Performance bonus
+                                  </div>
+                                  <div class="text-muted fs-11">
+                                    Period incentive
+                                  </div>
+                                </td>
+                                <td id="slip-bonus" class="text-end fw-medium">
+                                  $0.00
+                                </td>
+                              </tr>
+                            </tbody>
+                            <tfoot>
+                              <tr>
+                                <th scope="row">Gross earnings</th>
+                                <th id="slip-gross" class="text-end">
+                                  $8,920.00
+                                </th>
+                              </tr>
+                            </tfoot>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                    <div class="col-md-6">
+                      <section
+                        class="hrm-salary-slip-lines hrm-salary-slip-deductions p-3 p-lg-4"
+                      >
+                        <div
+                          class="d-flex align-items-center justify-content-between gap-2 mb-3"
+                        >
+                          <div class="d-flex align-items-center gap-2">
+                            <span
+                              class="avatar avatar-sm bg-danger-transparent text-danger rounded-circle"
+                              ><i class="ri-arrow-up-circle-line fs-16"></i
+                            ></span>
+                            <h3 class="fs-15 fw-semibold mb-0">Deductions</h3>
+                          </div>
+                          <span class="text-muted fs-12">This period</span>
+                        </div>
+                        <div class="table-responsive">
+                          <table
+                            class="table table-sm table-borderless align-middle mb-0 hrm-salary-slip-table"
+                          >
+                            <thead>
+                              <tr>
+                                <th
+                                  scope="col"
+                                  class="text-muted fs-12 fw-medium"
+                                >
+                                  Description
+                                </th>
+                                <th
+                                  scope="col"
+                                  class="text-end text-muted fs-12 fw-medium"
+                                >
+                                  Amount
+                                </th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <div class="fw-medium fs-13">Federal tax</div>
+                                  <div class="text-muted fs-11">
+                                    Federal withholding
+                                  </div>
+                                </td>
+                                <td id="slip-federal-tax" class="text-end">
+                                  $1,100.00
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <div class="fw-medium fs-13">State tax</div>
+                                  <div class="text-muted fs-11">
+                                    State withholding
+                                  </div>
+                                </td>
+                                <td id="slip-state-tax" class="text-end">
+                                  $430.00
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <div class="fw-medium fs-13">Benefits</div>
+                                  <div class="text-muted fs-11">
+                                    Health &amp; retirement
+                                  </div>
+                                </td>
+                                <td id="slip-benefits" class="text-end">
+                                  $223.00
+                                </td>
+                              </tr>
+                            </tbody>
+                            <tfoot>
+                              <tr>
+                                <th scope="row">Total deductions</th>
+                                <th id="slip-deductions" class="text-end">
+                                  $1,753.00
+                                </th>
+                              </tr>
+                            </tfoot>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex align-items-start gap-2 text-muted fs-12 mt-4 pt-3 border-top"
+                  >
+                    <i class="ri-information-line text-primary fs-16"></i
+                    ><span
+                      >This is a draft statement for the September payroll
+                      cycle. Final amounts may change before approval.</span
+                    >
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-4">
+              <section class="card custom-card mb-3">
+                <div class="card-header justify-content-between">
+                  <div>
+                    <div class="card-title mb-1">Create a salary slip</div>
+                    <span class="text-muted fs-12"
+                      >Build or revise an employee statement</span
+                    >
+                  </div>
+                  <a
+                    href="#"
+                    class="btn btn-light btn-sm rounded-circle"
+                    data-bs-toggle="modal"
+                    data-bs-target="#create-salary-slip-modal"
+                    ><i class="ri-add-line fs-16"></i
+                  ></a>
+                </div>
+                <div class="card-body p-0">
+                  <div class="d-flex gap-3 align-items-start p-3 border-bottom">
+                    <div>
+                      <span
+                        class="avatar avatar-sm bg-secondary-transparent text-secondary rounded-circle"
+                        ><i class="ri-user-settings-line fs-16"></i
+                      ></span>
+                    </div>
+                    <div>
+                      <div class="fw-semibold fs-13">Enter pay details</div>
+                      <div class="text-muted fs-12 mt-1">
+                        Choose an employee, pay period, earnings and deductions.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-3 align-items-start p-3 border-bottom">
+                    <div>
+                      <span
+                        class="avatar avatar-sm bg-info-transparent text-info rounded-circle"
+                        ><i class="ri-calculator-line fs-16"></i
+                      ></span>
+                    </div>
+                    <div>
+                      <div class="fw-semibold fs-13">Check the calculation</div>
+                      <div class="text-muted fs-12 mt-1">
+                        Gross pay, deductions and net pay update automatically.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-3 align-items-start p-3">
+                    <div>
+                      <span
+                        class="avatar avatar-sm bg-success-transparent text-success rounded-circle"
+                        ><i class="ri-file-check-line fs-16"></i
+                      ></span>
+                    </div>
+                    <div>
+                      <div class="fw-semibold fs-13">Save as a draft</div>
+                      <div class="text-muted fs-12 mt-1">
+                        Review the statement before payroll approval.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <button
+                    type="button"
+                    class="btn btn-light w-100"
+                    data-bs-toggle="modal"
+                    data-bs-target="#create-salary-slip-modal"
+                  >
+                    <i class="ri-add-line me-1"></i>Create or edit slip
+                  </button>
+                </div>
+              </section>
+              <section class="card custom-card mb-3">
+                <div class="card-header justify-content-between">
+                  <div>
+                    <div class="card-title mb-1">Pay breakdown</div>
+                    <span class="text-muted fs-12"
+                      >How this payment is calculated</span
+                    >
+                  </div>
+                  <span class="badge bg-light text-muted">This period</span>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between fs-13 mb-2">
+                    <span class="text-muted">Gross earnings</span
+                    ><strong id="slip-breakdown-gross">$8,920.00</strong>
+                  </div>
+                  <div class="d-flex justify-content-between fs-13 mb-2">
+                    <span class="text-muted">Total deductions</span
+                    ><strong id="slip-breakdown-deductions" class="text-danger"
+                      >&minus;$1,753.00</strong
+                    >
+                  </div>
+                  <div
+                    id="slip-pay-ratio"
+                    class="progress my-3"
+                    style="height: 8px"
+                    role="img"
+                    aria-label="80.3 percent of gross earnings is take-home pay"
+                  >
+                    <div
+                      id="slip-net-bar"
+                      class="progress-bar bg-success"
+                      style="width: 80.3%"
+                    ></div>
+                    <div
+                      id="slip-deduction-bar"
+                      class="progress-bar bg-danger"
+                      style="width: 19.7%"
+                    ></div>
+                  </div>
+                  <div class="d-flex justify-content-between text-muted fs-11">
+                    <span
+                      ><i class="ri-circle-fill text-success me-1"></i>Take-home
+                      <strong id="slip-net-percent" class="text-default"
+                        >80.3%</strong
+                      ></span
+                    ><span
+                      ><i class="ri-circle-fill text-danger me-1"></i>Deductions
+                      <strong id="slip-deduction-percent" class="text-default"
+                        >19.7%</strong
+                      ></span
+                    >
+                  </div>
+                </div>
+              </section>
+              <section class="card custom-card">
+                <div class="card-body d-flex align-items-start gap-3">
+                  <span
+                    class="avatar avatar-md bg-warning-transparent text-warning rounded-circle"
+                    ><i class="ri-shield-check-line fs-18"></i
+                  ></span>
+                  <div>
+                    <h3 id="slip-status-title" class="fs-14 fw-semibold mb-1">
+                      Payroll approval pending
+                    </h3>
+                    <p id="slip-status-message" class="text-muted fs-12 mb-2">
+                      This preview is not a finalized payment record.
+                    </p>
+                    <a href="payroll.html" class="fs-12 fw-medium"
+                      >View payroll status
+                      <i class="ri-arrow-right-line ms-1"></i></a
+                    ><span
+                      id="slip-created-feedback"
+                      class="d-block text-success fs-12 mt-2"
+                      role="status"
+                      aria-live="polite"
+                    ></span>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <div
+      class="modal fade"
+      id="create-salary-slip-modal"
+      tabindex="-1"
+      aria-labelledby="create-salary-slip-title"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"
+      >
+        <div class="modal-content overflow-scroll">
+          <div class="modal-header">
+            <div>
+              <h2
+                id="create-salary-slip-title"
+                class="modal-title fs-18 fw-semibold"
+              >
+                Create salary slip
+              </h2>
+              <p class="text-muted fs-12 mb-0 mt-1">
+                Enter the pay details to build a draft preview.
+              </p>
+            </div>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <form id="create-salary-slip-form">
+            <div class="modal-body">
+              <div class="mb-3">
+                <span class="text-muted fs-12 fw-semibold"
+                  >EMPLOYEE &amp; PAY PERIOD</span
+                >
+              </div>
+              <div class="row g-3 mb-4">
+                <div class="col-md-6">
+                  <label for="slip-form-name" class="form-label fs-13"
+                    >Employee name</label
+                  ><input
+                    id="slip-form-name"
+                    class="form-control"
+                    type="text"
+                    value="Sofia Martinez"
+                    required
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label for="slip-form-id" class="form-label fs-13"
+                    >Employee ID</label
+                  ><input
+                    id="slip-form-id"
+                    class="form-control"
+                    type="text"
+                    value="EMP-10482"
+                    required
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label for="slip-form-department" class="form-label fs-13"
+                    >Department</label
+                  ><input
+                    id="slip-form-department"
+                    class="form-control"
+                    type="text"
+                    value="Product &amp; Engineering"
+                    required
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label for="slip-form-period" class="form-label fs-13"
+                    >Pay period</label
+                  ><input
+                    id="slip-form-period"
+                    class="form-control"
+                    type="month"
+                    value="2026-09"
+                    required
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label for="slip-form-date" class="form-label fs-13"
+                    >Pay date</label
+                  ><input
+                    id="slip-form-date"
+                    class="form-control"
+                    type="date"
+                    value="2026-10-05"
+                    required
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label for="slip-form-method" class="form-label fs-13"
+                    >Pay method</label
+                  >
+                  <select
+                    id="slip-form-method"
+                    data-trigger
+                    class="form-select"
+                  >
+                    <option>Direct deposit</option>
+                    <option>Paper check</option>
+                    <option>Bank transfer</option>
+                  </select>
+                </div>
+              </div>
+              <div class="mb-3">
+                <span class="text-muted fs-12 fw-semibold"
+                  >EARNINGS &amp; DEDUCTIONS
+                  <span class="fw-normal">(USD)</span></span
+                >
+              </div>
+              <div class="row g-3">
+                <div class="col-md-4">
+                  <label for="slip-form-base" class="form-label fs-13"
+                    >Base salary</label
+                  >
+                  <div class="input-group">
+                    <span class="input-group-text">$</span
+                    ><input
+                      id="slip-form-base"
+                      class="form-control"
+                      type="number"
+                      min="0"
+                      step="0.01"
+                      value="8500"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <label for="slip-form-overtime" class="form-label fs-13"
+                    >Overtime</label
+                  >
+                  <div class="input-group">
+                    <span class="input-group-text">$</span
+                    ><input
+                      id="slip-form-overtime"
+                      class="form-control"
+                      type="number"
+                      min="0"
+                      step="0.01"
+                      value="420"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <label for="slip-form-bonus" class="form-label fs-13"
+                    >Bonus</label
+                  >
+                  <div class="input-group">
+                    <span class="input-group-text">$</span
+                    ><input
+                      id="slip-form-bonus"
+                      class="form-control"
+                      type="number"
+                      min="0"
+                      step="0.01"
+                      value="0"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <label for="slip-form-federal" class="form-label fs-13"
+                    >Federal tax</label
+                  >
+                  <div class="input-group">
+                    <span class="input-group-text">$</span
+                    ><input
+                      id="slip-form-federal"
+                      class="form-control"
+                      type="number"
+                      min="0"
+                      step="0.01"
+                      value="1100"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <label for="slip-form-state" class="form-label fs-13"
+                    >State tax</label
+                  >
+                  <div class="input-group">
+                    <span class="input-group-text">$</span
+                    ><input
+                      id="slip-form-state"
+                      class="form-control"
+                      type="number"
+                      min="0"
+                      step="0.01"
+                      value="430"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <label for="slip-form-benefits" class="form-label fs-13"
+                    >Benefits</label
+                  >
+                  <div class="input-group">
+                    <span class="input-group-text">$</span
+                    ><input
+                      id="slip-form-benefits"
+                      class="form-control"
+                      type="number"
+                      min="0"
+                      step="0.01"
+                      value="223"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="slip-form-account" class="form-label fs-13"
+                    >Payment account</label
+                  ><input
+                    id="slip-form-account"
+                    class="form-control"
+                    type="text"
+                    value="Checking account **** 4821"
+                    required
+                  />
+                </div>
+              </div>
+              <div
+                id="slip-form-error"
+                class="alert alert-danger mt-3 mb-0 d-none"
+                role="alert"
+              ></div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-light"
+                data-bs-dismiss="modal"
+              >
+                Cancel</button
+              ><button type="submit" class="btn btn-dark">
+                <i class="ri-file-check-line me-1"></i>Create draft preview
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- include common-scripts.html"-->
+    <script src="../assets/js/salary-slip.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+    <!-- include appearance-customizer-scripts.html"-->
+  </body>
+</html>

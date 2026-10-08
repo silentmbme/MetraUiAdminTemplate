@@ -1,0 +1,436 @@
+<!-- include document-head.html"-->
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Create a support ticket</h1>
+          <ol class="breadcrumb mb-1">
+            <li class="breadcrumb-item">
+              <a href="support-dashboard.html">Support center</a>
+            </li>
+            <li class="breadcrumb-item"><a href="tickets.html">Tickets</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Create ticket
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid">
+          <div class="row align-items-start">
+            <div class="col-xl-8">
+              <form id="create-ticket-form" novalidate>
+                <section class="card custom-card mb-3">
+                  <div
+                    class="card-header justify-content-between flex-wrap gap-2"
+                  >
+                    <div>
+                      <h2 class="card-title mb-1">Request details</h2>
+                      <span class="text-muted fs-12"
+                        >Describe the issue and how your team can help</span
+                      >
+                    </div>
+                    <span class="badge bg-light text-default"
+                      ><i class="ri-save-line me-1" aria-hidden="true"></i
+                      >Draft</span
+                    >
+                  </div>
+                  <div class="card-body">
+                    <div class="row gy-3">
+                      <div class="col-md-6">
+                        <label for="requester-name" class="form-label"
+                          >Requester name
+                          <span class="text-danger">*</span></label
+                        >
+                        <input
+                          id="requester-name"
+                          name="requester"
+                          class="form-control"
+                          type="text"
+                          placeholder="e.g. Ava Thompson"
+                          required
+                        />
+                        <div class="invalid-feedback">
+                          Enter the requester's name.
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="requester-email" class="form-label"
+                          >Email address
+                          <span class="text-danger">*</span></label
+                        >
+                        <input
+                          id="requester-email"
+                          name="email"
+                          class="form-control"
+                          type="email"
+                          placeholder="name@company.com"
+                          required
+                        />
+                        <div class="invalid-feedback">
+                          Enter a valid email address.
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="requester-company" class="form-label"
+                          >Company</label
+                        >
+                        <div class="input-group">
+                          <span class="input-group-text"
+                            ><i
+                              class="ri-building-line"
+                              aria-hidden="true"
+                            ></i></span
+                          ><input
+                            id="requester-company"
+                            name="company"
+                            class="form-control"
+                            type="text"
+                            placeholder="Company or organization"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="request-channel" class="form-label"
+                          >Request channel</label
+                        >
+                        <select
+                          id="request-channel"
+                          data-trigger
+                          name="channel"
+                          class="form-select"
+                        >
+                          <option>Email</option>
+                          <option>Live chat</option>
+                          <option>Phone</option>
+                          <option>Web form</option>
+                          <option>Internal request</option>
+                        </select>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="request-category" class="form-label"
+                          >Category <span class="text-danger">*</span></label
+                        >
+                        <select
+                          id="request-category"
+                          data-trigger
+                          name="category"
+                          class="form-select"
+                          required
+                        >
+                          <option value="">Choose a category</option>
+                          <option>Account access</option>
+                          <option>Billing &amp; payments</option>
+                          <option>Bug report</option>
+                          <option>Integrations</option>
+                          <option>Setup &amp; how-to</option>
+                          <option>Other</option>
+                        </select>
+                        <div class="invalid-feedback">
+                          Choose a ticket category.
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="request-priority" class="form-label"
+                          >Priority</label
+                        >
+                        <select
+                          id="request-priority"
+                          data-trigger
+                          name="priority"
+                          class="form-select"
+                        >
+                          <option>Normal</option>
+                          <option>Low</option>
+                          <option>High</option>
+                          <option>Urgent</option>
+                        </select>
+                      </div>
+                      <div class="col-12">
+                        <label for="request-subject" class="form-label"
+                          >Subject <span class="text-danger">*</span></label
+                        >
+                        <input
+                          id="request-subject"
+                          name="subject"
+                          class="form-control"
+                          type="text"
+                          maxlength="120"
+                          placeholder="Summarize the issue in a few words"
+                          required
+                        />
+                        <div class="invalid-feedback">
+                          Add a short subject for this request.
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <label for="request-description" class="form-label"
+                          >Description <span class="text-danger">*</span></label
+                        >
+                        <textarea
+                          id="request-description"
+                          name="description"
+                          class="form-control"
+                          rows="6"
+                          placeholder="Include what happened, what you expected, and any steps you have already tried."
+                          required
+                        ></textarea>
+                        <div
+                          class="d-flex justify-content-between flex-wrap gap-2 mt-1"
+                        >
+                          <div
+                            class="invalid-feedback"
+                            id="description-feedback"
+                          >
+                            Add a few details so the support team can
+                            investigate.
+                          </div>
+                          <span class="form-text ms-auto"
+                            >Avoid sharing passwords or payment details.</span
+                          >
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <label for="request-attachment" class="form-label"
+                          >Attachments
+                          <span class="text-muted fw-normal"
+                            >(optional)</span
+                          ></label
+                        >
+                        <label
+                          for="request-attachment"
+                          class="d-flex flex-wrap align-items-center gap-3 rounded border border-dashed p-3 cursor-pointer"
+                        >
+                          <div>
+                            <span
+                              class="avatar avatar-md bg-color-2 text-black rounded"
+                              ><i
+                                class="ri-upload-cloud-2-line fs-20"
+                                aria-hidden="true"
+                              ></i>
+                            </span>
+                          </div>
+                          <span class="flex-fill"
+                            ><strong class="fs-13 d-block"
+                              >Add screenshots or files</strong
+                            ><span class="text-muted fs-12"
+                              >PNG, JPG, PDF, or TXT up to 10 MB each</span
+                            ></span
+                          >
+                          <span class="btn btn-sm btn-light">Browse</span>
+                          <input
+                            id="request-attachment"
+                            name="attachments"
+                            type="file"
+                            class="visually-hidden"
+                            multiple
+                            accept="image/png,image/jpeg,application/pdf,text/plain"
+                          />
+                        </label>
+                        <div
+                          id="attachment-list"
+                          class="text-muted fs-12 mt-2"
+                          aria-live="polite"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="card custom-card mb-3">
+                  <div class="card-header">
+                    <div>
+                      <h2 class="card-title mb-1">Routing &amp; ownership</h2>
+                      <span class="text-muted fs-12"
+                        >Choose where this request should go</span
+                      >
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="row g-3">
+                      <div class="col-md-6">
+                        <label for="request-team" class="form-label"
+                          >Support team</label
+                        >
+                        <select
+                          id="request-team"
+                          name="team"
+                          data-trigger
+                          class="form-select"
+                        >
+                          <option>Customer support</option>
+                          <option>Billing team</option>
+                          <option>Technical support</option>
+                          <option>Account security</option>
+                        </select>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="request-assignee" class="form-label"
+                          >Assign to</label
+                        >
+                        <select
+                          id="request-assignee"
+                          data-trigger
+                          name="assignee"
+                          class="form-select"
+                        >
+                          <option value="">Assign later</option>
+                          <option>Priya Nair</option>
+                          <option>Daniel Kim</option>
+                          <option>Mia Chen</option>
+                          <option>Owen Brooks</option>
+                        </select>
+                      </div>
+                      <div class="col-12">
+                        <label for="request-tags" class="form-label"
+                          >Tags
+                          <span class="text-muted fw-normal"
+                            >(optional)</span
+                          ></label
+                        ><input
+                          id="request-tags"
+                          name="tags"
+                          class="form-control"
+                          type="text"
+                          placeholder="Add tags separated by commas"
+                        /><span class="form-text"
+                          >Examples: login, onboarding, invoice</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="card-footer d-flex align-items-center justify-content-between flex-wrap gap-2"
+                  >
+                    <span class="text-muted fs-12"
+                      ><i
+                        class="ri-information-line me-1"
+                        aria-hidden="true"
+                      ></i
+                      >Required fields are marked with an asterisk.</span
+                    >
+                    <div class="d-flex gap-2">
+                      <a href="tickets.html" class="btn btn-light">Cancel</a
+                      ><button type="submit" class="btn btn-dark">
+                        <i class="ri-add-line me-1" aria-hidden="true"></i
+                        >Create ticket
+                      </button>
+                    </div>
+                  </div>
+                </section>
+                <div
+                  id="create-ticket-feedback"
+                  class="alert alert-success d-none"
+                  role="status"
+                  aria-live="polite"
+                ></div>
+              </form>
+            </div>
+
+            <aside class="col-xl-4" aria-label="Ticket creation guidance">
+              <section class="card custom-card mb-3">
+                <div class="card-header">
+                  <h2 class="card-title mb-0">A good request includes</h2>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex gap-3 mb-3">
+                    <span
+                      class="avatar avatar-sm bg-success-transparent text-success rounded-circle"
+                      ><i class="ri-checkbox-circle-line fs-16"></i
+                    ></span>
+                    <div>
+                      <strong class="fs-13 d-block">A clear subject</strong
+                      ><span class="text-muted fs-12"
+                        >Describe the result you need or the issue you
+                        see.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="d-flex gap-3 mb-3">
+                    <span
+                      class="avatar avatar-sm bg-success-transparent text-success rounded-circle"
+                      ><i class="ri-checkbox-circle-line fs-16"></i
+                    ></span>
+                    <div>
+                      <strong class="fs-13 d-block">Steps to reproduce</strong
+                      ><span class="text-muted fs-12"
+                        >Tell us what you clicked and what happened next.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="d-flex gap-3">
+                    <span
+                      class="avatar avatar-sm bg-success-transparent text-success rounded-circle"
+                      ><i class="ri-checkbox-circle-line fs-16"></i
+                    ></span>
+                    <div>
+                      <strong class="fs-13 d-block">Helpful screenshots</strong
+                      ><span class="text-muted fs-12"
+                        >Include an error message or screen if available.</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="card custom-card mb-3 overflow-hidden">
+                <div class="card-body p-4">
+                  <span
+                    class="avatar avatar-lg bg-info-transparent text-info rounded mb-3"
+                    ><i class="ri-timer-flash-line fs-22"></i
+                  ></span>
+                  <h2 class="fs-16 fw-semibold mb-2">What happens next?</h2>
+                  <p class="text-muted fs-13 mb-3">
+                    Your request is routed to the right team. An agent will
+                    review it and follow up by email.
+                  </p>
+                  <div class="border rounded">
+                    <div
+                      class="d-flex justify-content-between align-items-center py-2 px-3"
+                    >
+                      <span class="text-muted fs-13"
+                        >Typical first response</span
+                      ><strong class="fs-13">Within 2 hours</strong>
+                    </div>
+                    <div
+                      class="d-flex justify-content-between align-items-center py-2 px-3 border-top"
+                    >
+                      <span class="text-muted fs-13">Urgent requests</span
+                      ><strong class="fs-13 text-danger">Prioritized</strong>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="card custom-card">
+                <div class="card-header">
+                  <h2 class="card-title mb-0">Need a quick answer?</h2>
+                </div>
+                <div class="card-body">
+                  <p class="text-muted fs-13">
+                    The help center may already have the solution.
+                  </p>
+                  <a href="faq's.html" class="btn btn-light w-100"
+                    >Browse help articles
+                    <i class="ri-arrow-right-line ms-1" aria-hidden="true"></i
+                  ></a>
+                </div>
+              </section>
+            </aside>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"-->
+    <script src="../assets/js/ticket-create.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+    <!-- include appearance-customizer-scripts.html"-->
+  </body>
+</html>

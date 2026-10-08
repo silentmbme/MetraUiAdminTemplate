@@ -1,0 +1,407 @@
+<!-- include document-head.html"-->
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">API keys</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">Applications</li>
+            <li class="breadcrumb-item active" aria-current="page">API keys</li>
+          </ol>
+        </div>
+        <div class="container-fluid" id="api-keys-page">
+          <div class="row g-3 mb-4">
+            <div class="col-sm-4">
+              <section class="card custom-card mb-0">
+                <div class="card-body d-flex align-items-center gap-3">
+                  <span class="avatar avatar-lg bg-color-1 text-black rounded"
+                    ><i class="ri-key-2-line fs-22" aria-hidden="true"></i
+                  ></span>
+                  <div>
+                    <p class="text-muted fs-12 mb-1">Active keys</p>
+                    <strong class="fs-22 fw-semibold" id="api-active-count"
+                      >0</strong
+                    >
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-sm-4">
+              <section class="card custom-card mb-0">
+                <div class="card-body d-flex align-items-center gap-3">
+                  <span class="avatar avatar-lg bg-color-2 text-black rounded"
+                    ><i class="ri-lock-line fs-22" aria-hidden="true"></i
+                  ></span>
+                  <div>
+                    <p class="text-muted fs-12 mb-1">Revoked keys</p>
+                    <strong class="fs-22 fw-semibold" id="api-revoked-count"
+                      >0</strong
+                    >
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-sm-4">
+              <section class="card custom-card mb-0">
+                <div class="card-body d-flex align-items-center gap-3">
+                  <span class="avatar avatar-lg bg-color-3 text-black rounded"
+                    ><i class="ri-stack-line fs-22" aria-hidden="true"></i
+                  ></span>
+                  <div>
+                    <p class="text-muted fs-12 mb-1">Total keys</p>
+                    <strong class="fs-22 fw-semibold" id="api-total-count"
+                      >0</strong
+                    >
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div
+            class="alert alert-info text-dark d-flex gap-2 align-items-start mb-4"
+            role="note"
+          >
+            <i class="ri-information-line fs-18" aria-hidden="true"></i>
+            <div class="fs-13">
+              <strong>Demo workspace</strong>
+              <p class="mb-0">
+                Keys created here do not authenticate real API requests. Changes
+                last for this session. A new secret is shown only once.
+              </p>
+            </div>
+          </div>
+          <section class="card custom-card">
+            <div class="card-header justify-content-between flex-wrap gap-3">
+              <h2 class="card-title mb-0">Your keys</h2>
+              <div class="d-flex flex-wrap gap-2">
+                <input
+                  class="form-control form-control-sm w-auto"
+                  type="search"
+                  id="api-search"
+                  placeholder="Search key names"
+                  aria-label="Search API keys"
+                />
+                <select
+                  class="form-select form-select-sm w-auto"
+                  data-trigger
+                  id="api-status"
+                  aria-label="Filter key status"
+                >
+                  <option value="all">All statuses</option>
+                  <option value="active">Active</option>
+                  <option value="revoked">Revoked</option></select
+                ><select
+                  class="form-select form-select-sm w-auto"
+                  data-trigger
+                  id="api-environment"
+                  aria-label="Filter environment"
+                >
+                  <option value="all">All environments</option>
+                  <option>Production</option>
+                  <option>Staging</option>
+                  <option>Development</option></select
+                ><select
+                  class="form-select form-select-sm w-auto"
+                  data-trigger
+                  id="api-page-size"
+                  aria-label="Keys per page"
+                >
+                  <option value="5">5 per page</option>
+                  <option value="10">10 per page</option>
+                  <option value="20">20 per page</option>
+                </select>
+                <button class="btn btn-dark" type="button" id="api-create-open">
+                  <i class="ri-add-line me-1" aria-hidden="true"></i>Create API
+                  key
+                </button>
+              </div>
+            </div>
+            <div class="card-body p-0">
+              <div class="table-responsive">
+                <table class="table table-hover text-nowrap mb-0">
+                  <thead>
+                    <tr>
+                      <th scope="col" class="ps-4" aria-sort="none">
+                        <button
+                          type="button"
+                          class="btn btn-link text-muted text-decoration-none p-0 fs-12"
+                          data-api-sort="name"
+                        >
+                          Name
+                          <i
+                            class="ri-arrow-up-down-line"
+                            aria-hidden="true"
+                          ></i>
+                        </button>
+                      </th>
+                      <th scope="col" aria-sort="none">
+                        <button
+                          type="button"
+                          class="btn btn-link text-muted text-decoration-none p-0 fs-12"
+                          data-api-sort="masked"
+                        >
+                          Key
+                          <i
+                            class="ri-arrow-up-down-line"
+                            aria-hidden="true"
+                          ></i>
+                        </button>
+                      </th>
+                      <th scope="col" aria-sort="none">
+                        <button
+                          type="button"
+                          class="btn btn-link text-muted text-decoration-none p-0 fs-12"
+                          data-api-sort="environment"
+                        >
+                          Environment
+                          <i
+                            class="ri-arrow-up-down-line"
+                            aria-hidden="true"
+                          ></i>
+                        </button>
+                      </th>
+                      <th scope="col" aria-sort="none">
+                        <button
+                          type="button"
+                          class="btn btn-link text-muted text-decoration-none p-0 fs-12"
+                          data-api-sort="permission"
+                        >
+                          Permissions
+                          <i
+                            class="ri-arrow-up-down-line"
+                            aria-hidden="true"
+                          ></i>
+                        </button>
+                      </th>
+                      <th scope="col" aria-sort="none">
+                        <button
+                          type="button"
+                          class="btn btn-link text-muted text-decoration-none p-0 fs-12"
+                          data-api-sort="created"
+                        >
+                          Created
+                          <i
+                            class="ri-arrow-up-down-line"
+                            aria-hidden="true"
+                          ></i>
+                        </button>
+                      </th>
+                      <th scope="col" aria-sort="none">
+                        <button
+                          type="button"
+                          class="btn btn-link text-muted text-decoration-none p-0 fs-12"
+                          data-api-sort="lastUsed"
+                        >
+                          Last used
+                          <i
+                            class="ri-arrow-up-down-line"
+                            aria-hidden="true"
+                          ></i>
+                        </button>
+                      </th>
+                      <th scope="col" aria-sort="none">
+                        <button
+                          type="button"
+                          class="btn btn-link text-muted text-decoration-none p-0 fs-12"
+                          data-api-sort="status"
+                        >
+                          Status
+                          <i
+                            class="ri-arrow-up-down-line"
+                            aria-hidden="true"
+                          ></i>
+                        </button>
+                      </th>
+                      <th scope="col" class="text-end pe-4">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody id="api-key-rows"></tbody>
+                </table>
+              </div>
+              <div class="text-center text-muted p-5" id="api-empty" hidden>
+                <i class="ri-key-2-line fs-24" aria-hidden="true"></i>
+                <p class="mt-2 mb-0">No keys match your search.</p>
+              </div>
+            </div>
+            <div
+              class="card-footer d-flex justify-content-between align-items-center flex-wrap gap-2"
+            >
+              <span
+                class="text-muted fs-12"
+                id="api-page-count"
+                role="status"
+                aria-live="polite"
+              ></span>
+              <div class="d-flex gap-2">
+                <button
+                  class="btn btn-light btn-sm"
+                  type="button"
+                  id="api-page-prev"
+                >
+                  Previous</button
+                ><button
+                  class="btn btn-light btn-sm"
+                  type="button"
+                  id="api-page-next"
+                >
+                  Next
+                </button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <div
+      class="modal fade"
+      id="api-create-modal"
+      tabindex="-1"
+      aria-labelledby="api-create-title"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-16 fw-semibold" id="api-create-title">
+              Create API key
+            </h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <form id="api-create-form">
+            <div class="modal-body">
+              <div class="mb-3">
+                <label class="form-label" for="api-key-name">Key name</label
+                ><input
+                  class="form-control"
+                  id="api-key-name"
+                  placeholder="e.g. Staging integration"
+                  required
+                  maxlength="60"
+                />
+              </div>
+              <label class="form-label" for="api-key-permission"
+                >Permissions</label
+              >
+              <select class="form-select" id="api-key-permission" data-trigger>
+                <option value="Read only">Read only</option>
+                <option value="Read and write">Read and write</option></select
+              ><label class="form-label mt-3" for="api-key-environment"
+                >Environment</label
+              ><select class="form-select" id="api-key-environment">
+                <option>Development</option>
+                <option>Staging</option>
+                <option>Production</option>
+              </select>
+              <p class="text-muted fs-12 mt-3 mb-0">
+                Use a descriptive name to identify where this key is used.
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button
+                class="btn btn-light"
+                type="button"
+                data-bs-dismiss="modal"
+              >
+                Cancel</button
+              ><button class="btn btn-dark" type="submit">Create key</button>
+            </div>
+          </form>
+          <div id="api-secret-panel" hidden>
+            <div class="modal-body">
+              <div class="alert alert-warning fs-13">
+                Copy this demo secret now. It cannot be viewed again after
+                closing this dialog.
+              </div>
+              <label class="form-label" for="api-secret">Your new secret</label>
+              <div class="input-group">
+                <input class="form-control" id="api-secret" readonly /><button
+                  class="btn btn-primary"
+                  type="button"
+                  id="api-copy-secret"
+                >
+                  Copy
+                </button>
+              </div>
+              <p
+                class="text-muted fs-12 mt-2 mb-0"
+                id="api-copy-feedback"
+                role="status"
+                aria-live="polite"
+              ></p>
+            </div>
+            <div class="modal-footer">
+              <button
+                class="btn btn-primary"
+                type="button"
+                data-bs-dismiss="modal"
+              >
+                Done
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="api-revoke-modal"
+      tabindex="-1"
+      aria-labelledby="api-revoke-title"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-16 fw-semibold" id="api-revoke-title">
+              Revoke API key?
+            </h2>
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p class="mb-2">Revoke <strong id="api-revoke-name"></strong>?</p>
+            <p class="text-muted fs-13 mb-0">
+              The key will be marked as revoked in this demo. This cannot be
+              undone in the current session.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-light" type="button" data-bs-dismiss="modal">
+              Keep key</button
+            ><button
+              class="btn btn-danger"
+              type="button"
+              id="api-revoke-confirm"
+            >
+              Revoke key
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- include common-scripts.html"-->
+    <script src="../assets/js/api-key.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+    <!-- include appearance-customizer-scripts.html"-->
+  </body>
+</html>

@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme-color="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Verify your account | NexoraUI</title>
+    <meta
+      name="description"
+      content="Enter the verification code to continue to your NexoraUI workspace."
+    />
+    <link
+      rel="icon"
+      href="../assets/images/brand-logos/favicon.ico?v=2"
+      type="image/x-icon"
+    />
+    <link
+      id="style"
+      href="../assets/libs/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="../assets/css/demo.css" rel="stylesheet" />
+    <link href="../assets/css/icons.css" rel="stylesheet" />
+    <script src="../assets/js/authentication.js"></script>
+  </head>
+
+  <body class="password-create-page password-create-cover two-step-page">
+    <main class="password-cover-shell">
+      <section class="password-cover-form-side">
+        <div class="card custom-card password-cover-form-inner shadow-none">
+          <div class="card-body">
+            <a
+              class="password-brand"
+              href="index.html"
+              aria-label="NexoraUI home"
+            >
+              <picture class="auth-brand-logos"
+                ><img
+                  class="auth-logo-light"
+                  src="../assets/images/brand-logos/desktop-logo.png"
+                  alt="NexoraUI" /><img
+                  class="auth-logo-dark"
+                  src="../assets/images/brand-logos/desktop-dark.png"
+                  alt="NexoraUI"
+              /></picture>
+            </a>
+
+            <div class="two-step-heading">
+              <div>
+                <h1 id="verification-title">Verify your account</h1>
+                <p class="password-intro">
+                  Enter the 4-digit code sent to your registered email address.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="two-step-code"
+              role="group"
+              aria-label="4-digit verification code"
+            >
+              <input
+                class="form-control text-center"
+                id="one"
+                type="text"
+                inputmode="numeric"
+                autocomplete="one-time-code"
+                maxlength="1"
+                aria-label="First verification digit"
+              />
+              <input
+                class="form-control text-center"
+                id="two"
+                type="text"
+                inputmode="numeric"
+                maxlength="1"
+                aria-label="Second verification digit"
+              />
+              <input
+                class="form-control text-center"
+                id="three"
+                type="text"
+                inputmode="numeric"
+                maxlength="1"
+                aria-label="Third verification digit"
+              />
+              <input
+                class="form-control text-center"
+                id="four"
+                type="text"
+                inputmode="numeric"
+                maxlength="1"
+                aria-label="Fourth verification digit"
+              />
+            </div>
+
+            <div class="two-step-resend">
+              <span class="text-muted fs-12">Didn't receive a code?</span>
+              <a href="mail.html">Resend code</a>
+            </div>
+
+            <a class="btn btn-primary w-100 btn-lg" href="index.html">
+              Verify and continue
+              <i class="ri-arrow-right-line ms-1" aria-hidden="true"></i>
+            </a>
+
+            <p class="two-step-security-note">
+              <i class="ri-lock-2-line me-1" aria-hidden="true"></i>
+              Keep your verification code private.
+            </p>
+
+            <div class="password-back-link">
+              <a href="sign-in-cover.html">
+                <i class="ri-arrow-left-line me-1" aria-hidden="true"></i>
+                Back to sign in
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <footer class="password-page-footer">
+          &copy; <span data-current-year></span> NexoraUI
+          <span>&middot;</span> Secure account access
+        </footer>
+      </section>
+
+      <aside class="launch-showcase" aria-label="Account security">
+        <div class="launch-showcase-frame" aria-hidden="true"></div>
+        <div class="launch-showcase-inner">
+          <span class="launch-showcase-mark">
+            <i class="ri-shield-check-line" aria-hidden="true"></i>
+          </span>
+          <span class="launch-showcase-kicker">A SECOND LAYER OF SECURITY</span>
+          <h2>Your account is worth protecting.</h2>
+          <p>
+            Verify it is really you before returning to your projects and team
+            workspace.
+          </p>
+          <div class="password-security-note">
+            <i class="ri-lock-2-line" aria-hidden="true"></i>
+            <span>
+              <strong>One-time verification</strong>
+              <small>Never share your code with anyone.</small>
+            </span>
+          </div>
+        </div>
+        <span class="launch-showcase-caption">
+          <i class="ri-shield-check-line me-1" aria-hidden="true"></i>
+          Secure access to work that matters
+        </span>
+      </aside>
+    </main>
+
+    <script src="../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/two-step-verification.js"></script>
+    <script>
+      document.querySelectorAll("[data-current-year]").forEach((element) => {
+        element.textContent = String(new Date().getFullYear());
+      });
+    </script>
+  </body>
+</html>

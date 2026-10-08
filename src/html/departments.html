@@ -1,0 +1,646 @@
+<!-- include document-head.html"-->
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content departments-page">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <div>
+            <h1 class="page-title">Departments &amp; teams</h1>
+          </div>
+          <div class="d-flex align-items-center gap-3 flex-wrap">
+            <ol class="breadcrumb mb-0">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item">
+                <a href="hrm-dashboard.html">HRM</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Departments
+              </li>
+            </ol>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <section class="card custom-card">
+            <div class="card-body py-3 px-4">
+              <div class="row align-items-center g-3">
+                <div class="col-lg-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <span
+                      class="avatar avatar-lg bg-secondary-transparent text-secondary rounded-circle"
+                      ><i class="ri-building-4-line fs-20"></i
+                    ></span>
+                    <div>
+                      <span class="text-muted fs-12">ORGANIZATION</span>
+                      <div class="fs-22 fw-semibold">5 departments</div>
+                      <span class="text-muted fs-12"
+                        >2,486 people across the organization</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-8">
+                  <div class="row g-3">
+                    <div class="col-12 col-sm-4">
+                      <div class="border rounded p-3 h-100">
+                        <span
+                          class="avatar avatar-sm bg-success-transparent text-success avatar-rounded mb-2"
+                          ><i class="ri-team-line fs-16"></i></span
+                        ><span class="text-muted fs-12 d-block"
+                          >Team members</span
+                        ><strong class="fs-18">2,486</strong>
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-4">
+                      <div class="border rounded p-3 h-100">
+                        <span
+                          class="avatar avatar-sm bg-info-transparent text-info avatar-rounded mb-2"
+                          ><i class="ri-user-star-line fs-16"></i></span
+                        ><span class="text-muted fs-12 d-block"
+                          >Department leads</span
+                        ><strong class="fs-18">5</strong>
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-4">
+                      <div class="border rounded p-3 h-100">
+                        <span
+                          class="avatar avatar-sm bg-warning-transparent text-warning avatar-rounded mb-2"
+                          ><i class="ri-briefcase-4-line fs-16"></i></span
+                        ><span class="text-muted fs-12 d-block"
+                          >Open positions</span
+                        ><strong class="fs-18">14</strong>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div class="row">
+            <div class="col-xxl-8">
+              <section class="card custom-card">
+                <div
+                  class="card-header justify-content-between flex-wrap gap-2"
+                >
+                  <div>
+                    <div class="card-title mb-1">Department directory</div>
+                    <span class="text-muted fs-12"
+                      >Department leads, team size, and current hiring
+                      needs</span
+                    >
+                  </div>
+                  <button
+                    class="btn btn-secondary btn-sm"
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#addDepartmentModal"
+                  >
+                    <i class="ri-add-line me-1"></i>Add department
+                  </button>
+                </div>
+                <div class="table-responsive">
+                  <table
+                    class="table table-hover align-middle mb-0"
+                    id="departments-table"
+                  >
+                    <thead>
+                      <tr>
+                        <th scope="col">Department</th>
+                        <th scope="col">Department lead</th>
+                        <th scope="col">Employees</th>
+                        <th scope="col">Open roles</th>
+                        <th scope="col">Main locations</th>
+                        <th scope="col">
+                          <span class="visually-hidden">Staff</span>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="d-flex align-items-center gap-2">
+                            <span
+                              class="avatar avatar-md bg-light text-default rounded"
+                              ><i class="ri-code-s-slash-line fs-18"></i
+                            ></span>
+                            <div>
+                              <span class="fw-semibold"
+                                >Product &amp; Engineering</span
+                              >
+                              <div class="text-muted fs-12">
+                                Product, design, engineering
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="d-flex align-items-center gap-2">
+                            <span class="avatar avatar-sm avatar-rounded"
+                              ><img
+                                src="../assets/images/users/7.jpg"
+                                alt="" /></span
+                            ><span class="fw-medium">Lena Foster</span>
+                          </div>
+                        </td>
+                        <td><strong>824</strong></td>
+                        <td>
+                          <span
+                            class="badge bg-warning-transparent text-warning"
+                            >4 roles</span
+                          >
+                        </td>
+                        <td>New York, London</td>
+                        <td>
+                          <a
+                            href="staff-list.html"
+                            class="btn btn-sm btn-light"
+                            aria-label="View Product and Engineering staff"
+                            ><i class="ri-arrow-right-up-line"></i
+                          ></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex align-items-center gap-2">
+                            <span
+                              class="avatar avatar-md bg-light text-default rounded"
+                              ><i class="ri-settings-3-line fs-18"></i
+                            ></span>
+                            <div>
+                              <span class="fw-semibold">Operations</span>
+                              <div class="text-muted fs-12">
+                                Business and service operations
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="d-flex align-items-center gap-2">
+                            <span class="avatar avatar-sm avatar-rounded"
+                              ><img
+                                src="../assets/images/users/8.jpg"
+                                alt="" /></span
+                            ><span class="fw-medium">Marcus Reed</span>
+                          </div>
+                        </td>
+                        <td><strong>608</strong></td>
+                        <td>
+                          <span
+                            class="badge bg-warning-transparent text-warning"
+                            >3 roles</span
+                          >
+                        </td>
+                        <td>Austin, New York</td>
+                        <td>
+                          <a
+                            href="staff-list.html"
+                            class="btn btn-sm btn-light"
+                            aria-label="View Operations staff"
+                            ><i class="ri-arrow-right-up-line"></i
+                          ></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex align-items-center gap-2">
+                            <span
+                              class="avatar avatar-md bg-light text-default rounded"
+                              ><i class="ri-megaphone-line fs-18"></i
+                            ></span>
+                            <div>
+                              <span class="fw-semibold"
+                                >Sales &amp; Marketing</span
+                              >
+                              <div class="text-muted fs-12">
+                                Growth, brand, and sales
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="d-flex align-items-center gap-2">
+                            <span class="avatar avatar-sm avatar-rounded"
+                              ><img
+                                src="../assets/images/users/9.jpg"
+                                alt="" /></span
+                            ><span class="fw-medium">Victor Gomez</span>
+                          </div>
+                        </td>
+                        <td><strong>462</strong></td>
+                        <td>
+                          <span
+                            class="badge bg-warning-transparent text-warning"
+                            >4 roles</span
+                          >
+                        </td>
+                        <td>New York, London</td>
+                        <td>
+                          <a
+                            href="staff-list.html"
+                            class="btn btn-sm btn-light"
+                            aria-label="View Sales and Marketing staff"
+                            ><i class="ri-arrow-right-up-line"></i
+                          ></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex align-items-center gap-2">
+                            <span
+                              class="avatar avatar-md bg-light text-default rounded"
+                              ><i class="ri-customer-service-2-line fs-18"></i
+                            ></span>
+                            <div>
+                              <span class="fw-semibold">Customer Success</span>
+                              <div class="text-muted fs-12">
+                                Support and customer experience
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="d-flex align-items-center gap-2">
+                            <span class="avatar avatar-sm avatar-rounded"
+                              ><img
+                                src="../assets/images/users/14.jpg"
+                                alt="" /></span
+                            ><span class="fw-medium">Chloe Bennett</span>
+                          </div>
+                        </td>
+                        <td><strong>324</strong></td>
+                        <td>
+                          <span
+                            class="badge bg-warning-transparent text-warning"
+                            >2 roles</span
+                          >
+                        </td>
+                        <td>London, Remote</td>
+                        <td>
+                          <a
+                            href="staff-list.html"
+                            class="btn btn-sm btn-light"
+                            aria-label="View Customer Success staff"
+                            ><i class="ri-arrow-right-up-line"></i
+                          ></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex align-items-center gap-2">
+                            <span
+                              class="avatar avatar-md bg-light text-default rounded"
+                              ><i class="ri-briefcase-4-line fs-18"></i
+                            ></span>
+                            <div>
+                              <span class="fw-semibold"
+                                >General &amp; Administration</span
+                              >
+                              <div class="text-muted fs-12">
+                                Finance, people, legal, workplace
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="d-flex align-items-center gap-2">
+                            <span class="avatar avatar-sm avatar-rounded"
+                              ><img
+                                src="../assets/images/users/18.jpg"
+                                alt="" /></span
+                            ><span class="fw-medium">Nina Park</span>
+                          </div>
+                        </td>
+                        <td><strong>268</strong></td>
+                        <td>
+                          <span
+                            class="badge bg-warning-transparent text-warning"
+                            >1 role</span
+                          >
+                        </td>
+                        <td>New York, London</td>
+                        <td>
+                          <a
+                            href="staff-list.html"
+                            class="btn btn-sm btn-light"
+                            aria-label="View General and Administration staff"
+                            ><i class="ri-arrow-right-up-line"></i
+                          ></a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div
+                  class="card-footer border-top-0 d-flex justify-content-between align-items-center"
+                >
+                  <span class="text-muted fs-12"
+                    >Headcount reflects the current workforce overview</span
+                  ><a href="staff-list.html" class="btn btn-sm btn-light"
+                    >Open staff directory
+                    <i class="ri-arrow-right-line ms-1"></i
+                  ></a>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-xxl-4">
+              <section class="card custom-card mb-3">
+                <div class="card-header justify-content-between">
+                  <div class="card-title">Hiring by department</div>
+                  <span class="badge bg-warning-transparent text-warning"
+                    >14 open</span
+                  >
+                </div>
+                <div class="card-body p-0">
+                  <div
+                    class="d-flex justify-content-between align-items-center p-3 border-bottom"
+                  >
+                    <div>
+                      <div class="fw-semibold fs-13">
+                        Product &amp; Engineering
+                      </div>
+                      <div class="text-muted fs-12">
+                        Software and design roles
+                      </div>
+                    </div>
+                    <span class="fs-18 fw-semibold">4</span>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center p-3 border-bottom"
+                  >
+                    <div>
+                      <div class="fw-semibold fs-13">Sales &amp; Marketing</div>
+                      <div class="text-muted fs-12">
+                        Growth and account roles
+                      </div>
+                    </div>
+                    <span class="fs-18 fw-semibold">4</span>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center p-3 border-bottom"
+                  >
+                    <div>
+                      <div class="fw-semibold fs-13">Operations</div>
+                      <div class="text-muted fs-12">
+                        Regional operations roles
+                      </div>
+                    </div>
+                    <span class="fs-18 fw-semibold">3</span>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center p-3 border-bottom"
+                  >
+                    <div>
+                      <div class="fw-semibold fs-13">Customer Success</div>
+                      <div class="text-muted fs-12">Customer support roles</div>
+                    </div>
+                    <span class="fs-18 fw-semibold">2</span>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center p-3"
+                  >
+                    <div>
+                      <div class="fw-semibold fs-13">
+                        General &amp; Administration
+                      </div>
+                      <div class="text-muted fs-12">Finance role</div>
+                    </div>
+                    <span class="fs-18 fw-semibold">1</span>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <a
+                    href="staff-create.html"
+                    class="btn btn-outline-secondary w-100"
+                    >Add a team member</a
+                  >
+                </div>
+              </section>
+
+              <section class="card custom-card">
+                <div class="card-header justify-content-between">
+                  <div class="card-title">Department leads</div>
+                  <a href="staff-list.html" class="fs-12 fw-medium"
+                    >Directory <i class="ri-arrow-right-line"></i
+                  ></a>
+                </div>
+                <div class="card-body p-0">
+                  <div
+                    class="d-flex align-items-center gap-3 p-3 border-bottom"
+                  >
+                    <span class="avatar avatar-md avatar-rounded"
+                      ><img src="../assets/images/users/7.jpg" alt=""
+                    /></span>
+                    <div class="flex-fill">
+                      <div class="fw-semibold fs-13">Lena Foster</div>
+                      <div class="text-muted fs-12">
+                        Product &amp; Engineering
+                      </div>
+                    </div>
+                    <span class="badge bg-success-transparent text-success"
+                      >Online</span
+                    >
+                  </div>
+                  <div
+                    class="d-flex align-items-center gap-3 p-3 border-bottom"
+                  >
+                    <span class="avatar avatar-md avatar-rounded"
+                      ><img src="../assets/images/users/8.jpg" alt=""
+                    /></span>
+                    <div class="flex-fill">
+                      <div class="fw-semibold fs-13">Marcus Reed</div>
+                      <div class="text-muted fs-12">Operations</div>
+                    </div>
+                    <span class="badge bg-success-transparent text-success"
+                      >Online</span
+                    >
+                  </div>
+                  <div class="d-flex align-items-center gap-3 p-3">
+                    <span class="avatar avatar-md avatar-rounded"
+                      ><img src="../assets/images/users/9.jpg" alt=""
+                    /></span>
+                    <div class="flex-fill">
+                      <div class="fw-semibold fs-13">Victor Gomez</div>
+                      <div class="text-muted fs-12">Sales &amp; Marketing</div>
+                    </div>
+                    <span class="badge bg-light text-muted">Away</span>
+                  </div>
+                  <div class="d-flex align-items-center gap-3 p-3 border-top">
+                    <span class="avatar avatar-md avatar-rounded"
+                      ><img src="../assets/images/users/14.jpg" alt=""
+                    /></span>
+                    <div class="flex-fill">
+                      <div class="fw-semibold fs-13">Chloe Bennett</div>
+                      <div class="text-muted fs-12">Customer Success</div>
+                    </div>
+                    <span class="badge bg-success-transparent text-success"
+                      >Online</span
+                    >
+                  </div>
+                  <div class="d-flex align-items-center gap-3 p-3 border-top">
+                    <span class="avatar avatar-md avatar-rounded"
+                      ><img src="../assets/images/users/18.jpg" alt=""
+                    /></span>
+                    <div class="flex-fill">
+                      <div class="fw-semibold fs-13">Nina Park</div>
+                      <div class="text-muted fs-12">
+                        General &amp; Administration
+                      </div>
+                    </div>
+                    <span class="badge bg-light text-muted">Away</span>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <div
+      class="modal fade"
+      id="addDepartmentModal"
+      tabindex="-1"
+      aria-labelledby="addDepartmentModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div>
+              <h2
+                class="modal-title fs-16 fw-semibold"
+                id="addDepartmentModalLabel"
+              >
+                Add department
+              </h2>
+              <p class="text-muted fs-12 mb-0">
+                Set up a team and assign its reporting lead.
+              </p>
+            </div>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <form>
+            <div class="modal-body">
+              <div class="row g-3">
+                <div class="col-md-8">
+                  <label
+                    for="department-name"
+                    class="form-label fw-medium fs-13"
+                    >Department name <span class="text-danger">*</span></label
+                  >
+                  <input
+                    class="form-control"
+                    id="department-name"
+                    name="departmentName"
+                    placeholder="e.g. Business Intelligence"
+                    required
+                  />
+                </div>
+                <div class="col-md-4">
+                  <label
+                    for="department-code"
+                    class="form-label fw-medium fs-13"
+                    >Department code</label
+                  >
+                  <input
+                    class="form-control"
+                    id="department-code"
+                    name="departmentCode"
+                    placeholder="e.g. BI-06"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label
+                    for="department-lead"
+                    class="form-label fw-medium fs-13"
+                    >Department lead</label
+                  >
+                  <select
+                    class="form-select"
+                    data-trigger
+                    id="department-lead"
+                    name="departmentLead"
+                  >
+                    <option value="" selected>Select a lead</option>
+                    <option>Lena Foster</option>
+                    <option>Marcus Reed</option>
+                    <option>Victor Gomez</option>
+                    <option>Chloe Bennett</option>
+                    <option>Nina Park</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label
+                    for="department-location"
+                    class="form-label fw-medium fs-13"
+                    >Primary location</label
+                  >
+                  <select
+                    class="form-select"
+                    data-trigger
+                    id="department-location"
+                    name="departmentLocation"
+                  >
+                    <option value="" selected>Select a location</option>
+                    <option>New York</option>
+                    <option>London</option>
+                    <option>Austin</option>
+                    <option>Remote</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label
+                    for="department-description"
+                    class="form-label fw-medium fs-13"
+                    >Description</label
+                  >
+                  <textarea
+                    class="form-control"
+                    id="department-description"
+                    name="departmentDescription"
+                    rows="3"
+                    placeholder="What does this department do?"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-light"
+                data-bs-dismiss="modal"
+              >
+                Cancel
+              </button>
+              <button
+                type="button"
+                class="btn btn-dark"
+                data-bs-dismiss="modal"
+              >
+                Create department
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- include common-scripts.html"-->
+    <script src="../assets/js/app-interactions.js"></script>
+    <!-- include appearance-customizer-scripts.html"-->
+  </body>
+</html>

@@ -1,0 +1,787 @@
+<!-- include document-head.html"-->
+  </head>
+
+  <body class="profile-settings-page">
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Profile settings</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Pages</a></li>
+            <li class="breadcrumb-item"><a href="profile.html">Profile</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Settings</li>
+          </ol>
+        </div>
+        <div class="container-fluid profile-settings-workspace">
+          <div class="row g-3 align-items-start">
+            <div class="col-xxl-3 col-xl-4">
+              <aside class="profile-settings-sidebar">
+                <section class="card custom-card settings-identity-card">
+                  <div class="card-body">
+                    <div class="settings-identity">
+                      <span class="settings-avatar"
+                        ><img
+                          id="settings-avatar-preview"
+                          src="../assets/images/users/12.jpg"
+                          alt="Liam Carter" /><span aria-label="Online"></span
+                      ></span>
+                      <div>
+                        <h2>Liam Carter</h2>
+                        <span>Senior Product Manager</span
+                        ><small
+                          ><i
+                            class="ri-checkbox-circle-fill me-1"
+                            aria-hidden="true"
+                          ></i
+                          >Account active</small
+                        >
+                      </div>
+                    </div>
+                    <a href="profile.html" class="btn btn-light w-100 mt-3"
+                      ><i class="ri-eye-line me-1" aria-hidden="true"></i>View
+                      profile</a
+                    >
+                  </div>
+                </section>
+                <nav
+                  class="card custom-card settings-nav-card"
+                  aria-label="Profile settings sections"
+                >
+                  <div class="card-body">
+                    <span class="settings-nav-label">Account settings</span>
+                    <div
+                      class="nav nav-pills flex-column"
+                      id="profile-settings-tabs"
+                      role="tablist"
+                      aria-orientation="vertical"
+                    >
+                      <button
+                        class="nav-link active"
+                        id="settings-personal-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#settings-personal"
+                        type="button"
+                        role="tab"
+                        aria-controls="settings-personal"
+                        aria-selected="true"
+                      >
+                        <i class="ri-user-settings-line" aria-hidden="true"></i
+                        ><span>Personal information</span
+                        ><i
+                          class="ri-arrow-right-s-line settings-nav-arrow"
+                          aria-hidden="true"
+                        ></i>
+                      </button>
+                      <button
+                        class="nav-link"
+                        id="settings-security-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#settings-security"
+                        type="button"
+                        role="tab"
+                        aria-controls="settings-security"
+                        aria-selected="false"
+                      >
+                        <i class="ri-shield-keyhole-line" aria-hidden="true"></i
+                        ><span>Sign-in &amp; security</span
+                        ><i
+                          class="ri-arrow-right-s-line settings-nav-arrow"
+                          aria-hidden="true"
+                        ></i>
+                      </button>
+                      <button
+                        class="nav-link"
+                        id="settings-notifications-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#settings-notifications"
+                        type="button"
+                        role="tab"
+                        aria-controls="settings-notifications"
+                        aria-selected="false"
+                      >
+                        <i class="ri-notification-3-line" aria-hidden="true"></i
+                        ><span>Notifications</span
+                        ><i
+                          class="ri-arrow-right-s-line settings-nav-arrow"
+                          aria-hidden="true"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                </nav>
+                <div class="settings-security-note">
+                  <span><i class="ri-lock-line" aria-hidden="true"></i></span>
+                  <div>
+                    <strong>Your account is protected</strong>
+                    <p>
+                      Review your security options regularly to help keep your
+                      workspace safe.
+                    </p>
+                  </div>
+                </div>
+              </aside>
+            </div>
+
+            <div class="col-xxl-9 col-xl-8">
+              <div class="tab-content profile-settings-content">
+                <section
+                  class="tab-pane p-0 border-0 fade show active"
+                  id="settings-personal"
+                  role="tabpanel"
+                  aria-labelledby="settings-personal-tab"
+                  tabindex="0"
+                >
+                  <form id="profile-settings-form">
+                    <article class="card custom-card settings-form-card">
+                      <div class="card-header">
+                        <div>
+                          <h2 class="card-title mb-1">Personal information</h2>
+                          <span class="text-muted fs-12"
+                            >Keep your account details accurate and up to
+                            date.</span
+                          >
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <div class="settings-photo-row">
+                          <span class="settings-photo"
+                            ><img
+                              id="settings-photo-preview"
+                              src="../assets/images/users/12.jpg"
+                              alt="Liam Carter profile photo"
+                          /></span>
+                          <div class="settings-photo-copy">
+                            <strong>Profile photo</strong
+                            ><span
+                              >Use a clear square image. JPG or PNG, up to 5
+                              MB.</span
+                            >
+                            <div class="d-flex gap-2 mt-2">
+                              <label
+                                for="settings-photo-input"
+                                class="btn btn-sm btn-dark mb-0"
+                                ><i
+                                  class="ri-upload-2-line me-1"
+                                  aria-hidden="true"
+                                ></i
+                                >Upload photo</label
+                              ><button
+                                class="btn btn-sm btn-light"
+                                type="button"
+                                id="settings-photo-remove"
+                              >
+                                Remove
+                              </button>
+                            </div>
+                            <input
+                              class="visually-hidden"
+                              type="file"
+                              id="settings-photo-input"
+                              accept="image/png,image/jpeg,image/webp"
+                            />
+                          </div>
+                        </div>
+                        <hr class="settings-divider" />
+                        <div class="settings-section-heading">
+                          <span>PROFILE DETAILS</span>
+                          <p>These details appear on your workspace profile.</p>
+                        </div>
+                        <div class="row g-3">
+                          <div class="col-md-6">
+                            <label class="form-label" for="profile-user-name"
+                              >Full name</label
+                            ><input
+                              class="form-control"
+                              id="profile-user-name"
+                              name="name"
+                              type="text"
+                              value="Liam Carter"
+                              autocomplete="name"
+                              required
+                            />
+                          </div>
+                          <div class="col-md-6">
+                            <label class="form-label" for="profile-designation"
+                              >Job title</label
+                            ><input
+                              class="form-control"
+                              id="profile-designation"
+                              name="designation"
+                              type="text"
+                              value="Senior Product Manager"
+                              autocomplete="organization-title"
+                            />
+                          </div>
+                          <div class="col-md-6">
+                            <label class="form-label" for="profile-email"
+                              >Email address</label
+                            ><input
+                              class="form-control"
+                              id="profile-email"
+                              name="email"
+                              type="email"
+                              value="liam.carter@nexora.io"
+                              autocomplete="email"
+                              required
+                            />
+                          </div>
+                          <div class="col-md-6">
+                            <label class="form-label" for="profile-phn-no"
+                              >Phone number</label
+                            ><input
+                              class="form-control"
+                              id="profile-phn-no"
+                              name="phone"
+                              type="tel"
+                              value="+1 (212) 555-0186"
+                              autocomplete="tel"
+                            />
+                          </div>
+                          <div class="col-md-6">
+                            <label class="form-label" for="profile-department"
+                              >Department</label
+                            ><select
+                              class="form-select"
+                              id="profile-department"
+                              data-trigger
+                            >
+                              <option>Product &amp; Design</option>
+                              <option>Engineering</option>
+                              <option>Marketing</option>
+                              <option>Customer Success</option>
+                              <option>Operations</option>
+                            </select>
+                          </div>
+                          <div class="col-md-6">
+                            <label class="form-label" for="profile-website"
+                              >Website</label
+                            ><input
+                              class="form-control"
+                              id="profile-website"
+                              name="website"
+                              type="url"
+                              placeholder="https://yourwebsite.com"
+                            />
+                          </div>
+                          <div class="col-md-6">
+                            <label class="form-label" for="profile-language"
+                              >Language</label
+                            ><select
+                              class="form-select"
+                              id="profile-language"
+                              data-trigger
+                              name="language"
+                            >
+                              <option value="en" selected>English (US)</option>
+                              <option value="ar">Arabic</option>
+                              <option value="ko">Korean</option>
+                              <option value="fr">French</option>
+                              <option value="es">Spanish</option>
+                            </select>
+                          </div>
+                          <div class="col-md-6">
+                            <label class="form-label" for="profile-timezone"
+                              >Time zone</label
+                            ><select
+                              class="form-select"
+                              data-trigger
+                              id="profile-timezone"
+                              name="timezone"
+                            >
+                              <option value="America/New_York" selected>
+                                Eastern Time - New York (UTC -4)
+                              </option>
+                              <option value="America/Chicago">
+                                Central Time - Chicago (UTC -5)
+                              </option>
+                              <option value="America/Denver">
+                                Mountain Time - Denver (UTC -6)
+                              </option>
+                              <option value="America/Los_Angeles">
+                                Pacific Time - Los Angeles (UTC -7)
+                              </option>
+                              <option value="Europe/London">
+                                Greenwich Mean Time - London (UTC +1)
+                              </option>
+                              <option value="Europe/Paris">
+                                Central European Time - Paris (UTC +2)
+                              </option>
+                              <option value="Asia/Dubai">
+                                Gulf Standard Time - Dubai (UTC +4)
+                              </option>
+                              <option value="Asia/Kolkata">
+                                India Standard Time - Kolkata (UTC +5:30)
+                              </option>
+                              <option value="Asia/Singapore">
+                                Singapore Standard Time (UTC +8)
+                              </option>
+                              <option value="Asia/Tokyo">
+                                Japan Standard Time - Tokyo (UTC +9)
+                              </option>
+                              <option value="Australia/Sydney">
+                                Australian Eastern Time - Sydney (UTC +10)
+                              </option>
+                            </select>
+                          </div>
+                          <div class="col-12">
+                            <label class="form-label" for="profile-address"
+                              >Location</label
+                            ><input
+                              class="form-control"
+                              id="profile-address"
+                              name="location"
+                              type="text"
+                              value="New York, United States"
+                              autocomplete="address-level2"
+                            />
+                          </div>
+                          <div class="col-12">
+                            <label class="form-label" for="profile-bio"
+                              >About</label
+                            ><textarea
+                              class="form-control"
+                              id="profile-bio"
+                              name="bio"
+                              rows="4"
+                              maxlength="300"
+                              placeholder="Tell your team a little about yourself"
+                            >
+I lead product teams from early discovery through launch, turning customer needs into clear, useful software.</textarea
+                            >
+                            <div class="d-flex justify-content-between mt-1">
+                              <small class="text-muted"
+                                >A short introduction for your profile.</small
+                              ><small class="text-muted"
+                                ><span id="profile-bio-count">0</span
+                                >/300</small
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="card-footer d-flex align-items-center justify-content-between flex-wrap gap-2"
+                      >
+                        <span
+                          class="settings-feedback text-muted fs-12"
+                          id="profile-settings-feedback"
+                          role="status"
+                          aria-live="polite"
+                        ></span>
+                        <div class="d-flex gap-2">
+                          <button class="btn btn-light" type="reset">
+                            Discard changes</button
+                          ><button class="btn btn-primary" type="submit">
+                            <i class="ri-save-line me-1" aria-hidden="true"></i
+                            >Save profile
+                          </button>
+                        </div>
+                      </div>
+                    </article>
+                  </form>
+                </section>
+
+                <section
+                  class="tab-pane p-0 border-0 fade"
+                  id="settings-security"
+                  role="tabpanel"
+                  aria-labelledby="settings-security-tab"
+                  tabindex="0"
+                >
+                  <article class="card custom-card settings-form-card">
+                    <div class="card-header">
+                      <div>
+                        <h2 class="card-title mb-1">Sign-in &amp; security</h2>
+                        <span class="text-muted fs-12"
+                          >Manage your password and account protection.</span
+                        >
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <div class="settings-section-heading">
+                        <span>CHANGE PASSWORD</span>
+                        <p>Use a unique password with at least 8 characters.</p>
+                      </div>
+                      <form id="profile-password-form" class="row g-3">
+                        <div class="col-md-6">
+                          <label class="form-label" for="profile-new-password"
+                            >New password</label
+                          >
+                          <div class="input-group">
+                            <input
+                              class="form-control"
+                              id="profile-new-password"
+                              type="password"
+                              minlength="8"
+                              autocomplete="new-password"
+                              placeholder="Enter a new password"
+                              required
+                            /><button
+                              class="btn btn-light settings-password-toggle"
+                              type="button"
+                              data-password-target="profile-new-password"
+                              aria-label="Show new password"
+                            >
+                              <i class="ri-eye-line" aria-hidden="true"></i>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <label
+                            class="form-label"
+                            for="profile-confirm-password"
+                            >Confirm new password</label
+                          >
+                          <div class="input-group">
+                            <input
+                              class="form-control"
+                              id="profile-confirm-password"
+                              type="password"
+                              minlength="8"
+                              autocomplete="new-password"
+                              placeholder="Re-enter new password"
+                              required
+                            /><button
+                              class="btn btn-light settings-password-toggle"
+                              type="button"
+                              data-password-target="profile-confirm-password"
+                              aria-label="Show confirmed password"
+                            >
+                              <i class="ri-eye-line" aria-hidden="true"></i>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <p
+                            class="settings-inline-feedback mb-0"
+                            id="profile-password-feedback"
+                            role="status"
+                            aria-live="polite"
+                          ></p>
+                        </div>
+                        <div class="col-12">
+                          <button class="btn btn-primary" type="submit">
+                            <i
+                              class="ri-lock-password-line me-1"
+                              aria-hidden="true"
+                            ></i
+                            >Update password
+                          </button>
+                        </div>
+                      </form>
+                      <hr class="settings-divider" />
+                      <div class="settings-section-heading">
+                        <span>ACCOUNT PROTECTION</span>
+                        <p>Add an extra step to help secure your sign-in.</p>
+                      </div>
+                      <div class="settings-option-list">
+                        <div class="settings-option">
+                          <span
+                            class="settings-option-icon bg-light text-default"
+                            ><i
+                              class="ri-smartphone-line"
+                              aria-hidden="true"
+                            ></i
+                          ></span>
+                          <div>
+                            <strong>Two-step verification</strong>
+                            <p>
+                              Require a verification code when signing in on a
+                              new device.
+                            </p>
+                          </div>
+                          <div class="form-check form-switch">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              role="switch"
+                              id="settings-two-step"
+                              checked
+                            /><label
+                              class="visually-hidden"
+                              for="settings-two-step"
+                              >Enable two-step verification</label
+                            >
+                          </div>
+                        </div>
+                        <div class="settings-option">
+                          <span
+                            class="settings-option-icon bg-light text-default"
+                            ><i class="ri-login-box-line" aria-hidden="true"></i
+                          ></span>
+                          <div>
+                            <strong>New sign-in alerts</strong>
+                            <p>
+                              Get notified when your account is accessed from a
+                              new location.
+                            </p>
+                          </div>
+                          <div class="form-check form-switch">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              role="switch"
+                              id="settings-login-alerts"
+                              checked
+                            /><label
+                              class="visually-hidden"
+                              for="settings-login-alerts"
+                              >Enable new sign-in alerts</label
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="card custom-card settings-danger-card mt-3">
+                    <div
+                      class="card-body d-flex align-items-center justify-content-between flex-wrap gap-3"
+                    >
+                      <div>
+                        <h3>Deactivate account</h3>
+                        <p class="mb-0">
+                          Temporarily disable access to this account and
+                          workspace.
+                        </p>
+                      </div>
+                      <button
+                        class="btn btn-outline-danger"
+                        type="button"
+                        id="settings-deactivate"
+                      >
+                        Deactivate account
+                      </button>
+                    </div>
+                  </article>
+                </section>
+
+                <section
+                  class="tab-pane p-0 border-0 fade"
+                  id="settings-notifications"
+                  role="tabpanel"
+                  aria-labelledby="settings-notifications-tab"
+                  tabindex="0"
+                >
+                  <article class="card custom-card settings-form-card">
+                    <div class="card-header">
+                      <div>
+                        <h2 class="card-title mb-1">
+                          Notification preferences
+                        </h2>
+                        <span class="text-muted fs-12"
+                          >Choose what you hear about and where updates
+                          appear.</span
+                        >
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <div class="settings-section-heading">
+                        <span>DELIVERY CHANNELS</span>
+                        <p>Turn delivery options on or off for this account.</p>
+                      </div>
+                      <div class="settings-option-list">
+                        <div class="settings-option">
+                          <span
+                            class="settings-option-icon bg-light text-default"
+                            ><i
+                              class="ri-notification-3-line"
+                              aria-hidden="true"
+                            ></i
+                          ></span>
+                          <div>
+                            <strong>In-app notifications</strong>
+                            <p>Updates and reminders inside your workspace.</p>
+                          </div>
+                          <div class="form-check form-switch">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              role="switch"
+                              id="settings-in-app"
+                              checked
+                            /><label
+                              class="visually-hidden"
+                              for="settings-in-app"
+                              >In-app notifications</label
+                            >
+                          </div>
+                        </div>
+                        <div class="settings-option">
+                          <span
+                            class="settings-option-icon bg-light text-default"
+                            ><i class="ri-mail-line" aria-hidden="true"></i
+                          ></span>
+                          <div>
+                            <strong>Email updates</strong>
+                            <p>
+                              Activity summaries and important account notices.
+                            </p>
+                          </div>
+                          <div class="form-check form-switch">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              role="switch"
+                              id="settings-email"
+                              checked
+                            /><label
+                              class="visually-hidden"
+                              for="settings-email"
+                              >Email notifications</label
+                            >
+                          </div>
+                        </div>
+                        <div class="settings-option">
+                          <span
+                            class="settings-option-icon bg-light text-default"
+                            ><i class="ri-device-line" aria-hidden="true"></i
+                          ></span>
+                          <div>
+                            <strong>Push notifications</strong>
+                            <p>
+                              Time-sensitive alerts on your desktop and mobile
+                              devices.
+                            </p>
+                          </div>
+                          <div class="form-check form-switch">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              role="switch"
+                              id="settings-push"
+                            /><label class="visually-hidden" for="settings-push"
+                              >Push notifications</label
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <hr class="settings-divider" />
+                      <div class="settings-section-heading">
+                        <span>WHAT TO NOTIFY ME ABOUT</span>
+                        <p>Choose the updates that are useful to you.</p>
+                      </div>
+                      <div class="settings-option-list">
+                        <div class="settings-option">
+                          <span
+                            class="settings-option-icon bg-light text-default"
+                            ><i class="ri-task-line" aria-hidden="true"></i
+                          ></span>
+                          <div>
+                            <strong>Project activity</strong>
+                            <p>
+                              Tasks, comments, assignments, and project
+                              milestones.
+                            </p>
+                          </div>
+                          <div class="form-check form-switch">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              role="switch"
+                              id="settings-projects"
+                              checked
+                            /><label
+                              class="visually-hidden"
+                              for="settings-projects"
+                              >Project notifications</label
+                            >
+                          </div>
+                        </div>
+                        <div class="settings-option">
+                          <span
+                            class="settings-option-icon bg-light text-default"
+                            ><i class="ri-at-line" aria-hidden="true"></i
+                          ></span>
+                          <div>
+                            <strong>Mentions and messages</strong>
+                            <p>
+                              When a teammate mentions you or sends a direct
+                              message.
+                            </p>
+                          </div>
+                          <div class="form-check form-switch">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              role="switch"
+                              id="settings-mentions"
+                              checked
+                            /><label
+                              class="visually-hidden"
+                              for="settings-mentions"
+                              >Mention and message notifications</label
+                            >
+                          </div>
+                        </div>
+                        <div class="settings-option">
+                          <span
+                            class="settings-option-icon bg-light text-default"
+                            ><i
+                              class="ri-shield-check-line"
+                              aria-hidden="true"
+                            ></i
+                          ></span>
+                          <div>
+                            <strong>Security and billing</strong>
+                            <p>
+                              Changes to account security, subscriptions, and
+                              invoices.
+                            </p>
+                          </div>
+                          <div class="form-check form-switch">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              role="switch"
+                              id="settings-security-alerts"
+                              checked
+                            /><label
+                              class="visually-hidden"
+                              for="settings-security-alerts"
+                              >Security and billing notifications</label
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="card-footer d-flex align-items-center justify-content-between flex-wrap gap-2"
+                    >
+                      <span
+                        class="settings-notification-feedback text-muted fs-12"
+                        id="settings-notification-feedback"
+                        role="status"
+                        aria-live="polite"
+                      ></span
+                      ><button
+                        class="btn btn-primary"
+                        type="button"
+                        id="settings-save-notifications"
+                      >
+                        <i class="ri-save-line me-1" aria-hidden="true"></i>Save
+                        preferences
+                      </button>
+                    </div>
+                  </article>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"-->
+    <!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/js/profile-settings.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

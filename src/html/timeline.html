@@ -1,0 +1,552 @@
+<!-- include document-head.html"-->
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Project activity</h1>
+          <ol class="breadcrumb mb-1">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">
+              <a href="projects-list.html">Project</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Activity stream
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid">
+          <section class="card custom-card mb-3 project-team-summary">
+            <div class="card-body p-4">
+              <div class="row align-items-center g-3">
+                <div class="col-xl-6">
+                  <div class="d-flex align-items-start gap-3">
+                    <div>
+                      <span
+                        class="avatar avatar-lg bg-secondary-transparent text-secondary rounded"
+                        ><i class="ri-team-line fs-22"></i
+                      ></span>
+                    </div>
+                    <div class="project-team-intro">
+                      <span
+                        class="badge bg-secondary-transparent text-secondary rounded-pill mb-2"
+                        >ATLAS CLIENT PORTAL</span
+                      >
+                      <div
+                        class="d-flex align-items-center flex-wrap gap-2 mb-1"
+                      >
+                        <h2 class="fs-18 fw-semibold mb-0">
+                          One team, seven specialists
+                        </h2>
+                        <span class="project-team-status"><i></i>Active</span>
+                      </div>
+                      <p class="text-muted fs-13 mb-0">
+                        Product, engineering, QA, security, and client success
+                        aligned around the next portal release.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="row g-2 project-team-summary-stats">
+                    <div class="col-4">
+                      <div class="project-team-stat">
+                        <span class="project-team-stat-icon text-secondary"
+                          ><i class="ri-user-3-line"></i></span
+                        ><span class="text-muted fs-12 d-block mb-2"
+                          >Recent events</span
+                        ><strong>7</strong>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="project-team-stat">
+                        <span class="project-team-stat-icon text-info"
+                          ><i class="ri-node-tree"></i></span
+                        ><span class="text-muted fs-12 d-block mb-2"
+                          >Active this week</span
+                        ><strong>5</strong>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="project-team-stat">
+                        <span class="project-team-stat-icon text-success"
+                          ><i class="ri-calendar-line"></i></span
+                        ><span class="text-muted fs-12 d-block mb-2"
+                          >Latest update</span
+                        ><strong>Sep 26</strong>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="card custom-card mb-3">
+            <div class="card-body py-3">
+              <div class="row align-items-end">
+                <div class="col-md-5">
+                  <label
+                    for="activity-search"
+                    class="form-label fs-12 fw-medium"
+                    >Search activity</label
+                  >
+                  <div class="input-group">
+                    <span class="input-group-text"
+                      ><i class="ri-search-line"></i></span
+                    ><input
+                      id="activity-search"
+                      type="search"
+                      class="form-control"
+                      placeholder="Search people, tasks, or updates"
+                      aria-label="Search project activity"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <label for="activity-type" class="form-label fs-12 fw-medium"
+                    >Activity type</label
+                  >
+                  <select id="activity-type" data-trigger class="form-select">
+                    <option value="all">All activity</option>
+                    <option value="task">Tasks</option>
+                    <option value="milestone">Milestones</option>
+                    <option value="review">Reviews</option>
+                    <option value="file">Files &amp; notes</option>
+                  </select>
+                </div>
+                <div class="col-md-4 text-md-end">
+                  <span
+                    id="activity-filter-count"
+                    class="text-muted fs-12"
+                    role="status"
+                    aria-live="polite"
+                    >Showing 6 recent events</span
+                  >
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div class="row">
+            <div class="col-xxl-8">
+              <section class="card custom-card project-activity-stream">
+                <div
+                  class="card-header justify-content-between flex-wrap gap-2"
+                >
+                  <div class="d-flex align-items-center gap-3">
+                    <div>
+                      <div class="card-title">Activity stream</div>
+                      <span class="text-muted fs-12"
+                        >Most recent project updates first</span
+                      >
+                    </div>
+                  </div>
+                  <span class="badge bg-success-transparent text-success"
+                    ><i class="ri-checkbox-circle-line me-1"></i>Project on
+                    track</span
+                  >
+                </div>
+                <div class="card-body p-4">
+                  <ul
+                    id="project-activity-list"
+                    class="list-unstyled project-activity-list"
+                  >
+                    <li
+                      class="project-activity-item"
+                      data-activity
+                      data-kind="task"
+                      data-search="ava thompson account settings screen progress frontend engineering"
+                    >
+                      <div
+                        class="d-flex align-items-center justify-content-between gap-2 flex-wrap mb-1"
+                      >
+                        <strong class="fs-14"
+                          >Account settings screen moved to in progress</strong
+                        ><span class="badge bg-info-transparent text-info"
+                          >Task update</span
+                        >
+                      </div>
+                      <p class="text-muted fs-13 mb-2">
+                        Ava picked up the approved profile and security settings
+                        designs.
+                      </p>
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="avatar avatar-xs avatar-rounded"
+                          ><img
+                            src="../assets/images/users/5.jpg"
+                            alt="" /></span
+                        ><span class="text-muted fs-12"
+                          ><strong class="text-default">Ava Thompson</strong>
+                          <span class="mx-1">&middot;</span> Today, 10:24
+                          AM</span
+                        ><span class="badge bg-light text-muted ms-auto"
+                          >ATL-116</span
+                        >
+                      </div>
+                    </li>
+                    <li
+                      class="project-activity-item"
+                      data-activity
+                      data-kind="review"
+                      data-search="jenna foster marcus reed api integration review passed engineering"
+                    >
+                      <div
+                        class="d-flex align-items-center justify-content-between gap-2 flex-wrap mb-1"
+                      >
+                        <strong class="fs-14"
+                          >API integration passed technical review</strong
+                        ><span class="badge bg-success-transparent text-success"
+                          >Review</span
+                        >
+                      </div>
+                      <p class="text-muted fs-13 mb-2">
+                        Data sync and error handling were reviewed with the
+                        engineering team.
+                      </p>
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="avatar avatar-xs avatar-rounded"
+                          ><img
+                            src="../assets/images/users/1.jpg"
+                            alt="" /></span
+                        ><span class="text-muted fs-12"
+                          ><strong class="text-default">Jenna Foster</strong>
+                          with Marcus Reed
+                          <span class="mx-1">&middot;</span> Sep 25, 3:40
+                          PM</span
+                        ><span class="badge bg-light text-muted ms-auto"
+                          >ATL-112</span
+                        >
+                      </div>
+                    </li>
+                    <li
+                      class="project-activity-item"
+                      data-activity
+                      data-kind="file"
+                      data-search="liam cooper client feedback beta onboarding notes file"
+                    >
+                      <div
+                        class="d-flex align-items-center justify-content-between gap-2 flex-wrap mb-1"
+                      >
+                        <strong class="fs-14"
+                          >Client feedback added to beta onboarding</strong
+                        ><span class="badge bg-primary-transparent text-primary"
+                          >Note added</span
+                        >
+                      </div>
+                      <p class="text-muted fs-13 mb-2">
+                        Liam shared the latest onboarding notes from the client
+                        check-in.
+                      </p>
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="avatar avatar-xs avatar-rounded"
+                          ><img
+                            src="../assets/images/users/10.jpg"
+                            alt="" /></span
+                        ><span class="text-muted fs-12"
+                          ><strong class="text-default">Liam Cooper</strong>
+                          <span class="mx-1">&middot;</span> Sep 24, 11:15
+                          AM</span
+                        ><span class="badge bg-light text-muted ms-auto"
+                          >Onboarding</span
+                        >
+                      </div>
+                    </li>
+                    <li
+                      class="project-activity-item"
+                      data-activity
+                      data-kind="task"
+                      data-search="mia chen accessibility audit assigned quality assurance task"
+                    >
+                      <div
+                        class="d-flex align-items-center justify-content-between gap-2 flex-wrap mb-1"
+                      >
+                        <strong class="fs-14"
+                          >Accessibility audit assigned for review</strong
+                        ><span class="badge bg-info-transparent text-info"
+                          >Task assigned</span
+                        >
+                      </div>
+                      <p class="text-muted fs-13 mb-2">
+                        Keyboard navigation, contrast, and screen reader checks
+                        are scheduled before beta.
+                      </p>
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="avatar avatar-xs avatar-rounded"
+                          ><img
+                            src="../assets/images/users/8.jpg"
+                            alt="" /></span
+                        ><span class="text-muted fs-12"
+                          ><strong class="text-default">Mia Chen</strong>
+                          <span class="mx-1">&middot;</span> Sep 23, 4:05
+                          PM</span
+                        ><span class="badge bg-light text-muted ms-auto"
+                          >ATL-124</span
+                        >
+                      </div>
+                    </li>
+                    <li
+                      class="project-activity-item"
+                      data-activity
+                      data-kind="milestone"
+                      data-search="owen brooks security checklist shared milestone compliance"
+                    >
+                      <div
+                        class="d-flex align-items-center justify-content-between gap-2 flex-wrap mb-1"
+                      >
+                        <strong class="fs-14"
+                          >Security checklist shared with the project
+                          team</strong
+                        ><span class="badge bg-warning-transparent text-warning"
+                          >Milestone</span
+                        >
+                      </div>
+                      <p class="text-muted fs-13 mb-2">
+                        Final security sign-off is due October 2, ahead of the
+                        client beta release.
+                      </p>
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="avatar avatar-xs avatar-rounded"
+                          ><img
+                            src="../assets/images/users/12.jpg"
+                            alt="" /></span
+                        ><span class="text-muted fs-12"
+                          ><strong class="text-default">Owen Brooks</strong>
+                          <span class="mx-1">&middot;</span> Sep 22, 1:30
+                          PM</span
+                        ><span
+                          class="badge bg-warning-transparent text-warning ms-auto"
+                          >Due Oct 02</span
+                        >
+                      </div>
+                    </li>
+                    <li
+                      class="project-activity-item"
+                      data-activity
+                      data-kind="milestone"
+                      data-search="noah bennett navigation flow design approved milestone"
+                    >
+                      <div
+                        class="d-flex align-items-center justify-content-between gap-2 flex-wrap mb-1"
+                      >
+                        <strong class="fs-14"
+                          >Portal navigation flow approved</strong
+                        ><span class="badge bg-success-transparent text-success"
+                          >Milestone</span
+                        >
+                      </div>
+                      <p class="text-muted fs-13 mb-2">
+                        The product and client teams signed off the navigation
+                        and access levels.
+                      </p>
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="avatar avatar-xs avatar-rounded"
+                          ><img
+                            src="../assets/images/users/3.jpg"
+                            alt="" /></span
+                        ><span class="text-muted fs-12"
+                          ><strong class="text-default">Noah Bennett</strong>
+                          <span class="mx-1">&middot;</span> Sep 19, 9:10
+                          AM</span
+                        ><span class="badge bg-light text-muted ms-auto"
+                          >Design review</span
+                        >
+                      </div>
+                    </li>
+                    <li id="activity-empty-state" class="d-none">
+                      <div class="text-center py-5">
+                        <span
+                          class="avatar avatar-lg bg-light text-muted rounded-circle mb-3"
+                          ><i class="ri-search-line fs-20"></i
+                        ></span>
+                        <div class="fw-semibold">No matching activity</div>
+                        <span class="text-muted fs-12"
+                          >Try another search or activity type.</span
+                        >
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="card-footer d-flex justify-content-between align-items-center"
+                >
+                  <span class="text-muted fs-12"
+                    >Activity for Atlas client portal</span
+                  ><a href="projects-overview.html" class="fs-12 fw-medium"
+                    >Project overview <i class="ri-arrow-right-line ms-1"></i
+                  ></a>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-xxl-4">
+              <section class="card custom-card mb-3">
+                <div class="card-header justify-content-between">
+                  <div class="card-title">Project pulse</div>
+                  <span class="badge bg-success-transparent text-success"
+                    >On track</span
+                  >
+                </div>
+                <div class="card-body">
+                  <div
+                    class="d-flex justify-content-between align-items-end mb-2"
+                  >
+                    <div>
+                      <span class="text-muted fs-12 d-block"
+                        >Overall completion</span
+                      ><strong class="fs-24">68%</strong>
+                    </div>
+                    <span class="text-muted fs-12">12 of 18 tasks</span>
+                  </div>
+                  <div
+                    class="progress mb-3"
+                    style="height: 7px"
+                    role="progressbar"
+                    aria-label="Project completion is 68 percent"
+                    aria-valuenow="68"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div
+                      class="progress-bar bg-success"
+                      style="width: 68%"
+                    ></div>
+                  </div>
+                  <div class="d-flex justify-content-between fs-12">
+                    <span class="text-muted">Next milestone</span
+                    ><strong>Security sign-off</strong>
+                  </div>
+                  <div class="d-flex justify-content-between fs-12 mt-2">
+                    <span class="text-muted">Due date</span
+                    ><strong>October 02, 2026</strong>
+                  </div>
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                  <a href="projects-overview.html" class="fs-12 fw-medium"
+                    >View project <i class="ri-arrow-right-line ms-1"></i></a
+                  ><a href="task-kanban-board.html" class="fs-12 fw-medium"
+                    >Open tasks <i class="ri-arrow-right-line ms-1"></i
+                  ></a>
+                </div>
+              </section>
+
+              <section class="card custom-card mb-3">
+                <div class="card-header justify-content-between">
+                  <div class="card-title">Active contributors</div>
+                  <span class="badge bg-light text-muted">3 featured</span>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="d-flex align-items-center gap-3 pb-3 mb-3 border-bottom"
+                  >
+                    <span class="avatar avatar-sm avatar-rounded"
+                      ><img src="../assets/images/users/1.jpg" alt=""
+                    /></span>
+                    <div class="flex-fill">
+                      <div class="fw-semibold fs-13">Jenna Foster</div>
+                      <div class="text-muted fs-12">Project lead</div>
+                    </div>
+                    <span class="text-success fs-11"
+                      ><i class="ri-circle-fill me-1"></i>Active</span
+                    >
+                  </div>
+                  <div
+                    class="d-flex align-items-center gap-3 pb-3 mb-3 border-bottom"
+                  >
+                    <span class="avatar avatar-sm avatar-rounded"
+                      ><img src="../assets/images/users/5.jpg" alt=""
+                    /></span>
+                    <div class="flex-fill">
+                      <div class="fw-semibold fs-13">Ava Thompson</div>
+                      <div class="text-muted fs-12">Frontend engineer</div>
+                    </div>
+                    <span class="text-success fs-11"
+                      ><i class="ri-circle-fill me-1"></i>Active</span
+                    >
+                  </div>
+                  <div class="d-flex align-items-center gap-3">
+                    <span class="avatar avatar-sm avatar-rounded"
+                      ><img src="../assets/images/users/10.jpg" alt=""
+                    /></span>
+                    <div class="flex-fill">
+                      <div class="fw-semibold fs-13">Liam Cooper</div>
+                      <div class="text-muted fs-12">Client success</div>
+                    </div>
+                    <span class="text-success fs-11"
+                      ><i class="ri-circle-fill me-1"></i>Active</span
+                    >
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <a href="project-team.html" class="fs-12 fw-medium"
+                    >View full project team
+                    <i class="ri-arrow-right-line ms-1"></i
+                  ></a>
+                </div>
+              </section>
+
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div class="card-title">Activity key</div>
+                </div>
+                <div class="card-body d-flex flex-wrap gap-2">
+                  <span class="badge bg-info-transparent text-info">Tasks</span
+                  ><span class="badge bg-warning-transparent text-warning"
+                    >Milestones</span
+                  ><span class="badge bg-success-transparent text-success"
+                    >Reviews</span
+                  ><span class="badge bg-primary-transparent text-primary"
+                    >Files &amp; notes</span
+                  >
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"-->
+    <script src="../assets/js/app-interactions.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const search = document.getElementById("activity-search");
+        const typeFilter = document.getElementById("activity-type");
+        const events = [...document.querySelectorAll("[data-activity]")];
+        const emptyState = document.getElementById("activity-empty-state");
+        const resultCount = document.getElementById("activity-filter-count");
+
+        function filterActivity() {
+          const query = search.value.trim().toLowerCase();
+          const type = typeFilter.value;
+          let visibleCount = 0;
+
+          events.forEach(function (event) {
+            const matchesSearch = event.dataset.search.includes(query);
+            const matchesType = type === "all" || event.dataset.kind === type;
+            const isVisible = matchesSearch && matchesType;
+            event.classList.toggle("d-none", !isVisible);
+            if (isVisible) visibleCount += 1;
+          });
+
+          emptyState.classList.toggle("d-none", visibleCount > 0);
+          resultCount.textContent = `Showing ${visibleCount} ${
+            visibleCount === 1 ? "event" : "events"
+          }`;
+        }
+
+        search.addEventListener("input", filterActivity);
+        typeFilter.addEventListener("change", filterActivity);
+      });
+    </script>
+  </body>
+</html>

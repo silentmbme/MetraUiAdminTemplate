@@ -1,0 +1,77 @@
+@use "../variables";
+
+/* Shared pagination controls */
+.pagination {
+    gap: 0.25rem !important;
+    flex-wrap: wrap;
+
+    .page-item {
+        margin: 0;
+    }
+
+    .page-link {
+        display: inline-flex;
+        min-width: 2.25rem;
+        min-height: 2.25rem;
+        align-items: center;
+        justify-content: center;
+        padding: 0.375rem 0.625rem;
+        border: 1px solid variables.$default-border;
+        border-radius: variables.$default-radius;
+        background-color: variables.$custom-white;
+        color: variables.$default-text-color;
+        line-height: 1.25;
+        text-align: center;
+        transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+
+        &:hover {
+            border-color: variables.$default-border;
+            background-color: variables.$light;
+            color: variables.$default-text-color;
+        }
+
+        &:focus {
+            background-color: variables.$light;
+            box-shadow: 0 0 0 0.15rem rgba(var(--theme-primary-rgb), 0.12);
+            color: variables.$default-text-color;
+        }
+    }
+
+    .page-item.active .page-link,
+    .page-link.active {
+        border-color: variables.$default-border;
+        background-color: variables.$light;
+        color: variables.$default-text-color;
+        font-weight: 600;
+    }
+
+    .page-item.disabled .page-link,
+    .page-link.disabled {
+        border-color: variables.$default-border;
+        background-color: variables.$custom-white;
+        color: variables.$text-muted;
+        opacity: 0.65;
+    }
+}
+
+[dir="rtl"] {
+    .pagination {
+        .page-link {
+            .bx-chevron-left::before {
+                content: "\ea50";
+            }
+
+            .bx-chevron-right::before {
+                content: "\ea4d";
+            }
+
+            .ri-arrow-right-s-line:before {
+                content: "\ea64";
+            }
+
+            .ri-arrow-left-s-line:before {
+                content: "\ea6e";
+            }
+        }
+    }
+}

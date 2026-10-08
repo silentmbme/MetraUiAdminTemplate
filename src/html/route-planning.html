@@ -1,0 +1,605 @@
+<!-- include document-head.html"-->
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page route-planning-page-shell">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content route-planning-page">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Route planning</h1>
+          <ol class="breadcrumb mb-1">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">
+              <a href="logistics-dashboard.html">Logistics</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Route planning
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xxl-12">
+              <section class="card custom-card">
+                <div class="card-body p-4">
+                  <div
+                    class="d-flex align-items-start justify-content-between flex-wrap gap-3 mb-4"
+                  >
+                    <div>
+                      <span
+                        class="badge bg-success-transparent text-success rounded-pill mb-2"
+                        >ACTIVE ROUTE · NR-04</span
+                      >
+                      <h2 class="fs-18 fw-semibold mb-1">
+                        North Brooklyn delivery loop
+                      </h2>
+                      <p class="text-muted fs-13 mb-0">
+                        Newark Distribution Center
+                        <span class="mx-1">&middot;</span> Dispatch window 9:00
+                        AM–1:30 PM
+                      </p>
+                    </div>
+                    <div class="d-flex gap-2 route-action-buttons">
+                      <a class="btn btn-light" href="delivery-tracking.html"
+                        ><i class="ri-map-pin-line me-1"></i>Track route</a
+                      >
+                      <button
+                        class="btn btn-dark"
+                        type="button"
+                        onclick="window.print()"
+                      >
+                        <i class="ri-printer-line me-1"></i>Print manifest
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="row align-items-stretch">
+                    <div class="col-xl-8">
+                      <div class="border rounded p-3 h-100">
+                        <div
+                          class="d-flex justify-content-between align-items-center mb-3"
+                        >
+                          <span class="fw-semibold fs-13">Route preview</span>
+                          <span class="text-muted fs-12"
+                            >Schematic · 8 delivery stops</span
+                          >
+                        </div>
+                        <div
+                          class="rounded bg-light p-2 route-preview-map"
+                          role="img"
+                          aria-label="Schematic route from Newark Distribution Center through Brooklyn delivery stops"
+                        >
+                          <svg
+                            viewBox="0 0 760 250"
+                            class="w-100"
+                            style="min-height: 190px"
+                            aria-hidden="true"
+                            preserveAspectRatio="xMidYMid meet"
+                          >
+                            <path
+                              d="M0 42H760M0 94H760M0 146H760M0 198H760M86 0V250M190 0V250M294 0V250M398 0V250M502 0V250M606 0V250M710 0V250"
+                              stroke="currentColor"
+                              stroke-opacity=".08"
+                              stroke-width="10"
+                              fill="none"
+                            />
+                            <path
+                              d="M92 202C146 200 142 143 218 146S285 63 354 82 406 166 474 151 550 71 618 83 662 124 700 48"
+                              stroke="var(--theme-primary-color)"
+                              stroke-width="5"
+                              stroke-linecap="round"
+                              stroke-dasharray="1 0"
+                              fill="none"
+                            />
+                            <circle
+                              cx="92"
+                              cy="202"
+                              r="12"
+                              fill="var(--theme-primary-color)"
+                            />
+                            <text
+                              x="92"
+                              y="206"
+                              text-anchor="middle"
+                              fill="white"
+                              font-size="10"
+                              font-family="sans-serif"
+                            >
+                              D
+                            </text>
+                            <circle cx="218" cy="146" r="10" fill="#22c55e" />
+                            <text
+                              x="218"
+                              y="150"
+                              text-anchor="middle"
+                              fill="white"
+                              font-size="9"
+                              font-family="sans-serif"
+                            >
+                              1
+                            </text>
+                            <circle cx="354" cy="82" r="10" fill="#22c55e" />
+                            <text
+                              x="354"
+                              y="86"
+                              text-anchor="middle"
+                              fill="white"
+                              font-size="9"
+                              font-family="sans-serif"
+                            >
+                              2
+                            </text>
+                            <circle
+                              cx="474"
+                              cy="151"
+                              r="10"
+                              fill="var(--theme-primary-color)"
+                            />
+                            <text
+                              x="474"
+                              y="155"
+                              text-anchor="middle"
+                              fill="white"
+                              font-size="9"
+                              font-family="sans-serif"
+                            >
+                              3
+                            </text>
+                            <circle cx="618" cy="83" r="10" fill="#adb5bd" />
+                            <text
+                              x="618"
+                              y="87"
+                              text-anchor="middle"
+                              fill="white"
+                              font-size="9"
+                              font-family="sans-serif"
+                            >
+                              8
+                            </text>
+                            <text
+                              x="104"
+                              y="229"
+                              fill="currentColor"
+                              fill-opacity=".65"
+                              font-size="11"
+                              font-family="sans-serif"
+                            >
+                              Newark DC
+                            </text>
+                            <text
+                              x="600"
+                              y="58"
+                              fill="currentColor"
+                              fill-opacity=".65"
+                              font-size="11"
+                              font-family="sans-serif"
+                            >
+                              Brooklyn
+                            </text>
+                          </svg>
+                        </div>
+                        <div
+                          class="d-flex flex-wrap gap-3 mt-3 fs-12 text-muted"
+                        >
+                          <span
+                            ><i
+                              class="ri-checkbox-blank-circle-fill text-success me-1"
+                            ></i
+                            >Completed</span
+                          ><span
+                            ><i
+                              class="ri-checkbox-blank-circle-fill text-primary me-1"
+                            ></i
+                            >Current stop</span
+                          ><span
+                            ><i
+                              class="ri-checkbox-blank-circle-fill text-muted me-1"
+                            ></i
+                            >Upcoming</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-4">
+                      <div
+                        class="h-100 rounded bg-black p-4 text-fixed-white d-flex flex-column"
+                      >
+                        <div
+                          class="d-flex justify-content-between align-items-center"
+                        >
+                          <span class="text-white-50 fs-12"
+                            >ROUTE PERFORMANCE</span
+                          ><span
+                            class="badge bg-success-transparent text-success"
+                            >On schedule</span
+                          >
+                        </div>
+                        <div class="mt-4 mb-3">
+                          <span class="text-white-50 fs-13"
+                            >Stops completed</span
+                          >
+                          <div class="d-flex align-items-baseline gap-2">
+                            <span class="display-5 fw-semibold">3</span
+                            ><span class="text-white-50">of 8</span>
+                          </div>
+                        </div>
+                        <div class="progress mb-2" style="height: 6px">
+                          <div
+                            class="progress-bar bg-primary"
+                            role="progressbar"
+                            style="width: 38%"
+                            aria-valuenow="38"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          ></div>
+                        </div>
+                        <div
+                          class="d-flex justify-content-between text-white-50 fs-12"
+                        >
+                          <span>38% complete</span><span>5 stops left</span>
+                        </div>
+                        <div class="row mt-auto pt-4">
+                          <div class="col-6">
+                            <span class="text-white-50 fs-12 d-block"
+                              >Remaining distance</span
+                            ><strong class="fs-18">18.6 mi</strong>
+                          </div>
+                          <div class="col-6">
+                            <span class="text-white-50 fs-12 d-block"
+                              >Est. route finish</span
+                            ><strong class="fs-18">1:18 PM</strong>
+                          </div>
+                          <div
+                            class="col-12 border-top border-white border-opacity-10 pt-3"
+                          >
+                            <span class="text-white-50 fs-12"
+                              >Driver &amp; vehicle</span
+                            >
+                            <div class="fw-semibold mt-1">
+                              Jordan Lee
+                              <span class="text-white-50 fw-normal"
+                                >· Van 08</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-8">
+              <section class="card custom-card">
+                <div
+                  class="card-header justify-content-between flex-wrap gap-2"
+                >
+                  <div>
+                    <div class="card-title mb-1">Stop sequence</div>
+                    <span class="text-muted fs-12"
+                      >Planned order with delivery windows and current
+                      progress</span
+                    >
+                  </div>
+                  <span class="badge bg-success-transparent text-success"
+                    >Route NR-04</span
+                  >
+                </div>
+                <div class="table-responsive">
+                  <table class="table text-nowrap table-hover mb-0">
+                    <thead>
+                      <tr>
+                        <th scope="col">Stop</th>
+                        <th scope="col">Destination</th>
+                        <th scope="col">Window</th>
+                        <th scope="col">Shipments</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">
+                          <span class="visually-hidden">Details</span>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <span
+                            class="avatar avatar-sm bg-success-transparent text-success rounded-circle"
+                            >1</span
+                          >
+                        </td>
+                        <td>
+                          <span class="fw-semibold">Cobble Hill</span>
+                          <div class="text-muted fs-12">
+                            178 Court Street, Brooklyn
+                          </div>
+                        </td>
+                        <td>9:30–10:00 AM</td>
+                        <td>2 parcels</td>
+                        <td>
+                          <span
+                            class="badge bg-success-transparent text-success"
+                            >Delivered</span
+                          >
+                        </td>
+                        <td>
+                          <a
+                            href="delivery-tracking.html"
+                            class="btn btn-sm btn-light"
+                            aria-label="View stop 1 shipments"
+                            ><i class="ri-arrow-right-up-line"></i
+                          ></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span
+                            class="avatar avatar-sm bg-success-transparent text-success rounded-circle"
+                            >2</span
+                          >
+                        </td>
+                        <td>
+                          <span class="fw-semibold">Carroll Gardens</span>
+                          <div class="text-muted fs-12">
+                            92 Union Street, Brooklyn
+                          </div>
+                        </td>
+                        <td>10:00–10:30 AM</td>
+                        <td>1 parcel</td>
+                        <td>
+                          <span
+                            class="badge bg-success-transparent text-success"
+                            >Delivered</span
+                          >
+                        </td>
+                        <td>
+                          <a
+                            href="delivery-tracking.html"
+                            class="btn btn-sm btn-light"
+                            aria-label="View stop 2 shipments"
+                            ><i class="ri-arrow-right-up-line"></i
+                          ></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span
+                            class="avatar avatar-sm bg-secondary-transparent text-secondary rounded-circle"
+                            >3</span
+                          >
+                        </td>
+                        <td>
+                          <span class="fw-semibold">Boerum Hill</span>
+                          <div class="text-muted fs-12">
+                            245 Atlantic Avenue, Brooklyn
+                          </div>
+                        </td>
+                        <td>10:30–11:00 AM</td>
+                        <td>3 parcels</td>
+                        <td>
+                          <span
+                            class="badge bg-secondary-transparent text-secondary"
+                            >Current stop</span
+                          >
+                        </td>
+                        <td>
+                          <a
+                            href="delivery-tracking.html"
+                            class="btn btn-sm btn-light"
+                            aria-label="View stop 3 shipments"
+                            ><i class="ri-arrow-right-up-line"></i
+                          ></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span
+                            class="avatar avatar-sm bg-light text-muted rounded-circle"
+                            >4</span
+                          >
+                        </td>
+                        <td>
+                          <span class="fw-semibold">Fort Greene</span>
+                          <div class="text-muted fs-12">
+                            18 Lafayette Avenue, Brooklyn
+                          </div>
+                        </td>
+                        <td>11:00–11:30 AM</td>
+                        <td>2 parcels</td>
+                        <td>
+                          <span class="badge bg-light text-muted"
+                            >Upcoming</span
+                          >
+                        </td>
+                        <td>
+                          <a
+                            href="delivery-tracking.html"
+                            class="btn btn-sm btn-light"
+                            aria-label="View stop 4 shipments"
+                            ><i class="ri-arrow-right-up-line"></i
+                          ></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span
+                            class="avatar avatar-sm bg-light text-muted rounded-circle"
+                            >5</span
+                          >
+                        </td>
+                        <td>
+                          <span class="fw-semibold">Williamsburg</span>
+                          <div class="text-muted fs-12">
+                            81 Berry Street, Brooklyn
+                          </div>
+                        </td>
+                        <td>11:30 AM–12:00 PM</td>
+                        <td>4 parcels</td>
+                        <td>
+                          <span class="badge bg-light text-muted"
+                            >Upcoming</span
+                          >
+                        </td>
+                        <td>
+                          <a
+                            href="delivery-tracking.html"
+                            class="btn btn-sm btn-light"
+                            aria-label="View stop 5 shipments"
+                            ><i class="ri-arrow-right-up-line"></i
+                          ></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span
+                            class="avatar avatar-sm bg-light text-muted rounded-circle"
+                            >6</span
+                          >
+                        </td>
+                        <td>
+                          <span class="fw-semibold">Greenpoint</span>
+                          <div class="text-muted fs-12">
+                            140 Franklin Street, Brooklyn
+                          </div>
+                        </td>
+                        <td>12:00–12:30 PM</td>
+                        <td>1 parcel</td>
+                        <td>
+                          <span class="badge bg-light text-muted"
+                            >Upcoming</span
+                          >
+                        </td>
+                        <td>
+                          <a
+                            href="delivery-tracking.html"
+                            class="btn btn-sm btn-light"
+                            aria-label="View stop 6 shipments"
+                            ><i class="ri-arrow-right-up-line"></i
+                          ></a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div
+                  class="card-footer border-top-0 d-flex justify-content-between align-items-center"
+                >
+                  <span class="text-muted fs-12"
+                    >Showing 6 of 8 route stops</span
+                  ><a href="shipments.html" class="fs-12 fw-medium"
+                    >Open shipments <i class="ri-arrow-right-line"></i
+                  ></a>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-4">
+              <section class="card custom-card mb-3">
+                <div class="card-header justify-content-between">
+                  <div class="card-title">Driver &amp; vehicle</div>
+                  <a href="fleet-management.html" class="fs-12 fw-medium"
+                    >Fleet details <i class="ri-arrow-right-line"></i
+                  ></a>
+                </div>
+                <div class="card-body p-0">
+                  <div class="d-flex align-items-center gap-3 p-3">
+                    <span class="avatar avatar-lg avatar-rounded"
+                      ><img src="../assets/images/users/5.jpg" alt=""
+                    /></span>
+                    <div>
+                      <div class="fw-semibold">Jordan Lee</div>
+                      <div class="text-muted fs-12">
+                        Assigned driver · Shift 8 AM–4 PM
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between py-2 px-3 border-top"
+                  >
+                    <span class="text-muted fs-13">Vehicle</span
+                    ><span class="fw-medium fs-13">Van 08 · V-208</span>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between py-2 px-3 border-top"
+                  >
+                    <span class="text-muted fs-13">Vehicle type</span
+                    ><span class="fw-medium fs-13">Ford Transit</span>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between py-2 px-3 border-top"
+                  >
+                    <span class="text-muted fs-13">Load</span
+                    ><span class="fw-medium fs-13">12 / 18 parcels</span>
+                  </div>
+                </div>
+              </section>
+
+              <section class="card custom-card">
+                <div class="card-header justify-content-between">
+                  <div class="card-title">Unassigned deliveries</div>
+                  <span class="badge bg-warning-transparent text-warning"
+                    >6 waiting</span
+                  >
+                </div>
+                <div class="card-body">
+                  <p class="text-muted fs-12 mb-3">
+                    Brooklyn area shipments ready to add to a route.
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center pb-3 mb-3 border-bottom"
+                  >
+                    <div>
+                      <div class="fw-semibold fs-13">SHP-20503</div>
+                      <div class="text-muted fs-12">
+                        Park Slope · by 2:00 PM
+                      </div>
+                    </div>
+                    <span class="badge bg-light text-muted">2 parcels</span>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center pb-3 mb-3 border-bottom"
+                  >
+                    <div>
+                      <div class="fw-semibold fs-13">SHP-20507</div>
+                      <div class="text-muted fs-12">
+                        Bedford-Stuyvesant · by 3:00 PM
+                      </div>
+                    </div>
+                    <span class="badge bg-light text-muted">1 parcel</span>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div>
+                      <div class="fw-semibold fs-13">SHP-20511</div>
+                      <div class="text-muted fs-12">
+                        Brooklyn Heights · by 4:00 PM
+                      </div>
+                    </div>
+                    <span class="badge bg-light text-muted">3 parcels</span>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <a
+                    href="shipments.html"
+                    class="btn btn-outline-secondary w-100"
+                    >Review unassigned shipments</a
+                  >
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"-->
+    <script src="../assets/js/app-interactions.js"></script>
+    <!-- include appearance-customizer-scripts.html"-->
+  </body>
+</html>

@@ -1,0 +1,1008 @@
+<!-- include document-head.html"-->
+    <link
+      rel="stylesheet"
+      href="../assets/libs/prismjs/themes/prism-coy.min.css"
+    />
+  </head>
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"--><!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"--><!-- include side-navigation.html"-->
+      <main data-markup-examples class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Offcanvas</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Base UI</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Offcanvas
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-6 col-xxl-4">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <h2 class="card-title mb-0">Navigation drawer</h2>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="border rounded bg-light position-relative overflow-hidden mb-3"
+                    style="height: 100px"
+                    aria-hidden="true"
+                  >
+                    <div class="p-3">
+                      <div
+                        class="border rounded mb-2"
+                        style="height: 6px; width: 45%"
+                      ></div>
+                      <div
+                        class="border rounded"
+                        style="height: 6px; width: 60%"
+                      ></div>
+                    </div>
+                    <div
+                      class="position-absolute bg-primary-transparent border-end border-primary"
+                      style="inset: 0 auto 0 0; width: 32%"
+                    ></div>
+                  </div>
+                  <p class="text-muted fs-13 mb-3">
+                    A focused left-side menu using the existing brand image.
+                  </p>
+                  <button
+                    type="button"
+                    class="btn btn-dark btn-sm"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#drawer-navigation"
+                    aria-controls="drawer-navigation"
+                  >
+                    Open navigation<i
+                      class="ri-arrow-right-line ms-1"
+                      aria-hidden="true"
+                    ></i>
+                  </button>
+                  <div
+                    class="offcanvas offcanvas-start"
+                    tabindex="-1"
+                    id="drawer-navigation"
+                    aria-labelledby="drawer-navigation-title"
+                    style="--bs-offcanvas-width: min(420px, 100vw)"
+                  >
+                    <div class="offcanvas-header border-bottom">
+                      <h2
+                        class="offcanvas-title fs-16 fw-semibold"
+                        id="drawer-navigation-title"
+                      >
+                        Workspace navigation
+                      </h2>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="offcanvas"
+                        aria-label="Close drawer"
+                      ></button>
+                    </div>
+                    <div class="offcanvas-body fs-13">
+                      <img
+                        src="../assets/images/brand-logos/toggle-logo.png"
+                        alt="NexoraUI"
+                        style="height: 32px; width: auto"
+                        class="mb-4"
+                      />
+                      <p class="text-muted fs-12 mb-2">WORKSPACE</p>
+                      <nav
+                        class="list-group list-group-flush"
+                        aria-label="Drawer navigation"
+                      >
+                        <a
+                          href="index.html"
+                          class="list-group-item list-group-item-action py-3"
+                          ><i
+                            class="ri-home-4-line me-2 text-primary"
+                            aria-hidden="true"
+                          ></i
+                          >Overview</a
+                        ><a
+                          href="to-do-list.html"
+                          class="list-group-item list-group-item-action py-3"
+                          ><i
+                            class="ri-task-line me-2 text-primary"
+                            aria-hidden="true"
+                          ></i
+                          >Projects</a
+                        ><a
+                          href="file-manager.html"
+                          class="list-group-item list-group-item-action py-3"
+                          ><i
+                            class="ri-folder-line me-2 text-primary"
+                            aria-hidden="true"
+                          ></i
+                          >Shared files</a
+                        ><a
+                          href="full-calendar.html"
+                          class="list-group-item list-group-item-action py-3"
+                          ><i
+                            class="ri-calendar-line me-2 text-primary"
+                            aria-hidden="true"
+                          ></i
+                          >Calendar</a
+                        ><a
+                          href="profile-settings.html"
+                          class="list-group-item list-group-item-action py-3"
+                          ><i
+                            class="ri-settings-3-line me-2 text-primary"
+                            aria-hidden="true"
+                          ></i
+                          >Settings</a
+                        >
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6 col-xxl-4">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <h2 class="card-title mb-0">Project details</h2>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="border rounded bg-light position-relative overflow-hidden mb-3"
+                    style="height: 100px"
+                    aria-hidden="true"
+                  >
+                    <div class="p-3">
+                      <div
+                        class="border rounded mb-2"
+                        style="height: 6px; width: 45%"
+                      ></div>
+                      <div
+                        class="border rounded"
+                        style="height: 6px; width: 60%"
+                      ></div>
+                    </div>
+                    <div
+                      class="position-absolute bg-primary-transparent border-start border-primary"
+                      style="inset: 0 0 0 auto; width: 32%"
+                    ></div>
+                  </div>
+                  <p class="text-muted fs-13 mb-3">
+                    Reveal useful project context without leaving the page.
+                  </p>
+                  <button
+                    type="button"
+                    class="btn btn-dark btn-sm"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#drawer-project"
+                    aria-controls="drawer-project"
+                  >
+                    View project<i
+                      class="ri-arrow-right-line ms-1"
+                      aria-hidden="true"
+                    ></i>
+                  </button>
+                  <div
+                    class="offcanvas offcanvas-end"
+                    tabindex="-1"
+                    id="drawer-project"
+                    aria-labelledby="drawer-project-title"
+                    style="--bs-offcanvas-width: min(420px, 100vw)"
+                  >
+                    <div class="offcanvas-header border-bottom">
+                      <h2
+                        class="offcanvas-title fs-16 fw-semibold"
+                        id="drawer-project-title"
+                      >
+                        Project overview
+                      </h2>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="offcanvas"
+                        aria-label="Close drawer"
+                      ></button>
+                    </div>
+                    <div class="offcanvas-body fs-13">
+                      <span class="badge bg-success-transparent mb-3"
+                        >On track</span
+                      >
+                      <h3 class="fs-20 fw-semibold mb-2">Atlas workspace</h3>
+                      <p class="text-muted mb-4">
+                        Keep the project goals, decisions, and next steps within
+                        reach.
+                      </p>
+                      <dl class="mb-0">
+                        <div
+                          class="d-flex justify-content-between border-bottom pb-3 mb-3"
+                        >
+                          <dt class="text-muted fw-normal">Next milestone</dt>
+                          <dd class="mb-0">Prototype review</dd>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <dt class="text-muted fw-normal">Due date</dt>
+                          <dd class="mb-0">October 28</dd>
+                        </div>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6 col-xxl-4">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <h2 class="card-title mb-0">Quick actions</h2>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="border rounded bg-light position-relative overflow-hidden mb-3"
+                    style="height: 100px"
+                    aria-hidden="true"
+                  >
+                    <div class="p-3">
+                      <div
+                        class="border rounded mb-2"
+                        style="height: 6px; width: 45%"
+                      ></div>
+                      <div
+                        class="border rounded"
+                        style="height: 6px; width: 60%"
+                      ></div>
+                    </div>
+                    <div
+                      class="position-absolute bg-primary-transparent border-bottom border-primary"
+                      style="inset: 0 0 auto; height: 40%"
+                    ></div>
+                  </div>
+                  <p class="text-muted fs-13 mb-3">
+                    A top drawer for shortcuts you can reach in a moment.
+                  </p>
+                  <button
+                    type="button"
+                    class="btn btn-dark btn-sm"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#drawer-top"
+                    aria-controls="drawer-top"
+                  >
+                    Open shortcuts<i
+                      class="ri-arrow-right-line ms-1"
+                      aria-hidden="true"
+                    ></i>
+                  </button>
+                  <div
+                    class="offcanvas offcanvas-top"
+                    tabindex="-1"
+                    id="drawer-top"
+                    aria-labelledby="drawer-top-title"
+                    style="--bs-offcanvas-height: min(420px, 85vh)"
+                  >
+                    <div class="offcanvas-header border-bottom">
+                      <h2
+                        class="offcanvas-title fs-16 fw-semibold"
+                        id="drawer-top-title"
+                      >
+                        Quick actions
+                      </h2>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="offcanvas"
+                        aria-label="Close drawer"
+                      ></button>
+                    </div>
+                    <div class="offcanvas-body fs-13">
+                      <p class="text-muted mb-3">
+                        Choose where to pick up your work.
+                      </p>
+                      <div class="d-flex flex-wrap gap-2">
+                        <a
+                          href="invoice-create.html"
+                          class="btn btn-primary btn-sm"
+                          >Create invoice</a
+                        ><a href="file-manager.html" class="btn btn-dark btn-sm"
+                          >Browse files</a
+                        ><a
+                          href="full-calendar.html"
+                          class="btn btn-dark btn-sm"
+                          >Open calendar</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6 col-xxl-4">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <h2 class="card-title mb-0">Bottom sheet</h2>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="border rounded bg-light position-relative overflow-hidden mb-3"
+                    style="height: 100px"
+                    aria-hidden="true"
+                  >
+                    <div class="p-3">
+                      <div
+                        class="border rounded mb-2"
+                        style="height: 6px; width: 45%"
+                      ></div>
+                      <div
+                        class="border rounded"
+                        style="height: 6px; width: 60%"
+                      ></div>
+                    </div>
+                    <div
+                      class="position-absolute bg-primary-transparent border-top border-primary"
+                      style="inset: auto 0 0; height: 40%"
+                    ></div>
+                  </div>
+                  <p class="text-muted fs-13 mb-3">
+                    A compact bottom panel for supporting information.
+                  </p>
+                  <button
+                    type="button"
+                    class="btn btn-dark btn-sm"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#drawer-bottom"
+                    aria-controls="drawer-bottom"
+                  >
+                    View summary<i
+                      class="ri-arrow-right-line ms-1"
+                      aria-hidden="true"
+                    ></i>
+                  </button>
+                  <div
+                    class="offcanvas offcanvas-bottom"
+                    tabindex="-1"
+                    id="drawer-bottom"
+                    aria-labelledby="drawer-bottom-title"
+                    style="--bs-offcanvas-height: min(420px, 85vh)"
+                  >
+                    <div class="offcanvas-header border-bottom">
+                      <h2
+                        class="offcanvas-title fs-16 fw-semibold"
+                        id="drawer-bottom-title"
+                      >
+                        Workspace summary
+                      </h2>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="offcanvas"
+                        aria-label="Close drawer"
+                      ></button>
+                    </div>
+                    <div class="offcanvas-body fs-13">
+                      <div class="row g-3">
+                        <div class="col-sm-4">
+                          <div class="bg-light rounded p-3">
+                            <span class="text-muted fs-12"
+                              >Active projects</span
+                            >
+                            <h3 class="fs-24 fw-semibold mt-2 mb-0">12</h3>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="bg-light rounded p-3">
+                            <span class="text-muted fs-12"
+                              >Tasks completed</span
+                            >
+                            <h3 class="fs-24 fw-semibold mt-2 mb-0">84</h3>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="bg-light rounded p-3">
+                            <span class="text-muted fs-12">Team members</span>
+                            <h3 class="fs-24 fw-semibold mt-2 mb-0">18</h3>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6 col-xxl-4">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <h2 class="card-title mb-0">Filter workspace</h2>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="border rounded bg-light position-relative overflow-hidden mb-3"
+                    style="height: 100px"
+                    aria-hidden="true"
+                  >
+                    <div class="p-3">
+                      <div
+                        class="border rounded mb-2"
+                        style="height: 6px; width: 45%"
+                      ></div>
+                      <div
+                        class="border rounded"
+                        style="height: 6px; width: 60%"
+                      ></div>
+                    </div>
+                    <div
+                      class="position-absolute bg-primary-transparent border-start border-primary"
+                      style="inset: 0 0 0 auto; width: 32%"
+                    ></div>
+                  </div>
+                  <p class="text-muted fs-13 mb-3">
+                    Apply filters and show the selected values on this page.
+                  </p>
+                  <button
+                    type="button"
+                    class="btn btn-dark btn-sm"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#drawer-filters"
+                    aria-controls="drawer-filters"
+                  >
+                    Open filters<i
+                      class="ri-arrow-right-line ms-1"
+                      aria-hidden="true"
+                    ></i>
+                  </button>
+                  <div
+                    class="offcanvas offcanvas-end"
+                    tabindex="-1"
+                    id="drawer-filters"
+                    aria-labelledby="drawer-filters-title"
+                    style="--bs-offcanvas-width: min(420px, 100vw)"
+                  >
+                    <div class="offcanvas-header border-bottom">
+                      <h2
+                        class="offcanvas-title fs-16 fw-semibold"
+                        id="drawer-filters-title"
+                      >
+                        Workspace filters
+                      </h2>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="offcanvas"
+                        aria-label="Close drawer"
+                      ></button>
+                    </div>
+                    <div class="offcanvas-body fs-13">
+                      <form id="drawer-filter-form">
+                        <label for="drawer-filter-status" class="form-label"
+                          >Project status</label
+                        ><select
+                          id="drawer-filter-status"
+                          class="form-select mb-4"
+                        >
+                          <option>All statuses</option>
+                          <option>Planned</option>
+                          <option>In progress</option>
+                          <option>Completed</option></select
+                        ><label for="drawer-filter-priority" class="form-label"
+                          >Priority</label
+                        ><select
+                          id="drawer-filter-priority"
+                          class="form-select"
+                        >
+                          <option>All priorities</option>
+                          <option>High</option>
+                          <option>Normal</option>
+                          <option>Low</option>
+                        </select>
+                        <p class="text-muted fs-12 mt-3">
+                          This example previews your filter selection.
+                        </p>
+                      </form>
+                    </div>
+                    <div class="border-top p-3">
+                      <div class="d-flex gap-2">
+                        <button
+                          class="btn btn-primary btn-sm"
+                          type="submit"
+                          form="drawer-filter-form"
+                        >
+                          Apply preview</button
+                        ><button
+                          class="btn btn-outline-light btn-sm"
+                          type="reset"
+                          form="drawer-filter-form"
+                        >
+                          Reset
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6 col-xxl-4">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <h2 class="card-title mb-0">Create a task</h2>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="border rounded bg-light position-relative overflow-hidden mb-3"
+                    style="height: 100px"
+                    aria-hidden="true"
+                  >
+                    <div class="p-3">
+                      <div
+                        class="border rounded mb-2"
+                        style="height: 6px; width: 45%"
+                      ></div>
+                      <div
+                        class="border rounded"
+                        style="height: 6px; width: 60%"
+                      ></div>
+                    </div>
+                    <div
+                      class="position-absolute bg-primary-transparent border-start border-primary"
+                      style="inset: 0 0 0 auto; width: 32%"
+                    ></div>
+                  </div>
+                  <p class="text-muted fs-13 mb-3">
+                    A simple drawer form with native validation.
+                  </p>
+                  <button
+                    type="button"
+                    class="btn btn-dark btn-sm"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#drawer-task"
+                    aria-controls="drawer-task"
+                  >
+                    Add demo task<i
+                      class="ri-arrow-right-line ms-1"
+                      aria-hidden="true"
+                    ></i>
+                  </button>
+                  <div
+                    class="offcanvas offcanvas-end"
+                    tabindex="-1"
+                    id="drawer-task"
+                    aria-labelledby="drawer-task-title"
+                    style="--bs-offcanvas-width: min(420px, 100vw)"
+                  >
+                    <div class="offcanvas-header border-bottom">
+                      <h2
+                        class="offcanvas-title fs-16 fw-semibold"
+                        id="drawer-task-title"
+                      >
+                        Create a task
+                      </h2>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="offcanvas"
+                        aria-label="Close drawer"
+                      ></button>
+                    </div>
+                    <div class="offcanvas-body fs-13">
+                      <form id="drawer-task-form">
+                        <div class="mb-3">
+                          <label for="drawer-task-name" class="form-label"
+                            >Task name</label
+                          ><input
+                            id="drawer-task-name"
+                            class="form-control"
+                            placeholder="e.g. Review prototype"
+                            maxlength="100"
+                            required
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label
+                            for="drawer-task-description"
+                            class="form-label"
+                            >Description
+                            <span class="text-muted">(optional)</span></label
+                          ><textarea
+                            id="drawer-task-description"
+                            class="form-control"
+                            rows="4"
+                            placeholder="Add a little context"
+                          ></textarea>
+                        </div>
+                        <p class="text-muted fs-12 mb-0">
+                          Creates a page preview without storing task data.
+                        </p>
+                      </form>
+                    </div>
+                    <div class="border-top p-3">
+                      <button
+                        class="btn btn-primary btn-sm"
+                        type="submit"
+                        form="drawer-task-form"
+                      >
+                        Create preview
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6 col-xxl-4">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <h2 class="card-title mb-0">Notification center</h2>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="border rounded bg-light position-relative overflow-hidden mb-3"
+                    style="height: 100px"
+                    aria-hidden="true"
+                  >
+                    <div class="p-3">
+                      <div
+                        class="border rounded mb-2"
+                        style="height: 6px; width: 45%"
+                      ></div>
+                      <div
+                        class="border rounded"
+                        style="height: 6px; width: 60%"
+                      ></div>
+                    </div>
+                    <div
+                      class="position-absolute bg-primary-transparent border-start border-primary"
+                      style="inset: 0 0 0 auto; width: 32%"
+                    ></div>
+                  </div>
+                  <p class="text-muted fs-13 mb-3">
+                    Organize recent updates in a clean, readable drawer.
+                  </p>
+                  <button
+                    type="button"
+                    class="btn btn-dark btn-sm"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#drawer-notifications"
+                    aria-controls="drawer-notifications"
+                  >
+                    View updates<i
+                      class="ri-arrow-right-line ms-1"
+                      aria-hidden="true"
+                    ></i>
+                  </button>
+                  <div
+                    class="offcanvas offcanvas-end"
+                    tabindex="-1"
+                    id="drawer-notifications"
+                    aria-labelledby="drawer-notifications-title"
+                    style="--bs-offcanvas-width: min(420px, 100vw)"
+                  >
+                    <div class="offcanvas-header border-bottom">
+                      <h2
+                        class="offcanvas-title fs-16 fw-semibold"
+                        id="drawer-notifications-title"
+                      >
+                        Recent updates
+                      </h2>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="offcanvas"
+                        aria-label="Close drawer"
+                      ></button>
+                    </div>
+                    <div class="offcanvas-body fs-13">
+                      <div class="">
+                        <h3 class="fs-14 fw-semibold mb-1">
+                          Design review is ready
+                        </h3>
+                        <p class="text-muted mb-2">
+                          The prototype is ready for your feedback.
+                        </p>
+                        <span class="text-muted fs-11">12 minutes ago</span>
+                      </div>
+                      <div class="border-top pt-3 mt-3">
+                        <h3 class="fs-14 fw-semibold mb-1">New files shared</h3>
+                        <p class="text-muted mb-2">
+                          The latest brand guidelines are in your shared folder.
+                        </p>
+                        <span class="text-muted fs-11">1 hour ago</span>
+                      </div>
+                      <div class="border-top pt-3 mt-3">
+                        <h3 class="fs-14 fw-semibold mb-1">
+                          Milestone completed
+                        </h3>
+                        <p class="text-muted mb-2">
+                          The team finished the research phase.
+                        </p>
+                        <span class="text-muted fs-11">Today</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6 col-xxl-4">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <h2 class="card-title mb-0">Keep the page available</h2>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="border rounded bg-light position-relative overflow-hidden mb-3"
+                    style="height: 100px"
+                    aria-hidden="true"
+                  >
+                    <div class="p-3">
+                      <div
+                        class="border rounded mb-2"
+                        style="height: 6px; width: 45%"
+                      ></div>
+                      <div
+                        class="border rounded"
+                        style="height: 6px; width: 60%"
+                      ></div>
+                    </div>
+                    <div
+                      class="position-absolute bg-primary-transparent border-start border-primary"
+                      style="inset: 0 0 0 auto; width: 32%"
+                    ></div>
+                  </div>
+                  <p class="text-muted fs-13 mb-3">
+                    An independent drawer with background scrolling enabled.
+                  </p>
+                  <button
+                    type="button"
+                    class="btn btn-dark btn-sm"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#drawer-scroll"
+                    aria-controls="drawer-scroll"
+                  >
+                    Open alongside page<i
+                      class="ri-arrow-right-line ms-1"
+                      aria-hidden="true"
+                    ></i>
+                  </button>
+                  <div
+                    class="offcanvas offcanvas-end"
+                    tabindex="-1"
+                    id="drawer-scroll"
+                    aria-labelledby="drawer-scroll-title"
+                    style="--bs-offcanvas-width: min(420px, 100vw)"
+                    data-bs-scroll="true"
+                    data-bs-backdrop="false"
+                  >
+                    <div class="offcanvas-header border-bottom">
+                      <h2
+                        class="offcanvas-title fs-16 fw-semibold"
+                        id="drawer-scroll-title"
+                      >
+                        Reference notes
+                      </h2>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="offcanvas"
+                        aria-label="Close drawer"
+                      ></button>
+                    </div>
+                    <div class="offcanvas-body fs-13">
+                      <p class="text-muted">
+                        The page remains scrollable while this drawer is open.
+                        Close the panel using its header button.
+                      </p>
+                      <span class="badge bg-success-transparent mb-3"
+                        >On track</span
+                      >
+                      <h3 class="fs-20 fw-semibold mb-2">Atlas workspace</h3>
+                      <p class="text-muted mb-4">
+                        Keep the project goals, decisions, and next steps within
+                        reach.
+                      </p>
+                      <dl class="mb-0">
+                        <div
+                          class="d-flex justify-content-between border-bottom pb-3 mb-3"
+                        >
+                          <dt class="text-muted fw-normal">Next milestone</dt>
+                          <dd class="mb-0">Prototype review</dd>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <dt class="text-muted fw-normal">Due date</dt>
+                          <dd class="mb-0">October 28</dd>
+                        </div>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6 col-xxl-4">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <h2 class="card-title mb-0">Focused confirmation</h2>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="border rounded bg-light position-relative overflow-hidden mb-3"
+                    style="height: 100px"
+                    aria-hidden="true"
+                  >
+                    <div class="p-3">
+                      <div
+                        class="border rounded mb-2"
+                        style="height: 6px; width: 45%"
+                      ></div>
+                      <div
+                        class="border rounded"
+                        style="height: 6px; width: 60%"
+                      ></div>
+                    </div>
+                    <div
+                      class="position-absolute bg-primary-transparent border-start border-primary"
+                      style="inset: 0 0 0 auto; width: 32%"
+                    ></div>
+                  </div>
+                  <p class="text-muted fs-13 mb-3">
+                    A static backdrop keeps the decision in view.
+                  </p>
+                  <button
+                    type="button"
+                    class="btn btn-dark btn-sm"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#drawer-static"
+                    aria-controls="drawer-static"
+                  >
+                    Review confirmation<i
+                      class="ri-arrow-right-line ms-1"
+                      aria-hidden="true"
+                    ></i>
+                  </button>
+                  <div
+                    class="offcanvas offcanvas-end"
+                    tabindex="-1"
+                    id="drawer-static"
+                    aria-labelledby="drawer-static-title"
+                    style="--bs-offcanvas-width: min(420px, 100vw)"
+                    data-bs-backdrop="static"
+                    data-bs-keyboard="false"
+                  >
+                    <div class="offcanvas-header border-bottom">
+                      <h2
+                        class="offcanvas-title fs-16 fw-semibold"
+                        id="drawer-static-title"
+                      >
+                        Before you continue
+                      </h2>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="offcanvas"
+                        aria-label="Close drawer"
+                      ></button>
+                    </div>
+                    <div class="offcanvas-body fs-13">
+                      <div
+                        class="bg-warning-transparent text-warning rounded p-3 mb-3"
+                      >
+                        <h3 class="fs-14 fw-semibold mb-1 text-warning">
+                          Review your changes
+                        </h3>
+                        <p class="mb-0">
+                          Confirm that the workspace details are correct before
+                          your next step.
+                        </p>
+                      </div>
+                      <p class="text-muted">
+                        Use the close button or the acknowledgment action to
+                        dismiss this drawer.
+                      </p>
+                    </div>
+                    <div class="border-top p-3">
+                      <button
+                        class="btn btn-primary btn-sm"
+                        type="button"
+                        data-bs-dismiss="offcanvas"
+                      >
+                        Understood
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6 col-xxl-4">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <h2 class="card-title mb-0">Resource preview</h2>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="border rounded bg-light position-relative overflow-hidden mb-3"
+                    style="height: 100px"
+                    aria-hidden="true"
+                  >
+                    <div class="p-3">
+                      <div
+                        class="border rounded mb-2"
+                        style="height: 6px; width: 45%"
+                      ></div>
+                      <div
+                        class="border rounded"
+                        style="height: 6px; width: 60%"
+                      ></div>
+                    </div>
+                    <div
+                      class="position-absolute bg-primary-transparent border-start border-primary"
+                      style="inset: 0 0 0 auto; width: 32%"
+                    ></div>
+                  </div>
+                  <p class="text-muted fs-13 mb-3">
+                    Image-led content with a clear action at the end.
+                  </p>
+                  <button
+                    type="button"
+                    class="btn btn-dark btn-sm"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#drawer-resource"
+                    aria-controls="drawer-resource"
+                  >
+                    Explore resource<i
+                      class="ri-arrow-right-line ms-1"
+                      aria-hidden="true"
+                    ></i>
+                  </button>
+                  <div
+                    class="offcanvas offcanvas-end"
+                    tabindex="-1"
+                    id="drawer-resource"
+                    aria-labelledby="drawer-resource-title"
+                    style="--bs-offcanvas-width: min(420px, 100vw)"
+                  >
+                    <div class="offcanvas-header border-bottom">
+                      <h2
+                        class="offcanvas-title fs-16 fw-semibold"
+                        id="drawer-resource-title"
+                      >
+                        Workspace inspiration
+                      </h2>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="offcanvas"
+                        aria-label="Close drawer"
+                      ></button>
+                    </div>
+                    <div class="offcanvas-body fs-13">
+                      <img
+                        src="../assets/images/cards/17.png"
+                        alt="A sunlit creative studio desk"
+                        class="w-100 rounded mb-3"
+                        loading="lazy"
+                      /><span class="badge bg-primary-transparent mb-2"
+                        >Workspace journal</span
+                      >
+                      <h3 class="fs-20 fw-semibold mb-2">
+                        Make room for your next idea
+                      </h3>
+                      <p class="text-muted">
+                        Thoughtful spaces and clear routines help turn ideas
+                        into useful work.
+                      </p>
+                    </div>
+                    <div class="border-top p-3">
+                      <a href="cards.html" class="btn btn-dark btn-sm"
+                        >Explore card examples</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"--><!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"--><!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/js/app-interactions.js"></script>
+    <script src="../assets/libs/prismjs/prism.js"></script>
+    <script src="../assets/js/prism-custom.js"></script>
+    <script src="../assets/js/offcanvas.js"></script>
+  </body>
+</html>

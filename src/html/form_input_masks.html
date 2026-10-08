@@ -1,0 +1,439 @@
+<!-- include document-head.html"-->
+    <link
+      rel="stylesheet"
+      href="../assets/libs/prismjs/themes/prism-coy.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Input masks</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">
+              <a href="javascript:void(0);">Forms</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="javascript:void(0);">Form Elements</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Input masks
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid">
+          <section aria-labelledby="date-mask-title">
+            <div class="row">
+              <div class="col-xl-6">
+                <section class="card custom-card">
+                  <div class="card-header justify-content-between">
+                    <div>
+                      <h3 class="card-title mb-1">DD-MM-YYYY</h3>
+                      <p class="text-muted fs-12 mb-0">
+                        Day, then month, then year.
+                      </p>
+                    </div>
+                    <div class="prism-toggle">
+                      <button
+                        class="btn btn-sm btn-outline-light rounded-pill"
+                        type="button"
+                      >
+                        View markup<i
+                          class="ri-code-line ms-2 d-inline-block align-middle"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <label class="form-label" for="mask-date-dmy">Date</label
+                    ><input
+                      class="form-control date-format"
+                      id="mask-date-dmy"
+                      type="text"
+                      inputmode="numeric"
+                      placeholder="DD-MM-YYYY"
+                      autocomplete="off"
+                    />
+                    <div class="form-text">Example format: 27-09-2026</div>
+                  </div>
+                  <div class="card-footer d-none border-top-0">
+                    <pre
+                      class="language-html"
+                    ><code class="language-html">&lt;input class="form-control date-format"
+       type="text" inputmode="numeric" placeholder="DD-MM-YYYY"&gt;</code></pre>
+                  </div>
+                </section>
+              </div>
+              <div class="col-xl-6">
+                <section class="card custom-card">
+                  <div class="card-header justify-content-between">
+                    <div>
+                      <h3 class="card-title mb-1">MM-DD-YYYY</h3>
+                      <p class="text-muted fs-12 mb-0">
+                        Month, then day, then year.
+                      </p>
+                    </div>
+                    <div class="prism-toggle">
+                      <button
+                        class="btn btn-sm btn-outline-light rounded-pill"
+                        type="button"
+                      >
+                        View markup<i
+                          class="ri-code-line ms-2 d-inline-block align-middle"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <label class="form-label" for="mask-date-mdy">Date</label
+                    ><input
+                      class="form-control date-format-1"
+                      id="mask-date-mdy"
+                      type="text"
+                      inputmode="numeric"
+                      placeholder="MM-DD-YYYY"
+                      autocomplete="off"
+                    />
+                    <div class="form-text">Example format: 09-27-2026</div>
+                  </div>
+                  <div class="card-footer d-none border-top-0">
+                    <pre
+                      class="language-html"
+                    ><code class="language-html">&lt;input class="form-control date-format-1"
+       type="text" inputmode="numeric" placeholder="MM-DD-YYYY"&gt;</code></pre>
+                  </div>
+                </section>
+              </div>
+              <div class="col-xl-6">
+                <section class="card custom-card">
+                  <div class="card-header justify-content-between">
+                    <div>
+                      <h3 class="card-title mb-1">MM-YY</h3>
+                      <p class="text-muted fs-12 mb-0">
+                        A compact format for expiry or reporting periods.
+                      </p>
+                    </div>
+                    <div class="prism-toggle">
+                      <button
+                        class="btn btn-sm btn-outline-light rounded-pill"
+                        type="button"
+                      >
+                        View markup<i
+                          class="ri-code-line ms-2 d-inline-block align-middle"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <label class="form-label" for="mask-month-year"
+                      >Reporting period</label
+                    ><input
+                      class="form-control date-format-2"
+                      id="mask-month-year"
+                      type="text"
+                      inputmode="numeric"
+                      placeholder="MM-YY"
+                      autocomplete="off"
+                    />
+                  </div>
+                  <div class="card-footer d-none border-top-0">
+                    <pre
+                      class="language-html"
+                    ><code class="language-html">&lt;input class="form-control date-format-2"
+       type="text" inputmode="numeric" placeholder="MM-YY"&gt;</code></pre>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </section>
+
+          <section aria-labelledby="number-time-mask-title">
+            <div class="row">
+              <div class="col-xl-6">
+                <section class="card custom-card">
+                  <div class="card-header justify-content-between">
+                    <div>
+                      <h3 class="card-title mb-1">Grouped amount</h3>
+                      <p class="text-muted fs-12 mb-0">
+                        Applies lakh-style digit grouping as you type.
+                      </p>
+                    </div>
+                    <div class="prism-toggle">
+                      <button
+                        class="btn btn-sm btn-outline-light rounded-pill"
+                        type="button"
+                      >
+                        View markup<i
+                          class="ri-code-line ms-2 d-inline-block align-middle"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <label class="form-label" for="mask-number">Amount</label>
+                    <div class="input-group">
+                      <span class="input-group-text">₹</span
+                      ><input
+                        class="form-control number-format"
+                        id="mask-number"
+                        type="text"
+                        inputmode="decimal"
+                        placeholder="1,25,000"
+                        autocomplete="off"
+                      />
+                    </div>
+                    <div class="form-text">
+                      Grouping is for readability; parse and validate before
+                      calculations.
+                    </div>
+                  </div>
+                  <div class="card-footer d-none border-top-0">
+                    <pre
+                      class="language-html"
+                    ><code class="language-html">&lt;div class="input-group"&gt;
+  &lt;span class="input-group-text"&gt;₹&lt;/span&gt;
+  &lt;input class="form-control number-format" type="text"
+         inputmode="decimal" placeholder="1,25,000"&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                </section>
+              </div>
+              <div class="col-xl-6">
+                <section class="card custom-card">
+                  <div class="card-header justify-content-between">
+                    <div>
+                      <h3 class="card-title mb-1">Time formats</h3>
+                      <p class="text-muted fs-12 mb-0">
+                        Compare hour-minute and hour-minute-second masks.
+                      </p>
+                    </div>
+                    <div class="prism-toggle">
+                      <button
+                        class="btn btn-sm btn-outline-light rounded-pill"
+                        type="button"
+                      >
+                        View markup<i
+                          class="ri-code-line ms-2 d-inline-block align-middle"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label class="form-label" for="mask-time-short"
+                          >Start time</label
+                        ><input
+                          class="form-control time-format-2"
+                          id="mask-time-short"
+                          type="text"
+                          inputmode="numeric"
+                          placeholder="HH:MM"
+                          autocomplete="off"
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label" for="mask-time-full"
+                          >Duration</label
+                        ><input
+                          class="form-control time-format-1"
+                          id="mask-time-full"
+                          type="text"
+                          inputmode="numeric"
+                          placeholder="HH:MM:SS"
+                          autocomplete="off"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer d-none border-top-0">
+                    <pre
+                      class="language-html"
+                    ><code class="language-html">&lt;input class="form-control time-format-2" placeholder="HH:MM"&gt;
+&lt;input class="form-control time-format-1" placeholder="HH:MM:SS"&gt;</code></pre>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </section>
+
+          <section aria-labelledby="identifier-mask-title">
+            <div class="row">
+              <div class="col-xl-6">
+                <section class="card custom-card">
+                  <div class="card-header justify-content-between">
+                    <div>
+                      <h3 class="card-title mb-1">Segmented reference</h3>
+                      <p class="text-muted fs-12 mb-0">
+                        Uppercase letters arranged in fixed-length groups.
+                      </p>
+                    </div>
+                    <div class="prism-toggle">
+                      <button
+                        class="btn btn-sm btn-outline-light rounded-pill"
+                        type="button"
+                      >
+                        View markup<i
+                          class="ri-code-line ms-2 d-inline-block align-middle"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <label class="form-label" for="mask-reference"
+                      >Asset reference</label
+                    ><input
+                      class="form-control formatting-blocks"
+                      id="mask-reference"
+                      type="text"
+                      placeholder="ABCD EFG HIJ KLMN"
+                      autocomplete="off"
+                    />
+                    <div class="form-text">
+                      Blocks: 4 · 3 · 3 · 4 characters.
+                    </div>
+                  </div>
+                  <div class="card-footer d-none border-top-0">
+                    <pre
+                      class="language-html"
+                    ><code class="language-html">&lt;input class="form-control formatting-blocks"
+       type="text" placeholder="ABCD EFG HIJ KLMN"&gt;</code></pre>
+                  </div>
+                </section>
+              </div>
+              <div class="col-xl-6">
+                <section class="card custom-card">
+                  <div class="card-header justify-content-between">
+                    <div>
+                      <h3 class="card-title mb-1">Separators and prefix</h3>
+                      <p class="text-muted fs-12 mb-0">
+                        Try a custom delimiter, mixed separators or a fixed
+                        prefix.
+                      </p>
+                    </div>
+                    <div class="prism-toggle">
+                      <button
+                        class="btn btn-sm btn-outline-light rounded-pill"
+                        type="button"
+                      >
+                        View markup<i
+                          class="ri-code-line ms-2 d-inline-block align-middle"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <label class="form-label" for="mask-delimiter"
+                          >Dot format</label
+                        ><input
+                          class="form-control delimiter"
+                          id="mask-delimiter"
+                          type="text"
+                          placeholder="ABC·DEF·GHI"
+                        />
+                      </div>
+                      <div class="col-md-4">
+                        <label class="form-label" for="mask-delimiters"
+                          >Mixed format</label
+                        ><input
+                          class="form-control delimiters"
+                          id="mask-delimiters"
+                          type="text"
+                          placeholder="ABC/DEF/GHI-JK"
+                        />
+                      </div>
+                      <div class="col-md-4">
+                        <label class="form-label" for="mask-prefix"
+                          >Ticket ID</label
+                        ><input
+                          class="form-control prefix-element"
+                          id="mask-prefix"
+                          type="text"
+                          placeholder="Prefix-0000"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer d-none border-top-0">
+                    <pre
+                      class="language-html"
+                    ><code class="language-html">&lt;input class="form-control delimiter" placeholder="ABC·DEF·GHI"&gt;
+&lt;input class="form-control delimiters" placeholder="ABC/DEF/GHI-JK"&gt;
+&lt;input class="form-control prefix-element" placeholder="Prefix-0000"&gt;</code></pre>
+                  </div>
+                </section>
+              </div>
+              <div class="col-xl-6">
+                <section class="card custom-card">
+                  <div class="card-header justify-content-between">
+                    <div>
+                      <h3 class="card-title mb-1">Phone number</h3>
+                      <p class="text-muted fs-12 mb-0">
+                        Format a phone value as the user types.
+                      </p>
+                    </div>
+                    <div class="prism-toggle">
+                      <button
+                        class="btn btn-sm btn-outline-light rounded-pill"
+                        type="button"
+                      >
+                        View markup<i
+                          class="ri-code-line ms-2 d-inline-block align-middle"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <label class="form-label" for="mask-phone"
+                      >Contact number</label
+                    ><input
+                      class="form-control phone-number"
+                      id="mask-phone"
+                      type="tel"
+                      inputmode="tel"
+                      placeholder="+1 (415) 555-0148"
+                      autocomplete="tel"
+                    />
+                    <div class="form-text">
+                      Choose a country-aware mask when collecting international
+                      phone numbers.
+                    </div>
+                  </div>
+                  <div class="card-footer d-none border-top-0">
+                    <pre
+                      class="language-html"
+                    ><code class="language-html">&lt;input class="form-control phone-number" type="tel"
+       inputmode="tel" placeholder="+1 (415) 555-0148"
+       autocomplete="tel"&gt;</code></pre>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <!-- include common-scripts.html"-->
+    <!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/libs/prismjs/prism.js"></script>
+    <script src="../assets/js/prism-custom.js"></script>
+    <script src="../assets/libs/cleave.js/cleave.min.js"></script>
+    <script src="../assets/js/form-input-mask.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

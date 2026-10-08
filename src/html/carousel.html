@@ -1,0 +1,1124 @@
+<!-- include document-head.html"-->
+    <link
+      rel="stylesheet"
+      href="../assets/libs/prismjs/themes/prism-coy.min.css"
+    />
+  </head>
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"--><!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"--><!-- include side-navigation.html"-->
+      <main data-markup-examples class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Carousel</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Base UI</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Carousel</li>
+          </ol>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Landscape gallery</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Simple image slides with clear previous and next controls.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="landscape-gallery"
+                    class="carousel slide rounded overflow-hidden"
+                    role="region"
+                    aria-roledescription="carousel"
+                    aria-label="Landscape gallery"
+                    data-bs-interval="false"
+                  >
+                    <div class="carousel-inner">
+                      <div
+                        class="carousel-item active"
+                        role="group"
+                        aria-roledescription="slide"
+                        aria-label="1 of 3"
+                      >
+                        <img
+                          src="../assets/images/cards/1.jpg"
+                          alt="Mountains reflected in a peaceful lake"
+                          class="d-block w-100"
+                          style="height: 240px; object-fit: cover"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </div>
+                      <div
+                        class="carousel-item"
+                        role="group"
+                        aria-roledescription="slide"
+                        aria-label="2 of 3"
+                      >
+                        <img
+                          src="../assets/images/cards/2.jpg"
+                          alt="Palm trees and beach loungers at sunset"
+                          class="d-block w-100"
+                          style="height: 240px; object-fit: cover"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </div>
+                      <div
+                        class="carousel-item"
+                        role="group"
+                        aria-roledescription="slide"
+                        aria-label="3 of 3"
+                      >
+                        <img
+                          src="../assets/images/cards/17.png"
+                          alt="A notebook on a sunlit studio desk"
+                          class="d-block w-100"
+                          style="height: 240px; object-fit: cover"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </div>
+                    </div>
+                    <button
+                      class="carousel-control-prev"
+                      type="button"
+                      data-bs-target="#landscape-gallery"
+                      data-bs-slide="prev"
+                    >
+                      <span
+                        class="carousel-control-prev-icon"
+                        aria-hidden="true"
+                      ></span
+                      ><span class="visually-hidden"
+                        >Previous slide</span
+                      ></button
+                    ><button
+                      class="carousel-control-next"
+                      type="button"
+                      data-bs-target="#landscape-gallery"
+                      data-bs-slide="next"
+                    >
+                      <span
+                        class="carousel-control-next-icon"
+                        aria-hidden="true"
+                      ></span
+                      ><span class="visually-hidden">Next slide</span>
+                    </button>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Soft fade</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      A gentle crossfade between photographs.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="soft-fade"
+                    class="carousel slide carousel-fade rounded overflow-hidden"
+                    role="region"
+                    aria-roledescription="carousel"
+                    aria-label="Crossfade gallery"
+                    data-bs-interval="false"
+                  >
+                    <div class="carousel-indicators">
+                      <button
+                        type="button"
+                        data-bs-target="#soft-fade"
+                        data-bs-slide-to="0"
+                        class="active"
+                        aria-current="true"
+                        aria-label="Slide 1"
+                      ></button
+                      ><button
+                        type="button"
+                        data-bs-target="#soft-fade"
+                        data-bs-slide-to="1"
+                        aria-label="Slide 2"
+                      ></button
+                      ><button
+                        type="button"
+                        data-bs-target="#soft-fade"
+                        data-bs-slide-to="2"
+                        aria-label="Slide 3"
+                      ></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div
+                        class="carousel-item active"
+                        role="group"
+                        aria-roledescription="slide"
+                        aria-label="1 of 3"
+                      >
+                        <img
+                          src="../assets/images/cards/1.jpg"
+                          alt="Mountains reflected in a peaceful lake"
+                          class="d-block w-100"
+                          style="height: 240px; object-fit: cover"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </div>
+                      <div
+                        class="carousel-item"
+                        role="group"
+                        aria-roledescription="slide"
+                        aria-label="2 of 3"
+                      >
+                        <img
+                          src="../assets/images/cards/2.jpg"
+                          alt="Palm trees and beach loungers at sunset"
+                          class="d-block w-100"
+                          style="height: 240px; object-fit: cover"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </div>
+                      <div
+                        class="carousel-item"
+                        role="group"
+                        aria-roledescription="slide"
+                        aria-label="3 of 3"
+                      >
+                        <img
+                          src="../assets/images/cards/17.png"
+                          alt="A notebook on a sunlit studio desk"
+                          class="d-block w-100"
+                          style="height: 240px; object-fit: cover"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </div>
+                    </div>
+                    <button
+                      class="carousel-control-prev"
+                      type="button"
+                      data-bs-target="#soft-fade"
+                      data-bs-slide="prev"
+                    >
+                      <span
+                        class="carousel-control-prev-icon"
+                        aria-hidden="true"
+                      ></span
+                      ><span class="visually-hidden"
+                        >Previous slide</span
+                      ></button
+                    ><button
+                      class="carousel-control-next"
+                      type="button"
+                      data-bs-target="#soft-fade"
+                      data-bs-slide="next"
+                    >
+                      <span
+                        class="carousel-control-next-icon"
+                        aria-hidden="true"
+                      ></span
+                      ><span class="visually-hidden">Next slide</span>
+                    </button>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Stories in focus</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Readable captions on a subtle dark gradient.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="story-gallery"
+                    class="carousel slide rounded overflow-hidden"
+                    role="region"
+                    aria-roledescription="carousel"
+                    aria-label="Visual stories"
+                    data-bs-interval="false"
+                  >
+                    <div class="carousel-indicators">
+                      <button
+                        type="button"
+                        data-bs-target="#story-gallery"
+                        data-bs-slide-to="0"
+                        class="active"
+                        aria-current="true"
+                        aria-label="Slide 1"
+                      ></button
+                      ><button
+                        type="button"
+                        data-bs-target="#story-gallery"
+                        data-bs-slide-to="1"
+                        aria-label="Slide 2"
+                      ></button
+                      ><button
+                        type="button"
+                        data-bs-target="#story-gallery"
+                        data-bs-slide-to="2"
+                        aria-label="Slide 3"
+                      ></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div
+                        class="carousel-item active"
+                        role="group"
+                        aria-roledescription="slide"
+                        aria-label="1 of 3"
+                      >
+                        <div class="position-relative">
+                          <img
+                            src="../assets/images/cards/1.jpg"
+                            alt="Mountains reflected in a peaceful lake"
+                            class="d-block w-100"
+                            style="height: 280px; object-fit: cover"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                          <div
+                            class="position-absolute bottom-0 start-0 w-100 text-fixed-white px-5 pt-5 pb-5"
+                            style="
+                              background: linear-gradient(
+                                transparent,
+                                rgba(0, 0, 0, 0.8)
+                              );
+                            "
+                          >
+                            <h3 class="fs-18 fw-semibold text-fixed-white mb-1">
+                              A quieter perspective
+                            </h3>
+                            <p class="fs-13 mb-0">
+                              Take a moment to slow down and enjoy the view.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="carousel-item"
+                        role="group"
+                        aria-roledescription="slide"
+                        aria-label="2 of 3"
+                      >
+                        <div class="position-relative">
+                          <img
+                            src="../assets/images/cards/2.jpg"
+                            alt="Palm trees and beach loungers at sunset"
+                            class="d-block w-100"
+                            style="height: 280px; object-fit: cover"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                          <div
+                            class="position-absolute bottom-0 start-0 w-100 text-fixed-white px-5 pt-5 pb-5"
+                            style="
+                              background: linear-gradient(
+                                transparent,
+                                rgba(0, 0, 0, 0.8)
+                              );
+                            "
+                          >
+                            <h3 class="fs-18 fw-semibold text-fixed-white mb-1">
+                              Golden hour by the shore
+                            </h3>
+                            <p class="fs-13 mb-0">
+                              Make room for a little rest and a fresh start.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="carousel-item"
+                        role="group"
+                        aria-roledescription="slide"
+                        aria-label="3 of 3"
+                      >
+                        <div class="position-relative">
+                          <img
+                            src="../assets/images/cards/17.png"
+                            alt="A notebook on a sunlit studio desk"
+                            class="d-block w-100"
+                            style="height: 280px; object-fit: cover"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                          <div
+                            class="position-absolute bottom-0 start-0 w-100 text-fixed-white px-5 pt-5 pb-5"
+                            style="
+                              background: linear-gradient(
+                                transparent,
+                                rgba(0, 0, 0, 0.8)
+                              );
+                            "
+                          >
+                            <h3 class="fs-18 fw-semibold text-fixed-white mb-1">
+                              Space for your next idea
+                            </h3>
+                            <p class="fs-13 mb-0">
+                              A thoughtful environment makes everyday work feel
+                              better.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      class="carousel-control-prev"
+                      type="button"
+                      data-bs-target="#story-gallery"
+                      data-bs-slide="prev"
+                    >
+                      <span
+                        class="carousel-control-prev-icon"
+                        aria-hidden="true"
+                      ></span
+                      ><span class="visually-hidden"
+                        >Previous slide</span
+                      ></button
+                    ><button
+                      class="carousel-control-next"
+                      type="button"
+                      data-bs-target="#story-gallery"
+                      data-bs-slide="next"
+                    >
+                      <span
+                        class="carousel-control-next-icon"
+                        aria-hidden="true"
+                      ></span
+                      ><span class="visually-hidden">Next slide</span>
+                    </button>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Editorial preview</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Keep supporting text below the image for easy reading.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="editorial-gallery"
+                    class="carousel slide carousel-dark rounded overflow-hidden"
+                    role="region"
+                    aria-roledescription="carousel"
+                    aria-label="Journal articles"
+                    data-bs-interval="false"
+                  >
+                    <div class="carousel-indicators">
+                      <button
+                        type="button"
+                        data-bs-target="#editorial-gallery"
+                        data-bs-slide-to="0"
+                        class="active"
+                        aria-current="true"
+                        aria-label="Slide 1"
+                      ></button
+                      ><button
+                        type="button"
+                        data-bs-target="#editorial-gallery"
+                        data-bs-slide-to="1"
+                        aria-label="Slide 2"
+                      ></button
+                      ><button
+                        type="button"
+                        data-bs-target="#editorial-gallery"
+                        data-bs-slide-to="2"
+                        aria-label="Slide 3"
+                      ></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div
+                        class="carousel-item active"
+                        role="group"
+                        aria-roledescription="slide"
+                        aria-label="1 of 3"
+                      >
+                        <img
+                          src="../assets/images/cards/1.jpg"
+                          alt="Mountains reflected in a peaceful lake"
+                          class="d-block w-100"
+                          style="height: 180px; object-fit: cover"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                        <div class="bg-light px-5 pt-3 pb-5">
+                          <span class="text-muted fs-11"
+                            >WORKSPACE JOURNAL</span
+                          >
+                          <h3 class="fs-16 fw-semibold mt-2 mb-1">
+                            A quieter perspective
+                          </h3>
+                          <p class="text-muted fs-13 mb-0">
+                            Take a moment to slow down and enjoy the view.
+                          </p>
+                        </div>
+                      </div>
+                      <div
+                        class="carousel-item"
+                        role="group"
+                        aria-roledescription="slide"
+                        aria-label="2 of 3"
+                      >
+                        <img
+                          src="../assets/images/cards/2.jpg"
+                          alt="Palm trees and beach loungers at sunset"
+                          class="d-block w-100"
+                          style="height: 180px; object-fit: cover"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                        <div class="bg-light px-5 pt-3 pb-5">
+                          <span class="text-muted fs-11"
+                            >WORKSPACE JOURNAL</span
+                          >
+                          <h3 class="fs-16 fw-semibold mt-2 mb-1">
+                            Golden hour by the shore
+                          </h3>
+                          <p class="text-muted fs-13 mb-0">
+                            Make room for a little rest and a fresh start.
+                          </p>
+                        </div>
+                      </div>
+                      <div
+                        class="carousel-item"
+                        role="group"
+                        aria-roledescription="slide"
+                        aria-label="3 of 3"
+                      >
+                        <img
+                          src="../assets/images/cards/17.png"
+                          alt="A notebook on a sunlit studio desk"
+                          class="d-block w-100"
+                          style="height: 180px; object-fit: cover"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                        <div class="bg-light px-5 pt-3 pb-5">
+                          <span class="text-muted fs-11"
+                            >WORKSPACE JOURNAL</span
+                          >
+                          <h3 class="fs-16 fw-semibold mt-2 mb-1">
+                            Space for your next idea
+                          </h3>
+                          <p class="text-muted fs-13 mb-0">
+                            A thoughtful environment makes everyday work feel
+                            better.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      class="carousel-control-prev"
+                      type="button"
+                      data-bs-target="#editorial-gallery"
+                      data-bs-slide="prev"
+                    >
+                      <span
+                        class="carousel-control-prev-icon"
+                        aria-hidden="true"
+                      ></span
+                      ><span class="visually-hidden"
+                        >Previous slide</span
+                      ></button
+                    ><button
+                      class="carousel-control-next"
+                      type="button"
+                      data-bs-target="#editorial-gallery"
+                      data-bs-slide="next"
+                    >
+                      <span
+                        class="carousel-control-next-icon"
+                        aria-hidden="true"
+                      ></span
+                      ><span class="visually-hidden">Next slide</span>
+                    </button>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Collection spotlight</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Products, brands, and spaces on a neutral surface.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="product-gallery"
+                    class="carousel slide carousel-dark rounded overflow-hidden"
+                    role="region"
+                    aria-roledescription="carousel"
+                    aria-label="Product and collection spotlight"
+                    data-bs-interval="false"
+                  >
+                    <div class="carousel-indicators">
+                      <button
+                        type="button"
+                        data-bs-target="#product-gallery"
+                        data-bs-slide-to="0"
+                        class="active"
+                        aria-current="true"
+                        aria-label="Slide 1"
+                      ></button
+                      ><button
+                        type="button"
+                        data-bs-target="#product-gallery"
+                        data-bs-slide-to="1"
+                        aria-label="Slide 2"
+                      ></button
+                      ><button
+                        type="button"
+                        data-bs-target="#product-gallery"
+                        data-bs-slide-to="2"
+                        aria-label="Slide 3"
+                      ></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div
+                        class="carousel-item active"
+                        role="group"
+                        aria-roledescription="slide"
+                        aria-label="1 of 3"
+                      >
+                        <div class="bg-light text-center px-5 pt-3 pb-5">
+                          <img
+                            src="../assets/images/ecommerce/png/1.png"
+                            alt="White lace-up sneakers"
+                            class="d-block w-100"
+                            style="height: 170px; object-fit: contain"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                          <h3 class="fs-15 fw-semibold mt-3 mb-1">
+                            Everyday white sneakers
+                          </h3>
+                          <span class="text-muted fs-13">$89.00</span>
+                        </div>
+                      </div>
+                      <div
+                        class="carousel-item"
+                        role="group"
+                        aria-roledescription="slide"
+                        aria-label="2 of 3"
+                      >
+                        <div class="bg-light text-center px-5 pt-3 pb-5">
+                          <img
+                            src="../assets/images/logos/1.png"
+                            alt="Company logo"
+                            class="d-block w-100"
+                            style="height: 170px; object-fit: contain"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                          <h3 class="fs-15 fw-semibold mt-3 mb-1">
+                            A considered brand identity
+                          </h3>
+                          <span class="text-muted fs-13">Brand collection</span>
+                        </div>
+                      </div>
+                      <div
+                        class="carousel-item"
+                        role="group"
+                        aria-roledescription="slide"
+                        aria-label="3 of 3"
+                      >
+                        <div class="bg-light text-center px-5 pt-3 pb-5">
+                          <img
+                            src="../assets/images/cards/16.png"
+                            alt="Bright reading nook"
+                            class="d-block w-100"
+                            style="height: 170px; object-fit: contain"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                          <h3 class="fs-15 fw-semibold mt-3 mb-1">
+                            Thoughtful everyday spaces
+                          </h3>
+                          <span class="text-muted fs-13"
+                            >Workspace collection</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      class="carousel-control-prev"
+                      type="button"
+                      data-bs-target="#product-gallery"
+                      data-bs-slide="prev"
+                    >
+                      <span
+                        class="carousel-control-prev-icon"
+                        aria-hidden="true"
+                      ></span
+                      ><span class="visually-hidden"
+                        >Previous slide</span
+                      ></button
+                    ><button
+                      class="carousel-control-next"
+                      type="button"
+                      data-bs-target="#product-gallery"
+                      data-bs-slide="next"
+                    >
+                      <span
+                        class="carousel-control-next-icon"
+                        aria-hidden="true"
+                      ></span
+                      ><span class="visually-hidden">Next slide</span>
+                    </button>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Team voices</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Text-led slides with portraits and generous spacing.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="team-voices"
+                    class="carousel slide carousel-dark rounded overflow-hidden"
+                    role="region"
+                    aria-roledescription="carousel"
+                    aria-label="Team testimonials"
+                    data-bs-interval="false"
+                  >
+                    <div class="carousel-indicators">
+                      <button
+                        type="button"
+                        data-bs-target="#team-voices"
+                        data-bs-slide-to="0"
+                        class="active"
+                        aria-current="true"
+                        aria-label="Slide 1"
+                      ></button
+                      ><button
+                        type="button"
+                        data-bs-target="#team-voices"
+                        data-bs-slide-to="1"
+                        aria-label="Slide 2"
+                      ></button
+                      ><button
+                        type="button"
+                        data-bs-target="#team-voices"
+                        data-bs-slide-to="2"
+                        aria-label="Slide 3"
+                      ></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div
+                        class="carousel-item active"
+                        role="group"
+                        aria-roledescription="slide"
+                        aria-label="1 of 3"
+                      >
+                        <div
+                          class="bg-light text-center px-5 py-5"
+                          style="min-height: 285px"
+                        >
+                          <span class="avatar avatar-lg avatar-rounded mb-3"
+                            ><img
+                              src="../assets/images/users/5.jpg"
+                              alt="Amelia Hart"
+                              loading="lazy"
+                          /></span>
+                          <blockquote class="fs-14 lh-base mb-3">
+                            A shared workspace helps us keep the details clear
+                            and the team connected.
+                          </blockquote>
+                          <h3 class="fs-13 fw-semibold mb-1">Amelia Hart</h3>
+                          <span class="text-muted fs-12">Product designer</span>
+                        </div>
+                      </div>
+                      <div
+                        class="carousel-item"
+                        role="group"
+                        aria-roledescription="slide"
+                        aria-label="2 of 3"
+                      >
+                        <div
+                          class="bg-light text-center px-5 py-5"
+                          style="min-height: 285px"
+                        >
+                          <span class="avatar avatar-lg avatar-rounded mb-3"
+                            ><img
+                              src="../assets/images/users/12.jpg"
+                              alt="Liam Carter"
+                              loading="lazy"
+                          /></span>
+                          <blockquote class="fs-14 lh-base mb-3">
+                            The best progress comes from a clear plan and a team
+                            that understands the next step.
+                          </blockquote>
+                          <h3 class="fs-13 fw-semibold mb-1">Liam Carter</h3>
+                          <span class="text-muted fs-12">Project lead</span>
+                        </div>
+                      </div>
+                      <div
+                        class="carousel-item"
+                        role="group"
+                        aria-roledescription="slide"
+                        aria-label="3 of 3"
+                      >
+                        <div
+                          class="bg-light text-center px-5 py-5"
+                          style="min-height: 285px"
+                        >
+                          <span class="avatar avatar-lg avatar-rounded mb-3"
+                            ><img
+                              src="../assets/images/users/10.jpg"
+                              alt="Noah Ellis"
+                              loading="lazy"
+                          /></span>
+                          <blockquote class="fs-14 lh-base mb-3">
+                            Small improvements to our everyday workflow make a
+                            big difference over time.
+                          </blockquote>
+                          <h3 class="fs-13 fw-semibold mb-1">Noah Ellis</h3>
+                          <span class="text-muted fs-12">Developer</span>
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      class="carousel-control-prev"
+                      type="button"
+                      data-bs-target="#team-voices"
+                      data-bs-slide="prev"
+                    >
+                      <span
+                        class="carousel-control-prev-icon"
+                        aria-hidden="true"
+                      ></span
+                      ><span class="visually-hidden"
+                        >Previous slide</span
+                      ></button
+                    ><button
+                      class="carousel-control-next"
+                      type="button"
+                      data-bs-target="#team-voices"
+                      data-bs-slide="next"
+                    >
+                      <span
+                        class="carousel-control-next-icon"
+                        aria-hidden="true"
+                      ></span
+                      ><span class="visually-hidden">Next slide</span>
+                    </button>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Paired image slides</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Two visual tiles travel together within each slide.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="paired-gallery"
+                    class="carousel slide rounded overflow-hidden"
+                    role="region"
+                    aria-roledescription="carousel"
+                    aria-label="Paired photographs"
+                    data-bs-interval="false"
+                  >
+                    <div class="carousel-indicators">
+                      <button
+                        type="button"
+                        data-bs-target="#paired-gallery"
+                        data-bs-slide-to="0"
+                        class="active"
+                        aria-current="true"
+                        aria-label="Slide 1"
+                      ></button
+                      ><button
+                        type="button"
+                        data-bs-target="#paired-gallery"
+                        data-bs-slide-to="1"
+                        aria-label="Slide 2"
+                      ></button
+                      ><button
+                        type="button"
+                        data-bs-target="#paired-gallery"
+                        data-bs-slide-to="2"
+                        aria-label="Slide 3"
+                      ></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div
+                        class="carousel-item active"
+                        role="group"
+                        aria-roledescription="slide"
+                        aria-label="1 of 3"
+                      >
+                        <div class="row g-2">
+                          <div class="col-6">
+                            <img
+                              src="../assets/images/cards/1.jpg"
+                              alt="Mountains reflected in a peaceful lake"
+                              class="d-block w-100"
+                              style="height: 220px; object-fit: cover"
+                              loading="lazy"
+                              decoding="async"
+                            />
+                          </div>
+                          <div class="col-6">
+                            <img
+                              src="../assets/images/cards/2.jpg"
+                              alt="Palm trees and beach loungers at sunset"
+                              class="d-block w-100"
+                              style="height: 220px; object-fit: cover"
+                              loading="lazy"
+                              decoding="async"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="carousel-item"
+                        role="group"
+                        aria-roledescription="slide"
+                        aria-label="2 of 3"
+                      >
+                        <div class="row g-2">
+                          <div class="col-6">
+                            <img
+                              src="../assets/images/cards/2.jpg"
+                              alt="Palm trees and beach loungers at sunset"
+                              class="d-block w-100"
+                              style="height: 220px; object-fit: cover"
+                              loading="lazy"
+                              decoding="async"
+                            />
+                          </div>
+                          <div class="col-6">
+                            <img
+                              src="../assets/images/cards/17.png"
+                              alt="A notebook on a sunlit studio desk"
+                              class="d-block w-100"
+                              style="height: 220px; object-fit: cover"
+                              loading="lazy"
+                              decoding="async"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="carousel-item"
+                        role="group"
+                        aria-roledescription="slide"
+                        aria-label="3 of 3"
+                      >
+                        <div class="row g-2">
+                          <div class="col-6">
+                            <img
+                              src="../assets/images/cards/17.png"
+                              alt="A notebook on a sunlit studio desk"
+                              class="d-block w-100"
+                              style="height: 220px; object-fit: cover"
+                              loading="lazy"
+                              decoding="async"
+                            />
+                          </div>
+                          <div class="col-6">
+                            <img
+                              src="../assets/images/cards/1.jpg"
+                              alt="Mountains reflected in a peaceful lake"
+                              class="d-block w-100"
+                              style="height: 220px; object-fit: cover"
+                              loading="lazy"
+                              decoding="async"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      class="carousel-control-prev"
+                      type="button"
+                      data-bs-target="#paired-gallery"
+                      data-bs-slide="prev"
+                    >
+                      <span
+                        class="carousel-control-prev-icon"
+                        aria-hidden="true"
+                      ></span
+                      ><span class="visually-hidden"
+                        >Previous slide</span
+                      ></button
+                    ><button
+                      class="carousel-control-next"
+                      type="button"
+                      data-bs-target="#paired-gallery"
+                      data-bs-slide="next"
+                    >
+                      <span
+                        class="carousel-control-next-icon"
+                        aria-hidden="true"
+                      ></span
+                      ><span class="visually-hidden">Next slide</span>
+                    </button>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Guided collection</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      A finite carousel that stops at the first and last slide.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="guided-collection"
+                    class="carousel slide rounded overflow-hidden"
+                    role="region"
+                    aria-roledescription="carousel"
+                    aria-label="Guided visual collection"
+                    data-bs-interval="false"
+                    data-bs-wrap="false"
+                  >
+                    <div class="carousel-inner">
+                      <div
+                        class="carousel-item active"
+                        role="group"
+                        aria-roledescription="slide"
+                        aria-label="1 of 3"
+                      >
+                        <div class="position-relative">
+                          <img
+                            src="../assets/images/cards/1.jpg"
+                            alt="Mountains reflected in a peaceful lake"
+                            class="d-block w-100"
+                            style="height: 250px; object-fit: cover"
+                            loading="lazy"
+                            decoding="async"
+                          /><span
+                            class="position-absolute top-0 start-0 badge bg-dark m-3"
+                            >01 / 03</span
+                          >
+                        </div>
+                      </div>
+                      <div
+                        class="carousel-item"
+                        role="group"
+                        aria-roledescription="slide"
+                        aria-label="2 of 3"
+                      >
+                        <div class="position-relative">
+                          <img
+                            src="../assets/images/cards/2.jpg"
+                            alt="Palm trees and beach loungers at sunset"
+                            class="d-block w-100"
+                            style="height: 250px; object-fit: cover"
+                            loading="lazy"
+                            decoding="async"
+                          /><span
+                            class="position-absolute top-0 start-0 badge bg-dark m-3"
+                            >02 / 03</span
+                          >
+                        </div>
+                      </div>
+                      <div
+                        class="carousel-item"
+                        role="group"
+                        aria-roledescription="slide"
+                        aria-label="3 of 3"
+                      >
+                        <div class="position-relative">
+                          <img
+                            src="../assets/images/cards/17.png"
+                            alt="A notebook on a sunlit studio desk"
+                            class="d-block w-100"
+                            style="height: 250px; object-fit: cover"
+                            loading="lazy"
+                            decoding="async"
+                          /><span
+                            class="position-absolute top-0 start-0 badge bg-dark m-3"
+                            >03 / 03</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      class="carousel-control-prev"
+                      type="button"
+                      data-bs-target="#guided-collection"
+                      data-bs-slide="prev"
+                    >
+                      <span
+                        class="carousel-control-prev-icon"
+                        aria-hidden="true"
+                      ></span
+                      ><span class="visually-hidden"
+                        >Previous slide</span
+                      ></button
+                    ><button
+                      class="carousel-control-next"
+                      type="button"
+                      data-bs-target="#guided-collection"
+                      data-bs-slide="next"
+                    >
+                      <span
+                        class="carousel-control-next-icon"
+                        aria-hidden="true"
+                      ></span
+                      ><span class="visually-hidden">Next slide</span>
+                    </button>
+                  </div>
+                  <p class="text-muted fs-12 mt-3 mb-0">
+                    Explore one slide at a time using the arrows or swipe on
+                    touch devices.
+                  </p>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"--><!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"--><!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/js/app-interactions.js"></script>
+    <script src="../assets/libs/prismjs/prism.js"></script>
+    <script src="../assets/js/prism-custom.js"></script>
+  </body>
+</html>

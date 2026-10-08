@@ -1,0 +1,1203 @@
+<!-- include document-head.html"-->
+    <link
+      rel="stylesheet"
+      href="../assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/data-tables.css" />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+
+      <div class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Data Tables</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">Tables</li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Data Tables
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid datatables-workspace">
+          <div class="row">
+            <div class="col-12">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Project register</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Search, sort and browse the sample project records.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table
+                      id="datatable-basic"
+                      class="table table-hover align-middle text-nowrap w-100"
+                    >
+                      <caption class="visually-hidden">
+                        Sample project records
+                      </caption>
+                      <thead>
+                        <tr>
+                          <th scope="col">Project</th>
+                          <th scope="col">Owner</th>
+                          <th scope="col">Team</th>
+                          <th scope="col">Status</th>
+                          <th scope="col">Progress (%)</th>
+                          <th scope="col">Due date</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Workspace redesign</td>
+                          <td>Amelia Hart</td>
+                          <td>Design</td>
+                          <td>In progress</td>
+                          <td>78</td>
+                          <td>2026-10-24</td>
+                        </tr>
+                        <tr>
+                          <td>Customer portal</td>
+                          <td>Liam Carter</td>
+                          <td>Engineering</td>
+                          <td>Review</td>
+                          <td>64</td>
+                          <td>2026-10-28</td>
+                        </tr>
+                        <tr>
+                          <td>Billing integration</td>
+                          <td>Olivia Reed</td>
+                          <td>Platform</td>
+                          <td>Complete</td>
+                          <td>100</td>
+                          <td>2026-10-30</td>
+                        </tr>
+                        <tr>
+                          <td>Analytics studio</td>
+                          <td>Noah James</td>
+                          <td>Data</td>
+                          <td>Planned</td>
+                          <td>32</td>
+                          <td>2026-11-04</td>
+                        </tr>
+                        <tr>
+                          <td>Mobile experience</td>
+                          <td>Emma Stone</td>
+                          <td>Product</td>
+                          <td>In progress</td>
+                          <td>56</td>
+                          <td>2026-11-08</td>
+                        </tr>
+                        <tr>
+                          <td>Support hub</td>
+                          <td>Ethan Brooks</td>
+                          <td>Operations</td>
+                          <td>Review</td>
+                          <td>86</td>
+                          <td>2026-11-12</td>
+                        </tr>
+                        <tr>
+                          <td>Design system</td>
+                          <td>Sophia Lane</td>
+                          <td>Design</td>
+                          <td>Complete</td>
+                          <td>100</td>
+                          <td>2026-11-16</td>
+                        </tr>
+                        <tr>
+                          <td>Access management</td>
+                          <td>Lucas Reed</td>
+                          <td>Platform</td>
+                          <td>Planned</td>
+                          <td>24</td>
+                          <td>2026-11-20</td>
+                        </tr>
+                        <tr>
+                          <td>Release automation</td>
+                          <td>Mia Patel</td>
+                          <td>Engineering</td>
+                          <td>In progress</td>
+                          <td>68</td>
+                          <td>2026-11-24</td>
+                        </tr>
+                        <tr>
+                          <td>Knowledge base</td>
+                          <td>Oliver King</td>
+                          <td>Operations</td>
+                          <td>Review</td>
+                          <td>92</td>
+                          <td>2026-11-28</td>
+                        </tr>
+                        <tr>
+                          <td>Quality dashboard</td>
+                          <td>Ava Wilson</td>
+                          <td>Quality</td>
+                          <td>In progress</td>
+                          <td>74</td>
+                          <td>2026-12-02</td>
+                        </tr>
+                        <tr>
+                          <td>Partner workspace</td>
+                          <td>James Lee</td>
+                          <td>Product</td>
+                          <td>Planned</td>
+                          <td>18</td>
+                          <td>2026-12-06</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Team directory</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      A horizontally scrollable directory fits smaller screens.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table
+                      id="responsiveDataTable"
+                      class="table table-hover align-middle text-nowrap w-100"
+                    >
+                      <caption class="visually-hidden">
+                        Sample project records
+                      </caption>
+                      <thead>
+                        <tr>
+                          <th scope="col">Project</th>
+                          <th scope="col">Owner</th>
+                          <th scope="col">Team</th>
+                          <th scope="col">Status</th>
+                          <th scope="col">Progress (%)</th>
+                          <th scope="col">Due date</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Workspace redesign</td>
+                          <td>Amelia Hart</td>
+                          <td>Design</td>
+                          <td>In progress</td>
+                          <td>78</td>
+                          <td>2026-10-24</td>
+                        </tr>
+                        <tr>
+                          <td>Customer portal</td>
+                          <td>Liam Carter</td>
+                          <td>Engineering</td>
+                          <td>Review</td>
+                          <td>64</td>
+                          <td>2026-10-28</td>
+                        </tr>
+                        <tr>
+                          <td>Billing integration</td>
+                          <td>Olivia Reed</td>
+                          <td>Platform</td>
+                          <td>Complete</td>
+                          <td>100</td>
+                          <td>2026-10-30</td>
+                        </tr>
+                        <tr>
+                          <td>Analytics studio</td>
+                          <td>Noah James</td>
+                          <td>Data</td>
+                          <td>Planned</td>
+                          <td>32</td>
+                          <td>2026-11-04</td>
+                        </tr>
+                        <tr>
+                          <td>Mobile experience</td>
+                          <td>Emma Stone</td>
+                          <td>Product</td>
+                          <td>In progress</td>
+                          <td>56</td>
+                          <td>2026-11-08</td>
+                        </tr>
+                        <tr>
+                          <td>Support hub</td>
+                          <td>Ethan Brooks</td>
+                          <td>Operations</td>
+                          <td>Review</td>
+                          <td>86</td>
+                          <td>2026-11-12</td>
+                        </tr>
+                        <tr>
+                          <td>Design system</td>
+                          <td>Sophia Lane</td>
+                          <td>Design</td>
+                          <td>Complete</td>
+                          <td>100</td>
+                          <td>2026-11-16</td>
+                        </tr>
+                        <tr>
+                          <td>Access management</td>
+                          <td>Lucas Reed</td>
+                          <td>Platform</td>
+                          <td>Planned</td>
+                          <td>24</td>
+                          <td>2026-11-20</td>
+                        </tr>
+                        <tr>
+                          <td>Release automation</td>
+                          <td>Mia Patel</td>
+                          <td>Engineering</td>
+                          <td>In progress</td>
+                          <td>68</td>
+                          <td>2026-11-24</td>
+                        </tr>
+                        <tr>
+                          <td>Knowledge base</td>
+                          <td>Oliver King</td>
+                          <td>Operations</td>
+                          <td>Review</td>
+                          <td>92</td>
+                          <td>2026-11-28</td>
+                        </tr>
+                        <tr>
+                          <td>Quality dashboard</td>
+                          <td>Ava Wilson</td>
+                          <td>Quality</td>
+                          <td>In progress</td>
+                          <td>74</td>
+                          <td>2026-12-02</td>
+                        </tr>
+                        <tr>
+                          <td>Partner workspace</td>
+                          <td>James Lee</td>
+                          <td>Product</td>
+                          <td>Planned</td>
+                          <td>18</td>
+                          <td>2026-12-06</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Export project records</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Download the currently filtered project records as CSV.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <button
+                    id="datatable-export"
+                    class="btn btn-sm btn-secondary mb-3"
+                    type="button"
+                  >
+                    <i class="ri-download-line me-1" aria-hidden="true"></i
+                    >Export CSV
+                  </button>
+                  <div class="table-responsive">
+                    <table
+                      id="file-export"
+                      class="table table-hover align-middle text-nowrap w-100"
+                    >
+                      <caption class="visually-hidden">
+                        Sample project records
+                      </caption>
+                      <thead>
+                        <tr>
+                          <th scope="col">Project</th>
+                          <th scope="col">Owner</th>
+                          <th scope="col">Team</th>
+                          <th scope="col">Status</th>
+                          <th scope="col">Progress (%)</th>
+                          <th scope="col">Due date</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Workspace redesign</td>
+                          <td>Amelia Hart</td>
+                          <td>Design</td>
+                          <td>In progress</td>
+                          <td>78</td>
+                          <td>2026-10-24</td>
+                        </tr>
+                        <tr>
+                          <td>Customer portal</td>
+                          <td>Liam Carter</td>
+                          <td>Engineering</td>
+                          <td>Review</td>
+                          <td>64</td>
+                          <td>2026-10-28</td>
+                        </tr>
+                        <tr>
+                          <td>Billing integration</td>
+                          <td>Olivia Reed</td>
+                          <td>Platform</td>
+                          <td>Complete</td>
+                          <td>100</td>
+                          <td>2026-10-30</td>
+                        </tr>
+                        <tr>
+                          <td>Analytics studio</td>
+                          <td>Noah James</td>
+                          <td>Data</td>
+                          <td>Planned</td>
+                          <td>32</td>
+                          <td>2026-11-04</td>
+                        </tr>
+                        <tr>
+                          <td>Mobile experience</td>
+                          <td>Emma Stone</td>
+                          <td>Product</td>
+                          <td>In progress</td>
+                          <td>56</td>
+                          <td>2026-11-08</td>
+                        </tr>
+                        <tr>
+                          <td>Support hub</td>
+                          <td>Ethan Brooks</td>
+                          <td>Operations</td>
+                          <td>Review</td>
+                          <td>86</td>
+                          <td>2026-11-12</td>
+                        </tr>
+                        <tr>
+                          <td>Design system</td>
+                          <td>Sophia Lane</td>
+                          <td>Design</td>
+                          <td>Complete</td>
+                          <td>100</td>
+                          <td>2026-11-16</td>
+                        </tr>
+                        <tr>
+                          <td>Access management</td>
+                          <td>Lucas Reed</td>
+                          <td>Platform</td>
+                          <td>Planned</td>
+                          <td>24</td>
+                          <td>2026-11-20</td>
+                        </tr>
+                        <tr>
+                          <td>Release automation</td>
+                          <td>Mia Patel</td>
+                          <td>Engineering</td>
+                          <td>In progress</td>
+                          <td>68</td>
+                          <td>2026-11-24</td>
+                        </tr>
+                        <tr>
+                          <td>Knowledge base</td>
+                          <td>Oliver King</td>
+                          <td>Operations</td>
+                          <td>Review</td>
+                          <td>92</td>
+                          <td>2026-11-28</td>
+                        </tr>
+                        <tr>
+                          <td>Quality dashboard</td>
+                          <td>Ava Wilson</td>
+                          <td>Quality</td>
+                          <td>In progress</td>
+                          <td>74</td>
+                          <td>2026-12-02</td>
+                        </tr>
+                        <tr>
+                          <td>Partner workspace</td>
+                          <td>James Lee</td>
+                          <td>Product</td>
+                          <td>Planned</td>
+                          <td>18</td>
+                          <td>2026-12-06</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Selectable projects</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Select records to remove them from this local demo.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex align-items-center flex-wrap gap-2 mb-3">
+                    <button
+                      id="datatable-remove"
+                      class="btn btn-sm btn-danger-light"
+                      type="button"
+                      disabled
+                    >
+                      Remove selected</button
+                    ><span
+                      id="datatable-selection"
+                      class="fs-12 text-muted"
+                      role="status"
+                      >0 selected</span
+                    >
+                  </div>
+                  <div class="table-responsive">
+                    <table
+                      id="delete-datatable"
+                      class="table table-hover align-middle text-nowrap w-100"
+                    >
+                      <caption class="visually-hidden">
+                        Sample project records
+                      </caption>
+                      <thead>
+                        <tr>
+                          <th scope="col">Project</th>
+                          <th scope="col">Owner</th>
+                          <th scope="col">Team</th>
+                          <th scope="col">Status</th>
+                          <th scope="col">Progress (%)</th>
+                          <th scope="col">Due date</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Workspace redesign</td>
+                          <td>Amelia Hart</td>
+                          <td>Design</td>
+                          <td>In progress</td>
+                          <td>78</td>
+                          <td>2026-10-24</td>
+                        </tr>
+                        <tr>
+                          <td>Customer portal</td>
+                          <td>Liam Carter</td>
+                          <td>Engineering</td>
+                          <td>Review</td>
+                          <td>64</td>
+                          <td>2026-10-28</td>
+                        </tr>
+                        <tr>
+                          <td>Billing integration</td>
+                          <td>Olivia Reed</td>
+                          <td>Platform</td>
+                          <td>Complete</td>
+                          <td>100</td>
+                          <td>2026-10-30</td>
+                        </tr>
+                        <tr>
+                          <td>Analytics studio</td>
+                          <td>Noah James</td>
+                          <td>Data</td>
+                          <td>Planned</td>
+                          <td>32</td>
+                          <td>2026-11-04</td>
+                        </tr>
+                        <tr>
+                          <td>Mobile experience</td>
+                          <td>Emma Stone</td>
+                          <td>Product</td>
+                          <td>In progress</td>
+                          <td>56</td>
+                          <td>2026-11-08</td>
+                        </tr>
+                        <tr>
+                          <td>Support hub</td>
+                          <td>Ethan Brooks</td>
+                          <td>Operations</td>
+                          <td>Review</td>
+                          <td>86</td>
+                          <td>2026-11-12</td>
+                        </tr>
+                        <tr>
+                          <td>Design system</td>
+                          <td>Sophia Lane</td>
+                          <td>Design</td>
+                          <td>Complete</td>
+                          <td>100</td>
+                          <td>2026-11-16</td>
+                        </tr>
+                        <tr>
+                          <td>Access management</td>
+                          <td>Lucas Reed</td>
+                          <td>Platform</td>
+                          <td>Planned</td>
+                          <td>24</td>
+                          <td>2026-11-20</td>
+                        </tr>
+                        <tr>
+                          <td>Release automation</td>
+                          <td>Mia Patel</td>
+                          <td>Engineering</td>
+                          <td>In progress</td>
+                          <td>68</td>
+                          <td>2026-11-24</td>
+                        </tr>
+                        <tr>
+                          <td>Knowledge base</td>
+                          <td>Oliver King</td>
+                          <td>Operations</td>
+                          <td>Review</td>
+                          <td>92</td>
+                          <td>2026-11-28</td>
+                        </tr>
+                        <tr>
+                          <td>Quality dashboard</td>
+                          <td>Ava Wilson</td>
+                          <td>Quality</td>
+                          <td>In progress</td>
+                          <td>74</td>
+                          <td>2026-12-02</td>
+                        </tr>
+                        <tr>
+                          <td>Partner workspace</td>
+                          <td>James Lee</td>
+                          <td>Product</td>
+                          <td>Planned</td>
+                          <td>18</td>
+                          <td>2026-12-06</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Add project records</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Add a sample row or reset the table to its original
+                      records.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex flex-wrap gap-2 mb-3">
+                    <button
+                      id="addRow"
+                      class="btn btn-sm btn-secondary"
+                      type="button"
+                    >
+                      Add sample project</button
+                    ><button
+                      id="datatable-reset"
+                      class="btn btn-sm btn-light"
+                      type="button"
+                    >
+                      Reset</button
+                    ><span
+                      id="datatable-add-status"
+                      class="fs-12 text-muted align-self-center"
+                      role="status"
+                    ></span>
+                  </div>
+                  <div class="table-responsive">
+                    <table
+                      id="add-row"
+                      class="table table-hover align-middle text-nowrap w-100"
+                    >
+                      <caption class="visually-hidden">
+                        Sample project records
+                      </caption>
+                      <thead>
+                        <tr>
+                          <th scope="col">Project</th>
+                          <th scope="col">Owner</th>
+                          <th scope="col">Team</th>
+                          <th scope="col">Status</th>
+                          <th scope="col">Progress (%)</th>
+                          <th scope="col">Due date</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Workspace redesign</td>
+                          <td>Amelia Hart</td>
+                          <td>Design</td>
+                          <td>In progress</td>
+                          <td>78</td>
+                          <td>2026-10-24</td>
+                        </tr>
+                        <tr>
+                          <td>Customer portal</td>
+                          <td>Liam Carter</td>
+                          <td>Engineering</td>
+                          <td>Review</td>
+                          <td>64</td>
+                          <td>2026-10-28</td>
+                        </tr>
+                        <tr>
+                          <td>Billing integration</td>
+                          <td>Olivia Reed</td>
+                          <td>Platform</td>
+                          <td>Complete</td>
+                          <td>100</td>
+                          <td>2026-10-30</td>
+                        </tr>
+                        <tr>
+                          <td>Analytics studio</td>
+                          <td>Noah James</td>
+                          <td>Data</td>
+                          <td>Planned</td>
+                          <td>32</td>
+                          <td>2026-11-04</td>
+                        </tr>
+                        <tr>
+                          <td>Mobile experience</td>
+                          <td>Emma Stone</td>
+                          <td>Product</td>
+                          <td>In progress</td>
+                          <td>56</td>
+                          <td>2026-11-08</td>
+                        </tr>
+                        <tr>
+                          <td>Support hub</td>
+                          <td>Ethan Brooks</td>
+                          <td>Operations</td>
+                          <td>Review</td>
+                          <td>86</td>
+                          <td>2026-11-12</td>
+                        </tr>
+                        <tr>
+                          <td>Design system</td>
+                          <td>Sophia Lane</td>
+                          <td>Design</td>
+                          <td>Complete</td>
+                          <td>100</td>
+                          <td>2026-11-16</td>
+                        </tr>
+                        <tr>
+                          <td>Access management</td>
+                          <td>Lucas Reed</td>
+                          <td>Platform</td>
+                          <td>Planned</td>
+                          <td>24</td>
+                          <td>2026-11-20</td>
+                        </tr>
+                        <tr>
+                          <td>Release automation</td>
+                          <td>Mia Patel</td>
+                          <td>Engineering</td>
+                          <td>In progress</td>
+                          <td>68</td>
+                          <td>2026-11-24</td>
+                        </tr>
+                        <tr>
+                          <td>Knowledge base</td>
+                          <td>Oliver King</td>
+                          <td>Operations</td>
+                          <td>Review</td>
+                          <td>92</td>
+                          <td>2026-11-28</td>
+                        </tr>
+                        <tr>
+                          <td>Quality dashboard</td>
+                          <td>Ava Wilson</td>
+                          <td>Quality</td>
+                          <td>In progress</td>
+                          <td>74</td>
+                          <td>2026-12-02</td>
+                        </tr>
+                        <tr>
+                          <td>Partner workspace</td>
+                          <td>James Lee</td>
+                          <td>Product</td>
+                          <td>Planned</td>
+                          <td>18</td>
+                          <td>2026-12-06</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Scrollable report</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Keep headers visible while scrolling through the report.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table
+                      id="scroll-vertical"
+                      class="table table-hover align-middle text-nowrap w-100"
+                    >
+                      <caption class="visually-hidden">
+                        Sample project records
+                      </caption>
+                      <thead>
+                        <tr>
+                          <th scope="col">Project</th>
+                          <th scope="col">Owner</th>
+                          <th scope="col">Team</th>
+                          <th scope="col">Status</th>
+                          <th scope="col">Progress (%)</th>
+                          <th scope="col">Due date</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Workspace redesign</td>
+                          <td>Amelia Hart</td>
+                          <td>Design</td>
+                          <td>In progress</td>
+                          <td>78</td>
+                          <td>2026-10-24</td>
+                        </tr>
+                        <tr>
+                          <td>Customer portal</td>
+                          <td>Liam Carter</td>
+                          <td>Engineering</td>
+                          <td>Review</td>
+                          <td>64</td>
+                          <td>2026-10-28</td>
+                        </tr>
+                        <tr>
+                          <td>Billing integration</td>
+                          <td>Olivia Reed</td>
+                          <td>Platform</td>
+                          <td>Complete</td>
+                          <td>100</td>
+                          <td>2026-10-30</td>
+                        </tr>
+                        <tr>
+                          <td>Analytics studio</td>
+                          <td>Noah James</td>
+                          <td>Data</td>
+                          <td>Planned</td>
+                          <td>32</td>
+                          <td>2026-11-04</td>
+                        </tr>
+                        <tr>
+                          <td>Mobile experience</td>
+                          <td>Emma Stone</td>
+                          <td>Product</td>
+                          <td>In progress</td>
+                          <td>56</td>
+                          <td>2026-11-08</td>
+                        </tr>
+                        <tr>
+                          <td>Support hub</td>
+                          <td>Ethan Brooks</td>
+                          <td>Operations</td>
+                          <td>Review</td>
+                          <td>86</td>
+                          <td>2026-11-12</td>
+                        </tr>
+                        <tr>
+                          <td>Design system</td>
+                          <td>Sophia Lane</td>
+                          <td>Design</td>
+                          <td>Complete</td>
+                          <td>100</td>
+                          <td>2026-11-16</td>
+                        </tr>
+                        <tr>
+                          <td>Access management</td>
+                          <td>Lucas Reed</td>
+                          <td>Platform</td>
+                          <td>Planned</td>
+                          <td>24</td>
+                          <td>2026-11-20</td>
+                        </tr>
+                        <tr>
+                          <td>Release automation</td>
+                          <td>Mia Patel</td>
+                          <td>Engineering</td>
+                          <td>In progress</td>
+                          <td>68</td>
+                          <td>2026-11-24</td>
+                        </tr>
+                        <tr>
+                          <td>Knowledge base</td>
+                          <td>Oliver King</td>
+                          <td>Operations</td>
+                          <td>Review</td>
+                          <td>92</td>
+                          <td>2026-11-28</td>
+                        </tr>
+                        <tr>
+                          <td>Quality dashboard</td>
+                          <td>Ava Wilson</td>
+                          <td>Quality</td>
+                          <td>In progress</td>
+                          <td>74</td>
+                          <td>2026-12-02</td>
+                        </tr>
+                        <tr>
+                          <td>Partner workspace</td>
+                          <td>James Lee</td>
+                          <td>Product</td>
+                          <td>Planned</td>
+                          <td>18</td>
+                          <td>2026-12-06</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Visible columns</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Toggle optional columns to simplify the project view.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex flex-wrap gap-3 mb-3">
+                    <label
+                      class="form-check-label d-flex align-items-center gap-2"
+                      ><input
+                        class="form-check-input mt-0"
+                        data-datatable-column="1"
+                        type="checkbox"
+                        checked
+                      />Owner</label
+                    ><label
+                      class="form-check-label d-flex align-items-center gap-2"
+                      ><input
+                        class="form-check-input mt-0"
+                        data-datatable-column="2"
+                        type="checkbox"
+                        checked
+                      />Team</label
+                    ><label
+                      class="form-check-label d-flex align-items-center gap-2"
+                      ><input
+                        class="form-check-input mt-0"
+                        data-datatable-column="5"
+                        type="checkbox"
+                        checked
+                      />Due date</label
+                    >
+                  </div>
+                  <div class="table-responsive">
+                    <table
+                      id="hidden-columns"
+                      class="table table-hover align-middle text-nowrap w-100"
+                    >
+                      <caption class="visually-hidden">
+                        Sample project records
+                      </caption>
+                      <thead>
+                        <tr>
+                          <th scope="col">Project</th>
+                          <th scope="col">Owner</th>
+                          <th scope="col">Team</th>
+                          <th scope="col">Status</th>
+                          <th scope="col">Progress (%)</th>
+                          <th scope="col">Due date</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Workspace redesign</td>
+                          <td>Amelia Hart</td>
+                          <td>Design</td>
+                          <td>In progress</td>
+                          <td>78</td>
+                          <td>2026-10-24</td>
+                        </tr>
+                        <tr>
+                          <td>Customer portal</td>
+                          <td>Liam Carter</td>
+                          <td>Engineering</td>
+                          <td>Review</td>
+                          <td>64</td>
+                          <td>2026-10-28</td>
+                        </tr>
+                        <tr>
+                          <td>Billing integration</td>
+                          <td>Olivia Reed</td>
+                          <td>Platform</td>
+                          <td>Complete</td>
+                          <td>100</td>
+                          <td>2026-10-30</td>
+                        </tr>
+                        <tr>
+                          <td>Analytics studio</td>
+                          <td>Noah James</td>
+                          <td>Data</td>
+                          <td>Planned</td>
+                          <td>32</td>
+                          <td>2026-11-04</td>
+                        </tr>
+                        <tr>
+                          <td>Mobile experience</td>
+                          <td>Emma Stone</td>
+                          <td>Product</td>
+                          <td>In progress</td>
+                          <td>56</td>
+                          <td>2026-11-08</td>
+                        </tr>
+                        <tr>
+                          <td>Support hub</td>
+                          <td>Ethan Brooks</td>
+                          <td>Operations</td>
+                          <td>Review</td>
+                          <td>86</td>
+                          <td>2026-11-12</td>
+                        </tr>
+                        <tr>
+                          <td>Design system</td>
+                          <td>Sophia Lane</td>
+                          <td>Design</td>
+                          <td>Complete</td>
+                          <td>100</td>
+                          <td>2026-11-16</td>
+                        </tr>
+                        <tr>
+                          <td>Access management</td>
+                          <td>Lucas Reed</td>
+                          <td>Platform</td>
+                          <td>Planned</td>
+                          <td>24</td>
+                          <td>2026-11-20</td>
+                        </tr>
+                        <tr>
+                          <td>Release automation</td>
+                          <td>Mia Patel</td>
+                          <td>Engineering</td>
+                          <td>In progress</td>
+                          <td>68</td>
+                          <td>2026-11-24</td>
+                        </tr>
+                        <tr>
+                          <td>Knowledge base</td>
+                          <td>Oliver King</td>
+                          <td>Operations</td>
+                          <td>Review</td>
+                          <td>92</td>
+                          <td>2026-11-28</td>
+                        </tr>
+                        <tr>
+                          <td>Quality dashboard</td>
+                          <td>Ava Wilson</td>
+                          <td>Quality</td>
+                          <td>In progress</td>
+                          <td>74</td>
+                          <td>2026-12-02</td>
+                        </tr>
+                        <tr>
+                          <td>Partner workspace</td>
+                          <td>James Lee</td>
+                          <td>Product</td>
+                          <td>Planned</td>
+                          <td>18</td>
+                          <td>2026-12-06</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Status filter</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Combine a status filter with the built-in table search.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="mb-3">
+                    <label for="datatable-status-filter" class="form-label"
+                      >Project status</label
+                    ><select
+                      id="datatable-status-filter"
+                      class="form-select datatable-filter"
+                    >
+                      <option value="">All statuses</option>
+                      <option>In progress</option>
+                      <option>Review</option>
+                      <option>Complete</option>
+                      <option>Planned</option>
+                    </select>
+                  </div>
+                  <div class="table-responsive">
+                    <table
+                      id="datatable-status"
+                      class="table table-hover align-middle text-nowrap w-100"
+                    >
+                      <caption class="visually-hidden">
+                        Sample project records
+                      </caption>
+                      <thead>
+                        <tr>
+                          <th scope="col">Project</th>
+                          <th scope="col">Owner</th>
+                          <th scope="col">Team</th>
+                          <th scope="col">Status</th>
+                          <th scope="col">Progress (%)</th>
+                          <th scope="col">Due date</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Workspace redesign</td>
+                          <td>Amelia Hart</td>
+                          <td>Design</td>
+                          <td>In progress</td>
+                          <td>78</td>
+                          <td>2026-10-24</td>
+                        </tr>
+                        <tr>
+                          <td>Customer portal</td>
+                          <td>Liam Carter</td>
+                          <td>Engineering</td>
+                          <td>Review</td>
+                          <td>64</td>
+                          <td>2026-10-28</td>
+                        </tr>
+                        <tr>
+                          <td>Billing integration</td>
+                          <td>Olivia Reed</td>
+                          <td>Platform</td>
+                          <td>Complete</td>
+                          <td>100</td>
+                          <td>2026-10-30</td>
+                        </tr>
+                        <tr>
+                          <td>Analytics studio</td>
+                          <td>Noah James</td>
+                          <td>Data</td>
+                          <td>Planned</td>
+                          <td>32</td>
+                          <td>2026-11-04</td>
+                        </tr>
+                        <tr>
+                          <td>Mobile experience</td>
+                          <td>Emma Stone</td>
+                          <td>Product</td>
+                          <td>In progress</td>
+                          <td>56</td>
+                          <td>2026-11-08</td>
+                        </tr>
+                        <tr>
+                          <td>Support hub</td>
+                          <td>Ethan Brooks</td>
+                          <td>Operations</td>
+                          <td>Review</td>
+                          <td>86</td>
+                          <td>2026-11-12</td>
+                        </tr>
+                        <tr>
+                          <td>Design system</td>
+                          <td>Sophia Lane</td>
+                          <td>Design</td>
+                          <td>Complete</td>
+                          <td>100</td>
+                          <td>2026-11-16</td>
+                        </tr>
+                        <tr>
+                          <td>Access management</td>
+                          <td>Lucas Reed</td>
+                          <td>Platform</td>
+                          <td>Planned</td>
+                          <td>24</td>
+                          <td>2026-11-20</td>
+                        </tr>
+                        <tr>
+                          <td>Release automation</td>
+                          <td>Mia Patel</td>
+                          <td>Engineering</td>
+                          <td>In progress</td>
+                          <td>68</td>
+                          <td>2026-11-24</td>
+                        </tr>
+                        <tr>
+                          <td>Knowledge base</td>
+                          <td>Oliver King</td>
+                          <td>Operations</td>
+                          <td>Review</td>
+                          <td>92</td>
+                          <td>2026-11-28</td>
+                        </tr>
+                        <tr>
+                          <td>Quality dashboard</td>
+                          <td>Ava Wilson</td>
+                          <td>Quality</td>
+                          <td>In progress</td>
+                          <td>74</td>
+                          <td>2026-12-02</td>
+                        </tr>
+                        <tr>
+                          <td>Partner workspace</td>
+                          <td>James Lee</td>
+                          <td>Product</td>
+                          <td>Planned</td>
+                          <td>18</td>
+                          <td>2026-12-06</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- include common-scripts.html"-->
+
+    <!-- include appearance-customizer-scripts.html"-->
+
+    <!-- Jquery Cdn -->
+
+    <!-- Datatables Cdn -->
+
+    <script src="../assets/libs/datatables.net/js/dataTables.min.js"></script>
+    <script src="../assets/libs/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
+    <!-- Internal Datatables JS -->
+    <script src="../assets/js/datatables.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+(() => {
+  const page = document.querySelector('#api-keys-page'); if (!page) return;
+  const createElement = document.querySelector('#api-create-modal');
+  const createModal = bootstrap.Modal.getOrCreateInstance(createElement);
+  const revokeModal = bootstrap.Modal.getOrCreateInstance(document.querySelector('#api-revoke-modal'));
+  const form = document.querySelector('#api-create-form');
+  const secretPanel = document.querySelector('#api-secret-panel');
+  const secretInput = document.querySelector('#api-secret');
+  const feedback = page.querySelector('#api-feedback');
+  let selectedKey = null;
+  const keys = [{"id":1,"name":"Production dashboard","masked":"demo_********9a4c","permission":"Read and write","environment":"Production","created":"2026-09-10","lastUsed":"2026-10-01","status":"active"},{"id":2,"name":"Staging integration","masked":"demo_********9ad5","permission":"Read only","environment":"Staging","created":"2026-09-11","lastUsed":"2026-10-02","status":"active"},{"id":3,"name":"Legacy reporting","masked":"demo_********9b5e","permission":"Read only","environment":"Development","created":"2026-09-12","lastUsed":"Never","status":"revoked"},{"id":4,"name":"Mobile app backend","masked":"demo_********9be7","permission":"Read and write","environment":"Production","created":"2026-09-13","lastUsed":"2026-10-01","status":"active"},{"id":5,"name":"Analytics export","masked":"demo_********9c70","permission":"Read only","environment":"Staging","created":"2026-09-14","lastUsed":"2026-10-02","status":"active"},{"id":6,"name":"CI deployment","masked":"demo_********9cf9","permission":"Read only","environment":"Development","created":"2026-09-15","lastUsed":"2026-10-03","status":"active"},{"id":7,"name":"Customer portal","masked":"demo_********9d82","permission":"Read and write","environment":"Production","created":"2026-09-16","lastUsed":"2026-10-01","status":"active"},{"id":8,"name":"Billing sync","masked":"demo_********9e0b","permission":"Read only","environment":"Staging","created":"2026-09-17","lastUsed":"2026-10-02","status":"revoked"},{"id":9,"name":"QA automation","masked":"demo_********9e94","permission":"Read only","environment":"Development","created":"2026-09-18","lastUsed":"2026-10-03","status":"active"},{"id":10,"name":"Partner sandbox","masked":"demo_********9f1d","permission":"Read and write","environment":"Production","created":"2026-09-19","lastUsed":"2026-10-01","status":"active"},{"id":11,"name":"Inventory service","masked":"demo_********9fa6","permission":"Read only","environment":"Staging","created":"2026-09-20","lastUsed":"2026-10-02","status":"active"},{"id":12,"name":"Archived integration","masked":"demo_********a02f","permission":"Read only","environment":"Development","created":"2026-09-21","lastUsed":"Never","status":"revoked"}];
+  let currentPage = 0, sortField = "created", sortDirection = -1;
+  const render = () => {
+    const query = page.querySelector('#api-search').value.trim().toLowerCase();
+    const filter = page.querySelector('#api-status').value;
+    const environment = page.querySelector('#api-environment').value;
+    const matching = keys.filter(key => (key.name+' '+key.permission+' '+key.environment).toLowerCase().includes(query) && (filter === 'all' || key.status === filter) && (environment === 'all' || key.environment === environment)).sort((a,b)=>sortDirection*String(a[sortField]).localeCompare(String(b[sortField])));
+    const pageSize = Number(page.querySelector('#api-page-size').value);
+    currentPage = Math.max(0,Math.min(currentPage,Math.ceil(matching.length/pageSize)-1));
+    const visible = matching.slice(currentPage*pageSize,(currentPage+1)*pageSize);
+    page.querySelector('#api-page-count').textContent = matching.length ? 'Showing '+(currentPage*pageSize+1)+' - '+(currentPage*pageSize+visible.length)+' of '+matching.length+' keys' : '0 keys';
+    page.querySelector('#api-page-prev').disabled = currentPage === 0;
+    page.querySelector('#api-page-next').disabled = (currentPage+1)*pageSize >= matching.length;
+    page.querySelectorAll('[data-api-sort]').forEach(button => button.closest('th').setAttribute('aria-sort', button.dataset.apiSort === sortField ? (sortDirection === 1 ? 'ascending' : 'descending') : 'none'));
+    const body = page.querySelector('#api-key-rows'); body.replaceChildren();
+    visible.forEach(key => {
+      const row = document.createElement('tr');
+      row.innerHTML = '<td class="ps-4 fw-medium"></td><td><code></code></td><td><span class="badge bg-light text-muted"></span></td><td></td><td></td><td></td><td><span class="badge"></span></td><td class="text-end pe-4"><button type="button" class="btn btn-danger-transparent btn-sm">Revoke</button></td>';
+      row.cells[0].textContent = key.name; row.querySelector('code').textContent = key.masked; row.cells[2].querySelector('span').textContent = key.environment; row.cells[3].textContent = key.permission; row.cells[4].textContent = key.created; row.cells[5].textContent = key.lastUsed;
+      const badge = row.cells[6].querySelector('.badge'); badge.className = 'badge bg-' + (key.status === 'active' ? 'success' : 'warning') + '-transparent'; badge.textContent = key.status === 'active' ? 'Active' : 'Revoked';
+      const button = row.querySelector('button'); button.disabled = key.status !== 'active'; button.setAttribute('aria-label', 'Revoke ' + key.name);
+      button.addEventListener('click', () => { selectedKey = key; document.querySelector('#api-revoke-name').textContent = key.name; revokeModal.show(); }); body.append(row);
+    });
+    page.querySelector('#api-empty').hidden = visible.length > 0;
+    page.querySelector('#api-active-count').textContent = keys.filter(key => key.status === 'active').length;
+    page.querySelector('#api-revoked-count').textContent = keys.filter(key => key.status === 'revoked').length;
+    page.querySelector('#api-total-count').textContent = keys.length;
+  };
+  ['api-search','api-status','api-environment','api-page-size'].forEach(id => page.querySelector('#'+id).addEventListener(id === 'api-search' ? 'input' : 'change',()=>{currentPage=0;render();}));
+  page.querySelector('#api-page-prev').addEventListener('click',()=>{currentPage--;render();});
+  page.querySelector('#api-page-next').addEventListener('click',()=>{currentPage++;render();});
+  page.querySelectorAll('[data-api-sort]').forEach(button=>button.addEventListener('click',()=>{sortDirection=sortField===button.dataset.apiSort?-sortDirection:1;sortField=button.dataset.apiSort;currentPage=0;render();}));
+  page.querySelector('#api-create-open').addEventListener('click', () => { form.reset(); form.hidden = false; secretPanel.hidden = true; document.querySelector('#api-copy-feedback').textContent = ''; createModal.show(); });
+  createElement.addEventListener('shown.bs.modal', () => { if (!form.hidden) document.querySelector('#api-key-name').focus(); });
+  createElement.addEventListener('hidden.bs.modal', () => { secretInput.value = ''; secretPanel.hidden = true; form.reset(); });
+  form.addEventListener('submit', event => {
+    event.preventDefault(); const nameInput = document.querySelector('#api-key-name'); const name = nameInput.value.trim();
+    nameInput.setCustomValidity(name ? '' : 'Enter a key name.'); if (!form.reportValidity()) return;
+    const bytes = new Uint8Array(24); crypto.getRandomValues(bytes); const secret = 'demo_' + Array.from(bytes, byte => byte.toString(16).padStart(2,'0')).join('');
+    keys.unshift({id:Date.now(),name,masked:'demo_********' + secret.slice(-4),environment:document.querySelector('#api-key-environment').value,lastUsed:'Never',permission:document.querySelector('#api-key-permission').value,created:new Date().toLocaleDateString('en-CA'),status:'active'});
+    secretInput.value = secret; form.hidden = true; secretPanel.hidden = false; feedback.textContent = 'Demo key created. Copy the secret before closing.'; render();
+  });
+  document.querySelector('#api-key-name').addEventListener('input', event => event.target.setCustomValidity(''));
+  document.querySelector('#api-copy-secret').addEventListener('click', async () => { const output = document.querySelector('#api-copy-feedback'); try { await navigator.clipboard.writeText(secretInput.value); output.textContent = 'Secret copied.'; } catch { secretInput.focus(); secretInput.select(); output.textContent = 'Select and copy the secret manually.'; } });
+  document.querySelector('#api-revoke-confirm').addEventListener('click', () => { if (!selectedKey) return; selectedKey.status = 'revoked'; feedback.textContent = selectedKey.name + ' was revoked in this demo.'; selectedKey = null; revokeModal.hide(); render(); });
+  render();
+})();

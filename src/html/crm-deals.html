@@ -1,0 +1,972 @@
+<!-- include document-head.html"-->
+    <link rel="stylesheet" href="../assets/libs/flatpickr/flatpickr.min.css" />
+    <link rel="stylesheet" href="../assets/libs/dragula/dragula.min.css" />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content crm-workspace-page crm-deals-page">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Deals</h1>
+          <div class="d-flex align-items-center gap-2 flex-wrap">
+            <ol class="breadcrumb mb-0">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item">
+                <a href="crm-dashboard.html">CRM</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">Deals</li>
+            </ol>
+          </div>
+        </div>
+        <div class="container-fluid commerce-dashboard">
+          <section class="row" aria-label="Deal overview">
+            <div class="col-xxl-3 col-sm-6">
+              <article class="card custom-card crm-deal-metric">
+                <div class="card-body">
+                  <span
+                    class="crm-deal-metric-icon bg-secondary-transparent text-secondary"
+                    ><i class="ri-briefcase-4-line"></i></span
+                  ><span class="text-muted">Open deals</span><strong>42</strong
+                  ><small
+                    ><i class="ri-arrow-up-line text-success"></i> 8.6% from
+                    last month</small
+                  >
+                </div>
+              </article>
+            </div>
+            <div class="col-xxl-3 col-sm-6">
+              <article class="card custom-card crm-deal-metric">
+                <div class="card-body">
+                  <span
+                    class="crm-deal-metric-icon bg-success-transparent text-success"
+                    ><i class="ri-funds-line"></i></span
+                  ><span class="text-muted">Pipeline value</span
+                  ><strong>$284,600</strong><small>Across active stages</small>
+                </div>
+              </article>
+            </div>
+            <div class="col-xxl-3 col-sm-6">
+              <article class="card custom-card crm-deal-metric">
+                <div class="card-body">
+                  <span
+                    class="crm-deal-metric-icon bg-info-transparent text-info"
+                    ><i class="ri-focus-3-line"></i></span
+                  ><span class="text-muted">Weighted forecast</span
+                  ><strong>$176,420</strong
+                  ><small>62% average win probability</small>
+                </div>
+              </article>
+            </div>
+            <div class="col-xxl-3 col-sm-6">
+              <article class="card custom-card crm-deal-metric">
+                <div class="card-body">
+                  <span
+                    class="crm-deal-metric-icon bg-warning-transparent text-warning"
+                    ><i class="ri-calendar-check-line"></i></span
+                  ><span class="text-muted">Expected this month</span
+                  ><strong>12</strong
+                  ><small>$86,250 in potential revenue</small>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section
+            class="card custom-card crm-deal-board-card"
+            aria-labelledby="deal-board-title"
+          >
+            <div
+              class="card-header d-flex align-items-center justify-content-between flex-wrap gap-3"
+            >
+              <div>
+                <h2 id="deal-board-title" class="card-title mb-1">
+                  Deal pipeline
+                </h2>
+                <p class="text-muted fs-12 mb-0">
+                  Move a deal between stages as conversations progress.
+                </p>
+              </div>
+              <div class="d-flex align-items-center gap-2 flex-wrap">
+                <label class="visually-hidden" for="deal-period"
+                  >Time period</label
+                >
+                <select
+                  id="deal-period"
+                  data-trigger
+                  class="form-select crm-deal-period"
+                >
+                  <option>This quarter</option>
+                  <option>This month</option>
+                  <option>This year</option>
+                </select>
+                <a class="btn btn-light" href="crm-pipeline.html"
+                  ><i class="ri-git-merge-line me-1"></i>Pipeline board</a
+                >
+                <button
+                  type="button"
+                  class="btn btn-dark btn-wave"
+                  data-bs-toggle="modal"
+                  data-bs-target="#create-deal-modal"
+                >
+                  <i class="ri-add-line me-1" aria-hidden="true"></i>New deal
+                </button>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="crm-deals-board">
+                <section
+                  class="crm-deal-stage"
+                  id="leads-discovered"
+                  aria-labelledby="stage-discovered-title"
+                >
+                  <header>
+                    <div>
+                      <h3 id="stage-discovered-title">New</h3>
+                      <span>Recently identified</span>
+                    </div>
+                    <strong>06</strong>
+                  </header>
+                  <div class="crm-deal-stage-total">
+                    $48,500 <span>6 deals</span>
+                  </div>
+                  <div class="crm-deal-stage-cards">
+                    <article class="crm-deal-card">
+                      <div class="crm-deal-card-top">
+                        <span class="crm-deal-type"
+                          ><i class="ri-global-line"></i> Website</span
+                        >
+                        <div class="dropdown crm-deal-menu">
+                          <button
+                            class="btn btn-sm btn-light"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                            aria-label="More actions for Service upgrade"
+                          >
+                            <i class="ri-more-2-fill" aria-hidden="true"></i>
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="crm-opportunities.html"
+                                ><i class="ri-briefcase-line me-2"></i
+                                >Opportunity register</a
+                              >
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="crm-pipeline.html"
+                                ><i class="ri-git-merge-line me-2"></i>Open
+                                pipeline</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <h4>Service upgrade</h4>
+                      <p>SmPixelCrafts Technologies</p>
+                      <div class="crm-deal-card-value">$18,500</div>
+                      <div class="crm-deal-card-meta">
+                        <span
+                          ><img
+                            src="../assets/images/users/12.jpg"
+                            alt=""
+                          />Alex Morgan</span
+                        ><small><i class="ri-time-line"></i> 2 days ago</small>
+                      </div>
+                      <div class="crm-deal-probability">
+                        <span>Probability</span><strong>25%</strong>
+                      </div>
+                      <div class="progress">
+                        <div
+                          class="progress-bar bg-primary"
+                          style="width: 25%"
+                        ></div>
+                      </div>
+                    </article>
+                    <article class="crm-deal-card">
+                      <div class="crm-deal-card-top">
+                        <span class="crm-deal-type"
+                          ><i class="ri-user-voice-line"></i> Referral</span
+                        >
+                        <div class="dropdown crm-deal-menu">
+                          <button
+                            class="btn btn-sm btn-light"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                            aria-label="More actions for Product demo"
+                          >
+                            <i class="ri-more-2-fill" aria-hidden="true"></i>
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="crm-opportunities.html"
+                                ><i class="ri-briefcase-line me-2"></i
+                                >Opportunity register</a
+                              >
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="crm-pipeline.html"
+                                ><i class="ri-git-merge-line me-2"></i>Open
+                                pipeline</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <h4>Product demo</h4>
+                      <p>Acme Corporation</p>
+                      <div class="crm-deal-card-value">$30,000</div>
+                      <div class="crm-deal-card-meta">
+                        <span
+                          ><img
+                            src="../assets/images/users/5.jpg"
+                            alt=""
+                          />Jamie Lee</span
+                        ><small><i class="ri-time-line"></i> 4 days ago</small>
+                      </div>
+                      <div class="crm-deal-probability">
+                        <span>Probability</span><strong>20%</strong>
+                      </div>
+                      <div class="progress">
+                        <div
+                          class="progress-bar bg-primary"
+                          style="width: 20%"
+                        ></div>
+                      </div>
+                    </article>
+                  </div>
+                </section>
+                <section
+                  class="crm-deal-stage"
+                  id="leads-qualified"
+                  aria-labelledby="stage-qualified-title"
+                >
+                  <header>
+                    <div>
+                      <h3 id="stage-qualified-title">Qualified</h3>
+                      <span>Good fit confirmed</span>
+                    </div>
+                    <strong>08</strong>
+                  </header>
+                  <div class="crm-deal-stage-total">
+                    $62,400 <span>8 deals</span>
+                  </div>
+                  <div class="crm-deal-stage-cards">
+                    <article class="crm-deal-card">
+                      <div class="crm-deal-card-top">
+                        <span class="crm-deal-type"
+                          ><i class="ri-calendar-event-line"></i> Event</span
+                        >
+                        <div class="dropdown crm-deal-menu">
+                          <button
+                            class="btn btn-sm btn-light"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                            aria-label="More actions for Event sponsorship"
+                          >
+                            <i class="ri-more-2-fill" aria-hidden="true"></i>
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="crm-opportunities.html"
+                                ><i class="ri-briefcase-line me-2"></i
+                                >Opportunity register</a
+                              >
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="crm-pipeline.html"
+                                ><i class="ri-git-merge-line me-2"></i>Open
+                                pipeline</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <h4>Event sponsorship</h4>
+                      <p>Northstar Labs</p>
+                      <div class="crm-deal-card-value">$26,400</div>
+                      <div class="crm-deal-card-meta">
+                        <span
+                          ><img
+                            src="../assets/images/users/11.jpg"
+                            alt=""
+                          />Riley Chen</span
+                        ><small><i class="ri-time-line"></i> 1 day ago</small>
+                      </div>
+                      <div class="crm-deal-probability">
+                        <span>Probability</span><strong>40%</strong>
+                      </div>
+                      <div class="progress">
+                        <div
+                          class="progress-bar bg-info"
+                          style="width: 40%"
+                        ></div>
+                      </div>
+                    </article>
+                    <article class="crm-deal-card">
+                      <div class="crm-deal-card-top">
+                        <span class="crm-deal-type"
+                          ><i class="ri-customer-service-2-line"></i>
+                          Expansion</span
+                        >
+                        <div class="dropdown crm-deal-menu">
+                          <button
+                            class="btn btn-sm btn-light"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                            aria-label="More actions for Support plan"
+                          >
+                            <i class="ri-more-2-fill" aria-hidden="true"></i>
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="crm-opportunities.html"
+                                ><i class="ri-briefcase-line me-2"></i
+                                >Opportunity register</a
+                              >
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="crm-pipeline.html"
+                                ><i class="ri-git-merge-line me-2"></i>Open
+                                pipeline</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <h4>Enterprise support plan</h4>
+                      <p>Catalog Systems</p>
+                      <div class="crm-deal-card-value">$36,000</div>
+                      <div class="crm-deal-card-meta">
+                        <span
+                          ><img
+                            src="../assets/images/users/6.jpg"
+                            alt=""
+                          />Jordan Blake</span
+                        ><small><i class="ri-time-line"></i> 3 days ago</small>
+                      </div>
+                      <div class="crm-deal-probability">
+                        <span>Probability</span><strong>45%</strong>
+                      </div>
+                      <div class="progress">
+                        <div
+                          class="progress-bar bg-info"
+                          style="width: 45%"
+                        ></div>
+                      </div>
+                    </article>
+                  </div>
+                </section>
+                <section
+                  class="crm-deal-stage"
+                  id="contact-initiated"
+                  aria-labelledby="stage-contact-title"
+                >
+                  <header>
+                    <div>
+                      <h3 id="stage-contact-title">Discovery</h3>
+                      <span>Needs being explored</span>
+                    </div>
+                    <strong>05</strong>
+                  </header>
+                  <div class="crm-deal-stage-total">
+                    $39,800 <span>5 deals</span>
+                  </div>
+                  <div class="crm-deal-stage-cards">
+                    <article class="crm-deal-card">
+                      <div class="crm-deal-card-top">
+                        <span class="crm-deal-type"
+                          ><i class="ri-shopping-bag-3-line"></i>
+                          E-commerce</span
+                        >
+                        <div class="dropdown crm-deal-menu">
+                          <button
+                            class="btn btn-sm btn-light"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                            aria-label="More actions for E-commerce integration"
+                          >
+                            <i class="ri-more-2-fill" aria-hidden="true"></i>
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="crm-opportunities.html"
+                                ><i class="ri-briefcase-line me-2"></i
+                                >Opportunity register</a
+                              >
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="crm-pipeline.html"
+                                ><i class="ri-git-merge-line me-2"></i>Open
+                                pipeline</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <h4>E-commerce integration</h4>
+                      <p>Spice Infotech</p>
+                      <div class="crm-deal-card-value">$27,800</div>
+                      <div class="crm-deal-card-meta">
+                        <span
+                          ><img
+                            src="../assets/images/users/3.jpg"
+                            alt=""
+                          />Taylor Reed</span
+                        ><small><i class="ri-time-line"></i> Today</small>
+                      </div>
+                      <div class="crm-deal-probability">
+                        <span>Probability</span><strong>50%</strong>
+                      </div>
+                      <div class="progress">
+                        <div
+                          class="progress-bar bg-info"
+                          style="width: 50%"
+                        ></div>
+                      </div>
+                    </article>
+                    <article class="crm-deal-card">
+                      <div class="crm-deal-card-top">
+                        <span class="crm-deal-type"
+                          ><i class="ri-megaphone-line"></i> Campaign</span
+                        >
+                        <div class="dropdown crm-deal-menu">
+                          <button
+                            class="btn btn-sm btn-light"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                            aria-label="More actions for Ad campaign"
+                          >
+                            <i class="ri-more-2-fill" aria-hidden="true"></i>
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="crm-opportunities.html"
+                                ><i class="ri-briefcase-line me-2"></i
+                                >Opportunity register</a
+                              >
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="crm-pipeline.html"
+                                ><i class="ri-git-merge-line me-2"></i>Open
+                                pipeline</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <h4>Ad campaign</h4>
+                      <p>Umbrella Corporation</p>
+                      <div class="crm-deal-card-value">$12,000</div>
+                      <div class="crm-deal-card-meta">
+                        <span
+                          ><img
+                            src="../assets/images/users/16.jpg"
+                            alt=""
+                          />Jamie Lee</span
+                        ><small><i class="ri-time-line"></i> 5 days ago</small>
+                      </div>
+                      <div class="crm-deal-probability">
+                        <span>Probability</span><strong>55%</strong>
+                      </div>
+                      <div class="progress">
+                        <div
+                          class="progress-bar bg-info"
+                          style="width: 55%"
+                        ></div>
+                      </div>
+                    </article>
+                  </div>
+                </section>
+                <section
+                  class="crm-deal-stage"
+                  id="needs-identified"
+                  aria-labelledby="stage-proposal-title"
+                >
+                  <header>
+                    <div>
+                      <h3 id="stage-proposal-title">Proposal</h3>
+                      <span>Solution presented</span>
+                    </div>
+                    <strong>07</strong>
+                  </header>
+                  <div class="crm-deal-stage-total">
+                    $51,200 <span>7 deals</span>
+                  </div>
+                  <div class="crm-deal-stage-cards">
+                    <article class="crm-deal-card">
+                      <div class="crm-deal-card-top">
+                        <span class="crm-deal-type"
+                          ><i class="ri-presentation-line"></i> Consulting</span
+                        >
+                        <div class="dropdown crm-deal-menu">
+                          <button
+                            class="btn btn-sm btn-light"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                            aria-label="More actions for Consulting services"
+                          >
+                            <i class="ri-more-2-fill" aria-hidden="true"></i>
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="crm-opportunities.html"
+                                ><i class="ri-briefcase-line me-2"></i
+                                >Opportunity register</a
+                              >
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="crm-pipeline.html"
+                                ><i class="ri-git-merge-line me-2"></i>Open
+                                pipeline</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <h4>Consulting services</h4>
+                      <p>Brightpath Group</p>
+                      <div class="crm-deal-card-value">$31,200</div>
+                      <div class="crm-deal-card-meta">
+                        <span
+                          ><img src="../assets/images/users/10.jpg" alt="" />Sam
+                          Kim</span
+                        ><small><i class="ri-time-line"></i> 2 days ago</small>
+                      </div>
+                      <div class="crm-deal-probability">
+                        <span>Probability</span><strong>65%</strong>
+                      </div>
+                      <div class="progress">
+                        <div
+                          class="progress-bar bg-warning"
+                          style="width: 65%"
+                        ></div>
+                      </div>
+                    </article>
+                    <article class="crm-deal-card">
+                      <div class="crm-deal-card-top">
+                        <span class="crm-deal-type"
+                          ><i class="ri-search-eye-line"></i> Research</span
+                        >
+                        <div class="dropdown crm-deal-menu">
+                          <button
+                            class="btn btn-sm btn-light"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                            aria-label="More actions for Market research"
+                          >
+                            <i class="ri-more-2-fill" aria-hidden="true"></i>
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="crm-opportunities.html"
+                                ><i class="ri-briefcase-line me-2"></i
+                                >Opportunity register</a
+                              >
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="crm-pipeline.html"
+                                ><i class="ri-git-merge-line me-2"></i>Open
+                                pipeline</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <h4>Market research</h4>
+                      <p>BrightStar Solutions</p>
+                      <div class="crm-deal-card-value">$20,000</div>
+                      <div class="crm-deal-card-meta">
+                        <span
+                          ><img src="../assets/images/users/9.jpg" alt="" />Alex
+                          Morgan</span
+                        ><small><i class="ri-time-line"></i> 6 days ago</small>
+                      </div>
+                      <div class="crm-deal-probability">
+                        <span>Probability</span><strong>60%</strong>
+                      </div>
+                      <div class="progress">
+                        <div
+                          class="progress-bar bg-warning"
+                          style="width: 60%"
+                        ></div>
+                      </div>
+                    </article>
+                  </div>
+                </section>
+                <section
+                  class="crm-deal-stage"
+                  id="negotiation"
+                  aria-labelledby="stage-negotiation-title"
+                >
+                  <header>
+                    <div>
+                      <h3 id="stage-negotiation-title">Negotiation</h3>
+                      <span>Final details underway</span>
+                    </div>
+                    <strong>04</strong>
+                  </header>
+                  <div class="crm-deal-stage-total">
+                    $48,300 <span>4 deals</span>
+                  </div>
+                  <div class="crm-deal-stage-cards">
+                    <article class="crm-deal-card">
+                      <div class="crm-deal-card-top">
+                        <span class="crm-deal-type"
+                          ><i class="ri-line-chart-line"></i> Analytics</span
+                        >
+                        <div class="dropdown crm-deal-menu">
+                          <button
+                            class="btn btn-sm btn-light"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                            aria-label="More actions for Media analytics"
+                          >
+                            <i class="ri-more-2-fill" aria-hidden="true"></i>
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="crm-opportunities.html"
+                                ><i class="ri-briefcase-line me-2"></i
+                                >Opportunity register</a
+                              >
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="crm-pipeline.html"
+                                ><i class="ri-git-merge-line me-2"></i>Open
+                                pipeline</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <h4>Media analytics</h4>
+                      <p>Globex Corporation</p>
+                      <div class="crm-deal-card-value">$28,300</div>
+                      <div class="crm-deal-card-meta">
+                        <span
+                          ><img
+                            src="../assets/images/users/16.jpg"
+                            alt=""
+                          />Riley Chen</span
+                        ><small><i class="ri-time-line"></i> Today</small>
+                      </div>
+                      <div class="crm-deal-probability">
+                        <span>Probability</span><strong>80%</strong>
+                      </div>
+                      <div class="progress">
+                        <div
+                          class="progress-bar bg-warning"
+                          style="width: 80%"
+                        ></div>
+                      </div>
+                    </article>
+                    <article class="crm-deal-card">
+                      <div class="crm-deal-card-top">
+                        <span class="crm-deal-type"
+                          ><i class="ri-tools-line"></i> Retainer</span
+                        >
+                        <div class="dropdown crm-deal-menu">
+                          <button
+                            class="btn btn-sm btn-light"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                            aria-label="More actions for Website maintenance"
+                          >
+                            <i class="ri-more-2-fill" aria-hidden="true"></i>
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="crm-opportunities.html"
+                                ><i class="ri-briefcase-line me-2"></i
+                                >Opportunity register</a
+                              >
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="crm-pipeline.html"
+                                ><i class="ri-git-merge-line me-2"></i>Open
+                                pipeline</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <h4>Website maintenance</h4>
+                      <p>RedRock Industries</p>
+                      <div class="crm-deal-card-value">$20,000</div>
+                      <div class="crm-deal-card-meta">
+                        <span
+                          ><img
+                            src="../assets/images/users/13.jpg"
+                            alt=""
+                          />Jordan Blake</span
+                        ><small><i class="ri-time-line"></i> Yesterday</small>
+                      </div>
+                      <div class="crm-deal-probability">
+                        <span>Probability</span><strong>75%</strong>
+                      </div>
+                      <div class="progress">
+                        <div
+                          class="progress-bar bg-warning"
+                          style="width: 75%"
+                        ></div>
+                      </div>
+                    </article>
+                  </div>
+                </section>
+                <section
+                  class="crm-deal-stage"
+                  id="deal-finalized"
+                  aria-labelledby="stage-won-title"
+                >
+                  <header>
+                    <div>
+                      <h3 id="stage-won-title">Closed won</h3>
+                      <span>Successfully completed</span>
+                    </div>
+                    <strong>12</strong>
+                  </header>
+                  <div class="crm-deal-stage-total">
+                    $34,400 <span>12 deals</span>
+                  </div>
+                  <div class="crm-deal-stage-cards">
+                    <article class="crm-deal-card">
+                      <div class="crm-deal-card-top">
+                        <span class="crm-deal-type"
+                          ><i class="ri-checkbox-circle-line"></i>
+                          Enablement</span
+                        ><span class="crm-deal-won">Won</span>
+                      </div>
+                      <h4>CRM team training</h4>
+                      <p>BlueSky Industries</p>
+                      <div class="crm-deal-card-value">$14,400</div>
+                      <div class="crm-deal-card-meta">
+                        <span
+                          ><img
+                            src="../assets/images/users/1.jpg"
+                            alt=""
+                          />Taylor Reed</span
+                        ><small
+                          ><i class="ri-checkbox-circle-line"></i> Closed 2 days
+                          ago</small
+                        >
+                      </div>
+                      <div class="crm-deal-probability">
+                        <span>Final value</span><strong>100%</strong>
+                      </div>
+                      <div class="progress">
+                        <div
+                          class="progress-bar bg-success"
+                          style="width: 100%"
+                        ></div>
+                      </div>
+                    </article>
+                    <article class="crm-deal-card">
+                      <div class="crm-deal-card-top">
+                        <span class="crm-deal-type"
+                          ><i class="ri-mail-send-line"></i> Marketing</span
+                        ><span class="crm-deal-won">Won</span>
+                      </div>
+                      <h4>Newsletter campaign</h4>
+                      <p>CoreTech Solutions</p>
+                      <div class="crm-deal-card-value">$20,000</div>
+                      <div class="crm-deal-card-meta">
+                        <span
+                          ><img src="../assets/images/users/2.jpg" alt="" />Sam
+                          Kim</span
+                        ><small
+                          ><i class="ri-checkbox-circle-line"></i> Closed 4 days
+                          ago</small
+                        >
+                      </div>
+                      <div class="crm-deal-probability">
+                        <span>Final value</span><strong>100%</strong>
+                      </div>
+                      <div class="progress">
+                        <div
+                          class="progress-bar bg-success"
+                          style="width: 100%"
+                        ></div>
+                      </div>
+                    </article>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <div
+      class="modal fade crm-create-deal-modal"
+      id="create-deal-modal"
+      tabindex="-1"
+      aria-labelledby="create-deal-title"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-md">
+        <form class="modal-content" onsubmit="event.preventDefault()">
+          <div class="modal-header">
+            <div>
+              <h2
+                class="modal-title fs-16 fw-semibold mb-1"
+                id="create-deal-title"
+              >
+                Create a deal
+              </h2>
+              <p class="text-muted fs-12 mb-0">
+                Add a new opportunity to your pipeline.
+              </p>
+            </div>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <div class="row g-3">
+              <div class="col-12">
+                <label for="deal-name" class="form-label"
+                  >Deal name <span class="text-danger">*</span></label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="deal-name"
+                  placeholder="e.g. Annual platform renewal"
+                  required
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="company-name" class="form-label"
+                  >Company <span class="text-danger">*</span></label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="company-name"
+                  placeholder="Company name"
+                  required
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="deal-lead-score" class="form-label"
+                  >Deal value <span class="text-danger">*</span></label
+                >
+                <div class="input-group">
+                  <span class="input-group-text">$</span>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="deal-lead-score"
+                    placeholder="0.00"
+                    min="1"
+                    step="0.01"
+                    required
+                  />
+                  <span class="input-group-text">USD</span>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="deal-stage" class="form-label">Stage</label>
+                <select class="form-select" data-trigger id="deal-stage">
+                  <option value="New" selected>New</option>
+                  <option value="Qualified">Qualified</option>
+                  <option value="Discovery">Discovery</option>
+                  <option value="Proposal">Proposal</option>
+                  <option value="Negotiation">Negotiation</option>
+                  <option value="Closed won">Closed won</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="deal-owner" class="form-label">Deal owner</label>
+                <select class="form-select" data-trigger id="deal-owner">
+                  <option value="" selected>Select owner</option>
+                  <option>Alex Morgan</option>
+                  <option>Jordan Blake</option>
+                  <option>Jamie Lee</option>
+                  <option>Taylor Reed</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label for="datetime" class="form-label"
+                  >Next follow-up
+                  <span class="text-muted fw-normal">(optional)</span></label
+                >
+                <div class="input-group">
+                  <span class="input-group-text"
+                    ><i class="ri-calendar-line" aria-hidden="true"></i
+                  ></span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="datetime"
+                    placeholder="Choose date and time"
+                    autocomplete="off"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-light" data-bs-dismiss="modal">
+              Cancel
+            </button>
+            <button type="submit" class="btn btn-dark">
+              <i class="ri-add-line me-1" aria-hidden="true"></i>Create deal
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- include site-footer.html"-->
+    <!-- include responsive-search-dialog.html"-->
+    <!-- include common-scripts.html"-->
+    <!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/libs/dragula/dragula.min.js"></script>
+    <script src="../assets/libs/flatpickr/flatpickr.min.js"></script>
+    <script src="../assets/js/crm-deals.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

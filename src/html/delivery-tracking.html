@@ -1,0 +1,306 @@
+<!-- include document-head.html"-->
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Delivery tracking</h1>
+          <ol class="breadcrumb mb-1">
+            <li class="breadcrumb-item">
+              <a href="logistics-dashboard.html">Logistics</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="shipments.html">Shipments</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Delivery tracking
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid">
+          <section class="card custom-card mb-3">
+            <div class="card-body p-4">
+              <div class="row align-items-center g-4">
+                <div class="col-xl-5">
+                  <span
+                    class="badge bg-success-transparent text-success rounded-pill mb-2"
+                    ><i class="ri-checkbox-blank-circle-fill me-1 fs-8"></i>In
+                    transit</span
+                  >
+                  <h2 class="fs-18 fw-semibold mb-1">Shipment SHP-20481</h2>
+                  <p class="text-muted fs-13 mb-0">
+                    Order ORD-8421 <span class="mx-1">&middot;</span> Last scan
+                    today at 9:42 AM
+                  </p>
+                </div>
+                <div class="col-xl-4 col-md-7">
+                  <span class="text-muted fs-12 d-block mb-1"
+                    >Carrier tracking number</span
+                  >
+                  <span class="badge bg-light text-default fs-13 px-3 py-2"
+                    >7829 4102 6651</span
+                  >
+                  <span class="text-muted fs-12 ms-2">FedEx Ground</span>
+                </div>
+                <div class="col-xl-3 col-md-5 text-md-end">
+                  <span class="text-muted fs-12 d-block"
+                    >Estimated delivery</span
+                  >
+                  <strong class="fs-18">Today, 2:40 PM</strong>
+                  <span class="d-block text-success fs-12 mt-1"
+                    ><i class="ri-time-line me-1"></i>On schedule</span
+                  >
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div class="row">
+            <div class="col-xxl-8">
+              <section class="card custom-card mb-3">
+                <div
+                  class="card-header justify-content-between flex-wrap gap-2"
+                >
+                  <div>
+                    <div class="card-title mb-1">Route progress</div>
+                    <span class="text-muted fs-12"
+                      >FedEx Ground <span class="mx-1">&middot;</span> Tracking
+                      7829 4102 6651</span
+                    >
+                  </div>
+                  <a href="route-planning.html" class="btn btn-sm btn-light"
+                    ><i class="ri-route-line me-1"></i>Route details</a
+                  >
+                </div>
+                <div class="card-body p-4">
+                  <div
+                    class="d-flex justify-content-between text-center gap-2 flex-wrap"
+                  >
+                    <div class="flex-fill">
+                      <span
+                        class="avatar avatar-md bg-success text-fixed-white rounded-circle mb-2"
+                        ><i class="ri-checkbox-circle-line fs-16"></i
+                      ></span>
+                      <div class="fw-semibold">Order placed</div>
+                      <div class="text-muted fs-12">Sep 24, 8:16 AM</div>
+                    </div>
+                    <div class="flex-fill border-top mt-3"></div>
+                    <div class="flex-fill">
+                      <span
+                        class="avatar avatar-md bg-success text-fixed-white rounded-circle mb-2"
+                        ><i class="ri-checkbox-circle-line fs-16"></i
+                      ></span>
+                      <div class="fw-semibold">Picked up</div>
+                      <div class="text-muted fs-13">Sep 25, 10:20 AM</div>
+                    </div>
+                    <div class="flex-fill border-top mt-3"></div>
+                    <div class="flex-fill">
+                      <span
+                        class="avatar avatar-md bg-primary text-dark rounded-circle mb-2"
+                        ><i class="ri-truck-line fs-16"></i
+                      ></span>
+                      <div class="fw-semibold">In transit</div>
+                      <div class="text-muted fs-13">Sep 26, 9:42 AM</div>
+                    </div>
+                    <div class="flex-fill border-top mt-3"></div>
+                    <div class="flex-fill">
+                      <span
+                        class="avatar avatar-md bg-light text-muted rounded-circle mb-2"
+                        ><i class="ri-home-4-line fs-16"></i
+                      ></span>
+                      <div class="fw-medium text-muted">Delivered</div>
+                      <div class="text-muted fs-13">Expected 2:40 PM</div>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex flex-xl-nowrap flex-wrap align-items-center gap-3 p-3 bg-light rounded mt-4"
+                  >
+                    <span
+                      class="avatar avatar-md bg-white text-default rounded-circle"
+                      ><i class="ri-map-pin-line fs-16"></i
+                    ></span>
+                    <div class="flex-fill">
+                      <div
+                        class="d-flex justify-content-between flex-wrap gap-1"
+                      >
+                        <strong>Newark, NJ distribution center</strong
+                        ><span class="text-muted fs-12">Today, 9:42 AM</span>
+                      </div>
+                      <p class="text-muted fs-12 mb-0 mt-1">
+                        Package sorted and departed facility. Moving to the
+                        local delivery station.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="card custom-card">
+                <div class="card-header justify-content-between">
+                  <div class="card-title">Tracking activity</div>
+                  <span class="text-muted fs-13">All times local</span>
+                </div>
+                <div class="card-body p-0">
+                  <div class="d-flex gap-3 p-3 border-bottom">
+                    <span
+                      class="avatar avatar-md bg-secondary-transparent text-secondary rounded-circle"
+                      ><i class="ri-truck-line fs-16"></i
+                    ></span>
+                    <div class="flex-fill">
+                      <div
+                        class="d-flex justify-content-between flex-wrap gap-1"
+                      >
+                        <strong class="fs-13">Departed regional facility</strong
+                        ><span class="text-muted fs-12">Sep 26, 9:42 AM</span>
+                      </div>
+                      <p class="text-muted fs-12 mb-0 mt-1">
+                        Newark, NJ distribution center
+                      </p>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-3 p-3 border-bottom">
+                    <span
+                      class="avatar avatar-md bg-success-transparent text-success rounded-circle"
+                      ><i class="ri-checkbox-circle-line fs-16"></i
+                    ></span>
+                    <div class="flex-fill">
+                      <div
+                        class="d-flex justify-content-between flex-wrap gap-1"
+                      >
+                        <strong class="fs-13"
+                          >Arrived at regional facility</strong
+                        ><span class="text-muted fs-12">Sep 26, 5:18 AM</span>
+                      </div>
+                      <p class="text-muted fs-12 mb-0 mt-1">
+                        Newark, NJ distribution center
+                      </p>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-3 p-3 border-bottom">
+                    <span
+                      class="avatar avatar-md bg-warning-transparent text-warning rounded-circle"
+                      ><i class="ri-inbox-archive-line fs-16"></i
+                    ></span>
+                    <div class="flex-fill">
+                      <div
+                        class="d-flex justify-content-between flex-wrap gap-1"
+                      >
+                        <strong class="fs-13">Departed origin facility</strong
+                        ><span class="text-muted fs-12">Sep 25, 10:20 AM</span>
+                      </div>
+                      <p class="text-muted fs-12 mb-0 mt-1">
+                        Queens, NY pickup center
+                      </p>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-3 p-3">
+                    <span
+                      class="avatar avatar-md bg-info-transparent text-info rounded-circle"
+                      ><i class="ri-file-list-3-line fs-16"></i
+                    ></span>
+                    <div class="flex-fill">
+                      <div
+                        class="d-flex justify-content-between flex-wrap gap-1"
+                      >
+                        <strong class="fs-13">Shipping label created</strong
+                        ><span class="text-muted fs-12">Sep 24, 8:16 AM</span>
+                      </div>
+                      <p class="text-muted fs-12 mb-0 mt-1">
+                        Shipment information received from sender
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-xxl-4">
+              <section class="card custom-card mb-3">
+                <div class="card-header">
+                  <div class="card-title">Delivery destination</div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex gap-3 align-items-start mb-3">
+                    <span
+                      class="avatar avatar-md bg-info-transparent text-info rounded-circle"
+                      ><i class="ri-map-pin-user-line fs-18"></i
+                    ></span>
+                    <div>
+                      <div class="fw-semibold">Maya Johnson</div>
+                      <div class="text-muted fs-13">Residential delivery</div>
+                    </div>
+                  </div>
+                  <address class="text-muted fs-13 mb-3">
+                    184 Bergen Street<br />Brooklyn, NY 11217<br />United States
+                  </address>
+                  <div class="d-flex justify-content-between border-top pt-3">
+                    <span class="text-muted fs-12">Delivery preference</span
+                    ><span class="fs-12 fw-medium">Leave at front door</span>
+                  </div>
+                </div>
+              </section>
+
+              <section class="card custom-card mb-3">
+                <div class="card-header">
+                  <div class="card-title">Package details</div>
+                </div>
+                <div class="card-body p-0">
+                  <div
+                    class="d-flex justify-content-between py-3 px-3 border-bottom"
+                  >
+                    <span class="text-muted fs-13">Contents</span
+                    ><span class="fw-medium fs-13">3 items</span>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between py-3 px-3 border-bottom"
+                  >
+                    <span class="text-muted fs-13">Package type</span
+                    ><span class="fw-medium fs-13">Standard box</span>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between py-3 px-3 border-bottom"
+                  >
+                    <span class="text-muted fs-13">Weight</span
+                    ><span class="fw-medium fs-13">4.8 lb</span>
+                  </div>
+                  <div class="d-flex justify-content-between py-3 px-3">
+                    <span class="text-muted fs-13">Service</span
+                    ><span class="fw-medium fs-13">FedEx Ground</span>
+                  </div>
+                </div>
+              </section>
+
+              <div
+                class="alert bg-color-3 text-black p-3 mb-4 d-flex gap-2 align-items-start mb-0"
+                role="note"
+              >
+                <i class="ri-customer-service-2-line fs-18"></i>
+                <div>
+                  <div class="fw-semibold text-black">
+                    Need help with this delivery?
+                  </div>
+                  <div class="fs-13 mt-1 text-black">
+                    Contact support with shipment ID SHP-20481.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"-->
+    <script src="../assets/js/app-interactions.js"></script>
+    <!-- include appearance-customizer-scripts.html"-->
+  </body>
+</html>

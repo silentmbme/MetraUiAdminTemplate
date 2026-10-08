@@ -1,0 +1,172 @@
+<!-- include document-head.html"-->
+    <link rel="stylesheet" href="../assets/css/apex-funnel-charts.css" />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+
+      <div class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Funnel Charts</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">Charts</li>
+            <li class="breadcrumb-item">Apex Charts</li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Funnel Charts
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid funnel-workspace">
+          <div class="row">
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Sales pipeline</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Follow prospects from first contact to signed agreement.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="funnel-chart"
+                    class="funnel-demo"
+                    role="group"
+                    aria-label="Sales pipeline chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Signup conversion</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Compare each stage as a share of the initial audience.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="funnel-conversion"
+                    class="funnel-demo"
+                    role="group"
+                    aria-label="Signup conversion chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Hiring journey</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Explore the number of candidates at each hiring stage.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="funnel-hiring"
+                    class="funnel-demo"
+                    role="group"
+                    aria-label="Hiring journey chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Release readiness</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Track work items from scope through production release.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="funnel-release"
+                    class="funnel-demo"
+                    role="group"
+                    aria-label="Release readiness chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Support resolution</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      A depth effect distinguishes stages in the support
+                      workflow.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="funnel-depth"
+                    class="funnel-demo"
+                    role="group"
+                    aria-label="Support resolution chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Audience pyramid</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      An inverted funnel compares audience segments by size.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="pyramid-chart"
+                    class="funnel-demo"
+                    role="group"
+                    aria-label="Audience pyramid chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <!-- include common-scripts.html"-->
+
+    <!-- include appearance-customizer-scripts.html"-->
+
+    <!-- Apex Charts JS -->
+    <script src="../assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- Internal Apex Funnel Charts JS -->
+    <script src="../assets/js/apexcharts-funnel.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

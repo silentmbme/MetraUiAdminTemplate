@@ -1,0 +1,289 @@
+<!-- include document-head.html"-->
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content purchase-orders-page">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Purchase orders</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">
+              <a href="ecommerce-dashboard.html">Ecommerce</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Purchase orders
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid commerce-dashboard">
+          <div class="row orders-summary-grid">
+            <div class="col-xxl-3 col-sm-6">
+              <section class="card custom-card orders-summary-card">
+                <div class="card-body p-4">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <span class="orders-summary-icon bg-color-1 text-black"
+                      ><i class="ri-file-list-3-line"></i></span
+                    ><span class="badge bg-secondary-transparent">Open</span>
+                  </div>
+                  <p class="text-muted mb-1 mt-3">Open orders</p>
+                  <div class="d-flex align-items-end justify-content-between">
+                    <h3 class="fw-semibold mb-0" id="po-open-count">0</h3>
+                    <span class="text-muted fs-12">awaiting delivery</span>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-3 col-sm-6">
+              <section class="card custom-card orders-summary-card">
+                <div class="card-body p-4">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <span class="orders-summary-icon bg-color-2 text-black"
+                      ><i class="ri-truck-line"></i></span
+                    ><span class="badge bg-info-transparent">Moving</span>
+                  </div>
+                  <p class="text-muted mb-1 mt-3">In transit</p>
+                  <div class="d-flex align-items-end justify-content-between">
+                    <h3 class="fw-semibold mb-0" id="po-transit-count">0</h3>
+                    <span class="text-muted fs-12">shipments</span>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-3 col-sm-6">
+              <section class="card custom-card orders-summary-card">
+                <div class="card-body p-4">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <span class="orders-summary-icon bg-color-3 text-black"
+                      ><i class="ri-checkbox-circle-line"></i></span
+                    ><span class="badge bg-success-transparent">Received</span>
+                  </div>
+                  <p class="text-muted mb-1 mt-3">Received this month</p>
+                  <div class="d-flex align-items-end justify-content-between">
+                    <h3 class="fw-semibold mb-0">18</h3>
+                    <span class="text-muted fs-12">orders checked in</span>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-3 col-sm-6">
+              <section class="card custom-card orders-summary-card">
+                <div class="card-body p-4">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <span class="orders-summary-icon bg-color-4 text-black"
+                      ><i class="ri-wallet-3-line"></i></span
+                    ><span class="badge bg-warning-transparent">Committed</span>
+                  </div>
+                  <p class="text-muted mb-1 mt-3">Committed spend</p>
+                  <div class="d-flex align-items-end justify-content-between">
+                    <h3 class="fw-semibold mb-0" id="po-spend">$0</h3>
+                    <span class="text-muted fs-12">open orders</span>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <section class="card custom-card purchase-order-list-card">
+            <div
+              class="card-header justify-content-between align-items-start flex-wrap gap-3"
+            >
+              <div>
+                <h2 class="card-title mb-1">
+                  Purchase order register
+                  <span class="badge bg-light text-default ms-1" id="po-count"
+                    >0</span
+                  >
+                </h2>
+                <p class="text-muted fs-12 mb-0">
+                  Monitor supplier commitments, ETAs, and receiving progress.
+                </p>
+              </div>
+              <div class="po-controls">
+                <div class="po-search">
+                  <i class="ri-search-line" aria-hidden="true"></i
+                  ><input
+                    class="form-control"
+                    id="po-search"
+                    type="search"
+                    placeholder="PO, supplier or warehouse"
+                    aria-label="Search purchase orders"
+                  />
+                </div>
+                <select
+                  class="form-select"
+                  data-trigger
+                  id="po-status-filter"
+                  aria-label="Filter purchase orders"
+                >
+                  <option value="">All statuses</option>
+                  <option>Draft</option>
+                  <option>Ordered</option>
+                  <option>In transit</option>
+                  <option>Received</option></select
+                ><button
+                  class="btn btn-light"
+                  type="button"
+                  id="po-export-button"
+                  aria-label="Export purchase orders"
+                >
+                  <i class="ri-download-2-line me-1" aria-hidden="true"></i
+                  >Export CSV
+                </button>
+                <button
+                  class="btn btn-dark"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#create-po-modal"
+                >
+                  <i class="ri-add-line me-1" aria-hidden="true"></i>Create
+                  order
+                </button>
+              </div>
+            </div>
+            <div class="table-responsive">
+              <table class="table table-hover text-nowrap align-middle mb-0">
+                <thead>
+                  <tr>
+                    <th scope="col">Purchase order</th>
+                    <th scope="col">Supplier</th>
+                    <th scope="col">Warehouse</th>
+                    <th scope="col">Created</th>
+                    <th scope="col">Expected</th>
+                    <th scope="col">Items</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Status</th>
+                    <th scope="col" class="text-end">Action</th>
+                  </tr>
+                </thead>
+                <tbody id="purchase-order-body"></tbody>
+              </table>
+            </div>
+            <div
+              class="card-footer border-top-0 d-flex justify-content-between align-items-center flex-wrap gap-2"
+            >
+              <span class="text-muted fs-12" id="po-results"
+                >Showing 0 purchase orders</span
+              ><span class="text-muted fs-12"
+                ><i class="ri-information-line me-1"></i>Confirm quantities when
+                deliveries arrive.</span
+              >
+            </div>
+          </section>
+          <p
+            id="po-feedback"
+            class="text-muted fs-12 mt-3 mb-0"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <div
+      class="modal fade"
+      id="create-po-modal"
+      tabindex="-1"
+      aria-labelledby="create-po-title"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <form class="modal-content" id="create-po-form">
+          <div class="modal-header">
+            <div>
+              <h2 class="modal-title fs-16 fw-semibold" id="create-po-title">
+                Create purchase order
+              </h2>
+              <p class="text-muted fs-12 mb-0 mt-1">
+                Record an incoming supplier order.
+              </p>
+            </div>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row g-3">
+              <div class="col-12">
+                <label class="form-label" for="po-supplier">Supplier</label
+                ><input
+                  class="form-control"
+                  id="po-supplier"
+                  required
+                  placeholder="Supplier name"
+                />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="po-warehouse">Deliver to</label>
+                <select class="form-select" data-trigger id="po-warehouse">
+                  <option>West Coast Hub</option>
+                  <option>East Coast Fulfillment</option>
+                  <option>Central Distribution</option>
+                  <option>Returns Center</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="po-expected-date"
+                  >Expected date</label
+                ><input
+                  class="form-control"
+                  id="po-expected-date"
+                  type="date"
+                  required
+                />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="po-item-count"
+                  >Number of items</label
+                ><input
+                  class="form-control"
+                  id="po-item-count"
+                  type="number"
+                  min="1"
+                  value="1"
+                  required
+                />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="po-total"
+                  >Order total (USD)</label
+                ><input
+                  class="form-control"
+                  id="po-total"
+                  type="number"
+                  min="0.01"
+                  step="0.01"
+                  required
+                  placeholder="0.00"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-light" data-bs-dismiss="modal">
+              Cancel</button
+            ><button type="submit" class="btn btn-dark">
+              <i class="ri-file-add-line me-1"></i>Save purchase order
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- include common-scripts.html"-->
+    <!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/js/purchase-orders.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

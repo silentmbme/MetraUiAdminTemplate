@@ -1,0 +1,283 @@
+<!-- include document-head.html"-->
+    <link rel="stylesheet" href="../assets/libs/gridjs/theme/mermaid.min.css" />
+    <link
+      rel="stylesheet"
+      href="../assets/libs/sweetalert2/sweetalert2.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content customers-management-page">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Customers</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">
+              <a href="ecommerce-dashboard.html">Ecommerce</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Customers
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid commerce-dashboard">
+          <div class="row customer-metrics-grid">
+            <div class="col-xxl-3 col-sm-6">
+              <section class="card custom-card orders-summary-card">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <span class="customer-metric-icon bg-color-1 text-black"
+                      ><i
+                        class="ri-group-line fs-20"
+                        aria-hidden="true"
+                      ></i></span
+                    ><span class="badge bg-success-transparent">+16.7%</span>
+                  </div>
+                  <p class="text-muted mb-1 mt-3">Customer base</p>
+                  <div class="d-flex align-items-end justify-content-between">
+                    <h3 class="fw-semibold mb-0">2,450</h3>
+                    <span class="text-muted fs-12">vs last month</span>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-3 col-sm-6">
+              <section class="card custom-card orders-summary-card">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <span class="customer-metric-icon bg-color-2 text-black"
+                      ><i
+                        class="ri-user-follow-line fs-20"
+                        aria-hidden="true"
+                      ></i></span
+                    ><span class="badge bg-danger-transparent">-14.2%</span>
+                  </div>
+                  <p class="text-muted mb-1 mt-3">Active accounts</p>
+                  <div class="d-flex align-items-end justify-content-between">
+                    <h3 class="fw-semibold mb-0">156</h3>
+                    <span class="text-muted fs-12">vs last month</span>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-3 col-sm-6">
+              <section class="card custom-card orders-summary-card">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <span class="customer-metric-icon bg-color-3 text-black"
+                      ><i
+                        class="ri-user-unfollow-line fs-20"
+                        aria-hidden="true"
+                      ></i></span
+                    ><span class="badge bg-success-transparent">+11.7%</span>
+                  </div>
+                  <p class="text-muted mb-1 mt-3">Restricted accounts</p>
+                  <div class="d-flex align-items-end justify-content-between">
+                    <h3 class="fw-semibold mb-0">482</h3>
+                    <span class="text-muted fs-12">vs last month</span>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-3 col-sm-6">
+              <section class="card custom-card orders-summary-card">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <span class="customer-metric-icon bg-color-4 text-black"
+                      ><i
+                        class="ri-wallet-3-line fs-20"
+                        aria-hidden="true"
+                      ></i></span
+                    ><span class="badge bg-danger-transparent">-1.65%</span>
+                  </div>
+                  <p class="text-muted mb-1 mt-3">Average lifetime spend</p>
+                  <div class="d-flex align-items-end justify-content-between">
+                    <h3 class="fw-semibold mb-0">$685.30</h3>
+                    <span class="text-muted fs-12">vs last month</span>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <section class="card custom-card customer-directory-card">
+            <div
+              class="card-header justify-content-between align-items-start flex-wrap gap-3"
+            >
+              <div>
+                <h2 class="card-title mb-1">
+                  Customer directory
+                  <span
+                    id="customer-directory-count"
+                    class="badge bg-light text-default ms-1"
+                    >10</span
+                  >
+                </h2>
+                <p class="text-muted fs-12 mb-0">
+                  Search profiles, review account activity, and update access.
+                </p>
+              </div>
+              <div class="customer-directory-toolbar">
+                <div class="customer-directory-controls">
+                  <div class="customer-search">
+                    <i class="ri-search-line" aria-hidden="true"></i
+                    ><input
+                      class="form-control"
+                      type="search"
+                      id="search-input"
+                      placeholder="Name, email or location"
+                      aria-label="Search customers"
+                    />
+                  </div>
+                  <select
+                    class="form-select"
+                    data-trigger
+                    id="status-filter"
+                    aria-label="Filter by account status"
+                  >
+                    <option value="">All account statuses</option>
+                    <option value="active">Active</option>
+                    <option value="blocked">Blocked</option>
+                  </select>
+                </div>
+                <div class="customer-directory-actions">
+                  <button
+                    class="btn btn-light"
+                    type="button"
+                    id="customers-export-csv"
+                  >
+                    <i class="ri-download-2-line me-1" aria-hidden="true"></i
+                    >Export CSV
+                  </button>
+                  <button
+                    class="btn btn-dark"
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#addtask"
+                  >
+                    <i class="ri-user-add-line me-1" aria-hidden="true"></i>Add
+                    customer
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="card-body p-0">
+              <div id="customers-list" class="grid-card-table"></div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <div
+        class="modal fade"
+        id="addtask"
+        tabindex="-1"
+        aria-labelledby="add-customer-title"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <form class="modal-content" id="add-customer-form">
+            <div class="modal-header">
+              <div>
+                <h2
+                  class="modal-title fs-16 fw-semibold"
+                  id="add-customer-title"
+                >
+                  Add customer
+                </h2>
+                <p class="text-muted fs-12 mb-0 mt-1">
+                  Create a customer profile in the directory.
+                </p>
+              </div>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="row g-3">
+                <div class="col-12">
+                  <label for="customer-name" class="form-label">Full name</label
+                  ><input
+                    type="text"
+                    class="form-control"
+                    id="customer-name"
+                    placeholder="e.g. Alex Morgan"
+                    required
+                  />
+                </div>
+                <div class="col-12">
+                  <label for="customer-email" class="form-label"
+                    >Email address</label
+                  ><input
+                    type="email"
+                    class="form-control"
+                    id="customer-email"
+                    placeholder="name@example.com"
+                    required
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label for="joiningDate" class="form-label">Joined date</label
+                  ><input
+                    type="date"
+                    class="form-control"
+                    id="joiningDate"
+                    required
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label for="customer-location" class="form-label"
+                    >Location</label
+                  ><input
+                    type="text"
+                    class="form-control"
+                    id="customer-location"
+                    placeholder="City, Country"
+                  />
+                </div>
+                <div class="col-12">
+                  <label for="customer-status" data-trigger class="form-label"
+                    >Account status</label
+                  ><select class="form-select" id="customer-status">
+                    <option value="Active">Active</option>
+                    <option value="Blocked">Blocked</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-light"
+                data-bs-dismiss="modal"
+              >
+                Cancel</button
+              ><button type="submit" class="btn btn-dark">
+                <i class="ri-user-add-line me-1"></i>Create customer
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"-->
+    <!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/libs/sweetalert2/sweetalert2.min.js"></script>
+    <script src="../assets/libs/gridjs/gridjs.umd.js"></script>
+    <script src="../assets/js/customers-list.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

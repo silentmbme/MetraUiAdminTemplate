@@ -1,0 +1,548 @@
+<!-- include document-head.html"-->
+    <link rel="stylesheet" href="../assets/libs/dropzone/dropzone.css" />
+  </head>
+
+  <body class="invoice-create-page">
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Create invoice</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Pages</a></li>
+            <li class="breadcrumb-item">
+              <a href="invoice-list.html">Invoices</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Create invoice
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid invoice-builder">
+          <div class="row align-items-start">
+            <div class="col-12 col-xl-8">
+              <section class="card custom-card invoice-builder-card">
+                <div
+                  class="card-header justify-content-between flex-wrap gap-2"
+                >
+                  <div>
+                    <h2 class="card-title mb-1">Invoice details</h2>
+                    <span class="text-muted fs-12"
+                      >Add the parties, dates, and items for this invoice.</span
+                    >
+                  </div>
+                  <span class="text-muted fs-13"
+                    >Invoice
+                    <span id="invoice-number-label">#INV-2026-0148</span></span
+                  >
+                </div>
+                <div class="card-body">
+                  <div
+                    class="invoice-logo-row d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4"
+                  >
+                    <div>
+                      <span class="fw-semibold d-block">Business logo</span
+                      ><span class="text-muted fs-12"
+                        >Optional / PNG or JPG</span
+                      >
+                    </div>
+                    <form
+                      action="https://httpbin.org/post"
+                      method="post"
+                      class="dropzone invoice-logo-dropzone"
+                      id="invoice-logo-upload"
+                      aria-label="Upload business logo"
+                    ></form>
+                  </div>
+
+                  <div class="row g-4 invoice-parties">
+                    <div class="col-md-6">
+                      <div class="invoice-party-panel">
+                        <div class="invoice-section-heading">
+                          <div>
+                            <h3>From</h3>
+                            <p>Your business details</p>
+                          </div>
+                        </div>
+                        <div class="row g-3">
+                          <div class="col-12">
+                            <label class="form-label" for="Company-Name"
+                              >Business name</label
+                            ><input
+                              class="form-control"
+                              id="Company-Name"
+                              type="text"
+                              value="NexoraUI Technologies"
+                            />
+                          </div>
+                          <div class="col-12">
+                            <label class="form-label" for="company-address"
+                              >Address</label
+                            ><textarea
+                              class="form-control"
+                              id="company-address"
+                              rows="2"
+                              placeholder="Street, city, postal code"
+                            ></textarea>
+                          </div>
+                          <div class="col-sm-6">
+                            <label class="form-label" for="company-mail"
+                              >Email</label
+                            ><input
+                              class="form-control"
+                              id="company-mail"
+                              type="email"
+                              placeholder="billing@company.com"
+                            />
+                          </div>
+                          <div class="col-sm-6">
+                            <label class="form-label" for="company-phone"
+                              >Phone</label
+                            ><input
+                              class="form-control"
+                              id="company-phone"
+                              type="tel"
+                              placeholder="+1 (555) 000-0000"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="invoice-party-panel">
+                        <div class="invoice-section-heading">
+                          <div>
+                            <h3>Bill to</h3>
+                            <p>Client billing details</p>
+                          </div>
+                        </div>
+                        <div class="row g-3">
+                          <div class="col-12">
+                            <label class="form-label" for="customer-Name"
+                              >Client name</label
+                            ><input
+                              class="form-control"
+                              id="customer-Name"
+                              type="text"
+                              value="Jack Miller"
+                            />
+                          </div>
+                          <div class="col-12">
+                            <label class="form-label" for="customer-address"
+                              >Billing address</label
+                            ><textarea
+                              class="form-control"
+                              id="customer-address"
+                              rows="2"
+                              placeholder="Street, city, postal code"
+                            ></textarea>
+                          </div>
+                          <div class="col-sm-6">
+                            <label class="form-label" for="customer-mail"
+                              >Email</label
+                            ><input
+                              class="form-control"
+                              id="customer-mail"
+                              type="email"
+                              placeholder="client@example.com"
+                            />
+                          </div>
+                          <div class="col-sm-6">
+                            <label class="form-label" for="customer-phone"
+                              >Phone</label
+                            ><input
+                              class="form-control"
+                              id="customer-phone"
+                              type="tel"
+                              placeholder="+1 (555) 000-0000"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr class="invoice-divider" />
+
+                  <div class="invoice-block-heading">
+                    <div>
+                      <h3>Invoice setup</h3>
+                      <p>
+                        Set the reference number, dates, and billing currency.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row g-3 mb-4">
+                    <div class="col-sm-6 col-lg-3">
+                      <label class="form-label" for="invoice-number"
+                        >Invoice number</label
+                      ><input
+                        class="form-control"
+                        id="invoice-number"
+                        type="text"
+                        value="#INV-2026-0148"
+                      />
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                      <label class="form-label" for="invoice-date-issued"
+                        >Issue date</label
+                      ><input
+                        class="form-control"
+                        id="invoice-date-issued"
+                        type="text"
+                        placeholder="Select date"
+                        value="2026-09-28"
+                      />
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                      <label class="form-label" for="invoice-date-due"
+                        >Due date</label
+                      ><input
+                        class="form-control"
+                        id="invoice-date-due"
+                        type="text"
+                        placeholder="Select date"
+                        value="2026-10-28"
+                      />
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                      <label class="form-label" for="invoice-currency"
+                        >Currency</label
+                      ><select
+                        class="form-select"
+                        data-trigger
+                        name="invoice-currency"
+                        id="invoice-currency"
+                      >
+                        <option value="USD" selected>USD / US Dollar</option>
+                        <option value="EUR">EUR / Euro</option>
+                        <option value="GBP">GBP / British Pound</option>
+                        <option value="INR">INR / Indian Rupee</option>
+                        <option value="CHF">CHF / Swiss Franc</option>
+                      </select>
+                    </div>
+                    <div class="col-12">
+                      <label class="form-label" for="invoice-subject"
+                        >Invoice subject
+                        <span class="text-muted fw-normal"
+                          >(optional)</span
+                        ></label
+                      ><input
+                        class="form-control"
+                        id="invoice-subject"
+                        type="text"
+                        placeholder="e.g. September design services"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="invoice-block-heading">
+                    <div>
+                      <h3>Items and services</h3>
+                      <p>
+                        Each line amount is calculated from quantity and rate.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="invoice-items-heading d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+                  >
+                    <button
+                      class="btn btn-sm btn-secondary-light"
+                      type="button"
+                      id="invoice-add-item"
+                    >
+                      <i class="ri-add-line me-1" aria-hidden="true"></i>Add
+                      line item
+                    </button>
+                  </div>
+                  <div class="table-responsive invoice-items-table-wrap">
+                    <table
+                      class="table table-hover align-middle mb-0 invoice-items-table"
+                    >
+                      <thead>
+                        <tr>
+                          <th scope="col">Item</th>
+                          <th scope="col">Description</th>
+                          <th scope="col" class="text-center">Qty</th>
+                          <th scope="col" class="text-end">Rate</th>
+                          <th scope="col" class="text-end">Amount</th>
+                          <th scope="col">
+                            <span class="visually-hidden">Remove</span>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody id="invoice-items">
+                        <tr class="invoice-item-row">
+                          <td>
+                            <input
+                              class="form-control invoice-item-name"
+                              type="text"
+                              aria-label="Item name"
+                              value="Product design"
+                            />
+                          </td>
+                          <td>
+                            <input
+                              class="form-control invoice-item-description"
+                              type="text"
+                              aria-label="Item description"
+                              placeholder="Add a short description"
+                              value="Website interface and components"
+                            />
+                          </td>
+                          <td>
+                            <input
+                              class="form-control invoice-item-quantity text-center"
+                              type="number"
+                              min="0"
+                              step="1"
+                              aria-label="Quantity"
+                              value="8"
+                            />
+                          </td>
+                          <td>
+                            <input
+                              class="form-control invoice-item-rate text-end"
+                              type="number"
+                              min="0"
+                              step="0.01"
+                              aria-label="Rate"
+                              value="85"
+                            />
+                          </td>
+                          <td class="text-end fw-semibold invoice-item-amount">
+                            $680.00
+                          </td>
+                          <td>
+                            <button
+                              class="btn btn-icon btn-sm btn-danger-light invoice-remove-item"
+                              type="button"
+                              aria-label="Remove line item"
+                            >
+                              <i
+                                class="ri-delete-bin-line"
+                                aria-hidden="true"
+                              ></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr class="invoice-item-row">
+                          <td>
+                            <input
+                              class="form-control invoice-item-name"
+                              type="text"
+                              aria-label="Item name"
+                              value="Development"
+                            />
+                          </td>
+                          <td>
+                            <input
+                              class="form-control invoice-item-description"
+                              type="text"
+                              aria-label="Item description"
+                              placeholder="Add a short description"
+                              value="Frontend implementation"
+                            />
+                          </td>
+                          <td>
+                            <input
+                              class="form-control invoice-item-quantity text-center"
+                              type="number"
+                              min="0"
+                              step="1"
+                              aria-label="Quantity"
+                              value="12"
+                            />
+                          </td>
+                          <td>
+                            <input
+                              class="form-control invoice-item-rate text-end"
+                              type="number"
+                              min="0"
+                              step="0.01"
+                              aria-label="Rate"
+                              value="110"
+                            />
+                          </td>
+                          <td class="text-end fw-semibold invoice-item-amount">
+                            $1,320.00
+                          </td>
+                          <td>
+                            <button
+                              class="btn btn-icon btn-sm btn-danger-light invoice-remove-item"
+                              type="button"
+                              aria-label="Remove line item"
+                            >
+                              <i
+                                class="ri-delete-bin-line"
+                                aria-hidden="true"
+                              ></i>
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="invoice-notes mt-4">
+                    <label class="form-label" for="invoice-note"
+                      >Notes to client</label
+                    ><textarea
+                      class="form-control"
+                      id="invoice-note"
+                      rows="3"
+                      placeholder="Payment instructions, terms, or a thank-you note..."
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="card-footer d-flex gap-2 justify-content-end">
+                  <button
+                    class="btn btn-light btn-sm"
+                    type="button"
+                    id="invoice-print"
+                  >
+                    <i class="ri-printer-line me-1" aria-hidden="true"></i>Print
+                  </button>
+                  <button
+                    class="btn btn-outline-light btn-sm"
+                    type="button"
+                    id="invoice-save-draft"
+                  >
+                    Save draft
+                  </button>
+                  <button
+                    class="btn btn-dark btn-sm"
+                    type="button"
+                    id="invoice-send"
+                  >
+                    <i class="ri-mail-send-line me-1" aria-hidden="true"></i
+                    >Prepare email
+                  </button>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-12 col-xl-4">
+              <aside class="invoice-summary-column">
+                <section class="card custom-card invoice-summary-card">
+                  <div class="card-header">
+                    <div>
+                      <h2 class="card-title mb-1">Invoice summary</h2>
+                      <span class="text-muted fs-12"
+                        >Totals update as you edit line items.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="invoice-summary-total-block">
+                      <span>Total due</span
+                      ><strong id="invoice-total">$2,200.00</strong
+                      ><small>After discounts and tax</small>
+                    </div>
+                    <div class="invoice-summary-line">
+                      <span>Subtotal</span
+                      ><strong id="invoice-subtotal">$2,000.00</strong>
+                    </div>
+                    <div class="invoice-summary-line invoice-adjustment">
+                      <label for="invoice-discount">Discount</label>
+                      <div class="input-group input-group-sm">
+                        <span class="input-group-text">%</span
+                        ><input
+                          class="form-control"
+                          id="invoice-discount"
+                          type="number"
+                          min="0"
+                          max="100"
+                          step="0.1"
+                          value="0"
+                          aria-label="Discount percentage"
+                        />
+                      </div>
+                      <strong id="invoice-discount-amount">-$0.00</strong>
+                    </div>
+                    <div class="invoice-summary-line invoice-adjustment">
+                      <label for="invoice-tax">Tax</label>
+                      <div class="input-group input-group-sm">
+                        <span class="input-group-text">%</span
+                        ><input
+                          class="form-control"
+                          id="invoice-tax"
+                          type="number"
+                          min="0"
+                          max="100"
+                          step="0.1"
+                          value="10"
+                          aria-label="Tax percentage"
+                        />
+                      </div>
+                      <strong id="invoice-tax-amount">$200.00</strong>
+                    </div>
+                    <div class="invoice-summary-meta mt-3">
+                      <span
+                        ><i
+                          class="ri-calendar-check-line me-2"
+                          aria-hidden="true"
+                        ></i
+                        >Payment due</span
+                      ><strong id="invoice-due-label">October 28, 2026</strong>
+                    </div>
+                    <div class="invoice-summary-meta">
+                      <span
+                        ><i
+                          class="ri-bank-card-line me-2"
+                          aria-hidden="true"
+                        ></i
+                        >Payment method</span
+                      >
+                      <select
+                        class="form-select form-select-sm"
+                        data-trigger
+                        id="invoice-payment-method"
+                        aria-label="Preferred payment method"
+                      >
+                        <option>Bank transfer</option>
+                        <option>Credit or debit card</option>
+                        <option>PayPal</option>
+                        <option>UPI</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <i
+                      class="ri-shield-check-line me-1 text-success"
+                      aria-hidden="true"
+                    ></i
+                    ><span class="text-muted fs-12"
+                      >Payment details can be shared with the invoice.</span
+                    >
+                  </div>
+                </section>
+
+                <p
+                  class="invoice-feedback text-muted fs-12 mt-3 mb-0"
+                  id="invoice-feedback"
+                  role="status"
+                  aria-live="polite"
+                ></p>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"-->
+    <!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/libs/flatpickr/flatpickr.min.js"></script>
+    <script src="../assets/libs/dropzone/dropzone-min.js"></script>
+    <script src="../assets/js/create-invoice.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

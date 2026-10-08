@@ -1,0 +1,101 @@
+<div
+  class="modal fade"
+  id="header-responsive-search"
+  tabindex="-1"
+  aria-labelledby="global-search-title"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content search-panel">
+      <div class="search-panel-heading">
+        <div>
+          <span class="search-eyebrow">YOUR WORKSPACE, ONE SEARCH AWAY</span>
+          <h5 id="global-search-title" class="mb-0 mt-1">
+            Where would you like to go?
+          </h5>
+        </div>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close search"
+        ></button>
+      </div>
+      <div class="search-input-wrap">
+        <i class="ri-search-2-line" aria-hidden="true"></i>
+        <label for="global-search-input" class="visually-hidden"
+          >Search dashboard pages</label
+        >
+        <input
+          id="global-search-input"
+          type="search"
+          autocomplete="off"
+          placeholder="Search pages, apps, components..."
+          aria-controls="global-search-results"
+          aria-describedby="global-search-help"
+        />
+        <kbd class="d-none d-sm-inline">Esc</kbd>
+      </div>
+      <div class="search-toolbar">
+        <div class="d-flex gap-2" role="group" aria-label="Search scope">
+          <button
+            type="button"
+            class="search-filter active"
+            data-search-scope="all"
+            aria-pressed="true"
+          >
+            All pages
+          </button>
+          <button
+            type="button"
+            class="search-filter"
+            data-search-scope="recent"
+            aria-pressed="false"
+          >
+            <i class="ri-history-line" aria-hidden="true"></i> Recent
+          </button>
+        </div>
+        <select
+          id="global-search-category"
+          data-trigger
+          class="form-select form-select-sm"
+          aria-label="Filter by category"
+        >
+          <option value="">All categories</option>
+        </select>
+      </div>
+      <div class="search-results-heading">
+        <span id="global-search-status" role="status" aria-live="polite"></span
+        ><button
+          type="button"
+          id="global-search-clear"
+          class="btn btn-link btn-sm p-0"
+          hidden
+        >
+          Clear history
+        </button>
+      </div>
+      <div class="search-results-scroll">
+        <ul
+          id="global-search-results"
+          class="list-unstyled mb-0"
+          aria-label="Matching pages"
+        ></ul>
+        <div id="global-search-empty" class="search-empty" hidden>
+          <i class="ri-search-eye-line" aria-hidden="true"></i>
+          <h6 class="mt-3">No pages found</h6>
+          <p class="text-muted mb-0" id="global-search-empty-description">
+            Try another keyword or choose a different category.
+          </p>
+        </div>
+      </div>
+      <div class="search-panel-footer" id="global-search-help">
+        <span
+          ><kbd>&uarr;</kbd> <kbd>&darr;</kbd> Navigate
+          <kbd>Enter</kbd> Open</span
+        ><span><kbd>Ctrl / &#8984; K</kbd> Search</span>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="../assets/js/global-search.js" defer></script>

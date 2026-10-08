@@ -1,0 +1,308 @@
+<!-- include document-head.html"-->
+  </head>
+
+  <body class="sales-workspace" data-sales-view="invoices">
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Invoices</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Sales</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Invoices</li>
+          </ol>
+        </div>
+        <div class="container-fluid invoices-page">
+          <div class="row">
+            <div class="col-lg-7">
+              <section class="card custom-card invoice-collection-card">
+                <div class="card-body">
+                  <div
+                    class="d-flex justify-content-between align-items-start gap-3"
+                  >
+                    <div>
+                      <span class="fs-12 text-muted">COLLECTION OVERVIEW</span>
+                      <h2
+                        class="fs-28 fw-semibold mt-2 mb-1"
+                        data-sales-metric="revenue"
+                      >
+                        &mdash;
+                      </h2>
+                      <p class="text-muted fs-12">
+                        Collected from paid invoices in this period
+                      </p>
+                    </div>
+                    <span
+                      class="avatar avatar-lg avatar-rounded bg-secondary-transparent"
+                    >
+                      <i
+                        class="ri-file-check-line fs-24"
+                        aria-hidden="true"
+                      ></i>
+                    </span>
+                  </div>
+                  <div class="d-flex justify-content-between fs-12 mb-2">
+                    <span>Invoices paid</span>
+                    <strong id="invoice-paid-summary"></strong>
+                  </div>
+                  <div
+                    class="progress progress-xs"
+                    id="invoice-paid-progress"
+                    role="progressbar"
+                    aria-label="Paid invoice percentage"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div
+                      class="progress-bar bg-secondary progress-bar-striped"
+                    ></div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-5">
+              <section class="card custom-card">
+                <div class="card-body">
+                  <div class="d-flex align-items-center gap-3 mb-3">
+                    <span class="avatar avatar-md bg-success-transparent">
+                      <i class="ri-time-line fs-22" aria-hidden="true"></i>
+                    </span>
+                    <div>
+                      <h2 class="fs-15 mb-1">Outstanding invoices</h2>
+                      <span class="text-muted fs-12">
+                        Balances waiting for payment
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-end gap-3"
+                  >
+                    <div>
+                      <strong
+                        class="fs-28 fw-semibold d-block"
+                        data-sales-metric="pending"
+                      >
+                        &mdash;
+                      </strong>
+                      <span
+                        id="invoice-pending-summary"
+                        class="text-muted fs-12"
+                      ></span>
+                    </div>
+                    <button
+                      type="button"
+                      class="btn btn-success btn-sm"
+                      data-invoice-filter="Pending"
+                    >
+                      Review pending
+                      <i
+                        class="ri-arrow-right-line ms-1"
+                        aria-hidden="true"
+                      ></i>
+                    </button>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class="card custom-card">
+            <div class="card-header justify-content-between flex-wrap gap-2">
+              <h2 class="card-title mb-0">Invoice register</h2>
+              <span class="badge bg-secondary-transparent">Demo invoices</span>
+            </div>
+            <div class="card-body border-bottom">
+              <div
+                class="d-flex flex-wrap gap-2 mb-3"
+                role="group"
+                aria-label="Quick invoice status filters"
+              >
+                <button
+                  type="button"
+                  class="btn btn-sm btn-light"
+                  data-invoice-filter=""
+                  aria-pressed="true"
+                >
+                  All
+                  <span
+                    class="badge bg-light text-default ms-1"
+                    data-invoice-count="All"
+                  >
+                    0
+                  </span>
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-sm btn-light"
+                  data-invoice-filter="Paid"
+                  aria-pressed="false"
+                >
+                  Paid
+                  <span
+                    class="badge bg-light text-default ms-1"
+                    data-invoice-count="Paid"
+                  >
+                    0
+                  </span>
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-sm btn-light"
+                  data-invoice-filter="Pending"
+                  aria-pressed="false"
+                >
+                  Pending
+                  <span
+                    class="badge bg-light text-default ms-1"
+                    data-invoice-count="Pending"
+                  >
+                    0
+                  </span>
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-sm btn-light"
+                  data-invoice-filter="Refunded"
+                  aria-pressed="false"
+                >
+                  Refunded
+                  <span
+                    class="badge bg-light text-default ms-1"
+                    data-invoice-count="Refunded"
+                  >
+                    0
+                  </span>
+                </button>
+              </div>
+              <div class="row g-3 align-items-end">
+                <div class="col-md-6 col-xl-5">
+                  <label for="sales-search" class="form-label">
+                    Search invoices
+                  </label>
+                  <div class="input-group">
+                    <span class="input-group-text">
+                      <i class="ri-search-line" aria-hidden="true"></i>
+                    </span>
+                    <input
+                      type="search"
+                      id="sales-search"
+                      class="form-control"
+                      placeholder="Customer, invoice or product"
+                      autocomplete="off"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-4 col-xl-3">
+                  <label for="sales-status" class="form-label">
+                    Invoice status
+                  </label>
+                  <select id="sales-status" data-trigger class="form-select">
+                    <option value="">All statuses</option>
+                    <option>Paid</option>
+                    <option>Pending</option>
+                    <option>Refunded</option>
+                  </select>
+                </div>
+                <div class="col-md-2 col-xl-4 text-md-end">
+                  <a href="sales-invoices.html" class="btn btn-light btn-wave">
+                    Reset filters
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="card-body p-0">
+              <div class="table-responsive position-relative">
+                <table class="table text-nowrap table-hover mb-0">
+                  <thead>
+                    <tr>
+                      <th scope="col">Invoice</th>
+                      <th scope="col">Customer</th>
+                      <th scope="col">Issued on</th>
+                      <th scope="col">Status</th>
+                      <th scope="col">Amount</th>
+                      <th scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="sales-records"></tbody>
+                </table>
+              </div>
+            </div>
+            <div
+              class="card-footer border-top-0 d-flex align-items-center justify-content-between flex-wrap gap-2"
+            >
+              <span
+                class="text-muted fs-12"
+                id="sales-table-count"
+                role="status"
+              ></span>
+              <nav aria-label="Invoice table pages">
+                <div class="btn-group">
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-light"
+                    id="sales-prev"
+                  >
+                    <i class="ri-arrow-left-s-line me-1" aria-hidden="true"></i>
+                    Previous
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-light"
+                    id="sales-next"
+                  >
+                    Next
+                    <i
+                      class="ri-arrow-right-s-line ms-1"
+                      aria-hidden="true"
+                    ></i>
+                  </button>
+                </div>
+              </nav>
+            </div>
+          </div>
+          <p
+            id="sales-feedback"
+            class="text-muted fs-12"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <div
+      class="modal fade"
+      id="sales-record-modal"
+      tabindex="-1"
+      aria-labelledby="sales-record-title"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 id="sales-record-title" class="modal-title">Invoice details</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body" id="sales-record-body"></div>
+        </div>
+      </div>
+    </div>
+    <!-- include common-scripts.html"-->
+    <script src="../assets/libs/apexcharts/apexcharts.min.js"></script>
+    <script src="../assets/js/sales-workspace.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+    <!-- include appearance-customizer-scripts.html"-->
+  </body>
+</html>

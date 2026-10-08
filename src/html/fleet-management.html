@@ -1,0 +1,835 @@
+<!-- include document-head.html"-->
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page fleet-management-page-shell">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content fleet-management-page">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Fleet management</h1>
+          <ol class="breadcrumb mb-1">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">
+              <a href="logistics-dashboard.html">Logistics</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Fleet management
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid">
+          <div class="row" aria-label="Fleet summary">
+            <div class="col-sm-6 col-xxl-3">
+              <section class="card custom-card fleet-summary-card">
+                <div
+                  class="card-body d-flex align-items-center justify-content-between"
+                >
+                  <div>
+                    <span class="text-muted">Total vehicles</span>
+                    <h2 class="fw-semibold mb-0 mt-1">56</h2>
+                    <span class="text-muted fs-12">Across 4 depots</span>
+                  </div>
+                  <span
+                    class="avatar avatar-lg avatar-rounded bg-info-transparent text-info"
+                    ><i class="ri-truck-line fs-22" aria-hidden="true"></i
+                  ></span>
+                </div>
+              </section>
+            </div>
+            <div class="col-sm-6 col-xxl-3">
+              <section class="card custom-card fleet-summary-card">
+                <div
+                  class="card-body d-flex align-items-center justify-content-between"
+                >
+                  <div>
+                    <span class="text-muted">On route</span>
+                    <h2 class="fw-semibold mb-0 mt-1">26</h2>
+                    <span class="text-muted fs-12">Active delivery runs</span>
+                  </div>
+                  <span
+                    class="avatar avatar-lg avatar-rounded bg-secondary-transparent text-secondary"
+                    ><i class="ri-route-line fs-22" aria-hidden="true"></i
+                  ></span>
+                </div>
+              </section>
+            </div>
+            <div class="col-sm-6 col-xxl-3">
+              <section class="card custom-card fleet-summary-card">
+                <div
+                  class="card-body d-flex align-items-center justify-content-between"
+                >
+                  <div>
+                    <span class="text-muted">Available</span>
+                    <h2 class="fw-semibold mb-0 mt-1">16</h2>
+                    <span class="text-muted fs-12">Ready for assignment</span>
+                  </div>
+                  <span
+                    class="avatar avatar-lg avatar-rounded bg-success-transparent text-success"
+                    ><i
+                      class="ri-checkbox-circle-line fs-22"
+                      aria-hidden="true"
+                    ></i
+                  ></span>
+                </div>
+              </section>
+            </div>
+            <div class="col-sm-6 col-xxl-3">
+              <section class="card custom-card fleet-summary-card">
+                <div
+                  class="card-body d-flex align-items-center justify-content-between"
+                >
+                  <div>
+                    <span class="text-muted">In service</span>
+                    <h2 class="fw-semibold mb-0 mt-1">5</h2>
+                    <span class="text-muted fs-12"
+                      >3 maintenance tasks due</span
+                    >
+                  </div>
+                  <span
+                    class="avatar avatar-lg avatar-rounded bg-warning-transparent text-warning"
+                    ><i class="ri-tools-line fs-22" aria-hidden="true"></i
+                  ></span>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xxl-8">
+              <section class="card custom-card">
+                <div
+                  class="card-header justify-content-between flex-wrap gap-2"
+                >
+                  <div>
+                    <span class="text-muted fs-12">FLEET AVAILABILITY</span>
+                    <h2 class="card-title mt-1 mb-0">Vehicle dispatch board</h2>
+                  </div>
+                  <span
+                    class="badge bg-success-transparent text-success rounded-pill"
+                    ><i class="ri-checkbox-blank-circle-fill me-1 fs-8"></i
+                    >Fleet online</span
+                  >
+                </div>
+                <div class="card-body p-4">
+                  <div class="row g-4 align-items-center">
+                    <div class="col-md-4">
+                      <div class="d-flex align-items-center gap-3">
+                        <span
+                          class="avatar avatar-xl bg-light text-dark rounded"
+                          ><i class="ri-truck-line fs-24"></i
+                        ></span>
+                        <div>
+                          <span class="text-muted fs-13">Vehicles active</span>
+                          <div class="fs-28 fw-semibold lh-1 mt-1">
+                            42
+                            <span class="text-muted fs-14 fw-normal">/ 56</span>
+                          </div>
+                          <span class="text-success fs-12 mt-1 d-inline-block"
+                            >75% of fleet active</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-8">
+                      <div
+                        class="d-flex justify-content-between align-items-center mb-2"
+                      >
+                        <span class="fw-medium fs-13">Dispatch capacity</span
+                        ><span class="text-muted fs-12">Live allocation</span>
+                      </div>
+                      <div
+                        class="progress-stacked mb-3"
+                        style="height: 10px"
+                        aria-label="Fleet availability distribution"
+                      >
+                        <div
+                          class="progress"
+                          role="progressbar"
+                          aria-label="On route"
+                          aria-valuenow="46"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                          style="width: 46%"
+                        >
+                          <div class="progress-bar bg-primary"></div>
+                        </div>
+                        <div
+                          class="progress"
+                          role="progressbar"
+                          aria-label="Available"
+                          aria-valuenow="29"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                          style="width: 29%"
+                        >
+                          <div class="progress-bar bg-success"></div>
+                        </div>
+                        <div
+                          class="progress"
+                          role="progressbar"
+                          aria-label="Loading"
+                          aria-valuenow="16"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                          style="width: 16%"
+                        >
+                          <div class="progress-bar bg-warning"></div>
+                        </div>
+                        <div
+                          class="progress"
+                          role="progressbar"
+                          aria-label="Service"
+                          aria-valuenow="9"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                          style="width: 9%"
+                        >
+                          <div class="progress-bar bg-danger"></div>
+                        </div>
+                      </div>
+                      <div class="row g-2 fs-12">
+                        <div class="col-6 col-lg-3">
+                          <span class="text-primary me-1">●</span>On route
+                          <strong class="ms-1">26</strong>
+                        </div>
+                        <div class="col-6 col-lg-3">
+                          <span class="text-success me-1">●</span>Available
+                          <strong class="ms-1">16</strong>
+                        </div>
+                        <div class="col-6 col-lg-3">
+                          <span class="text-warning me-1">●</span>Loading
+                          <strong class="ms-1">9</strong>
+                        </div>
+                        <div class="col-6 col-lg-3">
+                          <span class="text-danger me-1">●</span>Service
+                          <strong class="ms-1">5</strong>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row g-3 border-top mt-3 pt-3 align-items-center">
+                    <div class="col-md-4">
+                      <span class="text-muted fs-12 d-block"
+                        >NEXT DISPATCH</span
+                      >
+                      <span class="fw-semibold">10:30 AM</span>
+                      <span class="text-muted fs-12 d-block"
+                        >North hub collection</span
+                      >
+                    </div>
+                    <div class="col-md-4">
+                      <span class="text-muted fs-12 d-block"
+                        >ROUTES IN PROGRESS</span
+                      >
+                      <span class="fw-semibold">26 vehicles</span>
+                      <span class="text-muted fs-12 d-block"
+                        >Across active delivery runs</span
+                      >
+                    </div>
+                    <div
+                      class="col-md-4 d-flex align-items-center justify-content-md-end"
+                    >
+                      <a href="route-planning.html" class="btn btn-light btn-sm"
+                        >Plan dispatch
+                        <i
+                          class="ri-arrow-right-line ms-1"
+                          aria-hidden="true"
+                        ></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-xxl-4">
+              <section class="card custom-card">
+                <div class="card-header justify-content-between">
+                  <h2 class="card-title mb-0">Maintenance queue</h2>
+                  <span class="text-muted fs-12">3 upcoming</span>
+                </div>
+                <div class="card-body p-0">
+                  <div class="d-flex gap-3 align-items-start p-3 border-bottom">
+                    <span
+                      class="avatar avatar-md bg-danger-transparent text-danger rounded-circle"
+                      ><i class="ri-tools-line fs-16"></i
+                    ></span>
+                    <div class="flex-fill">
+                      <div class="d-flex justify-content-between gap-2">
+                        <span class="fw-semibold fs-13">Oil service due</span
+                        ><span class="badge bg-danger-transparent text-danger"
+                          >Today</span
+                        >
+                      </div>
+                      <div class="text-muted fs-12 mt-1">
+                        Van 08 <span class="mx-1">&middot;</span> 49,820 mi
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-3 align-items-start p-3 border-bottom">
+                    <span
+                      class="avatar avatar-md bg-warning-transparent text-warning rounded-circle"
+                      ><i class="ri-alert-line fs-16"></i
+                    ></span>
+                    <div class="flex-fill">
+                      <div class="d-flex justify-content-between gap-2">
+                        <span class="fw-semibold fs-13">Tire inspection</span
+                        ><span class="badge bg-warning-transparent text-warning"
+                          >Tomorrow</span
+                        >
+                      </div>
+                      <div class="text-muted fs-12 mt-1">
+                        Truck 14 <span class="mx-1">&middot;</span> 62,104 mi
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-3 align-items-start p-3">
+                    <span
+                      class="avatar avatar-md bg-info-transparent text-info rounded-circle"
+                      ><i class="ri-calendar-check-line fs-16"></i
+                    ></span>
+                    <div class="flex-fill">
+                      <div class="d-flex justify-content-between gap-2">
+                        <span class="fw-semibold fs-13">Annual inspection</span
+                        ><span class="text-muted fs-12">Oct 02</span>
+                      </div>
+                      <div class="text-muted fs-12 mt-1">
+                        Truck 06 <span class="mx-1">&middot;</span> 38,612 mi
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xxl-8">
+              <section class="card custom-card">
+                <div
+                  class="card-header justify-content-between flex-wrap gap-2"
+                >
+                  <div>
+                    <h2 class="card-title mb-1">Vehicle roster</h2>
+                    <span class="text-muted fs-12"
+                      >Dispatch status, assigned driver, and next stop</span
+                    >
+                  </div>
+                  <div
+                    class="d-flex gap-2 align-items-center flex-wrap fleet-roster-toolbar"
+                  >
+                    <label class="visually-hidden" for="fleet-vehicle-search"
+                      >Search vehicles</label
+                    >
+                    <div class="input-group" style="width: 175px">
+                      <span class="input-group-text"
+                        ><i class="ri-search-line" aria-hidden="true"></i
+                      ></span>
+                      <input
+                        class="form-control"
+                        type="search"
+                        id="fleet-vehicle-search"
+                        placeholder="Search vehicles"
+                        autocomplete="off"
+                      />
+                    </div>
+                    <label class="visually-hidden" for="fleet-status-filter"
+                      >Filter vehicle status</label
+                    >
+                    <select
+                      class="form-select form-select-sm"
+                      data-trigger
+                      id="fleet-status-filter"
+                      aria-label="Filter vehicle status"
+                    >
+                      <option value="" selected>All vehicles</option>
+                      <option value="Available">Available</option>
+                      <option value="On route">On route</option>
+                      <option value="Loading">Loading</option>
+                      <option value="In service">In service</option>
+                    </select>
+                    <button
+                      class="btn btn-secondary"
+                      type="button"
+                      data-fleet-export
+                    >
+                      <i class="ri-download-2-line me-1" aria-hidden="true"></i
+                      >Export
+                    </button>
+                    <button
+                      class="btn btn-dark"
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#fleet-vehicle-modal"
+                    >
+                      <i class="ri-add-line me-1" aria-hidden="true"></i>Add
+                      vehicle
+                    </button>
+                  </div>
+                </div>
+                <div class="table-responsive">
+                  <table class="table text-nowrap table-hover mb-0">
+                    <thead>
+                      <tr>
+                        <th scope="col">Vehicle</th>
+                        <th scope="col">Driver</th>
+                        <th scope="col">Current route</th>
+                        <th scope="col">Fuel</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">
+                          <span class="visually-hidden">Details</span>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody id="fleet-vehicle-table">
+                      <tr data-status="On route">
+                        <td>
+                          <div class="fw-semibold">
+                            Van 08
+                            <span class="text-muted fw-normal">· V-208</span>
+                          </div>
+                          <span class="text-muted fs-12">Ford Transit</span>
+                        </td>
+                        <td>Jordan Lee</td>
+                        <td>
+                          North loop
+                          <span class="text-muted fs-12">· 4 stops left</span>
+                        </td>
+                        <td>
+                          <div class="d-flex align-items-center gap-2">
+                            <div
+                              class="progress flex-fill"
+                              style="height: 5px; min-width: 42px"
+                            >
+                              <div
+                                class="progress-bar bg-success"
+                                style="width: 78%"
+                              ></div>
+                            </div>
+                            <span class="fs-12">78%</span>
+                          </div>
+                        </td>
+                        <td>
+                          <span
+                            class="badge bg-primary-transparent text-primary"
+                            >On route</span
+                          >
+                        </td>
+                        <td>
+                          <a
+                            href="delivery-tracking.html"
+                            class="btn btn-sm btn-light"
+                            aria-label="View Van 08 route"
+                            ><i class="ri-arrow-right-up-line"></i
+                          ></a>
+                        </td>
+                      </tr>
+                      <tr data-status="On route">
+                        <td>
+                          <div class="fw-semibold">
+                            Truck 14
+                            <span class="text-muted fw-normal">· T-114</span>
+                          </div>
+                          <span class="text-muted fs-12">Isuzu NPR</span>
+                        </td>
+                        <td>Amara Davis</td>
+                        <td>
+                          Central run
+                          <span class="text-muted fs-12">· 2 stops left</span>
+                        </td>
+                        <td>
+                          <div class="d-flex align-items-center gap-2">
+                            <div
+                              class="progress flex-fill"
+                              style="height: 5px; min-width: 42px"
+                            >
+                              <div
+                                class="progress-bar bg-warning"
+                                style="width: 34%"
+                              ></div>
+                            </div>
+                            <span class="fs-12">34%</span>
+                          </div>
+                        </td>
+                        <td>
+                          <span
+                            class="badge bg-primary-transparent text-primary"
+                            >On route</span
+                          >
+                        </td>
+                        <td>
+                          <a
+                            href="delivery-tracking.html"
+                            class="btn btn-sm btn-light"
+                            aria-label="View Truck 14 route"
+                            ><i class="ri-arrow-right-up-line"></i
+                          ></a>
+                        </td>
+                      </tr>
+                      <tr data-status="Available">
+                        <td>
+                          <div class="fw-semibold">
+                            Van 12
+                            <span class="text-muted fw-normal">· V-212</span>
+                          </div>
+                          <span class="text-muted fs-12"
+                            >Mercedes Sprinter</span
+                          >
+                        </td>
+                        <td>Noah Williams</td>
+                        <td>Awaiting assignment</td>
+                        <td>
+                          <div class="d-flex align-items-center gap-2">
+                            <div
+                              class="progress flex-fill"
+                              style="height: 5px; min-width: 42px"
+                            >
+                              <div
+                                class="progress-bar bg-success"
+                                style="width: 91%"
+                              ></div>
+                            </div>
+                            <span class="fs-12">91%</span>
+                          </div>
+                        </td>
+                        <td>
+                          <span
+                            class="badge bg-success-transparent text-success"
+                            >Available</span
+                          >
+                        </td>
+                        <td>
+                          <a
+                            href="route-planning.html"
+                            class="btn btn-sm btn-light"
+                            aria-label="Assign route to Van 12"
+                            ><i class="ri-arrow-right-up-line"></i
+                          ></a>
+                        </td>
+                      </tr>
+                      <tr data-status="Loading">
+                        <td>
+                          <div class="fw-semibold">
+                            Truck 06
+                            <span class="text-muted fw-normal">· T-106</span>
+                          </div>
+                          <span class="text-muted fs-12">Hino 268</span>
+                        </td>
+                        <td>Olivia Martin</td>
+                        <td>
+                          East warehouse
+                          <span class="text-muted fs-12">· loading</span>
+                        </td>
+                        <td>
+                          <div class="d-flex align-items-center gap-2">
+                            <div
+                              class="progress flex-fill"
+                              style="height: 5px; min-width: 42px"
+                            >
+                              <div
+                                class="progress-bar bg-info"
+                                style="width: 63%"
+                              ></div>
+                            </div>
+                            <span class="fs-12">63%</span>
+                          </div>
+                        </td>
+                        <td>
+                          <span
+                            class="badge bg-warning-transparent text-warning"
+                            >Loading</span
+                          >
+                        </td>
+                        <td>
+                          <a
+                            href="warehouse-management.html"
+                            class="btn btn-sm btn-light"
+                            aria-label="View Truck 06 loading"
+                            ><i class="ri-arrow-right-up-line"></i
+                          ></a>
+                        </td>
+                      </tr>
+                      <tr data-status="In service">
+                        <td>
+                          <div class="fw-semibold">
+                            Van 03
+                            <span class="text-muted fw-normal">· V-203</span>
+                          </div>
+                          <span class="text-muted fs-12">Ford Transit</span>
+                        </td>
+                        <td>Service bay</td>
+                        <td>Preventive maintenance</td>
+                        <td><span class="text-muted fs-12">—</span></td>
+                        <td>
+                          <span class="badge bg-danger-transparent text-danger"
+                            >In service</span
+                          >
+                        </td>
+                        <td>
+                          <a
+                            href="#"
+                            class="btn btn-sm btn-light"
+                            aria-hidden="true"
+                            ><i class="ri-tools-line"></i
+                          ></a>
+                        </td>
+                      </tr>
+                      <tr id="fleet-vehicle-empty" hidden>
+                        <td colspan="6" class="text-center text-muted py-4">
+                          No vehicles match the selected filters.
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div
+                  class="card-footer border-top-0 d-flex justify-content-between align-items-center"
+                >
+                  <span
+                    class="text-muted fs-12"
+                    id="fleet-vehicle-count"
+                    data-total="56"
+                    role="status"
+                    >Showing 5 of 56 vehicles</span
+                  ><a href="route-planning.html" class="btn btn-sm btn-light"
+                    >Open dispatch board <i class="ri-arrow-right-line ms-1"></i
+                  ></a>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-xxl-4">
+              <section class="card custom-card">
+                <div class="card-header justify-content-between">
+                  <h2 class="card-title mb-0">Driver shift handoff</h2>
+                  <span class="badge bg-info-transparent text-info"
+                    >Next · 12:00 PM</span
+                  >
+                </div>
+                <div class="card-body">
+                  <p class="text-muted fs-12 mb-3">
+                    Drivers ending their shifts soon. Confirm the vehicle
+                    handoff before dispatch.
+                  </p>
+                  <div
+                    class="d-flex align-items-center gap-3 pb-3 mb-3 border-bottom"
+                  >
+                    <span class="avatar avatar-md avatar-rounded"
+                      ><img src="../assets/images/users/5.jpg" alt=""
+                    /></span>
+                    <div class="flex-fill">
+                      <div class="fw-semibold fs-13">Jordan Lee</div>
+                      <div class="text-muted fs-12">
+                        Van 08 <span class="mx-1">&middot;</span> North loop
+                      </div>
+                    </div>
+                    <span class="text-muted fs-12">11:45 AM</span>
+                  </div>
+                  <div
+                    class="d-flex align-items-center gap-3 pb-3 mb-3 border-bottom"
+                  >
+                    <span class="avatar avatar-md avatar-rounded"
+                      ><img src="../assets/images/users/11.jpg" alt=""
+                    /></span>
+                    <div class="flex-fill">
+                      <div class="fw-semibold fs-13">Amara Davis</div>
+                      <div class="text-muted fs-12">
+                        Truck 14 <span class="mx-1">&middot;</span> Central run
+                      </div>
+                    </div>
+                    <span class="text-muted fs-12">12:00 PM</span>
+                  </div>
+                  <div class="d-flex align-items-center gap-3">
+                    <span class="avatar avatar-md avatar-rounded"
+                      ><img src="../assets/images/users/8.jpg" alt=""
+                    /></span>
+                    <div class="flex-fill">
+                      <div class="fw-semibold fs-13">Noah Williams</div>
+                      <div class="text-muted fs-12">
+                        Van 12 <span class="mx-1">&middot;</span> Standby
+                      </div>
+                    </div>
+                    <span class="text-muted fs-12">12:30 PM</span>
+                  </div>
+                  <div
+                    class="d-flex align-items-center gap-3 pt-3 mt-3 border-top"
+                  >
+                    <span class="avatar avatar-md avatar-rounded"
+                      ><img src="../assets/images/users/14.jpg" alt=""
+                    /></span>
+                    <div class="flex-fill">
+                      <div class="fw-semibold fs-13">Priya Shah</div>
+                      <div class="text-muted fs-12">
+                        Truck 21 <span class="mx-1">&middot;</span> East route
+                      </div>
+                    </div>
+                    <span class="text-muted fs-12">1:00 PM</span>
+                  </div>
+                  <div
+                    class="d-flex align-items-center gap-3 pt-3 mt-3 border-top"
+                  >
+                    <span class="avatar avatar-md avatar-rounded"
+                      ><img src="../assets/images/users/16.jpg" alt=""
+                    /></span>
+                    <div class="flex-fill">
+                      <div class="fw-semibold fs-13">Marcus Green</div>
+                      <div class="text-muted fs-12">
+                        Van 05 <span class="mx-1">&middot;</span> South loop
+                      </div>
+                    </div>
+                    <span class="text-muted fs-12">1:30 PM</span>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <a
+                    href="route-planning.html"
+                    class="btn btn-outline-secondary w-100"
+                    >Review today&#39;s routes</a
+                  >
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <div
+      class="modal fade"
+      id="fleet-vehicle-modal"
+      tabindex="-1"
+      aria-labelledby="fleet-vehicle-modal-title"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div>
+              <h2
+                class="modal-title fs-16 fw-semibold"
+                id="fleet-vehicle-modal-title"
+              >
+                Add vehicle
+              </h2>
+              <p class="text-muted fs-12 mb-0">
+                Add a vehicle to the dispatch roster.
+              </p>
+            </div>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <form id="fleet-vehicle-form">
+            <div class="modal-body">
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label class="form-label" for="fleet-vehicle-name"
+                    >Vehicle name</label
+                  ><input
+                    class="form-control"
+                    id="fleet-vehicle-name"
+                    placeholder="e.g. Van 16"
+                    required
+                  />
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label" for="fleet-vehicle-id"
+                    >Fleet ID</label
+                  ><input
+                    class="form-control"
+                    id="fleet-vehicle-id"
+                    placeholder="e.g. V-216"
+                    required
+                  />
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label" for="fleet-vehicle-model"
+                    >Vehicle model</label
+                  ><input
+                    class="form-control"
+                    id="fleet-vehicle-model"
+                    placeholder="e.g. Ford Transit"
+                    required
+                  />
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label" for="fleet-driver-name"
+                    >Assigned driver</label
+                  ><input
+                    class="form-control"
+                    id="fleet-driver-name"
+                    placeholder="Driver name"
+                    required
+                  />
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label" for="fleet-vehicle-route"
+                    >Route</label
+                  ><input
+                    class="form-control"
+                    id="fleet-vehicle-route"
+                    placeholder="e.g. North loop"
+                    required
+                  />
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label" for="fleet-vehicle-fuel"
+                    >Fuel level</label
+                  >
+                  <div class="input-group">
+                    <input
+                      class="form-control"
+                      id="fleet-vehicle-fuel"
+                      type="number"
+                      min="0"
+                      max="100"
+                      value="100"
+                      required
+                    /><span class="input-group-text">%</span>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="fleet-vehicle-status"
+                    >Dispatch status</label
+                  >
+                  <select
+                    class="form-select"
+                    data-trigger
+                    id="fleet-vehicle-status"
+                    required
+                  >
+                    <option>Available</option>
+                    <option>On route</option>
+                    <option>Loading</option>
+                    <option>In service</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-light"
+                data-bs-dismiss="modal"
+              >
+                Cancel</button
+              ><button type="submit" class="btn btn-dark">Add to fleet</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- include common-scripts.html"-->
+    <script src="../assets/js/app-interactions.js"></script>
+    <script src="../assets/js/fleet-management.js"></script>
+    <!-- include appearance-customizer-scripts.html"-->
+  </body>
+</html>

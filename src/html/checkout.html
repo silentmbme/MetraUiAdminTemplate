@@ -1,0 +1,498 @@
+<!-- include document-head.html"-->
+    <link
+      rel="stylesheet"
+      href="../assets/libs/sweetalert2/sweetalert2.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content checkout-page">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Checkout</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">
+              <a href="ecommerce-dashboard.html">Ecommerce</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Checkout</li>
+          </ol>
+        </div>
+        <div class="container-fluid commerce-dashboard">
+          <form id="checkout-form" novalidate>
+            <div class="row g-4 align-items-start">
+              <div class="col-xl-8">
+                <section class="card custom-card checkout-form-card">
+                  <div class="card-header">
+                    <div>
+                      <h2 class="card-title mb-1">Contact information</h2>
+                      <p class="text-muted fs-12 mb-0">
+                        We'll send your order updates here.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="row g-3">
+                      <div class="col-md-6">
+                        <label class="form-label" for="checkout-first-name"
+                          >First name</label
+                        ><input
+                          class="form-control"
+                          id="checkout-first-name"
+                          name="firstName"
+                          autocomplete="given-name"
+                          placeholder="First name"
+                          required
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label" for="checkout-last-name"
+                          >Last name</label
+                        ><input
+                          class="form-control"
+                          id="checkout-last-name"
+                          name="lastName"
+                          autocomplete="family-name"
+                          placeholder="Last name"
+                          required
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label" for="checkout-email"
+                          >Email address</label
+                        ><input
+                          class="form-control"
+                          type="email"
+                          id="checkout-email"
+                          name="email"
+                          autocomplete="email"
+                          placeholder="you@example.com"
+                          required
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label" for="checkout-phone"
+                          >Phone number</label
+                        ><input
+                          class="form-control"
+                          type="tel"
+                          id="checkout-phone"
+                          name="phone"
+                          autocomplete="tel"
+                          placeholder="For delivery updates"
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="card custom-card checkout-form-card">
+                  <div class="card-header">
+                    <div>
+                      <h2 class="card-title mb-1">Delivery address</h2>
+                      <p class="text-muted fs-12 mb-0">
+                        Where should we send your order?
+                      </p>
+                    </div>
+                    <span class="badge bg-success-transparent ms-auto"
+                      ><i class="ri-lock-line me-1"></i>Secure</span
+                    >
+                  </div>
+                  <div class="card-body">
+                    <div class="row g-3">
+                      <div class="col-12">
+                        <label class="form-label" for="checkout-address"
+                          >Street address</label
+                        ><input
+                          class="form-control"
+                          id="checkout-address"
+                          name="address"
+                          autocomplete="street-address"
+                          placeholder="House number and street name"
+                          required
+                        />
+                      </div>
+                      <div class="col-md-4">
+                        <label class="form-label" for="checkout-city"
+                          >City</label
+                        ><input
+                          class="form-control"
+                          id="checkout-city"
+                          name="city"
+                          autocomplete="address-level2"
+                          placeholder="City"
+                          required
+                        />
+                      </div>
+                      <div class="col-md-4">
+                        <label class="form-label" for="checkout-region"
+                          >State / region</label
+                        ><input
+                          class="form-control"
+                          id="checkout-region"
+                          name="region"
+                          autocomplete="address-level1"
+                          placeholder="State or region"
+                          required
+                        />
+                      </div>
+                      <div class="col-md-4">
+                        <label class="form-label" for="checkout-postal"
+                          >Postal code</label
+                        ><input
+                          class="form-control"
+                          id="checkout-postal"
+                          name="postalCode"
+                          autocomplete="postal-code"
+                          placeholder="Postal code"
+                          required
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label" for="checkout-country"
+                          >Country</label
+                        >
+                        <select
+                          class="form-select"
+                          data-trigger
+                          id="checkout-country"
+                          name="country"
+                          autocomplete="country-name"
+                          required
+                        >
+                          <option value="">Choose country</option>
+                          <option>United States</option>
+                          <option>Canada</option>
+                          <option>United Kingdom</option>
+                          <option>Australia</option>
+                          <option>India</option>
+                        </select>
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label" for="checkout-address-type"
+                          >Address type</label
+                        ><select
+                          class="form-select"
+                          data-trigger
+                          id="checkout-address-type"
+                          name="addressType"
+                        >
+                          <option>Home</option>
+                          <option>Work</option>
+                          <option>Other</option>
+                        </select>
+                      </div>
+                      <div class="col-12">
+                        <label class="form-label" for="checkout-instructions"
+                          >Delivery instructions
+                          <span class="text-muted fw-normal"
+                            >(optional)</span
+                          ></label
+                        ><textarea
+                          class="form-control"
+                          id="checkout-instructions"
+                          name="instructions"
+                          rows="2"
+                          placeholder="Gate code, safe place, or other notes"
+                        ></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="card custom-card checkout-form-card">
+                  <div class="card-header">
+                    <div>
+                      <h2 class="card-title mb-1">Delivery method</h2>
+                      <p class="text-muted fs-12 mb-0">
+                        Choose how quickly you need your order.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="checkout-delivery-options">
+                      <label class="checkout-choice-card is-selected">
+                        <input
+                          type="radio"
+                          name="deliveryMethod"
+                          value="standard"
+                          data-cost="0"
+                          checked
+                        /><span class="checkout-choice-icon"
+                          ><i class="ri-truck-line"></i></span
+                        ><span class="checkout-choice-copy"
+                          ><strong>Standard delivery</strong
+                          ><small>Arrives in 3 to 5 business days</small></span
+                        ><span class="checkout-choice-price">Free</span></label
+                      >
+                      <label class="checkout-choice-card"
+                        ><input
+                          type="radio"
+                          name="deliveryMethod"
+                          value="express"
+                          data-cost="12.99"
+                        /><span class="checkout-choice-icon"
+                          ><i class="ri-flashlight-line"></i></span
+                        ><span class="checkout-choice-copy"
+                          ><strong>Express delivery</strong
+                          ><small>Arrives in 1 to 2 business days</small></span
+                        ><span class="checkout-choice-price"
+                          >$12.99</span
+                        ></label
+                      >
+                    </div>
+                  </div>
+                </section>
+
+                <section class="card custom-card checkout-form-card">
+                  <div class="card-header">
+                    <div>
+                      <h2 class="card-title mb-1">Payment method</h2>
+                      <p class="text-muted fs-12 mb-0">
+                        Your payment details are encrypted and secure.
+                      </p>
+                    </div>
+                    <span class="checkout-lock-badge"
+                      ><i class="ri-shield-check-line me-1"></i>Secure
+                      payment</span
+                    >
+                  </div>
+                  <div class="card-body">
+                    <div class="checkout-payment-options">
+                      <label class="checkout-payment-option is-selected"
+                        ><input
+                          type="radio"
+                          name="paymentMethod"
+                          value="card"
+                          checked
+                        /><i class="ri-bank-card-line"></i
+                        ><span>Card</span></label
+                      >
+                      <label class="checkout-payment-option"
+                        ><input
+                          type="radio"
+                          name="paymentMethod"
+                          value="paypal"
+                        /><i class="ri-paypal-line"></i
+                        ><span>PayPal</span></label
+                      >
+                      <label class="checkout-payment-option"
+                        ><input
+                          type="radio"
+                          name="paymentMethod"
+                          value="cod"
+                        /><i class="ri-hand-coin-line"></i
+                        ><span>Cash on delivery</span></label
+                      >
+                    </div>
+                    <div class="checkout-card-fields" id="checkout-card-fields">
+                      <div class="row g-3">
+                        <div class="col-12">
+                          <label class="form-label" for="checkout-card-number"
+                            >Card number</label
+                          >
+                          <div class="checkout-card-input">
+                            <i class="ri-bank-card-line"></i
+                            ><input
+                              class="form-control"
+                              id="checkout-card-number"
+                              inputmode="numeric"
+                              autocomplete="cc-number"
+                              placeholder="0000 0000 0000 0000"
+                              required
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <label class="form-label" for="checkout-card-name"
+                            >Name on card</label
+                          ><input
+                            class="form-control"
+                            id="checkout-card-name"
+                            autocomplete="cc-name"
+                            placeholder="Cardholder name"
+                            required
+                          />
+                        </div>
+                        <div class="col-md-3">
+                          <label class="form-label" for="checkout-card-expiry"
+                            >Expiry</label
+                          ><input
+                            class="form-control"
+                            id="checkout-card-expiry"
+                            autocomplete="cc-exp"
+                            placeholder="MM / YY"
+                            required
+                          />
+                        </div>
+                        <div class="col-md-3">
+                          <label class="form-label" for="checkout-card-cvc"
+                            >Security code</label
+                          ><input
+                            class="form-control"
+                            id="checkout-card-cvc"
+                            inputmode="numeric"
+                            autocomplete="cc-csc"
+                            placeholder="CVC"
+                            required
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="checkout-other-payment"
+                      id="checkout-other-payment"
+                      hidden
+                    ></div>
+                  </div>
+                </section>
+                <div
+                  class="checkout-confirmation alert alert-success"
+                  id="checkout-confirmation"
+                  role="status"
+                  aria-live="polite"
+                  hidden
+                >
+                  <i class="ri-checkbox-circle-line me-2"></i>Checkout details
+                  are complete. Your order total is
+                  <strong id="checkout-confirmation-total"></strong>.
+                </div>
+              </div>
+              <aside class="col-xl-4">
+                <section class="card custom-card checkout-summary-card">
+                  <div class="card-header">
+                    <div>
+                      <h2 class="card-title mb-1">Order summary</h2>
+                      <p class="text-muted fs-12 mb-0">
+                        <span id="checkout-item-count"
+                          >3 products &middot; 4 units</span
+                        >
+                      </p>
+                    </div>
+                    <a href="cart.html" class="checkout-edit-cart">Edit cart</a>
+                  </div>
+                  <div class="card-body">
+                    <ul class="checkout-product-list">
+                      <li>
+                        <span class="checkout-product-image"
+                          ><img
+                            src="../assets/images/ecommerce/jpg/1.jpg"
+                            alt="Adidas UltraBoost 2023" /></span
+                        ><span class="checkout-product-info"
+                          ><strong>Adidas UltraBoost 2023</strong
+                          ><small>Qty 1 &middot; Green / US 10</small></span
+                        ><strong class="checkout-product-total">$159.99</strong>
+                      </li>
+                      <li>
+                        <span class="checkout-product-image"
+                          ><img
+                            src="../assets/images/ecommerce/jpg/2.jpg"
+                            alt="Puma RS-X Sneakers" /></span
+                        ><span class="checkout-product-info"
+                          ><strong>Puma RS-X Sneakers</strong
+                          ><small>Qty 2 &middot; Gray / US 8</small></span
+                        ><strong class="checkout-product-total">$239.98</strong>
+                      </li>
+                      <li>
+                        <span class="checkout-product-image"
+                          ><img
+                            src="../assets/images/ecommerce/jpg/3.jpg"
+                            alt="Reebok Classic Leather" /></span
+                        ><span class="checkout-product-info"
+                          ><strong>Reebok Classic Leather</strong
+                          ><small>Qty 1 &middot; Blue / US 11</small></span
+                        ><strong class="checkout-product-total">$89.99</strong>
+                      </li>
+                    </ul>
+                    <div class="checkout-coupon">
+                      <label class="form-label" for="checkout-coupon-code"
+                        >Promo code</label
+                      >
+                      <div class="input-group">
+                        <input
+                          class="form-control"
+                          id="checkout-coupon-code"
+                          placeholder="Enter code"
+                        /><button
+                          class="btn btn-light"
+                          type="button"
+                          id="checkout-apply-coupon"
+                        >
+                          Apply
+                        </button>
+                      </div>
+                      <small id="checkout-coupon-feedback" aria-live="polite"
+                        >Use STYLE10 for 10% off.</small
+                      >
+                    </div>
+                    <div class="checkout-summary-lines">
+                      <div>
+                        <span>Subtotal</span
+                        ><strong id="checkout-subtotal">$489.96</strong>
+                      </div>
+                      <div>
+                        <span>Discount</span
+                        ><strong id="checkout-discount">-$0.00</strong>
+                      </div>
+                      <div>
+                        <span>Delivery</span
+                        ><strong id="checkout-shipping" class="text-success"
+                          >Free</strong
+                        >
+                      </div>
+                      <div><span>Tax</span><strong>$0.00</strong></div>
+                    </div>
+                    <div class="checkout-total-line">
+                      <span>Total</span
+                      ><strong id="checkout-total">$489.96</strong>
+                    </div>
+                    <button
+                      class="btn btn-dark w-100 mt-3 checkout-place-order"
+                      type="submit"
+                      id="checkout-place-order"
+                    >
+                      <i class="ri-lock-line me-1"></i>Place order &middot;<span
+                        id="checkout-button-total"
+                        >$489.96</span
+                      >
+                    </button>
+                    <p class="checkout-terms">
+                      By placing your order, you agree to our
+                      <a href="javascript:void(0);">terms</a> and
+                      <a href="javascript:void(0);">privacy policy</a>.
+                    </p>
+                    <div class="checkout-trust-note">
+                      <i class="ri-shield-check-line"></i
+                      ><span
+                        ><strong>Secure checkout</strong
+                        ><small
+                          >Your personal and payment information is
+                          protected.</small
+                        ></span
+                      >
+                    </div>
+                  </div>
+                </section>
+              </aside>
+            </div>
+          </form>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"-->
+    <!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/libs/sweetalert2/sweetalert2.min.js"></script>
+    <script src="../assets/js/checkout-page.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

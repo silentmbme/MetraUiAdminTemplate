@@ -1,0 +1,551 @@
+<!-- include document-head.html"-->
+    <link
+      rel="stylesheet"
+      href="../assets/libs/prismjs/themes/prism-coy.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"--><!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"--><!-- include side-navigation.html"-->
+      <main data-markup-examples class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Tooltips</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Components</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Tooltips</li>
+          </ol>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Placement explorer</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Short hints above, beside, or below the trigger.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex flex-wrap gap-2">
+                    <button
+                      type="button"
+                      class="btn btn-outline-success"
+                      data-bs-toggle="tooltip"
+                      data-bs-title="A helpful hint placed top."
+                      data-bs-container="body"
+                      data-bs-placement="top"
+                    >
+                      Top</button
+                    ><button
+                      type="button"
+                      class="btn btn-outline-success"
+                      data-bs-toggle="tooltip"
+                      data-bs-title="A helpful hint placed right."
+                      data-bs-container="body"
+                      data-bs-placement="right"
+                    >
+                      Right</button
+                    ><button
+                      type="button"
+                      class="btn btn-outline-success"
+                      data-bs-toggle="tooltip"
+                      data-bs-title="A helpful hint placed bottom."
+                      data-bs-container="body"
+                      data-bs-placement="bottom"
+                    >
+                      Bottom</button
+                    ><button
+                      type="button"
+                      class="btn btn-outline-success"
+                      data-bs-toggle="tooltip"
+                      data-bs-title="A helpful hint placed left."
+                      data-bs-container="body"
+                      data-bs-placement="left"
+                    >
+                      Left
+                    </button>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Document toolbar</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Accessible labels remain available without the tooltip.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex gap-2">
+                    <button
+                      type="button"
+                      class="btn btn-icon btn-light"
+                      data-bs-toggle="tooltip"
+                      data-bs-title="Download document"
+                      data-bs-container="body"
+                      aria-label="Download document"
+                    >
+                      <i
+                        class="ri-download-line"
+                        aria-hidden="true"
+                      ></i></button
+                    ><button
+                      type="button"
+                      class="btn btn-icon btn-light"
+                      data-bs-toggle="tooltip"
+                      data-bs-title="Copy document"
+                      data-bs-container="body"
+                      aria-label="Copy document"
+                    >
+                      <i
+                        class="ri-file-copy-line"
+                        aria-hidden="true"
+                      ></i></button
+                    ><button
+                      type="button"
+                      class="btn btn-icon btn-light"
+                      data-bs-toggle="tooltip"
+                      data-bs-title="Share document"
+                      data-bs-container="body"
+                      aria-label="Share document"
+                    >
+                      <i class="ri-share-line" aria-hidden="true"></i></button
+                    ><button
+                      type="button"
+                      class="btn btn-icon btn-light"
+                      data-bs-toggle="tooltip"
+                      data-bs-title="Delete document"
+                      data-bs-container="body"
+                      aria-label="Delete document"
+                    >
+                      <i class="ri-delete-bin-line" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Form guidance</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Explain an input without crowding the form.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <label class="form-label mb-0" for="tooltip-reference"
+                      >Invoice reference</label
+                    ><button
+                      type="button"
+                      class="btn btn-icon btn-light btn-sm"
+                      data-bs-toggle="tooltip"
+                      data-bs-title="Use a unique reference for client communications."
+                      data-bs-container="body"
+                      aria-label="About invoice references"
+                    >
+                      <i class="ri-information-line" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                  <input
+                    class="form-control"
+                    id="tooltip-reference"
+                    value="INV-2026-0148"
+                  />
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Keyboard focus</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Show guidance when the trigger receives focus.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="tooltip"
+                    data-bs-title="This hint appears on keyboard focus and closes when focus moves away."
+                    data-bs-container="body"
+                    data-bs-trigger="focus"
+                  >
+                    Focus this control
+                  </button>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Delayed hints</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Wait briefly before showing supporting text.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <button
+                    type="button"
+                    class="btn btn-outline-secondary"
+                    data-bs-toggle="tooltip"
+                    data-bs-title="A short delay helps prevent accidental hints."
+                    data-bs-container="body"
+                    data-bs-delay='{"show":400,"hide":100}'
+                  >
+                    Hover or focus
+                  </button>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Rich text hint</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Sanitized formatting for a concise explanation.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <button
+                    type="button"
+                    class="btn btn-outline-success"
+                    data-bs-toggle="tooltip"
+                    data-bs-title="&lt;strong&gt;Important&lt;/strong&gt;: review the &lt;em&gt;due date&lt;/em&gt; before sending."
+                    data-bs-container="body"
+                    data-bs-html="true"
+                  >
+                    Formatting preview
+                  </button>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Inline navigation hints</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Add context to real workspace destinations.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <p class="text-muted fs-13 mb-0">
+                    Review
+                    <a
+                      href="profile.html"
+                      data-bs-toggle="tooltip"
+                      data-bs-title="View Liam Carter's experience and project updates."
+                      data-bs-container="body"
+                      >the team profile</a
+                    >, organize
+                    <a
+                      href="file-manager.html"
+                      data-bs-toggle="tooltip"
+                      data-bs-title="Browse shared files and project documents."
+                      data-bs-container="body"
+                      >workspace files</a
+                    >, or explore
+                    <a
+                      href="to-do-list.html"
+                      data-bs-toggle="tooltip"
+                      data-bs-title="Review tasks and upcoming milestones."
+                      data-bs-container="body"
+                      >your task list</a
+                    >.
+                  </p>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Unavailable action</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Explain a disabled control with a focusable wrapper.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <span
+                    class="d-inline-block"
+                    tabindex="0"
+                    role="button"
+                    aria-label="Why export is unavailable"
+                    data-bs-toggle="tooltip"
+                    data-bs-title="Select at least one record before exporting."
+                    data-bs-container="body"
+                    ><button
+                      class="btn btn-secondary"
+                      type="button"
+                      disabled
+                      style="pointer-events: none"
+                    >
+                      Export selected
+                    </button></span
+                  >
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-12">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Colored tooltips</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Hover or focus to preview the project theme colors.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex flex-wrap gap-2">
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      data-bs-toggle="tooltip"
+                      data-bs-custom-class="tooltip-primary"
+                      data-bs-title="Primary tooltip example"
+                      data-bs-container="body"
+                    >
+                      Primary</button
+                    ><button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-toggle="tooltip"
+                      data-bs-custom-class="tooltip-secondary"
+                      data-bs-title="Secondary tooltip example"
+                      data-bs-container="body"
+                    >
+                      Secondary</button
+                    ><button
+                      type="button"
+                      class="btn btn-success"
+                      data-bs-toggle="tooltip"
+                      data-bs-custom-class="tooltip-success"
+                      data-bs-title="Success tooltip example"
+                      data-bs-container="body"
+                    >
+                      Success</button
+                    ><button
+                      type="button"
+                      class="btn btn-danger"
+                      data-bs-toggle="tooltip"
+                      data-bs-custom-class="tooltip-danger"
+                      data-bs-title="Danger tooltip example"
+                      data-bs-container="body"
+                    >
+                      Danger</button
+                    ><button
+                      type="button"
+                      class="btn btn-warning"
+                      data-bs-toggle="tooltip"
+                      data-bs-custom-class="tooltip-warning"
+                      data-bs-title="Warning tooltip example"
+                      data-bs-container="body"
+                    >
+                      Warning</button
+                    ><button
+                      type="button"
+                      class="btn btn-info"
+                      data-bs-toggle="tooltip"
+                      data-bs-custom-class="tooltip-info"
+                      data-bs-title="Info tooltip example"
+                      data-bs-container="body"
+                    >
+                      Info</button
+                    ><button
+                      type="button"
+                      class="btn btn-light"
+                      data-bs-toggle="tooltip"
+                      data-bs-custom-class="tooltip-light"
+                      data-bs-title="Light tooltip example"
+                      data-bs-container="body"
+                    >
+                      Light</button
+                    ><button
+                      type="button"
+                      class="btn btn-dark"
+                      data-bs-toggle="tooltip"
+                      data-bs-custom-class="tooltip-dark"
+                      data-bs-title="Dark tooltip example"
+                      data-bs-container="body"
+                    >
+                      Dark
+                    </button>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Compact action labels</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Different button styles with consistent hints.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex flex-wrap gap-2">
+                    <button
+                      type="button"
+                      class="btn btn-success-light"
+                      data-bs-toggle="tooltip"
+                      data-bs-title="Save the latest changes."
+                      data-bs-container="body"
+                    >
+                      Save</button
+                    ><button
+                      type="button"
+                      class="btn btn-warning-light"
+                      data-bs-toggle="tooltip"
+                      data-bs-title="Check the details before continuing."
+                      data-bs-container="body"
+                    >
+                      Review</button
+                    ><button
+                      type="button"
+                      class="btn btn-info-light"
+                      data-bs-toggle="tooltip"
+                      data-bs-title="Find guidance for this action."
+                      data-bs-container="body"
+                    >
+                      Help
+                    </button>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Status information</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Keep longer explanations outside the row.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="border rounded p-3 d-flex align-items-center justify-content-between gap-3"
+                  >
+                    <div>
+                      <h3 class="fs-14 fw-medium mb-1">Workspace onboarding</h3>
+                      <span class="text-muted fs-12"
+                        >18 of 24 tasks complete</span
+                      >
+                    </div>
+                    <button
+                      type="button"
+                      class="btn btn-info-light btn-sm"
+                      data-bs-toggle="tooltip"
+                      data-bs-title="Implementation is underway. The next review is October 16."
+                      data-bs-container="body"
+                    >
+                      In progress
+                    </button>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Profile context</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Attach a hint to a compact identity control.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex align-items-center gap-3">
+                    <span class="avatar avatar-md avatar-rounded"
+                      ><img
+                        src="../assets/images/users/12.jpg"
+                        alt="Liam Carter"
+                    /></span>
+                    <div>
+                      <h3 class="fs-14 fw-medium mb-1">Liam Carter</h3>
+                      <span class="text-muted fs-12">Product Manager</span>
+                    </div>
+                    <button
+                      type="button"
+                      class="btn btn-icon btn-light btn-sm"
+                      data-bs-toggle="tooltip"
+                      data-bs-title="Liam leads product discovery, planning, and delivery."
+                      data-bs-container="body"
+                      aria-label="About Liam Carter"
+                    >
+                      <i class="ri-question-line" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Tooltip playground</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Enter a short hint and preview it.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <label class="form-label" for="tooltip-text">Hint text</label
+                  ><input
+                    class="form-control mb-3"
+                    id="tooltip-text"
+                    maxlength="160"
+                    value="Your changes are saved in this workspace."
+                  /><button
+                    class="btn btn-primary btn-sm"
+                    type="button"
+                    id="tooltip-preview"
+                  >
+                    Preview hint
+                  </button>
+                  <p class="text-muted fs-12 mt-3 mb-0">
+                    The preview closes after four seconds. Press Escape to
+                    dismiss it.
+                  </p>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"--><!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"--><!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/js/app-interactions.js"></script>
+    <script src="../assets/js/tooltips.js"></script>
+    <script src="../assets/libs/prismjs/prism.js"></script>
+    <script src="../assets/js/prism-custom.js"></script>
+  </body>
+</html>

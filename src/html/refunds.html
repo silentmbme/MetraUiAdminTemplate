@@ -1,0 +1,244 @@
+<html>
+  <head>
+    <!-- include document-head.html"-->
+    <link
+      rel="stylesheet"
+      href="../assets/libs/sweetalert2/sweetalert2.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content refunds-page">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Refunds</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">
+              <a href="ecommerce-dashboard.html">Ecommerce</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Refunds</li>
+          </ol>
+        </div>
+        <div class="container-fluid commerce-dashboard">
+          <div class="row">
+            <div class="col-xxl-3 col-sm-6">
+              <section class="card custom-card refund-metric">
+                <div class="card-body">
+                  <span class="refund-metric-icon bg-color-1 text-black"
+                    ><i class="ri-time-line"></i></span
+                  ><span class="text-muted fs-12">Needs review</span
+                  ><strong id="refund-pending-count">4</strong
+                  ><small>Requests awaiting action</small>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-3 col-sm-6">
+              <section class="card custom-card refund-metric">
+                <div class="card-body">
+                  <span class="refund-metric-icon bg-color-2 text-black"
+                    ><i class="ri-refund-2-line"></i></span
+                  ><span class="text-muted fs-12">Refund amount</span
+                  ><strong>$1,284</strong><small>Across current requests</small>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-3 col-sm-6">
+              <section class="card custom-card refund-metric">
+                <div class="card-body">
+                  <span class="refund-metric-icon bg-color-3 text-black"
+                    ><i class="ri-checkbox-circle-line"></i></span
+                  ><span class="text-muted fs-12">Approved this month</span
+                  ><strong>28</strong
+                  ><small
+                    ><span class="text-success"
+                      ><i class="ri-arrow-up-line"></i> 8.2%</span
+                    >
+                    from last month</small
+                  >
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-3 col-sm-6">
+              <section class="card custom-card refund-metric">
+                <div class="card-body">
+                  <span class="refund-metric-icon bg-color-4 text-black"
+                    ><i class="ri-percent-line"></i></span
+                  ><span class="text-muted fs-12">Return rate</span
+                  ><strong>2.4%</strong><small>Of fulfilled orders</small>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <section class="card custom-card refund-directory-card">
+            <div
+              class="card-header justify-content-between align-items-start flex-wrap gap-3"
+            >
+              <div>
+                <h2 class="card-title mb-1">
+                  Refund requests
+                  <span
+                    class="badge bg-light text-default ms-1"
+                    id="refund-table-count"
+                    >8</span
+                  >
+                </h2>
+                <p class="text-muted fs-12 mb-0">
+                  Check the reason and order details before deciding.
+                </p>
+              </div>
+              <div class="refund-controls">
+                <div class="refund-search">
+                  <i class="ri-search-line" aria-hidden="true"></i
+                  ><input
+                    class="form-control"
+                    type="search"
+                    id="refund-search"
+                    placeholder="Order, customer or item"
+                    aria-label="Search refund requests"
+                  />
+                </div>
+                <select
+                  class="form-select"
+                  data-trigger
+                  id="refund-status-filter"
+                  aria-label="Filter requests by status"
+                >
+                  <option value="">All statuses</option>
+                  <option>Pending</option>
+                  <option>Approved</option>
+                  <option>Declined</option>
+                </select>
+              </div>
+            </div>
+            <div class="table-responsive">
+              <table class="table table-hover align-middle mb-0">
+                <thead>
+                  <tr>
+                    <th>Order / item</th>
+                    <th>Customer</th>
+                    <th>Reason</th>
+                    <th>Requested</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                    <th class="text-end">Review</th>
+                  </tr>
+                </thead>
+                <tbody id="refund-table-body"></tbody>
+              </table>
+            </div>
+            <div
+              class="card-footer border-top-0 d-flex justify-content-between align-items-center flex-wrap gap-2"
+            >
+              <span class="text-muted fs-12" id="refund-results"
+                >Showing 8 requests</span
+              ><span class="text-muted fs-12"
+                ><i class="ri-information-line me-1"></i>Approved refunds are
+                marked for payment processing.</span
+              >
+            </div>
+          </section>
+          <p
+            id="refund-feedback"
+            class="text-muted fs-12 mt-3 mb-0"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <div
+      class="modal fade"
+      id="refund-review-modal"
+      tabindex="-1"
+      aria-labelledby="refund-review-title"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div>
+              <h2
+                class="modal-title fs-16 fw-semibold"
+                id="refund-review-title"
+              >
+                Review refund
+              </h2>
+              <p
+                class="text-muted fs-12 mb-0 mt-1"
+                id="refund-review-order"
+              ></p>
+            </div>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <dl class="refund-review-facts">
+              <div>
+                <dt>Customer</dt>
+                <dd id="refund-review-customer"></dd>
+              </div>
+              <div>
+                <dt>Item</dt>
+                <dd id="refund-review-item"></dd>
+              </div>
+              <div>
+                <dt>Reason</dt>
+                <dd id="refund-review-reason"></dd>
+              </div>
+              <div>
+                <dt>Refund amount</dt>
+                <dd id="refund-review-amount"></dd>
+              </div>
+            </dl>
+            <div class="alert alert-light mb-0 fs-12">
+              <i class="ri-information-line me-1"></i>This demo updates the
+              request status in the current page only.
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-light me-auto"
+              data-bs-dismiss="modal"
+            >
+              Close</button
+            ><button
+              type="button"
+              class="btn btn-outline-danger"
+              id="refund-decline-button"
+            >
+              <i class="ri-close-line me-1"></i>Decline</button
+            ><button
+              type="button"
+              class="btn btn-success"
+              id="refund-approve-button"
+            >
+              <i class="ri-check-line me-1"></i>Approve refund
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- include common-scripts.html"-->
+    <!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/js/refunds.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

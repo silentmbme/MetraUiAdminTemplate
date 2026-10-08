@@ -1,0 +1,363 @@
+<!-- include document-head.html"-->
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Transactions</h1>
+          <ol class="breadcrumb mb-0 mt-1">
+            <li class="breadcrumb-item">
+              <a href="index.html">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="finance-dashboard.html">Finance</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Transactions
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid commerce-dashboard">
+          <div class="row" aria-label="Transaction overview">
+            <div class="col-xxl-3 col-xl-6 col-md-6">
+              <div class="card custom-card dashboard-card-1">
+                <div class="card-body">
+                  <div
+                    class="d-flex align-items-center justify-content-between"
+                  >
+                    <span class="fw-medium text-black">Total transactions</span
+                    ><span
+                      class="avatar avatar-md avatar-rounded bg-white text-default"
+                      ><i class="ri-receipt-line fs-20"></i
+                    ></span>
+                  </div>
+                  <h2 class="fw-semibold mt-3 mb-1 text-black">38</h2>
+                  <span class="fs-12 text-black">This month</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-3 col-xl-6 col-md-6">
+              <div class="card custom-card dashboard-card-2">
+                <div class="card-body">
+                  <div
+                    class="d-flex align-items-center justify-content-between"
+                  >
+                    <span class="fw-medium text-black">Money in</span
+                    ><span
+                      class="avatar avatar-md avatar-rounded bg-white text-default"
+                      ><i class="ri-arrow-down-line fs-20"></i
+                    ></span>
+                  </div>
+                  <h2 class="fw-semibold mt-3 mb-1 text-black">$32,840</h2>
+                  <span class="fs-12 text-black">18 deposits received</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-3 col-xl-6 col-md-6">
+              <div class="card custom-card dashboard-card-3">
+                <div class="card-body">
+                  <div
+                    class="d-flex align-items-center justify-content-between"
+                  >
+                    <span class="fw-medium text-black">Money out</span
+                    ><span
+                      class="avatar avatar-md avatar-rounded bg-white text-default"
+                      ><i class="ri-arrow-up-line fs-20"></i
+                    ></span>
+                  </div>
+                  <h2 class="fw-semibold mt-3 mb-1 text-black">$18,465</h2>
+                  <span class="fs-12 text-black">20 expenses recorded</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-3 col-xl-6 col-md-6">
+              <div class="card custom-card dashboard-card-4">
+                <div class="card-body">
+                  <div
+                    class="d-flex align-items-center justify-content-between"
+                  >
+                    <span class="fw-medium text-black">Pending</span
+                    ><span
+                      class="avatar avatar-md avatar-rounded bg-white text-default"
+                      ><i class="ri-time-line fs-20"></i
+                    ></span>
+                  </div>
+                  <h2 class="fw-semibold mt-3 mb-1 text-black">$5,220</h2>
+                  <span class="fs-12 text-black">6 items awaiting payment</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="card custom-card mb-3">
+            <div
+              class="card-header d-flex align-items-center justify-content-between flex-wrap gap-2"
+            >
+              <div>
+                <h2 class="card-title mb-1">All transactions</h2>
+                <span class="text-muted fs-12"
+                  >Income and expenses recorded in September 2026</span
+                >
+              </div>
+              <div class="d-flex align-items-center gap-2 flex-wrap">
+                <label
+                  class="visually-hidden"
+                  data-trigger
+                  for="transaction-period"
+                  >Period</label
+                ><select class="form-select w-auto" id="transaction-period">
+                  <option>September 2026</option>
+                  <option>August 2026</option>
+                  <option>July 2026</option></select
+                ><label
+                  class="visually-hidden"
+                  data-trigger
+                  for="transaction-type"
+                  >Transaction type</label
+                ><select class="form-select w-auto" id="transaction-type">
+                  <option>All types</option>
+                  <option>Income</option>
+                  <option>Expense</option>
+                </select>
+              </div>
+            </div>
+            <div class="card-body p-0">
+              <div class="table-responsive">
+                <table class="table table-hover text-nowrap mb-0">
+                  <thead>
+                    <tr>
+                      <th scope="col">Description</th>
+                      <th scope="col">Reference</th>
+                      <th scope="col">Category</th>
+                      <th scope="col">Date</th>
+                      <th scope="col">Account</th>
+                      <th scope="col">Status</th>
+                      <th scope="col" class="text-end">Amount</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <span
+                          class="avatar avatar-sm avatar-rounded bg-success-transparent text-success me-2"
+                          ><i class="ri-arrow-down-line fs-16"></i></span
+                        ><strong>Client payment</strong>
+                        <small class="text-muted ms-2">Northstar Labs</small>
+                      </td>
+                      <td>INC-2048</td>
+                      <td>Client services</td>
+                      <td>Sep 24, 2026</td>
+                      <td>Business checking</td>
+                      <td>
+                        <span class="badge bg-success-transparent"
+                          >Received</span
+                        >
+                      </td>
+                      <td class="text-end fw-semibold text-success">
+                        +$8,400.00
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span
+                          class="avatar avatar-sm avatar-rounded bg-primary-transparent text-primary me-2"
+                          ><i class="ri-code-box-line fs-16"></i></span
+                        ><strong>Software subscriptions</strong
+                        ><small class="text-muted ms-2"
+                          >Figma, Notion, Slack</small
+                        >
+                      </td>
+                      <td>EXP-1086</td>
+                      <td>Software</td>
+                      <td>Sep 23, 2026</td>
+                      <td>Company card</td>
+                      <td>
+                        <span class="badge bg-success-transparent">Paid</span>
+                      </td>
+                      <td class="text-end fw-semibold">−$289.00</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span
+                          class="avatar avatar-sm avatar-rounded bg-success-transparent text-success me-2"
+                          ><i class="ri-repeat-line fs-16"></i></span
+                        ><strong>Monthly retainer</strong
+                        ><small class="text-muted ms-2">Brightpath Group</small>
+                      </td>
+                      <td>INC-2047</td>
+                      <td>Retainer</td>
+                      <td>Sep 21, 2026</td>
+                      <td>Business checking</td>
+                      <td>
+                        <span class="badge bg-success-transparent"
+                          >Received</span
+                        >
+                      </td>
+                      <td class="text-end fw-semibold text-success">
+                        +$3,250.00
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span
+                          class="avatar avatar-sm avatar-rounded bg-warning-transparent text-warning me-2"
+                          ><i class="ri-building-line fs-16"></i></span
+                        ><strong>Office rent</strong
+                        ><small class="text-muted ms-2">September lease</small>
+                      </td>
+                      <td>EXP-1085</td>
+                      <td>Housing</td>
+                      <td>Sep 21, 2026</td>
+                      <td>Business checking</td>
+                      <td>
+                        <span class="badge bg-success-transparent">Paid</span>
+                      </td>
+                      <td class="text-end fw-semibold">−$2,400.00</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span
+                          class="avatar avatar-sm avatar-rounded bg-success-transparent text-success me-2"
+                          ><i class="ri-shopping-bag-3-line fs-16"></i></span
+                        ><strong>Online orders</strong
+                        ><small class="text-muted ms-2">6 store orders</small>
+                      </td>
+                      <td>INC-2046</td>
+                      <td>Product sales</td>
+                      <td>Sep 20, 2026</td>
+                      <td>Payment processor</td>
+                      <td>
+                        <span class="badge bg-success-transparent"
+                          >Received</span
+                        >
+                      </td>
+                      <td class="text-end fw-semibold text-success">
+                        +$1,840.00
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span
+                          class="avatar avatar-sm avatar-rounded bg-secondary-transparent text-secondary me-2"
+                          ><i class="ri-flight-takeoff-line fs-16"></i></span
+                        ><strong>Client visit travel</strong
+                        ><small class="text-muted ms-2"
+                          >Rail and local transit</small
+                        >
+                      </td>
+                      <td>EXP-1084</td>
+                      <td>Travel</td>
+                      <td>Sep 19, 2026</td>
+                      <td>Company card</td>
+                      <td>
+                        <span class="badge bg-warning-transparent">Review</span>
+                      </td>
+                      <td class="text-end fw-semibold">−$468.50</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span
+                          class="avatar avatar-sm avatar-rounded bg-info-transparent text-info me-2"
+                          ><i class="ri-file-list-3-line fs-16"></i></span
+                        ><strong>Implementation milestone</strong
+                        ><small class="text-muted ms-2">Helio Systems</small>
+                      </td>
+                      <td>INC-2045</td>
+                      <td>Client services</td>
+                      <td>Sep 18, 2026</td>
+                      <td>Business checking</td>
+                      <td>
+                        <span class="badge bg-info-transparent">Pending</span>
+                      </td>
+                      <td class="text-end fw-semibold">+$4,500.00</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span
+                          class="avatar avatar-sm avatar-rounded bg-warning-transparent text-warning me-2"
+                          ><i class="ri-team-line fs-16"></i></span
+                        ><strong>Contractor payment</strong
+                        ><small class="text-muted ms-2">Design support</small>
+                      </td>
+                      <td>EXP-1083</td>
+                      <td>Payroll</td>
+                      <td>Sep 17, 2026</td>
+                      <td>Business checking</td>
+                      <td>
+                        <span class="badge bg-info-transparent">Pending</span>
+                      </td>
+                      <td class="text-end fw-semibold">−$1,250.00</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span
+                          class="avatar avatar-sm avatar-rounded bg-success-transparent text-success me-2"
+                          ><i class="ri-presentation-line fs-16"></i></span
+                        ><strong>Consulting session</strong
+                        ><small class="text-muted ms-2">Acme Studio</small>
+                      </td>
+                      <td>INC-2044</td>
+                      <td>Consulting</td>
+                      <td>Sep 16, 2026</td>
+                      <td>Business checking</td>
+                      <td>
+                        <span class="badge bg-success-transparent"
+                          >Received</span
+                        >
+                      </td>
+                      <td class="text-end fw-semibold text-success">
+                        +$1,250.00
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div
+              class="card-footer bg-transparent d-flex align-items-center justify-content-between flex-wrap gap-2"
+            >
+              <span class="text-muted fs-12">Showing 8 of 38 transactions</span>
+              <div class="btn-list">
+                <button
+                  class="btn btn-light btn-sm"
+                  type="button"
+                  disabled
+                  aria-label="Previous page"
+                >
+                  <i class="ri-arrow-left-s-line fs-16"></i></button
+                ><button
+                  class="btn btn-primary btn-sm"
+                  type="button"
+                  aria-current="page"
+                >
+                  1</button
+                ><button class="btn btn-light btn-sm" type="button">2</button
+                ><button class="btn btn-light btn-sm" type="button">3</button
+                ><button
+                  class="btn btn-light btn-sm"
+                  type="button"
+                  aria-label="Next page"
+                >
+                  <i class="ri-arrow-right-s-line"></i>
+                </button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"-->
+    <!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

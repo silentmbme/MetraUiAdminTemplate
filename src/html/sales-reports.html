@@ -1,0 +1,260 @@
+<!-- include document-head.html"-->
+  </head>
+
+  <body class="sales-workspace" data-sales-view="reports">
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Sales reports</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Sales</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Sales reports
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid reports-page">
+          <div class="row">
+            <div class="col-sm-6 col-xl-3">
+              <div class="card custom-card p-2 bg-light report-summary-card">
+                <div class="card-body bg-white rounded text-dark">
+                  <div
+                    class="d-flex align-items-center justify-content-between mb-2"
+                  >
+                    <span class="fw-medium">Revenue collected</span>
+                    <span
+                      class="avatar avatar-md bg-color-1 avatar-rounded text-fixed-black"
+                    >
+                      <i class="ri-wallet-3-line fs-20" aria-hidden="true"></i>
+                    </span>
+                  </div>
+                  <h2 class="fw-semibold mb-0" data-sales-metric="revenue">
+                    &mdash;
+                  </h2>
+                </div>
+                <div class="report-summary-note">
+                  <i class="ri-subtract-line" aria-hidden="true"></i
+                  ><span class="fs-12">Completed payments</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+              <div class="card custom-card p-2 bg-light report-summary-card">
+                <div class="card-body bg-white rounded text-dark">
+                  <div
+                    class="d-flex align-items-center justify-content-between mb-2"
+                  >
+                    <span class="fw-medium">Transactions</span>
+                    <span
+                      class="avatar avatar-md bg-color-2 avatar-rounded text-fixed-black"
+                    >
+                      <i
+                        class="ri-shopping-bag-3-line fs-20"
+                        aria-hidden="true"
+                      ></i>
+                    </span>
+                  </div>
+                  <h2 class="fw-semibold mb-0" data-sales-metric="orders">
+                    &mdash;
+                  </h2>
+                </div>
+                <div class="report-summary-note">
+                  <i class="ri-subtract-line" aria-hidden="true"></i
+                  ><span class="fs-12">In the selected period</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+              <div class="card custom-card p-2 bg-light report-summary-card">
+                <div class="card-body bg-white rounded text-dark">
+                  <div
+                    class="d-flex align-items-center justify-content-between mb-2"
+                  >
+                    <span class="fw-medium">Awaiting payment</span>
+                    <span
+                      class="avatar avatar-md bg-color-3 avatar-rounded text-fixed-black"
+                    >
+                      <i class="ri-time-line fs-20" aria-hidden="true"></i>
+                    </span>
+                  </div>
+                  <h2 class="fw-semibold mb-0" data-sales-metric="pending">
+                    &mdash;
+                  </h2>
+                </div>
+                <div class="report-summary-note">
+                  <i class="ri-subtract-line" aria-hidden="true"></i
+                  ><span class="fs-12">Outstanding balance</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+              <div class="card custom-card p-2 bg-light report-summary-card">
+                <div class="card-body bg-white rounded text-dark">
+                  <div
+                    class="d-flex align-items-center justify-content-between mb-2"
+                  >
+                    <span class="fw-medium">Average order</span>
+                    <span
+                      class="avatar avatar-md bg-color-4 avatar-rounded text-fixed-black"
+                    >
+                      <i
+                        class="ri-bar-chart-grouped-line fs-20"
+                        aria-hidden="true"
+                      ></i>
+                    </span>
+                  </div>
+                  <h2 class="fw-semibold mb-0" data-sales-metric="average">
+                    &mdash;
+                  </h2>
+                </div>
+                <div class="report-summary-note">
+                  <i class="ri-subtract-line" aria-hidden="true"></i
+                  ><span class="fs-12">Per completed payment</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xl-8">
+              <section class="card custom-card report-revenue-card">
+                <div class="card-header justify-content-between">
+                  <h2 class="card-title mb-0">Revenue performance</h2>
+                  <span class="badge bg-success-transparent">
+                    Demo data / USD
+                  </span>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="d-flex justify-content-between align-items-center gap-2 report-revenue-summary"
+                  >
+                    <div>
+                      <h3 class="fw-semibold mb-1" data-sales-metric="revenue">
+                        &mdash;
+                      </h3>
+                      <span class="fs-12 text-muted">
+                        Collected in the selected period
+                      </span>
+                    </div>
+                    <span
+                      class="avatar avatar-md bg-light text-dark avatar-rounded"
+                    >
+                      <i class="ri-bar-chart-line fs-20" aria-hidden="true"></i>
+                    </span>
+                  </div>
+                  <div
+                    id="sales-overview"
+                    aria-label="Collected revenue by date"
+                  ></div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xl-4">
+              <section class="card custom-card report-channel-card">
+                <div class="card-header justify-content-between">
+                  <h2 class="card-title mb-0">Revenue by channel</h2>
+                  <span class="badge bg-warning-transparent">4 channels</span>
+                </div>
+                <div class="card-body">
+                  <p class="text-muted fs-12 mb-2">
+                    Where your completed payments come from.
+                  </p>
+                  <div class="report-channel-visual">
+                    <div
+                      id="report-channel-chart"
+                      aria-label="Revenue share by sales channel"
+                    ></div>
+                  </div>
+                  <ul
+                    id="sales-channels"
+                    class="list-group list-group-flush report-channel-breakdown"
+                  ></ul>
+                </div>
+                <div
+                  class="card-footer d-flex align-items-center justify-content-between gap-2"
+                >
+                  <span class="text-muted fs-11">Selected reporting period</span
+                  ><a href="sales-payments.html" class="fw-medium fs-12"
+                    >View payments
+                    <i class="ri-arrow-right-up-line" aria-hidden="true"></i
+                  ></a>
+                </div>
+              </section>
+            </div>
+          </div>
+          <section class="card custom-card report-team-card">
+            <div class="card-header justify-content-between flex-wrap gap-2">
+              <h2 class="card-title mb-0">Team performance</h2>
+              <a href="sales-team.html" class="btn btn-light btn-sm">
+                View team
+                <i class="ri-arrow-right-up-line ms-2" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div class="card-body p-0">
+              <div class="table-responsive position-relative">
+                <table class="table text-nowrap table-hover mb-0">
+                  <thead>
+                    <tr>
+                      <th scope="col">Team member</th>
+                      <th scope="col">Transactions</th>
+                      <th scope="col">Revenue share</th>
+                      <th scope="col">Collected revenue</th>
+                      <th scope="col">Details</th>
+                    </tr>
+                  </thead>
+                  <tbody id="sales-team-summary"></tbody>
+                </table>
+              </div>
+            </div>
+            <div class="card-footer border-top-0 text-muted fs-12">
+              Completed payments only. Figures update with the selected
+              reporting period.
+            </div>
+          </section>
+          <p
+            id="sales-feedback"
+            class="text-muted fs-12"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <div
+      class="modal fade"
+      id="sales-record-modal"
+      tabindex="-1"
+      aria-labelledby="sales-record-title"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 id="sales-record-title" class="modal-title">Payment details</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body" id="sales-record-body"></div>
+        </div>
+      </div>
+    </div>
+    <!-- include common-scripts.html"-->
+    <script src="../assets/libs/apexcharts/apexcharts.min.js"></script>
+    <script src="../assets/js/sales-workspace.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+    <!-- include appearance-customizer-scripts.html"-->
+  </body>
+</html>

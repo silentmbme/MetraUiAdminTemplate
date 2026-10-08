@@ -1,0 +1,1202 @@
+<!-- include document-head.html"-->
+    <link
+      rel="stylesheet"
+      href="../assets/libs/prismjs/themes/prism-coy.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main data-markup-examples class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Pagination</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Components</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Pagination
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Circular controls</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Round page controls with compact spacing.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <nav aria-label="Circular controls">
+                    <ul
+                      class="pagination gap-2 pagination-sm mb-0 flex-wrap"
+                      data-pagination-demo
+                    >
+                      <li class="page-item disabled">
+                        <button
+                          type="button"
+                          class="page-link rounded-circle"
+                          data-step="-1"
+                          aria-label="Previous page"
+                          disabled
+                        >
+                          <i
+                            class="ri-arrow-left-s-line"
+                            aria-hidden="true"
+                          ></i>
+                        </button>
+                      </li>
+                      <li class="page-item active">
+                        <button
+                          type="button"
+                          class="page-link rounded-circle"
+                          data-page="1"
+                          aria-current="page"
+                        >
+                          1
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button
+                          type="button"
+                          class="page-link rounded-circle"
+                          data-page="2"
+                        >
+                          2
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button
+                          type="button"
+                          class="page-link rounded-circle"
+                          data-page="3"
+                        >
+                          3
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button
+                          type="button"
+                          class="page-link rounded-circle"
+                          data-page="4"
+                        >
+                          4
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button
+                          type="button"
+                          class="page-link rounded-circle"
+                          data-page="5"
+                        >
+                          5
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button
+                          type="button"
+                          class="page-link rounded-circle"
+                          data-step="1"
+                          aria-label="Next page"
+                        >
+                          <i
+                            class="ri-arrow-right-s-line"
+                            aria-hidden="true"
+                          ></i>
+                        </button>
+                      </li>
+                    </ul>
+                  </nav>
+                  <p
+                    class="text-muted fs-12 mt-3 mb-0"
+                    data-page-feedback
+                    role="status"
+                    aria-live="polite"
+                  >
+                    Page 1 of 5
+                  </p>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Borderless controls</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      A lighter treatment for secondary pagination.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <nav aria-label="Borderless controls">
+                    <ul
+                      class="pagination gap-1 mb-0 flex-wrap"
+                      data-pagination-demo
+                    >
+                      <li class="page-item disabled">
+                        <button
+                          type="button"
+                          class="page-link border-0"
+                          data-step="-1"
+                          aria-label="Previous page"
+                          disabled
+                        >
+                          <i
+                            class="ri-arrow-left-s-line"
+                            aria-hidden="true"
+                          ></i>
+                        </button>
+                      </li>
+                      <li class="page-item active">
+                        <button
+                          type="button"
+                          class="page-link border-0"
+                          data-page="1"
+                          aria-current="page"
+                        >
+                          1
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button
+                          type="button"
+                          class="page-link border-0"
+                          data-page="2"
+                        >
+                          2
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button
+                          type="button"
+                          class="page-link border-0"
+                          data-page="3"
+                        >
+                          3
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button
+                          type="button"
+                          class="page-link border-0"
+                          data-page="4"
+                        >
+                          4
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button
+                          type="button"
+                          class="page-link border-0"
+                          data-page="5"
+                        >
+                          5
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button
+                          type="button"
+                          class="page-link border-0"
+                          data-step="1"
+                          aria-label="Next page"
+                        >
+                          <i
+                            class="ri-arrow-right-s-line"
+                            aria-hidden="true"
+                          ></i>
+                        </button>
+                      </li>
+                    </ul>
+                  </nav>
+                  <p
+                    class="text-muted fs-12 mt-3 mb-0"
+                    data-page-feedback
+                    role="status"
+                    aria-live="polite"
+                  >
+                    Page 1 of 5
+                  </p>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Soft background</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      A quiet surface around the navigation.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <nav aria-label="Soft background">
+                    <ul
+                      class="pagination gap-1 bg-light rounded p-2 d-inline-flex mb-0 flex-wrap"
+                      data-pagination-demo
+                    >
+                      <li class="page-item disabled">
+                        <button
+                          type="button"
+                          class="page-link border-0 rounded"
+                          data-step="-1"
+                          aria-label="Previous page"
+                          disabled
+                        >
+                          <i
+                            class="ri-arrow-left-s-line"
+                            aria-hidden="true"
+                          ></i>
+                        </button>
+                      </li>
+                      <li class="page-item active">
+                        <button
+                          type="button"
+                          class="page-link border-0 rounded"
+                          data-page="1"
+                          aria-current="page"
+                        >
+                          1
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button
+                          type="button"
+                          class="page-link border-0 rounded"
+                          data-page="2"
+                        >
+                          2
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button
+                          type="button"
+                          class="page-link border-0 rounded"
+                          data-page="3"
+                        >
+                          3
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button
+                          type="button"
+                          class="page-link border-0 rounded"
+                          data-page="4"
+                        >
+                          4
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button
+                          type="button"
+                          class="page-link border-0 rounded"
+                          data-page="5"
+                        >
+                          5
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button
+                          type="button"
+                          class="page-link border-0 rounded"
+                          data-step="1"
+                          aria-label="Next page"
+                        >
+                          <i
+                            class="ri-arrow-right-s-line"
+                            aria-hidden="true"
+                          ></i>
+                        </button>
+                      </li>
+                    </ul>
+                  </nav>
+                  <p
+                    class="text-muted fs-12 mt-3 mb-0"
+                    data-page-feedback
+                    role="status"
+                    aria-live="polite"
+                  >
+                    Page 1 of 5
+                  </p>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Outlined spacing</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Separate each page control with a subtle border.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <nav aria-label="Outlined spacing">
+                    <ul
+                      class="pagination gap-2 mb-0 flex-wrap"
+                      data-pagination-demo
+                    >
+                      <li class="page-item disabled">
+                        <button
+                          type="button"
+                          class="page-link rounded"
+                          data-step="-1"
+                          aria-label="Previous page"
+                          disabled
+                        >
+                          <i
+                            class="ri-arrow-left-s-line"
+                            aria-hidden="true"
+                          ></i>
+                        </button>
+                      </li>
+                      <li class="page-item active">
+                        <button
+                          type="button"
+                          class="page-link rounded"
+                          data-page="1"
+                          aria-current="page"
+                        >
+                          1
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button
+                          type="button"
+                          class="page-link rounded"
+                          data-page="2"
+                        >
+                          2
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button
+                          type="button"
+                          class="page-link rounded"
+                          data-page="3"
+                        >
+                          3
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button
+                          type="button"
+                          class="page-link rounded"
+                          data-page="4"
+                        >
+                          4
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button
+                          type="button"
+                          class="page-link rounded"
+                          data-page="5"
+                        >
+                          5
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button
+                          type="button"
+                          class="page-link rounded"
+                          data-step="1"
+                          aria-label="Next page"
+                        >
+                          <i
+                            class="ri-arrow-right-s-line"
+                            aria-hidden="true"
+                          ></i>
+                        </button>
+                      </li>
+                    </ul>
+                  </nav>
+                  <p
+                    class="text-muted fs-12 mt-3 mb-0"
+                    data-page-feedback
+                    role="status"
+                    aria-live="polite"
+                  >
+                    Page 1 of 5
+                  </p>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Compact centered pills</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Small rounded controls aligned to the center.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <nav aria-label="Compact centered pills">
+                    <ul
+                      class="pagination pagination-sm justify-content-center gap-2 mb-0 flex-wrap"
+                      data-pagination-demo
+                    >
+                      <li class="page-item disabled">
+                        <button
+                          type="button"
+                          class="page-link rounded-pill"
+                          data-step="-1"
+                          aria-label="Previous page"
+                          disabled
+                        >
+                          <i
+                            class="ri-arrow-left-s-line"
+                            aria-hidden="true"
+                          ></i>
+                        </button>
+                      </li>
+                      <li class="page-item active">
+                        <button
+                          type="button"
+                          class="page-link rounded-pill"
+                          data-page="1"
+                          aria-current="page"
+                        >
+                          1
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button
+                          type="button"
+                          class="page-link rounded-pill"
+                          data-page="2"
+                        >
+                          2
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button
+                          type="button"
+                          class="page-link rounded-pill"
+                          data-page="3"
+                        >
+                          3
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button
+                          type="button"
+                          class="page-link rounded-pill"
+                          data-page="4"
+                        >
+                          4
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button
+                          type="button"
+                          class="page-link rounded-pill"
+                          data-page="5"
+                        >
+                          5
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button
+                          type="button"
+                          class="page-link rounded-pill"
+                          data-step="1"
+                          aria-label="Next page"
+                        >
+                          <i
+                            class="ri-arrow-right-s-line"
+                            aria-hidden="true"
+                          ></i>
+                        </button>
+                      </li>
+                    </ul>
+                  </nav>
+                  <p
+                    class="text-muted fs-12 mt-3 mb-0"
+                    data-page-feedback
+                    role="status"
+                    aria-live="polite"
+                  >
+                    Page 1 of 5
+                  </p>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Wide page toolbar</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Page navigation beside a result summary.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <p class="text-muted fs-13 mb-3">
+                    Browse the next set of workspace records.
+                  </p>
+                  <nav aria-label="Wide page toolbar">
+                    <ul
+                      class="pagination pagination-sm gap-1 mb-0 flex-wrap"
+                      data-pagination-demo
+                    >
+                      <li class="page-item disabled">
+                        <button
+                          type="button"
+                          class="page-link rounded"
+                          data-step="-1"
+                          aria-label="Previous page"
+                          disabled
+                        >
+                          <i
+                            class="ri-arrow-left-s-line"
+                            aria-hidden="true"
+                          ></i>
+                        </button>
+                      </li>
+                      <li class="page-item active">
+                        <button
+                          type="button"
+                          class="page-link rounded"
+                          data-page="1"
+                          aria-current="page"
+                        >
+                          1
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button
+                          type="button"
+                          class="page-link rounded"
+                          data-page="2"
+                        >
+                          2
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button
+                          type="button"
+                          class="page-link rounded"
+                          data-page="3"
+                        >
+                          3
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button
+                          type="button"
+                          class="page-link rounded"
+                          data-page="4"
+                        >
+                          4
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button
+                          type="button"
+                          class="page-link rounded"
+                          data-page="5"
+                        >
+                          5
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button
+                          type="button"
+                          class="page-link rounded"
+                          data-step="1"
+                          aria-label="Next page"
+                        >
+                          <i
+                            class="ri-arrow-right-s-line"
+                            aria-hidden="true"
+                          ></i>
+                        </button>
+                      </li>
+                    </ul>
+                  </nav>
+                  <p
+                    class="text-muted fs-12 mt-3 mb-0"
+                    data-page-feedback
+                    role="status"
+                    aria-live="polite"
+                  >
+                    Page 1 of 5
+                  </p>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Numbered pages</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Move between a small set of result pages.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <nav aria-label="Numbered pagination">
+                    <ul class="pagination mb-0 flex-wrap" data-pagination-demo>
+                      <li class="page-item disabled">
+                        <button
+                          class="page-link"
+                          type="button"
+                          data-step="-1"
+                          disabled
+                        >
+                          Previous
+                        </button>
+                      </li>
+                      <li class="page-item active">
+                        <button
+                          class="page-link"
+                          type="button"
+                          data-page="1"
+                          aria-current="page"
+                        >
+                          1
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button class="page-link" type="button" data-page="2">
+                          2
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button class="page-link" type="button" data-page="3">
+                          3
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button class="page-link" type="button" data-page="4">
+                          4
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button class="page-link" type="button" data-page="5">
+                          5
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button class="page-link" type="button" data-step="1">
+                          Next
+                        </button>
+                      </li>
+                    </ul>
+                  </nav>
+                  <p
+                    class="text-muted fs-12 mt-3 mb-0"
+                    data-page-feedback
+                    role="status"
+                    aria-live="polite"
+                  >
+                    Page 1 of 5
+                  </p>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Compact pagination</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Smaller controls for dense layouts.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <nav aria-label="Compact pagination">
+                    <ul
+                      class="pagination pagination-sm mb-0 flex-wrap"
+                      data-pagination-demo
+                    >
+                      <li class="page-item disabled">
+                        <button
+                          class="page-link"
+                          type="button"
+                          data-step="-1"
+                          disabled
+                        >
+                          Previous
+                        </button>
+                      </li>
+                      <li class="page-item active">
+                        <button
+                          class="page-link"
+                          type="button"
+                          data-page="1"
+                          aria-current="page"
+                        >
+                          1
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button class="page-link" type="button" data-page="2">
+                          2
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button class="page-link" type="button" data-page="3">
+                          3
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button class="page-link" type="button" data-page="4">
+                          4
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button class="page-link" type="button" data-page="5">
+                          5
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button class="page-link" type="button" data-step="1">
+                          Next
+                        </button>
+                      </li>
+                    </ul>
+                  </nav>
+                  <p
+                    class="text-muted fs-12 mt-3 mb-0"
+                    data-page-feedback
+                    role="status"
+                    aria-live="polite"
+                  >
+                    Page 1 of 5
+                  </p>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Spaced pills</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Rounded controls with room between each action.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <nav aria-label="Pill pagination">
+                    <ul
+                      class="pagination gap-2 mb-0 flex-wrap"
+                      data-pagination-demo
+                    >
+                      <li class="page-item disabled">
+                        <button
+                          class="page-link rounded-pill"
+                          type="button"
+                          data-step="-1"
+                          disabled
+                        >
+                          Previous
+                        </button>
+                      </li>
+                      <li class="page-item active">
+                        <button
+                          class="page-link rounded-pill"
+                          type="button"
+                          data-page="1"
+                          aria-current="page"
+                        >
+                          1
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button
+                          class="page-link rounded-pill"
+                          type="button"
+                          data-page="2"
+                        >
+                          2
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button
+                          class="page-link rounded-pill"
+                          type="button"
+                          data-page="3"
+                        >
+                          3
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button
+                          class="page-link rounded-pill"
+                          type="button"
+                          data-page="4"
+                        >
+                          4
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button
+                          class="page-link rounded-pill"
+                          type="button"
+                          data-page="5"
+                        >
+                          5
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button
+                          class="page-link rounded-pill"
+                          type="button"
+                          data-step="1"
+                        >
+                          Next
+                        </button>
+                      </li>
+                    </ul>
+                  </nav>
+                  <p
+                    class="text-muted fs-12 mt-3 mb-0"
+                    data-page-feedback
+                    role="status"
+                    aria-live="polite"
+                  >
+                    Page 1 of 5
+                  </p>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Centered pagination</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      A balanced layout below a content collection.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <nav aria-label="Centered pagination">
+                    <ul
+                      class="pagination justify-content-center mb-0 flex-wrap"
+                      data-pagination-demo
+                    >
+                      <li class="page-item disabled">
+                        <button
+                          class="page-link"
+                          type="button"
+                          data-step="-1"
+                          disabled
+                        >
+                          Previous
+                        </button>
+                      </li>
+                      <li class="page-item active">
+                        <button
+                          class="page-link"
+                          type="button"
+                          data-page="1"
+                          aria-current="page"
+                        >
+                          1
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button class="page-link" type="button" data-page="2">
+                          2
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button class="page-link" type="button" data-page="3">
+                          3
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button class="page-link" type="button" data-page="4">
+                          4
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button class="page-link" type="button" data-page="5">
+                          5
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button class="page-link" type="button" data-step="1">
+                          Next
+                        </button>
+                      </li>
+                    </ul>
+                  </nav>
+                  <p
+                    class="text-muted fs-12 mt-3 mb-0"
+                    data-page-feedback
+                    role="status"
+                    aria-live="polite"
+                  >
+                    Page 1 of 5
+                  </p>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Right-aligned controls</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Place page actions at the end of a toolbar.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <nav aria-label="Right aligned pagination">
+                    <ul
+                      class="pagination justify-content-end pagination-sm mb-0 flex-wrap"
+                      data-pagination-demo
+                    >
+                      <li class="page-item disabled">
+                        <button
+                          class="page-link"
+                          type="button"
+                          data-step="-1"
+                          disabled
+                        >
+                          Previous
+                        </button>
+                      </li>
+                      <li class="page-item active">
+                        <button
+                          class="page-link"
+                          type="button"
+                          data-page="1"
+                          aria-current="page"
+                        >
+                          1
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button class="page-link" type="button" data-page="2">
+                          2
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button class="page-link" type="button" data-page="3">
+                          3
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button class="page-link" type="button" data-page="4">
+                          4
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button class="page-link" type="button" data-page="5">
+                          5
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button class="page-link" type="button" data-step="1">
+                          Next
+                        </button>
+                      </li>
+                    </ul>
+                  </nav>
+                  <p
+                    class="text-muted fs-12 mt-3 mb-0"
+                    data-page-feedback
+                    role="status"
+                    aria-live="polite"
+                  >
+                    Page 1 of 5
+                  </p>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Document navigation</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Previous and next links for related content.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <nav
+                    aria-label="Document navigation"
+                    class="d-flex justify-content-between gap-3"
+                  >
+                    <a
+                      class="border rounded p-3 flex-fill"
+                      href="listgroup.html"
+                      ><span class="text-muted fs-12 d-block"
+                        ><i
+                          class="ri-arrow-left-line me-1"
+                          aria-hidden="true"
+                        ></i
+                        >Previous component</span
+                      ><strong class="fs-14 fw-medium">List groups</strong></a
+                    ><a
+                      class="border rounded p-3 flex-fill text-end"
+                      href="navs_tabs.html"
+                      ><span class="text-muted fs-12 d-block"
+                        >Next component<i
+                          class="ri-arrow-right-line ms-1"
+                          aria-hidden="true"
+                        ></i></span
+                      ><strong class="fs-14 fw-medium"
+                        >Navigation & tabs</strong
+                      ></a
+                    >
+                  </nav>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-12">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Large controls</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Larger targets for spacious interfaces.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <nav aria-label="Large pagination">
+                    <ul
+                      class="pagination pagination-lg mb-0 flex-wrap"
+                      data-pagination-demo
+                    >
+                      <li class="page-item disabled">
+                        <button
+                          class="page-link"
+                          type="button"
+                          data-step="-1"
+                          disabled
+                        >
+                          Previous
+                        </button>
+                      </li>
+                      <li class="page-item active">
+                        <button
+                          class="page-link"
+                          type="button"
+                          data-page="1"
+                          aria-current="page"
+                        >
+                          1
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button class="page-link" type="button" data-page="2">
+                          2
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button class="page-link" type="button" data-page="3">
+                          3
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button class="page-link" type="button" data-page="4">
+                          4
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button class="page-link" type="button" data-page="5">
+                          5
+                        </button>
+                      </li>
+                      <li class="page-item">
+                        <button class="page-link" type="button" data-step="1">
+                          Next
+                        </button>
+                      </li>
+                    </ul>
+                  </nav>
+                  <p
+                    class="text-muted fs-12 mt-3 mb-0"
+                    data-page-feedback
+                    role="status"
+                    aria-live="polite"
+                  >
+                    Page 1 of 5
+                  </p>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-12">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Result navigator</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Change page and page size for a sample directory.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-3"
+                  >
+                    <span
+                      class="text-muted fs-13"
+                      id="pagination-result-range"
+                      role="status"
+                      aria-live="polite"
+                    ></span>
+                    <div class="d-flex align-items-center gap-2">
+                      <label for="pagination-page-size" class="fs-12 text-muted"
+                        >Rows</label
+                      ><select
+                        class="form-select form-select-sm"
+                        id="pagination-page-size"
+                      >
+                        <option value="3">3</option>
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                      </select>
+                    </div>
+                  </div>
+                  <ul class="list-group mb-3" id="pagination-results"></ul>
+                  <nav aria-label="Directory pages">
+                    <ul
+                      class="pagination pagination-sm flex-wrap mb-0"
+                      id="pagination-directory-controls"
+                    ></ul>
+                  </nav>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"-->
+    <!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/js/pagination.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+    <script src="../assets/libs/prismjs/prism.js"></script>
+    <script src="../assets/js/prism-custom.js"></script>
+  </body>
+</html>

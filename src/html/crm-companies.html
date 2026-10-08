@@ -1,0 +1,968 @@
+<!-- include document-head.html"-->
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+
+      <main class="main-content app-content crm-workspace-page">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Companies</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Pages</a></li>
+            <li class="breadcrumb-item">
+              <a href="crm-dashboard.html">CRM</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Companies
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid commerce-dashboard crm-company-center">
+          <div class="row">
+            <div class="col-md-4">
+              <section class="card custom-card">
+                <div class="card-body d-flex align-items-center gap-3">
+                  <span
+                    class="avatar avatar-lg bg-secondary-transparent text-secondary"
+                    ><i class="ri-building-2-line fs-20"></i
+                  ></span>
+                  <div>
+                    <span class="text-muted fs-13">Companies</span>
+                    <h3 class="fw-semibold mb-0" id="crm-company-count">10</h3>
+                    <small class="text-muted">In your directory</small>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-md-4">
+              <section class="card custom-card">
+                <div class="card-body d-flex align-items-center gap-3">
+                  <span
+                    class="avatar avatar-lg bg-success-transparent text-success"
+                    ><i class="ri-briefcase-4-line fs-20"></i
+                  ></span>
+                  <div>
+                    <span class="text-muted fs-13">Open opportunities</span>
+                    <h3
+                      class="fw-semibold mb-0"
+                      id="crm-company-opportunity-count"
+                    >
+                      1,015
+                    </h3>
+                    <small class="text-muted">Across all accounts</small>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-md-4">
+              <section class="card custom-card">
+                <div class="card-body d-flex align-items-center gap-3">
+                  <span
+                    class="avatar avatar-lg bg-warning-transparent text-warning"
+                    ><i class="ri-stack-line fs-20"></i
+                  ></span>
+                  <div>
+                    <span class="text-muted fs-13">Industries</span>
+                    <h3 class="fw-semibold mb-0" id="crm-industry-count">10</h3>
+                    <small class="text-muted"
+                      >Represented in your network</small
+                    >
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <section
+            class="card custom-card crm-company-directory mb-3"
+            id="company-directory"
+          >
+            <div class="card-header justify-content-between flex-wrap gap-3">
+              <div>
+                <h2 class="card-title mb-1">Company directory</h2>
+                <p class="text-muted fs-12 mb-0">
+                  Account size, key contacts, and open opportunities.
+                </p>
+              </div>
+              <button
+                type="button"
+                class="btn btn-light btn-sm"
+                id="crm-company-export"
+              >
+                <i class="ri-download-2-line me-1"></i>Export CSV
+              </button>
+            </div>
+            <div class="card-body border-bottom">
+              <div class="row g-3 align-items-end">
+                <div class="col-md-6 col-xl-5">
+                  <label class="form-label" for="crm-company-search"
+                    >Search companies</label
+                  >
+                  <div class="input-group">
+                    <span class="input-group-text"
+                      ><i class="ri-search-line" aria-hidden="true"></i></span
+                    ><input
+                      id="crm-company-search"
+                      class="form-control"
+                      type="search"
+                      placeholder="Company, contact, or email"
+                      aria-label="Search companies"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <label class="form-label" for="crm-company-industry"
+                    >Industry</label
+                  >
+                  <select
+                    class="form-select"
+                    id="crm-company-industry"
+                    data-trigger
+                    aria-label="Filter by industry"
+                  >
+                    <option value="">All industries</option>
+                  </select>
+                </div>
+                <div class="col-md-3">
+                  <label class="form-label" for="crm-company-sort"
+                    >Sort by</label
+                  >
+                  <select
+                    class="form-select"
+                    id="crm-company-sort"
+                    data-trigger
+                    aria-label="Sort companies"
+                  >
+                    <option value="name">Name A to Z</option>
+                    <option value="deals">Most opportunities</option>
+                    <option value="size">Company size</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="card-body p-0">
+              <div class="crm-company-seed" id="crm-company-seed" hidden>
+                <article
+                  class="crm-company-card"
+                  data-company-card
+                  data-name="tech innovations"
+                  data-email="contact@techinnovations.com"
+                  data-industry="Technology"
+                  data-size="200+ employees"
+                  data-contact="John Doe"
+                  data-phone="(123) 456-7890"
+                  data-deals="150"
+                  data-logo="../assets/images/logos/1.png"
+                  data-person="../assets/images/users/14.jpg"
+                >
+                  <div class="crm-company-card-head">
+                    <span class="crm-company-logo"
+                      ><img src="../assets/images/logos/1.png" alt="" /></span
+                    ><button
+                      class="crm-company-menu"
+                      type="button"
+                      data-company-delete
+                      aria-label="Remove Tech Innovations"
+                    >
+                      <i class="ri-more-2-fill"></i>
+                    </button>
+                  </div>
+                  <div class="crm-company-heading">
+                    <div>
+                      <h2>Tech Innovations</h2>
+                      <span>Technology</span>
+                    </div>
+                    <span class="crm-company-initials">TI</span>
+                  </div>
+                  <div class="crm-company-deals">
+                    <div>
+                      <span>Open opportunities</span><strong>150</strong>
+                    </div>
+                    <span class="crm-company-deals-icon"
+                      ><i class="ri-briefcase-4-line"></i
+                    ></span>
+                  </div>
+                  <div class="crm-company-facts">
+                    <span><i class="ri-team-line"></i>200+ employees</span
+                    ><span><i class="ri-user-3-line"></i>John Doe</span>
+                  </div>
+                  <div class="crm-company-contact">
+                    <a href="mailto:contact@techinnovations.com"
+                      ><i class="ri-mail-line"></i
+                      >contact@techinnovations.com</a
+                    ><a href="tel:1234567890"
+                      ><i class="ri-phone-line"></i>(123) 456-7890</a
+                    >
+                  </div>
+                  <button
+                    class="btn crm-company-details-button"
+                    type="button"
+                    data-company-view
+                  >
+                    View company <i class="ri-arrow-right-up-line ms-1"></i>
+                  </button>
+                </article>
+                <article
+                  class="crm-company-card"
+                  data-company-card
+                  data-name="creative solutions"
+                  data-email="info@creativesolutions.com"
+                  data-industry="Marketing"
+                  data-size="50-100 employees"
+                  data-contact="Jane Smith"
+                  data-phone="(987) 654-3210"
+                  data-deals="75"
+                  data-logo="../assets/images/logos/3.png"
+                  data-person="../assets/images/users/2.jpg"
+                >
+                  <div class="crm-company-card-head">
+                    <span class="crm-company-logo"
+                      ><img src="../assets/images/logos/3.png" alt="" /></span
+                    ><button
+                      class="crm-company-menu"
+                      type="button"
+                      data-company-delete
+                      aria-label="Remove Creative Solutions"
+                    >
+                      <i class="ri-more-2-fill"></i>
+                    </button>
+                  </div>
+                  <div class="crm-company-heading">
+                    <div>
+                      <h2>Creative Solutions</h2>
+                      <span>Marketing</span>
+                    </div>
+                    <span class="crm-company-initials">CS</span>
+                  </div>
+                  <div class="crm-company-deals">
+                    <div>
+                      <span>Open opportunities</span><strong>75</strong>
+                    </div>
+                    <span class="crm-company-deals-icon"
+                      ><i class="ri-briefcase-4-line"></i
+                    ></span>
+                  </div>
+                  <div class="crm-company-facts">
+                    <span><i class="ri-team-line"></i>50-100 employees</span
+                    ><span><i class="ri-user-3-line"></i>Jane Smith</span>
+                  </div>
+                  <div class="crm-company-contact">
+                    <a href="mailto:info@creativesolutions.com"
+                      ><i class="ri-mail-line"></i>info@creativesolutions.com</a
+                    ><a href="tel:9876543210"
+                      ><i class="ri-phone-line"></i>(987) 654-3210</a
+                    >
+                  </div>
+                  <button
+                    class="btn crm-company-details-button"
+                    type="button"
+                    data-company-view
+                  >
+                    View company <i class="ri-arrow-right-up-line ms-1"></i>
+                  </button>
+                </article>
+                <article
+                  class="crm-company-card"
+                  data-company-card
+                  data-name="future enterprises"
+                  data-email="sales@futureenterprises.com"
+                  data-industry="E-Commerce"
+                  data-size="(555) 123-4567"
+                  data-contact="Emily Johnson"
+                  data-phone="(555) 123-4567"
+                  data-deals="120"
+                  data-logo="../assets/images/logos/4.png"
+                  data-person="../assets/images/users/4.jpg"
+                >
+                  <div class="crm-company-card-head">
+                    <span class="crm-company-logo"
+                      ><img src="../assets/images/logos/4.png" alt="" /></span
+                    ><button
+                      class="crm-company-menu"
+                      type="button"
+                      data-company-delete
+                      aria-label="Remove Future Enterprises"
+                    >
+                      <i class="ri-more-2-fill"></i>
+                    </button>
+                  </div>
+                  <div class="crm-company-heading">
+                    <div>
+                      <h2>Future Enterprises</h2>
+                      <span>E-Commerce</span>
+                    </div>
+                    <span class="crm-company-initials">FE</span>
+                  </div>
+                  <div class="crm-company-deals">
+                    <div>
+                      <span>Open opportunities</span><strong>120</strong>
+                    </div>
+                    <span class="crm-company-deals-icon"
+                      ><i class="ri-briefcase-4-line"></i
+                    ></span>
+                  </div>
+                  <div class="crm-company-facts">
+                    <span><i class="ri-team-line"></i>(555) 123-4567</span
+                    ><span><i class="ri-user-3-line"></i>Emily Johnson</span>
+                  </div>
+                  <div class="crm-company-contact">
+                    <a href="mailto:sales@futureenterprises.com"
+                      ><i class="ri-mail-line"></i
+                      >sales@futureenterprises.com</a
+                    ><a href="tel:5551234567"
+                      ><i class="ri-phone-line"></i>(555) 123-4567</a
+                    >
+                  </div>
+                  <button
+                    class="btn crm-company-details-button"
+                    type="button"
+                    data-company-view
+                  >
+                    View company <i class="ri-arrow-right-up-line ms-1"></i>
+                  </button>
+                </article>
+                <article
+                  class="crm-company-card"
+                  data-company-card
+                  data-name="innovate global"
+                  data-email="hello@innovateglobal.com"
+                  data-industry="Manufacturing"
+                  data-size="500+ employees"
+                  data-contact="Michael Brown"
+                  data-phone="(333) 777-8888"
+                  data-deals="200"
+                  data-logo="../assets/images/logos/5.png"
+                  data-person="../assets/images/users/11.jpg"
+                >
+                  <div class="crm-company-card-head">
+                    <span class="crm-company-logo"
+                      ><img src="../assets/images/logos/5.png" alt="" /></span
+                    ><button
+                      class="crm-company-menu"
+                      type="button"
+                      data-company-delete
+                      aria-label="Remove Innovate Global"
+                    >
+                      <i class="ri-more-2-fill"></i>
+                    </button>
+                  </div>
+                  <div class="crm-company-heading">
+                    <div>
+                      <h2>Innovate Global</h2>
+                      <span>Manufacturing</span>
+                    </div>
+                    <span class="crm-company-initials">IG</span>
+                  </div>
+                  <div class="crm-company-deals">
+                    <div>
+                      <span>Open opportunities</span><strong>200</strong>
+                    </div>
+                    <span class="crm-company-deals-icon"
+                      ><i class="ri-briefcase-4-line"></i
+                    ></span>
+                  </div>
+                  <div class="crm-company-facts">
+                    <span><i class="ri-team-line"></i>500+ employees</span
+                    ><span><i class="ri-user-3-line"></i>Michael Brown</span>
+                  </div>
+                  <div class="crm-company-contact">
+                    <a href="mailto:hello@innovateglobal.com"
+                      ><i class="ri-mail-line"></i>hello@innovateglobal.com</a
+                    ><a href="tel:3337778888"
+                      ><i class="ri-phone-line"></i>(333) 777-8888</a
+                    >
+                  </div>
+                  <button
+                    class="btn crm-company-details-button"
+                    type="button"
+                    data-company-view
+                  >
+                    View company <i class="ri-arrow-right-up-line ms-1"></i>
+                  </button>
+                </article>
+                <article
+                  class="crm-company-card"
+                  data-company-card
+                  data-name="designworks"
+                  data-email="contact@designworks.com"
+                  data-industry="Design"
+                  data-size="20-50 employees"
+                  data-contact="Sara White"
+                  data-phone="(222) 333-4444"
+                  data-deals="35"
+                  data-logo="../assets/images/logos/6.png"
+                  data-person="../assets/images/users/8.jpg"
+                >
+                  <div class="crm-company-card-head">
+                    <span class="crm-company-logo"
+                      ><img src="../assets/images/logos/6.png" alt="" /></span
+                    ><button
+                      class="crm-company-menu"
+                      type="button"
+                      data-company-delete
+                      aria-label="Remove DesignWorks"
+                    >
+                      <i class="ri-more-2-fill"></i>
+                    </button>
+                  </div>
+                  <div class="crm-company-heading">
+                    <div>
+                      <h2>DesignWorks</h2>
+                      <span>Design</span>
+                    </div>
+                    <span class="crm-company-initials">D</span>
+                  </div>
+                  <div class="crm-company-deals">
+                    <div>
+                      <span>Open opportunities</span><strong>35</strong>
+                    </div>
+                    <span class="crm-company-deals-icon"
+                      ><i class="ri-briefcase-4-line"></i
+                    ></span>
+                  </div>
+                  <div class="crm-company-facts">
+                    <span><i class="ri-team-line"></i>20-50 employees</span
+                    ><span><i class="ri-user-3-line"></i>Sara White</span>
+                  </div>
+                  <div class="crm-company-contact">
+                    <a href="mailto:contact@designworks.com"
+                      ><i class="ri-mail-line"></i>contact@designworks.com</a
+                    ><a href="tel:2223334444"
+                      ><i class="ri-phone-line"></i>(222) 333-4444</a
+                    >
+                  </div>
+                  <button
+                    class="btn crm-company-details-button"
+                    type="button"
+                    data-company-view
+                  >
+                    View company <i class="ri-arrow-right-up-line ms-1"></i>
+                  </button>
+                </article>
+                <article
+                  class="crm-company-card"
+                  data-company-card
+                  data-name="greentech"
+                  data-email="support@greentech.com"
+                  data-industry="Renewable Energy"
+                  data-size="50-100 employees"
+                  data-contact="David Lee"
+                  data-phone="(444) 666-8888"
+                  data-deals="80"
+                  data-logo="../assets/images/logos/7.png"
+                  data-person="../assets/images/users/13.jpg"
+                >
+                  <div class="crm-company-card-head">
+                    <span class="crm-company-logo"
+                      ><img src="../assets/images/logos/7.png" alt="" /></span
+                    ><button
+                      class="crm-company-menu"
+                      type="button"
+                      data-company-delete
+                      aria-label="Remove GreenTech"
+                    >
+                      <i class="ri-more-2-fill"></i>
+                    </button>
+                  </div>
+                  <div class="crm-company-heading">
+                    <div>
+                      <h2>GreenTech</h2>
+                      <span>Renewable Energy</span>
+                    </div>
+                    <span class="crm-company-initials">G</span>
+                  </div>
+                  <div class="crm-company-deals">
+                    <div>
+                      <span>Open opportunities</span><strong>80</strong>
+                    </div>
+                    <span class="crm-company-deals-icon"
+                      ><i class="ri-briefcase-4-line"></i
+                    ></span>
+                  </div>
+                  <div class="crm-company-facts">
+                    <span><i class="ri-team-line"></i>50-100 employees</span
+                    ><span><i class="ri-user-3-line"></i>David Lee</span>
+                  </div>
+                  <div class="crm-company-contact">
+                    <a href="mailto:support@greentech.com"
+                      ><i class="ri-mail-line"></i>support@greentech.com</a
+                    ><a href="tel:4446668888"
+                      ><i class="ri-phone-line"></i>(444) 666-8888</a
+                    >
+                  </div>
+                  <button
+                    class="btn crm-company-details-button"
+                    type="button"
+                    data-company-view
+                  >
+                    View company <i class="ri-arrow-right-up-line ms-1"></i>
+                  </button>
+                </article>
+                <article
+                  class="crm-company-card"
+                  data-company-card
+                  data-name="tech pros"
+                  data-email="info@techpros.com"
+                  data-industry="IT Services"
+                  data-size="100-500 employees"
+                  data-contact="Olivia Green"
+                  data-phone="(888) 999-0000"
+                  data-deals="65"
+                  data-logo="../assets/images/logos/8.png"
+                  data-person="../assets/images/users/5.jpg"
+                >
+                  <div class="crm-company-card-head">
+                    <span class="crm-company-logo"
+                      ><img src="../assets/images/logos/8.png" alt="" /></span
+                    ><button
+                      class="crm-company-menu"
+                      type="button"
+                      data-company-delete
+                      aria-label="Remove Tech Pros"
+                    >
+                      <i class="ri-more-2-fill"></i>
+                    </button>
+                  </div>
+                  <div class="crm-company-heading">
+                    <div>
+                      <h2>Tech Pros</h2>
+                      <span>IT Services</span>
+                    </div>
+                    <span class="crm-company-initials">TP</span>
+                  </div>
+                  <div class="crm-company-deals">
+                    <div>
+                      <span>Open opportunities</span><strong>65</strong>
+                    </div>
+                    <span class="crm-company-deals-icon"
+                      ><i class="ri-briefcase-4-line"></i
+                    ></span>
+                  </div>
+                  <div class="crm-company-facts">
+                    <span><i class="ri-team-line"></i>100-500 employees</span
+                    ><span><i class="ri-user-3-line"></i>Olivia Green</span>
+                  </div>
+                  <div class="crm-company-contact">
+                    <a href="mailto:info@techpros.com"
+                      ><i class="ri-mail-line"></i>info@techpros.com</a
+                    ><a href="tel:8889990000"
+                      ><i class="ri-phone-line"></i>(888) 999-0000</a
+                    >
+                  </div>
+                  <button
+                    class="btn crm-company-details-button"
+                    type="button"
+                    data-company-view
+                  >
+                    View company <i class="ri-arrow-right-up-line ms-1"></i>
+                  </button>
+                </article>
+                <article
+                  class="crm-company-card"
+                  data-company-card
+                  data-name="innovators inc"
+                  data-email="contact@innovatorsinc.com"
+                  data-industry="Consulting"
+                  data-size="200+ employees"
+                  data-contact="Liam Turner"
+                  data-phone="(777) 888-9999"
+                  data-deals="110"
+                  data-logo="../assets/images/logos/9.png"
+                  data-person="../assets/images/users/9.jpg"
+                >
+                  <div class="crm-company-card-head">
+                    <span class="crm-company-logo"
+                      ><img src="../assets/images/logos/9.png" alt="" /></span
+                    ><button
+                      class="crm-company-menu"
+                      type="button"
+                      data-company-delete
+                      aria-label="Remove Innovators Inc"
+                    >
+                      <i class="ri-more-2-fill"></i>
+                    </button>
+                  </div>
+                  <div class="crm-company-heading">
+                    <div>
+                      <h2>Innovators Inc</h2>
+                      <span>Consulting</span>
+                    </div>
+                    <span class="crm-company-initials">II</span>
+                  </div>
+                  <div class="crm-company-deals">
+                    <div>
+                      <span>Open opportunities</span><strong>110</strong>
+                    </div>
+                    <span class="crm-company-deals-icon"
+                      ><i class="ri-briefcase-4-line"></i
+                    ></span>
+                  </div>
+                  <div class="crm-company-facts">
+                    <span><i class="ri-team-line"></i>200+ employees</span
+                    ><span><i class="ri-user-3-line"></i>Liam Turner</span>
+                  </div>
+                  <div class="crm-company-contact">
+                    <a href="mailto:contact@innovatorsinc.com"
+                      ><i class="ri-mail-line"></i>contact@innovatorsinc.com</a
+                    ><a href="tel:7778889999"
+                      ><i class="ri-phone-line"></i>(777) 888-9999</a
+                    >
+                  </div>
+                  <button
+                    class="btn crm-company-details-button"
+                    type="button"
+                    data-company-view
+                  >
+                    View company <i class="ri-arrow-right-up-line ms-1"></i>
+                  </button>
+                </article>
+                <article
+                  class="crm-company-card"
+                  data-company-card
+                  data-name="future vision"
+                  data-email="info@futurevision.com"
+                  data-industry="Media"
+                  data-size="10-20 employees"
+                  data-contact="Mia Martinez"
+                  data-phone="(555) 111-2222"
+                  data-deals="50"
+                  data-logo="../assets/images/logos/10.png"
+                  data-person="../assets/images/users/1.jpg"
+                >
+                  <div class="crm-company-card-head">
+                    <span class="crm-company-logo"
+                      ><img src="../assets/images/logos/10.png" alt="" /></span
+                    ><button
+                      class="crm-company-menu"
+                      type="button"
+                      data-company-delete
+                      aria-label="Remove Future Vision"
+                    >
+                      <i class="ri-more-2-fill"></i>
+                    </button>
+                  </div>
+                  <div class="crm-company-heading">
+                    <div>
+                      <h2>Future Vision</h2>
+                      <span>Media</span>
+                    </div>
+                    <span class="crm-company-initials">FV</span>
+                  </div>
+                  <div class="crm-company-deals">
+                    <div>
+                      <span>Open opportunities</span><strong>50</strong>
+                    </div>
+                    <span class="crm-company-deals-icon"
+                      ><i class="ri-briefcase-4-line"></i
+                    ></span>
+                  </div>
+                  <div class="crm-company-facts">
+                    <span><i class="ri-team-line"></i>10-20 employees</span
+                    ><span><i class="ri-user-3-line"></i>Mia Martinez</span>
+                  </div>
+                  <div class="crm-company-contact">
+                    <a href="mailto:info@futurevision.com"
+                      ><i class="ri-mail-line"></i>info@futurevision.com</a
+                    ><a href="tel:5551112222"
+                      ><i class="ri-phone-line"></i>(555) 111-2222</a
+                    >
+                  </div>
+                  <button
+                    class="btn crm-company-details-button"
+                    type="button"
+                    data-company-view
+                  >
+                    View company <i class="ri-arrow-right-up-line ms-1"></i>
+                  </button>
+                </article>
+                <article
+                  class="crm-company-card"
+                  data-company-card
+                  data-name="green future"
+                  data-email="support@greenfuture.com"
+                  data-industry="Sustainable Tech"
+                  data-size="100-500 employees"
+                  data-contact="Noah Harris"
+                  data-phone="(444) 222-3333"
+                  data-deals="130"
+                  data-logo="../assets/images/logos/2.png"
+                  data-person="../assets/images/users/10.jpg"
+                >
+                  <div class="crm-company-card-head">
+                    <span class="crm-company-logo"
+                      ><img src="../assets/images/logos/2.png" alt="" /></span
+                    ><button
+                      class="crm-company-menu"
+                      type="button"
+                      data-company-delete
+                      aria-label="Remove Green Future"
+                    >
+                      <i class="ri-more-2-fill"></i>
+                    </button>
+                  </div>
+                  <div class="crm-company-heading">
+                    <div>
+                      <h2>Green Future</h2>
+                      <span>Sustainable Tech</span>
+                    </div>
+                    <span class="crm-company-initials">GF</span>
+                  </div>
+                  <div class="crm-company-deals">
+                    <div>
+                      <span>Open opportunities</span><strong>130</strong>
+                    </div>
+                    <span class="crm-company-deals-icon"
+                      ><i class="ri-briefcase-4-line"></i
+                    ></span>
+                  </div>
+                  <div class="crm-company-facts">
+                    <span><i class="ri-team-line"></i>100-500 employees</span
+                    ><span><i class="ri-user-3-line"></i>Noah Harris</span>
+                  </div>
+                  <div class="crm-company-contact">
+                    <a href="mailto:support@greenfuture.com"
+                      ><i class="ri-mail-line"></i>support@greenfuture.com</a
+                    ><a href="tel:4442223333"
+                      ><i class="ri-phone-line"></i>(444) 222-3333</a
+                    >
+                  </div>
+                  <button
+                    class="btn crm-company-details-button"
+                    type="button"
+                    data-company-view
+                  >
+                    View company <i class="ri-arrow-right-up-line ms-1"></i>
+                  </button>
+                </article>
+              </div>
+              <div class="table-responsive crm-company-table-wrap">
+                <table
+                  class="table text-nowrap table-hover mb-0 crm-company-table"
+                >
+                  <thead>
+                    <tr>
+                      <th scope="col">Company</th>
+                      <th scope="col">Industry</th>
+                      <th scope="col">Company size</th>
+                      <th scope="col">Key contact</th>
+                      <th scope="col">Open opportunities</th>
+                      <th scope="col" class="text-end">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody id="crm-company-grid"></tbody>
+                </table>
+              </div>
+              <div class="crm-company-empty" id="crm-company-empty" hidden>
+                No companies match your filters.
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <div
+        class="offcanvas offcanvas-end crm-company-drawer crm-detail-drawer"
+        tabindex="-1"
+        id="company-details-panel"
+        aria-labelledby="company-details-title"
+      >
+        <div class="offcanvas-header">
+          <div>
+            <h2 class="offcanvas-title" id="company-details-title">
+              Company details
+            </h2>
+            <p class="text-muted fs-12 mb-0">
+              Review account information and current opportunities.
+            </p>
+          </div>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body" id="company-details-content">
+          <p class="text-muted">Choose a company to see its account details.</p>
+        </div>
+      </div>
+
+      <div
+        class="modal fade crm-company-modal"
+        id="create-company"
+        tabindex="-1"
+        aria-labelledby="create-company-title"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable"
+        >
+          <div class="modal-content">
+            <form id="crm-company-form">
+              <div class="modal-header">
+                <div>
+                  <span class="crm-company-section-kicker">NEW ACCOUNT</span>
+                  <h2 class="modal-title" id="create-company-title">
+                    Add a company
+                  </h2>
+                  <p class="text-muted mb-0">
+                    Create an account record and connect it to your sales team.
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div class="crm-company-form-section">
+                  <span><i class="ri-building-2-line"></i></span>
+                  <div>
+                    <strong>Company profile</strong
+                    ><small>Basic information to identify the account.</small>
+                  </div>
+                </div>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="company-name" class="form-label"
+                      >Company name <b>*</b></label
+                    ><input
+                      class="form-control"
+                      id="company-name"
+                      name="name"
+                      placeholder="e.g. Northstar Labs"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="company-industry" class="form-label"
+                      >Industry <b>*</b></label
+                    ><select
+                      class="form-select"
+                      id="company-industry"
+                      name="industry"
+                      required
+                    >
+                      <option value="">Select an industry</option>
+                      <option>Technology</option>
+                      <option>Professional services</option>
+                      <option>Manufacturing</option>
+                      <option>Healthcare</option>
+                      <option>Finance</option>
+                      <option>Retail</option>
+                      <option>Education</option>
+                      <option>Marketing</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="company-mail" class="form-label"
+                      >Company email</label
+                    ><input
+                      class="form-control"
+                      id="company-mail"
+                      name="email"
+                      type="email"
+                      placeholder="hello@company.com"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="company-phone" class="form-label"
+                      >Phone number</label
+                    ><input
+                      class="form-control"
+                      id="company-phone"
+                      name="phone"
+                      type="tel"
+                      placeholder="+1 (555) 000-0000"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="company-size" class="form-label"
+                      >Company size</label
+                    ><select class="form-select" id="company-size" name="size">
+                      <option>1?20 employees</option>
+                      <option>20?50 employees</option>
+                      <option>50?100 employees</option>
+                      <option>100?500 employees</option>
+                      <option>500+ employees</option>
+                      <option>1,000+ employees</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="key-contact" class="form-label"
+                      >Key contact</label
+                    ><input
+                      class="form-control"
+                      id="key-contact"
+                      name="contact"
+                      placeholder="Contact name"
+                    />
+                  </div>
+                </div>
+                <div class="crm-company-form-section mt-4">
+                  <span><i class="ri-briefcase-4-line"></i></span>
+                  <div>
+                    <strong>Account context</strong
+                    ><small>Help the team understand the relationship.</small>
+                  </div>
+                </div>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="company-deals" class="form-label"
+                      >Open opportunities</label
+                    ><input
+                      class="form-control"
+                      id="company-deals"
+                      name="deals"
+                      type="number"
+                      min="0"
+                      value="0"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="company-notes" class="form-label"
+                      >Account notes</label
+                    ><input
+                      class="form-control"
+                      id="company-notes"
+                      name="notes"
+                      placeholder="Optional context"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn crm-company-secondary-button"
+                  data-bs-dismiss="modal"
+                >
+                  Cancel</button
+                ><button type="submit" class="btn crm-company-primary-button">
+                  <i class="ri-check-line me-1"></i>Save company
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <!-- include common-scripts.html"-->
+    <!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/js/crm-companies.js"></script>
+  </body>
+</html>

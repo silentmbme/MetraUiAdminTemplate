@@ -1,0 +1,455 @@
+<!-- include document-head.html"-->
+
+    <link
+      rel="stylesheet"
+      href="../assets/libs/@tarekraafat/autocomplete.js/css/autoComplete.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/libs/intl-tel-input/build/css/intlTelInput.min.css"
+    />
+    <link rel="stylesheet" href="../assets/libs/@yaireo/tagify/tagify.css" />
+    <link
+      rel="stylesheet"
+      href="../assets/libs/@yaireo/dragsort/dragsort.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/libs/dual-listbox/dual-listbox.css"
+    />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Form Advanced</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">
+              <a href="javascript:void(0);">Forms</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="javascript:void(0);">Form Elements</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Form Advanced
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid advanced-forms-page">
+          <div class="row">
+            <div class="col-xl-12">
+              <section
+                class="card custom-card advanced-form-card advanced-form-autocomplete"
+              >
+                <div
+                  class="card-header justify-content-between flex-wrap gap-2"
+                >
+                  <div>
+                    <h2 class="card-title mb-1">Autocomplete search</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Offer helpful suggestions as people type.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="row g-4">
+                    <div class="col-lg-6">
+                      <label for="autoComplete" class="form-label fw-medium"
+                        >Food and drink pairing</label
+                      >
+                      <input
+                        type="search"
+                        class="form-control"
+                        id="autoComplete"
+                        placeholder="Try pizza or sushi"
+                        spellcheck="false"
+                        autocomplete="off"
+                        autocapitalize="off"
+                      />
+                      <div class="form-text">
+                        Search a menu pairing to see matching suggestions.
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <label
+                        for="autoComplete-color"
+                        class="form-label fw-medium"
+                        >Color palette</label
+                      >
+                      <input
+                        type="search"
+                        class="form-control"
+                        id="autoComplete-color"
+                        placeholder="Search colors"
+                        spellcheck="false"
+                        autocomplete="off"
+                        autocapitalize="off"
+                      />
+                      <div class="form-text">
+                        The advanced list shows matching result counts.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-xl-12">
+              <section
+                class="card custom-card advanced-form-card advanced-form-telephone"
+              >
+                <div
+                  class="card-header justify-content-between flex-wrap gap-2"
+                >
+                  <div>
+                    <h2 class="card-title mb-1">Telephone input</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Country selection, formatting and validation options.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="row g-4">
+                    <div class="col-md-6 col-xl-4">
+                      <label for="phone" class="form-label fw-medium"
+                        >International number</label
+                      >
+                      <input
+                        class="form-control"
+                        id="phone"
+                        type="tel"
+                        autocomplete="tel"
+                        placeholder="Enter phone number"
+                      />
+                      <div class="form-text">
+                        Choose a country code and enter a number.
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                      <label for="phone-validation" class="form-label fw-medium"
+                        >Validate a number</label
+                      >
+                      <div class="input-group advanced-phone-group">
+                        <input
+                          id="phone-validation"
+                          type="tel"
+                          class="form-control"
+                          autocomplete="tel"
+                          placeholder="Enter number"
+                        />
+                        <button id="btn" type="button" class="btn btn-primary">
+                          Check
+                        </button>
+                      </div>
+                      <span
+                        id="valid-msg"
+                        class="hide text-success fs-12 mt-2 d-inline-block"
+                        ><i
+                          class="ri-checkbox-circle-line me-1"
+                          aria-hidden="true"
+                        ></i
+                        >Valid number</span
+                      >
+                      <span
+                        id="error-msg"
+                        class="hide text-danger fs-12 mt-2 d-inline-block"
+                        role="alert"
+                      ></span>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                      <label
+                        for="phone-only-countries"
+                        class="form-label fw-medium"
+                        >European countries</label
+                      >
+                      <input
+                        id="phone-only-countries"
+                        type="tel"
+                        class="form-control"
+                        autocomplete="tel"
+                        placeholder="Enter number"
+                      />
+                      <div class="form-text">
+                        Country list is limited to the configured region.
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                      <label
+                        for="phone-hidden-input"
+                        class="form-label fw-medium"
+                        >Submit with country code</label
+                      >
+                      <form id="form">
+                        <p
+                          id="message"
+                          class="fs-12 mb-2"
+                          role="status"
+                          aria-live="polite"
+                        ></p>
+                        <div class="input-group advanced-phone-group">
+                          <input
+                            id="phone-hidden-input"
+                            type="tel"
+                            class="form-control"
+                            autocomplete="tel"
+                            placeholder="Enter number"
+                          />
+                          <button type="submit" class="btn btn-light">
+                            Submit
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                      <label
+                        for="phone-existing-number"
+                        class="form-label fw-medium"
+                        >Existing international number</label
+                      >
+                      <input
+                        class="form-control"
+                        id="phone-existing-number"
+                        type="tel"
+                        value="+447733312345"
+                        autocomplete="tel"
+                      />
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                      <label
+                        for="phone-show-selected-dial-code"
+                        class="form-label fw-medium"
+                        >Show selected dial code</label
+                      >
+                      <input
+                        class="form-control"
+                        id="phone-show-selected-dial-code"
+                        type="tel"
+                        autocomplete="tel"
+                        placeholder="Enter number"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-12">
+              <section
+                class="card custom-card advanced-form-card advanced-form-tags"
+              >
+                <div
+                  class="card-header justify-content-between flex-wrap gap-2"
+                >
+                  <div>
+                    <h2 class="card-title mb-1">Tags and people</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Organize values with editable, searchable and sortable
+                      tags.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="row g-4">
+                    <div class="col-md-6">
+                      <label class="form-label fw-medium" for="basic-tags"
+                        >Basic tags</label
+                      >
+                      <input
+                        id="basic-tags"
+                        name="basic"
+                        value="tag1, tag2"
+                        class="form-control"
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label fw-medium" for="custom-tags"
+                        >Suggested technologies</label
+                      >
+                      <input
+                        id="custom-tags"
+                        name="input-custom-dropdown"
+                        class="form-control some_class_name"
+                        placeholder="Add a technology"
+                        value="css, html, javascript"
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label fw-medium" for="disabled-tags"
+                        >Choose from approved tags</label
+                      >
+                      <input
+                        id="disabled-tags"
+                        name="tags-disabled-user-input"
+                        placeholder="Select from the list"
+                        class="form-control disable-user-input"
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label fw-medium" for="sortable-tags"
+                        >Drag to reorder</label
+                      >
+                      <input
+                        id="sortable-tags"
+                        name="drag-sort"
+                        class="form-control"
+                        value="Planning, Design, Review, Delivery"
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label fw-medium" for="people-tags"
+                        >Team members</label
+                      >
+                      <input
+                        id="people-tags"
+                        name="users-list-tags"
+                        value="abatisse2@nih.gov, Justinian Hattersley"
+                        class="form-control"
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label fw-medium" for="select-tags"
+                        >Single selection</label
+                      >
+                      <input
+                        id="select-tags"
+                        name="tags-select-mode"
+                        class="selectMode form-control"
+                        placeholder="Choose an option"
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label fw-medium" for="readonly-tags"
+                        >Read-only values</label
+                      >
+                      <input
+                        id="readonly-tags"
+                        name="tags4"
+                        class="form-control"
+                        readonly
+                        value="tag1, tag 2, another tag"
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label
+                        class="form-label fw-medium"
+                        for="readonly-mix-tags"
+                        >Lock selected tags</label
+                      >
+                      <input
+                        id="readonly-mix-tags"
+                        name="tags-readonly-mix"
+                        type="text"
+                        class="readonlyMix form-control"
+                        placeholder="Add a value"
+                        value='[{"value":"foo","readonly":true,"title":"Read-only tag"},{"value":"bar"},{"value":"Locked tag","readonly":true,"title":"Another read-only tag"}]'
+                      />
+                    </div>
+                    <div class="col-12">
+                      <label class="form-label fw-medium" for="mix-tags"
+                        >Mention people or topics</label
+                      >
+                      <textarea
+                        id="mix-tags"
+                        name="mix"
+                        class="form-control"
+                        rows="3"
+                      >
+[[{"id":200,"value":"cartman","title":"Eric Cartman"}]] and [[kyle]] do not know [[{"value":"homer simpson","readonly":true}]] because he's a relic.</textarea
+                      >
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-12">
+              <section
+                class="card custom-card advanced-form-card advanced-form-lists"
+              >
+                <div
+                  class="card-header justify-content-between flex-wrap gap-2"
+                >
+                  <div>
+                    <h2 class="card-title mb-1">Dual list selection</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Move options between available and selected lists.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="row g-4">
+                    <div class="col-xl-6 custom-advance">
+                      <h3 class="fs-13 fw-semibold mb-3">Standard list</h3>
+                      <select
+                        class="select1"
+                        multiple
+                        aria-label="Standard available and selected options"
+                      >
+                        <option value="1">Design</option>
+                        <option value="2">Engineering</option>
+                        <option value="3">Marketing</option>
+                        <option value="4">Customer success</option>
+                        <option value="5">Finance</option>
+                        <option value="6">Operations</option>
+                        <option value="7">Research</option>
+                        <option value="8">Product</option>
+                        <option value="9">Sales</option>
+                        <option value="10">Support</option>
+                      </select>
+                    </div>
+                    <div class="col-xl-6">
+                      <h3 class="fs-13 fw-semibold mb-3">Custom list labels</h3>
+                      <select
+                        class="select2"
+                        multiple
+                        aria-label="Custom labeled available and selected options"
+                      >
+                        <option value="1">Email updates</option>
+                        <option value="2">Product news</option>
+                        <option value="3">Release notes</option>
+                      </select>
+                    </div>
+                    <div class="col-xl-6">
+                      <h3 class="fs-13 fw-semibold mb-3">Compact controls</h3>
+                      <select
+                        class="select3"
+                        multiple
+                        aria-label="Available and selected options without action buttons"
+                      >
+                        <option value="1">Draft</option>
+                        <option value="2">In review</option>
+                        <option value="3">Approved</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <!-- include common-scripts.html"-->
+    <!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/libs/@tarekraafat/autocomplete.js/autoComplete.min.js"></script>
+    <script src="../assets/libs/intl-tel-input/build/js/intlTelInput.min.js"></script>
+    <script src="../assets/libs/@yaireo/tagify/tagify.js"></script>
+    <script src="../assets/libs/@yaireo/dragsort/dragsort.js"></script>
+    <script src="../assets/libs/dual-listbox/dual-listbox.js"></script>
+    <script src="../assets/js/form-advanced.js"></script>
+    <script src="../assets/js/tagify.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

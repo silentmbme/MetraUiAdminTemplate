@@ -1,0 +1,298 @@
+<!-- include document-head.html"-->
+    <link rel="stylesheet" href="../assets/libs/plyr/plyr.css" />
+    <link
+      rel="stylesheet"
+      href="../assets/libs/prismjs/themes/prism-coy.min.css"
+    />
+  </head>
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"--><!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"--><!-- include side-navigation.html"-->
+      <main data-markup-examples class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Media Player</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Base UI</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Media Player
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xxl-8">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Featured film</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      An immersive video player with quality and playback
+                      controls.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="rounded overflow-hidden mb-3">
+                    <video
+                      id="player"
+                      playsinline
+                      controls
+                      preload="none"
+                      class="w-100"
+                      aria-label="View From A Blue Moon trailer"
+                      poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg"
+                    >
+                      <source
+                        src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4"
+                        type="video/mp4"
+                        size="576"
+                      />
+                      <source
+                        src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4"
+                        type="video/mp4"
+                        size="720"
+                      />
+                      <source
+                        src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4"
+                        type="video/mp4"
+                        size="1080"
+                      />
+                    </video>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-start gap-3"
+                  >
+                    <div>
+                      <span class="badge bg-info-transparent mb-2"
+                        >Surf film</span
+                      >
+                      <h3 class="fs-18 fw-semibold mb-2">
+                        View From A Blue Moon
+                      </h3>
+                      <p class="text-muted fs-13 mb-0">
+                        Ocean landscapes, movement, and a fresh perspective.
+                        Explore the trailer at your own pace.
+                      </p>
+                    </div>
+                    <span
+                      class="avatar avatar-md bg-success-transparent text-success flex-shrink-0"
+                      ><i class="ri-movie-2-line fs-22" aria-hidden="true"></i
+                    ></span>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-4">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Now listening</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      A calm soundtrack for a focused moment.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <img
+                    src="../assets/images/cards/16.png"
+                    alt="A quiet reading corner with a comfortable armchair"
+                    class="w-100 rounded mb-3"
+                    style="height: 200px; object-fit: cover"
+                    loading="lazy"
+                  /><span class="badge bg-success-transparent mb-2"
+                    >Workspace soundtrack</span
+                  >
+                  <h3 class="fs-18 fw-semibold mb-1">Perfect Beauty</h3>
+                  <p class="text-muted fs-13 mb-3">
+                    Take a breath and settle into your next task.
+                  </p>
+                  <audio
+                    id="player2"
+                    controls
+                    preload="metadata"
+                    class="w-100"
+                    aria-label="Perfect Beauty audio track"
+                  >
+                    <source
+                      src="../assets/audio/perfect-beauty.mp3"
+                      type="audio/mpeg"
+                    />
+                  </audio>
+                  <div class="d-flex flex-wrap gap-2 mt-3">
+                    <button
+                      class="btn btn-outline-light btn-sm"
+                      type="button"
+                      data-audio-action="rewind"
+                    >
+                      <i class="ri-replay-10-line me-1" aria-hidden="true"></i
+                      >Back 10s</button
+                    ><button
+                      class="btn btn-outline-light btn-sm"
+                      type="button"
+                      data-audio-action="restart"
+                    >
+                      <i class="ri-restart-line me-1" aria-hidden="true"></i
+                      >Restart</button
+                    ><button
+                      class="btn btn-outline-secondary btn-sm"
+                      type="button"
+                      data-audio-action="loop"
+                      aria-pressed="false"
+                    >
+                      Repeat off
+                    </button>
+                  </div>
+                  <p
+                    id="media-playback-status"
+                    role="status"
+                    aria-live="polite"
+                    class="text-muted fs-12 mt-3 mb-0"
+                  >
+                    Ready when you are.
+                  </p>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">From the video channel</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      The existing YouTube video in a clean embedded player.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="rounded overflow-hidden mb-3">
+                    <div class="plyr__video-embed" id="player1">
+                      <video
+                        id="player"
+                        playsinline
+                        controls
+                        preload="none"
+                        class="w-100"
+                        aria-label="View From A Blue Moon trailer"
+                        poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg"
+                      >
+                        <source
+                          src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4"
+                          type="video/mp4"
+                          size="576"
+                        />
+                        <source
+                          src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4"
+                          type="video/mp4"
+                          size="720"
+                        />
+                        <source
+                          src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4"
+                          type="video/mp4"
+                          size="1080"
+                        />
+                      </video>
+                    </div>
+                  </div>
+                  <h3 class="fs-15 fw-semibold mb-2">
+                    A little inspiration, on demand
+                  </h3>
+                  <p class="text-muted fs-13 mb-0">
+                    Use the player controls to adjust the volume, seek through
+                    the video, or watch in full screen.
+                  </p>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Make playback your own</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Useful controls for a comfortable viewing experience.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex gap-3">
+                    <span
+                      class="avatar avatar-sm bg-light text-default flex-shrink-0"
+                      ><i
+                        class="ri-settings-3-line fs-18"
+                        aria-hidden="true"
+                      ></i
+                    ></span>
+                    <div>
+                      <h3 class="fs-13 fw-semibold mb-1">
+                        Choose your quality
+                      </h3>
+                      <p class="text-muted fs-12 mb-0">
+                        Switch between available resolutions in the featured
+                        film settings.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-3 border-top pt-3 mt-3">
+                    <span
+                      class="avatar avatar-sm bg-light text-default flex-shrink-0"
+                      ><i class="ri-speed-up-line fs-18" aria-hidden="true"></i
+                    ></span>
+                    <div>
+                      <h3 class="fs-13 fw-semibold mb-1">Find your pace</h3>
+                      <p class="text-muted fs-12 mb-0">
+                        Adjust playback speed from the settings menu when
+                        available.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-3 border-top pt-3 mt-3">
+                    <span
+                      class="avatar avatar-sm bg-light text-default flex-shrink-0"
+                      ><i
+                        class="ri-fullscreen-line fs-18"
+                        aria-hidden="true"
+                      ></i
+                    ></span>
+                    <div>
+                      <h3 class="fs-13 fw-semibold mb-1">
+                        Focus on the moment
+                      </h3>
+                      <p class="text-muted fs-12 mb-0">
+                        Use full screen for video or picture-in-picture in
+                        supported browsers.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-3 border-top pt-3 mt-3">
+                    <span
+                      class="avatar avatar-sm bg-light text-default flex-shrink-0"
+                      ><i class="ri-keyboard-line fs-18" aria-hidden="true"></i
+                    ></span>
+                    <div>
+                      <h3 class="fs-13 fw-semibold mb-1">Use your keyboard</h3>
+                      <p class="text-muted fs-12 mb-0">
+                        Focus a player to use its keyboard shortcuts and
+                        accessible controls.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"--><!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"--><!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/js/app-interactions.js"></script>
+    <script src="../assets/libs/prismjs/prism.js"></script>
+    <script src="../assets/js/prism-custom.js"></script>
+    <script src="../assets/libs/plyr/plyr.min.js"></script>
+    <script src="../assets/js/media-player.js"></script>
+  </body>
+</html>

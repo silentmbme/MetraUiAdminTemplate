@@ -1,0 +1,77 @@
+/* Shared page-heading and breadcrumb treatment for workspace pages. */
+.main-content.app-content .page-header-breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.65rem 1rem;
+  margin-bottom: 1.5rem !important;
+  padding: 0.65rem 1.5rem;
+  background-color: var(--theme-custom-white);
+  box-shadow: 0 3px 3px rgba(56, 65, 74, 0.05);
+
+  &:not(.d-flex)>.d-flex {
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.65rem 1rem;
+  }
+
+  h1,
+  .page-title {
+    margin-bottom: 0 !important;
+    color: var(--theme-default-text-color);
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.02em !important;
+    line-height: 1.3;
+  }
+
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 !important;
+    margin-left: auto !important;
+    font-size: 0.7rem;
+    line-height: 1.4;
+  }
+
+  .breadcrumb-item {
+     font-size: 13px;
+  }
+
+  .breadcrumb-item a {
+    color: var(--theme-text-muted);
+    text-decoration: none;
+    font-size: 13px;
+  }
+
+  .breadcrumb-item a:hover {
+    color: var(--theme-default-text-color);
+  }
+
+  .breadcrumb-item.active {
+    color: var(--theme-default-text-color);
+  }
+
+  .btn {
+    min-height: 2.25rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .main-content.app-content .page-header-breadcrumb {
+    align-items: flex-start;
+  }
+
+  .main-content.app-content .page-header-breadcrumb:not(.d-flex)>.d-flex {
+    align-items: flex-start;
+  }
+
+  .main-content.app-content .page-header-breadcrumb .breadcrumb {
+    font-size: 0.65rem;
+  }
+
+}

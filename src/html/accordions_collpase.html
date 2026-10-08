@@ -1,0 +1,1683 @@
+<!-- include document-head.html"-->
+    <link
+      rel="stylesheet"
+      href="../assets/libs/prismjs/themes/prism-coy.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"--><!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"--><!-- include side-navigation.html"-->
+      <main data-markup-examples class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Accordions &amp; Collapse</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Base UI</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Accordions &amp; Collapse
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Workspace questions</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      A familiar accordion with one section open at a time.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="accordion" id="workspace-faq">
+                    <div class="accordion-item">
+                      <h3 class="accordion-header" id="workspace-faq-heading-0">
+                        <button
+                          class="accordion-button"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#workspace-faq-panel-0"
+                          aria-expanded="true"
+                          aria-controls="workspace-faq-panel-0"
+                        >
+                          How do I create a workspace?
+                        </button>
+                      </h3>
+                      <div
+                        class="accordion-collapse collapse show"
+                        id="workspace-faq-panel-0"
+                        aria-labelledby="workspace-faq-heading-0"
+                        data-bs-parent="#workspace-faq"
+                      >
+                        <div class="accordion-body">
+                          Start with a project name, invite your teammates, and
+                          organize your first set of tasks. You can adjust the
+                          workspace settings whenever you need.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h3 class="accordion-header" id="workspace-faq-heading-1">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#workspace-faq-panel-1"
+                          aria-expanded="false"
+                          aria-controls="workspace-faq-panel-1"
+                        >
+                          Can I invite external collaborators?
+                        </button>
+                      </h3>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="workspace-faq-panel-1"
+                        aria-labelledby="workspace-faq-heading-1"
+                        data-bs-parent="#workspace-faq"
+                      >
+                        <div class="accordion-body">
+                          Yes. Give collaborators access to the projects they
+                          need and review their permissions from your workspace
+                          settings.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h3 class="accordion-header" id="workspace-faq-heading-2">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#workspace-faq-panel-2"
+                          aria-expanded="false"
+                          aria-controls="workspace-faq-panel-2"
+                        >
+                          Where can I manage notifications?
+                        </button>
+                      </h3>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="workspace-faq-panel-2"
+                        aria-labelledby="workspace-faq-heading-2"
+                        data-bs-parent="#workspace-faq"
+                      >
+                        <div class="accordion-body">
+                          Open your profile settings to choose email updates,
+                          task reminders, and workspace announcements.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Separated panels</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Individual surfaces give each question room to breathe.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="accordion accordions-items-seperate accordion-primary"
+                    id="separated-faq"
+                  >
+                    <div class="accordion-item">
+                      <h3 class="accordion-header" id="separated-faq-heading-0">
+                        <button
+                          class="accordion-button"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#separated-faq-panel-0"
+                          aria-expanded="true"
+                          aria-controls="separated-faq-panel-0"
+                        >
+                          How do I create a workspace?
+                        </button>
+                      </h3>
+                      <div
+                        class="accordion-collapse collapse show"
+                        id="separated-faq-panel-0"
+                        aria-labelledby="separated-faq-heading-0"
+                        data-bs-parent="#separated-faq"
+                      >
+                        <div class="accordion-body">
+                          Start with a project name, invite your teammates, and
+                          organize your first set of tasks. You can adjust the
+                          workspace settings whenever you need.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h3 class="accordion-header" id="separated-faq-heading-1">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#separated-faq-panel-1"
+                          aria-expanded="false"
+                          aria-controls="separated-faq-panel-1"
+                        >
+                          Can I invite external collaborators?
+                        </button>
+                      </h3>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="separated-faq-panel-1"
+                        aria-labelledby="separated-faq-heading-1"
+                        data-bs-parent="#separated-faq"
+                      >
+                        <div class="accordion-body">
+                          Yes. Give collaborators access to the projects they
+                          need and review their permissions from your workspace
+                          settings.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h3 class="accordion-header" id="separated-faq-heading-2">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#separated-faq-panel-2"
+                          aria-expanded="false"
+                          aria-controls="separated-faq-panel-2"
+                        >
+                          Where can I manage notifications?
+                        </button>
+                      </h3>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="separated-faq-panel-2"
+                        aria-labelledby="separated-faq-heading-2"
+                        data-bs-parent="#separated-faq"
+                      >
+                        <div class="accordion-body">
+                          Open your profile settings to choose email updates,
+                          task reminders, and workspace announcements.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Minimal FAQ</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      A flush layout for lightweight help and supporting
+                      details.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="accordion accordion-flush" id="minimal-faq">
+                    <div class="accordion-item">
+                      <h3 class="accordion-header" id="minimal-faq-heading-0">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#minimal-faq-panel-0"
+                          aria-expanded="false"
+                          aria-controls="minimal-faq-panel-0"
+                        >
+                          How do I create a workspace?
+                        </button>
+                      </h3>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="minimal-faq-panel-0"
+                        aria-labelledby="minimal-faq-heading-0"
+                        data-bs-parent="#minimal-faq"
+                      >
+                        <div class="accordion-body">
+                          Start with a project name, invite your teammates, and
+                          organize your first set of tasks. You can adjust the
+                          workspace settings whenever you need.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h3 class="accordion-header" id="minimal-faq-heading-1">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#minimal-faq-panel-1"
+                          aria-expanded="false"
+                          aria-controls="minimal-faq-panel-1"
+                        >
+                          Can I invite external collaborators?
+                        </button>
+                      </h3>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="minimal-faq-panel-1"
+                        aria-labelledby="minimal-faq-heading-1"
+                        data-bs-parent="#minimal-faq"
+                      >
+                        <div class="accordion-body">
+                          Yes. Give collaborators access to the projects they
+                          need and review their permissions from your workspace
+                          settings.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h3 class="accordion-header" id="minimal-faq-heading-2">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#minimal-faq-panel-2"
+                          aria-expanded="false"
+                          aria-controls="minimal-faq-panel-2"
+                        >
+                          Where can I manage notifications?
+                        </button>
+                      </h3>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="minimal-faq-panel-2"
+                        aria-labelledby="minimal-faq-heading-2"
+                        data-bs-parent="#minimal-faq"
+                      >
+                        <div class="accordion-body">
+                          Open your profile settings to choose email updates,
+                          task reminders, and workspace announcements.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Keep sections open</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Independent panels let people compare information.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="accordion" id="open-sections">
+                    <div class="accordion-item">
+                      <h3 class="accordion-header" id="open-sections-heading-0">
+                        <button
+                          class="accordion-button"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#open-sections-panel-0"
+                          aria-expanded="true"
+                          aria-controls="open-sections-panel-0"
+                        >
+                          Account preferences
+                        </button>
+                      </h3>
+                      <div
+                        class="accordion-collapse collapse show"
+                        id="open-sections-panel-0"
+                        aria-labelledby="open-sections-heading-0"
+                      >
+                        <div class="accordion-body">
+                          Set your display name, time zone, and language in your
+                          profile settings.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h3 class="accordion-header" id="open-sections-heading-1">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#open-sections-panel-1"
+                          aria-expanded="false"
+                          aria-controls="open-sections-panel-1"
+                        >
+                          Workspace preferences
+                        </button>
+                      </h3>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="open-sections-panel-1"
+                        aria-labelledby="open-sections-heading-1"
+                      >
+                        <div class="accordion-body">
+                          Choose a default project view and organize your team
+                          permissions.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h3 class="accordion-header" id="open-sections-heading-2">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#open-sections-panel-2"
+                          aria-expanded="false"
+                          aria-controls="open-sections-panel-2"
+                        >
+                          Notification preferences
+                        </button>
+                      </h3>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="open-sections-panel-2"
+                        aria-labelledby="open-sections-heading-2"
+                      >
+                        <div class="accordion-body">
+                          Control reminders and summaries without changing your
+                          workspace access.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Icon navigation</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Recognizable icons add context to each section.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="accordion accordions-items-seperate"
+                    id="icon-panels"
+                  >
+                    <div class="accordion-item">
+                      <h3 class="accordion-header" id="icon-panels-heading-0">
+                        <button
+                          class="accordion-button"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#icon-panels-panel-0"
+                          aria-expanded="true"
+                          aria-controls="icon-panels-panel-0"
+                        >
+                          <i
+                            class="ri-user-settings-line me-2 text-success"
+                            aria-hidden="true"
+                          ></i
+                          >Profile &amp; identity
+                        </button>
+                      </h3>
+                      <div
+                        class="accordion-collapse collapse show"
+                        id="icon-panels-panel-0"
+                        aria-labelledby="icon-panels-heading-0"
+                        data-bs-parent="#icon-panels"
+                      >
+                        <div class="accordion-body">
+                          Keep your profile details current so teammates can
+                          find the right person.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h3 class="accordion-header" id="icon-panels-heading-1">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#icon-panels-panel-1"
+                          aria-expanded="false"
+                          aria-controls="icon-panels-panel-1"
+                        >
+                          <i
+                            class="ri-shield-check-line me-2 text-success"
+                            aria-hidden="true"
+                          ></i
+                          >Security &amp; access
+                        </button>
+                      </h3>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="icon-panels-panel-1"
+                        aria-labelledby="icon-panels-heading-1"
+                        data-bs-parent="#icon-panels"
+                      >
+                        <div class="accordion-body">
+                          Review active sessions and use strong sign-in
+                          credentials.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h3 class="accordion-header" id="icon-panels-heading-2">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#icon-panels-panel-2"
+                          aria-expanded="false"
+                          aria-controls="icon-panels-panel-2"
+                        >
+                          <i
+                            class="ri-notification-line me-2 text-success"
+                            aria-hidden="true"
+                          ></i
+                          >Updates &amp; reminders
+                        </button>
+                      </h3>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="icon-panels-panel-2"
+                        aria-labelledby="icon-panels-heading-2"
+                        data-bs-parent="#icon-panels"
+                      >
+                        <div class="accordion-body">
+                          Choose the updates that help you stay focused.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Project milestones</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Progress labels make delivery stages easier to scan.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="accordion accordion-primary" id="milestones">
+                    <div class="accordion-item">
+                      <h3 class="accordion-header" id="milestones-heading-0">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#milestones-panel-0"
+                          aria-expanded="false"
+                          aria-controls="milestones-panel-0"
+                        >
+                          <span class="flex-grow-1"
+                            >Discovery &amp; research</span
+                          ><span class="badge bg-success-transparent me-3"
+                            >Complete</span
+                          >
+                        </button>
+                      </h3>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="milestones-panel-0"
+                        aria-labelledby="milestones-heading-0"
+                        data-bs-parent="#milestones"
+                      >
+                        <div class="accordion-body">
+                          Customer interviews and research findings have been
+                          reviewed with the product team.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h3 class="accordion-header" id="milestones-heading-1">
+                        <button
+                          class="accordion-button"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#milestones-panel-1"
+                          aria-expanded="true"
+                          aria-controls="milestones-panel-1"
+                        >
+                          <span class="flex-grow-1">Design &amp; prototype</span
+                          ><span class="badge bg-primary-transparent me-3"
+                            >In progress</span
+                          >
+                        </button>
+                      </h3>
+                      <div
+                        class="accordion-collapse collapse show"
+                        id="milestones-panel-1"
+                        aria-labelledby="milestones-heading-1"
+                        data-bs-parent="#milestones"
+                      >
+                        <div class="accordion-body">
+                          Interaction patterns are ready. The team is refining
+                          the prototype before usability testing.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h3 class="accordion-header" id="milestones-heading-2">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#milestones-panel-2"
+                          aria-expanded="false"
+                          aria-controls="milestones-panel-2"
+                        >
+                          <span class="flex-grow-1"
+                            >Development &amp; release</span
+                          ><span class="badge bg-light text-default me-3"
+                            >Upcoming</span
+                          >
+                        </button>
+                      </h3>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="milestones-panel-2"
+                        aria-labelledby="milestones-heading-2"
+                        data-bs-parent="#milestones"
+                      >
+                        <div class="accordion-body">
+                          Implementation starts after design sign-off and a
+                          final scope review.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Team directory</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Portraits connect expandable details to real people.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="accordion accordions-items-seperate"
+                    id="team-directory"
+                  >
+                    <div class="accordion-item">
+                      <h3
+                        class="accordion-header"
+                        id="team-directory-heading-0"
+                      >
+                        <button
+                          class="accordion-button"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#team-directory-panel-0"
+                          aria-expanded="true"
+                          aria-controls="team-directory-panel-0"
+                        >
+                          <span class="avatar avatar-xs avatar-rounded me-2"
+                            ><img
+                              src="../assets/images/users/5.jpg"
+                              alt="Amelia Hart"
+                              loading="lazy" /></span
+                          >Amelia Hart
+                        </button>
+                      </h3>
+                      <div
+                        class="accordion-collapse collapse show"
+                        id="team-directory-panel-0"
+                        aria-labelledby="team-directory-heading-0"
+                        data-bs-parent="#team-directory"
+                      >
+                        <div class="accordion-body">
+                          <strong class="text-default fw-medium"
+                            >Product designer</strong
+                          >
+                          <p class="mb-2 mt-1">
+                            Owns the design system, interface patterns, and
+                            product experience.
+                          </p>
+                          <a href="profile.html" class="text-muted"
+                            >View profile</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h3
+                        class="accordion-header"
+                        id="team-directory-heading-1"
+                      >
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#team-directory-panel-1"
+                          aria-expanded="false"
+                          aria-controls="team-directory-panel-1"
+                        >
+                          <span class="avatar avatar-xs avatar-rounded me-2"
+                            ><img
+                              src="../assets/images/users/12.jpg"
+                              alt="Liam Carter"
+                              loading="lazy" /></span
+                          >Liam Carter
+                        </button>
+                      </h3>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="team-directory-panel-1"
+                        aria-labelledby="team-directory-heading-1"
+                        data-bs-parent="#team-directory"
+                      >
+                        <div class="accordion-body">
+                          <strong class="text-default fw-medium"
+                            >Project lead</strong
+                          >
+                          <p class="mb-0 mt-1">
+                            Coordinates delivery, project planning, and
+                            stakeholder updates.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Success accents</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Use the existing semantic accordion theme.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="accordion accordion-success" id="success-panels">
+                    <div class="accordion-item">
+                      <h3
+                        class="accordion-header"
+                        id="success-panels-heading-0"
+                      >
+                        <button
+                          class="accordion-button"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#success-panels-panel-0"
+                          aria-expanded="true"
+                          aria-controls="success-panels-panel-0"
+                        >
+                          Your workspace is ready
+                        </button>
+                      </h3>
+                      <div
+                        class="accordion-collapse collapse show"
+                        id="success-panels-panel-0"
+                        aria-labelledby="success-panels-heading-0"
+                        data-bs-parent="#success-panels"
+                      >
+                        <div class="accordion-body">
+                          The project structure is in place and your team can
+                          begin collaborating.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h3
+                        class="accordion-header"
+                        id="success-panels-heading-1"
+                      >
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#success-panels-panel-1"
+                          aria-expanded="false"
+                          aria-controls="success-panels-panel-1"
+                        >
+                          Your files are organized
+                        </button>
+                      </h3>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="success-panels-panel-1"
+                        aria-labelledby="success-panels-heading-1"
+                        data-bs-parent="#success-panels"
+                      >
+                        <div class="accordion-body">
+                          Shared folders keep project resources available to the
+                          right people.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h3
+                        class="accordion-header"
+                        id="success-panels-heading-2"
+                      >
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#success-panels-panel-2"
+                          aria-expanded="false"
+                          aria-controls="success-panels-panel-2"
+                        >
+                          Your next step
+                        </button>
+                      </h3>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="success-panels-panel-2"
+                        aria-labelledby="success-panels-heading-2"
+                        data-bs-parent="#success-panels"
+                      >
+                        <div class="accordion-body">
+                          Add a milestone and assign the first tasks to move the
+                          project forward.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Helpful guidance</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Soft information accents for contextual support.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="accordion accordion-info accordions-items-seperate"
+                    id="info-panels"
+                  >
+                    <div class="accordion-item">
+                      <h3 class="accordion-header" id="info-panels-heading-0">
+                        <button
+                          class="accordion-button"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#info-panels-panel-0"
+                          aria-expanded="true"
+                          aria-controls="info-panels-panel-0"
+                        >
+                          Before inviting your team
+                        </button>
+                      </h3>
+                      <div
+                        class="accordion-collapse collapse show"
+                        id="info-panels-panel-0"
+                        aria-labelledby="info-panels-heading-0"
+                        data-bs-parent="#info-panels"
+                      >
+                        <div class="accordion-body">
+                          Prepare a short description of the project and make
+                          sure access permissions are correct.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h3 class="accordion-header" id="info-panels-heading-1">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#info-panels-panel-1"
+                          aria-expanded="false"
+                          aria-controls="info-panels-panel-1"
+                        >
+                          Before sharing a document
+                        </button>
+                      </h3>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="info-panels-panel-1"
+                        aria-labelledby="info-panels-heading-1"
+                        data-bs-parent="#info-panels"
+                      >
+                        <div class="accordion-body">
+                          Check the file version and choose the appropriate
+                          sharing settings.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h3 class="accordion-header" id="info-panels-heading-2">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#info-panels-panel-2"
+                          aria-expanded="false"
+                          aria-controls="info-panels-panel-2"
+                        >
+                          Before closing a project
+                        </button>
+                      </h3>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="info-panels-panel-2"
+                        aria-labelledby="info-panels-heading-2"
+                        data-bs-parent="#info-panels"
+                      >
+                        <div class="accordion-body">
+                          Archive the final deliverables and capture the lessons
+                          for the next project.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Simple disclosure</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Show optional information with a compact button.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <p class="text-muted fs-13 mb-3">
+                    Keep the main message short and reveal more detail when
+                    needed.
+                  </p>
+                  <button
+                    class="btn btn-outline-success btn-sm"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#disclosure-details"
+                    aria-expanded="false"
+                    aria-controls="disclosure-details"
+                  >
+                    Additional details<i
+                      class="ri-arrow-down-s-line ms-1"
+                      aria-hidden="true"
+                    ></i>
+                  </button>
+                  <div class="collapse" id="disclosure-details">
+                    <div class="border rounded p-3 mt-3 fs-13 text-muted">
+                      Workspace changes are saved as you work. Your teammates
+                      can view shared updates according to their project
+                      permissions.
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <h2 class="fs-16 fw-semibold mb-3">Customized accordion styles</h2>
+            <div class="row">
+              <div class="col-xxl-6">
+                <section class="card custom-card">
+                  <div class="card-header">
+                    <div>
+                      <h2 class="card-title mb-1">Numbered workflow</h2>
+                      <p class="text-muted fs-12 mb-0">
+                        Small step markers turn each section into a clear
+                        sequence.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div
+                      class="accordion accordions-items-seperate accordion-success"
+                      id="custom-numbered"
+                    >
+                      <div class="accordion-item">
+                        <h3
+                          class="accordion-header"
+                          id="custom-numbered-heading-0"
+                        >
+                          <button
+                            class="accordion-button"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#custom-numbered-panel-0"
+                            aria-expanded="true"
+                            aria-controls="custom-numbered-panel-0"
+                          >
+                            <span
+                              class="avatar avatar-xs bg-success-transparent text-success rounded me-2"
+                              aria-hidden="true"
+                              >1</span
+                            >Plan your workspace
+                          </button>
+                        </h3>
+                        <div
+                          class="accordion-collapse collapse show"
+                          id="custom-numbered-panel-0"
+                          aria-labelledby="custom-numbered-heading-0"
+                          data-bs-parent="#custom-numbered"
+                        >
+                          <div class="accordion-body">
+                            Define a clear goal, decide what belongs in the
+                            project, and choose the people who will help deliver
+                            it.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h3
+                          class="accordion-header"
+                          id="custom-numbered-heading-1"
+                        >
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#custom-numbered-panel-1"
+                            aria-expanded="false"
+                            aria-controls="custom-numbered-panel-1"
+                          >
+                            <span
+                              class="avatar avatar-xs bg-success-transparent text-success rounded me-2"
+                              aria-hidden="true"
+                              >2</span
+                            >Organize your work
+                          </button>
+                        </h3>
+                        <div
+                          class="accordion-collapse collapse"
+                          id="custom-numbered-panel-1"
+                          aria-labelledby="custom-numbered-heading-1"
+                          data-bs-parent="#custom-numbered"
+                        >
+                          <div class="accordion-body">
+                            Group related tasks, assign an owner, and agree on
+                            milestones that make progress visible.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h3
+                          class="accordion-header"
+                          id="custom-numbered-heading-2"
+                        >
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#custom-numbered-panel-2"
+                            aria-expanded="false"
+                            aria-controls="custom-numbered-panel-2"
+                          >
+                            <span
+                              class="avatar avatar-xs bg-success-transparent text-success rounded me-2"
+                              aria-hidden="true"
+                              >3</span
+                            >Review &amp; improve
+                          </button>
+                        </h3>
+                        <div
+                          class="accordion-collapse collapse"
+                          id="custom-numbered-panel-2"
+                          aria-labelledby="custom-numbered-heading-2"
+                          data-bs-parent="#custom-numbered"
+                        >
+                          <div class="accordion-body">
+                            Share feedback with your team and record what you
+                            learn before starting the next phase.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="col-xxl-6">
+                <section class="card custom-card">
+                  <div class="card-header">
+                    <div>
+                      <h2 class="card-title mb-1">Accent panels</h2>
+                      <p class="text-muted fs-12 mb-0">
+                        Soft tinted surfaces with a distinct colored edge.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div
+                      class="accordion customized-accordion accordions-items-seperate"
+                      id="custom-accent"
+                    >
+                      <div class="accordion-item custom-accordion-primary">
+                        <h3
+                          class="accordion-header"
+                          id="custom-accent-heading-0"
+                        >
+                          <button
+                            class="accordion-button"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#custom-accent-panel-0"
+                            aria-expanded="true"
+                            aria-controls="custom-accent-panel-0"
+                          >
+                            Plan your workspace
+                          </button>
+                        </h3>
+                        <div
+                          class="accordion-collapse collapse show"
+                          id="custom-accent-panel-0"
+                          aria-labelledby="custom-accent-heading-0"
+                          data-bs-parent="#custom-accent"
+                        >
+                          <div class="accordion-body">
+                            Define a clear goal, decide what belongs in the
+                            project, and choose the people who will help deliver
+                            it.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item custom-accordion-success">
+                        <h3
+                          class="accordion-header"
+                          id="custom-accent-heading-1"
+                        >
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#custom-accent-panel-1"
+                            aria-expanded="false"
+                            aria-controls="custom-accent-panel-1"
+                          >
+                            Organize your work
+                          </button>
+                        </h3>
+                        <div
+                          class="accordion-collapse collapse"
+                          id="custom-accent-panel-1"
+                          aria-labelledby="custom-accent-heading-1"
+                          data-bs-parent="#custom-accent"
+                        >
+                          <div class="accordion-body">
+                            Group related tasks, assign an owner, and agree on
+                            milestones that make progress visible.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item custom-accordion-info">
+                        <h3
+                          class="accordion-header"
+                          id="custom-accent-heading-2"
+                        >
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#custom-accent-panel-2"
+                            aria-expanded="false"
+                            aria-controls="custom-accent-panel-2"
+                          >
+                            Review &amp; improve
+                          </button>
+                        </h3>
+                        <div
+                          class="accordion-collapse collapse"
+                          id="custom-accent-panel-2"
+                          aria-labelledby="custom-accent-heading-2"
+                          data-bs-parent="#custom-accent"
+                        >
+                          <div class="accordion-body">
+                            Share feedback with your team and record what you
+                            learn before starting the next phase.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="col-xxl-6">
+                <section class="card custom-card">
+                  <div class="card-header">
+                    <div>
+                      <h2 class="card-title mb-1">Outline panels</h2>
+                      <p class="text-muted fs-12 mb-0">
+                        Colored borders define each section without heavy fills.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div
+                      class="accordion accordion-border-warning accordions-items-seperate"
+                      id="custom-outline"
+                    >
+                      <div class="accordion-item">
+                        <h3
+                          class="accordion-header"
+                          id="custom-outline-heading-0"
+                        >
+                          <button
+                            class="accordion-button"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#custom-outline-panel-0"
+                            aria-expanded="true"
+                            aria-controls="custom-outline-panel-0"
+                          >
+                            Plan your workspace
+                          </button>
+                        </h3>
+                        <div
+                          class="accordion-collapse collapse show"
+                          id="custom-outline-panel-0"
+                          aria-labelledby="custom-outline-heading-0"
+                          data-bs-parent="#custom-outline"
+                        >
+                          <div class="accordion-body">
+                            Define a clear goal, decide what belongs in the
+                            project, and choose the people who will help deliver
+                            it.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h3
+                          class="accordion-header"
+                          id="custom-outline-heading-1"
+                        >
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#custom-outline-panel-1"
+                            aria-expanded="false"
+                            aria-controls="custom-outline-panel-1"
+                          >
+                            Organize your work
+                          </button>
+                        </h3>
+                        <div
+                          class="accordion-collapse collapse"
+                          id="custom-outline-panel-1"
+                          aria-labelledby="custom-outline-heading-1"
+                          data-bs-parent="#custom-outline"
+                        >
+                          <div class="accordion-body">
+                            Group related tasks, assign an owner, and agree on
+                            milestones that make progress visible.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h3
+                          class="accordion-header"
+                          id="custom-outline-heading-2"
+                        >
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#custom-outline-panel-2"
+                            aria-expanded="false"
+                            aria-controls="custom-outline-panel-2"
+                          >
+                            Review &amp; improve
+                          </button>
+                        </h3>
+                        <div
+                          class="accordion-collapse collapse"
+                          id="custom-outline-panel-2"
+                          aria-labelledby="custom-outline-heading-2"
+                          data-bs-parent="#custom-outline"
+                        >
+                          <div class="accordion-body">
+                            Share feedback with your team and record what you
+                            learn before starting the next phase.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="col-xxl-6">
+                <section class="card custom-card">
+                  <div class="card-header">
+                    <div>
+                      <h2 class="card-title mb-1">Solid active header</h2>
+                      <p class="text-muted fs-12 mb-0">
+                        A stronger active state highlights the expanded section.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div
+                      class="accordion accordion-solid-primary accordions-items-seperate"
+                      id="custom-solid"
+                    >
+                      <div class="accordion-item">
+                        <h3
+                          class="accordion-header"
+                          id="custom-solid-heading-0"
+                        >
+                          <button
+                            class="accordion-button"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#custom-solid-panel-0"
+                            aria-expanded="true"
+                            aria-controls="custom-solid-panel-0"
+                          >
+                            Plan your workspace
+                          </button>
+                        </h3>
+                        <div
+                          class="accordion-collapse collapse show"
+                          id="custom-solid-panel-0"
+                          aria-labelledby="custom-solid-heading-0"
+                          data-bs-parent="#custom-solid"
+                        >
+                          <div class="accordion-body">
+                            Define a clear goal, decide what belongs in the
+                            project, and choose the people who will help deliver
+                            it.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h3
+                          class="accordion-header"
+                          id="custom-solid-heading-1"
+                        >
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#custom-solid-panel-1"
+                            aria-expanded="false"
+                            aria-controls="custom-solid-panel-1"
+                          >
+                            Organize your work
+                          </button>
+                        </h3>
+                        <div
+                          class="accordion-collapse collapse"
+                          id="custom-solid-panel-1"
+                          aria-labelledby="custom-solid-heading-1"
+                          data-bs-parent="#custom-solid"
+                        >
+                          <div class="accordion-body">
+                            Group related tasks, assign an owner, and agree on
+                            milestones that make progress visible.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h3
+                          class="accordion-header"
+                          id="custom-solid-heading-2"
+                        >
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#custom-solid-panel-2"
+                            aria-expanded="false"
+                            aria-controls="custom-solid-panel-2"
+                          >
+                            Review &amp; improve
+                          </button>
+                        </h3>
+                        <div
+                          class="accordion-collapse collapse"
+                          id="custom-solid-panel-2"
+                          aria-labelledby="custom-solid-heading-2"
+                          data-bs-parent="#custom-solid"
+                        >
+                          <div class="accordion-body">
+                            Share feedback with your team and record what you
+                            learn before starting the next phase.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="col-xxl-6">
+                <section class="card custom-card">
+                  <div class="card-header">
+                    <div>
+                      <h2 class="card-title mb-1">Plus &amp; minus controls</h2>
+                      <p class="text-muted fs-12 mb-0">
+                        Custom indicators make the expand and collapse action
+                        familiar.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div
+                      class="accordion accordion-customicon1 accordion-flush"
+                      id="custom-plus"
+                    >
+                      <div class="accordion-item">
+                        <h3 class="accordion-header" id="custom-plus-heading-0">
+                          <button
+                            class="accordion-button py-2"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#custom-plus-panel-0"
+                            aria-expanded="true"
+                            aria-controls="custom-plus-panel-0"
+                          >
+                            Plan your workspace
+                          </button>
+                        </h3>
+                        <div
+                          class="accordion-collapse collapse show"
+                          id="custom-plus-panel-0"
+                          aria-labelledby="custom-plus-heading-0"
+                          data-bs-parent="#custom-plus"
+                        >
+                          <div class="accordion-body">
+                            Define a clear goal, decide what belongs in the
+                            project, and choose the people who will help deliver
+                            it.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h3 class="accordion-header" id="custom-plus-heading-1">
+                          <button
+                            class="accordion-button collapsed py-2"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#custom-plus-panel-1"
+                            aria-expanded="false"
+                            aria-controls="custom-plus-panel-1"
+                          >
+                            Organize your work
+                          </button>
+                        </h3>
+                        <div
+                          class="accordion-collapse collapse"
+                          id="custom-plus-panel-1"
+                          aria-labelledby="custom-plus-heading-1"
+                          data-bs-parent="#custom-plus"
+                        >
+                          <div class="accordion-body">
+                            Group related tasks, assign an owner, and agree on
+                            milestones that make progress visible.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h3 class="accordion-header" id="custom-plus-heading-2">
+                          <button
+                            class="accordion-button collapsed py-2"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#custom-plus-panel-2"
+                            aria-expanded="false"
+                            aria-controls="custom-plus-panel-2"
+                          >
+                            Review &amp; improve
+                          </button>
+                        </h3>
+                        <div
+                          class="accordion-collapse collapse"
+                          id="custom-plus-panel-2"
+                          aria-labelledby="custom-plus-heading-2"
+                          data-bs-parent="#custom-plus"
+                        >
+                          <div class="accordion-body">
+                            Share feedback with your team and record what you
+                            learn before starting the next phase.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="col-xxl-6">
+                <section class="card custom-card">
+                  <div class="card-header">
+                    <div>
+                      <h2 class="card-title mb-1">Leading indicators</h2>
+                      <p class="text-muted fs-12 mb-0">
+                        Left-aligned controls create a compact navigation-style
+                        layout.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div
+                      class="accordion accordionicon-left accordions-items-seperate"
+                      id="custom-left"
+                    >
+                      <div class="accordion-item">
+                        <h3 class="accordion-header" id="custom-left-heading-0">
+                          <button
+                            class="accordion-button py-2"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#custom-left-panel-0"
+                            aria-expanded="true"
+                            aria-controls="custom-left-panel-0"
+                          >
+                            Plan your workspace
+                          </button>
+                        </h3>
+                        <div
+                          class="accordion-collapse collapse show"
+                          id="custom-left-panel-0"
+                          aria-labelledby="custom-left-heading-0"
+                          data-bs-parent="#custom-left"
+                        >
+                          <div class="accordion-body">
+                            Define a clear goal, decide what belongs in the
+                            project, and choose the people who will help deliver
+                            it.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h3 class="accordion-header" id="custom-left-heading-1">
+                          <button
+                            class="accordion-button collapsed py-2"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#custom-left-panel-1"
+                            aria-expanded="false"
+                            aria-controls="custom-left-panel-1"
+                          >
+                            Organize your work
+                          </button>
+                        </h3>
+                        <div
+                          class="accordion-collapse collapse"
+                          id="custom-left-panel-1"
+                          aria-labelledby="custom-left-heading-1"
+                          data-bs-parent="#custom-left"
+                        >
+                          <div class="accordion-body">
+                            Group related tasks, assign an owner, and agree on
+                            milestones that make progress visible.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h3 class="accordion-header" id="custom-left-heading-2">
+                          <button
+                            class="accordion-button collapsed py-2"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#custom-left-panel-2"
+                            aria-expanded="false"
+                            aria-controls="custom-left-panel-2"
+                          >
+                            Review &amp; improve
+                          </button>
+                        </h3>
+                        <div
+                          class="accordion-collapse collapse"
+                          id="custom-left-panel-2"
+                          aria-labelledby="custom-left-heading-2"
+                          data-bs-parent="#custom-left"
+                        >
+                          <div class="accordion-body">
+                            Share feedback with your team and record what you
+                            learn before starting the next phase.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Multiple collapsible panels</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Open each detail separately or toggle both together.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex flex-wrap gap-2 mb-3">
+                    <button
+                      class="btn btn-outline-secondary"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#delivery-summary"
+                      aria-expanded="false"
+                      aria-controls="delivery-summary"
+                    >
+                      Delivery</button
+                    ><button
+                      class="btn btn-outline-secondary"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#review-summary"
+                      aria-expanded="false"
+                      aria-controls="review-summary"
+                    >
+                      Review</button
+                    ><button
+                      class="btn btn-secondary"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target=".shared-collapse-demo"
+                      aria-expanded="false"
+                      aria-controls="delivery-summary review-summary"
+                    >
+                      Toggle both
+                    </button>
+                  </div>
+                  <div
+                    class="collapse shared-collapse-demo"
+                    id="delivery-summary"
+                  >
+                    <div class="border rounded p-3 mb-2">
+                      <h3 class="fs-13 fw-semibold mb-1">Delivery checklist</h3>
+                      <p class="text-muted fs-13 mb-0">
+                        Confirm the scope, assign owners, and set your release
+                        date.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="collapse shared-collapse-demo"
+                    id="review-summary"
+                  >
+                    <div class="border rounded p-3">
+                      <h3 class="fs-13 fw-semibold mb-1">Review checklist</h3>
+                      <p class="text-muted fs-13 mb-0">
+                        Collect feedback, resolve open questions, and get final
+                        sign-off.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Horizontal reveal</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Expand supporting content across the available width.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <button
+                    class="btn btn-outline-danger mb-3"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#horizontal-detail"
+                    aria-expanded="false"
+                    aria-controls="horizontal-detail"
+                  >
+                    Show project note<i
+                      class="ri-arrow-right-line ms-1"
+                      aria-hidden="true"
+                    ></i>
+                  </button>
+                  <div style="min-height: 120px">
+                    <div
+                      class="collapse collapse-horizontal"
+                      id="horizontal-detail"
+                    >
+                      <div
+                        class="border rounded p-3"
+                        style="width: 260px; max-width: 100%"
+                      >
+                        <h3 class="fs-13 fw-semibold mb-2">
+                          A note for the team
+                        </h3>
+                        <p class="text-muted fs-13 mb-0">
+                          Share a short update before your next milestone
+                          review.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"--><!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"--><!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/js/app-interactions.js"></script>
+    <script src="../assets/libs/prismjs/prism.js"></script>
+    <script src="../assets/js/prism-custom.js"></script>
+  </body>
+</html>

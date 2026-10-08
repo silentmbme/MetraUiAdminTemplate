@@ -1,0 +1,580 @@
+<!-- include document-head.html"-->
+    <link
+      rel="stylesheet"
+      href="../assets/libs/prismjs/themes/prism-coy.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"--><!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main data-markup-examples class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Button groups</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Components</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Button groups
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Reporting period</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Choose the timeframe for a workspace report.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-3"
+                  >
+                    <div>
+                      <h3 class="fs-16 fw-semibold mb-1">
+                        Workspace performance
+                      </h3>
+                      <p class="text-muted fs-13 mb-0">
+                        Compare activity across reporting periods.
+                      </p>
+                    </div>
+                    <span class="badge bg-light text-muted">Analytics</span>
+                  </div>
+                  <div
+                    class="btn-group"
+                    role="group"
+                    aria-label="report period"
+                  >
+                    <input
+                      type="radio"
+                      class="btn-check"
+                      name="report-period"
+                      id="report-period-0"
+                      checked
+                    /><label
+                      class="btn btn-outline-success"
+                      for="report-period-0"
+                      >Week</label
+                    ><input
+                      type="radio"
+                      class="btn-check"
+                      name="report-period"
+                      id="report-period-1"
+                    /><label
+                      class="btn btn-outline-success"
+                      for="report-period-1"
+                      >Month</label
+                    ><input
+                      type="radio"
+                      class="btn-check"
+                      name="report-period"
+                      id="report-period-2"
+                    /><label
+                      class="btn btn-outline-success"
+                      for="report-period-2"
+                      >Quarter</label
+                    ><input
+                      type="radio"
+                      class="btn-check"
+                      name="report-period"
+                      id="report-period-3"
+                    /><label
+                      class="btn btn-outline-success border-start-0"
+                      for="report-period-3"
+                      >Year</label
+                    >
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Project workspace</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Switch between related project views.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="bg-light rounded p-3 mb-3">
+                    <h3 class="fs-14 fw-semibold mb-1">Onboarding refresh</h3>
+                    <span class="text-muted fs-12"
+                      >18 of 24 tasks complete</span
+                    >
+                  </div>
+                  <div class="btn-group" role="group" aria-label="project view">
+                    <input
+                      type="radio"
+                      class="btn-check"
+                      name="project-view"
+                      id="project-view-0"
+                      checked
+                    /><label
+                      class="btn btn-outline-success"
+                      for="project-view-0"
+                      >Overview</label
+                    ><input
+                      type="radio"
+                      class="btn-check"
+                      name="project-view"
+                      id="project-view-1"
+                    /><label
+                      class="btn btn-outline-success"
+                      for="project-view-1"
+                      >Board</label
+                    ><input
+                      type="radio"
+                      class="btn-check"
+                      name="project-view"
+                      id="project-view-2"
+                    /><label
+                      class="btn btn-outline-success border-start-0"
+                      for="project-view-2"
+                      >Timeline</label
+                    >
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Filter your tasks</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Combine filters using native checkbox controls.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="btn-group" role="group" aria-label="task options">
+                    <input
+                      type="checkbox"
+                      class="btn-check"
+                      name="task-options"
+                      id="task-options-0"
+                      checked
+                    /><label
+                      class="btn btn-outline-secondary"
+                      for="task-options-0"
+                      >Assigned to me</label
+                    ><input
+                      type="checkbox"
+                      class="btn-check"
+                      name="task-options"
+                      id="task-options-1"
+                    /><label
+                      class="btn btn-outline-secondary"
+                      for="task-options-1"
+                      >Starred</label
+                    ><input
+                      type="checkbox"
+                      class="btn-check"
+                      name="task-options"
+                      id="task-options-2"
+                    /><label
+                      class="btn btn-outline-secondary"
+                      for="task-options-2"
+                      >Due soon</label
+                    >
+                  </div>
+                  <p class="text-muted fs-13 mt-3 mb-0">
+                    Select multiple options to refine your task list.
+                  </p>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Approval queue</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Make a decision using grouped actions.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex gap-3 align-items-center mb-3">
+                    <span class="avatar avatar-md avatar-rounded"
+                      ><img src="../assets/images/users/12.jpg" alt=""
+                    /></span>
+                    <div>
+                      <h3 class="fs-14 fw-semibold mb-1">
+                        Workspace access request
+                      </h3>
+                      <span class="text-muted fs-12"
+                        >Liam Carter / Product team</span
+                      >
+                    </div>
+                  </div>
+                  <div
+                    class="btn-group"
+                    role="group"
+                    aria-label="Request decision"
+                  >
+                    <button
+                      class="btn btn-success-light"
+                      type="button"
+                      data-group-demo
+                    >
+                      Approve</button
+                    ><button
+                      class="btn btn-warning-light"
+                      type="button"
+                      data-group-demo
+                    >
+                      Review later</button
+                    ><button
+                      class="btn btn-danger-light"
+                      type="button"
+                      data-group-demo
+                    >
+                      Decline
+                    </button>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Document toolbar</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Group tools by their purpose.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="btn-toolbar gap-3"
+                    role="toolbar"
+                    aria-label="Document tools"
+                  >
+                    <div
+                      class="btn-group"
+                      role="group"
+                      aria-label="Text formatting"
+                    >
+                      <button
+                        class="btn btn-outline-secondary border-end-0"
+                        type="button"
+                        data-bs-toggle="button"
+                        aria-pressed="false"
+                        aria-label="Bold"
+                      >
+                        <i class="ri-bold" aria-hidden="true"></i></button
+                      ><button
+                        class="btn btn-outline-secondary border-end-0"
+                        type="button"
+                        data-bs-toggle="button"
+                        aria-pressed="false"
+                        aria-label="Italic"
+                      >
+                        <i class="ri-italic" aria-hidden="true"></i></button
+                      ><button
+                        class="btn btn-outline-secondary"
+                        type="button"
+                        data-bs-toggle="button"
+                        aria-pressed="false"
+                        aria-label="Underline"
+                      >
+                        <i class="ri-underline" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                    <div
+                      class="btn-group"
+                      role="group"
+                      aria-label="Document actions"
+                    >
+                      <button
+                        class="btn btn-light"
+                        type="button"
+                        data-group-demo
+                        aria-label="Copy"
+                      >
+                        <i
+                          class="ri-file-copy-line"
+                          aria-hidden="true"
+                        ></i></button
+                      ><button
+                        class="btn btn-light"
+                        type="button"
+                        data-group-demo
+                        aria-label="Download"
+                      >
+                        <i
+                          class="ri-download-line"
+                          aria-hidden="true"
+                        ></i></button
+                      ><button
+                        class="btn btn-light"
+                        type="button"
+                        data-group-demo
+                        aria-label="Share"
+                      >
+                        <i class="ri-share-line" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <p class="text-muted fs-13 mt-3 mb-0">
+                    Formatting controls toggle their pressed state.
+                  </p>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Invoice actions</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Keep creation and navigation together.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="btn-group"
+                    role="group"
+                    aria-label="Invoice navigation"
+                  >
+                    <a class="btn btn-primary" href="invoice-create.html"
+                      >Create invoice</a
+                    ><a class="btn btn-primary" href="invoice-list.html"
+                      >View invoices</a
+                    >
+                    <div class="btn-group" role="group">
+                      <button
+                        class="btn btn-primary dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        More
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a class="dropdown-item" href="invoice-details.html"
+                            >Invoice details</a
+                          >
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="profile-settings.html"
+                            >Billing profile</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Notification delivery</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Select a preferred delivery channel.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="btn-group-vertical"
+                    role="group"
+                    aria-label="delivery channel"
+                  >
+                    <input
+                      type="radio"
+                      class="btn-check"
+                      name="delivery-channel"
+                      id="delivery-channel-0"
+                      checked
+                    /><label
+                      class="btn btn-outline-success"
+                      for="delivery-channel-0"
+                      >Email</label
+                    ><input
+                      type="radio"
+                      class="btn-check"
+                      name="delivery-channel"
+                      id="delivery-channel-1"
+                    /><label
+                      class="btn btn-outline-success"
+                      for="delivery-channel-1"
+                      >In-app</label
+                    ><input
+                      type="radio"
+                      class="btn-check"
+                      name="delivery-channel"
+                      id="delivery-channel-2"
+                    /><label
+                      class="btn btn-outline-success border-top-0"
+                      for="delivery-channel-2"
+                      >Push</label
+                    >
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Calendar navigation</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Move between dates using a compact group.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="d-flex align-items-center justify-content-between flex-wrap gap-3"
+                  >
+                    <span class="fs-14 fw-semibold">October 2026</span>
+                    <div
+                      class="btn-group"
+                      role="group"
+                      aria-label="Calendar navigation"
+                    >
+                      <button
+                        class="btn btn-outline-secondary"
+                        type="button"
+                        data-group-demo
+                        aria-label="Previous month"
+                      >
+                        <i
+                          class="ri-arrow-left-s-line"
+                          aria-hidden="true"
+                        ></i></button
+                      ><a
+                        class="btn btn-outline-secondary"
+                        href="full-calendar.html"
+                        >Open calendar</a
+                      ><button
+                        class="btn btn-outline-secondary"
+                        type="button"
+                        data-group-demo
+                        aria-label="Next month"
+                      >
+                        <i class="ri-arrow-right-s-line" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <p class="text-muted fs-12 mt-3 mb-0">
+                    Arrow buttons demonstrate grouped actions.
+                  </p>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Compact controls</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Smaller groups for dense toolbars.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="btn-group btn-group-sm"
+                    role="group"
+                    aria-label="Compact record actions"
+                  >
+                    <button
+                      class="btn btn-outline-secondary"
+                      type="button"
+                      data-group-demo
+                    >
+                      Preview</button
+                    ><button
+                      class="btn btn-outline-secondary"
+                      type="button"
+                      data-group-demo
+                    >
+                      Duplicate</button
+                    ><button
+                      class="btn btn-outline-secondary"
+                      type="button"
+                      data-group-demo
+                    >
+                      Archive
+                    </button>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Unavailable actions</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Keep disabled actions visible in their group.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="btn-group"
+                    role="group"
+                    aria-label="File permissions"
+                  >
+                    <a
+                      class="btn btn-outline-success border-end-0"
+                      href="file-manager.html"
+                      >Browse files</a
+                    ><button
+                      class="btn btn-outline-primary border-end-0"
+                      type="button"
+                      disabled
+                    >
+                      Upload restricted</button
+                    ><button
+                      class="btn btn-outline-primary"
+                      type="button"
+                      disabled
+                    >
+                      Delete restricted
+                    </button>
+                  </div>
+                  <p class="text-muted fs-13 mt-3 mb-0">
+                    Disabled actions remain grouped with available navigation.
+                  </p>
+                </div>
+              </section>
+            </div>
+          </div>
+          <p
+            class="text-muted fs-13 mt-3"
+            id="button-group-feedback"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </div>
+      </main>
+      <!-- include site-footer.html"--><!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"--><!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/js/buttongroup.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+    <script src="../assets/libs/prismjs/prism.js"></script>
+    <script src="../assets/js/prism-custom.js"></script>
+  </body>
+</html>

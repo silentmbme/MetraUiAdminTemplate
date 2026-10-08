@@ -1,0 +1,330 @@
+<!-- include document-head.html"-->
+    <link rel="stylesheet" href="../assets/css/google-maps.css" />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+
+      <div class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Google Maps</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">Maps</li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Google Maps
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid google-workspace">
+          <div class="row">
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header justify-content-between gap-2">
+                  <div>
+                    <div class="card-title">Street explorer</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Explore London with familiar map controls.
+                    </p>
+                  </div>
+                  <button
+                    class="btn btn-sm btn-light"
+                    type="button"
+                    data-google-reset="google-map"
+                    aria-label="Reset street explorer"
+                  >
+                    <i class="ri-refresh-line" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="google-map"
+                    class="google-demo"
+                    role="group"
+                    aria-label="Street explorer interactive map"
+                  ></div>
+                  <p
+                    class="text-muted fs-12 mt-3 mb-0"
+                    data-google-status="google-map"
+                    aria-live="polite"
+                  >
+                    Drag to explore. Use the map controls to zoom.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header justify-content-between gap-2">
+                  <div>
+                    <div class="card-title">Satellite view</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Switch to aerial imagery for a closer look.
+                    </p>
+                  </div>
+                  <button
+                    class="btn btn-sm btn-light"
+                    type="button"
+                    data-google-reset="google-satellite"
+                    aria-label="Reset satellite view"
+                  >
+                    <i class="ri-refresh-line" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="google-satellite"
+                    class="google-demo"
+                    role="group"
+                    aria-label="Satellite view interactive map"
+                  ></div>
+                  <p
+                    class="text-muted fs-12 mt-3 mb-0"
+                    data-google-status="google-satellite"
+                    aria-live="polite"
+                  >
+                    Drag to explore. Use the map controls to zoom.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header justify-content-between gap-2">
+                  <div>
+                    <div class="card-title">Terrain view</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Explore the landscape around the Lake District.
+                    </p>
+                  </div>
+                  <button
+                    class="btn btn-sm btn-light"
+                    type="button"
+                    data-google-reset="google-terrain"
+                    aria-label="Reset terrain view"
+                  >
+                    <i class="ri-refresh-line" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="google-terrain"
+                    class="google-demo"
+                    role="group"
+                    aria-label="Terrain view interactive map"
+                  ></div>
+                  <p
+                    class="text-muted fs-12 mt-3 mb-0"
+                    data-google-status="google-terrain"
+                    aria-live="polite"
+                  >
+                    Drag to explore. Use the map controls to zoom.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header justify-content-between gap-2">
+                  <div>
+                    <div class="card-title">Landmark popups</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Select a location pin to view its details.
+                    </p>
+                  </div>
+                  <button
+                    class="btn btn-sm btn-light"
+                    type="button"
+                    data-google-reset="map-markers"
+                    aria-label="Reset landmark popups"
+                  >
+                    <i class="ri-refresh-line" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="map-markers"
+                    class="google-demo"
+                    role="group"
+                    aria-label="Landmark popups interactive map"
+                  ></div>
+                  <p
+                    class="text-muted fs-12 mt-3 mb-0"
+                    data-google-status="map-markers"
+                    aria-live="polite"
+                  >
+                    Drag to explore. Use the map controls to zoom.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header justify-content-between gap-2">
+                  <div>
+                    <div class="card-title">Route preview</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      An illustrative connection between London landmarks.
+                    </p>
+                  </div>
+                  <button
+                    class="btn btn-sm btn-light"
+                    type="button"
+                    data-google-reset="google-route"
+                    aria-label="Reset route preview"
+                  >
+                    <i class="ri-refresh-line" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="google-route"
+                    class="google-demo"
+                    role="group"
+                    aria-label="Route preview interactive map"
+                  ></div>
+                  <p
+                    class="text-muted fs-12 mt-3 mb-0"
+                    data-google-status="google-route"
+                    aria-live="polite"
+                  >
+                    Drag to explore. Use the map controls to zoom.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header justify-content-between gap-2">
+                  <div>
+                    <div class="card-title">Coverage boundaries</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      A sample service radius and polygon boundary.
+                    </p>
+                  </div>
+                  <button
+                    class="btn btn-sm btn-light"
+                    type="button"
+                    data-google-reset="map-geofencing"
+                    aria-label="Reset coverage boundaries"
+                  >
+                    <i class="ri-refresh-line" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="map-geofencing"
+                    class="google-demo"
+                    role="group"
+                    aria-label="Coverage boundaries interactive map"
+                  ></div>
+                  <p
+                    class="text-muted fs-12 mt-3 mb-0"
+                    data-google-status="map-geofencing"
+                    aria-live="polite"
+                  >
+                    Drag to explore. Use the map controls to zoom.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header justify-content-between gap-2">
+                  <div>
+                    <div class="card-title">Traffic layer</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Toggle traffic information over the street map.
+                    </p>
+                  </div>
+                  <button
+                    class="btn btn-sm btn-light"
+                    id="google-traffic-toggle"
+                    type="button"
+                    aria-pressed="true"
+                  >
+                    Traffic on
+                  </button>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="map-layers"
+                    class="google-demo"
+                    role="group"
+                    aria-label="Traffic layer interactive map"
+                  ></div>
+                  <p
+                    class="text-muted fs-12 mt-3 mb-0"
+                    data-google-status="map-layers"
+                    aria-live="polite"
+                  >
+                    Drag to explore. Use the map controls to zoom.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header justify-content-between gap-2">
+                  <div>
+                    <div class="card-title">Street View</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Look around a street-level panorama.
+                    </p>
+                  </div>
+                  <button
+                    class="btn btn-sm btn-light"
+                    type="button"
+                    data-google-reset="streetview-map"
+                    aria-label="Reset street view"
+                  >
+                    <i class="ri-refresh-line" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="streetview-map"
+                    class="google-demo"
+                    role="group"
+                    aria-label="Street View interactive map"
+                  ></div>
+                  <p
+                    class="text-muted fs-12 mt-3 mb-0"
+                    data-google-status="streetview-map"
+                    aria-live="polite"
+                  >
+                    Drag to look around the panorama.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <!-- include common-scripts.html"-->
+
+    <!-- include appearance-customizer-scripts.html"-->
+
+    <!-- Google Maps API -->
+
+    <!-- Google Maps JS -->
+    <script src="../assets/js/google-maps-config.js"></script>
+    <script src="../assets/js/google-maps.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

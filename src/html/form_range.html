@@ -1,0 +1,475 @@
+<!-- include document-head.html"-->
+    <link
+      rel="stylesheet"
+      href="../assets/libs/prismjs/themes/prism-coy.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/libs/nouislider/nouislider.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Range controls</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">
+              <a href="javascript:void(0);">Forms</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="javascript:void(0);">Form Elements</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Range controls
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid">
+          <section aria-labelledby="native-range-heading">
+            <div class="row">
+              <div class="col-xxl-6">
+                <section class="card custom-card">
+                  <div class="card-header justify-content-between">
+                    <div>
+                      <h3 class="card-title mb-1">Milestone progress</h3>
+                      <p class="text-muted fs-12 mb-0">
+                        Standard, bounded, stepped and unavailable states.
+                      </p>
+                    </div>
+                    <div class="prism-toggle">
+                      <button
+                        class="btn btn-sm btn-outline-light rounded-pill"
+                        type="button"
+                      >
+                        View markup<i
+                          class="ri-code-line ms-2 d-inline-block align-middle"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <label class="form-label" for="customRange1"
+                      >Project completion</label
+                    ><input
+                      type="range"
+                      class="form-range mb-3"
+                      id="customRange1"
+                    />
+                    <label class="form-label" for="customRange2"
+                      >Team capacity · 0–5</label
+                    ><input
+                      type="range"
+                      class="form-range mb-3"
+                      min="0"
+                      max="5"
+                      id="customRange2"
+                    />
+                    <label class="form-label" for="customRange3"
+                      >Quality threshold · half-step</label
+                    ><input
+                      type="range"
+                      class="form-range mb-3"
+                      min="0"
+                      max="5"
+                      step="0.5"
+                      id="customRange3"
+                    />
+                    <label class="form-label" for="disabledRange"
+                      >Locked setting</label
+                    ><input
+                      type="range"
+                      class="form-range"
+                      id="disabledRange"
+                      disabled
+                    />
+                  </div>
+                  <div class="card-footer d-none border-top-0">
+                    <pre
+                      class="language-html"
+                    ><code class="language-html">&lt;input type="range" class="form-range"&gt;
+&lt;input type="range" class="form-range" min="0" max="5"&gt;
+&lt;input type="range" class="form-range" min="0" max="5" step="0.5"&gt;
+&lt;input type="range" class="form-range" disabled&gt;</code></pre>
+                  </div>
+                </section>
+              </div>
+              <div class="col-xxl-6">
+                <section class="card custom-card">
+                  <div class="card-header justify-content-between">
+                    <div>
+                      <h3 class="card-title mb-1">
+                        Budget and team allocation
+                      </h3>
+                      <p class="text-muted fs-12 mb-0">
+                        Single-value and interval controls for planning limits.
+                      </p>
+                    </div>
+                    <div class="prism-toggle">
+                      <button
+                        class="btn btn-sm btn-outline-light rounded-pill"
+                        type="button"
+                      >
+                        View markup<i
+                          class="ri-code-line ms-2 d-inline-block align-middle"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between mb-2">
+                      <label class="form-label mb-0" for="slider"
+                        >Monthly budget</label
+                      ><span class="badge bg-success-transparent text-success"
+                        >$0 – $100k</span
+                      >
+                    </div>
+                    <div id="slider" class="my-4"></div>
+                    <div class="d-flex justify-content-between mb-2">
+                      <label class="form-label mb-0" for="slider-fit"
+                        >Capacity range</label
+                      ><span class="text-muted fs-12">Fit handles</span>
+                    </div>
+                    <div id="slider-fit" class="my-4"></div>
+                    <div class="d-flex justify-content-between mb-2">
+                      <label class="form-label mb-0" for="slider-round"
+                        >Completion threshold</label
+                      ><span class="text-muted fs-12">Single value</span>
+                    </div>
+                    <div id="slider-round" class="my-4"></div>
+                    <div class="d-flex justify-content-between mb-2">
+                      <label class="form-label mb-0" for="slider-square"
+                        >Utilization target</label
+                      ><span class="text-muted fs-12">Square handle</span>
+                    </div>
+                    <div id="slider-square" class="my-4"></div>
+                  </div>
+                  <div class="card-footer d-none border-top-0">
+                    <pre
+                      class="language-html"
+                    ><code class="language-html">&lt;div id="slider"&gt;&lt;/div&gt;
+&lt;div id="slider-fit"&gt;&lt;/div&gt;
+&lt;div id="slider-round"&gt;&lt;/div&gt;
+&lt;div id="slider-square"&gt;&lt;/div&gt;
+&lt;script src="../assets/libs/nouislider/nouislider.min.js"&gt;&lt;/script&gt;
+&lt;script src="../assets/js/nouislider.js"&gt;&lt;/script&gt;</code></pre>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </section>
+
+          <section aria-labelledby="advanced-range-heading">
+            <div class="row">
+              <div class="col-xxl-6">
+                <section class="card custom-card">
+                  <div class="card-header justify-content-between">
+                    <div>
+                      <h3 class="card-title mb-1">
+                        Thresholds and scale markers
+                      </h3>
+                      <p class="text-muted fs-12 mb-0">
+                        Show allowed bounds, labeled steps and non-linear
+                        scales.
+                      </p>
+                    </div>
+                    <div class="prism-toggle">
+                      <button
+                        class="btn btn-sm btn-outline-light rounded-pill"
+                        type="button"
+                      >
+                        View markup<i
+                          class="ri-code-line ms-2 d-inline-block align-middle"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <label class="form-label">Rating threshold</label>
+                    <div id="slider-pips" class="my-4"></div>
+                    <label class="form-label mt-4"
+                      >Allowed operating window</label
+                    >
+                    <div id="soft" class="my-4"></div>
+                    <label class="form-label mt-4">Tiered pricing scale</label>
+                    <div id="nonlinear" class="my-4"></div>
+                    <div class="d-flex justify-content-between mt-4">
+                      <span id="lower-value" class="text-muted fs-12"></span
+                      ><span id="upper-value" class="text-muted fs-12"></span>
+                    </div>
+                  </div>
+                  <div class="card-footer d-none border-top-0">
+                    <pre
+                      class="language-html"
+                    ><code class="language-html">&lt;div id="slider-pips"&gt;&lt;/div&gt;
+&lt;div id="soft"&gt;&lt;/div&gt;
+&lt;div id="nonlinear"&gt;&lt;/div&gt;
+&lt;span id="lower-value"&gt;&lt;/span&gt;
+&lt;span id="upper-value"&gt;&lt;/span&gt;</code></pre>
+                  </div>
+                </section>
+              </div>
+              <div class="col-xxl-6">
+                <section class="card custom-card">
+                  <div class="card-header justify-content-between">
+                    <div>
+                      <h3 class="card-title mb-1">Compare and lock ranges</h3>
+                      <p class="text-muted fs-12 mb-0">
+                        Compare two values, keep their distance, or combine
+                        nearby tooltips.
+                      </p>
+                    </div>
+                    <div class="prism-toggle">
+                      <button
+                        class="btn btn-sm btn-outline-light rounded-pill"
+                        type="button"
+                      >
+                        View markup<i
+                          class="ri-code-line ms-2 d-inline-block align-middle"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div
+                      class="d-flex justify-content-between align-items-center mb-2"
+                    >
+                      <label class="form-label mb-0">Current plan</label
+                      ><span
+                        id="slider1-span"
+                        class="badge bg-success-transparent text-success"
+                      ></span>
+                    </div>
+                    <div id="slider1" class="my-3"></div>
+                    <div
+                      class="d-flex justify-content-between align-items-center mb-2 mt-4"
+                    >
+                      <label class="form-label mb-0">Proposed plan</label
+                      ><span
+                        id="slider2-span"
+                        class="badge bg-secondary-transparent text-secondary"
+                      ></span>
+                    </div>
+                    <div id="slider2" class="my-3"></div>
+                    <div class="text-end">
+                      <button
+                        id="lockbutton"
+                        class="btn btn-sm btn-outline-secondary"
+                        type="button"
+                      >
+                        Lock ranges
+                      </button>
+                    </div>
+                    <label class="form-label mt-4"
+                      >Combined range tooltip</label
+                    >
+                    <div id="merging-tooltips" class="my-4"></div>
+                    <label class="form-label mt-4"
+                      >Value labels on handles</label
+                    >
+                    <div id="slider-hide" class="my-4"></div>
+                  </div>
+                  <div class="card-footer d-none border-top-0">
+                    <pre
+                      class="language-html"
+                    ><code class="language-html">&lt;div id="slider1"&gt;&lt;/div&gt;
+&lt;span id="slider1-span"&gt;&lt;/span&gt;
+&lt;div id="slider2"&gt;&lt;/div&gt;
+&lt;span id="slider2-span"&gt;&lt;/span&gt;
+&lt;button id="lockbutton" type="button"&gt;Lock ranges&lt;/button&gt;
+&lt;div id="merging-tooltips"&gt;&lt;/div&gt;
+&lt;div id="slider-hide"&gt;&lt;/div&gt;</code></pre>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </section>
+
+          <section aria-labelledby="color-controls-heading">
+            <div class="row">
+              <div class="col-xxl-6">
+                <section class="card custom-card">
+                  <div class="card-header justify-content-between">
+                    <div>
+                      <h3 class="card-title mb-1">
+                        Color mixer and segmented scale
+                      </h3>
+                      <p class="text-muted fs-12 mb-0">
+                        Three channel sliders, a live swatch and colored range
+                        segments.
+                      </p>
+                    </div>
+                    <div class="prism-toggle">
+                      <button
+                        class="btn btn-sm btn-outline-light rounded-pill"
+                        type="button"
+                      >
+                        View markup<i
+                          class="ri-code-line ms-2 d-inline-block align-middle"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="row align-items-center">
+                      <div class="col-md-8">
+                        <label class="form-label">RGB channels</label>
+                        <div class="row">
+                          <div class="col-4">
+                            <div class="sliders" id="color1"></div>
+                            <span class="text-muted fs-11">Red</span>
+                          </div>
+                          <div class="col-4">
+                            <div class="sliders" id="color2"></div>
+                            <span class="text-muted fs-11">Green</span>
+                          </div>
+                          <div class="col-4">
+                            <div class="sliders" id="color3"></div>
+                            <span class="text-muted fs-11">Blue</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div
+                          id="result"
+                          class="border rounded w-100"
+                          style="height: 92px"
+                          aria-label="Selected color preview"
+                        ></div>
+                      </div>
+                    </div>
+                    <label class="form-label mt-4"
+                      >Segmented capacity range</label
+                    >
+                    <div class="slider my-4" id="color-slider"></div>
+                    <div class="d-flex flex-wrap gap-3 mt-4">
+                      <span class="badge bg-primary-transparent text-primary"
+                        >Primary</span
+                      ><span
+                        class="badge bg-secondary-transparent text-secondary"
+                        >Secondary</span
+                      ><span class="badge bg-warning-transparent text-warning"
+                        >Warning</span
+                      ><span class="badge bg-info-transparent text-info"
+                        >Info</span
+                      ><span class="badge bg-success-transparent text-success"
+                        >Success</span
+                      ><span class="badge bg-danger-transparent text-danger"
+                        >Danger</span
+                      >
+                    </div>
+                    <div class="row mt-2">
+                      <div class="col-md-6">
+                        <div id="primary-colored-slider" class="my-3"></div>
+                        <div id="secondary-colored-slider" class="my-3"></div>
+                        <div id="warning-colored-slider" class="my-3"></div>
+                      </div>
+                      <div class="col-md-6">
+                        <div id="info-colored-slider" class="my-3"></div>
+                        <div id="success-colored-slider" class="my-3"></div>
+                        <div id="danger-colored-slider" class="my-3"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer d-none border-top-0">
+                    <pre
+                      class="language-html"
+                    ><code class="language-html">&lt;div class="sliders" id="color1"&gt;&lt;/div&gt;
+&lt;div class="sliders" id="color2"&gt;&lt;/div&gt;
+&lt;div class="sliders" id="color3"&gt;&lt;/div&gt;
+&lt;div id="result"&gt;&lt;/div&gt;
+&lt;div id="color-slider"&gt;&lt;/div&gt;
+&lt;div id="primary-colored-slider"&gt;&lt;/div&gt;
+&lt;div id="secondary-colored-slider"&gt;&lt;/div&gt;
+&lt;div id="warning-colored-slider"&gt;&lt;/div&gt;
+&lt;div id="info-colored-slider"&gt;&lt;/div&gt;
+&lt;div id="success-colored-slider"&gt;&lt;/div&gt;
+&lt;div id="danger-colored-slider"&gt;&lt;/div&gt;</code></pre>
+                  </div>
+                </section>
+              </div>
+              <div class="col-xxl-6">
+                <section class="card custom-card">
+                  <div class="card-header justify-content-between">
+                    <div>
+                      <h3 class="card-title mb-1">Vertical mode switch</h3>
+                      <p class="text-muted fs-12 mb-0">
+                        A compact slider toggle for on/off settings.
+                      </p>
+                    </div>
+                    <div class="prism-toggle">
+                      <button
+                        class="btn btn-sm btn-outline-light rounded-pill"
+                        type="button"
+                      >
+                        View markup<i
+                          class="ri-code-line ms-2 d-inline-block align-middle"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <div>
+                        <h4 class="fs-14 fw-semibold mb-1">Maintenance mode</h4>
+                        <p class="text-muted fs-12 mb-0">
+                          Slide to change the current mode.
+                        </p>
+                      </div>
+                      <div
+                        id="slider-toggle"
+                        class="mx-4"
+                        aria-label="Maintenance mode slider"
+                      ></div>
+                    </div>
+                    <hr />
+                    <div
+                      class="d-flex align-items-center gap-2 text-muted fs-12"
+                    >
+                      <i class="ri-information-line" aria-hidden="true"></i
+                      ><span
+                        >This is a visual control example powered by
+                        noUiSlider.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="card-footer d-none border-top-0">
+                    <pre
+                      class="language-html"
+                    ><code class="language-html">&lt;div id="slider-toggle"&gt;&lt;/div&gt;
+&lt;script src="../assets/libs/nouislider/nouislider.min.js"&gt;&lt;/script&gt;
+&lt;script src="../assets/js/nouislider.js"&gt;&lt;/script&gt;</code></pre>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <!-- include common-scripts.html"-->
+    <!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/libs/prismjs/prism.js"></script>
+    <script src="../assets/js/prism-custom.js"></script>
+    <script src="../assets/libs/nouislider/nouislider.min.js"></script>
+    <script src="../assets/libs/wnumb/wNumb.min.js"></script>
+    <script src="../assets/js/nouislider.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

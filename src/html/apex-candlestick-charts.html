@@ -1,0 +1,183 @@
+<!-- include document-head.html"-->
+    <link rel="stylesheet" href="../assets/css/apex-candlestick-charts.css" />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+
+      <div class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Candlestick Charts</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">Charts</li>
+            <li class="breadcrumb-item">Apex Charts</li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Candlestick Charts
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid candlestick-workspace">
+          <div class="row">
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Daily price movement</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Sample open, high, low and close values across trading
+                      sessions.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="candlestick-basic"
+                    class="candle-demo"
+                    role="group"
+                    aria-label="Daily price movement chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Price & volume explorer</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Drag the volume navigator to explore a date range.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="chart-candlestick"
+                    class="candle-demo"
+                    role="group"
+                    aria-label="Price & volume explorer chart"
+                  ></div>
+                  <div
+                    id="chart-bar"
+                    role="group"
+                    aria-label="Volume range navigator"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Session comparison</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Compare a shorter set of sessions using category labels.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="candlestick-categoryx"
+                    class="candle-demo"
+                    role="group"
+                    aria-label="Session comparison chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Price & moving average</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      A five-session moving average adds context to daily
+                      candles.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="candlestick-line"
+                    class="candle-demo"
+                    role="group"
+                    aria-label="Price & moving average chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Price reference levels</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Reference lines mark support and resistance in sample
+                      data.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="candlestick-annotated"
+                    class="candle-demo"
+                    role="group"
+                    aria-label="Price reference levels chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">OHLC bars</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      A bar-style alternative displays the same session values.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="candlestick-ohlc"
+                    class="candle-demo"
+                    role="group"
+                    aria-label="OHLC bars chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <!-- include common-scripts.html"-->
+
+    <!-- include appearance-customizer-scripts.html"-->
+
+    <!-- Apex Charts JS -->
+    <script src="../assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- Used For Candlestick Synced With Brush Chart -->
+
+    <!-- Used For Candlestick With Category X-axis Chart-->
+
+    <!-- Internal Apex Candlestick Charts JS -->
+    <script src="../assets/js/apexcharts-candlestick.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

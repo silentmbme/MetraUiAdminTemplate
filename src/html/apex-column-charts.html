@@ -1,0 +1,291 @@
+<!-- include document-head.html"-->
+    <link rel="stylesheet" href="../assets/css/apex-column-charts.css" />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+
+      <div class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Column Charts</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">Charts</li>
+            <li class="breadcrumb-item">Apex Charts</li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Column Charts
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid column-charts-workspace">
+          <div class="row">
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Weekly delivery</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Compare completed tasks across the week.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="column-basic"
+                    class="column-demo"
+                    role="group"
+                    aria-label="Weekly delivery chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Workstream comparison</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Visible values show delivery across two teams.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="column-datalabels"
+                    class="column-demo"
+                    role="group"
+                    aria-label="Workstream comparison chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Team workload</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Stacked columns show each workstream contribution.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="column-stacked"
+                    class="column-demo"
+                    role="group"
+                    aria-label="Team workload chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Capacity allocation</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Compare workload as a percentage of each day.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="column-stacked-full"
+                    class="column-demo"
+                    role="group"
+                    aria-label="Capacity allocation chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Actual vs target</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Goal markers highlight the planned delivery target.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="column-markers"
+                    class="column-demo"
+                    role="group"
+                    aria-label="Actual vs target chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Project portfolio</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Rotated labels keep longer project names readable.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="column-rotated-labels"
+                    class="column-demo"
+                    role="group"
+                    aria-label="Project portfolio chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Budget variance</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Compare positive and negative changes around zero.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="column-negative"
+                    class="column-demo"
+                    role="group"
+                    aria-label="Budget variance chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Estimated effort</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Each column spans the minimum and maximum estimated hours.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="column-range"
+                    class="column-demo"
+                    role="group"
+                    aria-label="Estimated effort chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Quarterly breakdown</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Select a year to explore its quarterly delivery.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="btn-group mb-2"
+                    role="group"
+                    aria-label="Select delivery year"
+                  >
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-light"
+                      data-column-year="2024"
+                      aria-pressed="false"
+                    >
+                      2024</button
+                    ><button
+                      type="button"
+                      class="btn btn-sm btn-light"
+                      data-column-year="2025"
+                      aria-pressed="false"
+                    >
+                      2025</button
+                    ><button
+                      type="button"
+                      class="btn btn-sm btn-secondary"
+                      data-column-year="2026"
+                      aria-pressed="true"
+                    >
+                      2026
+                    </button>
+                  </div>
+                  <div
+                    id="chart-year"
+                    class="column-demo"
+                    role="group"
+                    aria-label="Quarterly breakdown chart"
+                  ></div>
+                  <p
+                    id="column-year-status"
+                    class="fs-12 text-muted mb-1"
+                    aria-live="polite"
+                  >
+                    2026 quarterly delivery
+                  </p>
+                  <div
+                    id="chart-quarter"
+                    role="group"
+                    aria-label="Quarterly delivery chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Milestone completion</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Distinct column colors identify individual milestones.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="columns-distributed"
+                    class="column-demo"
+                    role="group"
+                    aria-label="Milestone completion chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <!-- include common-scripts.html"-->
+
+    <!-- include appearance-customizer-scripts.html"-->
+
+    <!-- Apex Charts JS -->
+    <script src="../assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- Internal Apex-Column-Charts JS -->
+    <script src="../assets/js/apexcharts-column.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

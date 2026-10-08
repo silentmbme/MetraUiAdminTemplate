@@ -1,0 +1,631 @@
+<!-- include document-head.html"-->
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <div>
+            <h1 class="page-title mb-1">Attendance</h1>
+            <p class="text-muted fs-13 mb-0">
+              Daily team presence, check-ins, and shift coverage.
+            </p>
+          </div>
+          <div class="d-flex align-items-center gap-2 flex-wrap">
+            <ol class="breadcrumb mb-0">
+              <li class="breadcrumb-item">
+                <a href="hrm-dashboard.html">Home</a>
+              </li>
+              <li class="breadcrumb-item">
+                <a href="hrm-dashboard.html">HRM</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Attendance
+              </li>
+            </ol>
+            <a href="staff-list.html" class="btn btn-light btn-sm"
+              ><i class="ri-team-line me-1"></i>Staff directory</a
+            >
+          </div>
+        </div>
+        <div class="container-fluid">
+          <section class="card custom-card mb-3 hrm-attendance-summary">
+            <div class="card-body p-4">
+              <div class="row align-items-center g-4">
+                <div class="col-xl-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <div
+                      class="hrm-attendance-ring position-relative flex-shrink-0"
+                      role="img"
+                      aria-label="82.5 percent of attendance has been logged today"
+                    >
+                      <svg viewBox="0 0 120 120" aria-hidden="true">
+                        <circle
+                          cx="60"
+                          cy="60"
+                          r="48"
+                          fill="none"
+                          stroke="var(--bs-secondary-bg)"
+                          stroke-width="10"
+                        ></circle>
+                        <circle
+                          cx="60"
+                          cy="60"
+                          r="48"
+                          fill="none"
+                          stroke="var(--theme-primary-color)"
+                          stroke-width="10"
+                          stroke-linecap="round"
+                          stroke-dasharray="301.6"
+                          stroke-dashoffset="52.8"
+                          transform="rotate(-90 60 60)"
+                        ></circle>
+                      </svg>
+                      <div
+                        class="position-absolute top-50 start-50 translate-middle text-center"
+                      >
+                        <strong class="fs-18 d-block lh-1">82.5%</strong
+                        ><span class="text-muted fs-10">logged</span>
+                      </div>
+                    </div>
+                    <div>
+                      <span class="text-muted fs-12"
+                        >TODAY &middot; OCTOBER 01, 2026</span
+                      >
+                      <h2 class="fs-16 fw-semibold mt-1 mb-1">
+                        Attendance rate
+                      </h2>
+                      <div class="text-muted fs-12">
+                        2,398 of 2,486 employees checked in
+                      </div>
+                      <span
+                        class="badge bg-success-transparent text-success mt-2"
+                        ><i class="ri-arrow-up-line me-1"></i>1.8% vs
+                        yesterday</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-8">
+                  <div class="row g-3">
+                    <div class="col-6 col-md-3">
+                      <div class="hrm-attendance-stat">
+                        <span
+                          class="avatar avatar-sm bg-success-transparent text-success avatar-rounded"
+                          ><i class="ri-user-follow-line fs-16"></i></span
+                        ><span class="text-muted fs-12 d-block mt-2"
+                          >Present</span
+                        ><strong class="fs-18">2,398</strong
+                        ><small class="text-muted d-block"
+                          >Includes late check-ins</small
+                        >
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                      <div class="hrm-attendance-stat">
+                        <span
+                          class="avatar avatar-sm bg-warning-transparent text-warning avatar-rounded"
+                          ><i class="ri-time-line fs-16"></i></span
+                        ><span class="text-muted fs-12 d-block mt-2">Late</span
+                        ><strong class="fs-18">26</strong
+                        ><small class="text-muted d-block">Needs review</small>
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                      <div class="hrm-attendance-stat">
+                        <span
+                          class="avatar avatar-sm bg-info-transparent text-info avatar-rounded"
+                          ><i class="ri-calendar-check-line fs-16"></i></span
+                        ><span class="text-muted fs-12 d-block mt-2"
+                          >On leave</span
+                        ><strong class="fs-18">38</strong
+                        ><small class="text-muted d-block"
+                          >Approved today</small
+                        >
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                      <div class="hrm-attendance-stat">
+                        <span
+                          class="avatar avatar-sm bg-danger-transparent text-danger avatar-rounded"
+                          ><i class="ri-user-unfollow-line fs-16"></i></span
+                        ><span class="text-muted fs-12 d-block mt-2"
+                          >Not checked in</span
+                        ><strong class="fs-18">24</strong
+                        ><small class="text-muted d-block"
+                          >Follow up required</small
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex align-items-center gap-3 mt-3 pt-3 border-top"
+                  >
+                    <span class="text-muted fs-12 text-nowrap"
+                      >Daily target</span
+                    >
+                    <div
+                      class="progress flex-fill"
+                      style="height: 6px"
+                      role="progressbar"
+                      aria-label="Attendance logged today"
+                      aria-valuenow="82.5"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    >
+                      <div
+                        class="progress-bar bg-success"
+                        style="width: 82.5%"
+                      ></div>
+                    </div>
+                    <span class="text-success fs-12 fw-semibold">82.5%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <div class="row g-3">
+            <div class="col-xxl-8">
+              <section class="card custom-card hrm-attendance-log-card">
+                <div
+                  class="card-header d-flex justify-content-between align-items-center flex-wrap gap-2"
+                >
+                  <div>
+                    <h2 class="card-title mb-1">Daily attendance log</h2>
+                    <span class="text-muted fs-12"
+                      >Check-in activity across teams</span
+                    >
+                  </div>
+                  <span class="badge bg-light text-muted"
+                    >Today · Oct 01, 2026</span
+                  >
+                </div>
+                <div class="card-body border-bottom">
+                  <div class="row g-2 align-items-center">
+                    <div class="col-md-7">
+                      <div class="input-group">
+                        <span class="input-group-text bg-transparent"
+                          ><i class="ri-search-line text-muted"></i></span
+                        ><input
+                          type="search"
+                          class="form-control"
+                          id="attendance-search"
+                          placeholder="Search employee, department, or shift"
+                          aria-label="Search attendance records"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                      <select
+                        class="form-select"
+                        data-trigger
+                        id="attendance-status-filter"
+                        aria-label="Filter by attendance status"
+                      >
+                        <option value="">All statuses</option>
+                        <option value="present">Present</option>
+                        <option value="late">Late</option>
+                        <option value="leave">On leave</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-6 col-md-2 d-grid">
+                      <button
+                        class="btn btn-light"
+                        id="attendance-reset-filter"
+                        type="button"
+                      >
+                        <i class="ri-refresh-line me-1"></i>Reset
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="table-responsive">
+                  <table
+                    class="table text-nowrap table-hover align-middle mb-0"
+                  >
+                    <thead>
+                      <tr>
+                        <th scope="col">Employee</th>
+                        <th scope="col">Department</th>
+                        <th scope="col">Shift</th>
+                        <th scope="col">Check-in</th>
+                        <th scope="col">Check-out</th>
+                        <th scope="col">Work hours</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr data-attendance-status="present">
+                        <td>
+                          <div class="d-flex align-items-center gap-2">
+                            <span class="avatar avatar-sm avatar-rounded"
+                              ><img src="../assets/images/users/1.jpg" alt=""
+                            /></span>
+                            <div>
+                              <div class="fw-semibold fs-13">
+                                Sofia Martinez
+                              </div>
+                              <div class="text-muted fs-12">EMP-10482</div>
+                            </div>
+                          </div>
+                        </td>
+                        <td>Product &amp; Engineering</td>
+                        <td>Day</td>
+                        <td>8:54 AM</td>
+                        <td>&mdash;</td>
+                        <td>
+                          5h 06m <span class="text-muted fs-11">so far</span>
+                        </td>
+                        <td>
+                          <i class="ri-building-line text-muted me-1"></i>HQ
+                          &middot; Floor 3
+                        </td>
+                        <td>
+                          <span
+                            class="badge bg-success-transparent text-success"
+                            >Present</span
+                          >
+                        </td>
+                      </tr>
+                      <tr data-attendance-status="present">
+                        <td>
+                          <div class="d-flex align-items-center gap-2">
+                            <span class="avatar avatar-sm avatar-rounded"
+                              ><img src="../assets/images/users/10.jpg" alt=""
+                            /></span>
+                            <div>
+                              <div class="fw-semibold fs-13">Ethan Wilson</div>
+                              <div class="text-muted fs-12">EMP-10516</div>
+                            </div>
+                          </div>
+                        </td>
+                        <td>General &amp; Administration</td>
+                        <td>Day</td>
+                        <td>9:02 AM</td>
+                        <td>&mdash;</td>
+                        <td>
+                          4h 58m <span class="text-muted fs-11">so far</span>
+                        </td>
+                        <td>
+                          <i class="ri-home-4-line text-muted me-1"></i>Remote
+                        </td>
+                        <td>
+                          <span
+                            class="badge bg-success-transparent text-success"
+                            >Present</span
+                          >
+                        </td>
+                      </tr>
+                      <tr data-attendance-status="late">
+                        <td>
+                          <div class="d-flex align-items-center gap-2">
+                            <span class="avatar avatar-sm avatar-rounded"
+                              ><img src="../assets/images/users/12.jpg" alt=""
+                            /></span>
+                            <div>
+                              <div class="fw-semibold fs-13">Priya Nair</div>
+                              <div class="text-muted fs-12">EMP-10603</div>
+                            </div>
+                          </div>
+                        </td>
+                        <td>Operations</td>
+                        <td>Day</td>
+                        <td>9:17 AM</td>
+                        <td>&mdash;</td>
+                        <td>
+                          4h 43m <span class="text-muted fs-11">so far</span>
+                        </td>
+                        <td>
+                          <i class="ri-building-line text-muted me-1"></i>HQ
+                          &middot; Floor 2
+                        </td>
+                        <td>
+                          <span
+                            class="badge bg-warning-transparent text-warning"
+                            >Late</span
+                          >
+                        </td>
+                      </tr>
+                      <tr data-attendance-status="present">
+                        <td>
+                          <div class="d-flex align-items-center gap-2">
+                            <span class="avatar avatar-sm avatar-rounded"
+                              ><img src="../assets/images/users/13.jpg" alt=""
+                            /></span>
+                            <div>
+                              <div class="fw-semibold fs-13">Amir Patel</div>
+                              <div class="text-muted fs-12">EMP-10841</div>
+                            </div>
+                          </div>
+                        </td>
+                        <td>Product &amp; Engineering</td>
+                        <td>Morning</td>
+                        <td>8:48 AM</td>
+                        <td>&mdash;</td>
+                        <td>
+                          5h 12m <span class="text-muted fs-11">so far</span>
+                        </td>
+                        <td>
+                          <i class="ri-building-line text-muted me-1"></i>HQ
+                          &middot; Floor 3
+                        </td>
+                        <td>
+                          <span
+                            class="badge bg-success-transparent text-success"
+                            >Present</span
+                          >
+                        </td>
+                      </tr>
+                      <tr data-attendance-status="leave">
+                        <td>
+                          <div class="d-flex align-items-center gap-2">
+                            <span class="avatar avatar-sm avatar-rounded"
+                              ><img src="../assets/images/users/15.jpg" alt=""
+                            /></span>
+                            <div>
+                              <div class="fw-semibold fs-13">Liam Cooper</div>
+                              <div class="text-muted fs-12">EMP-11008</div>
+                            </div>
+                          </div>
+                        </td>
+                        <td>Sales &amp; Marketing</td>
+                        <td>Day</td>
+                        <td>&mdash;</td>
+                        <td>&mdash;</td>
+                        <td>&mdash;</td>
+                        <td><span class="text-muted">Approved leave</span></td>
+                        <td>
+                          <span class="badge bg-info-transparent text-info"
+                            >On leave</span
+                          >
+                        </td>
+                      </tr>
+                      <tr data-attendance-status="present">
+                        <td>
+                          <div class="d-flex align-items-center gap-2">
+                            <span class="avatar avatar-sm avatar-rounded"
+                              ><img src="../assets/images/users/18.jpg" alt=""
+                            /></span>
+                            <div>
+                              <div class="fw-semibold fs-13">Nina Park</div>
+                              <div class="text-muted fs-12">EMP-11037</div>
+                            </div>
+                          </div>
+                        </td>
+                        <td>General &amp; Administration</td>
+                        <td>Morning</td>
+                        <td>8:41 AM</td>
+                        <td>&mdash;</td>
+                        <td>
+                          5h 19m <span class="text-muted fs-11">so far</span>
+                        </td>
+                        <td>
+                          <i class="ri-building-line text-muted me-1"></i>HQ
+                          &middot; Floor 1
+                        </td>
+                        <td>
+                          <span
+                            class="badge bg-success-transparent text-success"
+                            >Present</span
+                          >
+                        </td>
+                      </tr>
+                      <tr data-attendance-status="present">
+                        <td>
+                          <div class="d-flex align-items-center gap-2">
+                            <span class="avatar avatar-sm avatar-rounded"
+                              ><img src="../assets/images/users/7.jpg" alt=""
+                            /></span>
+                            <div>
+                              <div class="fw-semibold fs-13">Marcus Reed</div>
+                              <div class="text-muted fs-12">EMP-11124</div>
+                            </div>
+                          </div>
+                        </td>
+                        <td>Finance</td>
+                        <td>Morning</td>
+                        <td>8:36 AM</td>
+                        <td>&mdash;</td>
+                        <td>
+                          5h 24m <span class="text-muted fs-11">so far</span>
+                        </td>
+                        <td>
+                          <i class="ri-building-line text-muted me-1"></i>HQ
+                          &middot; Floor 4
+                        </td>
+                        <td>
+                          <span
+                            class="badge bg-success-transparent text-success"
+                            >Present</span
+                          >
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div
+                  class="card-footer d-flex justify-content-between align-items-center"
+                >
+                  <span class="text-muted fs-12"
+                    >Showing
+                    <strong id="attendance-visible-count">10</strong> attendance
+                    records</span
+                  ><a href="staff-list.html" class="fs-12 fw-medium"
+                    >View staff directory <i class="ri-arrow-right-line"></i
+                  ></a>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-xxl-4">
+              <section class="card custom-card mb-3">
+                <div class="card-header justify-content-between">
+                  <div class="card-title">Needs attention</div>
+                  <span class="badge bg-warning-transparent text-warning"
+                    >50 people</span
+                  >
+                </div>
+                <div class="card-body p-0">
+                  <div class="d-flex gap-3 align-items-start p-3 border-bottom">
+                    <span
+                      class="avatar avatar-md bg-warning-transparent text-warning rounded-circle"
+                      ><i class="ri-time-line fs-18"></i
+                    ></span>
+                    <div class="flex-fill">
+                      <div class="d-flex justify-content-between gap-2">
+                        <span class="fw-semibold fs-13">Late arrivals</span
+                        ><strong>26</strong>
+                      </div>
+                      <div class="text-muted fs-12 mt-1">
+                        Review late check-ins for today
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-3 align-items-start p-3">
+                    <span
+                      class="avatar avatar-md bg-danger-transparent text-danger rounded-circle"
+                      ><i class="ri-user-unfollow-line fs-18"></i
+                    ></span>
+                    <div class="flex-fill">
+                      <div class="d-flex justify-content-between gap-2">
+                        <span class="fw-semibold fs-13">Missing check-ins</span
+                        ><strong>24</strong>
+                      </div>
+                      <div class="text-muted fs-12 mt-1">
+                        Employees not yet recorded today
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <a
+                    href="staff-list.html"
+                    class="btn btn-outline-secondary w-100"
+                    >Review staff records</a
+                  >
+                </div>
+              </section>
+
+              <section class="card custom-card">
+                <div class="card-header justify-content-between">
+                  <div>
+                    <div class="card-title">Shift coverage</div>
+                    <span class="text-muted fs-12"
+                      >Scheduled headcount by shift</span
+                    >
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="pb-3 mb-3 border-bottom">
+                    <div
+                      class="d-flex align-items-center justify-content-between mb-3"
+                    >
+                      <div class="d-flex align-items-center gap-2">
+                        <span
+                          class="avatar avatar-sm bg-secondary-transparent text-secondary rounded-circle"
+                          ><i class="ri-sun-line fs-16"></i
+                        ></span>
+                        <div>
+                          <div class="fw-semibold fs-13">Morning shift</div>
+                          <div class="text-muted fs-12">
+                            7:00 AM &ndash; 3:00 PM
+                          </div>
+                        </div>
+                      </div>
+                      <div class="text-end">
+                        <strong>1,142</strong>
+                        <div class="text-muted fs-12">46% of staff</div>
+                      </div>
+                    </div>
+                    <div class="progress" style="height: 5px">
+                      <div
+                        class="progress-bar bg-secondary"
+                        style="width: 46%"
+                      ></div>
+                    </div>
+                  </div>
+                  <div class="pb-3 mb-3 border-bottom">
+                    <div
+                      class="d-flex align-items-center justify-content-between mb-3"
+                    >
+                      <div class="d-flex align-items-center gap-2">
+                        <span
+                          class="avatar avatar-sm bg-warning-transparent text-warning rounded-circle"
+                          ><i class="ri-sun-foggy-line fs-16"></i
+                        ></span>
+                        <div>
+                          <div class="fw-semibold fs-13">Day shift</div>
+                          <div class="text-muted fs-12">
+                            9:00 AM &ndash; 5:00 PM
+                          </div>
+                        </div>
+                      </div>
+                      <div class="text-end">
+                        <strong>986</strong>
+                        <div class="text-muted fs-12">40% of staff</div>
+                      </div>
+                    </div>
+                    <div class="progress" style="height: 5px">
+                      <div
+                        class="progress-bar bg-warning"
+                        style="width: 40%"
+                      ></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div
+                      class="d-flex align-items-center justify-content-between mb-3"
+                    >
+                      <div class="d-flex align-items-center gap-2">
+                        <span
+                          class="avatar avatar-sm bg-info-transparent text-info rounded-circle"
+                          ><i class="ri-moon-line fs-16"></i
+                        ></span>
+                        <div>
+                          <div class="fw-semibold fs-13">Evening shift</div>
+                          <div class="text-muted fs-12">
+                            3:00 PM &ndash; 11:00 PM
+                          </div>
+                        </div>
+                      </div>
+                      <div class="text-end">
+                        <strong>358</strong>
+                        <div class="text-muted fs-12">14% of staff</div>
+                      </div>
+                    </div>
+                    <div class="progress" style="height: 5px">
+                      <div
+                        class="progress-bar bg-info"
+                        style="width: 14%"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                  <span class="text-muted fs-12">2,486 employees scheduled</span
+                  ><a href="staff-list.html" class="fs-12 fw-medium"
+                    >View staff <i class="ri-arrow-right-line"></i
+                  ></a>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"-->
+    <script src="../assets/js/attendance.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+    <!-- include appearance-customizer-scripts.html"-->
+  </body>
+</html>

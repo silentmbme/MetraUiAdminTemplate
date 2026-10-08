@@ -1,0 +1,261 @@
+<!-- include document-head.html"-->
+  </head>
+
+  <body class="sales-workspace" data-sales-view="payments">
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Payments</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Sales</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Payments</li>
+          </ol>
+        </div>
+        <div class="container-fluid payments-page">
+          <div class="row">
+            <div class="col-sm-6 col-xl-3">
+              <div class="card custom-card dashboard-card-1">
+                <div class="card-body text-fixed-black">
+                  <div
+                    class="d-flex align-items-center justify-content-between mb-3"
+                  >
+                    <span class="fw-medium">Revenue collected</span>
+                    <span
+                      class="avatar avatar-md bg-white avatar-rounded text-dark"
+                    >
+                      <i class="ri-wallet-3-line fs-20" aria-hidden="true"></i>
+                    </span>
+                  </div>
+                  <h2
+                    class="fw-semibold mb-2 text-black"
+                    data-sales-metric="revenue"
+                  >
+                    &mdash;
+                  </h2>
+                  <span class="fs-13 text-black op-7">Completed payments</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+              <div class="card custom-card dashboard-card-2">
+                <div class="card-body text-fixed-black">
+                  <div
+                    class="d-flex align-items-center justify-content-between mb-3"
+                  >
+                    <span class="fw-medium">Transactions</span>
+                    <span
+                      class="avatar avatar-md bg-white avatar-rounded text-dark"
+                    >
+                      <i
+                        class="ri-shopping-bag-3-line fs-20"
+                        aria-hidden="true"
+                      ></i>
+                    </span>
+                  </div>
+                  <h2
+                    class="fw-semibold mb-1 text-black"
+                    data-sales-metric="orders"
+                  >
+                    &mdash;
+                  </h2>
+                  <span class="fs-13 t text-black op-7"
+                    >In the selected period</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+              <div class="card custom-card dashboard-card-3">
+                <div class="card-body text-fixed-black">
+                  <div
+                    class="d-flex align-items-center justify-content-between mb-3"
+                  >
+                    <span class="fw-medium">Awaiting payment</span>
+                    <span
+                      class="avatar avatar-md bg-white avatar-rounded text-dark"
+                    >
+                      <i class="ri-time-line fs-20" aria-hidden="true"></i>
+                    </span>
+                  </div>
+                  <h2
+                    class="fw-semibold mb-1 text-black"
+                    data-sales-metric="pending"
+                  >
+                    &mdash;
+                  </h2>
+                  <span class="fs-13 text-black op-7">Outstanding balance</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+              <div class="card custom-card dashboard-card-4">
+                <div class="card-body text-fixed-black">
+                  <div
+                    class="d-flex align-items-center justify-content-between mb-3"
+                  >
+                    <span class="fw-medium">Average order</span>
+                    <span
+                      class="avatar avatar-md bg-white avatar-rounded text-dark"
+                    >
+                      <i
+                        class="ri-bar-chart-grouped-line fs-20"
+                        aria-hidden="true"
+                      ></i>
+                    </span>
+                  </div>
+                  <h2
+                    class="fw-semibold mb-1 text-black"
+                    data-sales-metric="average"
+                  >
+                    &mdash;
+                  </h2>
+                  <span class="fs-13 t text-black op-7"
+                    >Per completed payment</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card custom-card">
+            <div class="card-header justify-content-between flex-wrap gap-2">
+              <h2 class="card-title mb-0">Payment activity</h2>
+              <a href="sales-team.html" class="btn btn-secondary-light btn-sm">
+                View More
+                <i class="ri-arrow-right-up-line ms-2" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div class="card-body border-bottom">
+              <div class="row g-3 align-items-end">
+                <div class="col-md-6 col-xl-5">
+                  <label for="sales-search" class="form-label">
+                    Search payments
+                  </label>
+                  <div class="input-group">
+                    <span class="input-group-text">
+                      <i class="ri-search-line" aria-hidden="true"></i>
+                    </span>
+                    <input
+                      type="search"
+                      id="sales-search"
+                      class="form-control"
+                      placeholder="Customer, invoice or product"
+                      autocomplete="off"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-4 col-xl-3">
+                  <label for="sales-status" class="form-label">
+                    Payment status
+                  </label>
+                  <select id="sales-status" class="form-select" data-trigger>
+                    <option value="">All statuses</option>
+                    <option>Paid</option>
+                    <option>Pending</option>
+                    <option>Refunded</option>
+                  </select>
+                </div>
+                <div class="col-md-2 col-xl-4 text-md-end">
+                  <a href="sales-payments.html" class="btn btn-light btn-wave">
+                    Reset filters
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="card-body p-0">
+              <div class="table-responsive position-relative">
+                <table class="table text-nowrap table-hover mb-0">
+                  <thead>
+                    <tr>
+                      <th scope="col">Invoice</th>
+                      <th scope="col">Customer</th>
+                      <th scope="col">Date</th>
+                      <th scope="col">Status</th>
+                      <th scope="col" class="text-end">Amount</th>
+                      <th scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="sales-records"></tbody>
+                </table>
+              </div>
+            </div>
+            <div
+              class="card-footer border-top-0 d-flex align-items-center justify-content-between flex-wrap gap-2"
+            >
+              <span
+                class="text-muted"
+                id="sales-table-count"
+                role="status"
+              ></span>
+              <nav aria-label="Payment table pages">
+                <div class="btn-group">
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-light"
+                    id="sales-prev"
+                  >
+                    <i class="ri-arrow-left-s-line me-1" aria-hidden="true"></i>
+                    Previous
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-light"
+                    id="sales-next"
+                  >
+                    Next
+                    <i
+                      class="ri-arrow-right-s-line ms-1"
+                      aria-hidden="true"
+                    ></i>
+                  </button>
+                </div>
+              </nav>
+            </div>
+          </div>
+          <p
+            id="sales-feedback"
+            class="text-muted fs-12"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <div
+      class="modal fade"
+      id="sales-record-modal"
+      tabindex="-1"
+      aria-labelledby="sales-record-title"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 id="sales-record-title" class="modal-title">Payment details</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body" id="sales-record-body"></div>
+        </div>
+      </div>
+    </div>
+    <!-- include common-scripts.html"-->
+    <script src="../assets/libs/apexcharts/apexcharts.min.js"></script>
+    <script src="../assets/js/sales-workspace.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+    <!-- include appearance-customizer-scripts.html"-->
+  </body>
+</html>

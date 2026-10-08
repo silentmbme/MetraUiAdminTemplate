@@ -1,0 +1,342 @@
+<!-- include document-head.html"-->
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Request leave</h1>
+          <ol class="breadcrumb mb-1">
+            <li class="breadcrumb-item">
+              <a href="hrm-dashboard.html">HRM</a>
+            </li>
+            <li class="breadcrumb-item"><a href="leaves.html">Leaves</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+              New request
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid">
+          <section class="card custom-card mb-3">
+            <div class="card-body py-3">
+              <div class="d-flex align-items-center gap-3 flex-wrap">
+                <span
+                  class="avatar avatar-lg bg-secondary-transparent text-secondary rounded-circle"
+                  ><i class="ri-calendar-event-line fs-20"></i
+                ></span>
+                <div class="flex-fill">
+                  <div class="fw-semibold">New leave request</div>
+                  <div class="text-muted fs-12">
+                    Choose the leave dates and share any details for your
+                    manager.
+                  </div>
+                </div>
+                <span class="badge bg-info-transparent text-info rounded-pill"
+                  >Routes to your manager for review</span
+                >
+              </div>
+            </div>
+          </section>
+
+          <div class="row g-3">
+            <div class="col-xxl-8">
+              <form>
+                <section class="card custom-card mb-3">
+                  <div class="card-header justify-content-between">
+                    <div>
+                      <div class="card-title mb-1">Request details</div>
+                      <span class="text-muted fs-12"
+                        >Enter the dates and leave category</span
+                      >
+                    </div>
+                    <span class="text-muted fs-12"
+                      >Fields marked <span class="text-danger">*</span> are
+                      required</span
+                    >
+                  </div>
+                  <div class="card-body">
+                    <div class="row g-3">
+                      <div class="col-md-6">
+                        <label
+                          for="leave-employee"
+                          class="form-label fw-medium fs-13"
+                          >Employee <span class="text-danger">*</span></label
+                        >
+                        <select
+                          class="form-select"
+                          data-trigger
+                          id="leave-employee"
+                          name="employee"
+                          required
+                        >
+                          <option value="Sofia Martinez" selected>
+                            Sofia Martinez &middot; EMP-10482
+                          </option>
+                          <option>Ethan Wilson &middot; EMP-10516</option>
+                          <option>Priya Nair &middot; EMP-10603</option>
+                          <option>Amir Patel &middot; EMP-10841</option>
+                          <option>Liam Cooper &middot; EMP-11008</option>
+                        </select>
+                      </div>
+                      <div class="col-md-6">
+                        <label
+                          for="leave-type"
+                          class="form-label fw-medium fs-13"
+                          >Leave type <span class="text-danger">*</span></label
+                        >
+                        <select
+                          class="form-select"
+                          data-trigger
+                          id="leave-type"
+                          name="leaveType"
+                          required
+                        >
+                          <option value="" selected disabled>
+                            Select leave type
+                          </option>
+                          <option>Annual leave</option>
+                          <option>Sick leave</option>
+                          <option>Personal leave</option>
+                          <option>Unpaid leave</option>
+                          <option>Bereavement leave</option>
+                        </select>
+                      </div>
+                      <div class="col-md-6">
+                        <label
+                          for="leave-start-date"
+                          class="form-label fw-medium fs-13"
+                          >Start date <span class="text-danger">*</span></label
+                        >
+                        <input
+                          class="form-control"
+                          type="date"
+                          id="leave-start-date"
+                          name="startDate"
+                          required
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label
+                          for="leave-end-date"
+                          class="form-label fw-medium fs-13"
+                          >End date <span class="text-danger">*</span></label
+                        >
+                        <input
+                          class="form-control"
+                          type="date"
+                          id="leave-end-date"
+                          name="endDate"
+                          required
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label
+                          for="leave-duration"
+                          class="form-label fw-medium fs-13"
+                          >Duration</label
+                        >
+                        <div class="input-group">
+                          <input
+                            class="form-control"
+                            id="leave-duration"
+                            placeholder="Choose start and end dates"
+                            readonly
+                          /><span class="input-group-text">days</span>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <label
+                          for="leave-contact"
+                          class="form-label fw-medium fs-13"
+                          >Covering colleague</label
+                        >
+                        <select
+                          class="form-select"
+                          data-trigger
+                          id="leave-contact"
+                          name="coveringColleague"
+                        >
+                          <option value="" selected>
+                            Choose a colleague (optional)
+                          </option>
+                          <option>Jordan Lee</option>
+                          <option>Chloe Bennett</option>
+                          <option>Marcus Reed</option>
+                        </select>
+                      </div>
+                      <div class="col-12">
+                        <label
+                          for="leave-reason"
+                          class="form-label fw-medium fs-13"
+                          >Reason or handover notes
+                          <span class="text-danger">*</span></label
+                        >
+                        <textarea
+                          class="form-control"
+                          id="leave-reason"
+                          name="reason"
+                          rows="4"
+                          placeholder="Add a brief reason and any work handover details"
+                          required
+                        ></textarea>
+                        <div class="form-text">
+                          Share only information your manager needs to plan
+                          coverage.
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <label
+                          for="leave-attachment"
+                          class="form-label fw-medium fs-13"
+                          >Supporting document</label
+                        >
+                        <input
+                          class="form-control"
+                          type="file"
+                          id="leave-attachment"
+                          name="attachment"
+                          accept=".pdf,.jpg,.jpeg,.png"
+                        />
+                        <div class="form-text">
+                          PDF or image file, up to 10 MB.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <div
+                  class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-4"
+                >
+                  <a href="leaves.html" class="btn btn-light">Cancel</a>
+                  <div class="d-flex gap-2">
+                    <button class="btn btn-outline-secondary" type="button">
+                      Save draft</button
+                    ><button class="btn btn-dark" type="submit">
+                      Submit request <i class="ri-arrow-right-line ms-1"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div class="col-xxl-4">
+              <section class="card custom-card mb-3">
+                <div class="card-header justify-content-between">
+                  <div class="card-title">
+                    Sofia &middot; annual leave balance
+                  </div>
+                  <span class="badge bg-success-transparent text-success"
+                    >Available</span
+                  >
+                </div>
+                <div class="card-body">
+                  <div
+                    class="d-flex align-items-end justify-content-between mb-2"
+                  >
+                    <div>
+                      <span class="text-muted fs-12 d-block"
+                        >Remaining balance</span
+                      ><strong class="fs-28 fw-semibold">12</strong
+                      ><span class="text-muted fs-13 ms-1">days</span>
+                    </div>
+                    <span class="text-muted fs-12">of 20 days</span>
+                  </div>
+                  <div class="progress mb-2" style="height: 7px">
+                    <div
+                      class="progress-bar bg-success"
+                      role="progressbar"
+                      aria-label="Annual leave used"
+                      aria-valuenow="40"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 40%"
+                    ></div>
+                  </div>
+                  <div class="d-flex justify-content-between text-muted fs-12">
+                    <span>8 days used</span><span>Resets Jan 01</span>
+                  </div>
+                </div>
+              </section>
+
+              <section class="card custom-card mb-3">
+                <div class="card-header">
+                  <div class="card-title">Before submitting</div>
+                </div>
+                <div class="card-body p-0">
+                  <div class="d-flex gap-3 p-3 border-bottom">
+                    <div>
+                      <span
+                        class="avatar avatar-sm bg-secondary-transparent text-secondary rounded-circle"
+                        ><i class="ri-calendar-check-line fs-16"></i
+                      ></span>
+                    </div>
+                    <div>
+                      <div class="fw-semibold fs-13">Check your dates</div>
+                      <div class="text-muted fs-12">
+                        Include working days only when estimating your time
+                        away.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-3 p-3 border-bottom">
+                    <span
+                      class="avatar avatar-sm bg-info-transparent text-info rounded-circle"
+                      ><i class="ri-team-line fs-16"></i
+                    ></span>
+                    <div>
+                      <div class="fw-semibold fs-13">Plan coverage</div>
+                      <div class="text-muted fs-12">
+                        Add a handover contact for time-sensitive work.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-3 p-3">
+                    <span
+                      class="avatar avatar-sm bg-warning-transparent text-warning rounded-circle"
+                      ><i class="ri-user-voice-line fs-16"></i
+                    ></span>
+                    <div>
+                      <div class="fw-semibold fs-13">Manager review</div>
+                      <div class="text-muted fs-12">
+                        Your request will remain pending until reviewed.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <div
+                class="alert bg-color-3 mb-4 text-black d-flex align-items-start gap-2"
+                role="note"
+              >
+                <i class="ri-information-line fs-18"></i>
+                <div>
+                  <div class="fw-semibold fs-13 text-black">
+                    Need to check a request?
+                  </div>
+                  <a href="leaves.html" class="fs-12"
+                    >Return to leave management
+                    <i class="ri-arrow-right-line"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"-->
+    <script src="../assets/js/app-interactions.js"></script>
+    <!-- include appearance-customizer-scripts.html"-->
+  </body>
+</html>

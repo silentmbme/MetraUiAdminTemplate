@@ -1,0 +1,482 @@
+<!-- include document-head.html"-->
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Warehouse management</h1>
+          <ol class="breadcrumb mb-1">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">
+              <a href="logistics-dashboard.html">Logistics</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Warehouse management
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xxl-8">
+              <section class="card custom-card">
+                <div
+                  class="card-header justify-content-between flex-wrap gap-2"
+                >
+                  <div>
+                    <span class="text-muted fs-12">NETWORK CAPACITY</span>
+                    <h2 class="card-title mt-1 mb-0">Warehouse utilization</h2>
+                  </div>
+                  <span class="text-muted fs-12">Updated 9:45 AM</span>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex align-items-end gap-2 mb-4">
+                    <span class="display-6 fw-semibold lh-1">74%</span>
+                    <span class="text-muted fs-13 pb-1"
+                      >average occupied capacity across 3 facilities</span
+                    >
+                  </div>
+
+                  <div
+                    class="d-flex gap-3 align-items-start pb-3 mb-3 border-bottom"
+                  >
+                    <div>
+                      <span
+                        class="avatar avatar-md bg-warning-transparent text-warning rounded"
+                        ><i class="ri-building-2-line fs-16"></i>
+                      </span>
+                    </div>
+                    <div class="flex-fill">
+                      <div
+                        class="d-flex justify-content-between flex-wrap gap-2 mb-2"
+                      >
+                        <div>
+                          <span class="fw-semibold"
+                            >Newark Distribution Center</span
+                          ><span class="text-muted fs-12 ms-2">Newark, NJ</span>
+                        </div>
+                        <span class="fw-semibold fs-13"
+                          >84%
+                          <span class="text-muted fw-normal"
+                            >· 8,420 / 10,000 sq ft</span
+                          ></span
+                        >
+                      </div>
+                      <div
+                        class="progress"
+                        style="height: 7px"
+                        role="progressbar"
+                        aria-label="Newark warehouse capacity"
+                        aria-valuenow="84"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      >
+                        <div
+                          class="progress-bar bg-warning"
+                          style="width: 84%"
+                        ></div>
+                      </div>
+                      <div
+                        class="d-flex flex-wrap gap-2 justify-content-between mt-2"
+                      >
+                        <span class="text-muted fs-12">High utilization</span
+                        ><a href="shipments.html" class="fs-12"
+                          >View outbound queue
+                          <i class="ri-arrow-right-line"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="d-flex gap-3 align-items-start pb-3 mb-3 border-bottom"
+                  >
+                    <div>
+                      <span
+                        class="avatar avatar-md bg-success-transparent text-success rounded"
+                        ><i class="ri-building-2-line fs-16"></i
+                      ></span>
+                    </div>
+                    <div class="flex-fill">
+                      <div
+                        class="d-flex justify-content-between flex-wrap gap-2 mb-2"
+                      >
+                        <div>
+                          <span class="fw-semibold">Austin Fulfillment Hub</span
+                          ><span class="text-muted fs-12 ms-2">Austin, TX</span>
+                        </div>
+                        <span class="fw-semibold fs-13"
+                          >68%
+                          <span class="text-muted fw-normal"
+                            >· 5,440 / 8,000 sq ft</span
+                          ></span
+                        >
+                      </div>
+                      <div
+                        class="progress"
+                        style="height: 7px"
+                        role="progressbar"
+                        aria-label="Austin warehouse capacity"
+                        aria-valuenow="68"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      >
+                        <div
+                          class="progress-bar bg-success"
+                          style="width: 68%"
+                        ></div>
+                      </div>
+                      <div
+                        class="d-flex flex-wrap gap-2 justify-content-between mt-2"
+                      >
+                        <span class="text-muted fs-12"
+                          >Within operating range</span
+                        ><a href="shipments.html" class="fs-12"
+                          >View outbound queue
+                          <i class="ri-arrow-right-line"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="d-flex gap-3 align-items-start">
+                    <div>
+                      <span
+                        class="avatar avatar-md bg-info-transparent text-info rounded"
+                        ><i class="ri-building-2-line fs-16"></i
+                      ></span>
+                    </div>
+                    <div class="flex-fill">
+                      <div
+                        class="d-flex justify-content-between flex-wrap gap-2 mb-2"
+                      >
+                        <div>
+                          <span class="fw-semibold"
+                            >Seattle Regional Warehouse</span
+                          ><span class="text-muted fs-12 ms-2"
+                            >Seattle, WA</span
+                          >
+                        </div>
+                        <span class="fw-semibold fs-13"
+                          >64%
+                          <span class="text-muted fw-normal"
+                            >· 3,840 / 6,000 sq ft</span
+                          ></span
+                        >
+                      </div>
+                      <div
+                        class="progress"
+                        style="height: 7px"
+                        role="progressbar"
+                        aria-label="Seattle warehouse capacity"
+                        aria-valuenow="64"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      >
+                        <div
+                          class="progress-bar bg-info"
+                          style="width: 64%"
+                        ></div>
+                      </div>
+                      <div
+                        class="d-flex flex-wrap gap-2 justify-content-between mt-2"
+                      >
+                        <span class="text-muted fs-12">Receiving available</span
+                        ><a href="shipments.html" class="fs-12"
+                          >View outbound queue
+                          <i class="ri-arrow-right-line"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-xxl-4">
+              <section class="card custom-card">
+                <div class="card-header justify-content-between">
+                  <div class="card-title">Dock schedule</div>
+                  <span class="text-muted fs-12">Newark · today</span>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="d-flex gap-3 align-items-start pb-3 mb-3 border-bottom"
+                  >
+                    <div class="text-center dock-date bg-light rounded">
+                      <span class="fw-semibold d-block">10:30</span>
+                      <span class="text-muted fs-13">AM</span>
+                    </div>
+                    <div class="flex-fill ps-3">
+                      <div class="d-flex justify-content-between gap-2">
+                        <span class="fw-semibold fs-13">Inbound · PO-3821</span>
+                        <div>
+                          <span
+                            class="badge bg-success-transparent text-success"
+                            >Arrived</span
+                          >
+                        </div>
+                      </div>
+                      <div class="text-muted fs-12 mt-1">
+                        18 pallets · Dock 02
+                      </div>
+                      <div class="text-muted fs-12">Harbor Supply Co.</div>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex gap-3 align-items-start pb-3 mb-3 border-bottom"
+                  >
+                    <div class="text-center dock-date bg-light rounded">
+                      <span class="fw-semibold d-block">11:15</span
+                      ><span class="text-muted fs-13">AM</span>
+                    </div>
+                    <div class="flex-fill ps-3">
+                      <div class="d-flex justify-content-between gap-2">
+                        <span class="fw-semibold fs-13"
+                          >Outbound · SHP-20492</span
+                        >
+                        <div>
+                          <span
+                            class="badge bg-secondary-transparent text-secondary"
+                            >Loading</span
+                          >
+                        </div>
+                      </div>
+                      <div class="text-muted fs-12 mt-1">
+                        24 parcels · Dock 04
+                      </div>
+                      <div class="text-muted fs-12">FedEx Ground</div>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-3 align-items-start">
+                    <div class="text-center dock-date bg-light rounded">
+                      <span class="fw-semibold d-block">12:00</span
+                      ><span class="text-muted fs-13">PM</span>
+                    </div>
+                    <div class="flex-fill ps-3">
+                      <div class="d-flex justify-content-between gap-2">
+                        <span class="fw-semibold fs-13">Inbound · PO-3824</span>
+                        <div>
+                          <span
+                            class="badge bg-warning-transparent text-warning"
+                            >Expected</span
+                          >
+                        </div>
+                      </div>
+                      <div class="text-muted fs-12 mt-1">
+                        12 pallets · Dock 01
+                      </div>
+                      <div class="text-muted fs-12">Northstar Packaging</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <a href="shipments.html" class="btn btn-light w-100"
+                    >Open shipment register
+                    <i class="ri-arrow-right-line ms-1"></i
+                  ></a>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xxl-8">
+              <section class="card custom-card">
+                <div
+                  class="card-header justify-content-between flex-wrap gap-2"
+                >
+                  <div>
+                    <div class="card-title mb-1">
+                      Receiving &amp; pick activity
+                    </div>
+                    <span class="text-muted fs-12"
+                      >Recent movement across the warehouse network</span
+                    >
+                  </div>
+                  <a href="shipments.html" class="btn btn-sm btn-light"
+                    >Shipment register <i class="ri-arrow-right-line ms-1"></i
+                  ></a>
+                </div>
+                <div class="table-responsive">
+                  <table class="table text-nowrap table-hover mb-0">
+                    <thead>
+                      <tr>
+                        <th scope="col">Reference</th>
+                        <th scope="col">Activity</th>
+                        <th scope="col">Facility</th>
+                        <th scope="col">Assigned to</th>
+                        <th scope="col">Progress</th>
+                        <th scope="col">Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="fw-semibold">PO-3821</td>
+                        <td>
+                          Inbound receiving
+                          <div class="text-muted fs-12">
+                            18 pallets · Harbor Supply Co.
+                          </div>
+                        </td>
+                        <td>Newark DC</td>
+                        <td>Chris Morgan</td>
+                        <td>14 / 18 pallets</td>
+                        <td>
+                          <span
+                            class="badge bg-secondary-transparent text-secondary"
+                            >Unloading</span
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="fw-semibold">SHP-20492</td>
+                        <td>
+                          Outbound pick
+                          <div class="text-muted fs-12">
+                            24 parcels · FedEx Ground
+                          </div>
+                        </td>
+                        <td>Newark DC</td>
+                        <td>Pick team A</td>
+                        <td>19 / 24 parcels</td>
+                        <td>
+                          <span
+                            class="badge bg-warning-transparent text-warning"
+                            >Packing</span
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="fw-semibold">PO-3818</td>
+                        <td>
+                          Stock putaway
+                          <div class="text-muted fs-12">
+                            42 cartons · Apex Goods
+                          </div>
+                        </td>
+                        <td>Austin Hub</td>
+                        <td>Riley Bennett</td>
+                        <td>42 / 42 cartons</td>
+                        <td>
+                          <span
+                            class="badge bg-success-transparent text-success"
+                            >Complete</span
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="fw-semibold">SHP-20487</td>
+                        <td>
+                          Outbound dispatch
+                          <div class="text-muted fs-12">16 parcels · UPS</div>
+                        </td>
+                        <td>Seattle WH</td>
+                        <td>Pick team C</td>
+                        <td>16 / 16 parcels</td>
+                        <td>
+                          <span
+                            class="badge bg-success-transparent text-success"
+                            >Ready</span
+                          >
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div
+                  class="card-footer border-top-0 d-flex justify-content-between align-items-center"
+                >
+                  <span class="text-muted fs-12"
+                    >Latest warehouse movements</span
+                  ><a href="shipments.html" class="fs-12 fw-medium"
+                    >View all shipments <i class="ri-arrow-right-line"></i
+                  ></a>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-xxl-4">
+              <section class="card custom-card">
+                <div class="card-header justify-content-between">
+                  <div class="card-title">Inventory attention</div>
+                  <span class="badge bg-warning-transparent text-warning"
+                    >4 items</span
+                  >
+                </div>
+                <div class="card-body">
+                  <p class="text-muted fs-12 mb-3">
+                    Replenishment suggestions based on current pick activity.
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center py-3 border-bottom"
+                  >
+                    <div>
+                      <div class="fw-semibold fs-13">Shipping cartons · M</div>
+                      <div class="text-muted fs-12">
+                        Newark DC · Reorder at 120
+                      </div>
+                    </div>
+                    <span class="text-danger fw-semibold">86 left</span>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center py-3 border-bottom"
+                  >
+                    <div>
+                      <div class="fw-semibold fs-13">Thermal labels</div>
+                      <div class="text-muted fs-12">
+                        Austin Hub · Reorder at 50
+                      </div>
+                    </div>
+                    <span class="text-warning fw-semibold">54 left</span>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center py-3 border-bottom"
+                  >
+                    <div>
+                      <div class="fw-semibold fs-13">Protective mailers</div>
+                      <div class="text-muted fs-12">
+                        Seattle WH · Reorder at 200
+                      </div>
+                    </div>
+                    <span class="text-warning fw-semibold">218 left</span>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center pt-3"
+                  >
+                    <div>
+                      <div class="fw-semibold fs-13">Pallet wrap rolls</div>
+                      <div class="text-muted fs-12">
+                        Newark DC · Reorder at 30
+                      </div>
+                    </div>
+                    <span class="text-warning fw-semibold">34 left</span>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <a
+                    href="product-stocks.html"
+                    class="btn btn-outline-secondary w-100"
+                    >Review replenishment needs</a
+                  >
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"-->
+    <script src="../assets/js/app-interactions.js"></script>
+    <!-- include appearance-customizer-scripts.html"-->
+  </body>
+</html>

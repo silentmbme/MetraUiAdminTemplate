@@ -1,0 +1,574 @@
+<!-- include document-head.html"-->
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <div>
+            <h1 class="page-title mb-1">Add staff member</h1>
+            <p class="text-muted fs-13 mb-0">
+              Create an employee profile and prepare their first day.
+            </p>
+          </div>
+          <div class="d-flex align-items-center gap-3 flex-wrap">
+            <ol class="breadcrumb mb-0">
+              <li class="breadcrumb-item">
+                <a href="hrm-dashboard.html">HRM</a>
+              </li>
+              <li class="breadcrumb-item">
+                <a href="staff-list.html">Staff</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Add staff
+              </li>
+            </ol>
+            <a href="staff-list.html" class="btn btn-light btn-sm"
+              ><i class="ri-arrow-left-line me-1"></i>Directory</a
+            >
+          </div>
+        </div>
+        <div class="container-fluid">
+          <section class="card custom-card mb-3">
+            <div class="card-body py-3 px-4">
+              <div
+                class="d-flex align-items-center justify-content-between flex-wrap gap-3"
+              >
+                <div class="d-flex align-items-center gap-3">
+                  <div>
+                    <span
+                      class="avatar avatar-lg bg-secondary-transparent text-secondary rounded-circle"
+                      ><i class="ri-user-add-line fs-20"></i
+                    ></span>
+                  </div>
+                  <div>
+                    <div class="fw-semibold">Employee onboarding</div>
+                    <div class="text-muted fs-12">
+                      Add identity, role, and emergency contact details.
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <span class="text-muted fs-12">3 sections</span>
+                  <span
+                    class="badge bg-warning-transparent text-warning rounded-pill"
+                    ><i class="ri-draft-line me-1"></i>Draft</span
+                  >
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div class="row">
+            <div class="col-xxl-8">
+              <form>
+                <section
+                  class="card custom-card mb-3"
+                  id="personal-details"
+                  style="scroll-margin-top: 100px"
+                >
+                  <div class="card-header justify-content-between">
+                    <div class="d-flex align-items-center gap-2">
+                      <div>
+                        <div class="card-title mb-0">Personal details</div>
+                        <span class="text-muted fs-12"
+                          >Basic identity and contact information</span
+                        >
+                      </div>
+                    </div>
+                    <span class="text-muted fs-12"
+                      >Required fields <span class="text-danger">*</span></span
+                    >
+                  </div>
+                  <div class="card-body">
+                    <div class="row g-3">
+                      <div class="col-md-6">
+                        <label
+                          for="first-name"
+                          class="form-label fw-medium fs-13"
+                          >First name <span class="text-danger">*</span></label
+                        ><input
+                          class="form-control"
+                          id="first-name"
+                          name="firstName"
+                          placeholder="e.g. Taylor"
+                          autocomplete="given-name"
+                          required
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label
+                          for="last-name"
+                          class="form-label fw-medium fs-13"
+                          >Last name <span class="text-danger">*</span></label
+                        ><input
+                          class="form-control"
+                          id="last-name"
+                          name="lastName"
+                          placeholder="e.g. Morgan"
+                          autocomplete="family-name"
+                          required
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label
+                          for="work-email"
+                          class="form-label fw-medium fs-13"
+                          >Work email <span class="text-danger">*</span></label
+                        ><input
+                          class="form-control"
+                          id="work-email"
+                          name="workEmail"
+                          type="email"
+                          placeholder="name@company.com"
+                          autocomplete="email"
+                          required
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label
+                          for="phone-number"
+                          class="form-label fw-medium fs-13"
+                          >Phone number</label
+                        ><input
+                          class="form-control"
+                          id="phone-number"
+                          name="phone"
+                          type="tel"
+                          placeholder="+1 (555) 000-0000"
+                          autocomplete="tel"
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label
+                          for="personal-email"
+                          class="form-label fw-medium fs-13"
+                          >Personal email</label
+                        ><input
+                          class="form-control"
+                          id="personal-email"
+                          name="personalEmail"
+                          type="email"
+                          placeholder="name@example.com"
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label
+                          for="birth-date"
+                          class="form-label fw-medium fs-13"
+                          >Date of birth</label
+                        ><input
+                          class="form-control"
+                          id="birth-date"
+                          name="birthDate"
+                          type="date"
+                        />
+                      </div>
+                      <div class="col-12">
+                        <label
+                          for="home-address"
+                          class="form-label fw-medium fs-13"
+                          >Home address</label
+                        ><input
+                          class="form-control"
+                          id="home-address"
+                          name="address"
+                          placeholder="Street address, city, state, ZIP code"
+                          autocomplete="street-address"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <section
+                  class="card custom-card mb-3"
+                  id="job-details"
+                  style="scroll-margin-top: 100px"
+                >
+                  <div class="card-header justify-content-between">
+                    <div class="d-flex align-items-center gap-2">
+                      <div>
+                        <div class="card-title mb-0">Role &amp; employment</div>
+                        <span class="text-muted fs-12"
+                          >Team assignment, manager, and start date</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="row g-3">
+                      <div class="col-md-6">
+                        <label
+                          for="job-title"
+                          class="form-label fw-medium fs-13"
+                          >Job title <span class="text-danger">*</span></label
+                        ><input
+                          class="form-control"
+                          id="job-title"
+                          name="jobTitle"
+                          placeholder="e.g. Product Designer"
+                          required
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label
+                          for="department"
+                          class="form-label fw-medium fs-13"
+                          >Department <span class="text-danger">*</span></label
+                        >
+                        <select
+                          class="form-select"
+                          id="department"
+                          data-trigger
+                          name="department"
+                          required
+                        >
+                          <option value="" selected disabled>
+                            Select department
+                          </option>
+                          <option>Product &amp; Engineering</option>
+                          <option>Operations</option>
+                          <option>Sales &amp; Marketing</option>
+                          <option>Customer Success</option>
+                          <option>General &amp; Administration</option>
+                        </select>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="manager" class="form-label fw-medium fs-13"
+                          >Reports to</label
+                        ><select
+                          class="form-select"
+                          data-trigger
+                          id="manager"
+                          name="manager"
+                        >
+                          <option value="" selected>Select manager</option>
+                          <option>Robert Chen · Design Director</option>
+                          <option>Priya Shah · Engineering Manager</option>
+                          <option>Marcus Reed · Operations Lead</option>
+                        </select>
+                      </div>
+                      <div class="col-md-6">
+                        <label
+                          for="work-location"
+                          class="form-label fw-medium fs-13"
+                          >Work location
+                          <span class="text-danger">*</span></label
+                        ><select
+                          class="form-select"
+                          data-trigger
+                          id="work-location"
+                          name="location"
+                          required
+                        >
+                          <option value="" selected disabled>
+                            Select location
+                          </option>
+                          <option>New York, NY</option>
+                          <option>London, UK</option>
+                          <option>Austin, TX</option>
+                          <option>Remote</option>
+                        </select>
+                      </div>
+                      <div class="col-md-6">
+                        <label
+                          for="employment-type"
+                          class="form-label fw-medium fs-13"
+                          >Employment type
+                          <span class="text-danger">*</span></label
+                        ><select
+                          class="form-select"
+                          data-trigger
+                          id="employment-type"
+                          name="employmentType"
+                          required
+                        >
+                          <option value="" selected disabled>
+                            Select type
+                          </option>
+                          <option>Full time</option>
+                          <option>Part time</option>
+                          <option>Contract</option>
+                          <option>Intern</option>
+                        </select>
+                      </div>
+                      <div class="col-md-6">
+                        <label
+                          for="work-arrangement"
+                          class="form-label fw-medium fs-13"
+                          >Work arrangement</label
+                        ><select
+                          class="form-select"
+                          id="work-arrangement"
+                          data-trigger
+                          name="workArrangement"
+                        >
+                          <option>Hybrid</option>
+                          <option>On-site</option>
+                          <option>Remote</option>
+                        </select>
+                      </div>
+                      <div class="col-md-6">
+                        <label
+                          for="start-date"
+                          class="form-label fw-medium fs-13"
+                          >Start date <span class="text-danger">*</span></label
+                        ><input
+                          class="form-control"
+                          id="start-date"
+                          name="startDate"
+                          type="date"
+                          required
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label
+                          for="employee-id"
+                          class="form-label fw-medium fs-13"
+                          >Employee ID</label
+                        ><input
+                          class="form-control"
+                          id="employee-id"
+                          name="employeeId"
+                          placeholder="Assigned during profile setup"
+                        />
+                        <div class="form-text">
+                          Leave blank to assign an ID later.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <section
+                  class="card custom-card mb-3"
+                  id="emergency-contact"
+                  style="scroll-margin-top: 100px"
+                >
+                  <div class="card-header justify-content-between">
+                    <div class="d-flex align-items-center gap-2">
+                      <div>
+                        <div class="card-title mb-0">Emergency contact</div>
+                        <span class="text-muted fs-12"
+                          >Optional contact details for urgent situations</span
+                        >
+                      </div>
+                    </div>
+                    <span class="badge bg-light text-muted">Optional</span>
+                  </div>
+                  <div class="card-body">
+                    <div class="row g-3">
+                      <div class="col-md-6">
+                        <label
+                          for="emergency-name"
+                          class="form-label fw-medium fs-13"
+                          >Contact name</label
+                        ><input
+                          class="form-control"
+                          id="emergency-name"
+                          name="emergencyName"
+                          placeholder="Full name"
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label
+                          for="relationship"
+                          class="form-label fw-medium fs-13"
+                          >Relationship</label
+                        >
+                        <select
+                          class="form-select"
+                          data-trigger
+                          id="relationship"
+                          name="relationship"
+                        >
+                          <option value="" selected>Select relationship</option>
+                          <option>Spouse or partner</option>
+                          <option>Parent</option>
+                          <option>Sibling</option>
+                          <option>Other</option>
+                        </select>
+                      </div>
+                      <div class="col-md-6">
+                        <label
+                          for="emergency-phone"
+                          class="form-label fw-medium fs-13"
+                          >Phone number</label
+                        ><input
+                          class="form-control"
+                          id="emergency-phone"
+                          name="emergencyPhone"
+                          type="tel"
+                          placeholder="+1 (555) 000-0000"
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label
+                          for="emergency-email"
+                          class="form-label fw-medium fs-13"
+                          >Email address</label
+                        ><input
+                          class="form-control"
+                          id="emergency-email"
+                          name="emergencyEmail"
+                          type="email"
+                          placeholder="name@example.com"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <div
+                  class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-4"
+                >
+                  <a href="staff-list.html" class="btn btn-light">Cancel</a>
+                  <div class="d-flex gap-2">
+                    <button class="btn btn-outline-secondary" type="button">
+                      Save draft</button
+                    ><button class="btn btn-dark" type="submit">
+                      Create employee profile
+                      <i class="ri-arrow-right-line ms-1"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div class="col-xxl-4">
+              <section class="card custom-card mb-3">
+                <div class="card-header">
+                  <div class="card-title">Form sections</div>
+                </div>
+                <div class="card-body">
+                  <a
+                    href="#personal-details"
+                    class="d-flex gap-3 pb-3 mb-3 border-bottom text-reset text-decoration-none"
+                  >
+                    <span
+                      class="avatar avatar-sm bg-primary text-black rounded-circle"
+                      >1</span
+                    >
+                    <span
+                      ><span class="fw-semibold fs-13 d-block"
+                        >Personal details</span
+                      ><span class="text-muted fs-12"
+                        >Name and contact information</span
+                      ></span
+                    >
+                  </a>
+                  <a
+                    href="#job-details"
+                    class="d-flex gap-3 pb-3 mb-3 border-bottom text-reset text-decoration-none"
+                  >
+                    <span
+                      class="avatar avatar-sm bg-light text-muted rounded-circle"
+                      >2</span
+                    >
+                    <span
+                      ><span class="fw-semibold fs-13 d-block"
+                        >Role &amp; employment</span
+                      ><span class="text-muted fs-12"
+                        >Position and start date</span
+                      ></span
+                    >
+                  </a>
+                  <a
+                    href="#emergency-contact"
+                    class="d-flex gap-3 text-reset text-decoration-none"
+                  >
+                    <span
+                      class="avatar avatar-sm bg-light text-muted rounded-circle"
+                      >3</span
+                    >
+                    <span
+                      ><span class="fw-semibold fs-13 d-block"
+                        >Emergency contact</span
+                      ><span class="text-muted fs-12"
+                        >Optional safety details</span
+                      ></span
+                    >
+                  </a>
+                </div>
+              </section>
+
+              <section class="card custom-card mb-3">
+                <div class="card-header">
+                  <div class="card-title">Before you begin</div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex gap-3 mb-3">
+                    <span
+                      class="avatar avatar-sm bg-success-transparent text-success rounded-circle"
+                      ><i class="ri-checkbox-circle-line fs-16"></i
+                    ></span>
+                    <div>
+                      <div class="fw-semibold fs-13">Confirm the role</div>
+                      <div class="text-muted fs-12">
+                        Check title, team, and reporting manager.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-3 mb-3">
+                    <span
+                      class="avatar avatar-sm bg-info-transparent text-info rounded-circle"
+                      ><i class="ri-calendar-event-line fs-16"></i
+                    ></span>
+                    <div>
+                      <div class="fw-semibold fs-13">Set the start date</div>
+                      <div class="text-muted fs-12">
+                        Allow time for account and equipment setup.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-3">
+                    <span
+                      class="avatar avatar-sm bg-warning-transparent text-warning rounded-circle"
+                      ><i class="ri-shield-user-line fs-16"></i
+                    ></span>
+                    <div>
+                      <div class="fw-semibold fs-13">
+                        Handle personal data carefully
+                      </div>
+                      <div class="text-muted fs-12">
+                        Only collect details needed for employment.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <div
+                class="alert bg-color-3 mb-4 text-black d-flex align-items-start gap-2"
+                role="note"
+              >
+                <i class="ri-information-line fs-18"></i>
+                <div>
+                  <div class="fw-semibold fs-13 text-black">
+                    Need to review the directory?
+                  </div>
+                  <a href="staff-list.html" class="fs-12 text-black"
+                    >Return to staff list <i class="ri-arrow-right-line"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"-->
+    <script src="../assets/js/app-interactions.js"></script>
+    <!-- include appearance-customizer-scripts.html"-->
+  </body>
+</html>

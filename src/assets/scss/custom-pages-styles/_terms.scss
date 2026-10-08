@@ -1,0 +1,148 @@
+.terms-page {
+  .terms-workspace {
+    padding-bottom: 1.5rem;
+  }
+
+  .terms-document {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--theme-default-border);
+    border-radius: 0.55rem;
+    background: var(--theme-custom-white);
+  }
+
+  .terms-document::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: min(34vw, 27rem);
+    height: 27rem;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.9) 1.5px, transparent 2px), radial-gradient(ellipse at 78% 15%, rgba(var(--theme-danger-rgb), 0.07) 0 22%, transparent 22.5%), radial-gradient(ellipse at 40% 38%, rgba(var(--theme-info-rgb), 0.075) 0 25%, transparent 25.5%), linear-gradient(60deg, transparent 0 35%, rgba(var(--theme-primary-rgb), 0.055) 35% 53%, transparent 53.5%);
+    background-position: 0 0, 1rem -2rem, -3rem 4rem, 1rem 0;
+    background-size: 1.05rem 1.05rem, 18rem 25rem, 17rem 24rem, 100% 100%;
+    content: "";
+    opacity: 0.8;
+    pointer-events: none;
+  }
+
+  .terms-document .card-body {
+    position: relative;
+    z-index: 1;
+    padding: 1.3rem 1.5rem 1.75rem;
+  }
+
+  .terms-intro {
+    max-width: 76rem;
+    margin: 0 0 1.25rem;
+    color: var(--theme-default-text-color);
+    font-size: 0.8rem;
+    font-style: italic;
+    line-height: 1.65;
+  }
+
+  .terms-section {
+    max-width: 82rem;
+    margin: 0 0 1.35rem;
+    scroll-margin-top: 6rem;
+    &:last-child{
+      margin-bottom: 0px;
+    }
+  }
+
+  .terms-section h2 {
+    margin: 0 0 0.45rem;
+    color: var(--theme-default-text-color);
+    font-size: 0.92rem;
+    font-weight: 650;
+    line-height: 1.4;
+  }
+
+  .terms-section p,
+  .terms-section li {
+    color: var(--theme-default-text-color);
+    font-size: 0.77rem;
+    line-height: 1.65;
+  }
+
+  .terms-section p {
+    margin: 0;
+  }
+
+  .terms-section ul {
+    margin: 0.35rem 0 0;
+    padding-left: 1.25rem;
+  }
+
+  .terms-section li {
+    margin-bottom: 0.12rem;
+    padding-left: 0.1rem;
+  }
+
+  .terms-license {
+    margin-top: 0.85rem;
+  }
+
+  .terms-license h3 {
+    margin: 0 0 0.25rem;
+    color: var(--theme-default-text-color);
+    font-size: 0.78rem;
+    font-weight: 600;
+  }
+
+  .terms-license ul {
+    margin-top: 0;
+  }
+
+  .terms-section a {
+    color: rgb(var(--theme-primary-rgb));
+    text-decoration: none;
+  }
+
+  .terms-section a:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.15rem;
+  }
+
+  @media (max-width: 767.98px) {
+    .terms-document .card-body {
+      padding: 1.1rem 1rem 1.4rem;
+    }
+
+    .terms-document::after {
+      width: 45vw;
+      height: 18rem;
+      opacity: 0.45;
+    }
+
+    .terms-intro {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    .terms-document::after {
+      width: 55vw;
+      height: 12rem;
+      opacity: 0.28;
+    }
+
+    .terms-section {
+      margin-bottom: 1.1rem;
+    }
+
+    .terms-section h2 {
+      font-size: 0.85rem;
+    }
+
+    .terms-section p,
+    .terms-section li {
+      font-size: 0.72rem;
+    }
+  }
+}
+
+[data-theme-color="dark"]{
+  .terms-page .terms-document::after {
+    display: none;
+  }
+}

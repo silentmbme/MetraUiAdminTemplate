@@ -1,0 +1,537 @@
+<!-- include document-head.html"-->
+    <link
+      rel="stylesheet"
+      href="../assets/libs/prismjs/themes/prism-coy.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Form layouts</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">
+              <a href="javascript:void(0);">Forms</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="javascript:void(0);">Form Elements</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Form layouts
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid">
+          <section aria-labelledby="single-column-heading">
+            <div class="row">
+              <div class="col-xl-6">
+                <section class="card custom-card">
+                  <div
+                    class="card-header justify-content-between flex-wrap gap-2"
+                  >
+                    <div>
+                      <h3 class="card-title mb-1">Vertical request form</h3>
+                      <p class="text-muted fs-12 mb-0">
+                        Fields stack in a clear reading order.
+                      </p>
+                    </div>
+                    <div class="prism-toggle">
+                      <button
+                        class="btn btn-sm btn-outline-light rounded-pill"
+                        type="button"
+                      >
+                        View markup<i
+                          class="ri-code-line ms-2 d-inline-block align-middle"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <form>
+                      <div class="mb-3">
+                        <label for="request-subject" class="form-label"
+                          >Request subject</label
+                        ><input
+                          type="text"
+                          class="form-control"
+                          id="request-subject"
+                          placeholder="Briefly describe the request"
+                        />
+                      </div>
+                      <div class="mb-3">
+                        <label for="request-category" class="form-label"
+                          >Category</label
+                        ><select class="form-select" id="request-category">
+                          <option selected disabled value="">
+                            Choose a category
+                          </option>
+                          <option>Account access</option>
+                          <option>Billing question</option>
+                          <option>Technical support</option>
+                        </select>
+                      </div>
+                      <div class="mb-3">
+                        <label for="request-description" class="form-label"
+                          >Details</label
+                        ><textarea
+                          class="form-control"
+                          id="request-description"
+                          rows="3"
+                          placeholder="Add details to help us respond"
+                        ></textarea>
+                      </div>
+                      <div class="d-flex justify-content-end gap-2">
+                        <button class="btn btn-light" type="reset">Clear</button
+                        ><button class="btn btn-dark" type="button">
+                          Send request
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="card-footer d-none border-top-0">
+                    <pre
+                      class="language-html"
+                    ><code class="language-html">&lt;div class="mb-3"&gt;
+  &lt;label for="subject" class="form-label"&gt;Request subject&lt;/label&gt;
+  &lt;input type="text" class="form-control" id="subject"&gt;
+&lt;/div&gt;
+&lt;div class="mb-3"&gt;
+  &lt;label for="details" class="form-label"&gt;Details&lt;/label&gt;
+  &lt;textarea class="form-control" id="details" rows="3"&gt;&lt;/textarea&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                </section>
+              </div>
+              <div class="col-xl-6">
+                <section class="card custom-card">
+                  <div
+                    class="card-header justify-content-between flex-wrap gap-2"
+                  >
+                    <div>
+                      <h3 class="card-title mb-1">Horizontal account form</h3>
+                      <p class="text-muted fs-12 mb-0">
+                        Labels align beside controls on wider screens.
+                      </p>
+                    </div>
+                    <div class="prism-toggle">
+                      <button
+                        class="btn btn-sm btn-outline-light rounded-pill"
+                        type="button"
+                      >
+                        View markup<i
+                          class="ri-code-line ms-2 d-inline-block align-middle"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <form>
+                      <div class="row mb-3">
+                        <label
+                          for="account-email"
+                          class="col-sm-3 col-form-label"
+                          >Email</label
+                        >
+                        <div class="col-sm-9">
+                          <input
+                            type="email"
+                            class="form-control"
+                            id="account-email"
+                            placeholder="you@company.com"
+                          />
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <label
+                          for="account-team"
+                          class="col-sm-3 col-form-label"
+                          >Team</label
+                        >
+                        <div class="col-sm-9">
+                          <select
+                            class="form-select"
+                            data-trigger
+                            id="account-team"
+                          >
+                            <option selected>Choose a team</option>
+                            <option>Product</option>
+                            <option>Operations</option>
+                            <option>Customer success</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <div class="col-sm-9 offset-sm-3">
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              id="account-updates"
+                            /><label
+                              class="form-check-label"
+                              for="account-updates"
+                              >Send me account updates</label
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-9 offset-sm-3">
+                          <button type="button" class="btn btn-dark">
+                            Save settings
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="card-footer d-none border-top-0">
+                    <pre
+                      class="language-html"
+                    ><code class="language-html">&lt;div class="row mb-3"&gt;
+  &lt;label for="email" class="col-sm-3 col-form-label"&gt;Email&lt;/label&gt;
+  &lt;div class="col-sm-9"&gt;
+    &lt;input type="email" class="form-control" id="email"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </section>
+
+          <section aria-labelledby="grid-layout-heading">
+            <div class="row">
+              <div class="col-xl-7">
+                <section class="card custom-card">
+                  <div
+                    class="card-header justify-content-between flex-wrap gap-2"
+                  >
+                    <div>
+                      <h3 class="card-title mb-1">
+                        Responsive contact details
+                      </h3>
+                      <p class="text-muted fs-12 mb-0">
+                        Related fields share a row and stack on small screens.
+                      </p>
+                    </div>
+                    <div class="prism-toggle">
+                      <button
+                        class="btn btn-sm btn-outline-light rounded-pill"
+                        type="button"
+                      >
+                        View markup<i
+                          class="ri-code-line ms-2 d-inline-block align-middle"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <form class="row gy-3">
+                      <div class="col-md-6">
+                        <label for="contact-first-name" class="form-label"
+                          >First name</label
+                        ><input
+                          type="text"
+                          class="form-control"
+                          id="contact-first-name"
+                          placeholder="First name"
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label for="contact-last-name" class="form-label"
+                          >Last name</label
+                        ><input
+                          type="text"
+                          class="form-control"
+                          id="contact-last-name"
+                          placeholder="Last name"
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label for="contact-email" class="form-label"
+                          >Email address</label
+                        ><input
+                          type="email"
+                          class="form-control"
+                          id="contact-email"
+                          placeholder="name@example.com"
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label for="contact-phone" class="form-label"
+                          >Phone number</label
+                        ><input
+                          type="tel"
+                          class="form-control"
+                          id="contact-phone"
+                          placeholder="+1 555 0100"
+                        />
+                      </div>
+                      <div class="col-md-8">
+                        <label for="contact-city" class="form-label">City</label
+                        ><input
+                          type="text"
+                          class="form-control"
+                          id="contact-city"
+                          placeholder="City"
+                        />
+                      </div>
+                      <div class="col-md-4">
+                        <label for="contact-postal" class="form-label"
+                          >Postal code</label
+                        ><input
+                          type="text"
+                          class="form-control"
+                          id="contact-postal"
+                          placeholder="Postal code"
+                        />
+                      </div>
+                      <div class="col-12">
+                        <button type="button" class="btn btn-dark">
+                          Save contact
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="card-footer d-none border-top-0">
+                    <pre
+                      class="language-html"
+                    ><code class="language-html">&lt;form class="row"&gt;
+  &lt;div class="col-md-6"&gt;
+    &lt;label for="first-name" class="form-label"&gt;First name&lt;/label&gt;
+    &lt;input type="text" class="form-control" id="first-name"&gt;
+  &lt;/div&gt;
+  &lt;div class="col-md-6"&gt;...&lt;/div&gt;
+  &lt;div class="col-12"&gt;
+    &lt;button type="button" class="btn btn-primary"&gt;Save contact&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+                  </div>
+                </section>
+              </div>
+              <div class="col-xl-5">
+                <section class="card custom-card">
+                  <div
+                    class="card-header justify-content-between flex-wrap gap-2"
+                  >
+                    <div>
+                      <h3 class="card-title mb-1">Compact filter row</h3>
+                      <p class="text-muted fs-12 mb-0">
+                        Keep search and filter controls together.
+                      </p>
+                    </div>
+                    <div class="prism-toggle">
+                      <button
+                        class="btn btn-sm btn-outline-light rounded-pill"
+                        type="button"
+                      >
+                        View markup<i
+                          class="ri-code-line ms-2 d-inline-block align-middle"
+                        ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <form>
+                      <label for="filter-keyword" class="form-label"
+                        >Find a record</label
+                      >
+                      <div class="input-group mb-3">
+                        <span class="input-group-text"
+                          ><i
+                            class="ri-search-line"
+                            aria-hidden="true"
+                          ></i></span
+                        ><input
+                          type="search"
+                          class="form-control"
+                          id="filter-keyword"
+                          placeholder="Name or email"
+                        /><button class="btn btn-primary" type="button">
+                          Search
+                        </button>
+                      </div>
+                      <label for="filter-status" class="form-label"
+                        >Status</label
+                      ><select
+                        class="form-select mb-3"
+                        data-trigger
+                        id="filter-status"
+                      >
+                        <option selected>All statuses</option>
+                        <option>Active</option>
+                        <option>Pending</option>
+                        <option>Archived</option></select
+                      ><button class="btn btn-light mt-3" type="reset">
+                        Reset filters
+                      </button>
+                    </form>
+                  </div>
+                  <div class="card-footer d-none border-top-0">
+                    <pre
+                      class="language-html"
+                    ><code class="language-html">&lt;div class="input-group"&gt;
+  &lt;span class="input-group-text"&gt;
+    &lt;i class="ri-search-line"&gt;&lt;/i&gt;
+  &lt;/span&gt;
+  &lt;input type="search" class="form-control" placeholder="Name or email"&gt;
+  &lt;button class="btn btn-primary" type="button"&gt;Search&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </section>
+
+          <section aria-labelledby="sectioned-layout-heading">
+            <section class="card custom-card">
+              <div class="card-header justify-content-between flex-wrap gap-2">
+                <div>
+                  <h3 class="card-title mb-1">Billing profile</h3>
+                  <p class="text-muted fs-12 mb-0">
+                    Separate contact, address and billing preferences.
+                  </p>
+                </div>
+                <div class="prism-toggle">
+                  <button
+                    class="btn btn-sm btn-outline-light rounded-pill"
+                    type="button"
+                  >
+                    View markup<i
+                      class="ri-code-line ms-2 d-inline-block align-middle"
+                    ></i>
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+                <form>
+                  <fieldset>
+                    <legend class="fs-14 fw-semibold mb-3">
+                      Contact information
+                    </legend>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label for="billing-name" class="form-label"
+                          >Contact name</label
+                        ><input
+                          class="form-control"
+                          id="billing-name"
+                          type="text"
+                          placeholder="Full name"
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label for="billing-email" class="form-label"
+                          >Billing email</label
+                        ><input
+                          class="form-control"
+                          id="billing-email"
+                          type="email"
+                          placeholder="billing@example.com"
+                        />
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <legend class="fs-14 fw-semibold mt-3">
+                      Billing address
+                    </legend>
+                    <div class="row gy-3">
+                      <div class="col-12">
+                        <label for="billing-street" class="form-label"
+                          >Street address</label
+                        ><input
+                          class="form-control"
+                          id="billing-street"
+                          type="text"
+                          placeholder="Street and number"
+                        />
+                      </div>
+                      <div class="col-md-5">
+                        <label for="billing-city" class="form-label">City</label
+                        ><input
+                          class="form-control"
+                          id="billing-city"
+                          type="text"
+                          placeholder="City"
+                        />
+                      </div>
+                      <div class="col-md-4">
+                        <label for="billing-region" class="form-label"
+                          >State or region</label
+                        ><input
+                          class="form-control"
+                          id="billing-region"
+                          type="text"
+                          placeholder="State or region"
+                        />
+                      </div>
+                      <div class="col-md-3">
+                        <label for="billing-postal" class="form-label"
+                          >Postal code</label
+                        ><input
+                          class="form-control"
+                          id="billing-postal"
+                          type="text"
+                          placeholder="Postal code"
+                        />
+                      </div>
+                    </div>
+                  </fieldset>
+                  <div
+                    class="d-flex align-items-center mt-3 justify-content-between flex-wrap gap-2"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        id="billing-default"
+                        type="checkbox"
+                      /><label class="form-check-label" for="billing-default"
+                        >Use as default billing address</label
+                      >
+                    </div>
+                    <button class="btn btn-dark" type="button">
+                      Save billing profile
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <div class="card-footer d-none border-top-0">
+                <pre
+                  class="language-html"
+                ><code class="language-html">&lt;form&gt;
+  &lt;fieldset&gt;
+    &lt;legend class="fs-14 fw-semibold mb-3"&gt;Contact information&lt;/legend&gt;
+    &lt;div class="row"&gt;...&lt;/div&gt;
+  &lt;/fieldset&gt;
+  &lt;fieldset&gt;
+    &lt;legend class="fs-14 fw-semibold mb-3"&gt;Billing address&lt;/legend&gt;
+    &lt;div class="row"&gt;...&lt;/div&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;</code></pre>
+              </div>
+            </section>
+          </section>
+        </div>
+      </main>
+
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <!-- include common-scripts.html"-->
+    <!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/libs/prismjs/prism.js"></script>
+    <script src="../assets/js/prism-custom.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

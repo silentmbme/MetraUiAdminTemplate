@@ -1,0 +1,1846 @@
+<!-- include document-head.html"-->
+    <link
+      rel="stylesheet"
+      href="../assets/libs/prismjs/themes/prism-coy.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Checks &amp; Radios</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">
+              <a href="javascript:void(0);">Forms</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="javascript:void(0);">Form Elements</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Checks &amp; Radios
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xl-12">
+              <section class="card custom-card">
+                <div class="card-header justify-content-between">
+                  <div>
+                    <h3 class="card-title mb-1">Checkbox states</h3>
+                    <p class="text-muted fs-12 mb-0">
+                      Default, checked, disabled and indeterminate styles.
+                    </p>
+                  </div>
+                  <div class="prism-toggle">
+                    <button
+                      class="btn btn-sm btn-outline-light rounded-pill"
+                      type="button"
+                    >
+                      View markup<i
+                        class="ri-code-line ms-2 d-inline-block align-middle"
+                      ></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="form-check mb-3">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="check-default"
+                    />
+                    <label class="form-check-label" for="check-default"
+                      >Unchecked option</label
+                    >
+                  </div>
+                  <div class="form-check mb-3">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="check-selected"
+                      checked
+                    />
+                    <label class="form-check-label" for="check-selected"
+                      >Selected option</label
+                    >
+                  </div>
+                  <div class="form-check mb-3">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="check-disabled"
+                      disabled
+                    />
+                    <label class="form-check-label" for="check-disabled"
+                      >Disabled option</label
+                    >
+                  </div>
+                  <div class="form-check mb-3">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="check-disabled-selected"
+                      checked
+                      disabled
+                    />
+                    <label
+                      class="form-check-label"
+                      for="check-disabled-selected"
+                      >Disabled and selected</label
+                    >
+                  </div>
+                  <div class="form-check mb-0">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="check-indeterminate"
+                    />
+                    <label class="form-check-label" for="check-indeterminate"
+                      >Parent selection (mixed)</label
+                    >
+                    <div class="form-text ms-4">
+                      Mixed state is set with the native indeterminate property.
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer d-none border-top-0">
+                  <pre
+                    class="language-html"
+                  ><code class="language-html">&lt;div class="form-check mb-3"&gt;
+                                    &lt;input class="form-check-input" type="checkbox" id="check-default"&gt;
+                                    &lt;label class="form-check-label" for="check-default"&gt;Unchecked option&lt;/label&gt;
+                                &lt;/div&gt;
+                                &lt;div class="form-check mb-3"&gt;
+                                    &lt;input class="form-check-input" type="checkbox" id="check-selected" checked&gt;
+                                    &lt;label class="form-check-label" for="check-selected"&gt;Selected option&lt;/label&gt;
+                                &lt;/div&gt;
+                                &lt;div class="form-check mb-3"&gt;
+                                    &lt;input class="form-check-input" type="checkbox" id="check-disabled" disabled&gt;
+                                    &lt;label class="form-check-label" for="check-disabled"&gt;Disabled option&lt;/label&gt;
+                                &lt;/div&gt;
+                                &lt;div class="form-check mb-3"&gt;
+                                    &lt;input class="form-check-input" type="checkbox" id="check-disabled-selected" checked disabled&gt;
+                                    &lt;label class="form-check-label" for="check-disabled-selected"&gt;Disabled and selected&lt;/label&gt;
+                                &lt;/div&gt;
+                                &lt;div class="form-check mb-0"&gt;
+                                    &lt;input class="form-check-input" type="checkbox" id="check-indeterminate"&gt;
+                                    &lt;label class="form-check-label" for="check-indeterminate"&gt;Parent selection (mixed)&lt;/label&gt;
+                                    &lt;div class="form-text ms-4"&gt;Mixed state is set with the native indeterminate property.&lt;/div&gt;
+                                &lt;/div&gt;</code></pre>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-xl-12">
+              <section class="card custom-card">
+                <div class="card-header justify-content-between">
+                  <div>
+                    <h3 class="card-title mb-1">Checkbox layouts</h3>
+                    <p class="text-muted fs-12 mb-0">
+                      Inline, reverse-aligned and nested selection examples.
+                    </p>
+                  </div>
+                  <div class="prism-toggle">
+                    <button
+                      class="btn btn-sm btn-outline-light rounded-pill"
+                      type="button"
+                    >
+                      View markup<i
+                        class="ri-code-line ms-2 d-inline-block align-middle"
+                      ></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <fieldset class="mb-4">
+                    <legend class="form-label">Inline choices</legend>
+                    <div class="d-flex flex-wrap gap-3">
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inline-design"
+                          checked
+                        /><label class="form-check-label" for="inline-design"
+                          >Design</label
+                        >
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inline-product"
+                        /><label class="form-check-label" for="inline-product"
+                          >Product</label
+                        >
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inline-engineering"
+                        /><label
+                          class="form-check-label"
+                          for="inline-engineering"
+                          >Engineering</label
+                        >
+                      </div>
+                    </div>
+                  </fieldset>
+                  <hr />
+                  <div class="form-check form-check-reverse mb-3">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="reverse-one"
+                      checked
+                    />
+                    <label class="form-check-label" for="reverse-one"
+                      >Checkbox aligned to the right</label
+                    >
+                  </div>
+                  <div class="form-check form-check-reverse mb-4">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="reverse-two"
+                    />
+                    <label class="form-check-label" for="reverse-two"
+                      >Another reverse option</label
+                    >
+                  </div>
+                  <fieldset>
+                    <legend class="form-label">Nested options</legend>
+                    <div class="form-check ms-3 mb-2">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="nested-comments"
+                        checked
+                      /><label class="form-check-label" for="nested-comments"
+                        >Comments</label
+                      >
+                    </div>
+                    <div class="form-check ms-3">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="nested-files"
+                      /><label class="form-check-label" for="nested-files"
+                        >Files and attachments</label
+                      >
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="card-footer d-none border-top-0">
+                  <pre
+                    class="language-html"
+                  ><code class="language-html">&lt;fieldset class="mb-4"&gt;
+                                    &lt;legend class="form-label"&gt;Inline choices&lt;/legend&gt;
+                                    &lt;div class="d-flex flex-wrap gap-3"&gt;
+                                        &lt;div class="form-check form-check-inline"&gt;&lt;input class="form-check-input" type="checkbox" id="inline-design" checked&gt;&lt;label class="form-check-label" for="inline-design"&gt;Design&lt;/label&gt;&lt;/div&gt;
+                                        &lt;div class="form-check form-check-inline"&gt;&lt;input class="form-check-input" type="checkbox" id="inline-product"&gt;&lt;label class="form-check-label" for="inline-product"&gt;Product&lt;/label&gt;&lt;/div&gt;
+                                        &lt;div class="form-check form-check-inline"&gt;&lt;input class="form-check-input" type="checkbox" id="inline-engineering"&gt;&lt;label class="form-check-label" for="inline-engineering"&gt;Engineering&lt;/label&gt;&lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/fieldset&gt;
+                                &lt;hr&gt;
+                                &lt;div class="form-check form-check-reverse mb-3"&gt;
+                                    &lt;input class="form-check-input" type="checkbox" id="reverse-one" checked&gt;
+                                    &lt;label class="form-check-label" for="reverse-one"&gt;Checkbox aligned to the right&lt;/label&gt;
+                                &lt;/div&gt;
+                                &lt;div class="form-check form-check-reverse mb-4"&gt;
+                                    &lt;input class="form-check-input" type="checkbox" id="reverse-two"&gt;
+                                    &lt;label class="form-check-label" for="reverse-two"&gt;Another reverse option&lt;/label&gt;
+                                &lt;/div&gt;
+                                &lt;fieldset&gt;
+                                    &lt;legend class="form-label"&gt;Nested options&lt;/legend&gt;
+                                    &lt;div class="form-check ms-3 mb-2"&gt;&lt;input class="form-check-input" type="checkbox" id="nested-comments" checked&gt;&lt;label class="form-check-label" for="nested-comments"&gt;Comments&lt;/label&gt;&lt;/div&gt;
+                                    &lt;div class="form-check ms-3"&gt;&lt;input class="form-check-input" type="checkbox" id="nested-files"&gt;&lt;label class="form-check-label" for="nested-files"&gt;Files and attachments&lt;/label&gt;&lt;/div&gt;
+                                &lt;/fieldset&gt;</code></pre>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-xl-12">
+              <section class="card custom-card">
+                <div class="card-header justify-content-between">
+                  <div>
+                    <h3 class="card-title mb-1">Button-style checkboxes</h3>
+                    <p class="text-muted fs-12 mb-0">
+                      Multi-select chips built with Bootstrap button checks.
+                    </p>
+                  </div>
+                  <div class="prism-toggle">
+                    <button
+                      class="btn btn-sm btn-outline-light rounded-pill"
+                      type="button"
+                    >
+                      View markup<i
+                        class="ri-code-line ms-2 d-inline-block align-middle"
+                      ></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <p class="form-label">Filter projects by team</p>
+                  <div class="d-flex flex-wrap gap-2">
+                    <input
+                      type="checkbox"
+                      class="btn-check"
+                      id="filter-design"
+                      autocomplete="off"
+                      checked
+                    />
+                    <label class="btn btn-outline-success" for="filter-design"
+                      >Design</label
+                    >
+                    <input
+                      type="checkbox"
+                      class="btn-check"
+                      id="filter-product"
+                      autocomplete="off"
+                    />
+                    <label class="btn btn-outline-success" for="filter-product"
+                      >Product</label
+                    >
+                    <input
+                      type="checkbox"
+                      class="btn-check"
+                      id="filter-engineering"
+                      autocomplete="off"
+                    />
+                    <label
+                      class="btn btn-outline-success"
+                      for="filter-engineering"
+                      >Engineering</label
+                    >
+                    <input
+                      type="checkbox"
+                      class="btn-check"
+                      id="filter-marketing"
+                      autocomplete="off"
+                    />
+                    <label
+                      class="btn btn-outline-success"
+                      for="filter-marketing"
+                      >Marketing</label
+                    >
+                  </div>
+                  <hr class="my-4" />
+                  <p class="form-label">Color variants</p>
+                  <div class="d-flex flex-wrap gap-2">
+                    <input
+                      type="checkbox"
+                      class="btn-check"
+                      id="variant-primary"
+                      autocomplete="off"
+                      checked
+                    />
+                    <label class="btn btn-primary" for="variant-primary"
+                      >Primary</label
+                    >
+                    <input
+                      type="checkbox"
+                      class="btn-check"
+                      id="variant-success"
+                      autocomplete="off"
+                    />
+                    <label class="btn btn-outline-success" for="variant-success"
+                      >Success</label
+                    >
+                    <input
+                      type="checkbox"
+                      class="btn-check"
+                      id="variant-danger"
+                      autocomplete="off"
+                    />
+                    <label class="btn btn-outline-danger" for="variant-danger"
+                      >Danger</label
+                    >
+                  </div>
+                </div>
+                <div class="card-footer d-none border-top-0">
+                  <pre
+                    class="language-html"
+                  ><code class="language-html">&lt;p class="form-label"&gt;Filter projects by team&lt;/p&gt;
+                                &lt;div class="d-flex flex-wrap gap-2"&gt;
+                                    &lt;input type="checkbox" class="btn-check" id="filter-design" autocomplete="off" checked&gt;
+                                    &lt;label class="btn btn-outline-primary" for="filter-design"&gt;Design&lt;/label&gt;
+                                    &lt;input type="checkbox" class="btn-check" id="filter-product" autocomplete="off"&gt;
+                                    &lt;label class="btn btn-outline-primary" for="filter-product"&gt;Product&lt;/label&gt;
+                                    &lt;input type="checkbox" class="btn-check" id="filter-engineering" autocomplete="off"&gt;
+                                    &lt;label class="btn btn-outline-primary" for="filter-engineering"&gt;Engineering&lt;/label&gt;
+                                    &lt;input type="checkbox" class="btn-check" id="filter-marketing" autocomplete="off"&gt;
+                                    &lt;label class="btn btn-outline-primary" for="filter-marketing"&gt;Marketing&lt;/label&gt;
+                                &lt;/div&gt;
+                                &lt;hr class="my-4"&gt;
+                                &lt;p class="form-label"&gt;Color variants&lt;/p&gt;
+                                &lt;div class="d-flex flex-wrap gap-2"&gt;
+                                    &lt;input type="checkbox" class="btn-check" id="variant-primary" autocomplete="off" checked&gt;
+                                    &lt;label class="btn btn-primary" for="variant-primary"&gt;Primary&lt;/label&gt;
+                                    &lt;input type="checkbox" class="btn-check" id="variant-success" autocomplete="off"&gt;
+                                    &lt;label class="btn btn-outline-success" for="variant-success"&gt;Success&lt;/label&gt;
+                                    &lt;input type="checkbox" class="btn-check" id="variant-danger" autocomplete="off"&gt;
+                                    &lt;label class="btn btn-outline-danger" for="variant-danger"&gt;Danger&lt;/label&gt;
+                                &lt;/div&gt;</code></pre>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-xl-12">
+              <section class="card custom-card">
+                <div class="card-header justify-content-between">
+                  <div>
+                    <h3 class="card-title mb-1">Radio states and layouts</h3>
+                    <p class="text-muted fs-12 mb-0">
+                      Single-choice controls, disabled states and inline radios.
+                    </p>
+                  </div>
+                  <div class="prism-toggle">
+                    <button
+                      class="btn btn-sm btn-outline-light rounded-pill"
+                      type="button"
+                    >
+                      View markup<i
+                        class="ri-code-line ms-2 d-inline-block align-middle"
+                      ></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <fieldset class="mb-4">
+                    <legend class="form-label">
+                      Choose a project priority
+                    </legend>
+                    <div class="form-check mb-2">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="priority"
+                        id="priority-low"
+                        value="low"
+                      /><label class="form-check-label" for="priority-low"
+                        >Low</label
+                      >
+                    </div>
+                    <div class="form-check mb-2">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="priority"
+                        id="priority-normal"
+                        value="normal"
+                        checked
+                      /><label class="form-check-label" for="priority-normal"
+                        >Normal</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="priority"
+                        id="priority-high"
+                        value="high"
+                      /><label class="form-check-label" for="priority-high"
+                        >High</label
+                      >
+                    </div>
+                  </fieldset>
+                  <hr />
+                  <fieldset>
+                    <legend class="form-label">Inline radio choices</legend>
+                    <div class="d-flex flex-wrap gap-3">
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="view-mode"
+                          id="view-list"
+                          value="list"
+                          checked
+                        /><label class="form-check-label" for="view-list"
+                          >List</label
+                        >
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="view-mode"
+                          id="view-board"
+                          value="board"
+                        /><label class="form-check-label" for="view-board"
+                          >Board</label
+                        >
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="view-mode"
+                          id="view-calendar"
+                          value="calendar"
+                        /><label class="form-check-label" for="view-calendar"
+                          >Calendar</label
+                        >
+                      </div>
+                    </div>
+                  </fieldset>
+                  <hr />
+                  <div class="form-check mb-2">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="disabled-choice"
+                      id="radio-disabled"
+                      disabled
+                    />
+                    <label class="form-check-label" for="radio-disabled"
+                      >Disabled radio option</label
+                    >
+                  </div>
+                  <div class="form-check mb-0">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="disabled-choice"
+                      id="radio-disabled-checked"
+                      checked
+                      disabled
+                    />
+                    <label class="form-check-label" for="radio-disabled-checked"
+                      >Disabled selected option</label
+                    >
+                  </div>
+                </div>
+                <div class="card-footer d-none border-top-0">
+                  <pre
+                    class="language-html"
+                  ><code class="language-html">&lt;fieldset class="mb-4"&gt;
+                                    &lt;legend class="form-label"&gt;Choose a project priority&lt;/legend&gt;
+                                    &lt;div class="form-check mb-2"&gt;&lt;input class="form-check-input" type="radio" name="priority" id="priority-low" value="low"&gt;&lt;label class="form-check-label" for="priority-low"&gt;Low&lt;/label&gt;&lt;/div&gt;
+                                    &lt;div class="form-check mb-2"&gt;&lt;input class="form-check-input" type="radio" name="priority" id="priority-normal" value="normal" checked&gt;&lt;label class="form-check-label" for="priority-normal"&gt;Normal&lt;/label&gt;&lt;/div&gt;
+                                    &lt;div class="form-check"&gt;&lt;input class="form-check-input" type="radio" name="priority" id="priority-high" value="high"&gt;&lt;label class="form-check-label" for="priority-high"&gt;High&lt;/label&gt;&lt;/div&gt;
+                                &lt;/fieldset&gt;
+                                &lt;hr&gt;
+                                &lt;fieldset&gt;
+                                    &lt;legend class="form-label"&gt;Inline radio choices&lt;/legend&gt;
+                                    &lt;div class="d-flex flex-wrap gap-3"&gt;
+                                        &lt;div class="form-check form-check-inline"&gt;&lt;input class="form-check-input" type="radio" name="view-mode" id="view-list" value="list" checked&gt;&lt;label class="form-check-label" for="view-list"&gt;List&lt;/label&gt;&lt;/div&gt;
+                                        &lt;div class="form-check form-check-inline"&gt;&lt;input class="form-check-input" type="radio" name="view-mode" id="view-board" value="board"&gt;&lt;label class="form-check-label" for="view-board"&gt;Board&lt;/label&gt;&lt;/div&gt;
+                                        &lt;div class="form-check form-check-inline"&gt;&lt;input class="form-check-input" type="radio" name="view-mode" id="view-calendar" value="calendar"&gt;&lt;label class="form-check-label" for="view-calendar"&gt;Calendar&lt;/label&gt;&lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/fieldset&gt;
+                                &lt;hr&gt;
+                                &lt;div class="form-check mb-2"&gt;
+                                    &lt;input class="form-check-input" type="radio" name="disabled-choice" id="radio-disabled" disabled&gt;
+                                    &lt;label class="form-check-label" for="radio-disabled"&gt;Disabled radio option&lt;/label&gt;
+                                &lt;/div&gt;
+                                &lt;div class="form-check mb-0"&gt;
+                                    &lt;input class="form-check-input" type="radio" name="disabled-choice" id="radio-disabled-checked" checked disabled&gt;
+                                    &lt;label class="form-check-label" for="radio-disabled-checked"&gt;Disabled selected option&lt;/label&gt;
+                                &lt;/div&gt;</code></pre>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-xl-12">
+              <section class="card custom-card">
+                <div class="card-header justify-content-between">
+                  <div>
+                    <h3 class="card-title mb-1">Checkbox and radio sizes</h3>
+                    <p class="text-muted fs-12 mb-0">
+                      Scale the native controls for different layouts.
+                    </p>
+                  </div>
+                  <div class="prism-toggle">
+                    <button
+                      class="btn btn-sm btn-outline-light rounded-pill"
+                      type="button"
+                    >
+                      View markup<i
+                        class="ri-code-line ms-2 d-inline-block align-middle"
+                      ></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-xl-6">
+                      <fieldset>
+                        <legend class="form-label">Checkbox sizes</legend>
+                        <div class="form-check fs-12 mb-2">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="checkbox-size-small"
+                          />
+                          <label
+                            class="form-check-label fs-13"
+                            for="checkbox-size-small"
+                            >Small</label
+                          >
+                        </div>
+                        <div class="form-check mb-2">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="checkbox-size-default"
+                            checked
+                          />
+                          <label
+                            class="form-check-label"
+                            for="checkbox-size-default"
+                            >Default</label
+                          >
+                        </div>
+                        <div class="form-check fs-4 mb-0">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="checkbox-size-large"
+                          />
+                          <label
+                            class="form-check-label fs-13"
+                            for="checkbox-size-large"
+                            >Large</label
+                          >
+                        </div>
+                      </fieldset>
+                    </div>
+                    <div class="col-xl-6">
+                      <fieldset>
+                        <legend class="form-label">Radio sizes</legend>
+                        <div class="form-check fs-12 mb-2">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="radio-size"
+                            id="radio-size-small"
+                          />
+                          <label
+                            class="form-check-label fs-13"
+                            for="radio-size-small"
+                            >Small</label
+                          >
+                        </div>
+                        <div class="form-check mb-2">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="radio-size"
+                            id="radio-size-default"
+                            checked
+                          />
+                          <label
+                            class="form-check-label"
+                            for="radio-size-default"
+                            >Default</label
+                          >
+                        </div>
+                        <div class="form-check fs-4 mb-0">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="radio-size"
+                            id="radio-size-large"
+                          />
+                          <label
+                            class="form-check-label fs-13"
+                            for="radio-size-large"
+                            >Large</label
+                          >
+                        </div>
+                      </fieldset>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer d-none border-top-0">
+                  <pre
+                    class="language-html"
+                  ><code class="language-html">&lt;fieldset class="mb-4"&gt;
+                                    &lt;legend class="form-label"&gt;Checkbox sizes&lt;/legend&gt;
+                                    &lt;div class="form-check fs-12 mb-2"&gt;
+                                        &lt;input class="form-check-input" type="checkbox" id="checkbox-size-small"&gt;
+                                        &lt;label class="form-check-label fs-13" for="checkbox-size-small"&gt;Small&lt;/label&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="form-check mb-2"&gt;
+                                        &lt;input class="form-check-input" type="checkbox" id="checkbox-size-default" checked&gt;
+                                        &lt;label class="form-check-label" for="checkbox-size-default"&gt;Default&lt;/label&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="form-check fs-4 mb-0"&gt;
+                                        &lt;input class="form-check-input" type="checkbox" id="checkbox-size-large"&gt;
+                                        &lt;label class="form-check-label fs-13" for="checkbox-size-large"&gt;Large&lt;/label&gt;
+                                    &lt;/div&gt;
+                                &lt;/fieldset&gt;
+                                &lt;hr&gt;
+                                &lt;fieldset&gt;
+                                    &lt;legend class="form-label"&gt;Radio sizes&lt;/legend&gt;
+                                    &lt;div class="form-check fs-12 mb-2"&gt;
+                                        &lt;input class="form-check-input" type="radio" name="radio-size" id="radio-size-small"&gt;
+                                        &lt;label class="form-check-label fs-13" for="radio-size-small"&gt;Small&lt;/label&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="form-check mb-2"&gt;
+                                        &lt;input class="form-check-input" type="radio" name="radio-size" id="radio-size-default" checked&gt;
+                                        &lt;label class="form-check-label" for="radio-size-default"&gt;Default&lt;/label&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="form-check fs-4 mb-0"&gt;
+                                        &lt;input class="form-check-input" type="radio" name="radio-size" id="radio-size-large"&gt;
+                                        &lt;label class="form-check-label fs-13" for="radio-size-large"&gt;Large&lt;/label&gt;
+                                    &lt;/div&gt;
+                                &lt;/fieldset&gt;</code></pre>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-xl-12">
+              <section class="card custom-card">
+                <div class="card-header justify-content-between">
+                  <div>
+                    <h3 class="card-title mb-1">
+                      Outline checkbox and radio styles
+                    </h3>
+                    <p class="text-muted fs-12 mb-0">
+                      Outlined, solid and pill-shaped button controls.
+                    </p>
+                  </div>
+                  <div class="prism-toggle">
+                    <button
+                      class="btn btn-sm btn-outline-light rounded-pill"
+                      type="button"
+                    >
+                      View markup<i
+                        class="ri-code-line ms-2 d-inline-block align-middle"
+                      ></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <fieldset class="mb-4">
+                    <legend class="form-label">Outline checkbox buttons</legend>
+                    <div class="d-flex flex-wrap gap-2">
+                      <input
+                        type="checkbox"
+                        class="btn-check"
+                        id="outline-check-design"
+                        autocomplete="off"
+                        checked
+                      />
+                      <label
+                        class="btn btn-outline-warning"
+                        for="outline-check-design"
+                        >Design</label
+                      >
+                      <input
+                        type="checkbox"
+                        class="btn-check"
+                        id="outline-check-build"
+                        autocomplete="off"
+                      />
+                      <label
+                        class="btn btn-outline-secondary"
+                        for="outline-check-build"
+                        >Build</label
+                      >
+                      <input
+                        type="checkbox"
+                        class="btn-check"
+                        id="outline-check-review"
+                        autocomplete="off"
+                      />
+                      <label
+                        class="btn btn-outline-success"
+                        for="outline-check-review"
+                        >Review</label
+                      >
+                    </div>
+                  </fieldset>
+                  <hr />
+                  <fieldset class="mb-4">
+                    <legend class="form-label">Outline radio buttons</legend>
+                    <div
+                      class="btn-group"
+                      role="group"
+                      aria-label="Choose a project view"
+                    >
+                      <input
+                        type="radio"
+                        class="btn-check"
+                        name="outline-view"
+                        id="outline-view-list"
+                        autocomplete="off"
+                        checked
+                      />
+                      <label
+                        class="btn btn-outline-success"
+                        for="outline-view-list"
+                        >List</label
+                      >
+                      <input
+                        type="radio"
+                        class="btn-check"
+                        name="outline-view"
+                        id="outline-view-board"
+                        autocomplete="off"
+                      />
+                      <label
+                        class="btn btn-outline-success"
+                        for="outline-view-board"
+                        >Board</label
+                      >
+                      <input
+                        type="radio"
+                        class="btn-check"
+                        name="outline-view"
+                        id="outline-view-calendar"
+                        autocomplete="off"
+                      />
+                      <label
+                        class="btn btn-outline-success"
+                        for="outline-view-calendar"
+                        >Calendar</label
+                      >
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <legend class="form-label">Pill-style radio options</legend>
+                    <div class="d-flex flex-wrap gap-2">
+                      <input
+                        type="radio"
+                        class="btn-check"
+                        name="pill-priority"
+                        id="pill-priority-normal"
+                        autocomplete="off"
+                        checked
+                      />
+                      <label
+                        class="btn btn-outline-dark rounded-pill"
+                        for="pill-priority-normal"
+                        >Normal</label
+                      >
+                      <input
+                        type="radio"
+                        class="btn-check"
+                        name="pill-priority"
+                        id="pill-priority-high"
+                        autocomplete="off"
+                      />
+                      <label
+                        class="btn btn-outline-danger rounded-pill"
+                        for="pill-priority-high"
+                        >High priority</label
+                      >
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="card-footer d-none border-top-0">
+                  <pre
+                    class="language-html"
+                  ><code class="language-html">&lt;fieldset class="mb-4"&gt;
+                                    &lt;legend class="form-label"&gt;Outline checkbox buttons&lt;/legend&gt;
+                                    &lt;div class="d-flex flex-wrap gap-2"&gt;
+                                        &lt;input type="checkbox" class="btn-check" id="outline-check-design" autocomplete="off" checked&gt;
+                                        &lt;label class="btn btn-outline-primary" for="outline-check-design"&gt;Design&lt;/label&gt;
+                                        &lt;input type="checkbox" class="btn-check" id="outline-check-build" autocomplete="off"&gt;
+                                        &lt;label class="btn btn-outline-secondary" for="outline-check-build"&gt;Build&lt;/label&gt;
+                                        &lt;input type="checkbox" class="btn-check" id="outline-check-review" autocomplete="off"&gt;
+                                        &lt;label class="btn btn-outline-success" for="outline-check-review"&gt;Review&lt;/label&gt;
+                                    &lt;/div&gt;
+                                &lt;/fieldset&gt;
+                                &lt;hr&gt;
+                                &lt;fieldset class="mb-4"&gt;
+                                    &lt;legend class="form-label"&gt;Outline radio buttons&lt;/legend&gt;
+                                    &lt;div class="btn-group" role="group" aria-label="Choose a project view"&gt;
+                                        &lt;input type="radio" class="btn-check" name="outline-view" id="outline-view-list" autocomplete="off" checked&gt;
+                                        &lt;label class="btn btn-outline-primary" for="outline-view-list"&gt;List&lt;/label&gt;
+                                        &lt;input type="radio" class="btn-check" name="outline-view" id="outline-view-board" autocomplete="off"&gt;
+                                        &lt;label class="btn btn-outline-primary" for="outline-view-board"&gt;Board&lt;/label&gt;
+                                        &lt;input type="radio" class="btn-check" name="outline-view" id="outline-view-calendar" autocomplete="off"&gt;
+                                        &lt;label class="btn btn-outline-primary" for="outline-view-calendar"&gt;Calendar&lt;/label&gt;
+                                    &lt;/div&gt;
+                                &lt;/fieldset&gt;
+                                &lt;fieldset&gt;
+                                    &lt;legend class="form-label"&gt;Pill-style radio options&lt;/legend&gt;
+                                    &lt;div class="d-flex flex-wrap gap-2"&gt;
+                                        &lt;input type="radio" class="btn-check" name="pill-priority" id="pill-priority-normal" autocomplete="off" checked&gt;
+                                        &lt;label class="btn btn-outline-dark rounded-pill" for="pill-priority-normal"&gt;Normal&lt;/label&gt;
+                                        &lt;input type="radio" class="btn-check" name="pill-priority" id="pill-priority-high" autocomplete="off"&gt;
+                                        &lt;label class="btn btn-outline-danger rounded-pill" for="pill-priority-high"&gt;High priority&lt;/label&gt;
+                                    &lt;/div&gt;
+                                &lt;/fieldset&gt;</code></pre>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-xl-12">
+              <section class="card custom-card">
+                <div class="card-header justify-content-between">
+                  <div>
+                    <h3 class="card-title mb-1">Button-style radio groups</h3>
+                    <p class="text-muted fs-12 mb-0">
+                      Use exclusive choices for view and billing options.
+                    </p>
+                  </div>
+                  <div class="prism-toggle">
+                    <button
+                      class="btn btn-sm btn-outline-light rounded-pill"
+                      type="button"
+                    >
+                      View markup<i
+                        class="ri-code-line ms-2 d-inline-block align-middle"
+                      ></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <fieldset class="mb-4">
+                    <legend class="form-label">Board density</legend>
+                    <div
+                      class="btn-group"
+                      role="group"
+                      aria-label="Board density"
+                    >
+                      <input
+                        type="radio"
+                        class="btn-check"
+                        name="density"
+                        id="density-comfortable"
+                        autocomplete="off"
+                        checked
+                      />
+                      <label
+                        class="btn btn-outline-success"
+                        for="density-comfortable"
+                        >Comfortable</label
+                      >
+                      <input
+                        type="radio"
+                        class="btn-check"
+                        name="density"
+                        id="density-compact"
+                        autocomplete="off"
+                      />
+                      <label
+                        class="btn btn-outline-success"
+                        for="density-compact"
+                        >Compact</label
+                      >
+                      <input
+                        type="radio"
+                        class="btn-check"
+                        name="density"
+                        id="density-spacious"
+                        autocomplete="off"
+                      />
+                      <label
+                        class="btn btn-outline-success"
+                        for="density-spacious"
+                        >Spacious</label
+                      >
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <legend class="form-label">Plan</legend>
+                    <div class="d-flex flex-wrap gap-2">
+                      <input
+                        type="radio"
+                        class="btn-check"
+                        name="plan"
+                        id="plan-monthly"
+                        autocomplete="off"
+                        checked
+                      />
+                      <label
+                        class="btn btn-outline-secondary"
+                        for="plan-monthly"
+                        >Monthly</label
+                      >
+                      <input
+                        type="radio"
+                        class="btn-check"
+                        name="plan"
+                        id="plan-yearly"
+                        autocomplete="off"
+                      />
+                      <label class="btn btn-outline-secondary" for="plan-yearly"
+                        >Yearly</label
+                      >
+                    </div>
+                  </fieldset>
+                  <hr class="my-4" />
+                  <fieldset>
+                    <legend class="form-label">Color style variants</legend>
+                    <div class="d-flex flex-wrap gap-2">
+                      <input
+                        type="radio"
+                        class="btn-check"
+                        name="radio-color"
+                        id="radio-color-primary"
+                        autocomplete="off"
+                        checked
+                      />
+                      <label
+                        class="btn btn-outline-warning"
+                        for="radio-color-warning"
+                        >Warning</label
+                      >
+                      <input
+                        type="radio"
+                        class="btn-check"
+                        name="radio-color"
+                        id="radio-color-success"
+                        autocomplete="off"
+                      />
+                      <label
+                        class="btn btn-outline-success"
+                        for="radio-color-success"
+                        >Success</label
+                      >
+                      <input
+                        type="radio"
+                        class="btn-check"
+                        name="radio-color"
+                        id="radio-color-danger"
+                        autocomplete="off"
+                      />
+                      <label
+                        class="btn btn-outline-danger"
+                        for="radio-color-danger"
+                        >Danger</label
+                      >
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="card-footer d-none border-top-0">
+                  <pre
+                    class="language-html"
+                  ><code class="language-html">&lt;fieldset class="mb-4"&gt;
+                                    &lt;legend class="form-label"&gt;Board density&lt;/legend&gt;
+                                    &lt;div class="btn-group" role="group" aria-label="Board density"&gt;
+                                        &lt;input type="radio" class="btn-check" name="density" id="density-comfortable" autocomplete="off" checked&gt;
+                                        &lt;label class="btn btn-outline-primary" for="density-comfortable"&gt;Comfortable&lt;/label&gt;
+                                        &lt;input type="radio" class="btn-check" name="density" id="density-compact" autocomplete="off"&gt;
+                                        &lt;label class="btn btn-outline-primary" for="density-compact"&gt;Compact&lt;/label&gt;
+                                        &lt;input type="radio" class="btn-check" name="density" id="density-spacious" autocomplete="off"&gt;
+                                        &lt;label class="btn btn-outline-primary" for="density-spacious"&gt;Spacious&lt;/label&gt;
+                                    &lt;/div&gt;
+                                &lt;/fieldset&gt;
+                                &lt;fieldset&gt;
+                                    &lt;legend class="form-label"&gt;Plan&lt;/legend&gt;
+                                    &lt;div class="d-flex flex-wrap gap-2"&gt;
+                                        &lt;input type="radio" class="btn-check" name="plan" id="plan-monthly" autocomplete="off" checked&gt;
+                                        &lt;label class="btn btn-outline-secondary" for="plan-monthly"&gt;Monthly&lt;/label&gt;
+                                        &lt;input type="radio" class="btn-check" name="plan" id="plan-yearly" autocomplete="off"&gt;
+                                        &lt;label class="btn btn-outline-secondary" for="plan-yearly"&gt;Yearly&lt;/label&gt;
+                                    &lt;/div&gt;
+                                &lt;/fieldset&gt;
+                                &lt;hr class="my-4"&gt;
+                                &lt;fieldset&gt;
+                                    &lt;legend class="form-label"&gt;Color style variants&lt;/legend&gt;
+                                    &lt;div class="d-flex flex-wrap gap-2"&gt;
+                                        &lt;input type="radio" class="btn-check" name="radio-color" id="radio-color-primary" autocomplete="off" checked&gt;
+                                        &lt;label class="btn btn-outline-primary" for="radio-color-primary"&gt;Primary&lt;/label&gt;
+                                        &lt;input type="radio" class="btn-check" name="radio-color" id="radio-color-success" autocomplete="off"&gt;
+                                        &lt;label class="btn btn-outline-success" for="radio-color-success"&gt;Success&lt;/label&gt;
+                                        &lt;input type="radio" class="btn-check" name="radio-color" id="radio-color-danger" autocomplete="off"&gt;
+                                        &lt;label class="btn btn-outline-danger" for="radio-color-danger"&gt;Danger&lt;/label&gt;
+                                    &lt;/div&gt;
+                                &lt;/fieldset&gt;</code></pre>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-xl-12">
+              <section class="card custom-card">
+                <div class="card-header justify-content-between">
+                  <div>
+                    <h3 class="card-title mb-1">Bootstrap switches</h3>
+                    <p class="text-muted fs-12 mb-0">
+                      Checkbox inputs presented as familiar on/off controls.
+                    </p>
+                  </div>
+                  <div class="prism-toggle">
+                    <button
+                      class="btn btn-sm btn-outline-light rounded-pill"
+                      type="button"
+                    >
+                      View markup<i
+                        class="ri-code-line ms-2 d-inline-block align-middle"
+                      ></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="form-check form-switch mb-3">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      role="switch"
+                      id="switch-default"
+                    /><label class="form-check-label" for="switch-default"
+                      >Default switch</label
+                    >
+                  </div>
+                  <div class="form-check form-switch mb-3">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      role="switch"
+                      id="switch-checked"
+                      checked
+                    /><label class="form-check-label" for="switch-checked"
+                      >Enabled switch</label
+                    >
+                  </div>
+                  <div class="form-check form-switch mb-3">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      role="switch"
+                      id="switch-disabled"
+                      disabled
+                    /><label class="form-check-label" for="switch-disabled"
+                      >Disabled switch</label
+                    >
+                  </div>
+                  <div class="form-check form-switch mb-0">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      role="switch"
+                      id="switch-disabled-checked"
+                      checked
+                      disabled
+                    /><label
+                      class="form-check-label"
+                      for="switch-disabled-checked"
+                      >Enabled and disabled switch</label
+                    >
+                  </div>
+                </div>
+                <div class="card-footer d-none border-top-0">
+                  <pre
+                    class="language-html"
+                  ><code class="language-html">&lt;div class="form-check form-switch mb-3"&gt;&lt;input class="form-check-input" type="checkbox" role="switch" id="switch-default"&gt;&lt;label class="form-check-label" for="switch-default"&gt;Default switch&lt;/label&gt;&lt;/div&gt;
+                                &lt;div class="form-check form-switch mb-3"&gt;&lt;input class="form-check-input" type="checkbox" role="switch" id="switch-checked" checked&gt;&lt;label class="form-check-label" for="switch-checked"&gt;Enabled switch&lt;/label&gt;&lt;/div&gt;
+                                &lt;div class="form-check form-switch mb-3"&gt;&lt;input class="form-check-input" type="checkbox" role="switch" id="switch-disabled" disabled&gt;&lt;label class="form-check-label" for="switch-disabled"&gt;Disabled switch&lt;/label&gt;&lt;/div&gt;
+                                &lt;div class="form-check form-switch mb-0"&gt;&lt;input class="form-check-input" type="checkbox" role="switch" id="switch-disabled-checked" checked disabled&gt;&lt;label class="form-check-label" for="switch-disabled-checked"&gt;Enabled and disabled switch&lt;/label&gt;&lt;/div&gt;</code></pre>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-xl-12">
+              <section class="card custom-card">
+                <div class="card-header justify-content-between">
+                  <div>
+                    <h3 class="card-title mb-1">Custom toggle switches</h3>
+                    <p class="text-muted fs-12 mb-0">
+                      Project switch component in several sizes and colors.
+                    </p>
+                  </div>
+                  <div class="prism-toggle">
+                    <button
+                      class="btn btn-sm btn-outline-light rounded-pill"
+                      type="button"
+                    >
+                      View markup<i
+                        class="ri-code-line ms-2 d-inline-block align-middle"
+                      ></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body pb-5 pe-5">
+                  <div
+                    class="d-flex align-items-center justify-content-between gap-3 mb-4"
+                  >
+                    <span>Small · Primary</span>
+                    <div class="custom-toggle-switch toggle-sm">
+                      <input id="custom-switch-small" type="checkbox" checked />
+                      <label
+                        for="custom-switch-small"
+                        class="label-primary"
+                        aria-label="Small primary switch"
+                      ></label>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex align-items-center justify-content-between gap-3 mb-4"
+                  >
+                    <span>Default · Success</span>
+                    <div class="custom-toggle-switch">
+                      <input
+                        id="custom-switch-default"
+                        type="checkbox"
+                        checked
+                      />
+                      <label
+                        for="custom-switch-default"
+                        class="label-success"
+                        aria-label="Default success switch"
+                      ></label>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex align-items-center justify-content-between gap-3"
+                  >
+                    <span>Large · Secondary</span>
+                    <div class="custom-toggle-switch toggle-lg">
+                      <input id="custom-switch-large" type="checkbox" />
+                      <label
+                        for="custom-switch-large"
+                        class="label-secondary"
+                        aria-label="Large secondary switch"
+                      ></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer d-none border-top-0">
+                  <pre
+                    class="language-html"
+                  ><code class="language-html">&lt;div class="d-flex align-items-center justify-content-between gap-3 mb-4"&gt;
+                                    &lt;span&gt;Small · Primary&lt;/span&gt;
+                                    &lt;div class="custom-toggle-switch toggle-sm"&gt;
+                                        &lt;input id="custom-switch-small" type="checkbox" checked&gt;
+                                        &lt;label for="custom-switch-small" class="label-primary" aria-label="Small primary switch"&gt;&lt;/label&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;div class="d-flex align-items-center justify-content-between gap-3 mb-4"&gt;
+                                    &lt;span&gt;Default · Success&lt;/span&gt;
+                                    &lt;div class="custom-toggle-switch"&gt;
+                                        &lt;input id="custom-switch-default" type="checkbox" checked&gt;
+                                        &lt;label for="custom-switch-default" class="label-success" aria-label="Default success switch"&gt;&lt;/label&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;div class="d-flex align-items-center justify-content-between gap-3"&gt;
+                                    &lt;span&gt;Large · Secondary&lt;/span&gt;
+                                    &lt;div class="custom-toggle-switch toggle-lg"&gt;
+                                        &lt;input id="custom-switch-large" type="checkbox"&gt;
+                                        &lt;label for="custom-switch-large" class="label-secondary" aria-label="Large secondary switch"&gt;&lt;/label&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;</code></pre>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Theme checkboxes</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Use existing project variants to emphasize selection.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="form-check mb-3">
+                        <input
+                          type="checkbox"
+                          class="form-check-input form-checked-secondary"
+                          id="advanced-check-secondary"
+                          checked
+                        /><label
+                          class="form-check-label"
+                          for="advanced-check-secondary"
+                          >Secondary</label
+                        >
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="form-check mb-3">
+                        <input
+                          type="checkbox"
+                          class="form-check-input form-checked-success"
+                          id="advanced-check-success"
+                          checked
+                        /><label
+                          class="form-check-label"
+                          for="advanced-check-success"
+                          >Success</label
+                        >
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="form-check mb-3">
+                        <input
+                          type="checkbox"
+                          class="form-check-input form-checked-danger"
+                          id="advanced-check-danger"
+                          checked
+                        /><label
+                          class="form-check-label"
+                          for="advanced-check-danger"
+                          >Danger</label
+                        >
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="form-check mb-3">
+                        <input
+                          type="checkbox"
+                          class="form-check-input form-checked-warning"
+                          id="advanced-check-warning"
+                          checked
+                        /><label
+                          class="form-check-label"
+                          for="advanced-check-warning"
+                          >Warning</label
+                        >
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="form-check mb-3">
+                        <input
+                          type="checkbox"
+                          class="form-check-input form-checked-info"
+                          id="advanced-check-info"
+                          checked
+                        /><label
+                          class="form-check-label"
+                          for="advanced-check-info"
+                          >Info</label
+                        >
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="form-check mb-3">
+                        <input
+                          type="checkbox"
+                          class="form-check-input form-checked-dark"
+                          id="advanced-check-dark"
+                          checked
+                        /><label
+                          class="form-check-label"
+                          for="advanced-check-dark"
+                          >Dark</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-check mb-3">
+                    <input
+                      type="checkbox"
+                      class="form-check-input form-checked-outline"
+                      id="advanced-check-outline"
+                      checked
+                    /><label
+                      class="form-check-label"
+                      for="advanced-check-outline"
+                      >Outline checkbox</label
+                    >
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-md-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Grouped selection</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Select individual items or use the parent checkbox.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="form-check mb-3">
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="advanced-select-all"
+                    /><label class="form-check-label" for="advanced-select-all"
+                      >All delivery channels</label
+                    >
+                  </div>
+                  <div class="ps-4 border-start">
+                    <div class="form-check mb-3">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="advanced-channel-email"
+                        checked
+                        data-channel-check
+                      /><label
+                        class="form-check-label"
+                        for="advanced-channel-email"
+                        >Email notifications</label
+                      >
+                    </div>
+                    <div class="form-check mb-3">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="advanced-channel-sms"
+                        data-channel-check
+                      /><label
+                        class="form-check-label"
+                        for="advanced-channel-sms"
+                        >SMS notifications</label
+                      >
+                    </div>
+                    <div class="form-check mb-3">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="advanced-channel-push"
+                        checked
+                        data-channel-check
+                      /><label
+                        class="form-check-label"
+                        for="advanced-channel-push"
+                        >Push notifications</label
+                      >
+                    </div>
+                  </div>
+                  <p
+                    class="text-muted fs-12 mb-0"
+                    id="advanced-channel-status"
+                    role="status"
+                    aria-live="polite"
+                  ></p>
+                </div>
+              </section>
+            </div>
+            <div class="col-md-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Checkbox buttons</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Choose multiple tags independently.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex flex-wrap gap-2">
+                    <input
+                      type="checkbox"
+                      class="btn-check"
+                      id="advanced-tag-0"
+                      checked
+                    /><label
+                      class="btn btn-outline-success"
+                      for="advanced-tag-0"
+                      >Design</label
+                    ><input
+                      type="checkbox"
+                      class="btn-check"
+                      id="advanced-tag-1"
+                    /><label
+                      class="btn btn-outline-success"
+                      for="advanced-tag-1"
+                      >Development</label
+                    ><input
+                      type="checkbox"
+                      class="btn-check"
+                      id="advanced-tag-2"
+                    /><label
+                      class="btn btn-outline-success"
+                      for="advanced-tag-2"
+                      >Marketing</label
+                    ><input
+                      type="checkbox"
+                      class="btn-check"
+                      id="advanced-tag-3"
+                    /><label
+                      class="btn btn-outline-success"
+                      for="advanced-tag-3"
+                      >Research</label
+                    >
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-md-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Radio button group</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Choose one view from a mutually exclusive group.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="btn-group"
+                    role="group"
+                    aria-label="Preferred view"
+                  >
+                    <input
+                      type="radio"
+                      class="btn-check"
+                      name="advanced-view"
+                      id="advanced-view-0"
+                      checked
+                    /><label
+                      class="btn btn-outline-warning"
+                      for="advanced-view-0"
+                      >List</label
+                    ><input
+                      type="radio"
+                      class="btn-check"
+                      name="advanced-view"
+                      id="advanced-view-1"
+                    /><label
+                      class="btn btn-outline-warning"
+                      for="advanced-view-1"
+                      >Board</label
+                    ><input
+                      type="radio"
+                      class="btn-check"
+                      name="advanced-view"
+                      id="advanced-view-2"
+                    /><label
+                      class="btn btn-outline-warning"
+                      for="advanced-view-2"
+                      >Calendar</label
+                    >
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-md-12">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Radio choice cards</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Select a workspace plan with supporting details.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <fieldset>
+                    <legend class="visually-hidden">Workspace plan</legend>
+                    <label
+                      class="d-flex align-items-start gap-3 border rounded p-3 mb-2"
+                      ><input
+                        class="form-check-input mt-1 flex-shrink-0"
+                        type="radio"
+                        name="advanced-plan"
+                        id="advanced-plan-0"
+                      /><span
+                        ><strong class="d-block fs-13 fw-medium">Starter</strong
+                        ><span class="text-muted fs-12"
+                          >For individual projects</span
+                        ></span
+                      ></label
+                    ><label
+                      class="d-flex align-items-start gap-3 border rounded p-3 mb-2"
+                      ><input
+                        class="form-check-input mt-1 flex-shrink-0"
+                        type="radio"
+                        name="advanced-plan"
+                        id="advanced-plan-1"
+                        checked
+                      /><span
+                        ><strong class="d-block fs-13 fw-medium">Team</strong
+                        ><span class="text-muted fs-12"
+                          >For shared projects and collaboration</span
+                        ></span
+                      ></label
+                    ><label
+                      class="d-flex align-items-start gap-3 border rounded p-3 mb-2"
+                      ><input
+                        class="form-check-input mt-1 flex-shrink-0"
+                        type="radio"
+                        name="advanced-plan"
+                        id="advanced-plan-2"
+                      /><span
+                        ><strong class="d-block fs-13 fw-medium"
+                          >Enterprise</strong
+                        ><span class="text-muted fs-12"
+                          >For large organizations</span
+                        ></span
+                      ></label
+                    >
+                  </fieldset>
+                </div>
+              </section>
+            </div>
+            <div class="col-md-12">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Theme switches</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Native switches with project color variants.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="form-check form-switch mb-3">
+                        <input
+                          class="form-check-input form-checked-secondary"
+                          role="switch"
+                          type="checkbox"
+                          id="advanced-switch-secondary"
+                          checked
+                        /><label
+                          class="form-check-label"
+                          for="advanced-switch-secondary"
+                          >Secondary</label
+                        >
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="form-check form-switch mb-3">
+                        <input
+                          class="form-check-input form-checked-success"
+                          role="switch"
+                          type="checkbox"
+                          id="advanced-switch-success"
+                        /><label
+                          class="form-check-label"
+                          for="advanced-switch-success"
+                          >Success</label
+                        >
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="form-check form-switch mb-3">
+                        <input
+                          class="form-check-input form-checked-danger"
+                          role="switch"
+                          type="checkbox"
+                          id="advanced-switch-danger"
+                          checked
+                        /><label
+                          class="form-check-label"
+                          for="advanced-switch-danger"
+                          >Danger</label
+                        >
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="form-check form-switch mb-3">
+                        <input
+                          class="form-check-input form-checked-warning"
+                          role="switch"
+                          type="checkbox"
+                          id="advanced-switch-warning"
+                        /><label
+                          class="form-check-label"
+                          for="advanced-switch-warning"
+                          >Warning</label
+                        >
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="form-check form-switch mb-3">
+                        <input
+                          class="form-check-input form-checked-info"
+                          role="switch"
+                          type="checkbox"
+                          id="advanced-switch-info"
+                          checked
+                        /><label
+                          class="form-check-label"
+                          for="advanced-switch-info"
+                          >Info</label
+                        >
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="form-check form-switch mb-3">
+                        <input
+                          class="form-check-input form-checked-dark"
+                          role="switch"
+                          type="checkbox"
+                          id="advanced-switch-dark"
+                        /><label
+                          class="form-check-label"
+                          for="advanced-switch-dark"
+                          >Dark</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-md-12">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Settings switches</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Compact preference rows with clear descriptions.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body p-0">
+                  <div
+                    class="d-flex justify-content-between align-items-center gap-3 p-3 border-bottom"
+                  >
+                    <div>
+                      <label
+                        class="fs-13 fw-medium mb-1"
+                        for="advanced-setting-backup"
+                        >Automatic backups</label
+                      >
+                      <p class="text-muted fs-12 mb-0">
+                        Save a daily copy of your workspace.
+                      </p>
+                    </div>
+                    <div class="form-check form-switch mb-0">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="advanced-setting-backup"
+                        checked
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center gap-3 p-3 border-bottom"
+                  >
+                    <div>
+                      <label
+                        class="fs-13 fw-medium mb-1"
+                        for="advanced-setting-digest"
+                        >Weekly digest</label
+                      >
+                      <p class="text-muted fs-12 mb-0">
+                        Receive a summary of recent activity.
+                      </p>
+                    </div>
+                    <div class="form-check form-switch mb-0">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="advanced-setting-digest"
+                        checked
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center gap-3 p-3"
+                  >
+                    <div>
+                      <label
+                        class="fs-13 fw-medium mb-1"
+                        for="advanced-setting-quiet"
+                        >Quiet hours</label
+                      >
+                      <p class="text-muted fs-12 mb-0">
+                        Pause notifications outside working hours.
+                      </p>
+                    </div>
+                    <div class="form-check form-switch mb-0">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="advanced-setting-quiet"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-md-12">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Required selection</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Native validation checks a required checkbox and radio
+                      choice.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <form id="advanced-selection-form">
+                    <div class="form-check mb-3">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="advanced-terms"
+                        required
+                      /><label class="form-check-label" for="advanced-terms"
+                        >I agree to the terms</label
+                      >
+                    </div>
+                    <fieldset class="mb-3">
+                      <legend class="fs-13">Contact preference</legend>
+                      <div class="form-check">
+                        <input
+                          type="radio"
+                          class="form-check-input"
+                          name="advanced-contact"
+                          id="advanced-contact-0"
+                          required
+                        /><label
+                          class="form-check-label"
+                          for="advanced-contact-0"
+                          >Email</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          type="radio"
+                          class="form-check-input"
+                          name="advanced-contact"
+                          id="advanced-contact-1"
+                          required
+                        /><label
+                          class="form-check-label"
+                          for="advanced-contact-1"
+                          >Phone</label
+                        >
+                      </div>
+                    </fieldset>
+                    <button type="submit" class="btn btn-danger btn-sm">
+                      Validate selection
+                    </button>
+                    <p
+                      class="text-muted fs-12 mt-2 mb-0"
+                      id="advanced-validation-status"
+                      role="status"
+                      aria-live="polite"
+                    ></p>
+                  </form>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <!-- include common-scripts.html"-->
+    <!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/libs/prismjs/prism.js"></script>
+    <script src="../assets/js/prism-custom.js"></script>
+    <script src="../assets/js/check-radios.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+    <script>
+      const parentCheck = document.querySelector("#check-indeterminate");
+      if (parentCheck) parentCheck.indeterminate = true;
+    </script>
+  </body>
+</html>

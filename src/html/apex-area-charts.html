@@ -1,0 +1,301 @@
+<!-- include document-head.html"-->
+    <link rel="stylesheet" href="../assets/libs/apexcharts/apexcharts.css" />
+
+    <link rel="stylesheet" href="../assets/css/apex-area-charts.css" />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+
+      <div class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <div>
+            <h1 class="page-title">Area Charts</h1>
+          </div>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">Charts</li>
+            <li class="breadcrumb-item">Apex Charts</li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Area Charts
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid area-charts-workspace">
+          <div class="row">
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header justify-content-between gap-2">
+                  <div>
+                    <div class="card-title">Weekly delivery</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      A straight area fill tracks completed tasks.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="area-basic"
+                    class="area-demo"
+                    role="group"
+                    aria-label="Weekly delivery chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header justify-content-between gap-2">
+                  <div>
+                    <div class="card-title">Team workload</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Smooth curves compare design and engineering hours.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="area-spline"
+                    class="area-demo"
+                    role="group"
+                    aria-label="Team workload chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header justify-content-between gap-2">
+                  <div>
+                    <div class="card-title">Work by stream</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Stacked areas show how each workstream contributes.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="area-stacked"
+                    class="area-demo"
+                    role="group"
+                    aria-label="Work by stream chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header justify-content-between gap-2">
+                  <div>
+                    <div class="card-title">Capacity allocation</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Compare each workstream as a share of total capacity.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="area-percent"
+                    class="area-demo"
+                    role="group"
+                    aria-label="Capacity allocation chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header justify-content-between gap-2">
+                  <div>
+                    <div class="card-title">Budget variance</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Explore positive and negative variance around zero.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="area-negative"
+                    class="area-demo"
+                    role="group"
+                    aria-label="Budget variance chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header justify-content-between gap-2">
+                  <div>
+                    <div class="card-title">Range explorer</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Drag the navigator below to select a date range.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="chart-months"
+                    class="area-demo"
+                    role="group"
+                    aria-label="Range explorer chart"
+                  ></div>
+                  <div
+                    id="chart-years"
+                    role="group"
+                    aria-label="Select date range"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header justify-content-between gap-2">
+                  <div>
+                    <div class="card-title">Irregular reports</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Measurements recorded on different reporting dates.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="area-irregular"
+                    class="area-demo"
+                    role="group"
+                    aria-label="Irregular reports chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header justify-content-between gap-2">
+                  <div>
+                    <div class="card-title">Missing reports</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Gaps distinguish missing reports from zero activity.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="area-null"
+                    class="area-demo"
+                    role="group"
+                    aria-label="Missing reports chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header justify-content-between gap-2">
+                  <div>
+                    <div class="card-title">Delivery history</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Use the period buttons to change the visible date range.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="btn-group mb-3"
+                    role="group"
+                    aria-label="Delivery history period"
+                  >
+                    <button
+                      class="btn btn-sm btn-light"
+                      data-area-period="30"
+                      aria-pressed="false"
+                      type="button"
+                    >
+                      1M</button
+                    ><button
+                      class="btn btn-sm btn-light"
+                      data-area-period="180"
+                      aria-pressed="false"
+                      type="button"
+                    >
+                      6M</button
+                    ><button
+                      class="btn btn-sm btn-light"
+                      data-area-period="365"
+                      aria-pressed="false"
+                      type="button"
+                    >
+                      1Y</button
+                    ><button
+                      class="btn btn-sm btn-secondary"
+                      data-area-period="all"
+                      aria-pressed="true"
+                      type="button"
+                    >
+                      All
+                    </button>
+                  </div>
+                  <div
+                    id="area-datetime"
+                    class="area-demo"
+                    role="group"
+                    aria-label="Delivery history chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header justify-content-between gap-2">
+                  <div>
+                    <div class="card-title">Capacity planning</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Step transitions show planned capacity changes.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="area-step"
+                    class="area-demo"
+                    role="group"
+                    aria-label="Capacity planning chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <!-- include common-scripts.html"-->
+
+    <!-- include appearance-customizer-scripts.html"-->
+
+    <!-- Apex Charts JS -->
+    <script src="../assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!---Used In Basic Area Chart-->
+
+    <!-- Used For Secection-Github Style Chart -->
+
+    <!-- Used For Irregular Time Series Chart -->
+
+    <!-- Internal Apex Area Charts JS -->
+    <script src="../assets/js/apexcharts-area.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

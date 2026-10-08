@@ -1,0 +1,1416 @@
+<!-- include document-head.html"-->
+    <link
+      rel="stylesheet"
+      href="../assets/libs/prismjs/themes/prism-coy.min.css"
+    />
+  </head>
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main data-markup-examples class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Sortable Lists</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Base UI</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Sortable Lists
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Prioritize your work</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Drag the grip or use the arrow buttons to change the
+                      order.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <ul
+                    id="sort-priority"
+                    class="list-group list-unstyled mb-0"
+                    data-sort-list
+                    style="min-height: 90px"
+                  >
+                    <li
+                      class="list-group-item rounded border mb-2 d-flex align-items-center gap-2"
+                      data-sort-item
+                    >
+                      <span
+                        class="text-muted flex-shrink-0"
+                        data-sort-handle
+                        style="cursor: grab; touch-action: none"
+                        aria-hidden="true"
+                        ><i class="ri-draggable fs-18"></i
+                      ></span>
+                      <div class="flex-grow-1">
+                        <h3 class="fs-13 fw-semibold mb-1">
+                          Review project brief
+                        </h3>
+                        <p class="text-muted fs-12 mb-0">
+                          Align the scope and intended outcome
+                        </p>
+                      </div>
+                      <div class="d-flex gap-1">
+                        <button
+                          type="button"
+                          class="btn btn-sm btn-outline-light px-1"
+                          data-sort-up
+                          aria-label="Move Review project brief up"
+                        >
+                          <i
+                            class="ri-arrow-up-s-line"
+                            aria-hidden="true"
+                          ></i></button
+                        ><button
+                          type="button"
+                          class="btn btn-sm btn-outline-light px-1"
+                          data-sort-down
+                          aria-label="Move Review project brief down"
+                        >
+                          <i
+                            class="ri-arrow-down-s-line"
+                            aria-hidden="true"
+                          ></i>
+                        </button>
+                      </div>
+                    </li>
+                    <li
+                      class="list-group-item rounded border mb-2 d-flex align-items-center gap-2"
+                      data-sort-item
+                    >
+                      <span
+                        class="text-muted flex-shrink-0"
+                        data-sort-handle
+                        style="cursor: grab; touch-action: none"
+                        aria-hidden="true"
+                        ><i class="ri-draggable fs-18"></i
+                      ></span>
+                      <div class="flex-grow-1">
+                        <h3 class="fs-13 fw-semibold mb-1">Refine prototype</h3>
+                        <p class="text-muted fs-12 mb-0">
+                          Prepare the core interactions
+                        </p>
+                      </div>
+                      <div class="d-flex gap-1">
+                        <button
+                          type="button"
+                          class="btn btn-sm btn-outline-light px-1"
+                          data-sort-up
+                          aria-label="Move Refine prototype up"
+                        >
+                          <i
+                            class="ri-arrow-up-s-line"
+                            aria-hidden="true"
+                          ></i></button
+                        ><button
+                          type="button"
+                          class="btn btn-sm btn-outline-light px-1"
+                          data-sort-down
+                          aria-label="Move Refine prototype down"
+                        >
+                          <i
+                            class="ri-arrow-down-s-line"
+                            aria-hidden="true"
+                          ></i>
+                        </button>
+                      </div>
+                    </li>
+                    <li
+                      class="list-group-item rounded border mb-2 d-flex align-items-center gap-2"
+                      data-sort-item
+                    >
+                      <span
+                        class="text-muted flex-shrink-0"
+                        data-sort-handle
+                        style="cursor: grab; touch-action: none"
+                        aria-hidden="true"
+                        ><i class="ri-draggable fs-18"></i
+                      ></span>
+                      <div class="flex-grow-1">
+                        <h3 class="fs-13 fw-semibold mb-1">
+                          Share team feedback
+                        </h3>
+                        <p class="text-muted fs-12 mb-0">
+                          Capture the next useful improvements
+                        </p>
+                      </div>
+                      <div class="d-flex gap-1">
+                        <button
+                          type="button"
+                          class="btn btn-sm btn-outline-light px-1"
+                          data-sort-up
+                          aria-label="Move Share team feedback up"
+                        >
+                          <i
+                            class="ri-arrow-up-s-line"
+                            aria-hidden="true"
+                          ></i></button
+                        ><button
+                          type="button"
+                          class="btn btn-sm btn-outline-light px-1"
+                          data-sort-down
+                          aria-label="Move Share team feedback down"
+                        >
+                          <i
+                            class="ri-arrow-down-s-line"
+                            aria-hidden="true"
+                          ></i>
+                        </button>
+                      </div>
+                    </li>
+                    <li
+                      class="list-group-item rounded border mb-2 d-flex align-items-center gap-2"
+                      data-sort-item
+                    >
+                      <span
+                        class="text-muted flex-shrink-0"
+                        data-sort-handle
+                        style="cursor: grab; touch-action: none"
+                        aria-hidden="true"
+                        ><i class="ri-draggable fs-18"></i
+                      ></span>
+                      <div class="flex-grow-1">
+                        <h3 class="fs-13 fw-semibold mb-1">
+                          Publish release notes
+                        </h3>
+                        <p class="text-muted fs-12 mb-0">
+                          Keep everyone up to date
+                        </p>
+                      </div>
+                      <div class="d-flex gap-1">
+                        <button
+                          type="button"
+                          class="btn btn-sm btn-outline-light px-1"
+                          data-sort-up
+                          aria-label="Move Publish release notes up"
+                        >
+                          <i
+                            class="ri-arrow-up-s-line"
+                            aria-hidden="true"
+                          ></i></button
+                        ><button
+                          type="button"
+                          class="btn btn-sm btn-outline-light px-1"
+                          data-sort-down
+                          aria-label="Move Publish release notes down"
+                        >
+                          <i
+                            class="ri-arrow-down-s-line"
+                            aria-hidden="true"
+                          ></i>
+                        </button>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Move between stages</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      A shared group lets items move across both lists.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <h3 class="fs-13 fw-semibold mb-3">Planned</h3>
+                      <ul
+                        id="sort-planned"
+                        class="list-group list-unstyled mb-0"
+                        data-sort-list
+                        data-sort-group="workflow"
+                        style="min-height: 90px"
+                      >
+                        <li
+                          class="list-group-item rounded border mb-2 d-flex align-items-center gap-2"
+                          data-sort-item
+                        >
+                          <span
+                            class="text-muted flex-shrink-0"
+                            data-sort-handle
+                            style="cursor: grab; touch-action: none"
+                            aria-hidden="true"
+                            ><i class="ri-draggable fs-18"></i
+                          ></span>
+                          <div class="flex-grow-1">
+                            <h3 class="fs-13 fw-semibold mb-1">
+                              Review project brief
+                            </h3>
+                            <p class="text-muted fs-12 mb-0">
+                              Align the scope and intended outcome
+                            </p>
+                          </div>
+                          <div class="d-flex gap-1">
+                            <button
+                              type="button"
+                              class="btn btn-sm btn-outline-light px-1"
+                              data-sort-up
+                              aria-label="Move Review project brief up"
+                            >
+                              <i
+                                class="ri-arrow-up-s-line"
+                                aria-hidden="true"
+                              ></i></button
+                            ><button
+                              type="button"
+                              class="btn btn-sm btn-outline-light px-1"
+                              data-sort-down
+                              aria-label="Move Review project brief down"
+                            >
+                              <i
+                                class="ri-arrow-down-s-line"
+                                aria-hidden="true"
+                              ></i>
+                            </button>
+                          </div>
+                        </li>
+                        <li
+                          class="list-group-item rounded border mb-2 d-flex align-items-center gap-2"
+                          data-sort-item
+                        >
+                          <span
+                            class="text-muted flex-shrink-0"
+                            data-sort-handle
+                            style="cursor: grab; touch-action: none"
+                            aria-hidden="true"
+                            ><i class="ri-draggable fs-18"></i
+                          ></span>
+                          <div class="flex-grow-1">
+                            <h3 class="fs-13 fw-semibold mb-1">
+                              Refine prototype
+                            </h3>
+                            <p class="text-muted fs-12 mb-0">
+                              Prepare the core interactions
+                            </p>
+                          </div>
+                          <div class="d-flex gap-1">
+                            <button
+                              type="button"
+                              class="btn btn-sm btn-outline-light px-1"
+                              data-sort-up
+                              aria-label="Move Refine prototype up"
+                            >
+                              <i
+                                class="ri-arrow-up-s-line"
+                                aria-hidden="true"
+                              ></i></button
+                            ><button
+                              type="button"
+                              class="btn btn-sm btn-outline-light px-1"
+                              data-sort-down
+                              aria-label="Move Refine prototype down"
+                            >
+                              <i
+                                class="ri-arrow-down-s-line"
+                                aria-hidden="true"
+                              ></i>
+                            </button>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-sm-6">
+                      <h3 class="fs-13 fw-semibold mb-3">In progress</h3>
+                      <ul
+                        id="sort-progress"
+                        class="list-group list-unstyled mb-0"
+                        data-sort-list
+                        data-sort-group="workflow"
+                        style="min-height: 90px"
+                      >
+                        <li
+                          class="list-group-item rounded border mb-2 d-flex align-items-center gap-2"
+                          data-sort-item
+                        >
+                          <span
+                            class="text-muted flex-shrink-0"
+                            data-sort-handle
+                            style="cursor: grab; touch-action: none"
+                            aria-hidden="true"
+                            ><i class="ri-draggable fs-18"></i
+                          ></span>
+                          <div class="flex-grow-1">
+                            <h3 class="fs-13 fw-semibold mb-1">
+                              Share team feedback
+                            </h3>
+                            <p class="text-muted fs-12 mb-0">
+                              Capture the next useful improvements
+                            </p>
+                          </div>
+                          <div class="d-flex gap-1">
+                            <button
+                              type="button"
+                              class="btn btn-sm btn-outline-light px-1"
+                              data-sort-up
+                              aria-label="Move Share team feedback up"
+                            >
+                              <i
+                                class="ri-arrow-up-s-line"
+                                aria-hidden="true"
+                              ></i></button
+                            ><button
+                              type="button"
+                              class="btn btn-sm btn-outline-light px-1"
+                              data-sort-down
+                              aria-label="Move Share team feedback down"
+                            >
+                              <i
+                                class="ri-arrow-down-s-line"
+                                aria-hidden="true"
+                              ></i>
+                            </button>
+                          </div>
+                        </li>
+                        <li
+                          class="list-group-item rounded border mb-2 d-flex align-items-center gap-2"
+                          data-sort-item
+                        >
+                          <span
+                            class="text-muted flex-shrink-0"
+                            data-sort-handle
+                            style="cursor: grab; touch-action: none"
+                            aria-hidden="true"
+                            ><i class="ri-draggable fs-18"></i
+                          ></span>
+                          <div class="flex-grow-1">
+                            <h3 class="fs-13 fw-semibold mb-1">
+                              Publish release notes
+                            </h3>
+                            <p class="text-muted fs-12 mb-0">
+                              Keep everyone up to date
+                            </p>
+                          </div>
+                          <div class="d-flex gap-1">
+                            <button
+                              type="button"
+                              class="btn btn-sm btn-outline-light px-1"
+                              data-sort-up
+                              aria-label="Move Publish release notes up"
+                            >
+                              <i
+                                class="ri-arrow-up-s-line"
+                                aria-hidden="true"
+                              ></i></button
+                            ><button
+                              type="button"
+                              class="btn btn-sm btn-outline-light px-1"
+                              data-sort-down
+                              aria-label="Move Publish release notes down"
+                            >
+                              <i
+                                class="ri-arrow-down-s-line"
+                                aria-hidden="true"
+                              ></i>
+                            </button>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Reusable templates</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Copy a template into your plan while preserving the
+                      original.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <h3 class="fs-13 fw-semibold mb-3">Template library</h3>
+                      <ul
+                        id="sort-templates"
+                        class="list-group list-unstyled mb-0"
+                        data-sort-list
+                        data-sort-mode="source"
+                        style="min-height: 90px"
+                      >
+                        <li
+                          class="list-group-item rounded border mb-2 d-flex align-items-center gap-2"
+                          data-sort-item
+                        >
+                          <span
+                            class="text-muted flex-shrink-0"
+                            data-sort-handle
+                            style="cursor: grab; touch-action: none"
+                            aria-hidden="true"
+                            ><i class="ri-draggable fs-18"></i
+                          ></span>
+                          <div class="flex-grow-1">
+                            <h3 class="fs-13 fw-semibold mb-1">
+                              Design review
+                            </h3>
+                            <p class="text-muted fs-12 mb-0">
+                              A reusable meeting outline
+                            </p>
+                          </div>
+                          <div class="d-flex gap-1">
+                            <button
+                              type="button"
+                              class="btn btn-sm btn-outline-light px-1"
+                              data-sort-up
+                              aria-label="Move Design review up"
+                            >
+                              <i
+                                class="ri-arrow-up-s-line"
+                                aria-hidden="true"
+                              ></i></button
+                            ><button
+                              type="button"
+                              class="btn btn-sm btn-outline-light px-1"
+                              data-sort-down
+                              aria-label="Move Design review down"
+                            >
+                              <i
+                                class="ri-arrow-down-s-line"
+                                aria-hidden="true"
+                              ></i>
+                            </button>
+                          </div>
+                        </li>
+                        <li
+                          class="list-group-item rounded border mb-2 d-flex align-items-center gap-2"
+                          data-sort-item
+                        >
+                          <span
+                            class="text-muted flex-shrink-0"
+                            data-sort-handle
+                            style="cursor: grab; touch-action: none"
+                            aria-hidden="true"
+                            ><i class="ri-draggable fs-18"></i
+                          ></span>
+                          <div class="flex-grow-1">
+                            <h3 class="fs-13 fw-semibold mb-1">
+                              Release checklist
+                            </h3>
+                            <p class="text-muted fs-12 mb-0">
+                              A reusable launch plan
+                            </p>
+                          </div>
+                          <div class="d-flex gap-1">
+                            <button
+                              type="button"
+                              class="btn btn-sm btn-outline-light px-1"
+                              data-sort-up
+                              aria-label="Move Release checklist up"
+                            >
+                              <i
+                                class="ri-arrow-up-s-line"
+                                aria-hidden="true"
+                              ></i></button
+                            ><button
+                              type="button"
+                              class="btn btn-sm btn-outline-light px-1"
+                              data-sort-down
+                              aria-label="Move Release checklist down"
+                            >
+                              <i
+                                class="ri-arrow-down-s-line"
+                                aria-hidden="true"
+                              ></i>
+                            </button>
+                          </div>
+                        </li>
+                      </ul>
+                      <p class="text-muted fs-11 mt-2 mb-0">
+                        Drag to copy a template.
+                      </p>
+                    </div>
+                    <div class="col-sm-6">
+                      <h3 class="fs-13 fw-semibold mb-3">Your plan</h3>
+                      <ul
+                        id="sort-plan"
+                        class="list-group list-unstyled mb-0"
+                        data-sort-list
+                        data-sort-mode="target"
+                        style="min-height: 90px"
+                      >
+                        <li
+                          class="list-group-item rounded border mb-2 d-flex align-items-center gap-2"
+                          data-sort-item
+                        >
+                          <span
+                            class="text-muted flex-shrink-0"
+                            data-sort-handle
+                            style="cursor: grab; touch-action: none"
+                            aria-hidden="true"
+                            ><i class="ri-draggable fs-18"></i
+                          ></span>
+                          <div class="flex-grow-1">
+                            <h3 class="fs-13 fw-semibold mb-1">
+                              Project kickoff
+                            </h3>
+                            <p class="text-muted fs-12 mb-0">
+                              Start with a clear goal
+                            </p>
+                          </div>
+                          <div class="d-flex gap-1">
+                            <button
+                              type="button"
+                              class="btn btn-sm btn-outline-light px-1"
+                              data-sort-up
+                              aria-label="Move Project kickoff up"
+                            >
+                              <i
+                                class="ri-arrow-up-s-line"
+                                aria-hidden="true"
+                              ></i></button
+                            ><button
+                              type="button"
+                              class="btn btn-sm btn-outline-light px-1"
+                              data-sort-down
+                              aria-label="Move Project kickoff down"
+                            >
+                              <i
+                                class="ri-arrow-down-s-line"
+                                aria-hidden="true"
+                              ></i>
+                            </button>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Visual collection</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Reorder image tiles within a responsive grid.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <ul
+                    id="sort-gallery"
+                    class="row g-3 list-unstyled mb-0"
+                    data-sort-list
+                  >
+                    <li class="col-sm-4" data-sort-item>
+                      <div class="border rounded p-2">
+                        <img
+                          src="../assets/images/cards/1.jpg"
+                          alt="Mountain lake"
+                          class="rounded w-100 mb-2"
+                          style="height: 110px; object-fit: cover"
+                          loading="lazy"
+                        />
+                        <div class="d-flex align-items-center gap-2">
+                          <span
+                            data-sort-handle
+                            class="text-muted"
+                            style="cursor: grab; touch-action: none"
+                            aria-hidden="true"
+                            ><i class="ri-draggable"></i
+                          ></span>
+                          <h3 class="fs-12 fw-medium mb-0 flex-grow-1">
+                            Lake reflections
+                          </h3>
+                        </div>
+                        <div class="d-flex gap-1 mt-2">
+                          <button
+                            class="btn btn-outline-light btn-sm"
+                            type="button"
+                            data-sort-up
+                            aria-label="Move Lake reflections earlier"
+                          >
+                            Earlier</button
+                          ><button
+                            class="btn btn-outline-light btn-sm"
+                            type="button"
+                            data-sort-down
+                            aria-label="Move Lake reflections later"
+                          >
+                            Later
+                          </button>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="col-sm-4" data-sort-item>
+                      <div class="border rounded p-2">
+                        <img
+                          src="../assets/images/cards/2.jpg"
+                          alt="Beach at sunset"
+                          class="rounded w-100 mb-2"
+                          style="height: 110px; object-fit: cover"
+                          loading="lazy"
+                        />
+                        <div class="d-flex align-items-center gap-2">
+                          <span
+                            data-sort-handle
+                            class="text-muted"
+                            style="cursor: grab; touch-action: none"
+                            aria-hidden="true"
+                            ><i class="ri-draggable"></i
+                          ></span>
+                          <h3 class="fs-12 fw-medium mb-0 flex-grow-1">
+                            Golden hour
+                          </h3>
+                        </div>
+                        <div class="d-flex gap-1 mt-2">
+                          <button
+                            class="btn btn-outline-light btn-sm"
+                            type="button"
+                            data-sort-up
+                            aria-label="Move Golden hour earlier"
+                          >
+                            Earlier</button
+                          ><button
+                            class="btn btn-outline-light btn-sm"
+                            type="button"
+                            data-sort-down
+                            aria-label="Move Golden hour later"
+                          >
+                            Later
+                          </button>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="col-sm-4" data-sort-item>
+                      <div class="border rounded p-2">
+                        <img
+                          src="../assets/images/cards/17.png"
+                          alt="Sunlit desk"
+                          class="rounded w-100 mb-2"
+                          style="height: 110px; object-fit: cover"
+                          loading="lazy"
+                        />
+                        <div class="d-flex align-items-center gap-2">
+                          <span
+                            data-sort-handle
+                            class="text-muted"
+                            style="cursor: grab; touch-action: none"
+                            aria-hidden="true"
+                            ><i class="ri-draggable"></i
+                          ></span>
+                          <h3 class="fs-12 fw-medium mb-0 flex-grow-1">
+                            Creative workspace
+                          </h3>
+                        </div>
+                        <div class="d-flex gap-1 mt-2">
+                          <button
+                            class="btn btn-outline-light btn-sm"
+                            type="button"
+                            data-sort-up
+                            aria-label="Move Creative workspace earlier"
+                          >
+                            Earlier</button
+                          ><button
+                            class="btn btn-outline-light btn-sm"
+                            type="button"
+                            data-sort-down
+                            aria-label="Move Creative workspace later"
+                          >
+                            Later
+                          </button>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Protected item</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      The pinned row stays fixed while other items can be
+                      reordered.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <ul
+                    id="sort-protected"
+                    class="list-group list-unstyled mb-0"
+                    data-sort-list
+                    style="min-height: 90px"
+                  >
+                    <li
+                      class="list-group-item rounded border mb-2 d-flex align-items-center gap-2 bg-light"
+                      data-sort-item
+                      data-sort-locked
+                    >
+                      <span
+                        class="text-muted flex-shrink-0"
+                        data-sort-handle
+                        style="cursor: grab; touch-action: none"
+                        aria-hidden="true"
+                        ><i class="ri-draggable fs-18"></i
+                      ></span>
+                      <div class="flex-grow-1">
+                        <h3 class="fs-13 fw-semibold mb-1">
+                          Workspace overview
+                        </h3>
+                        <p class="text-muted fs-12 mb-0">
+                          Pinned reference ? sorting disabled
+                        </p>
+                      </div>
+                      <span class="badge bg-light text-default">Pinned</span>
+                    </li>
+                    <li
+                      class="list-group-item rounded border mb-2 d-flex align-items-center gap-2"
+                      data-sort-item
+                    >
+                      <span
+                        class="text-muted flex-shrink-0"
+                        data-sort-handle
+                        style="cursor: grab; touch-action: none"
+                        aria-hidden="true"
+                        ><i class="ri-draggable fs-18"></i
+                      ></span>
+                      <div class="flex-grow-1">
+                        <h3 class="fs-13 fw-semibold mb-1">
+                          Review project brief
+                        </h3>
+                        <p class="text-muted fs-12 mb-0">
+                          Align the scope and intended outcome
+                        </p>
+                      </div>
+                      <div class="d-flex gap-1">
+                        <button
+                          type="button"
+                          class="btn btn-sm btn-outline-light px-1"
+                          data-sort-up
+                          aria-label="Move Review project brief up"
+                        >
+                          <i
+                            class="ri-arrow-up-s-line"
+                            aria-hidden="true"
+                          ></i></button
+                        ><button
+                          type="button"
+                          class="btn btn-sm btn-outline-light px-1"
+                          data-sort-down
+                          aria-label="Move Review project brief down"
+                        >
+                          <i
+                            class="ri-arrow-down-s-line"
+                            aria-hidden="true"
+                          ></i>
+                        </button>
+                      </div>
+                    </li>
+                    <li
+                      class="list-group-item rounded border mb-2 d-flex align-items-center gap-2"
+                      data-sort-item
+                    >
+                      <span
+                        class="text-muted flex-shrink-0"
+                        data-sort-handle
+                        style="cursor: grab; touch-action: none"
+                        aria-hidden="true"
+                        ><i class="ri-draggable fs-18"></i
+                      ></span>
+                      <div class="flex-grow-1">
+                        <h3 class="fs-13 fw-semibold mb-1">Refine prototype</h3>
+                        <p class="text-muted fs-12 mb-0">
+                          Prepare the core interactions
+                        </p>
+                      </div>
+                      <div class="d-flex gap-1">
+                        <button
+                          type="button"
+                          class="btn btn-sm btn-outline-light px-1"
+                          data-sort-up
+                          aria-label="Move Refine prototype up"
+                        >
+                          <i
+                            class="ri-arrow-up-s-line"
+                            aria-hidden="true"
+                          ></i></button
+                        ><button
+                          type="button"
+                          class="btn btn-sm btn-outline-light px-1"
+                          data-sort-down
+                          aria-label="Move Refine prototype down"
+                        >
+                          <i
+                            class="ri-arrow-down-s-line"
+                            aria-hidden="true"
+                          ></i>
+                        </button>
+                      </div>
+                    </li>
+                    <li
+                      class="list-group-item rounded border mb-2 d-flex align-items-center gap-2"
+                      data-sort-item
+                    >
+                      <span
+                        class="text-muted flex-shrink-0"
+                        data-sort-handle
+                        style="cursor: grab; touch-action: none"
+                        aria-hidden="true"
+                        ><i class="ri-draggable fs-18"></i
+                      ></span>
+                      <div class="flex-grow-1">
+                        <h3 class="fs-13 fw-semibold mb-1">
+                          Share team feedback
+                        </h3>
+                        <p class="text-muted fs-12 mb-0">
+                          Capture the next useful improvements
+                        </p>
+                      </div>
+                      <div class="d-flex gap-1">
+                        <button
+                          type="button"
+                          class="btn btn-sm btn-outline-light px-1"
+                          data-sort-up
+                          aria-label="Move Share team feedback up"
+                        >
+                          <i
+                            class="ri-arrow-up-s-line"
+                            aria-hidden="true"
+                          ></i></button
+                        ><button
+                          type="button"
+                          class="btn btn-sm btn-outline-light px-1"
+                          data-sort-down
+                          aria-label="Move Share team feedback down"
+                        >
+                          <i
+                            class="ri-arrow-down-s-line"
+                            aria-hidden="true"
+                          ></i>
+                        </button>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Enable sorting</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Turn reordering on or off when the layout needs to stay
+                      stable.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="form-check form-switch mb-3">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      role="switch"
+                      id="sort-enabled"
+                      checked
+                    /><label class="form-check-label fs-13" for="sort-enabled"
+                      >Allow reordering</label
+                    >
+                  </div>
+                  <ul
+                    id="sort-toggle"
+                    class="list-group list-unstyled mb-0"
+                    data-sort-list
+                    style="min-height: 90px"
+                  >
+                    <li
+                      class="list-group-item rounded border mb-2 d-flex align-items-center gap-2"
+                      data-sort-item
+                    >
+                      <span
+                        class="text-muted flex-shrink-0"
+                        data-sort-handle
+                        style="cursor: grab; touch-action: none"
+                        aria-hidden="true"
+                        ><i class="ri-draggable fs-18"></i
+                      ></span>
+                      <div class="flex-grow-1">
+                        <h3 class="fs-13 fw-semibold mb-1">
+                          Review project brief
+                        </h3>
+                        <p class="text-muted fs-12 mb-0">
+                          Align the scope and intended outcome
+                        </p>
+                      </div>
+                      <div class="d-flex gap-1">
+                        <button
+                          type="button"
+                          class="btn btn-sm btn-outline-light px-1"
+                          data-sort-up
+                          aria-label="Move Review project brief up"
+                        >
+                          <i
+                            class="ri-arrow-up-s-line"
+                            aria-hidden="true"
+                          ></i></button
+                        ><button
+                          type="button"
+                          class="btn btn-sm btn-outline-light px-1"
+                          data-sort-down
+                          aria-label="Move Review project brief down"
+                        >
+                          <i
+                            class="ri-arrow-down-s-line"
+                            aria-hidden="true"
+                          ></i>
+                        </button>
+                      </div>
+                    </li>
+                    <li
+                      class="list-group-item rounded border mb-2 d-flex align-items-center gap-2"
+                      data-sort-item
+                    >
+                      <span
+                        class="text-muted flex-shrink-0"
+                        data-sort-handle
+                        style="cursor: grab; touch-action: none"
+                        aria-hidden="true"
+                        ><i class="ri-draggable fs-18"></i
+                      ></span>
+                      <div class="flex-grow-1">
+                        <h3 class="fs-13 fw-semibold mb-1">Refine prototype</h3>
+                        <p class="text-muted fs-12 mb-0">
+                          Prepare the core interactions
+                        </p>
+                      </div>
+                      <div class="d-flex gap-1">
+                        <button
+                          type="button"
+                          class="btn btn-sm btn-outline-light px-1"
+                          data-sort-up
+                          aria-label="Move Refine prototype up"
+                        >
+                          <i
+                            class="ri-arrow-up-s-line"
+                            aria-hidden="true"
+                          ></i></button
+                        ><button
+                          type="button"
+                          class="btn btn-sm btn-outline-light px-1"
+                          data-sort-down
+                          aria-label="Move Refine prototype down"
+                        >
+                          <i
+                            class="ri-arrow-down-s-line"
+                            aria-hidden="true"
+                          ></i>
+                        </button>
+                      </div>
+                    </li>
+                    <li
+                      class="list-group-item rounded border mb-2 d-flex align-items-center gap-2"
+                      data-sort-item
+                    >
+                      <span
+                        class="text-muted flex-shrink-0"
+                        data-sort-handle
+                        style="cursor: grab; touch-action: none"
+                        aria-hidden="true"
+                        ><i class="ri-draggable fs-18"></i
+                      ></span>
+                      <div class="flex-grow-1">
+                        <h3 class="fs-13 fw-semibold mb-1">
+                          Share team feedback
+                        </h3>
+                        <p class="text-muted fs-12 mb-0">
+                          Capture the next useful improvements
+                        </p>
+                      </div>
+                      <div class="d-flex gap-1">
+                        <button
+                          type="button"
+                          class="btn btn-sm btn-outline-light px-1"
+                          data-sort-up
+                          aria-label="Move Share team feedback up"
+                        >
+                          <i
+                            class="ri-arrow-up-s-line"
+                            aria-hidden="true"
+                          ></i></button
+                        ><button
+                          type="button"
+                          class="btn btn-sm btn-outline-light px-1"
+                          data-sort-down
+                          aria-label="Move Share team feedback down"
+                        >
+                          <i
+                            class="ri-arrow-down-s-line"
+                            aria-hidden="true"
+                          ></i>
+                        </button>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Document order</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Arrange supporting files in the order people should read
+                      them.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <ul
+                    id="sort-documents"
+                    class="list-group list-unstyled mb-0"
+                    data-sort-list
+                    style="min-height: 90px"
+                  >
+                    <li
+                      class="list-group-item rounded border mb-2 d-flex align-items-center gap-2"
+                      data-sort-item
+                    >
+                      <span
+                        class="text-muted flex-shrink-0"
+                        data-sort-handle
+                        style="cursor: grab; touch-action: none"
+                        aria-hidden="true"
+                        ><i class="ri-draggable fs-18"></i
+                      ></span>
+                      <div class="flex-grow-1">
+                        <h3 class="fs-13 fw-semibold mb-1">
+                          Project overview.pdf
+                        </h3>
+                        <p class="text-muted fs-12 mb-0">PDF ? 2.4 MB</p>
+                      </div>
+                      <div class="d-flex gap-1">
+                        <button
+                          type="button"
+                          class="btn btn-sm btn-outline-light px-1"
+                          data-sort-up
+                          aria-label="Move Project overview.pdf up"
+                        >
+                          <i
+                            class="ri-arrow-up-s-line"
+                            aria-hidden="true"
+                          ></i></button
+                        ><button
+                          type="button"
+                          class="btn btn-sm btn-outline-light px-1"
+                          data-sort-down
+                          aria-label="Move Project overview.pdf down"
+                        >
+                          <i
+                            class="ri-arrow-down-s-line"
+                            aria-hidden="true"
+                          ></i>
+                        </button>
+                      </div>
+                    </li>
+                    <li
+                      class="list-group-item rounded border mb-2 d-flex align-items-center gap-2"
+                      data-sort-item
+                    >
+                      <span
+                        class="text-muted flex-shrink-0"
+                        data-sort-handle
+                        style="cursor: grab; touch-action: none"
+                        aria-hidden="true"
+                        ><i class="ri-draggable fs-18"></i
+                      ></span>
+                      <div class="flex-grow-1">
+                        <h3 class="fs-13 fw-semibold mb-1">
+                          Research findings.pdf
+                        </h3>
+                        <p class="text-muted fs-12 mb-0">PDF ? 4.8 MB</p>
+                      </div>
+                      <div class="d-flex gap-1">
+                        <button
+                          type="button"
+                          class="btn btn-sm btn-outline-light px-1"
+                          data-sort-up
+                          aria-label="Move Research findings.pdf up"
+                        >
+                          <i
+                            class="ri-arrow-up-s-line"
+                            aria-hidden="true"
+                          ></i></button
+                        ><button
+                          type="button"
+                          class="btn btn-sm btn-outline-light px-1"
+                          data-sort-down
+                          aria-label="Move Research findings.pdf down"
+                        >
+                          <i
+                            class="ri-arrow-down-s-line"
+                            aria-hidden="true"
+                          ></i>
+                        </button>
+                      </div>
+                    </li>
+                    <li
+                      class="list-group-item rounded border mb-2 d-flex align-items-center gap-2"
+                      data-sort-item
+                    >
+                      <span
+                        class="text-muted flex-shrink-0"
+                        data-sort-handle
+                        style="cursor: grab; touch-action: none"
+                        aria-hidden="true"
+                        ><i class="ri-draggable fs-18"></i
+                      ></span>
+                      <div class="flex-grow-1">
+                        <h3 class="fs-13 fw-semibold mb-1">
+                          Design guidelines.pdf
+                        </h3>
+                        <p class="text-muted fs-12 mb-0">PDF ? 3.1 MB</p>
+                      </div>
+                      <div class="d-flex gap-1">
+                        <button
+                          type="button"
+                          class="btn btn-sm btn-outline-light px-1"
+                          data-sort-up
+                          aria-label="Move Design guidelines.pdf up"
+                        >
+                          <i
+                            class="ri-arrow-up-s-line"
+                            aria-hidden="true"
+                          ></i></button
+                        ><button
+                          type="button"
+                          class="btn btn-sm btn-outline-light px-1"
+                          data-sort-down
+                          aria-label="Move Design guidelines.pdf down"
+                        >
+                          <i
+                            class="ri-arrow-down-s-line"
+                            aria-hidden="true"
+                          ></i>
+                        </button>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Meeting agenda</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Keep a practical sequence for the next team discussion.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <ul
+                    id="sort-agenda"
+                    class="list-group list-unstyled mb-0"
+                    data-sort-list
+                    style="min-height: 90px"
+                  >
+                    <li
+                      class="list-group-item rounded border mb-2 d-flex align-items-center gap-2"
+                      data-sort-item
+                    >
+                      <span
+                        class="text-muted flex-shrink-0"
+                        data-sort-handle
+                        style="cursor: grab; touch-action: none"
+                        aria-hidden="true"
+                        ><i class="ri-draggable fs-18"></i
+                      ></span>
+                      <div class="flex-grow-1">
+                        <h3 class="fs-13 fw-semibold mb-1">
+                          01 ? Welcome & goals
+                        </h3>
+                        <p class="text-muted fs-12 mb-0">5 minutes</p>
+                      </div>
+                      <div class="d-flex gap-1">
+                        <button
+                          type="button"
+                          class="btn btn-sm btn-outline-light px-1"
+                          data-sort-up
+                          aria-label="Move 01 ? Welcome & goals up"
+                        >
+                          <i
+                            class="ri-arrow-up-s-line"
+                            aria-hidden="true"
+                          ></i></button
+                        ><button
+                          type="button"
+                          class="btn btn-sm btn-outline-light px-1"
+                          data-sort-down
+                          aria-label="Move 01 ? Welcome & goals down"
+                        >
+                          <i
+                            class="ri-arrow-down-s-line"
+                            aria-hidden="true"
+                          ></i>
+                        </button>
+                      </div>
+                    </li>
+                    <li
+                      class="list-group-item rounded border mb-2 d-flex align-items-center gap-2"
+                      data-sort-item
+                    >
+                      <span
+                        class="text-muted flex-shrink-0"
+                        data-sort-handle
+                        style="cursor: grab; touch-action: none"
+                        aria-hidden="true"
+                        ><i class="ri-draggable fs-18"></i
+                      ></span>
+                      <div class="flex-grow-1">
+                        <h3 class="fs-13 fw-semibold mb-1">
+                          02 ? Progress review
+                        </h3>
+                        <p class="text-muted fs-12 mb-0">10 minutes</p>
+                      </div>
+                      <div class="d-flex gap-1">
+                        <button
+                          type="button"
+                          class="btn btn-sm btn-outline-light px-1"
+                          data-sort-up
+                          aria-label="Move 02 ? Progress review up"
+                        >
+                          <i
+                            class="ri-arrow-up-s-line"
+                            aria-hidden="true"
+                          ></i></button
+                        ><button
+                          type="button"
+                          class="btn btn-sm btn-outline-light px-1"
+                          data-sort-down
+                          aria-label="Move 02 ? Progress review down"
+                        >
+                          <i
+                            class="ri-arrow-down-s-line"
+                            aria-hidden="true"
+                          ></i>
+                        </button>
+                      </div>
+                    </li>
+                    <li
+                      class="list-group-item rounded border mb-2 d-flex align-items-center gap-2"
+                      data-sort-item
+                    >
+                      <span
+                        class="text-muted flex-shrink-0"
+                        data-sort-handle
+                        style="cursor: grab; touch-action: none"
+                        aria-hidden="true"
+                        ><i class="ri-draggable fs-18"></i
+                      ></span>
+                      <div class="flex-grow-1">
+                        <h3 class="fs-13 fw-semibold mb-1">
+                          03 ? Open questions
+                        </h3>
+                        <p class="text-muted fs-12 mb-0">15 minutes</p>
+                      </div>
+                      <div class="d-flex gap-1">
+                        <button
+                          type="button"
+                          class="btn btn-sm btn-outline-light px-1"
+                          data-sort-up
+                          aria-label="Move 03 ? Open questions up"
+                        >
+                          <i
+                            class="ri-arrow-up-s-line"
+                            aria-hidden="true"
+                          ></i></button
+                        ><button
+                          type="button"
+                          class="btn btn-sm btn-outline-light px-1"
+                          data-sort-down
+                          aria-label="Move 03 ? Open questions down"
+                        >
+                          <i
+                            class="ri-arrow-down-s-line"
+                            aria-hidden="true"
+                          ></i>
+                        </button>
+                      </div>
+                    </li>
+                    <li
+                      class="list-group-item rounded border mb-2 d-flex align-items-center gap-2"
+                      data-sort-item
+                    >
+                      <span
+                        class="text-muted flex-shrink-0"
+                        data-sort-handle
+                        style="cursor: grab; touch-action: none"
+                        aria-hidden="true"
+                        ><i class="ri-draggable fs-18"></i
+                      ></span>
+                      <div class="flex-grow-1">
+                        <h3 class="fs-13 fw-semibold mb-1">
+                          04 ? Next actions
+                        </h3>
+                        <p class="text-muted fs-12 mb-0">5 minutes</p>
+                      </div>
+                      <div class="d-flex gap-1">
+                        <button
+                          type="button"
+                          class="btn btn-sm btn-outline-light px-1"
+                          data-sort-up
+                          aria-label="Move 04 ? Next actions up"
+                        >
+                          <i
+                            class="ri-arrow-up-s-line"
+                            aria-hidden="true"
+                          ></i></button
+                        ><button
+                          type="button"
+                          class="btn btn-sm btn-outline-light px-1"
+                          data-sort-down
+                          aria-label="Move 04 ? Next actions down"
+                        >
+                          <i
+                            class="ri-arrow-down-s-line"
+                            aria-hidden="true"
+                          ></i>
+                        </button>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"-->
+    <!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/js/app-interactions.js"></script>
+    <script src="../assets/libs/prismjs/prism.js"></script>
+    <script src="../assets/js/prism-custom.js"></script>
+    <script src="../assets/libs/sortablejs/Sortable.min.js"></script>
+    <script src="../assets/js/sortable.js"></script>
+  </body>
+</html>

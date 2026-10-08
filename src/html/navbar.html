@@ -1,0 +1,668 @@
+<!-- include document-head.html"-->
+    <link
+      rel="stylesheet"
+      href="../assets/libs/prismjs/themes/prism-coy.min.css"
+    />
+  </head>
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"--><!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"--><!-- include side-navigation.html"-->
+      <main data-markup-examples class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Navbar</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Base UI</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Navbar</li>
+          </ol>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Workspace navigation</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      A clear hierarchy with a primary action and responsive
+                      menu.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <nav
+                    class="navbar navbar-expand-lg rounded p-3 bg-light border"
+                    aria-label="workspace-nav"
+                  >
+                    <div class="container-fluid px-0">
+                      <a
+                        href="index.html"
+                        class="navbar-brand me-3"
+                        aria-label="NexoraUI home"
+                        ><img
+                          src="../assets/images/brand-logos/toggle-logo.png"
+                          alt="NexoraUI"
+                          style="height: 30px; width: auto" /></a
+                      ><button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#workspace-nav"
+                        aria-controls="workspace-nav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                      >
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="workspace-nav">
+                        <ul class="navbar-nav me-auto gap-lg-2 mb-2 mb-lg-0">
+                          <li class="nav-item">
+                            <a
+                              class="nav-link active"
+                              aria-current="page"
+                              href="index.html"
+                              >Overview</a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="to-do-list.html"
+                              >Projects</a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="full-calendar.html"
+                              >Calendar</a
+                            >
+                          </li>
+                        </ul>
+                        <a
+                          href="invoice-create.html"
+                          class="btn btn-dark btn-sm"
+                          >Create invoice</a
+                        >
+                      </div>
+                    </div>
+                  </nav>
+                </div>
+              </section>
+            </div>
+            <div class="col-12">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Search-first header</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Keep search close to the main destinations.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <nav
+                    class="navbar navbar-expand-lg rounded p-3 bg-light border"
+                    aria-label="search-nav"
+                  >
+                    <div class="container-fluid px-0">
+                      <a
+                        href="index.html"
+                        class="navbar-brand me-3"
+                        aria-label="NexoraUI home"
+                        ><img
+                          src="../assets/images/brand-logos/toggle-logo.png"
+                          alt="NexoraUI"
+                          style="height: 30px; width: auto" /></a
+                      ><button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#search-nav"
+                        aria-controls="search-nav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                      >
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="search-nav">
+                        <ul class="navbar-nav me-auto gap-lg-2 mb-2 mb-lg-0">
+                          <li class="nav-item">
+                            <a
+                              class="nav-link active"
+                              aria-current="page"
+                              href="index.html"
+                              >Overview</a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="to-do-list.html"
+                              >Projects</a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="full-calendar.html"
+                              >Calendar</a
+                            >
+                          </li>
+                        </ul>
+                        <form
+                          action="search-results.html"
+                          method="get"
+                          role="search"
+                          class="d-flex gap-2"
+                        >
+                          <label class="visually-hidden" for="nav-search"
+                            >Search workspace</label
+                          ><input
+                            id="nav-search"
+                            type="search"
+                            name="q"
+                            class="form-control form-control-sm"
+                            placeholder="Search workspace"
+                            required
+                          /><button
+                            class="btn btn-outline-success btn-sm"
+                            type="submit"
+                            aria-label="Search"
+                          >
+                            <i class="ri-search-line" aria-hidden="true"></i>
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                  </nav>
+                </div>
+              </section>
+            </div>
+            <div class="col-12">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Workspace dropdown</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Organize supporting pages inside a concise menu.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <nav
+                    class="navbar navbar-expand-lg rounded p-3 bg-light border"
+                    aria-label="dropdown-nav"
+                  >
+                    <div class="container-fluid px-0">
+                      <a
+                        href="index.html"
+                        class="navbar-brand me-3"
+                        aria-label="NexoraUI home"
+                        ><img
+                          src="../assets/images/brand-logos/toggle-logo.png"
+                          alt="NexoraUI"
+                          style="height: 30px; width: auto" /></a
+                      ><button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#dropdown-nav"
+                        aria-controls="dropdown-nav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                      >
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="dropdown-nav">
+                        <ul class="navbar-nav me-auto">
+                          <li class="nav-item">
+                            <a
+                              class="nav-link active"
+                              href="index.html"
+                              aria-current="page"
+                              >Overview</a
+                            >
+                          </li>
+                          <li class="nav-item dropdown">
+                            <button
+                              type="button"
+                              class="nav-link dropdown-toggle"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              Workspace
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li>
+                                <a
+                                  class="dropdown-item"
+                                  href="file-manager.html"
+                                  >Shared files</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  class="dropdown-item"
+                                  href="full-calendar.html"
+                                  >Team calendar</a
+                                >
+                              </li>
+                              <li><hr class="dropdown-divider" /></li>
+                              <li>
+                                <a
+                                  class="dropdown-item"
+                                  href="profile-settings.html"
+                                  >Preferences</a
+                                >
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                        <a
+                          href="profile-settings.html"
+                          class="btn btn-outline-success btn-sm"
+                          >Settings</a
+                        >
+                      </div>
+                    </div>
+                  </nav>
+                </div>
+              </section>
+            </div>
+            <div class="col-12">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Dark navigation</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Use the existing light brand variant on a dark surface.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <nav
+                    class="navbar navbar-expand-lg rounded p-3 bg-dark"
+                    aria-label="dark-nav"
+                    data-bs-theme="dark"
+                  >
+                    <div class="container-fluid px-0">
+                      <a
+                        href="index.html"
+                        class="navbar-brand me-3"
+                        aria-label="NexoraUI home"
+                        ><img
+                          src="../assets/images/brand-logos/toggle-dark.png"
+                          alt="NexoraUI"
+                          style="height: 30px; width: auto" /></a
+                      ><button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#dark-nav"
+                        aria-controls="dark-nav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                      >
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="dark-nav">
+                        <ul class="navbar-nav me-auto gap-lg-2 mb-2 mb-lg-0">
+                          <li class="nav-item">
+                            <a
+                              class="nav-link text-white active"
+                              aria-current="page"
+                              href="index.html"
+                              >Overview</a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a
+                              class="nav-link text-white"
+                              href="to-do-list.html"
+                              >Projects</a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a
+                              class="nav-link text-white"
+                              href="full-calendar.html"
+                              >Calendar</a
+                            >
+                          </li>
+                        </ul>
+                        <a
+                          href="profile-settings.html"
+                          class="btn btn-light btn-sm"
+                          >Settings</a
+                        >
+                      </div>
+                    </div>
+                  </nav>
+                </div>
+              </section>
+            </div>
+            <div class="col-12">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Soft accent header</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      A restrained theme tint for a familiar workspace.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <nav
+                    class="navbar navbar-expand-lg rounded p-3 bg-primary-transparent border border-primary"
+                    aria-label="accent-nav"
+                  >
+                    <div class="container-fluid px-0">
+                      <a
+                        href="index.html"
+                        class="navbar-brand me-3"
+                        aria-label="NexoraUI home"
+                        ><img
+                          src="../assets/images/brand-logos/toggle-logo.png"
+                          alt="NexoraUI"
+                          style="height: 30px; width: auto" /></a
+                      ><button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#accent-nav"
+                        aria-controls="accent-nav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                      >
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="accent-nav">
+                        <ul class="navbar-nav me-auto gap-lg-2 mb-2 mb-lg-0">
+                          <li class="nav-item">
+                            <a
+                              class="nav-link active"
+                              aria-current="page"
+                              href="index.html"
+                              >Overview</a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="to-do-list.html"
+                              >Projects</a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="full-calendar.html"
+                              >Calendar</a
+                            >
+                          </li>
+                        </ul>
+                        <a
+                          href="invoice-create.html"
+                          class="btn btn-primary btn-sm"
+                          >Create invoice</a
+                        >
+                      </div>
+                    </div>
+                  </nav>
+                </div>
+              </section>
+            </div>
+            <div class="col-12">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Two-level header</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Separate utility shortcuts from the main navigation.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="border rounded overflow-hidden">
+                    <div
+                      class="bg-light px-3 py-2 d-flex flex-wrap justify-content-between gap-2 fs-12"
+                    >
+                      <span class="text-muted">Your workspace, connected.</span
+                      ><a href="profile-settings.html" class="text-muted"
+                        >Account preferences</a
+                      >
+                    </div>
+                    <nav
+                      class="navbar navbar-expand-lg rounded p-3"
+                      aria-label="utility-nav"
+                    >
+                      <div class="container-fluid px-0">
+                        <a
+                          href="index.html"
+                          class="navbar-brand me-3"
+                          aria-label="NexoraUI home"
+                          ><img
+                            src="../assets/images/brand-logos/toggle-logo.png"
+                            alt="NexoraUI"
+                            style="height: 30px; width: auto" /></a
+                        ><button
+                          class="navbar-toggler"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#utility-nav"
+                          aria-controls="utility-nav"
+                          aria-expanded="false"
+                          aria-label="Toggle navigation"
+                        >
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="utility-nav">
+                          <ul class="navbar-nav me-auto gap-lg-2 mb-2 mb-lg-0">
+                            <li class="nav-item">
+                              <a
+                                class="nav-link active"
+                                aria-current="page"
+                                href="index.html"
+                                >Overview</a
+                              >
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="to-do-list.html"
+                                >Projects</a
+                              >
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="full-calendar.html"
+                                >Calendar</a
+                              >
+                            </li>
+                          </ul>
+                          <span class="badge bg-success-transparent"
+                            >Workspace ready</span
+                          >
+                        </div>
+                      </div>
+                    </nav>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Compact brand bar</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      A focused header with just the essentials.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <nav
+                    class="border rounded p-3 d-flex flex-wrap align-items-center justify-content-between gap-2"
+                    aria-label="Compact navigation"
+                  >
+                    <a
+                      href="index.html"
+                      class="navbar-brand me-3"
+                      aria-label="NexoraUI home"
+                      ><img
+                        src="../assets/images/brand-logos/toggle-logo.png"
+                        alt="NexoraUI"
+                        style="height: 30px; width: auto" /></a
+                    ><a
+                      href="profile-settings.html"
+                      class="btn btn-outline-success btn-sm"
+                      >Settings</a
+                    >
+                  </nav>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Centered identity</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Keep the familiar brand mark at the center.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <nav
+                    class="border rounded p-3 d-flex align-items-center justify-content-between gap-2"
+                    aria-label="Centered navigation"
+                  >
+                    <a
+                      href="index.html"
+                      class="btn btn-outline-light btn-sm"
+                      aria-label="Go home"
+                      ><i class="ri-arrow-left-line" aria-hidden="true"></i></a
+                    ><a
+                      href="index.html"
+                      class="navbar-brand me-3"
+                      aria-label="NexoraUI home"
+                      ><img
+                        src="../assets/images/brand-logos/toggle-logo.png"
+                        alt="NexoraUI"
+                        style="height: 30px; width: auto" /></a
+                    ><a
+                      href="search-results.html"
+                      class="btn btn-outline-light btn-sm"
+                      aria-label="Open search"
+                      ><i class="ri-search-line" aria-hidden="true"></i
+                    ></a>
+                  </nav>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Always-collapsed menu</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      A compact hamburger layout at every breakpoint.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <nav
+                    class="navbar rounded p-3 bg-light border"
+                    aria-label="compact-nav"
+                  >
+                    <div class="container-fluid px-0">
+                      <a
+                        href="index.html"
+                        class="navbar-brand me-3"
+                        aria-label="NexoraUI home"
+                        ><img
+                          src="../assets/images/brand-logos/toggle-logo.png"
+                          alt="NexoraUI"
+                          style="height: 30px; width: auto" /></a
+                      ><button
+                        class="navbar-toggler bg-white"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#compact-nav"
+                        aria-controls="compact-nav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                      >
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="compact-nav">
+                        <ul
+                          class="navbar-nav me-auto gap-lg-2 mb-2 mt-2 mb-lg-0"
+                        >
+                          <li class="nav-item">
+                            <a
+                              class="nav-link active"
+                              aria-current="page"
+                              href="index.html"
+                              >Overview</a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="to-do-list.html"
+                              >Projects</a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="full-calendar.html"
+                              >Calendar</a
+                            >
+                          </li>
+                        </ul>
+                        <a
+                          href="profile-settings.html"
+                          class="btn btn-outline-success mt-2 btn-sm"
+                          >Settings</a
+                        >
+                      </div>
+                    </div>
+                  </nav>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Project context bar</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Combine brand identity, context, and one useful action.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <nav
+                    class="border rounded p-3 d-flex align-items-center flex-wrap gap-3"
+                    aria-label="Project navigation"
+                  >
+                    <a
+                      href="index.html"
+                      class="navbar-brand me-3"
+                      aria-label="NexoraUI home"
+                      ><img
+                        src="../assets/images/brand-logos/toggle-logo.png"
+                        alt="NexoraUI"
+                        style="height: 30px; width: auto"
+                    /></a>
+                    <div class="border-start ps-3">
+                      <h3 class="fs-13 fw-semibold mb-1">Atlas workspace</h3>
+                      <span class="text-muted fs-12">Product &amp; design</span>
+                    </div>
+                    <a
+                      href="to-do-list.html"
+                      class="btn btn-outline-success btn-sm ms-auto"
+                      >View tasks</a
+                    >
+                  </nav>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"--><!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"--><!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/js/app-interactions.js"></script>
+    <script src="../assets/libs/prismjs/prism.js"></script>
+    <script src="../assets/js/prism-custom.js"></script>
+  </body>
+</html>

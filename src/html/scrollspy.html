@@ -1,0 +1,814 @@
+<!-- include document-head.html"-->
+    <link
+      rel="stylesheet"
+      href="../assets/libs/prismjs/themes/prism-coy.min.css"
+    />
+  </head>
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"--><!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"--><!-- include side-navigation.html"-->
+      <main data-markup-examples class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">ScrollSpy</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Base UI</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+              ScrollSpy
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">
+                      Horizontal section navigation
+                    </h2>
+                    <p class="text-muted fs-12 mb-0">
+                      A simple pill menu tracks the visible section.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <nav
+                    id="horizontal-spy-nav"
+                    class="nav nav-pills flex-wrap gap-1 mb-3"
+                    aria-label="Horizontal section navigation"
+                  >
+                    <a class="nav-link" href="#horizontal-spy-overview"
+                      >Overview</a
+                    ><a class="nav-link" href="#horizontal-spy-planning"
+                      >Planning</a
+                    ><a class="nav-link" href="#horizontal-spy-delivery"
+                      >Delivery</a
+                    ><a class="nav-link" href="#horizontal-spy-review"
+                      >Review</a
+                    >
+                  </nav>
+                  <div
+                    data-scrollspy-demo
+                    data-bs-spy="scroll"
+                    data-bs-target="#horizontal-spy-nav"
+                    tabindex="0"
+                    aria-label="horizontal spy scrollable content"
+                    class="position-relative overflow-auto border rounded p-3"
+                    style="height: 320px"
+                  >
+                    <section
+                      id="horizontal-spy-overview"
+                      class=""
+                      style="min-height: 220px"
+                    >
+                      <span class="badge bg-light text-default mb-2">01</span>
+                      <h3 class="fs-18 fw-semibold mb-3">
+                        Start with a clear overview
+                      </h3>
+                      <p class="text-muted fs-13 lh-base">
+                        Give the team a shared understanding of the project.
+                        Define the outcome, gather the useful context, and
+                        decide what success looks like.
+                      </p>
+                      <div class="bg-light rounded p-3 fs-13">
+                        A good overview makes the next decision easier.
+                      </div>
+                    </section>
+                    <section
+                      id="horizontal-spy-planning"
+                      class="border-top pt-4 mt-4"
+                      style="min-height: 220px"
+                    >
+                      <span class="badge bg-light text-default mb-2">02</span>
+                      <h3 class="fs-18 fw-semibold mb-3">
+                        Plan the next milestone
+                      </h3>
+                      <p class="text-muted fs-13 lh-base">
+                        Break the work into useful steps. Choose a realistic
+                        milestone, assign clear owners, and keep dependencies
+                        visible to everyone.
+                      </p>
+                      <div class="bg-light rounded p-3 fs-13">
+                        Focus on the next outcome rather than a long list of
+                        activity.
+                      </div>
+                    </section>
+                    <section
+                      id="horizontal-spy-delivery"
+                      class="border-top pt-4 mt-4"
+                      style="min-height: 220px"
+                    >
+                      <span class="badge bg-light text-default mb-2">03</span>
+                      <h3 class="fs-18 fw-semibold mb-3">
+                        Keep delivery moving
+                      </h3>
+                      <p class="text-muted fs-13 lh-base">
+                        Share progress as the work develops. Capture decisions,
+                        review feedback, and resolve questions before they
+                        interrupt the next stage.
+                      </p>
+                      <div class="bg-light rounded p-3 fs-13">
+                        Small, timely updates help the team stay aligned.
+                      </div>
+                    </section>
+                    <section
+                      id="horizontal-spy-review"
+                      class="border-top pt-4 mt-4"
+                      style="min-height: 220px"
+                    >
+                      <span class="badge bg-light text-default mb-2">04</span>
+                      <h3 class="fs-18 fw-semibold mb-3">
+                        Review what you learned
+                      </h3>
+                      <p class="text-muted fs-13 lh-base">
+                        Look back at the outcome and the process. Keep what
+                        worked, record what could improve, and use the learning
+                        in your next project.
+                      </p>
+                      <div class="bg-light rounded p-3 fs-13">
+                        A thoughtful review turns experience into better
+                        decisions.
+                      </div>
+                    </section>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">List-group navigation</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      A vertical index alongside a scrollable guide.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="row g-3">
+                    <div class="col-sm-4">
+                      <nav
+                        id="list-spy-nav"
+                        class="list-group"
+                        aria-label="List section navigation"
+                      >
+                        <a
+                          class="list-group-item list-group-item-action fs-13"
+                          href="#list-spy-overview"
+                          >Overview</a
+                        ><a
+                          class="list-group-item list-group-item-action fs-13"
+                          href="#list-spy-planning"
+                          >Planning</a
+                        ><a
+                          class="list-group-item list-group-item-action fs-13"
+                          href="#list-spy-delivery"
+                          >Delivery</a
+                        ><a
+                          class="list-group-item list-group-item-action fs-13"
+                          href="#list-spy-review"
+                          >Review</a
+                        >
+                      </nav>
+                    </div>
+                    <div class="col-sm-8">
+                      <div
+                        data-scrollspy-demo
+                        data-bs-spy="scroll"
+                        data-bs-target="#list-spy-nav"
+                        tabindex="0"
+                        aria-label="list spy scrollable content"
+                        class="position-relative overflow-auto border rounded p-3"
+                        style="height: 320px"
+                      >
+                        <section
+                          id="list-spy-overview"
+                          class=""
+                          style="min-height: 220px"
+                        >
+                          <span class="badge bg-light text-default mb-2"
+                            >01</span
+                          >
+                          <h3 class="fs-18 fw-semibold mb-3">
+                            Start with a clear overview
+                          </h3>
+                          <p class="text-muted fs-13 lh-base">
+                            Give the team a shared understanding of the project.
+                            Define the outcome, gather the useful context, and
+                            decide what success looks like.
+                          </p>
+                          <div class="bg-light rounded p-3 fs-13">
+                            A good overview makes the next decision easier.
+                          </div>
+                        </section>
+                        <section
+                          id="list-spy-planning"
+                          class="border-top pt-4 mt-4"
+                          style="min-height: 220px"
+                        >
+                          <span class="badge bg-light text-default mb-2"
+                            >02</span
+                          >
+                          <h3 class="fs-18 fw-semibold mb-3">
+                            Plan the next milestone
+                          </h3>
+                          <p class="text-muted fs-13 lh-base">
+                            Break the work into useful steps. Choose a realistic
+                            milestone, assign clear owners, and keep
+                            dependencies visible to everyone.
+                          </p>
+                          <div class="bg-light rounded p-3 fs-13">
+                            Focus on the next outcome rather than a long list of
+                            activity.
+                          </div>
+                        </section>
+                        <section
+                          id="list-spy-delivery"
+                          class="border-top pt-4 mt-4"
+                          style="min-height: 220px"
+                        >
+                          <span class="badge bg-light text-default mb-2"
+                            >03</span
+                          >
+                          <h3 class="fs-18 fw-semibold mb-3">
+                            Keep delivery moving
+                          </h3>
+                          <p class="text-muted fs-13 lh-base">
+                            Share progress as the work develops. Capture
+                            decisions, review feedback, and resolve questions
+                            before they interrupt the next stage.
+                          </p>
+                          <div class="bg-light rounded p-3 fs-13">
+                            Small, timely updates help the team stay aligned.
+                          </div>
+                        </section>
+                        <section
+                          id="list-spy-review"
+                          class="border-top pt-4 mt-4"
+                          style="min-height: 220px"
+                        >
+                          <span class="badge bg-light text-default mb-2"
+                            >04</span
+                          >
+                          <h3 class="fs-18 fw-semibold mb-3">
+                            Review what you learned
+                          </h3>
+                          <p class="text-muted fs-13 lh-base">
+                            Look back at the outcome and the process. Keep what
+                            worked, record what could improve, and use the
+                            learning in your next project.
+                          </p>
+                          <div class="bg-light rounded p-3 fs-13">
+                            A thoughtful review turns experience into better
+                            decisions.
+                          </div>
+                        </section>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-12">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Nested project index</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Grouped links connect the main stages with their
+                      supporting details.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="row g-3">
+                    <div class="col-md-3">
+                      <nav
+                        id="nested-spy-nav"
+                        class="nav nav-pills flex-column gap-1"
+                        aria-label="Nested project index"
+                      >
+                        <a class="nav-link" href="#nested-spy-overview"
+                          >Overview</a
+                        ><a class="nav-link" href="#nested-spy-research"
+                          >Discovery</a
+                        >
+                        <nav class="nav nav-pills flex-column ms-3 gap-1">
+                          <a class="nav-link fs-12" href="#nested-spy-research"
+                            >Research</a
+                          ><a
+                            class="nav-link fs-12"
+                            href="#nested-spy-prototype"
+                            >Prototype</a
+                          >
+                        </nav>
+                        <a class="nav-link" href="#nested-spy-delivery"
+                          >Delivery</a
+                        ><a class="nav-link" href="#nested-spy-review"
+                          >Review</a
+                        >
+                      </nav>
+                    </div>
+                    <div class="col-md-9">
+                      <div
+                        data-scrollspy-demo
+                        data-bs-spy="scroll"
+                        data-bs-target="#nested-spy-nav"
+                        tabindex="0"
+                        aria-label="nested spy scrollable content"
+                        class="position-relative overflow-auto border rounded p-3"
+                        style="height: 320px"
+                      >
+                        <section
+                          id="nested-spy-overview"
+                          class=""
+                          style="min-height: 220px"
+                        >
+                          <span class="badge bg-light text-default mb-2"
+                            >01</span
+                          >
+                          <h3 class="fs-18 fw-semibold mb-3">
+                            Project overview
+                          </h3>
+                          <p class="text-muted fs-13 lh-base">
+                            Give the team a shared understanding of the project.
+                            Define the outcome, gather the useful context, and
+                            decide what success looks like.
+                          </p>
+                          <div class="bg-light rounded p-3 fs-13">
+                            A good overview makes the next decision easier.
+                          </div>
+                        </section>
+                        <section
+                          id="nested-spy-research"
+                          class="border-top pt-4 mt-4"
+                          style="min-height: 220px"
+                        >
+                          <span class="badge bg-light text-default mb-2"
+                            >02</span
+                          >
+                          <h3 class="fs-18 fw-semibold mb-3">
+                            Research &amp; discovery
+                          </h3>
+                          <p class="text-muted fs-13 lh-base">
+                            Gather useful observations from the people who will
+                            use your product. Find the patterns that explain
+                            what the project needs to solve.
+                          </p>
+                          <div class="bg-light rounded p-3 fs-13">
+                            Bring the findings into your project brief.
+                          </div>
+                        </section>
+                        <section
+                          id="nested-spy-prototype"
+                          class="border-top pt-4 mt-4"
+                          style="min-height: 220px"
+                        >
+                          <span class="badge bg-light text-default mb-2"
+                            >03</span
+                          >
+                          <h3 class="fs-18 fw-semibold mb-3">
+                            Prototype &amp; validation
+                          </h3>
+                          <p class="text-muted fs-13 lh-base">
+                            Explore the most useful ideas in a lightweight
+                            prototype. Test the key interactions and use
+                            feedback to refine your approach.
+                          </p>
+                          <div class="bg-light rounded p-3 fs-13">
+                            Validate the important assumptions early.
+                          </div>
+                        </section>
+                        <section
+                          id="nested-spy-delivery"
+                          class="border-top pt-4 mt-4"
+                          style="min-height: 220px"
+                        >
+                          <span class="badge bg-light text-default mb-2"
+                            >04</span
+                          >
+                          <h3 class="fs-18 fw-semibold mb-3">
+                            Keep delivery moving
+                          </h3>
+                          <p class="text-muted fs-13 lh-base">
+                            Share progress as the work develops. Capture
+                            decisions, review feedback, and resolve questions
+                            before they interrupt the next stage.
+                          </p>
+                          <div class="bg-light rounded p-3 fs-13">
+                            Small, timely updates help the team stay aligned.
+                          </div>
+                        </section>
+                        <section
+                          id="nested-spy-review"
+                          class="border-top pt-4 mt-4"
+                          style="min-height: 220px"
+                        >
+                          <span class="badge bg-light text-default mb-2"
+                            >05</span
+                          >
+                          <h3 class="fs-18 fw-semibold mb-3">
+                            Review what you learned
+                          </h3>
+                          <p class="text-muted fs-13 lh-base">
+                            Look back at the outcome and the process. Keep what
+                            worked, record what could improve, and use the
+                            learning in your next project.
+                          </p>
+                          <div class="bg-light rounded p-3 fs-13">
+                            A thoughtful review turns experience into better
+                            decisions.
+                          </div>
+                        </section>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Reading progress</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Section tracking with a live indication of reading
+                      progress.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between fs-12 mb-2">
+                    <span class="text-muted">Guide progress</span
+                    ><span id="reading-spy-percent">0%</span>
+                  </div>
+                  <div
+                    id="reading-spy-progress"
+                    class="progress progress-sm mb-3"
+                    role="progressbar"
+                    aria-label="Reading progress"
+                    aria-valuenow="0"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div
+                      class="progress-bar bg-primary"
+                      style="width: 0%"
+                    ></div>
+                  </div>
+                  <nav
+                    id="reading-spy-nav"
+                    class="nav nav-pills flex-wrap gap-1 mb-3"
+                    aria-label="Reading guide navigation"
+                  >
+                    <a class="nav-link" href="#reading-spy-overview">Overview</a
+                    ><a class="nav-link" href="#reading-spy-planning"
+                      >Planning</a
+                    ><a class="nav-link" href="#reading-spy-delivery"
+                      >Delivery</a
+                    ><a class="nav-link" href="#reading-spy-review">Review</a>
+                  </nav>
+                  <div
+                    data-scrollspy-demo
+                    data-bs-spy="scroll"
+                    data-bs-target="#reading-spy-nav"
+                    tabindex="0"
+                    aria-label="reading spy scrollable content"
+                    class="position-relative overflow-auto border rounded p-3"
+                    style="height: 320px"
+                  >
+                    <section
+                      id="reading-spy-overview"
+                      class=""
+                      style="min-height: 220px"
+                    >
+                      <span class="badge bg-light text-default mb-2">01</span>
+                      <h3 class="fs-18 fw-semibold mb-3">
+                        Start with a clear overview
+                      </h3>
+                      <p class="text-muted fs-13 lh-base">
+                        Give the team a shared understanding of the project.
+                        Define the outcome, gather the useful context, and
+                        decide what success looks like.
+                      </p>
+                      <div class="bg-light rounded p-3 fs-13">
+                        A good overview makes the next decision easier.
+                      </div>
+                    </section>
+                    <section
+                      id="reading-spy-planning"
+                      class="border-top pt-4 mt-4"
+                      style="min-height: 220px"
+                    >
+                      <span class="badge bg-light text-default mb-2">02</span>
+                      <h3 class="fs-18 fw-semibold mb-3">
+                        Plan the next milestone
+                      </h3>
+                      <p class="text-muted fs-13 lh-base">
+                        Break the work into useful steps. Choose a realistic
+                        milestone, assign clear owners, and keep dependencies
+                        visible to everyone.
+                      </p>
+                      <div class="bg-light rounded p-3 fs-13">
+                        Focus on the next outcome rather than a long list of
+                        activity.
+                      </div>
+                    </section>
+                    <section
+                      id="reading-spy-delivery"
+                      class="border-top pt-4 mt-4"
+                      style="min-height: 220px"
+                    >
+                      <span class="badge bg-light text-default mb-2">03</span>
+                      <h3 class="fs-18 fw-semibold mb-3">
+                        Keep delivery moving
+                      </h3>
+                      <p class="text-muted fs-13 lh-base">
+                        Share progress as the work develops. Capture decisions,
+                        review feedback, and resolve questions before they
+                        interrupt the next stage.
+                      </p>
+                      <div class="bg-light rounded p-3 fs-13">
+                        Small, timely updates help the team stay aligned.
+                      </div>
+                    </section>
+                    <section
+                      id="reading-spy-review"
+                      class="border-top pt-4 mt-4"
+                      style="min-height: 220px"
+                    >
+                      <span class="badge bg-light text-default mb-2">04</span>
+                      <h3 class="fs-18 fw-semibold mb-3">
+                        Review what you learned
+                      </h3>
+                      <p class="text-muted fs-13 lh-base">
+                        Look back at the outcome and the process. Keep what
+                        worked, record what could improve, and use the learning
+                        in your next project.
+                      </p>
+                      <div class="bg-light rounded p-3 fs-13">
+                        A thoughtful review turns experience into better
+                        decisions.
+                      </div>
+                    </section>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Compact numbered steps</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Short labels keep a small navigation bar easy to scan.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <nav
+                    id="steps-spy-nav"
+                    class="nav nav-pills flex-wrap gap-2 mb-3"
+                    aria-label="Numbered step navigation"
+                  >
+                    <a class="nav-link" href="#steps-spy-overview">01 Start</a
+                    ><a class="nav-link" href="#steps-spy-planning">02 Plan</a
+                    ><a class="nav-link" href="#steps-spy-delivery">03 Build</a
+                    ><a class="nav-link" href="#steps-spy-review">04 Review</a>
+                  </nav>
+                  <div
+                    data-scrollspy-demo
+                    data-bs-spy="scroll"
+                    data-bs-target="#steps-spy-nav"
+                    tabindex="0"
+                    aria-label="steps spy scrollable content"
+                    class="position-relative overflow-auto border rounded p-3"
+                    style="height: 320px"
+                  >
+                    <section
+                      id="steps-spy-overview"
+                      class=""
+                      style="min-height: 220px"
+                    >
+                      <span class="badge bg-light text-default mb-2">01</span>
+                      <h3 class="fs-18 fw-semibold mb-3">
+                        Start with a clear overview
+                      </h3>
+                      <p class="text-muted fs-13 lh-base">
+                        Give the team a shared understanding of the project.
+                        Define the outcome, gather the useful context, and
+                        decide what success looks like.
+                      </p>
+                      <div class="bg-light rounded p-3 fs-13">
+                        A good overview makes the next decision easier.
+                      </div>
+                    </section>
+                    <section
+                      id="steps-spy-planning"
+                      class="border-top pt-4 mt-4"
+                      style="min-height: 220px"
+                    >
+                      <span class="badge bg-light text-default mb-2">02</span>
+                      <h3 class="fs-18 fw-semibold mb-3">
+                        Plan the next milestone
+                      </h3>
+                      <p class="text-muted fs-13 lh-base">
+                        Break the work into useful steps. Choose a realistic
+                        milestone, assign clear owners, and keep dependencies
+                        visible to everyone.
+                      </p>
+                      <div class="bg-light rounded p-3 fs-13">
+                        Focus on the next outcome rather than a long list of
+                        activity.
+                      </div>
+                    </section>
+                    <section
+                      id="steps-spy-delivery"
+                      class="border-top pt-4 mt-4"
+                      style="min-height: 220px"
+                    >
+                      <span class="badge bg-light text-default mb-2">03</span>
+                      <h3 class="fs-18 fw-semibold mb-3">
+                        Keep delivery moving
+                      </h3>
+                      <p class="text-muted fs-13 lh-base">
+                        Share progress as the work develops. Capture decisions,
+                        review feedback, and resolve questions before they
+                        interrupt the next stage.
+                      </p>
+                      <div class="bg-light rounded p-3 fs-13">
+                        Small, timely updates help the team stay aligned.
+                      </div>
+                    </section>
+                    <section
+                      id="steps-spy-review"
+                      class="border-top pt-4 mt-4"
+                      style="min-height: 220px"
+                    >
+                      <span class="badge bg-light text-default mb-2">04</span>
+                      <h3 class="fs-18 fw-semibold mb-3">
+                        Review what you learned
+                      </h3>
+                      <p class="text-muted fs-13 lh-base">
+                        Look back at the outcome and the process. Keep what
+                        worked, record what could improve, and use the learning
+                        in your next project.
+                      </p>
+                      <div class="bg-light rounded p-3 fs-13">
+                        A thoughtful review turns experience into better
+                        decisions.
+                      </div>
+                    </section>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-12">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Documentation index</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      A familiar table of contents for practical reference
+                      material.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="row g-3">
+                    <div class="col-sm-4">
+                      <div class="bg-light border rounded p-3">
+                        <span class="text-muted fs-11 d-block mb-2"
+                          >ON THIS PAGE</span
+                        >
+                        <nav
+                          id="docs-spy-nav"
+                          class="nav nav-pills flex-column gap-1"
+                          aria-label="Documentation navigation"
+                        >
+                          <a class="nav-link fs-13" href="#docs-spy-overview"
+                            >Overview</a
+                          ><a class="nav-link fs-13" href="#docs-spy-planning"
+                            >Planning</a
+                          ><a class="nav-link fs-13" href="#docs-spy-delivery"
+                            >Delivery</a
+                          ><a class="nav-link fs-13" href="#docs-spy-review"
+                            >Review</a
+                          >
+                        </nav>
+                      </div>
+                    </div>
+                    <div class="col-sm-8">
+                      <div
+                        data-scrollspy-demo
+                        data-bs-spy="scroll"
+                        data-bs-target="#docs-spy-nav"
+                        tabindex="0"
+                        aria-label="docs spy scrollable content"
+                        class="position-relative overflow-auto border rounded p-3"
+                        style="height: 320px"
+                      >
+                        <section
+                          id="docs-spy-overview"
+                          class=""
+                          style="min-height: 220px"
+                        >
+                          <span class="badge bg-light text-default mb-2"
+                            >01</span
+                          >
+                          <h3 class="fs-18 fw-semibold mb-3">
+                            Start with a clear overview
+                          </h3>
+                          <p class="text-muted fs-13 lh-base">
+                            Give the team a shared understanding of the project.
+                            Define the outcome, gather the useful context, and
+                            decide what success looks like.
+                          </p>
+                          <div class="bg-light rounded p-3 fs-13">
+                            A good overview makes the next decision easier.
+                          </div>
+                        </section>
+                        <section
+                          id="docs-spy-planning"
+                          class="border-top pt-4 mt-4"
+                          style="min-height: 220px"
+                        >
+                          <span class="badge bg-light text-default mb-2"
+                            >02</span
+                          >
+                          <h3 class="fs-18 fw-semibold mb-3">
+                            Plan the next milestone
+                          </h3>
+                          <p class="text-muted fs-13 lh-base">
+                            Break the work into useful steps. Choose a realistic
+                            milestone, assign clear owners, and keep
+                            dependencies visible to everyone.
+                          </p>
+                          <div class="bg-light rounded p-3 fs-13">
+                            Focus on the next outcome rather than a long list of
+                            activity.
+                          </div>
+                        </section>
+                        <section
+                          id="docs-spy-delivery"
+                          class="border-top pt-4 mt-4"
+                          style="min-height: 220px"
+                        >
+                          <span class="badge bg-light text-default mb-2"
+                            >03</span
+                          >
+                          <h3 class="fs-18 fw-semibold mb-3">
+                            Keep delivery moving
+                          </h3>
+                          <p class="text-muted fs-13 lh-base">
+                            Share progress as the work develops. Capture
+                            decisions, review feedback, and resolve questions
+                            before they interrupt the next stage.
+                          </p>
+                          <div class="bg-light rounded p-3 fs-13">
+                            Small, timely updates help the team stay aligned.
+                          </div>
+                        </section>
+                        <section
+                          id="docs-spy-review"
+                          class="border-top pt-4 mt-4"
+                          style="min-height: 220px"
+                        >
+                          <span class="badge bg-light text-default mb-2"
+                            >04</span
+                          >
+                          <h3 class="fs-18 fw-semibold mb-3">
+                            Review what you learned
+                          </h3>
+                          <p class="text-muted fs-13 lh-base">
+                            Look back at the outcome and the process. Keep what
+                            worked, record what could improve, and use the
+                            learning in your next project.
+                          </p>
+                          <div class="bg-light rounded p-3 fs-13">
+                            A thoughtful review turns experience into better
+                            decisions.
+                          </div>
+                        </section>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"--><!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"--><!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/js/app-interactions.js"></script>
+    <script src="../assets/libs/prismjs/prism.js"></script>
+    <script src="../assets/js/prism-custom.js"></script>
+    <script src="../assets/js/scrollspy.js"></script>
+  </body>
+</html>

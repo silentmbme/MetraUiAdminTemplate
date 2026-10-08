@@ -1,0 +1,1174 @@
+<!-- include document-head.html"-->
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">File manager</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">
+              <a href="index.html">Applications</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              File manager
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid">
+          <div class="drive-page mb-4">
+            <aside
+              class="drive-sidebar card custom-card"
+              aria-label="File navigation"
+            >
+              <button
+                class="btn btn-dark drive-upload"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#upload-files-modal"
+              >
+                <i class="ri-add-line"></i> Upload files
+              </button>
+              <nav aria-label="File views">
+                <button
+                  type="button"
+                  data-drive-filter="all"
+                  class="drive-nav-item active"
+                  aria-pressed="true"
+                >
+                  <i class="ri-folder-2-line fs-18"></i><span>All files</span
+                  ><span
+                    class="badge bg-secondary-transparent drive-nav-count ms-auto"
+                    id="drive-total"
+                    >7</span
+                  ></button
+                ><button
+                  type="button"
+                  data-drive-filter="shared"
+                  class="drive-nav-item"
+                  aria-pressed="false"
+                >
+                  <i class="ri-share-line"></i
+                  ><span>Shared with you</span></button
+                ><button
+                  type="button"
+                  data-drive-filter="recent"
+                  class="drive-nav-item"
+                  aria-pressed="false"
+                >
+                  <i class="ri-time-line"></i><span>Recent</span></button
+                ><button
+                  type="button"
+                  data-drive-filter="starred"
+                  class="drive-nav-item"
+                  aria-pressed="false"
+                >
+                  <i class="ri-star-line"></i><span>Starred files</span></button
+                ><button
+                  type="button"
+                  data-drive-filter="downloads"
+                  class="drive-nav-item"
+                  aria-pressed="false"
+                >
+                  <i class="ri-download-line"></i><span>Downloads</span></button
+                ><button
+                  type="button"
+                  data-drive-filter="trash"
+                  class="drive-nav-item"
+                  aria-pressed="false"
+                >
+                  <i class="ri-delete-bin-line"></i><span>Trash</span>
+                </button>
+              </nav>
+              <h2 class="drive-category-heading fs-13 fw-semibold text-muted">
+                Collections
+              </h2>
+              <nav aria-label="File categories">
+                <button
+                  type="button"
+                  class="drive-nav-item"
+                  data-drive-filter="work"
+                >
+                  <i class="ri-price-tag-3-line text-primary"></i>Work</button
+                ><button
+                  type="button"
+                  class="drive-nav-item"
+                  data-drive-filter="projects"
+                >
+                  <i class="ri-price-tag-3-line text-secondary"></i
+                  >Projects</button
+                ><button
+                  type="button"
+                  class="drive-nav-item"
+                  data-drive-filter="images"
+                >
+                  <i class="ri-price-tag-3-line text-info"></i>Media</button
+                ><button
+                  type="button"
+                  class="drive-nav-item"
+                  data-drive-filter="documents"
+                >
+                  <i class="ri-price-tag-3-line text-warning"></i>Documents
+                </button>
+              </nav>
+              <section
+                class="card custom-card shadow-none mt-3 mb-0"
+                aria-labelledby="drive-storage-heading"
+              >
+                <div class="card-body p-3">
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <h2
+                      class="fs-13 fw-semibold mb-0"
+                      id="drive-storage-heading"
+                    >
+                      Available Storage
+                    </h2>
+                  </div>
+                  <div class="d-flex align-items-baseline gap-1 mb-2">
+                    <strong class="fs-18 fw-semibold">32 GB</strong
+                    ><span class="text-muted fs-12">available</span>
+                  </div>
+                  <div
+                    class="progress progress-xs mb-2"
+                    role="progressbar"
+                    aria-label="Storage used"
+                    aria-valuenow="36"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div
+                      class="progress-bar bg-success"
+                      style="width: 36%"
+                    ></div>
+                  </div>
+                  <p class="text-muted fs-12 mb-0">18 GB of 50 GB used</p>
+                </div>
+              </section>
+              <button
+                type="button"
+                class="btn btn-light w-100 mt-3"
+                data-bs-toggle="modal"
+                data-bs-target="#new-folder-modal"
+              >
+                <i class="ri-folder-add-line me-1"></i>New folder
+              </button>
+            </aside>
+            <section
+              class="drive-content card custom-card"
+              aria-label="Files and folders"
+            >
+              <header class="drive-toolbar">
+                <label class="drive-search"
+                  ><i class="ri-search-line" aria-hidden="true"></i
+                  ><input
+                    class="form-control"
+                    type="search"
+                    id="drive-search"
+                    placeholder="Search your workspace..."
+                    aria-label="Search files and folders"
+                /></label>
+                <div class="drive-filters">
+                  <span>Show:</span>
+                  <select
+                    id="drive-type"
+                    data-trigger
+                    class="form-select form-select-sm"
+                    aria-label="File type"
+                  >
+                    <option value="all">All file types</option>
+                    <option value="documents">Documents</option>
+                    <option value="images">Images</option>
+                    <option value="spreadsheets">Spreadsheets</option>
+                    <option value="presentations">Presentations</option>
+                    <option value="videos">Videos</option>
+                    <option value="archives">Archives</option></select
+                  ><select
+                    id="drive-limit"
+                    data-trigger
+                    class="form-select form-select-sm"
+                    aria-label="Files per page"
+                  >
+                    <option>8</option>
+                    <option>16</option>
+                    <option>32</option>
+                  </select>
+                </div>
+              </header>
+
+              <div class="filemanager-container">
+                <div class="drive-folders" id="drive-folders">
+                  <p class="fw-semibold mb-3 text-default">File collections</p>
+                  <div class="row">
+                    <div class="col-xl-4">
+                      <div
+                        class="card custom-card shadow-none file-quick-card bg-light"
+                      >
+                        <div class="card-body text-center">
+                          <a
+                            href="javascript:void(0)"
+                            class="stretched-link"
+                          ></a>
+                          <div
+                            class="d-flex align-items-center gap-2 lh-1 justify-content-end file-icons"
+                          >
+                            <div class="file-important">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 256 256"
+                              >
+                                <rect
+                                  width="256"
+                                  height="256"
+                                  fill="none"
+                                ></rect>
+                                <path
+                                  d="M128,189.09l54.72,33.65a8.4,8.4,0,0,0,12.52-9.17l-14.88-62.79,48.7-42A8.46,8.46,0,0,0,224.27,94L160.36,88.8,135.74,29.2a8.36,8.36,0,0,0-15.48,0L95.64,88.8,31.73,94a8.46,8.46,0,0,0-4.79,14.83l48.7,42L60.76,213.57a8.4,8.4,0,0,0,12.52,9.17Z"
+                                  opacity="0.2"
+                                ></path>
+                                <path
+                                  d="M128,189.09l54.72,33.65a8.4,8.4,0,0,0,12.52-9.17l-14.88-62.79,48.7-42A8.46,8.46,0,0,0,224.27,94L160.36,88.8,135.74,29.2a8.36,8.36,0,0,0-15.48,0L95.64,88.8,31.73,94a8.46,8.46,0,0,0-4.79,14.83l48.7,42L60.76,213.57a8.4,8.4,0,0,0,12.52,9.17Z"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="16"
+                                ></path>
+                              </svg>
+                            </div>
+                            <div class="dropdown">
+                              <a
+                                href="javascript:void(0);"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                              >
+                                <i
+                                  class="ri-more-2-fill fw-semibold fs-16 text-muted"
+                                ></i>
+                              </a>
+                              <ul class="dropdown-menu">
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="javascript:void(0);"
+                                    >Delete</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="javascript:void(0);"
+                                    >Rename</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="javascript:void(0);"
+                                    >Hide Folder</a
+                                  >
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="mb-2 file-img">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 256 256"
+                            >
+                              <rect width="256" height="256" fill="none"></rect>
+                              <path
+                                d="M158.66,219.56A8,8,0,0,1,152,232H24a8,8,0,0,1-6.73-12.33l36-56a8,8,0,0,1,13.46,0l9.76,15.18,20.85-31.29a8,8,0,0,1,13.32,0ZM216,88V216a16,16,0,0,1-16,16h-8a8,8,0,0,1,0-16h8V96H152a8,8,0,0,1-8-8V40H56v88a8,8,0,0,1-16,0V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88Zm-56-8h28.69L160,51.31Z"
+                              ></path>
+                            </svg>
+                          </div>
+                          <div class="fw-semibold fs-15 mb-1">
+                            Creative assets
+                          </div>
+                          <span class="d-block text-muted fs-13">24 files</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-4">
+                      <div
+                        class="card custom-card shadow-none file-quick-card bg-light"
+                      >
+                        <div class="card-body text-center">
+                          <a
+                            href="javascript:void(0)"
+                            class="stretched-link"
+                          ></a>
+                          <div
+                            class="d-flex align-items-center gap-2 lh-1 justify-content-end file-icons"
+                          >
+                            <div class="file-important">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 256 256"
+                              >
+                                <rect
+                                  width="256"
+                                  height="256"
+                                  fill="none"
+                                ></rect>
+                                <path
+                                  d="M128,189.09l54.72,33.65a8.4,8.4,0,0,0,12.52-9.17l-14.88-62.79,48.7-42A8.46,8.46,0,0,0,224.27,94L160.36,88.8,135.74,29.2a8.36,8.36,0,0,0-15.48,0L95.64,88.8,31.73,94a8.46,8.46,0,0,0-4.79,14.83l48.7,42L60.76,213.57a8.4,8.4,0,0,0,12.52,9.17Z"
+                                  opacity="0.2"
+                                ></path>
+                                <path
+                                  d="M128,189.09l54.72,33.65a8.4,8.4,0,0,0,12.52-9.17l-14.88-62.79,48.7-42A8.46,8.46,0,0,0,224.27,94L160.36,88.8,135.74,29.2a8.36,8.36,0,0,0-15.48,0L95.64,88.8,31.73,94a8.46,8.46,0,0,0-4.79,14.83l48.7,42L60.76,213.57a8.4,8.4,0,0,0,12.52,9.17Z"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="16"
+                                ></path>
+                              </svg>
+                            </div>
+                            <div class="dropdown">
+                              <a
+                                href="javascript:void(0);"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                              >
+                                <i
+                                  class="ri-more-2-fill fw-semibold fs-16 text-muted"
+                                ></i>
+                              </a>
+                              <ul class="dropdown-menu">
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="javascript:void(0);"
+                                    >Delete</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="javascript:void(0);"
+                                    >Rename</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="javascript:void(0);"
+                                    >Hide Folder</a
+                                  >
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="mb-2 text-info svg-info file-img">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 256 256"
+                            >
+                              <rect width="256" height="256" fill="none"></rect>
+                              <path
+                                d="M44,120H212.07a4,4,0,0,0,4-4V88a8,8,0,0,0-2.34-5.66l-56-56A8,8,0,0,0,152.05,24H56A16,16,0,0,0,40,40v76A4,4,0,0,0,44,120Zm108-76,44,44h-44ZM52,144H36a8,8,0,0,0-8,8v56a8,8,0,0,0,8,8H51.33C71,216,87.55,200.52,88,180.87A36,36,0,0,0,52,144Zm-.49,56H44V160h8a20,20,0,0,1,20,20.77C71.59,191.59,62.35,200,51.52,200Zm170.67-4.28a8.26,8.26,0,0,1-.73,11.09,30,30,0,0,1-21.4,9.19c-17.65,0-32-16.15-32-36s14.36-36,32-36a30,30,0,0,1,21.4,9.19,8.26,8.26,0,0,1,.73,11.09,8,8,0,0,1-11.9.38A14.21,14.21,0,0,0,200.06,160c-8.82,0-16,9-16,20s7.18,20,16,20a14.25,14.25,0,0,0,10.23-4.66A8,8,0,0,1,222.19,195.72ZM128,144c-17.65,0-32,16.15-32,36s14.37,36,32,36,32-16.15,32-36S145.69,144,128,144Zm0,56c-8.83,0-16-9-16-20s7.18-20,16-20,16,9,16,20S136.86,200,128,200Z"
+                              ></path>
+                            </svg>
+                          </div>
+                          <div class="fw-semibold fs-15 mb-1">Documents</div>
+                          <span class="d-block text-muted fs-13">18 files</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-4">
+                      <div
+                        class="card custom-card shadow-none file-quick-card bg-light"
+                      >
+                        <div class="card-body text-center">
+                          <a
+                            href="javascript:void(0)"
+                            class="stretched-link"
+                          ></a>
+                          <div
+                            class="d-flex align-items-center gap-2 lh-1 justify-content-end file-icons"
+                          >
+                            <div class="file-important">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 256 256"
+                              >
+                                <rect
+                                  width="256"
+                                  height="256"
+                                  fill="none"
+                                ></rect>
+                                <path
+                                  d="M128,189.09l54.72,33.65a8.4,8.4,0,0,0,12.52-9.17l-14.88-62.79,48.7-42A8.46,8.46,0,0,0,224.27,94L160.36,88.8,135.74,29.2a8.36,8.36,0,0,0-15.48,0L95.64,88.8,31.73,94a8.46,8.46,0,0,0-4.79,14.83l48.7,42L60.76,213.57a8.4,8.4,0,0,0,12.52,9.17Z"
+                                  opacity="0.2"
+                                ></path>
+                                <path
+                                  d="M128,189.09l54.72,33.65a8.4,8.4,0,0,0,12.52-9.17l-14.88-62.79,48.7-42A8.46,8.46,0,0,0,224.27,94L160.36,88.8,135.74,29.2a8.36,8.36,0,0,0-15.48,0L95.64,88.8,31.73,94a8.46,8.46,0,0,0-4.79,14.83l48.7,42L60.76,213.57a8.4,8.4,0,0,0,12.52,9.17Z"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="16"
+                                ></path>
+                              </svg>
+                            </div>
+                            <div class="dropdown">
+                              <a
+                                href="javascript:void(0);"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                              >
+                                <i
+                                  class="ri-more-2-fill fw-semibold fs-16 text-muted"
+                                ></i>
+                              </a>
+                              <ul class="dropdown-menu">
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="javascript:void(0);"
+                                    >Delete</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="javascript:void(0);"
+                                    >Rename</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="javascript:void(0);"
+                                    >Hide Folder</a
+                                  >
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="mb-2 text-warning svg-warning file-img">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 256 256"
+                            >
+                              <rect width="256" height="256" fill="none"></rect>
+                              <path
+                                d="M152,180a40.55,40.55,0,0,1-20,34.91A8,8,0,0,1,124,201.09a24.49,24.49,0,0,0,0-42.18A8,8,0,0,1,132,145.09,40.55,40.55,0,0,1,152,180ZM99.06,128.61a8,8,0,0,0-8.72,1.73L68.69,152H48a8,8,0,0,0-8,8v40a8,8,0,0,0,8,8H68.69l21.65,21.66A8,8,0,0,0,104,224V136A8,8,0,0,0,99.06,128.61ZM216,88V216a16,16,0,0,1-16,16H168a8,8,0,0,1,0-16h32V96H152a8,8,0,0,1-8-8V40H56v80a8,8,0,0,1-16,0V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88Zm-56-8h28.69L160,51.31Z"
+                              ></path>
+                            </svg>
+                          </div>
+                          <div class="fw-semibold fs-15 mb-1">
+                            Audio recordings
+                          </div>
+                          <span class="d-block text-muted fs-13">12 files</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="fw-semibold mb-3 text-default">Workspace folders</p>
+                  <div class="folder-grid">
+                    <button
+                      type="button"
+                      class="drive-folder btn text-start"
+                      data-drive-folder="Team resources"
+                    >
+                      <span
+                        class="drive-folder-icon avatar avatar-md bg-light text-muted"
+                        ><i class="ri-folder-2-line fs-18"></i></span
+                      ><span
+                        ><strong class="text-default">Team resources</strong
+                        ><small>2.3 GB</small></span
+                      ><i
+                        class="ri-arrow-right-s-line drive-folder-more"
+                        aria-hidden="true"
+                      ></i>
+                    </button>
+                    <button
+                      type="button"
+                      class="drive-folder btn text-start"
+                      data-drive-folder="Design library"
+                    >
+                      <span
+                        class="drive-folder-icon avatar avatar-md bg-light text-muted"
+                        ><i class="ri-folder-2-line fs-18"></i></span
+                      ><span
+                        ><strong class="text-default">Design library</strong
+                        ><small>105.3 MB</small></span
+                      ><i
+                        class="ri-arrow-right-s-line drive-folder-more"
+                        aria-hidden="true"
+                      ></i>
+                    </button>
+                    <button
+                      type="button"
+                      class="drive-folder btn text-start"
+                      data-drive-folder="Marketing assets"
+                    >
+                      <span
+                        class="drive-folder-icon avatar avatar-md bg-light text-muted"
+                        ><i class="ri-folder-2-line fs-18"></i></span
+                      ><span
+                        ><strong class="text-default">Marketing assets</strong
+                        ><small>512 MB</small></span
+                      ><i
+                        class="ri-arrow-right-s-line drive-folder-more"
+                        aria-hidden="true"
+                      ></i>
+                    </button>
+                    <button
+                      type="button"
+                      class="drive-folder btn text-start"
+                      data-drive-folder="Client projects"
+                    >
+                      <span
+                        class="drive-folder-icon avatar avatar-md bg-light text-muted"
+                        ><i class="ri-folder-2-line fs-18"></i></span
+                      ><span
+                        ><strong class="text-default">Client projects</strong
+                        ><small>880 MB</small></span
+                      ><i
+                        class="ri-arrow-right-s-line drive-folder-more"
+                        aria-hidden="true"
+                      ></i>
+                    </button>
+                    <button
+                      type="button"
+                      class="drive-folder btn text-start"
+                      data-drive-folder="Finance reports"
+                    >
+                      <span
+                        class="drive-folder-icon avatar avatar-md bg-light text-muted"
+                        ><i class="ri-folder-2-line fs-18"></i></span
+                      ><span
+                        ><strong class="text-default">Finance reports</strong
+                        ><small>1.1 GB</small></span
+                      ><i
+                        class="ri-arrow-right-s-line drive-folder-more"
+                        aria-hidden="true"
+                      ></i>
+                    </button>
+                    <button
+                      type="button"
+                      class="drive-folder btn text-start"
+                      data-drive-folder="Meeting notes"
+                    >
+                      <span
+                        class="drive-folder-icon avatar avatar-md bg-light text-muted"
+                        ><i class="ri-folder-2-line fs-18"></i></span
+                      ><span
+                        ><strong class="text-default">Meeting notes</strong
+                        ><small>780 MB</small></span
+                      ><i
+                        class="ri-arrow-right-s-line drive-folder-more"
+                        aria-hidden="true"
+                      ></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="table-responsive">
+                  <table class="table table-hover drive-table mb-0">
+                    <thead>
+                      <tr>
+                        <th>
+                          <input
+                            id="drive-select-all"
+                            type="checkbox"
+                            class="form-check-input"
+                            aria-label="Select visible files"
+                          />
+                        </th>
+                        <th>
+                          <button
+                            type="button"
+                            id="drive-sort"
+                            aria-label="Sort files by name"
+                          >
+                            NAME <i class="ri-arrow-up-down-line"></i>
+                          </button>
+                        </th>
+                        <th>TYPE</th>
+                        <th>MODIFIED</th>
+                        <th>OWNER</th>
+                        <th>SHARED WITH</th>
+                        <th>ACTIONS</th>
+                      </tr>
+                    </thead>
+                    <tbody id="drive-rows">
+                      <tr
+                        data-name="Workspace handbook.pdf"
+                        data-type="documents"
+                        data-access="Private"
+                        data-position="0"
+                      >
+                        <td>
+                          <input
+                            type="checkbox"
+                            class="form-check-input"
+                            aria-label="Select Workspace handbook.pdf"
+                          />
+                        </td>
+                        <td>
+                          <button
+                            type="button"
+                            class="drive-file-name"
+                            data-drive-open
+                          >
+                            <span
+                              class="drive-file-icon avatar avatar-md bg-light text-muted"
+                              ><i
+                                class="ri-file-pdf-2-line fs-18 text-secondary"
+                              ></i></span
+                            ><span
+                              ><strong>Workspace handbook.pdf</strong
+                              ><small>2.4 MB</small></span
+                            >
+                          </button>
+                        </td>
+                        <td>documents</td>
+                        <td>Today, 10:24 AM</td>
+                        <td>
+                          <span class="drive-owner"
+                            ><img
+                              class="avatar avatar-xs avatar-rounded"
+                              src="../assets/images/users/9.jpg"
+                              alt=""
+                            /><span>You</span></span
+                          >
+                        </td>
+                        <td><span class="text-muted">Private</span></td>
+                        <td>
+                          <div class="drive-row-actions">
+                            <button
+                              type="button"
+                              class="btn btn-light btn-icon btn-sm drive-star"
+                              aria-label="Star file"
+                              aria-pressed="false"
+                            >
+                              <i class="ri-star-line"></i></button
+                            ><button
+                              type="button"
+                              class="btn btn-light btn-icon btn-sm"
+                              data-drive-open
+                              aria-label="File details"
+                            >
+                              <i class="ri-more-2-fill"></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr
+                        data-name="October budget.xlsx"
+                        data-type="spreadsheets"
+                        data-access="Shared"
+                        data-position="1"
+                      >
+                        <td>
+                          <input
+                            type="checkbox"
+                            class="form-check-input"
+                            aria-label="Select October budget.xlsx"
+                          />
+                        </td>
+                        <td>
+                          <button
+                            type="button"
+                            class="drive-file-name"
+                            data-drive-open
+                          >
+                            <span
+                              class="drive-file-icon avatar avatar-md bg-light text-muted"
+                              ><i
+                                class="ri-file-excel-2-line fs-18 text-warning"
+                              ></i></span
+                            ><span
+                              ><strong>October budget.xlsx</strong
+                              ><small>860 KB</small></span
+                            >
+                          </button>
+                        </td>
+                        <td>spreadsheets</td>
+                        <td>Today, 9:42 AM</td>
+                        <td>
+                          <span class="drive-owner"
+                            ><img
+                              class="avatar avatar-xs avatar-rounded"
+                              src="../assets/images/users/2.jpg"
+                              alt=""
+                            /><span>Marcus Reed</span></span
+                          >
+                        </td>
+                        <td>
+                          <span class="avatar-list-stacked"
+                            ><span class="avatar avatar-xs avatar-rounded"
+                              ><img
+                                class="avatar avatar-xs avatar-rounded"
+                                src="../assets/images/users/10.jpg"
+                                alt="Marcus Reed" /></span
+                            ><span class="avatar avatar-xs avatar-rounded"
+                              ><img
+                                class="avatar avatar-xs avatar-rounded"
+                                src="../assets/images/users/13.jpg"
+                                alt="Lena Ortiz" /></span
+                          ></span>
+                        </td>
+                        <td>
+                          <div class="drive-row-actions">
+                            <button
+                              type="button"
+                              class="btn btn-light btn-icon btn-sm drive-star"
+                              aria-label="Star file"
+                              aria-pressed="false"
+                            >
+                              <i class="ri-star-line"></i></button
+                            ><button
+                              type="button"
+                              class="btn btn-light btn-icon btn-sm"
+                              data-drive-open
+                              aria-label="File details"
+                            >
+                              <i class="ri-more-2-fill"></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr
+                        data-name="Autumn campaign banner.png"
+                        data-type="images"
+                        data-access="Shared"
+                        data-position="2"
+                      >
+                        <td>
+                          <input
+                            type="checkbox"
+                            class="form-check-input"
+                            aria-label="Select Autumn campaign banner.png"
+                          />
+                        </td>
+                        <td>
+                          <button
+                            type="button"
+                            class="drive-file-name"
+                            data-drive-open
+                          >
+                            <span
+                              class="drive-file-icon avatar avatar-md bg-light text-muted"
+                              ><i
+                                class="ri-image-line fs-18 text-success"
+                              ></i></span
+                            ><span
+                              ><strong>Autumn campaign banner.png</strong
+                              ><small>5.1 MB</small></span
+                            >
+                          </button>
+                        </td>
+                        <td>images</td>
+                        <td>Yesterday, 4:18 PM</td>
+                        <td>
+                          <span class="drive-owner"
+                            ><img
+                              class="avatar avatar-xs avatar-rounded"
+                              src="../assets/images/users/9.jpg"
+                              alt=""
+                            /><span>Nina Park</span></span
+                          >
+                        </td>
+                        <td>
+                          <span class="avatar-list-stacked"
+                            ><span class="avatar avatar-xs avatar-rounded"
+                              ><img
+                                class="avatar avatar-xs avatar-rounded"
+                                src="../assets/images/users/10.jpg"
+                                alt="Marcus Reed" /></span
+                            ><span class="avatar avatar-xs avatar-rounded"
+                              ><img
+                                class="avatar avatar-xs avatar-rounded"
+                                src="../assets/images/users/13.jpg"
+                                alt="Lena Ortiz" /></span
+                          ></span>
+                        </td>
+                        <td>
+                          <div class="drive-row-actions">
+                            <button
+                              type="button"
+                              class="btn btn-light btn-icon btn-sm drive-star"
+                              aria-label="Star file"
+                              aria-pressed="false"
+                            >
+                              <i class="ri-star-line"></i></button
+                            ><button
+                              type="button"
+                              class="btn btn-light btn-icon btn-sm"
+                              data-drive-open
+                              aria-label="File details"
+                            >
+                              <i class="ri-more-2-fill"></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr
+                        data-name="New starter checklist.docx"
+                        data-type="documents"
+                        data-access="Private"
+                        data-position="3"
+                      >
+                        <td>
+                          <input
+                            type="checkbox"
+                            class="form-check-input"
+                            aria-label="Select New starter checklist.docx"
+                          />
+                        </td>
+                        <td>
+                          <button
+                            type="button"
+                            class="drive-file-name"
+                            data-drive-open
+                          >
+                            <span
+                              class="drive-file-icon avatar avatar-md bg-light text-muted"
+                              ><i
+                                class="ri-file-word-2-line fs-18 text-info"
+                              ></i></span
+                            ><span
+                              ><strong>New starter checklist.docx</strong
+                              ><small>1.2 MB</small></span
+                            >
+                          </button>
+                        </td>
+                        <td>documents</td>
+                        <td>Yesterday, 1:06 PM</td>
+                        <td>
+                          <span class="drive-owner"
+                            ><img
+                              class="avatar avatar-xs avatar-rounded"
+                              src="../assets/images/users/2.jpg"
+                              alt=""
+                            /><span>You</span></span
+                          >
+                        </td>
+                        <td><span class="text-muted">Private</span></td>
+                        <td>
+                          <div class="drive-row-actions">
+                            <button
+                              type="button"
+                              class="btn btn-light btn-icon btn-sm drive-star"
+                              aria-label="Star file"
+                              aria-pressed="false"
+                            >
+                              <i class="ri-star-line"></i></button
+                            ><button
+                              type="button"
+                              class="btn btn-light btn-icon btn-sm"
+                              data-drive-open
+                              aria-label="File details"
+                            >
+                              <i class="ri-more-2-fill"></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr
+                        data-name="Quarterly team briefing.pptx"
+                        data-type="presentations"
+                        data-access="Shared"
+                        data-position="4"
+                      >
+                        <td>
+                          <input
+                            type="checkbox"
+                            class="form-check-input"
+                            aria-label="Select Quarterly team briefing.pptx"
+                          />
+                        </td>
+                        <td>
+                          <button
+                            type="button"
+                            class="drive-file-name"
+                            data-drive-open
+                          >
+                            <span
+                              class="drive-file-icon avatar avatar-md bg-light text-muted"
+                              ><i
+                                class="ri-slideshow-line fs-18 text-danger"
+                              ></i></span
+                            ><span
+                              ><strong>Quarterly team briefing.pptx</strong
+                              ><small>7.8 MB</small></span
+                            >
+                          </button>
+                        </td>
+                        <td>presentations</td>
+                        <td>Sep 24, 2026</td>
+                        <td>
+                          <span class="drive-owner"
+                            ><img
+                              class="avatar avatar-xs avatar-rounded"
+                              src="../assets/images/users/9.jpg"
+                              alt=""
+                            /><span>Akira Susan</span></span
+                          >
+                        </td>
+                        <td>
+                          <span class="avatar-list-stacked"
+                            ><span class="avatar avatar-xs avatar-rounded"
+                              ><img
+                                class="avatar avatar-xs avatar-rounded"
+                                src="../assets/images/users/10.jpg"
+                                alt="Marcus Reed" /></span
+                            ><span class="avatar avatar-xs avatar-rounded"
+                              ><img
+                                class="avatar avatar-xs avatar-rounded"
+                                src="../assets/images/users/13.jpg"
+                                alt="Lena Ortiz" /></span
+                          ></span>
+                        </td>
+                        <td>
+                          <div class="drive-row-actions">
+                            <button
+                              type="button"
+                              class="btn btn-light btn-icon btn-sm drive-star"
+                              aria-label="Star file"
+                              aria-pressed="false"
+                            >
+                              <i class="ri-star-line"></i></button
+                            ><button
+                              type="button"
+                              class="btn btn-light btn-icon btn-sm"
+                              data-drive-open
+                              aria-label="File details"
+                            >
+                              <i class="ri-more-2-fill"></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="drive-empty" id="drive-empty" hidden>
+                  <i class="ri-folder-search-line"></i
+                  ><strong>No matching files</strong
+                  ><span
+                    >Search by file name or choose another collection.</span
+                  >
+                </div>
+              </div>
+
+              <footer class="drive-footer">
+                <span id="drive-status" role="status" aria-live="polite"></span>
+                <div>
+                  <button
+                    class="btn btn-light btn-sm"
+                    type="button"
+                    id="drive-prev"
+                  >
+                    Previous</button
+                  ><button
+                    class="btn btn-light btn-sm ms-1"
+                    type="button"
+                    id="drive-next"
+                  >
+                    Next
+                  </button>
+                </div>
+              </footer>
+            </section>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <div
+      class="modal fade"
+      id="upload-files-modal"
+      tabindex="-1"
+      aria-labelledby="upload-files-title"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-15 fw-semibold" id="upload-files-title">
+              Add files to your workspace
+            </h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="text-center py-3">
+              <span class="avatar avatar-xl bg-light text-default rounded mb-3"
+                ><i class="ri-upload-cloud-2-line fs-24" aria-hidden="true"></i
+              ></span>
+              <p class="fs-13 text-muted mb-3">
+                Choose the files you want to keep with your team resources.
+              </p>
+            </div>
+            <label for="file-upload-input" class="form-label"
+              >Choose files</label
+            ><input
+              type="file"
+              class="form-control"
+              id="file-upload-input"
+              multiple
+              aria-describedby="file-upload-help"
+            />
+            <p class="text-muted fs-12 mt-2 mb-0" id="file-upload-help">
+              Files are added to this demo for the current session.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-light" data-bs-dismiss="modal">
+              Cancel</button
+            ><button
+              type="button"
+              class="btn btn-dark"
+              id="file-upload-confirm"
+            >
+              Add to workspace
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="new-folder-modal"
+      tabindex="-1"
+      aria-labelledby="new-folder-title"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-15 fw-semibold" id="new-folder-title">
+              Create a workspace folder
+            </h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <label class="form-label" for="new-folder-name">Folder name</label
+            ><input
+              class="form-control"
+              id="new-folder-name"
+              placeholder="e.g. October planning"
+            />
+            <p
+              class="text-muted fs-12 mt-2 mb-0"
+              id="new-folder-feedback"
+              role="status"
+              aria-live="polite"
+            >
+              Folders are created in this local demo only.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-light" data-bs-dismiss="modal">
+              Cancel</button
+            ><button type="button" class="btn btn-dark" id="new-folder-confirm">
+              Create folder
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="offcanvas offcanvas-end file-hub-details"
+      tabindex="-1"
+      id="file-details-panel"
+      aria-labelledby="file-details-title"
+    >
+      <div class="offcanvas-header border-bottom">
+        <div>
+          <h2 class="offcanvas-title fs-15 fw-semibold" id="file-details-title">
+            File details
+          </h2>
+        </div>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <div
+          class="file-hub-preview-icon bg-light text-muted"
+          id="file-details-icon"
+        >
+          <i class="ri-file-line"></i>
+        </div>
+        <h3
+          class="fs-14 fw-semibold text-center text-break"
+          id="file-details-name"
+        >
+          Choose a workspace file
+        </h3>
+        <p class="text-muted fs-12 text-center" id="file-details-meta"></p>
+        <hr />
+        <dl class="file-hub-details-list">
+          <div>
+            <dt>Owner</dt>
+            <dd id="file-details-owner">—</dd>
+          </div>
+          <div>
+            <dt>Last updated</dt>
+            <dd id="file-details-updated">—</dd>
+          </div>
+          <div>
+            <dt>File size</dt>
+            <dd id="file-details-size">—</dd>
+          </div>
+          <div>
+            <dt>Access</dt>
+            <dd id="file-details-access">—</dd>
+          </div>
+        </dl>
+        <div class="file-hub-detail-actions">
+          <button class="btn btn-primary w-100" type="button" id="drive-share">
+            <i class="ri-share-line me-1" aria-hidden="true"></i
+            ><span>Share file</span>
+          </button>
+          <p
+            id="drive-share-feedback"
+            class="text-muted fs-12 mt-2 mb-0"
+            role="status"
+            aria-live="polite"
+          >
+            Access changes apply to this demo only.
+          </p>
+          <button
+            class="btn btn-light w-100 mt-2"
+            type="button"
+            data-bs-dismiss="offcanvas"
+          >
+            Done
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- include common-scripts.html"-->
+    <script src="../assets/js/file-manager.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+    <!-- include appearance-customizer-scripts.html"-->
+  </body>
+</html>

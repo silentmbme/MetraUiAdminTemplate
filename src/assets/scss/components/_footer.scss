@@ -1,0 +1,77 @@
+﻿@use "../variables";
+
+.app-footer {
+  padding: 0.85rem 0rem;
+  border-block-start: 1px solid variables.$default-border;
+  background: variables.$custom-white;
+  color: variables.$text-muted;
+  font-size: 0.75rem;
+
+  .container-fluid {
+    padding-inline: 0;
+  }
+}
+
+.app-footer-inner,
+.app-footer-copyright,
+.app-footer-meta,
+.app-footer-links {
+  display: flex;
+  align-items: center;
+}
+
+.app-footer-inner {
+  justify-content: space-between;
+  gap: 1rem 1.5rem;
+  min-height: 2rem;
+}
+
+.app-footer-copyright {
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.app-footer-meta {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 1.25rem;
+}
+
+.app-footer-links {
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  a {
+    color: variables.$text-muted;
+    text-decoration: none;
+    transition: color 0.15s ease;
+    font-size: 14px;
+
+    &:hover,
+    &:focus-visible {
+      color: variables.$default-text-color;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .app-footer {
+    padding: 0.85rem 1rem;
+  }
+
+  .app-footer-inner,
+  .app-footer-meta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .app-footer-meta {
+    gap: 0.75rem;
+  }
+
+  .app-footer-links {
+    gap: 0.9rem;
+  }
+}

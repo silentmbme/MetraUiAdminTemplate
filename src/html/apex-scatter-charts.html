@@ -1,0 +1,173 @@
+<!-- include document-head.html"-->
+    <link rel="stylesheet" href="../assets/css/apex-scatter-charts.css" />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+
+      <div class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Scatter Charts</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">Charts</li>
+            <li class="breadcrumb-item">Apex Charts</li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Scatter Charts
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid scatter-workspace">
+          <div class="row">
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Effort & output</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Compare logged hours with completed tasks across teams.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="scatter-basic"
+                    class="scatter-demo"
+                    role="group"
+                    aria-label="Effort & output chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Response times over dates</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Each point represents a sample response-time measurement.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="scatter-datetime"
+                    class="scatter-demo"
+                    role="group"
+                    aria-label="Response times over dates chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Image markers</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Existing project images distinguish two sample data
+                      groups.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="scatter-image"
+                    class="scatter-demo"
+                    role="group"
+                    aria-label="Image markers chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Priority quadrants</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Reference lines compare project effort with impact.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="scatter-priority"
+                    class="scatter-demo"
+                    role="group"
+                    aria-label="Priority quadrants chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Delivery trend</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      A reference trend line adds context to individual
+                      observations.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="scatter-trend"
+                    class="scatter-demo"
+                    role="group"
+                    aria-label="Delivery trend chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Quality observations</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Distinct points highlight unusually high defect counts.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="scatter-outliers"
+                    class="scatter-demo"
+                    role="group"
+                    aria-label="Quality observations chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <!-- include common-scripts.html"-->
+
+    <!-- include appearance-customizer-scripts.html"-->
+
+    <!-- Apex Charts JS -->
+    <script src="../assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- Internal Apex Scatter Charts JS -->
+    <script src="../assets/js/apexcharts-scatter.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1664 @@
+<!-- include document-head.html"-->
+    <link
+      rel="stylesheet"
+      href="../assets/libs/glightbox/css/glightbox.min.css"
+    />
+  </head>
+
+  <body class="profile-page">
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Profile</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Pages</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Profile</li>
+          </ol>
+        </div>
+        <div class="container-fluid profile-workspace">
+          <section class="card custom-card profile-hero-card">
+            <div class="card-body">
+              <div class="profile-identity-row">
+                <div class="profile-identity">
+                  <span class="profile-avatar"
+                    ><img
+                      src="../assets/images/users/12.jpg"
+                      alt="Liam Carter" /><span aria-label="Online"></span
+                  ></span>
+                  <div class="profile-identity-copy">
+                    <div class="d-flex align-items-center gap-2 flex-wrap">
+                      <h2>Liam Carter</h2>
+                      <span
+                        class="badge bg-success-transparent text-success rounded-pill"
+                        >Available</span
+                      >
+                    </div>
+                    <p>
+                      Senior Product Manager
+                      <span>at NexoraUI Technologies</span>
+                    </p>
+                    <div class="profile-quick-contact">
+                      <a href="mailto:liam.carter@nexora.io"
+                        ><i class="ri-mail-line" aria-hidden="true"></i
+                        >liam.carter@nexora.io</a
+                      ><span class="text-muted fs-13"
+                        ><i class="ri-map-pin-line me-1" aria-hidden="true"></i
+                        >New York, NY</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="profile-hero-actions">
+                  <a
+                    href="mailto:liam.carter@nexora.io"
+                    class="btn btn-primary btn-wave"
+                    ><i class="ri-mail-send-line me-1" aria-hidden="true"></i
+                    >Message</a
+                  ><button
+                    class="btn btn-light btn-wave"
+                    type="button"
+                    id="profile-follow"
+                    aria-pressed="false"
+                  >
+                    <i class="ri-user-add-line me-1" aria-hidden="true"></i
+                    ><span>Follow</span>
+                  </button>
+                  <div class="dropdown">
+                    <button
+                      class="btn btn-icon btn-light"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      aria-label="More profile actions"
+                    >
+                      <i class="ri-more-2-fill" aria-hidden="true"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                      <li>
+                        <a class="dropdown-item" href="profile-settings.html"
+                          ><i
+                            class="ri-settings-3-line me-2"
+                            aria-hidden="true"
+                          ></i
+                          >Profile settings</a
+                        >
+                      </li>
+                      <li>
+                        <button
+                          class="dropdown-item"
+                          type="button"
+                          id="profile-copy-link"
+                        >
+                          <i class="ri-link me-2" aria-hidden="true"></i>Copy
+                          profile link
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="profile-stat-row">
+                <div><strong>24</strong><span>Projects delivered</span></div>
+                <div>
+                  <strong id="profile-follower-count">1,284</strong
+                  ><span>Followers</span>
+                </div>
+                <div><strong>18</strong><span>Team members</span></div>
+                <div><strong>8 yrs</strong><span>Product experience</span></div>
+              </div>
+              <ul
+                class="nav nav-tabs profile-tabs"
+                id="profile-tabs"
+                role="tablist"
+              >
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link active"
+                    id="profile-about-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#profile-about"
+                    type="button"
+                    role="tab"
+                    aria-controls="profile-about"
+                    aria-selected="true"
+                  >
+                    <i class="ri-user-line me-1" aria-hidden="true"></i>About
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="profile-projects-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#profile-projects"
+                    type="button"
+                    role="tab"
+                    aria-controls="profile-projects"
+                    aria-selected="false"
+                  >
+                    <i class="ri-folder-line me-1" aria-hidden="true"></i
+                    >Projects
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="profile-activity-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#profile-activity"
+                    type="button"
+                    role="tab"
+                    aria-controls="profile-activity"
+                    aria-selected="false"
+                  >
+                    <i class="ri-pulse-line me-1" aria-hidden="true"></i
+                    >Activity
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="profile-gallery-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#profile-gallery"
+                    type="button"
+                    role="tab"
+                    aria-controls="profile-gallery"
+                    aria-selected="false"
+                  >
+                    <i class="ri-image-line me-1" aria-hidden="true"></i>Gallery
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="profile-connections-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#profile-connections"
+                    type="button"
+                    role="tab"
+                    aria-controls="profile-connections"
+                    aria-selected="false"
+                  >
+                    <i class="ri-group-line me-1" aria-hidden="true"></i
+                    >Connections
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <div class="tab-content profile-tab-content" id="profile-tab-content">
+            <section
+              class="tab-pane fade show active"
+              id="profile-about"
+              role="tabpanel"
+              aria-labelledby="profile-about-tab"
+              tabindex="0"
+            >
+              <div class="row g-3">
+                <div class="col-xl-4">
+                  <article class="card custom-card profile-info-card">
+                    <div class="card-header">
+                      <h3 class="card-title mb-0">Contact information</h3>
+                    </div>
+                    <div class="card-body">
+                      <div class="profile-info-list">
+                        <div>
+                          <span class="profile-info-icon"
+                            ><i
+                              class="ri-mail-line"
+                              aria-hidden="true"
+                            ></i></span
+                          ><span
+                            ><small>Email address</small
+                            ><a href="mailto:liam.carter@nexora.io"
+                              >liam.carter@nexora.io</a
+                            ></span
+                          >
+                        </div>
+                        <div>
+                          <span class="profile-info-icon"
+                            ><i
+                              class="ri-phone-line"
+                              aria-hidden="true"
+                            ></i></span
+                          ><span
+                            ><small>Phone number</small
+                            ><a href="tel:+12125550186"
+                              >+1 (212) 555-0186</a
+                            ></span
+                          >
+                        </div>
+                        <div>
+                          <span class="profile-info-icon"
+                            ><i
+                              class="ri-building-line"
+                              aria-hidden="true"
+                            ></i></span
+                          ><span
+                            ><small>Department</small
+                            ><strong>Product &amp; Design</strong></span
+                          >
+                        </div>
+                        <div>
+                          <span class="profile-info-icon"
+                            ><i
+                              class="ri-calendar-event-line"
+                              aria-hidden="true"
+                            ></i></span
+                          ><span
+                            ><small>Joined Nexora</small
+                            ><strong>March 2018</strong></span
+                          >
+                        </div>
+                        <div>
+                          <span class="profile-info-icon"
+                            ><i
+                              class="ri-time-line"
+                              aria-hidden="true"
+                            ></i></span
+                          ><span
+                            ><small>Local time</small
+                            ><strong>Eastern Time (UTC -4)</strong></span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                  <article
+                    class="card custom-card profile-experience-card mt-3"
+                  >
+                    <div
+                      class="card-header justify-content-between flex-wrap gap-2"
+                    >
+                      <h3 class="card-title mb-0">Experience</h3>
+                      <span class="badge bg-light text-muted">8 years</span>
+                    </div>
+                    <div class="card-body">
+                      <ol class="profile-career-list list-unstyled mb-0">
+                        <li>
+                          <span
+                            class="avatar avatar-sm bg-secondary-transparent text-secondary profile-career-icon"
+                            ><i
+                              class="ri-building-line fs-16"
+                              aria-hidden="true"
+                            ></i
+                          ></span>
+                          <div class="flex-grow-1">
+                            <div
+                              class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-1"
+                            >
+                              <span class="text-muted fs-12"
+                                >2022 - Present</span
+                              ><span
+                                class="badge bg-success-transparent text-success"
+                                >Current</span
+                              >
+                            </div>
+                            <h4 class="fs-14 fw-semibold mb-1">
+                              Senior Product Manager
+                            </h4>
+                            <p class="fs-13 mb-2">
+                              NexoraUI Technologies
+                              <span class="text-muted">/ Full time</span>
+                            </p>
+                            <p class="text-muted fs-13 mb-2">
+                              Leading product strategy, discovery, and delivery
+                              across an 18-person team.
+                            </p>
+                            <div class="d-flex flex-wrap gap-1">
+                              <span class="badge bg-light text-muted fw-normal"
+                                >Strategy</span
+                              ><span class="badge bg-light text-muted fw-normal"
+                                >Leadership</span
+                              >
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <span
+                            class="avatar avatar-sm bg-secondary-transparent text-secondary profile-career-icon"
+                            ><i
+                              class="ri-building-line fs-16"
+                              aria-hidden="true"
+                            ></i
+                          ></span>
+                          <div class="flex-grow-1">
+                            <div
+                              class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-1"
+                            >
+                              <span class="text-muted fs-12">2018 - 2022</span>
+                            </div>
+                            <h4 class="fs-14 fw-semibold mb-1">
+                              Product Manager
+                            </h4>
+                            <p class="fs-13 mb-2">
+                              NexoraUI Technologies
+                              <span class="text-muted">/ Full time</span>
+                            </p>
+                            <p class="text-muted fs-13 mb-2">
+                              Built customer-led roadmaps and partnered with
+                              design and engineering on product launches.
+                            </p>
+                            <div class="d-flex flex-wrap gap-1">
+                              <span class="badge bg-light text-muted fw-normal"
+                                >Discovery</span
+                              ><span class="badge bg-light text-muted fw-normal"
+                                >Roadmapping</span
+                              >
+                            </div>
+                          </div>
+                        </li>
+                      </ol>
+                    </div>
+                  </article>
+                  <article class="card custom-card mt-3">
+                    <div class="card-header">
+                      <h3 class="card-title mb-0">Portfolio</h3>
+                    </div>
+                    <div class="card-body">
+                      <div class="d-flex gap-2">
+                        <a
+                          href="#!"
+                          class="btn btn-icon rounded-circle btn-facebook"
+                          title="Facebook"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook"
+                          >
+                            <path
+                              stroke="none"
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            ></path>
+                            <path
+                              d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"
+                            ></path>
+                          </svg>
+                        </a>
+                        <a
+                          href="#!"
+                          class="btn btn-icon rounded-circle btn-twitter"
+                          title="Twitter-x"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-brand-x"
+                          >
+                            <path
+                              stroke="none"
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            ></path>
+                            <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
+                            <path
+                              d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"
+                            ></path>
+                          </svg>
+                        </a>
+                        <a
+                          href="#!"
+                          class="btn btn-icon rounded-circle btn-instagram"
+                          title="Instagram"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"
+                          >
+                            <path
+                              stroke="none"
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            ></path>
+                            <path
+                              d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"
+                            ></path>
+                            <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
+                            <path d="M16.5 7.5v.01"></path>
+                          </svg>
+                        </a>
+                        <a
+                          href="#!"
+                          class="btn btn-icon rounded-circle btn-success"
+                          title="Dribbble"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-brand-dribbble"
+                          >
+                            <path
+                              stroke="none"
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            ></path>
+                            <path
+                              d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
+                            ></path>
+                            <path d="M9 3.6c5 6 7 10.5 7.5 16.2"></path>
+                            <path d="M6.4 19c3.5 -3.5 6 -6.5 14.5 -6.4"></path>
+                            <path
+                              d="M3.1 10.75c5 0 9.814 -.38 15.314 -5"
+                            ></path>
+                          </svg>
+                        </a>
+                        <a
+                          href="#!"
+                          class="btn btn-icon rounded-circle btn-youtube"
+                          title="YouTube"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"
+                          >
+                            <path
+                              stroke="none"
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            ></path>
+                            <path
+                              d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z"
+                            ></path>
+                            <path d="M10 9l5 3l-5 3z"></path>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-xl-8">
+                  <article class="card custom-card profile-about-card">
+                    <div class="card-header">
+                      <h3 class="card-title mb-0">About Liam</h3>
+                    </div>
+                    <div class="card-body">
+                      <p class="profile-bio">
+                        I lead product teams from early discovery through
+                        launch, turning complex customer needs into useful,
+                        thoughtful software. I enjoy building clear roadmaps,
+                        helping teams make confident decisions, and creating
+                        products that feel simple to use.
+                      </p>
+                      <p class="profile-bio">
+                        Choose fonts that complement each other and try to keep
+                        the number of fonts in a design to three or fewer.
+                        Experiment with different font combinations using the
+                        fonts available in your design software or trusted font
+                        websites.
+                      </p>
+                      <div class="profile-focus-grid">
+                        <div>
+                          <span
+                            class="profile-focus-icon text-success bg-success-transparent"
+                            ><i
+                              class="ri-focus-3-line"
+                              aria-hidden="true"
+                            ></i></span
+                          ><span
+                            ><small>Current focus</small
+                            ><strong>Product strategy &amp; growth</strong>
+                          </span>
+                        </div>
+                        <div>
+                          <span
+                            class="profile-focus-icon text-secondary bg-secondary-transparent"
+                            ><i
+                              class="ri-team-line"
+                              aria-hidden="true"
+                            ></i></span
+                          ><span
+                            ><small>Working style</small
+                            ><strong>Collaborative &amp; research-led</strong>
+                          </span>
+                        </div>
+                        <div>
+                          <span
+                            class="profile-focus-icon text-warning bg-warning-transparent"
+                            ><i
+                              class="ri-compass-3-line"
+                              aria-hidden="true"
+                            ></i></span
+                          ><span
+                            ><small>Open to</small
+                            ><strong>Mentoring and partnerships</strong>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="profile-skills">
+                        <div
+                          class="d-flex align-items-center justify-content-between mb-2"
+                        >
+                          <h4>Areas of expertise</h4>
+                        </div>
+                        <div class="d-flex flex-wrap gap-2">
+                          <span>Product strategy</span><span>UX research</span
+                          ><span>Roadmapping</span><span>Team leadership</span
+                          ><span>Analytics</span>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                  <article
+                    class="card custom-card profile-highlights-card mt-3"
+                  >
+                    <div
+                      class="card-header justify-content-between flex-wrap gap-2"
+                    >
+                      <div>
+                        <h3 class="card-title mb-1">Recent highlights</h3>
+                        <p class="text-muted fs-12 mb-0">
+                          Product milestones and team contributions
+                        </p>
+                      </div>
+                      <button
+                        class="btn btn-sm btn-light"
+                        type="button"
+                        data-profile-tab-target="profile-activity-tab"
+                      >
+                        View activity<i
+                          class="ri-arrow-right-line ms-1"
+                          aria-hidden="true"
+                        ></i>
+                      </button>
+                    </div>
+                    <div class="card-body p-0">
+                      <div class="profile-milestone-list">
+                        <article class="profile-milestone">
+                          <span
+                            class="avatar avatar-sm bg-warning-transparent text-warning"
+                            ><i
+                              class="ri-rocket-line fs-16"
+                              aria-hidden="true"
+                            ></i
+                          ></span>
+                          <div class="flex-grow-1">
+                            <div
+                              class="d-flex justify-content-between flex-wrap gap-2 mb-1"
+                            >
+                              <span class="text-muted fs-12"
+                                >Product launch</span
+                              ><time
+                                class="text-muted fs-12"
+                                datetime="2026-09-23"
+                                >Sep 23, 2026</time
+                              >
+                            </div>
+                            <div
+                              class="d-flex align-items-center justify-content-between flex-wrap gap-2"
+                            >
+                              <h4 class="fs-14 fw-semibold mb-0">
+                                Onboarding refresh shipped
+                              </h4>
+                              <span class="badge bg-light text-muted fw-normal"
+                                >Released</span
+                              >
+                            </div>
+                            <p class="text-muted fs-13 mt-2 mb-0">
+                              Simplified workspace setup with design and
+                              engineering.
+                            </p>
+                          </div>
+                        </article>
+                        <article class="profile-milestone">
+                          <span
+                            class="avatar avatar-sm bg-success-transparent text-success"
+                            ><i
+                              class="ri-route-line fs-16"
+                              aria-hidden="true"
+                            ></i
+                          ></span>
+                          <div class="flex-grow-1">
+                            <div
+                              class="d-flex justify-content-between flex-wrap gap-2 mb-1"
+                            >
+                              <span class="text-muted fs-12">Planning</span
+                              ><time
+                                class="text-muted fs-12"
+                                datetime="2026-09-16"
+                                >Sep 16, 2026</time
+                              >
+                            </div>
+                            <div
+                              class="d-flex align-items-center justify-content-between flex-wrap gap-2"
+                            >
+                              <h4 class="fs-14 fw-semibold mb-0">
+                                Q4 roadmap shared
+                              </h4>
+                              <span class="badge bg-light text-muted fw-normal"
+                                >Published</span
+                              >
+                            </div>
+                            <p class="text-muted fs-13 mt-2 mb-0">
+                              Aligned teams around milestones and customer
+                              priorities.
+                            </p>
+                          </div>
+                        </article>
+                        <article class="profile-milestone">
+                          <span
+                            class="avatar avatar-sm bg-info-transparent text-info"
+                            ><i
+                              class="ri-chat-3-line fs-16"
+                              aria-hidden="true"
+                            ></i
+                          ></span>
+                          <div class="flex-grow-1">
+                            <div
+                              class="d-flex justify-content-between flex-wrap gap-2 mb-1"
+                            >
+                              <span class="text-muted fs-12">Research</span
+                              ><time
+                                class="text-muted fs-12"
+                                datetime="2026-09-10"
+                                >Sep 10, 2026</time
+                              >
+                            </div>
+                            <div
+                              class="d-flex align-items-center justify-content-between flex-wrap gap-2"
+                            >
+                              <h4 class="fs-14 fw-semibold mb-0">
+                                12 customer interviews completed
+                              </h4>
+                              <span class="badge bg-light text-muted fw-normal"
+                                >Completed</span
+                              >
+                            </div>
+                            <p class="text-muted fs-13 mt-2 mb-0">
+                              Captured administrator feedback for the next
+                              release.
+                            </p>
+                          </div>
+                        </article>
+                        <article class="profile-milestone">
+                          <span
+                            class="avatar avatar-sm bg-secondary-transparent text-secondary"
+                            ><i
+                              class="ri-layout-masonry-line fs-16"
+                              aria-hidden="true"
+                            ></i
+                          ></span>
+                          <div class="flex-grow-1">
+                            <div
+                              class="d-flex justify-content-between flex-wrap gap-2 mb-1"
+                            >
+                              <span class="text-muted fs-12">Design system</span
+                              ><time
+                                class="text-muted fs-12"
+                                datetime="2026-09-06"
+                                >Sep 6, 2026</time
+                              >
+                            </div>
+                            <div
+                              class="d-flex align-items-center justify-content-between flex-wrap gap-2"
+                            >
+                              <h4 class="fs-14 fw-semibold mb-0">
+                                Component workshop hosted
+                              </h4>
+                              <span class="badge bg-light text-muted fw-normal"
+                                >Completed</span
+                              >
+                            </div>
+                            <p class="text-muted fs-13 mt-2 mb-0">
+                              Reviewed reusable patterns and prioritized
+                              improvements.
+                            </p>
+                          </div>
+                        </article>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </section>
+
+            <section
+              class="tab-pane fade"
+              id="profile-projects"
+              role="tabpanel"
+              aria-labelledby="profile-projects-tab"
+              tabindex="0"
+            >
+              <article class="card custom-card">
+                <div
+                  class="card-header justify-content-between flex-wrap gap-2"
+                >
+                  <h3 class="card-title mb-0">Current projects</h3>
+                  <span class="text-muted fs-12">6 projects</span>
+                </div>
+                <div class="card-body">
+                  <div class="row g-3">
+                    <div class="col-md-6 col-xxl-4">
+                      <section class="border rounded p-3 h-100">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                          <span
+                            class="avatar avatar-lg bg-light p-1 flex-shrink-0"
+                            ><img
+                              src="../assets/images/logos/1.png"
+                              alt="Project company logo"
+                              style="object-fit: contain"
+                          /></span>
+                          <div>
+                            <h4 class="fs-14 fw-semibold mb-1">
+                              Workspace onboarding
+                            </h4>
+                            <p class="text-muted fs-12 mb-0">
+                              Product experience
+                            </p>
+                          </div>
+                        </div>
+                        <div
+                          class="d-flex justify-content-between align-items-center gap-2 mb-3"
+                        >
+                          <span
+                            class="badge bg-warning-transparent text-warning fw-normal"
+                            >In progress</span
+                          ><span class="text-muted fs-12">75% complete</span>
+                        </div>
+                        <div
+                          class="progress progress-xs mb-3"
+                          role="progressbar"
+                          aria-label="Workspace onboarding progress"
+                          aria-valuenow="75"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        >
+                          <div
+                            class="progress-bar bg-warning"
+                            style="width: 75%"
+                          ></div>
+                        </div>
+                        <div class="border-top pt-3 text-muted fs-12">
+                          <i
+                            class="ri-calendar-line me-1"
+                            aria-hidden="true"
+                          ></i
+                          >Due Oct 16, 2026
+                        </div>
+                      </section>
+                    </div>
+                    <div class="col-md-6 col-xxl-4">
+                      <section class="border rounded p-3 h-100">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                          <span
+                            class="avatar avatar-lg bg-light p-1 flex-shrink-0"
+                            ><img
+                              src="../assets/images/logos/2.png"
+                              alt="Project company logo"
+                              style="object-fit: contain"
+                          /></span>
+                          <div>
+                            <h4 class="fs-14 fw-semibold mb-1">
+                              Customer insights
+                            </h4>
+                            <p class="text-muted fs-12 mb-0">
+                              Research & discovery
+                            </p>
+                          </div>
+                        </div>
+                        <div
+                          class="d-flex justify-content-between align-items-center gap-2 mb-3"
+                        >
+                          <span
+                            class="badge bg-success-transparent text-success fw-normal"
+                            >Completed</span
+                          ><span class="text-muted fs-12">45% complete</span>
+                        </div>
+                        <div
+                          class="progress progress-xs mb-3"
+                          role="progressbar"
+                          aria-label="Customer insights progress"
+                          aria-valuenow="45"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        >
+                          <div
+                            class="progress-bar bg-success"
+                            style="width: 45%"
+                          ></div>
+                        </div>
+                        <div class="border-top pt-3 text-muted fs-12">
+                          <i
+                            class="ri-calendar-line me-1"
+                            aria-hidden="true"
+                          ></i
+                          >Due Oct 22, 2026
+                        </div>
+                      </section>
+                    </div>
+                    <div class="col-md-6 col-xxl-4">
+                      <section class="border rounded p-3 h-100">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                          <span
+                            class="avatar avatar-lg bg-light p-1 flex-shrink-0"
+                            ><img
+                              src="../assets/images/logos/3.png"
+                              alt="Project company logo"
+                              style="object-fit: contain"
+                          /></span>
+                          <div>
+                            <h4 class="fs-14 fw-semibold mb-1">
+                              Q4 product roadmap
+                            </h4>
+                            <p class="text-muted fs-12 mb-0">
+                              Strategy & planning
+                            </p>
+                          </div>
+                        </div>
+                        <div
+                          class="d-flex justify-content-between align-items-center gap-2 mb-3"
+                        >
+                          <span
+                            class="badge bg-warning-transparent text-warning fw-normal"
+                            >In review</span
+                          ><span class="text-muted fs-12">90% complete</span>
+                        </div>
+                        <div
+                          class="progress progress-xs mb-3"
+                          role="progressbar"
+                          aria-label="Q4 product roadmap progress"
+                          aria-valuenow="90"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        >
+                          <div
+                            class="progress-bar bg-warning"
+                            style="width: 90%"
+                          ></div>
+                        </div>
+                        <div class="border-top pt-3 text-muted fs-12">
+                          <i
+                            class="ri-calendar-line me-1"
+                            aria-hidden="true"
+                          ></i
+                          >Due Oct 9, 2026
+                        </div>
+                      </section>
+                    </div>
+                    <div class="col-md-6 col-xxl-4">
+                      <section class="border rounded p-3 h-100">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                          <span
+                            class="avatar avatar-lg bg-light p-1 flex-shrink-0"
+                            ><img
+                              src="../assets/images/logos/4.png"
+                              alt="Project company logo"
+                              style="object-fit: contain"
+                          /></span>
+                          <div>
+                            <h4 class="fs-14 fw-semibold mb-1">
+                              Component library
+                            </h4>
+                            <p class="text-muted fs-12 mb-0">Design system</p>
+                          </div>
+                        </div>
+                        <div
+                          class="d-flex justify-content-between align-items-center gap-2 mb-3"
+                        >
+                          <span
+                            class="badge bg-success-transparent text-success fw-normal"
+                            >Completed</span
+                          ><span class="text-muted fs-12">62% complete</span>
+                        </div>
+                        <div
+                          class="progress progress-xs mb-3"
+                          role="progressbar"
+                          aria-label="Component library progress"
+                          aria-valuenow="62"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        >
+                          <div
+                            class="progress-bar bg-success"
+                            style="width: 62%"
+                          ></div>
+                        </div>
+                        <div class="border-top pt-3 text-muted fs-12">
+                          <i
+                            class="ri-calendar-line me-1"
+                            aria-hidden="true"
+                          ></i
+                          >Due Nov 6, 2026
+                        </div>
+                      </section>
+                    </div>
+                    <div class="col-md-6 col-xxl-4">
+                      <section class="border rounded p-3 h-100">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                          <span
+                            class="avatar avatar-lg bg-light p-1 flex-shrink-0"
+                            ><img
+                              src="../assets/images/logos/5.png"
+                              alt="Project company logo"
+                              style="object-fit: contain"
+                          /></span>
+                          <div>
+                            <h4 class="fs-14 fw-semibold mb-1">
+                              Reporting dashboard
+                            </h4>
+                            <p class="text-muted fs-12 mb-0">Analytics</p>
+                          </div>
+                        </div>
+                        <div
+                          class="d-flex justify-content-between align-items-center gap-2 mb-3"
+                        >
+                          <span
+                            class="badge bg-success-transparent text-success fw-normal"
+                            >Completed</span
+                          ><span class="text-muted fs-12">30% complete</span>
+                        </div>
+                        <div
+                          class="progress progress-xs mb-3"
+                          role="progressbar"
+                          aria-label="Reporting dashboard progress"
+                          aria-valuenow="30"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        >
+                          <div
+                            class="progress-bar bg-success"
+                            style="width: 30%"
+                          ></div>
+                        </div>
+                        <div class="border-top pt-3 text-muted fs-12">
+                          <i
+                            class="ri-calendar-line me-1"
+                            aria-hidden="true"
+                          ></i
+                          >Due Nov 13, 2026
+                        </div>
+                      </section>
+                    </div>
+                    <div class="col-md-6 col-xxl-4">
+                      <section class="border rounded p-3 h-100">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                          <span
+                            class="avatar avatar-lg bg-light p-1 flex-shrink-0"
+                            ><img
+                              src="../assets/images/logos/6.png"
+                              alt="Project company logo"
+                              style="object-fit: contain"
+                          /></span>
+                          <div>
+                            <h4 class="fs-14 fw-semibold mb-1">
+                              Mobile workspace
+                            </h4>
+                            <p class="text-muted fs-12 mb-0">
+                              Mobile experience
+                            </p>
+                          </div>
+                        </div>
+                        <div
+                          class="d-flex justify-content-between align-items-center gap-2 mb-3"
+                        >
+                          <span
+                            class="badge bg-secondary-transparent text-secondary fw-normal"
+                            >Planning</span
+                          ><span class="text-muted fs-12">15% complete</span>
+                        </div>
+                        <div
+                          class="progress progress-xs mb-3"
+                          role="progressbar"
+                          aria-label="Mobile workspace progress"
+                          aria-valuenow="15"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        >
+                          <div
+                            class="progress-bar bg-secondary"
+                            style="width: 15%"
+                          ></div>
+                        </div>
+                        <div class="border-top pt-3 text-muted fs-12">
+                          <i
+                            class="ri-calendar-line me-1"
+                            aria-hidden="true"
+                          ></i
+                          >Due Nov 27, 2026
+                        </div>
+                      </section>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </section>
+            <section
+              class="tab-pane fade"
+              id="profile-activity"
+              role="tabpanel"
+              aria-labelledby="profile-activity-tab"
+              tabindex="0"
+            >
+              <article class="card custom-card profile-activity-card">
+                <div
+                  class="card-header justify-content-between flex-wrap gap-2"
+                >
+                  <div>
+                    <h3 class="card-title mb-1">Activity stream</h3>
+                    <p class="text-muted fs-12 mb-0">
+                      Product updates and contributions from Liam's workspace
+                    </p>
+                  </div>
+                  <span class="badge bg-light text-muted">6 updates</span>
+                </div>
+                <div class="card-body">
+                  <section class="profile-stream-group">
+                    <h4 class="fs-12 text-muted fw-medium mb-3">
+                      September 2026
+                    </h4>
+                    <ol class="list-unstyled mb-0 profile-stream-list">
+                      <li class="profile-stream-entry">
+                        <span
+                          class="avatar avatar-sm bg-light text-default profile-stream-marker"
+                          ><i
+                            class="ri-rocket-line fs-16"
+                            aria-hidden="true"
+                          ></i
+                        ></span>
+                        <article class="flex-grow-1">
+                          <div
+                            class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-2"
+                          >
+                            <div class="d-flex align-items-center gap-2">
+                              <span class="fs-12 text-muted"
+                                >Product launch</span
+                              ><span
+                                class="badge bg-success-transparent text-success fw-normal"
+                                >Released</span
+                              >
+                            </div>
+                            <time
+                              class="text-muted fs-12"
+                              datetime="2026-09-23T14:20"
+                              >September 23 / 2:20 PM</time
+                            >
+                          </div>
+                          <h5 class="fs-14 fw-semibold mb-2">
+                            Shipped the new onboarding experience
+                          </h5>
+                          <p class="text-muted fs-13 mb-3">
+                            Partnered with design and engineering to simplify
+                            first-run setup for new workspace administrators.
+                          </p>
+                          <div
+                            class="d-flex align-items-center justify-content-between flex-wrap gap-2"
+                          >
+                            <span class="text-muted fs-12"
+                              ><i
+                                class="ri-folder-line me-1"
+                                aria-hidden="true"
+                              ></i
+                              >Workspace onboarding / Release v2.4</span
+                            ><span class="d-flex align-items-center gap-2 fs-12"
+                              ><span class="avatar avatar-xs avatar-rounded"
+                                ><img
+                                  src="../assets/images/users/12.jpg"
+                                  alt="" /></span
+                              >Liam Carter</span
+                            >
+                          </div>
+                        </article>
+                      </li>
+                      <li class="profile-stream-entry">
+                        <span
+                          class="avatar avatar-sm bg-light text-default profile-stream-marker"
+                          ><i class="ri-route-line fs-16" aria-hidden="true"></i
+                        ></span>
+                        <article class="flex-grow-1">
+                          <div
+                            class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-2"
+                          >
+                            <div class="d-flex align-items-center gap-2">
+                              <span class="fs-12 text-muted">Planning</span
+                              ><span
+                                class="badge bg-success-transparent text-success fw-normal"
+                                >Published</span
+                              >
+                            </div>
+                            <time
+                              class="text-muted fs-12"
+                              datetime="2026-09-16T10:05"
+                              >September 16 / 10:05 AM</time
+                            >
+                          </div>
+                          <h5 class="fs-14 fw-semibold mb-2">
+                            Published the Q4 product roadmap
+                          </h5>
+                          <p class="text-muted fs-13 mb-3">
+                            Shared quarterly milestones, delivery owners, and
+                            dependencies with the product team.
+                          </p>
+                          <div
+                            class="d-flex align-items-center justify-content-between flex-wrap gap-2"
+                          >
+                            <span class="text-muted fs-12"
+                              ><i
+                                class="ri-folder-line me-1"
+                                aria-hidden="true"
+                              ></i
+                              >Q4 roadmap / 3 milestones</span
+                            ><span class="d-flex align-items-center gap-2 fs-12"
+                              ><span class="avatar avatar-xs avatar-rounded"
+                                ><img
+                                  src="../assets/images/users/12.jpg"
+                                  alt="" /></span
+                              >Liam Carter</span
+                            >
+                          </div>
+                        </article>
+                      </li>
+                      <li class="profile-stream-entry">
+                        <span
+                          class="avatar avatar-sm bg-light text-default profile-stream-marker"
+                          ><i
+                            class="ri-chat-3-line fs-16"
+                            aria-hidden="true"
+                          ></i
+                        ></span>
+                        <article class="flex-grow-1">
+                          <div
+                            class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-2"
+                          >
+                            <div class="d-flex align-items-center gap-2">
+                              <span class="fs-12 text-muted">Research</span
+                              ><span
+                                class="badge bg-info-transparent text-info fw-normal"
+                                >Completed</span
+                              >
+                            </div>
+                            <time
+                              class="text-muted fs-12"
+                              datetime="2026-09-10T16:40"
+                              >September 10 / 4:40 PM</time
+                            >
+                          </div>
+                          <h5 class="fs-14 fw-semibold mb-2">
+                            Completed 12 customer interviews
+                          </h5>
+                          <p class="text-muted fs-13 mb-3">
+                            Documented workflow feedback and prioritized
+                            opportunities for the upcoming release.
+                          </p>
+                          <div
+                            class="d-flex align-items-center justify-content-between flex-wrap gap-2"
+                          >
+                            <span class="text-muted fs-12"
+                              ><i
+                                class="ri-folder-line me-1"
+                                aria-hidden="true"
+                              ></i
+                              >Customer insights / 12 interviews</span
+                            ><span class="d-flex align-items-center gap-2 fs-12"
+                              ><span class="avatar avatar-xs avatar-rounded"
+                                ><img
+                                  src="../assets/images/users/12.jpg"
+                                  alt="" /></span
+                              >Liam Carter</span
+                            >
+                          </div>
+                        </article>
+                      </li>
+                      <li class="profile-stream-entry">
+                        <span
+                          class="avatar avatar-sm bg-light text-default profile-stream-marker"
+                          ><i
+                            class="ri-layout-masonry-line fs-16"
+                            aria-hidden="true"
+                          ></i
+                        ></span>
+                        <article class="flex-grow-1">
+                          <div
+                            class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-2"
+                          >
+                            <div class="d-flex align-items-center gap-2">
+                              <span class="fs-12 text-muted">Design system</span
+                              ><span
+                                class="badge bg-secondary-transparent text-secondary fw-normal"
+                                >Completed</span
+                              >
+                            </div>
+                            <time
+                              class="text-muted fs-12"
+                              datetime="2026-09-06T11:00"
+                              >September 06 / 11:00 AM</time
+                            >
+                          </div>
+                          <h5 class="fs-14 fw-semibold mb-2">
+                            Hosted a component library workshop
+                          </h5>
+                          <p class="text-muted fs-13 mb-3">
+                            Reviewed accessibility, reusable patterns, and
+                            component documentation with the design team.
+                          </p>
+                          <div
+                            class="d-flex align-items-center justify-content-between flex-wrap gap-2"
+                          >
+                            <span class="text-muted fs-12"
+                              ><i
+                                class="ri-folder-line me-1"
+                                aria-hidden="true"
+                              ></i
+                              >Component library / 8 improvements</span
+                            ><span class="d-flex align-items-center gap-2 fs-12"
+                              ><span class="avatar avatar-xs avatar-rounded"
+                                ><img
+                                  src="../assets/images/users/12.jpg"
+                                  alt="" /></span
+                              >Liam Carter</span
+                            >
+                          </div>
+                        </article>
+                      </li>
+                      <li class="profile-stream-entry">
+                        <span
+                          class="avatar avatar-sm bg-light text-default profile-stream-marker"
+                          ><i class="ri-award-line fs-16" aria-hidden="true"></i
+                        ></span>
+                        <article class="flex-grow-1">
+                          <div
+                            class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-2"
+                          >
+                            <div class="d-flex align-items-center gap-2">
+                              <span class="fs-12 text-muted">Team</span
+                              ><span
+                                class="badge bg-warning-transparent text-warning fw-normal"
+                                >Recognized</span
+                              >
+                            </div>
+                            <time
+                              class="text-muted fs-12"
+                              datetime="2026-09-02T09:15"
+                              >September 02 / 9:15 AM</time
+                            >
+                          </div>
+                          <h5 class="fs-14 fw-semibold mb-2">
+                            Recognized for product mentorship
+                          </h5>
+                          <p class="text-muted fs-13 mb-3">
+                            Supported two new product leads through customer
+                            discovery and their first roadmap reviews.
+                          </p>
+                          <div
+                            class="d-flex align-items-center justify-content-between flex-wrap gap-2"
+                          >
+                            <span class="text-muted fs-12"
+                              ><i
+                                class="ri-folder-line me-1"
+                                aria-hidden="true"
+                              ></i
+                              >Mentorship / 2 product leads</span
+                            ><span class="d-flex align-items-center gap-2 fs-12"
+                              ><span class="avatar avatar-xs avatar-rounded"
+                                ><img
+                                  src="../assets/images/users/12.jpg"
+                                  alt="" /></span
+                              >Liam Carter</span
+                            >
+                          </div>
+                        </article>
+                      </li>
+                    </ol>
+                  </section>
+                  <section class="profile-stream-group">
+                    <h4 class="fs-12 text-muted fw-medium mb-3">August 2026</h4>
+                    <ol class="list-unstyled mb-0 profile-stream-list">
+                      <li class="profile-stream-entry">
+                        <span
+                          class="avatar avatar-sm bg-light text-default profile-stream-marker"
+                          ><i
+                            class="ri-bar-chart-line fs-16"
+                            aria-hidden="true"
+                          ></i
+                        ></span>
+                        <article class="flex-grow-1">
+                          <div
+                            class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-2"
+                          >
+                            <div class="d-flex align-items-center gap-2">
+                              <span class="fs-12 text-muted">Analytics</span
+                              ><span
+                                class="badge bg-success-transparent text-success fw-normal"
+                                >Published</span
+                              >
+                            </div>
+                            <time
+                              class="text-muted fs-12"
+                              datetime="2026-08-28T15:30"
+                              >August 28 / 3:30 PM</time
+                            >
+                          </div>
+                          <h5 class="fs-14 fw-semibold mb-2">
+                            Shared the monthly product review
+                          </h5>
+                          <p class="text-muted fs-13 mb-3">
+                            Reviewed activation trends and agreed on the next
+                            experiments with the growth team.
+                          </p>
+                          <div
+                            class="d-flex align-items-center justify-content-between flex-wrap gap-2"
+                          >
+                            <span class="text-muted fs-12"
+                              ><i
+                                class="ri-folder-line me-1"
+                                aria-hidden="true"
+                              ></i
+                              >Reporting dashboard / Monthly review</span
+                            ><span class="d-flex align-items-center gap-2 fs-12"
+                              ><span class="avatar avatar-xs avatar-rounded"
+                                ><img
+                                  src="../assets/images/users/12.jpg"
+                                  alt="" /></span
+                              >Liam Carter</span
+                            >
+                          </div>
+                        </article>
+                      </li>
+                    </ol>
+                  </section>
+                </div>
+              </article>
+            </section>
+
+            <section
+              class="tab-pane fade"
+              id="profile-gallery"
+              role="tabpanel"
+              aria-labelledby="profile-gallery-tab"
+              tabindex="0"
+            >
+              <article class="card custom-card profile-gallery-card">
+                <div class="card-header">
+                  <div>
+                    <h3 class="card-title mb-1">Gallery</h3>
+                    <span class="text-muted fs-12"
+                      >Workspace moments and inspiration</span
+                    >
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="row g-3">
+                    <div class="col-sm-6 col-lg-4">
+                      <a
+                        class="profile-gallery-item glightbox"
+                        href="../assets/images/cards/10.jpg"
+                        data-gallery="tom-profile-gallery"
+                        ><img
+                          src="../assets/images/cards/10.jpg"
+                          alt="A warm, light-filled workspace"
+                        /><span
+                          ><strong>Workspace inspiration</strong
+                          ><small>Creative focus</small></span
+                        ></a
+                      >
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                      <a
+                        class="profile-gallery-item glightbox"
+                        href="../assets/images/cards/8.jpg"
+                        data-gallery="tom-profile-gallery"
+                        ><img
+                          src="../assets/images/cards/8.jpg"
+                          alt="Coastline at sunrise"
+                        /><span
+                          ><strong>Morning reset</strong
+                          ><small>California coast</small></span
+                        ></a
+                      >
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                      <a
+                        class="profile-gallery-item glightbox"
+                        href="../assets/images/cards/9.jpg"
+                        data-gallery="tom-profile-gallery"
+                        ><img
+                          src="../assets/images/cards/9.jpg"
+                          alt="Modern coastal architecture"
+                        /><span
+                          ><strong>Design notes</strong
+                          ><small>Form and light</small></span
+                        ></a
+                      >
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                      <a
+                        class="profile-gallery-item glightbox"
+                        href="../assets/images/cards/11.jpg"
+                        data-gallery="tom-profile-gallery"
+                        ><img
+                          src="../assets/images/cards/11.jpg"
+                          alt="Minimal skincare product still life"
+                        /><span
+                          ><strong>Visual research</strong
+                          ><small>Studio study</small></span
+                        ></a
+                      >
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                      <a
+                        class="profile-gallery-item glightbox"
+                        href="../assets/images/cards/12.jpg"
+                        data-gallery="tom-profile-gallery"
+                        ><img
+                          src="../assets/images/cards/12.jpg"
+                          alt="A quiet mountain valley with a river and footbridge"
+                        /><span
+                          ><strong>Weekend outdoors</strong
+                          ><small>Time to recharge</small></span
+                        ></a
+                      >
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                      <a
+                        class="profile-gallery-item glightbox"
+                        href="../assets/images/cards/13.jpg"
+                        data-gallery="tom-profile-gallery"
+                        ><img
+                          src="../assets/images/cards/13.jpg"
+                          alt="Sunlit modern city architecture"
+                        /><span
+                          ><strong>City architecture</strong
+                          ><small>Urban design</small></span
+                        ></a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </section>
+
+            <section
+              class="tab-pane fade"
+              id="profile-connections"
+              role="tabpanel"
+              aria-labelledby="profile-connections-tab"
+              tabindex="0"
+            >
+              <article class="card custom-card profile-connections-card">
+                <div
+                  class="card-header d-flex align-items-center justify-content-between flex-wrap gap-2"
+                >
+                  <div>
+                    <h3 class="card-title mb-1">Connections</h3>
+                    <span class="text-muted fs-12"
+                      >People in Liam's professional network</span
+                    >
+                  </div>
+                  <span
+                    class="badge bg-success-transparent text-success rounded-pill"
+                    >1,284 followers</span
+                  >
+                </div>
+                <div class="card-body">
+                  <div class="row g-3">
+                    <div class="col-sm-6 col-xl-4">
+                      <div class="profile-connection">
+                        <img
+                          src="../assets/images/users/4.jpg"
+                          alt="Mia Anderson"
+                        />
+                        <div>
+                          <strong>Mia Anderson</strong
+                          ><span>Product Designer</span>
+                        </div>
+                        <a
+                          href="mailto:mia.anderson@nexora.io"
+                          aria-label="Contact Mia Anderson"
+                          ><i class="ri-mail-line" aria-hidden="true"></i
+                        ></a>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-4">
+                      <div class="profile-connection">
+                        <img
+                          src="../assets/images/users/5.jpg"
+                          alt="Liam Carter"
+                        />
+                        <div>
+                          <strong>Liam Carter</strong
+                          ><span>Engineering Lead</span>
+                        </div>
+                        <a
+                          href="mailto:liam.carter@nexora.io"
+                          aria-label="Contact Liam Carter"
+                          ><i class="ri-mail-line" aria-hidden="true"></i
+                        ></a>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-4">
+                      <div class="profile-connection">
+                        <img
+                          src="../assets/images/users/6.jpg"
+                          alt="Olivia Bennett"
+                        />
+                        <div>
+                          <strong>Olivia Bennett</strong
+                          ><span>Customer Success</span>
+                        </div>
+                        <a
+                          href="mailto:olivia.bennett@nexora.io"
+                          aria-label="Contact Olivia Bennett"
+                          ><i class="ri-mail-line" aria-hidden="true"></i
+                        ></a>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-4">
+                      <div class="profile-connection">
+                        <img
+                          src="../assets/images/users/7.jpg"
+                          alt="Noah Williams"
+                        />
+                        <div>
+                          <strong>Noah Williams</strong
+                          ><span>Product Analyst</span>
+                        </div>
+                        <a
+                          href="mailto:noah.williams@nexora.io"
+                          aria-label="Contact Noah Williams"
+                          ><i class="ri-mail-line" aria-hidden="true"></i
+                        ></a>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-4">
+                      <div class="profile-connection">
+                        <img
+                          src="../assets/images/users/8.jpg"
+                          alt="Ava Martinez"
+                        />
+                        <div>
+                          <strong>Ava Martinez</strong
+                          ><span>UX Researcher</span>
+                        </div>
+                        <a
+                          href="mailto:ava.martinez@nexora.io"
+                          aria-label="Contact Ava Martinez"
+                          ><i class="ri-mail-line" aria-hidden="true"></i
+                        ></a>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-4">
+                      <div class="profile-connection">
+                        <img
+                          src="../assets/images/users/9.jpg"
+                          alt="Ethan Davis"
+                        />
+                        <div>
+                          <strong>Ethan Davis</strong
+                          ><span>Project Manager</span>
+                        </div>
+                        <a
+                          href="mailto:ethan.davis@nexora.io"
+                          aria-label="Contact Ethan Davis"
+                          ><i class="ri-mail-line" aria-hidden="true"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </section>
+          </div>
+          <p
+            class="profile-feedback text-muted fs-12 mt-2 mb-0"
+            id="profile-feedback"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"-->
+    <!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/libs/glightbox/js/glightbox.min.js"></script>
+    <script src="../assets/js/profile.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

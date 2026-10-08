@@ -1,0 +1,366 @@
+<!-- include document-head.html"-->
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content product-views-page">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Product views</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">
+              <a href="ecommerce-dashboard.html">Ecommerce</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Product views
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid commerce-dashboard">
+          <section
+            class="views-kpi-grid"
+            aria-label="Product engagement summary"
+          >
+            <article class="card custom-card views-kpi views-kpi-primary">
+              <div class="card-body">
+                <div class="views-kpi-top">
+                  <span>Product views</span
+                  ><span class="avatar avatar-md bg-color-1 text-black"
+                    ><i class="ri-eye-line fs-20" aria-hidden="true"></i
+                  ></span>
+                </div>
+                <h4 class="fw-semibold" id="views-total">268,420</h4>
+                <small
+                  ><i class="ri-arrow-up-line" aria-hidden="true"></i>14.8%
+                  <span>vs. prior period</span></small
+                >
+              </div>
+            </article>
+            <article class="card custom-card views-kpi views-kpi-visitors">
+              <div class="card-body">
+                <div class="views-kpi-top">
+                  <span>Unique visitors</span
+                  ><span class="avatar avatar-md bg-color-2 text-black"
+                    ><i class="ri-user-line fs-20" aria-hidden="true"></i
+                  ></span>
+                </div>
+                <h4 class="fw-semibold" id="views-visitors">171,840</h4>
+                <small
+                  ><i class="ri-arrow-up-line" aria-hidden="true"></i>9.3%
+                  <span>vs. prior period</span></small
+                >
+              </div>
+            </article>
+            <article class="card custom-card views-kpi views-kpi-cart">
+              <div class="card-body">
+                <div class="views-kpi-top">
+                  <span>Add to cart rate</span
+                  ><span class="avatar avatar-md bg-color-3 text-black"
+                    ><i
+                      class="ri-shopping-cart-2-line fs-20"
+                      aria-hidden="true"
+                    ></i
+                  ></span>
+                </div>
+                <h4 class="fw-semibold">8.6%</h4>
+                <small
+                  ><i class="ri-arrow-up-line" aria-hidden="true"></i>0.9%
+                  <span>vs. prior period</span></small
+                >
+              </div>
+            </article>
+            <article class="card custom-card views-kpi views-kpi-duration">
+              <div class="card-body">
+                <div class="views-kpi-top">
+                  <span>Avg. time on page</span
+                  ><span class="avatar avatar-md bg-color-4 text-black"
+                    ><i class="ri-time-line fs-20" aria-hidden="true"></i
+                  ></span>
+                </div>
+                <h4 class="fw-semibold">1m 42s</h4>
+                <small
+                  ><i class="ri-arrow-up-line" aria-hidden="true"></i>12 sec
+                  <span>vs. prior period</span></small
+                >
+              </div>
+            </article>
+          </section>
+          <div class="row">
+            <div class="col-xxl-7">
+              <section
+                class="card custom-card views-chart-card views-traffic-panel"
+              >
+                <div
+                  class="card-header justify-content-between align-items-start"
+                >
+                  <div>
+                    <h2 class="card-title mb-1">Product traffic</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Daily page views and unique visitors
+                    </p>
+                  </div>
+                  <div class="views-chart-tools">
+                    <label class="visually-hidden" for="views-period"
+                      >Reporting period</label
+                    >
+                    <select
+                      id="views-period"
+                      data-trigger
+                      class="form-select form-select-sm"
+                    >
+                      <option value="7">Last 7 days</option>
+                      <option value="30" selected>Last 30 days</option>
+                      <option value="90">Last 90 days</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="card-body pb-0">
+                  <div
+                    id="product-views-chart"
+                    aria-label="Product views and visitors over time"
+                  ></div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-5">
+              <section
+                class="card custom-card views-sources-card views-source-panel"
+              >
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Traffic sources</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Where product visits begin
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body pt-0">
+                  <div
+                    id="views-sources-chart"
+                    aria-label="Traffic source distribution"
+                  ></div>
+                  <div class="p-3 mt-2 bg-light border-dashed border rounded">
+                    <div class="d-flex align-items-center">
+                      <div
+                        class="avatar avatar-md bg-white avatar-rounded me-2"
+                      >
+                        <i
+                          class="ti ti-chart-bar text-warning fs-22"
+                          aria-hidden="true"
+                        ></i>
+                      </div>
+                      <div class="flex-grow-1">
+                        <h6 class="mb-0 fw-semibold">Top traffic source</h6>
+                        <p class="mb-0 text-muted">
+                          Online store product discovery
+                        </p>
+                      </div>
+                      <div class="ms-auto text-end">
+                        <h4 class="fs-16 mt-1 mb-0">52%</h4>
+                        <span class="text-muted fw-semibold fs-12"
+                          >OF PRODUCT VIEWS</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <section class="card custom-card">
+            <div
+              class="card-header justify-content-between align-items-start flex-wrap gap-3"
+            >
+              <div>
+                <h2 class="card-title mb-1">Most viewed products</h2>
+                <p class="text-muted fs-12 mb-0">
+                  Popular listings for the selected period
+                </p>
+              </div>
+              <a href="products-list.html" class="btn btn-sm btn-light"
+                >Manage products<i
+                  class="ri-arrow-right-line ms-1"
+                  aria-hidden="true"
+                ></i
+              ></a>
+            </div>
+            <div class="table-responsive">
+              <table class="table table-hover align-middle mb-0">
+                <thead>
+                  <tr>
+                    <th scope="col">Product</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Views</th>
+                    <th scope="col">Change</th>
+                    <th scope="col">Add to cart</th>
+                    <th scope="col">Conversion</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="viewed-product">
+                        <span class="avatar avatar-md">
+                          <img
+                            src="../assets/images/ecommerce/jpg/1.jpg"
+                            alt=""
+                            class="img-fluid"
+                          />
+                        </span>
+                        <div>
+                          <span class="fw-semibold d-block"
+                            >Linen Table Set</span
+                          ><small class="text-muted">SKU HOM-LIN-104</small>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Home &amp; Living</td>
+                    <td class="fw-semibold">18,492</td>
+                    <td>
+                      <span class="text-success"
+                        ><i class="ri-arrow-up-line"></i> 18.4%</span
+                      >
+                    </td>
+                    <td>1,642</td>
+                    <td><span class="views-conversion">8.9%</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="viewed-product">
+                        <span class="avatar avatar-md">
+                          <img
+                            src="../assets/images/ecommerce/jpg/2.jpg"
+                            alt=""
+                            class="img-fluid"
+                          />
+                        </span>
+                        <div>
+                          <span class="fw-semibold d-block">VisionTech SLR</span
+                          ><small class="text-muted">SKU ELE-CAM-018</small>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Electronics</td>
+                    <td class="fw-semibold">15,206</td>
+                    <td>
+                      <span class="text-success"
+                        ><i class="ri-arrow-up-line"></i> 9.2%</span
+                      >
+                    </td>
+                    <td>1,018</td>
+                    <td><span class="views-conversion">6.7%</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="viewed-product">
+                        <span class="avatar avatar-md">
+                          <img
+                            src="../assets/images/ecommerce/jpg/3.jpg"
+                            alt=""
+                            class="img-fluid"
+                          />
+                        </span>
+                        <div>
+                          <span class="fw-semibold d-block"
+                            >Arc Ceramic Lamp</span
+                          ><small class="text-muted">SKU HOM-LGT-228</small>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Home &amp; Living</td>
+                    <td class="fw-semibold">12,840</td>
+                    <td>
+                      <span class="text-success"
+                        ><i class="ri-arrow-up-line"></i> 6.8%</span
+                      >
+                    </td>
+                    <td>986</td>
+                    <td><span class="views-conversion">7.7%</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="viewed-product">
+                        <span class="avatar avatar-md">
+                          <img
+                            src="../assets/images/ecommerce/jpg/4.jpg"
+                            alt=""
+                            class="img-fluid"
+                          />
+                        </span>
+                        <div>
+                          <span class="fw-semibold d-block"
+                            >TrailBlaze Runners</span
+                          ><small class="text-muted">SKU SPT-RUN-038</small>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Sports</td>
+                    <td class="fw-semibold">10,315</td>
+                    <td>
+                      <span class="text-danger"
+                        ><i class="ri-arrow-down-line"></i> 2.1%</span
+                      >
+                    </td>
+                    <td>624</td>
+                    <td><span class="views-conversion">6.0%</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="viewed-product">
+                        <span class="avatar avatar-md">
+                          <img
+                            src="../assets/images/ecommerce/jpg/5.jpg"
+                            alt=""
+                            class="img-fluid"
+                          />
+                        </span>
+                        <div>
+                          <span class="fw-semibold d-block"
+                            >Stoneware Mug Pair</span
+                          ><small class="text-muted">SKU KIT-MUG-516</small>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Kitchen</td>
+                    <td class="fw-semibold">8,764</td>
+                    <td>
+                      <span class="text-success"
+                        ><i class="ri-arrow-up-line"></i> 4.5%</span
+                      >
+                    </td>
+                    <td>712</td>
+                    <td><span class="views-conversion">8.1%</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div
+              class="card-footer border-top-0 d-flex justify-content-between align-items-center flex-wrap gap-2"
+            >
+              <span class="text-muted fs-12">Showing top 5 of 248 products</span
+              ><span class="text-muted fs-12"
+                ><i class="ri-information-line me-1"></i>Views exclude repeat
+                visits within the same session.</span
+              >
+            </div>
+          </section>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"-->
+    <!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/libs/apexcharts/apexcharts.min.js"></script>
+    <script src="../assets/js/product-views.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

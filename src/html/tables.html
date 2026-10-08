@@ -1,0 +1,1379 @@
+<!-- include document-head.html"-->
+    <!-- Prism CSS -->
+    <link
+      rel="stylesheet"
+      href="../assets/libs/prismjs/themes/prism-coy.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+
+      <div class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Tables</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">Tables</li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Tables List
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid" data-markup-examples>
+          <div class="row">
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Project overview</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Basic project table with clear column headings.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table text-nowrap align-middle mb-0">
+                      <thead class="">
+                        <tr>
+                          <th scope="col">Project</th>
+                          <th scope="col">Team</th>
+                          <th scope="col">Status</th>
+                          <th scope="col">Due date</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="">
+                          <th scope="row" class="fw-medium">
+                            Workspace redesign
+                          </th>
+                          <td>Design</td>
+                          <td>
+                            <span class="badge bg-secondary-transparent"
+                              >In progress</span
+                            >
+                          </td>
+                          <td>24 Oct</td>
+                        </tr>
+                        <tr class="">
+                          <th scope="row" class="fw-medium">Customer portal</th>
+                          <td>Engineering</td>
+                          <td>
+                            <span class="badge bg-warning-transparent"
+                              >Review</span
+                            >
+                          </td>
+                          <td>28 Oct</td>
+                        </tr>
+                        <tr class="">
+                          <th scope="row" class="fw-medium">
+                            Billing integration
+                          </th>
+                          <td>Platform</td>
+                          <td>
+                            <span class="badge bg-success-transparent"
+                              >Complete</span
+                            >
+                          </td>
+                          <td>30 Oct</td>
+                        </tr>
+                        <tr class="">
+                          <th scope="row" class="fw-medium">
+                            Analytics studio
+                          </th>
+                          <td>Data</td>
+                          <td>
+                            <span class="badge bg-info-transparent"
+                              >Planned</span
+                            >
+                          </td>
+                          <td>04 Nov</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Striped rows</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Alternating row backgrounds improve scanning.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table
+                      class="table text-nowrap align-middle mb-0 table-striped"
+                    >
+                      <thead class="">
+                        <tr>
+                          <th scope="col">Project</th>
+                          <th scope="col">Team</th>
+                          <th scope="col">Status</th>
+                          <th scope="col">Due date</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="">
+                          <th scope="row" class="fw-medium">
+                            Workspace redesign
+                          </th>
+                          <td>Design</td>
+                          <td>
+                            <span class="badge bg-secondary-transparent"
+                              >In progress</span
+                            >
+                          </td>
+                          <td>24 Oct</td>
+                        </tr>
+                        <tr class="">
+                          <th scope="row" class="fw-medium">Customer portal</th>
+                          <td>Engineering</td>
+                          <td>
+                            <span class="badge bg-warning-transparent"
+                              >Review</span
+                            >
+                          </td>
+                          <td>28 Oct</td>
+                        </tr>
+                        <tr class="">
+                          <th scope="row" class="fw-medium">
+                            Billing integration
+                          </th>
+                          <td>Platform</td>
+                          <td>
+                            <span class="badge bg-success-transparent"
+                              >Complete</span
+                            >
+                          </td>
+                          <td>30 Oct</td>
+                        </tr>
+                        <tr class="">
+                          <th scope="row" class="fw-medium">
+                            Analytics studio
+                          </th>
+                          <td>Data</td>
+                          <td>
+                            <span class="badge bg-info-transparent"
+                              >Planned</span
+                            >
+                          </td>
+                          <td>04 Nov</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Hover rows</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Hover feedback highlights the current row.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table
+                      class="table text-nowrap align-middle mb-0 table-hover"
+                    >
+                      <thead class="">
+                        <tr>
+                          <th scope="col">Project</th>
+                          <th scope="col">Team</th>
+                          <th scope="col">Status</th>
+                          <th scope="col">Due date</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="">
+                          <th scope="row" class="fw-medium">
+                            Workspace redesign
+                          </th>
+                          <td>Design</td>
+                          <td>
+                            <span class="badge bg-secondary-transparent"
+                              >In progress</span
+                            >
+                          </td>
+                          <td>24 Oct</td>
+                        </tr>
+                        <tr class="">
+                          <th scope="row" class="fw-medium">Customer portal</th>
+                          <td>Engineering</td>
+                          <td>
+                            <span class="badge bg-warning-transparent"
+                              >Review</span
+                            >
+                          </td>
+                          <td>28 Oct</td>
+                        </tr>
+                        <tr class="">
+                          <th scope="row" class="fw-medium">
+                            Billing integration
+                          </th>
+                          <td>Platform</td>
+                          <td>
+                            <span class="badge bg-success-transparent"
+                              >Complete</span
+                            >
+                          </td>
+                          <td>30 Oct</td>
+                        </tr>
+                        <tr class="">
+                          <th scope="row" class="fw-medium">
+                            Analytics studio
+                          </th>
+                          <td>Data</td>
+                          <td>
+                            <span class="badge bg-info-transparent"
+                              >Planned</span
+                            >
+                          </td>
+                          <td>04 Nov</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Bordered table</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Cell borders separate detailed records.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table
+                      class="table text-nowrap align-middle mb-0 table-bordered"
+                    >
+                      <thead class="">
+                        <tr>
+                          <th scope="col">Project</th>
+                          <th scope="col">Team</th>
+                          <th scope="col">Status</th>
+                          <th scope="col">Due date</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="">
+                          <th scope="row" class="fw-medium">
+                            Workspace redesign
+                          </th>
+                          <td>Design</td>
+                          <td>
+                            <span class="badge bg-secondary-transparent"
+                              >In progress</span
+                            >
+                          </td>
+                          <td>24 Oct</td>
+                        </tr>
+                        <tr class="">
+                          <th scope="row" class="fw-medium">Customer portal</th>
+                          <td>Engineering</td>
+                          <td>
+                            <span class="badge bg-warning-transparent"
+                              >Review</span
+                            >
+                          </td>
+                          <td>28 Oct</td>
+                        </tr>
+                        <tr class="">
+                          <th scope="row" class="fw-medium">
+                            Billing integration
+                          </th>
+                          <td>Platform</td>
+                          <td>
+                            <span class="badge bg-success-transparent"
+                              >Complete</span
+                            >
+                          </td>
+                          <td>30 Oct</td>
+                        </tr>
+                        <tr class="">
+                          <th scope="row" class="fw-medium">
+                            Analytics studio
+                          </th>
+                          <td>Data</td>
+                          <td>
+                            <span class="badge bg-info-transparent"
+                              >Planned</span
+                            >
+                          </td>
+                          <td>04 Nov</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Borderless table</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      A minimal layout for lighter data views.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table
+                      class="table text-nowrap align-middle mb-0 table-borderless"
+                    >
+                      <thead class="">
+                        <tr>
+                          <th scope="col">Project</th>
+                          <th scope="col">Team</th>
+                          <th scope="col">Status</th>
+                          <th scope="col">Due date</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="">
+                          <th scope="row" class="fw-medium">
+                            Workspace redesign
+                          </th>
+                          <td>Design</td>
+                          <td>
+                            <span class="badge bg-secondary-transparent"
+                              >In progress</span
+                            >
+                          </td>
+                          <td>24 Oct</td>
+                        </tr>
+                        <tr class="">
+                          <th scope="row" class="fw-medium">Customer portal</th>
+                          <td>Engineering</td>
+                          <td>
+                            <span class="badge bg-warning-transparent"
+                              >Review</span
+                            >
+                          </td>
+                          <td>28 Oct</td>
+                        </tr>
+                        <tr class="">
+                          <th scope="row" class="fw-medium">
+                            Billing integration
+                          </th>
+                          <td>Platform</td>
+                          <td>
+                            <span class="badge bg-success-transparent"
+                              >Complete</span
+                            >
+                          </td>
+                          <td>30 Oct</td>
+                        </tr>
+                        <tr class="">
+                          <th scope="row" class="fw-medium">
+                            Analytics studio
+                          </th>
+                          <td>Data</td>
+                          <td>
+                            <span class="badge bg-info-transparent"
+                              >Planned</span
+                            >
+                          </td>
+                          <td>04 Nov</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Compact table</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Reduced cell padding fits more rows.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table text-nowrap align-middle mb-0 table-sm">
+                      <thead class="">
+                        <tr>
+                          <th scope="col">Project</th>
+                          <th scope="col">Team</th>
+                          <th scope="col">Status</th>
+                          <th scope="col">Due date</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="">
+                          <th scope="row" class="fw-medium">
+                            Workspace redesign
+                          </th>
+                          <td>Design</td>
+                          <td>
+                            <span class="badge bg-secondary-transparent"
+                              >In progress</span
+                            >
+                          </td>
+                          <td>24 Oct</td>
+                        </tr>
+                        <tr class="">
+                          <th scope="row" class="fw-medium">Customer portal</th>
+                          <td>Engineering</td>
+                          <td>
+                            <span class="badge bg-warning-transparent"
+                              >Review</span
+                            >
+                          </td>
+                          <td>28 Oct</td>
+                        </tr>
+                        <tr class="">
+                          <th scope="row" class="fw-medium">
+                            Billing integration
+                          </th>
+                          <td>Platform</td>
+                          <td>
+                            <span class="badge bg-success-transparent"
+                              >Complete</span
+                            >
+                          </td>
+                          <td>30 Oct</td>
+                        </tr>
+                        <tr class="">
+                          <th scope="row" class="fw-medium">
+                            Analytics studio
+                          </th>
+                          <td>Data</td>
+                          <td>
+                            <span class="badge bg-info-transparent"
+                              >Planned</span
+                            >
+                          </td>
+                          <td>04 Nov</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Striped columns</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Alternating columns distinguish adjacent values.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table
+                      class="table text-nowrap align-middle mb-0 table-striped-columns"
+                    >
+                      <thead class="">
+                        <tr>
+                          <th scope="col">Project</th>
+                          <th scope="col">Team</th>
+                          <th scope="col">Status</th>
+                          <th scope="col">Due date</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="">
+                          <th scope="row" class="fw-medium">
+                            Workspace redesign
+                          </th>
+                          <td>Design</td>
+                          <td>
+                            <span class="badge bg-secondary-transparent"
+                              >In progress</span
+                            >
+                          </td>
+                          <td>24 Oct</td>
+                        </tr>
+                        <tr class="">
+                          <th scope="row" class="fw-medium">Customer portal</th>
+                          <td>Engineering</td>
+                          <td>
+                            <span class="badge bg-warning-transparent"
+                              >Review</span
+                            >
+                          </td>
+                          <td>28 Oct</td>
+                        </tr>
+                        <tr class="">
+                          <th scope="row" class="fw-medium">
+                            Billing integration
+                          </th>
+                          <td>Platform</td>
+                          <td>
+                            <span class="badge bg-success-transparent"
+                              >Complete</span
+                            >
+                          </td>
+                          <td>30 Oct</td>
+                        </tr>
+                        <tr class="">
+                          <th scope="row" class="fw-medium">
+                            Analytics studio
+                          </th>
+                          <td>Data</td>
+                          <td>
+                            <span class="badge bg-info-transparent"
+                              >Planned</span
+                            >
+                          </td>
+                          <td>04 Nov</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Dark table</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      A dark table variant for contrasting surfaces.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table
+                      class="table text-nowrap align-middle mb-0 table-dark"
+                    >
+                      <thead class="">
+                        <tr>
+                          <th scope="col">Project</th>
+                          <th scope="col">Team</th>
+                          <th scope="col">Status</th>
+                          <th scope="col">Due date</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="">
+                          <th scope="row" class="fw-medium">
+                            Workspace redesign
+                          </th>
+                          <td>Design</td>
+                          <td>
+                            <span class="badge bg-secondary-transparent"
+                              >In progress</span
+                            >
+                          </td>
+                          <td>24 Oct</td>
+                        </tr>
+                        <tr class="">
+                          <th scope="row" class="fw-medium">Customer portal</th>
+                          <td>Engineering</td>
+                          <td>
+                            <span class="badge bg-warning-transparent"
+                              >Review</span
+                            >
+                          </td>
+                          <td>28 Oct</td>
+                        </tr>
+                        <tr class="">
+                          <th scope="row" class="fw-medium">
+                            Billing integration
+                          </th>
+                          <td>Platform</td>
+                          <td>
+                            <span class="badge bg-success-transparent"
+                              >Complete</span
+                            >
+                          </td>
+                          <td>30 Oct</td>
+                        </tr>
+                        <tr class="">
+                          <th scope="row" class="fw-medium">
+                            Analytics studio
+                          </th>
+                          <td>Data</td>
+                          <td>
+                            <span class="badge bg-info-transparent"
+                              >Planned</span
+                            >
+                          </td>
+                          <td>04 Nov</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Contextual rows</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Row colors identify project status.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table text-nowrap align-middle mb-0">
+                      <thead class="">
+                        <tr>
+                          <th scope="col">Project</th>
+                          <th scope="col">Team</th>
+                          <th scope="col">Status</th>
+                          <th scope="col">Due date</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="table-secondary">
+                          <th scope="row" class="fw-medium">
+                            Workspace redesign
+                          </th>
+                          <td>Design</td>
+                          <td>
+                            <span class="badge bg-secondary-transparent"
+                              >In progress</span
+                            >
+                          </td>
+                          <td>24 Oct</td>
+                        </tr>
+                        <tr class="table-warning">
+                          <th scope="row" class="fw-medium">Customer portal</th>
+                          <td>Engineering</td>
+                          <td>
+                            <span class="badge bg-warning-transparent"
+                              >Review</span
+                            >
+                          </td>
+                          <td>28 Oct</td>
+                        </tr>
+                        <tr class="table-success">
+                          <th scope="row" class="fw-medium">
+                            Billing integration
+                          </th>
+                          <td>Platform</td>
+                          <td>
+                            <span class="badge bg-success-transparent"
+                              >Complete</span
+                            >
+                          </td>
+                          <td>30 Oct</td>
+                        </tr>
+                        <tr class="table-info">
+                          <th scope="row" class="fw-medium">
+                            Analytics studio
+                          </th>
+                          <td>Data</td>
+                          <td>
+                            <span class="badge bg-info-transparent"
+                              >Planned</span
+                            >
+                          </td>
+                          <td>04 Nov</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Highlighted header</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      A subtle header background separates labels.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table text-nowrap align-middle mb-0">
+                      <thead class="table-light">
+                        <tr>
+                          <th scope="col">Project</th>
+                          <th scope="col">Team</th>
+                          <th scope="col">Status</th>
+                          <th scope="col">Due date</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="">
+                          <th scope="row" class="fw-medium">
+                            Workspace redesign
+                          </th>
+                          <td>Design</td>
+                          <td>
+                            <span class="badge bg-secondary-transparent"
+                              >In progress</span
+                            >
+                          </td>
+                          <td>24 Oct</td>
+                        </tr>
+                        <tr class="">
+                          <th scope="row" class="fw-medium">Customer portal</th>
+                          <td>Engineering</td>
+                          <td>
+                            <span class="badge bg-warning-transparent"
+                              >Review</span
+                            >
+                          </td>
+                          <td>28 Oct</td>
+                        </tr>
+                        <tr class="">
+                          <th scope="row" class="fw-medium">
+                            Billing integration
+                          </th>
+                          <td>Platform</td>
+                          <td>
+                            <span class="badge bg-success-transparent"
+                              >Complete</span
+                            >
+                          </td>
+                          <td>30 Oct</td>
+                        </tr>
+                        <tr class="">
+                          <th scope="row" class="fw-medium">
+                            Analytics studio
+                          </th>
+                          <td>Data</td>
+                          <td>
+                            <span class="badge bg-info-transparent"
+                              >Planned</span
+                            >
+                          </td>
+                          <td>04 Nov</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Project progress</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Progress indicators display completion visually.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table align-middle text-nowrap mb-0">
+                      <thead>
+                        <tr>
+                          <th scope="col">Project</th>
+                          <th scope="col">Completion</th>
+                          <th scope="col">Status</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row" class="fw-medium">
+                            Workspace redesign
+                          </th>
+                          <td>
+                            <div class="d-flex align-items-center gap-2">
+                              <div
+                                class="progress progress-sm flex-grow-1"
+                                role="progressbar"
+                                aria-label="Workspace redesign completion"
+                                aria-valuenow="78"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                              >
+                                <div
+                                  class="progress-bar bg-secondary"
+                                  style="width: 78%"
+                                ></div>
+                              </div>
+                              <span class="fs-12">78%</span>
+                            </div>
+                          </td>
+                          <td>
+                            <span class="badge bg-secondary-transparent"
+                              >In progress</span
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row" class="fw-medium">Customer portal</th>
+                          <td>
+                            <div class="d-flex align-items-center gap-2">
+                              <div
+                                class="progress progress-sm flex-grow-1"
+                                role="progressbar"
+                                aria-label="Customer portal completion"
+                                aria-valuenow="64"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                              >
+                                <div
+                                  class="progress-bar bg-warning"
+                                  style="width: 64%"
+                                ></div>
+                              </div>
+                              <span class="fs-12">64%</span>
+                            </div>
+                          </td>
+                          <td>
+                            <span class="badge bg-warning-transparent"
+                              >Review</span
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row" class="fw-medium">
+                            Billing integration
+                          </th>
+                          <td>
+                            <div class="d-flex align-items-center gap-2">
+                              <div
+                                class="progress progress-sm flex-grow-1"
+                                role="progressbar"
+                                aria-label="Billing integration completion"
+                                aria-valuenow="100"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                              >
+                                <div
+                                  class="progress-bar bg-success"
+                                  style="width: 100%"
+                                ></div>
+                              </div>
+                              <span class="fs-12">100%</span>
+                            </div>
+                          </td>
+                          <td>
+                            <span class="badge bg-success-transparent"
+                              >Complete</span
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row" class="fw-medium">
+                            Analytics studio
+                          </th>
+                          <td>
+                            <div class="d-flex align-items-center gap-2">
+                              <div
+                                class="progress progress-sm flex-grow-1"
+                                role="progressbar"
+                                aria-label="Analytics studio completion"
+                                aria-valuenow="32"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                              >
+                                <div
+                                  class="progress-bar bg-info"
+                                  style="width: 32%"
+                                ></div>
+                              </div>
+                              <span class="fs-12">32%</span>
+                            </div>
+                          </td>
+                          <td>
+                            <span class="badge bg-info-transparent"
+                              >Planned</span
+                            >
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Team ownership</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Existing profile images identify project owners.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table align-middle text-nowrap mb-0">
+                      <thead>
+                        <tr>
+                          <th scope="col">Project</th>
+                          <th scope="col">Owner</th>
+                          <th scope="col">Status</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row" class="fw-medium">
+                            Workspace redesign
+                          </th>
+                          <td>
+                            <div class="d-flex align-items-center gap-2">
+                              <img
+                                src="../assets/images/users/3.jpg"
+                                class="avatar avatar-xs rounded-circle"
+                                alt=""
+                              /><span>Amelia Hart</span>
+                            </div>
+                          </td>
+                          <td>
+                            <span class="badge bg-secondary-transparent"
+                              >In progress</span
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row" class="fw-medium">Customer portal</th>
+                          <td>
+                            <div class="d-flex align-items-center gap-2">
+                              <img
+                                src="../assets/images/users/5.jpg"
+                                class="avatar avatar-xs rounded-circle"
+                                alt=""
+                              /><span>Liam Carter</span>
+                            </div>
+                          </td>
+                          <td>
+                            <span class="badge bg-warning-transparent"
+                              >Review</span
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row" class="fw-medium">
+                            Billing integration
+                          </th>
+                          <td>
+                            <div class="d-flex align-items-center gap-2">
+                              <img
+                                src="../assets/images/users/10.jpg"
+                                class="avatar avatar-xs rounded-circle"
+                                alt=""
+                              /><span>Olivia Reed</span>
+                            </div>
+                          </td>
+                          <td>
+                            <span class="badge bg-success-transparent"
+                              >Complete</span
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row" class="fw-medium">
+                            Analytics studio
+                          </th>
+                          <td>
+                            <div class="d-flex align-items-center gap-2">
+                              <img
+                                src="../assets/images/users/12.jpg"
+                                class="avatar avatar-xs rounded-circle"
+                                alt=""
+                              /><span>Noah James</span>
+                            </div>
+                          </td>
+                          <td>
+                            <span class="badge bg-info-transparent"
+                              >Planned</span
+                            >
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Invoice register</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Amounts align right for easy comparison.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table
+                      class="table table-hover align-middle text-nowrap mb-0"
+                    >
+                      <thead>
+                        <tr>
+                          <th scope="col" class="">Invoice</th>
+                          <th scope="col" class="">Customer</th>
+                          <th scope="col" class="">Status</th>
+                          <th scope="col" class="text-end">Amount</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row" class="fw-medium">INV-1042</th>
+                          <td class="">Northstar Studio</td>
+                          <td class="">Paid</td>
+                          <td class="text-end">$2,450.00</td>
+                        </tr>
+                        <tr>
+                          <th scope="row" class="fw-medium">INV-1043</th>
+                          <td class="">Cedar Systems</td>
+                          <td class="">Pending</td>
+                          <td class="text-end">$1,820.00</td>
+                        </tr>
+                        <tr>
+                          <th scope="row" class="fw-medium">INV-1044</th>
+                          <td class="">Orbit Labs</td>
+                          <td class="">Paid</td>
+                          <td class="text-end">$3,600.00</td>
+                        </tr>
+                        <tr>
+                          <th scope="row" class="fw-medium">INV-1045</th>
+                          <td class="">Atlas Works</td>
+                          <td class="">Draft</td>
+                          <td class="text-end">$960.00</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Document library</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      File details organized into a compact list.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table
+                      class="table table-hover align-middle text-nowrap mb-0"
+                    >
+                      <thead>
+                        <tr>
+                          <th scope="col" class="">Document</th>
+                          <th scope="col" class="">Type</th>
+                          <th scope="col" class="">Team</th>
+                          <th scope="col" class="text-end">Size</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row" class="fw-medium">
+                            Project brief.pdf
+                          </th>
+                          <td class="">PDF</td>
+                          <td class="">Design</td>
+                          <td class="text-end">2.4 MB</td>
+                        </tr>
+                        <tr>
+                          <th scope="row" class="fw-medium">
+                            Release notes.docx
+                          </th>
+                          <td class="">DOCX</td>
+                          <td class="">Platform</td>
+                          <td class="text-end">840 KB</td>
+                        </tr>
+                        <tr>
+                          <th scope="row" class="fw-medium">
+                            Budget plan.xlsx
+                          </th>
+                          <td class="">XLSX</td>
+                          <td class="">Finance</td>
+                          <td class="text-end">1.2 MB</td>
+                        </tr>
+                        <tr>
+                          <th scope="row" class="fw-medium">
+                            Brand assets.zip
+                          </th>
+                          <td class="">ZIP</td>
+                          <td class="">Design</td>
+                          <td class="text-end">18.6 MB</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Selectable projects</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Select individual rows or the entire project list.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table
+                      class="table text-nowrap align-middle mb-0 table-hover"
+                    >
+                      <thead class="">
+                        <tr>
+                          <th scope="col">
+                            <input
+                              id="table-select-all"
+                              class="form-check-input"
+                              type="checkbox"
+                              aria-label="Select all projects"
+                            />
+                          </th>
+                          <th scope="col">Project</th>
+                          <th scope="col">Team</th>
+                          <th scope="col">Status</th>
+                          <th scope="col">Due date</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="">
+                          <td>
+                            <input
+                              class="form-check-input"
+                              data-table-select
+                              type="checkbox"
+                              aria-label="Select Workspace redesign"
+                            />
+                          </td>
+                          <th scope="row" class="fw-medium">
+                            Workspace redesign
+                          </th>
+                          <td>Design</td>
+                          <td>
+                            <span class="badge bg-secondary-transparent"
+                              >In progress</span
+                            >
+                          </td>
+                          <td>24 Oct</td>
+                        </tr>
+                        <tr class="">
+                          <td>
+                            <input
+                              class="form-check-input"
+                              data-table-select
+                              type="checkbox"
+                              aria-label="Select Customer portal"
+                            />
+                          </td>
+                          <th scope="row" class="fw-medium">Customer portal</th>
+                          <td>Engineering</td>
+                          <td>
+                            <span class="badge bg-warning-transparent"
+                              >Review</span
+                            >
+                          </td>
+                          <td>28 Oct</td>
+                        </tr>
+                        <tr class="">
+                          <td>
+                            <input
+                              class="form-check-input"
+                              data-table-select
+                              type="checkbox"
+                              aria-label="Select Billing integration"
+                            />
+                          </td>
+                          <th scope="row" class="fw-medium">
+                            Billing integration
+                          </th>
+                          <td>Platform</td>
+                          <td>
+                            <span class="badge bg-success-transparent"
+                              >Complete</span
+                            >
+                          </td>
+                          <td>30 Oct</td>
+                        </tr>
+                        <tr class="">
+                          <td>
+                            <input
+                              class="form-check-input"
+                              data-table-select
+                              type="checkbox"
+                              aria-label="Select Analytics studio"
+                            />
+                          </td>
+                          <th scope="row" class="fw-medium">
+                            Analytics studio
+                          </th>
+                          <td>Data</td>
+                          <td>
+                            <span class="badge bg-info-transparent"
+                              >Planned</span
+                            >
+                          </td>
+                          <td>04 Nov</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <p
+                    id="table-selection-status"
+                    class="text-muted fs-12 mt-2 mb-0"
+                    role="status"
+                  >
+                    0 selected
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Searchable projects</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Filter project records by name, team or status.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <label
+                    for="table-project-search"
+                    class="form-label visually-hidden"
+                    >Search projects</label
+                  ><input
+                    id="table-project-search"
+                    type="search"
+                    class="form-control mb-3"
+                    placeholder="Search projects, teams or status..."
+                  />
+                  <div id="table-search-results">
+                    <div class="table-responsive">
+                      <table
+                        class="table text-nowrap align-middle mb-0 table-hover"
+                      >
+                        <thead class="">
+                          <tr>
+                            <th scope="col">Project</th>
+                            <th scope="col">Team</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Due date</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="">
+                            <th scope="row" class="fw-medium">
+                              Workspace redesign
+                            </th>
+                            <td>Design</td>
+                            <td>
+                              <span class="badge bg-secondary-transparent"
+                                >In progress</span
+                              >
+                            </td>
+                            <td>24 Oct</td>
+                          </tr>
+                          <tr class="">
+                            <th scope="row" class="fw-medium">
+                              Customer portal
+                            </th>
+                            <td>Engineering</td>
+                            <td>
+                              <span class="badge bg-warning-transparent"
+                                >Review</span
+                              >
+                            </td>
+                            <td>28 Oct</td>
+                          </tr>
+                          <tr class="">
+                            <th scope="row" class="fw-medium">
+                              Billing integration
+                            </th>
+                            <td>Platform</td>
+                            <td>
+                              <span class="badge bg-success-transparent"
+                                >Complete</span
+                              >
+                            </td>
+                            <td>30 Oct</td>
+                          </tr>
+                          <tr class="">
+                            <th scope="row" class="fw-medium">
+                              Analytics studio
+                            </th>
+                            <td>Data</td>
+                            <td>
+                              <span class="badge bg-info-transparent"
+                                >Planned</span
+                              >
+                            </td>
+                            <td>04 Nov</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <p
+                    id="table-search-status"
+                    class="text-muted fs-12 mt-2 mb-0"
+                    role="status"
+                  >
+                    4 projects
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <!-- include common-scripts.html"-->
+
+    <!-- include appearance-customizer-scripts.html"-->
+
+    <!-- Prism JS -->
+    <script src="../assets/libs/prismjs/prism.js"></script>
+    <script src="../assets/js/prism-custom.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/app-interactions.js"></script>
+    <script src="../assets/js/tables.js"></script>
+  </body>
+</html>

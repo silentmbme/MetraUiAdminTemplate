@@ -1,0 +1,942 @@
+<!-- include document-head.html"-->
+    <link
+      rel="stylesheet"
+      href="../assets/libs/prismjs/themes/prism-coy.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"--><!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"--><!-- include side-navigation.html"-->
+      <main data-markup-examples class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Utilities</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Components</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Utilities
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xxl-6">
+              <section id="borders" class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Borders & radius</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Define edges with semantic colors and rounded shapes.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex flex-wrap gap-3">
+                    <div class="border p-3 fs-12">border</div>
+                    <div class="border border-primary p-3 fs-12">
+                      border border-primary
+                    </div>
+                    <div class="border border-success rounded-3 p-3 fs-12">
+                      border border-success rounded-3
+                    </div>
+                    <div class="border border-info rounded-pill p-3 fs-12">
+                      border border-info rounded-pill
+                    </div>
+                    <div class="border-top border-primary border-3 p-3 fs-12">
+                      border-top border-primary border-3
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-12">
+              <section id="breakpoints" class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Responsive breakpoints</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      The standard Bootstrap widths used throughout the project.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table table-sm mb-0">
+                      <thead>
+                        <tr>
+                          <th scope="col">Tier</th>
+                          <th scope="col">Minimum width</th>
+                          <th scope="col">Example</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>xs</td>
+                          <td>0</td>
+                          <td><code>col-12</code></td>
+                        </tr>
+                        <tr>
+                          <td>sm</td>
+                          <td>576px</td>
+                          <td><code>col-sm-6</code></td>
+                        </tr>
+                        <tr>
+                          <td>md</td>
+                          <td>768px</td>
+                          <td><code>col-md-4</code></td>
+                        </tr>
+                        <tr>
+                          <td>lg</td>
+                          <td>992px</td>
+                          <td><code>col-lg-3</code></td>
+                        </tr>
+                        <tr>
+                          <td>xl</td>
+                          <td>1200px</td>
+                          <td><code>col-xl-2</code></td>
+                        </tr>
+                        <tr>
+                          <td>xxl</td>
+                          <td>1400px</td>
+                          <td><code>col-xxl-2</code></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-12">
+              <section id="colors" class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Background Colors</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Explore the theme palette with compact swatches and clear
+                      utility labels.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="row g-3">
+                    <div class="col-6 col-md-3">
+                      <div class="border rounded p-3 h-100">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                          <span
+                            class="avatar avatar-sm rounded bg-primary"
+                          ></span
+                          ><span class="fs-13 fw-medium text-capitalize"
+                            >primary</span
+                          >
+                        </div>
+                        <code class="fs-11 text-break">.bg-primary</code>
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                      <div class="border rounded p-3 h-100">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                          <span
+                            class="avatar avatar-sm rounded bg-secondary"
+                          ></span
+                          ><span class="fs-13 fw-medium text-capitalize"
+                            >secondary</span
+                          >
+                        </div>
+                        <code class="fs-11 text-break">.bg-secondary</code>
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                      <div class="border rounded p-3 h-100">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                          <span
+                            class="avatar avatar-sm rounded bg-success"
+                          ></span
+                          ><span class="fs-13 fw-medium text-capitalize"
+                            >success</span
+                          >
+                        </div>
+                        <code class="fs-11 text-break">.bg-success</code>
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                      <div class="border rounded p-3 h-100">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                          <span
+                            class="avatar avatar-sm rounded bg-danger"
+                          ></span
+                          ><span class="fs-13 fw-medium text-capitalize"
+                            >danger</span
+                          >
+                        </div>
+                        <code class="fs-11 text-break">.bg-danger</code>
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                      <div class="border rounded p-3 h-100">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                          <span
+                            class="avatar avatar-sm rounded bg-warning"
+                          ></span
+                          ><span class="fs-13 fw-medium text-capitalize"
+                            >warning</span
+                          >
+                        </div>
+                        <code class="fs-11 text-break">.bg-warning</code>
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                      <div class="border rounded p-3 h-100">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                          <span class="avatar avatar-sm rounded bg-info"></span
+                          ><span class="fs-13 fw-medium text-capitalize"
+                            >info</span
+                          >
+                        </div>
+                        <code class="fs-11 text-break">.bg-info</code>
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                      <div class="border rounded p-3 h-100">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                          <span
+                            class="avatar avatar-sm rounded bg-light border"
+                          ></span
+                          ><span class="fs-13 fw-medium text-capitalize"
+                            >light</span
+                          >
+                        </div>
+                        <code class="fs-11 text-break">.bg-light</code>
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                      <div class="border rounded p-3 h-100">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                          <span class="avatar avatar-sm rounded bg-dark"></span
+                          ><span class="fs-13 fw-medium text-capitalize"
+                            >dark</span
+                          >
+                        </div>
+                        <code class="fs-11 text-break">.bg-dark</code>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="text-muted fs-12 mt-3 mb-0">
+                    Use small color accents to distinguish states while keeping
+                    the surrounding layout light.
+                  </p>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section id="color-background" class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Background outline colors</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Light surfaces, colored borders, and matching icons for
+                      softer emphasis.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="row g-3">
+                    <div class="col-6 col-md-3">
+                      <div class="border rounded p-3 h-100">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                          <span
+                            class="avatar avatar-sm rounded bg-outline-primary"
+                            ><i
+                              class="ri-palette-line fs-18"
+                              aria-hidden="true"
+                            ></i></span
+                          ><span class="fs-13 fw-medium text-capitalize"
+                            >primary</span
+                          >
+                        </div>
+                        <code class="fs-11 text-break"
+                          >.bg-outline-primary</code
+                        >
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                      <div class="border rounded p-3 h-100">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                          <span
+                            class="avatar avatar-sm rounded bg-outline-secondary"
+                            ><i
+                              class="ri-palette-line fs-18"
+                              aria-hidden="true"
+                            ></i></span
+                          ><span class="fs-13 fw-medium text-capitalize"
+                            >secondary</span
+                          >
+                        </div>
+                        <code class="fs-11 text-break"
+                          >.bg-outline-secondary</code
+                        >
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                      <div class="border rounded p-3 h-100">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                          <span
+                            class="avatar avatar-sm rounded bg-outline-success"
+                            ><i
+                              class="ri-palette-line fs-18"
+                              aria-hidden="true"
+                            ></i></span
+                          ><span class="fs-13 fw-medium text-capitalize"
+                            >success</span
+                          >
+                        </div>
+                        <code class="fs-11 text-break"
+                          >.bg-outline-success</code
+                        >
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                      <div class="border rounded p-3 h-100">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                          <span
+                            class="avatar avatar-sm rounded bg-outline-danger"
+                            ><i
+                              class="ri-palette-line fs-18"
+                              aria-hidden="true"
+                            ></i></span
+                          ><span class="fs-13 fw-medium text-capitalize"
+                            >danger</span
+                          >
+                        </div>
+                        <code class="fs-11 text-break">.bg-outline-danger</code>
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                      <div class="border rounded p-3 h-100">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                          <span
+                            class="avatar avatar-sm rounded bg-outline-warning"
+                            ><i
+                              class="ri-palette-line fs-18"
+                              aria-hidden="true"
+                            ></i></span
+                          ><span class="fs-13 fw-medium text-capitalize"
+                            >warning</span
+                          >
+                        </div>
+                        <code class="fs-11 text-break"
+                          >.bg-outline-warning</code
+                        >
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                      <div class="border rounded p-3 h-100">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                          <span class="avatar avatar-sm rounded bg-outline-info"
+                            ><i
+                              class="ri-palette-line fs-18"
+                              aria-hidden="true"
+                            ></i></span
+                          ><span class="fs-13 fw-medium text-capitalize"
+                            >info</span
+                          >
+                        </div>
+                        <code class="fs-11 text-break">.bg-outline-info</code>
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                      <div class="border rounded p-3 h-100">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                          <span
+                            class="avatar avatar-sm rounded bg-outline-light border"
+                            ><i
+                              class="ri-palette-line fs-18"
+                              aria-hidden="true"
+                            ></i></span
+                          ><span class="fs-13 fw-medium text-capitalize"
+                            >light</span
+                          >
+                        </div>
+                        <code class="fs-11 text-break">.bg-outline-light</code>
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                      <div class="border rounded p-3 h-100">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                          <span class="avatar avatar-sm rounded bg-outline-dark"
+                            ><i
+                              class="ri-palette-line fs-18"
+                              aria-hidden="true"
+                            ></i></span
+                          ><span class="fs-13 fw-medium text-capitalize"
+                            >dark</span
+                          >
+                        </div>
+                        <code class="fs-11 text-break">.bg-outline-dark</code>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="text-muted fs-12 mt-3 mb-0">
+                    Use outline colors for subtle icons, supporting details, and
+                    quieter emphasis.
+                  </p>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section id="columns" class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Responsive columns</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Stack on small screens and split at the medium breakpoint.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="row g-3 mb-3">
+                    <div class="col-12 col-md-8">
+                      <div class="bg-light rounded p-3 fs-13">col-md-8</div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                      <div class="bg-light rounded p-3 fs-13">col-md-4</div>
+                    </div>
+                  </div>
+                  <div class="row g-3">
+                    <div class="col-12 col-sm-4">
+                      <div class="bg-light rounded p-3 fs-13">col-sm-4</div>
+                    </div>
+                    <div class="col-12 col-sm-4">
+                      <div class="bg-light rounded p-3 fs-13">col-sm-4</div>
+                    </div>
+                    <div class="col-12 col-sm-4">
+                      <div class="bg-light rounded p-3 fs-13">col-sm-4</div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section id="grid" class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">CSS grid</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Equal-width tracks without fixed pixel widths.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    style="
+                      display: grid;
+                      grid-template-columns: repeat(3, minmax(0, 1fr));
+                      gap: 1rem;
+                    "
+                  >
+                    <div class="bg-light rounded p-3 fs-13">01</div>
+                    <div class="bg-light rounded p-3 fs-13">02</div>
+                    <div class="bg-light rounded p-3 fs-13">03</div>
+                    <div
+                      class="border rounded p-3 fs-13"
+                      style="grid-column: span 2"
+                    >
+                      Spans two tracks
+                    </div>
+                    <div class="bg-light rounded p-3 fs-13">06</div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xl-6">
+              <section id="spacing" class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Spacing</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      A predictable scale for padding, margins, and gaps.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex flex-wrap align-items-start gap-3">
+                    <div class="bg-light rounded">
+                      <div class="p-1 border rounded fs-12">p-1</div>
+                    </div>
+                    <div class="bg-light rounded">
+                      <div class="p-2 border rounded fs-12">p-2</div>
+                    </div>
+                    <div class="bg-light rounded">
+                      <div class="p-3 border rounded fs-12">p-3</div>
+                    </div>
+                    <div class="bg-light rounded">
+                      <div class="p-4 border rounded fs-12">p-4</div>
+                    </div>
+                    <div class="bg-light rounded">
+                      <div class="p-5 border rounded fs-12">p-5</div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xl-6">
+              <section id="position" class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Position & badges</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Anchor contextual labels inside a relative container.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="position-relative bg-light border rounded p-4"
+                    style="min-height: 150px"
+                  >
+                    <span
+                      class="position-absolute top-0 end-0 badge bg-success m-2"
+                      >Available</span
+                    >
+                    <div class="mt-3">
+                      <h3 class="fs-15 fw-semibold">Team workspace</h3>
+                      <p class="text-muted fs-13 mb-0">
+                        A badge stays pinned to the top right.
+                      </p>
+                    </div>
+                    <span
+                      class="position-absolute bottom-0 start-0 fs-11 text-muted m-2"
+                      >position-relative + position-absolute</span
+                    >
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xl-6">
+              <section id="sizing" class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Sizing</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Percentage widths that adapt to their parent container.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex flex-column gap-2">
+                    <div
+                      class="w-25 bg-success-transparent text-success rounded p-2 fs-12"
+                    >
+                      w-25
+                    </div>
+                    <div
+                      class="w-50 bg-success-transparent text-success rounded p-2 fs-12"
+                    >
+                      w-50
+                    </div>
+                    <div
+                      class="w-75 bg-success-transparent text-success rounded p-2 fs-12"
+                    >
+                      w-75
+                    </div>
+                    <div
+                      class="w-100 bg-success-transparent text-success rounded p-2 fs-12"
+                    >
+                      w-100
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xl-6">
+              <section id="shadows" class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Shadows & elevation</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Subtle depth for panels and supporting content.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="row g-4 py-2">
+                    <div class="col-6">
+                      <div
+                        class="shadow-none border rounded p-3 text-center fs-12"
+                      >
+                        shadow-none
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div
+                        class="shadow-sm border rounded p-3 text-center fs-12"
+                      >
+                        shadow-sm
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="shadow border rounded p-3 text-center fs-12">
+                        shadow
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div
+                        class="shadow-lg border rounded p-3 text-center fs-12"
+                      >
+                        shadow-lg
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xl-6">
+              <section id="display" class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Display & visibility</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Change what appears at different screen widths.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="d-md-none bg-info-transparent text-info rounded p-3 mb-3 fs-13"
+                  >
+                    Visible below the medium breakpoint.
+                  </div>
+                  <div
+                    class="d-none d-md-block bg-success-transparent text-success rounded p-3 mb-3 fs-13"
+                  >
+                    Visible from the medium breakpoint upward.
+                  </div>
+                  <div class="d-flex gap-2 flex-wrap">
+                    <span class="badge bg-light text-default">d-block</span
+                    ><span class="badge bg-light text-default"
+                      >d-inline-flex</span
+                    ><span class="badge bg-light text-default">d-none</span>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xl-6">
+              <section id="overflow" class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Overflow & truncation</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Contain long content while keeping the layout stable.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="border rounded p-3 mb-3">
+                    <p class="text-truncate fs-13 mb-1">
+                      Quarterly workspace performance summary and
+                      recommendations for the upcoming product release.
+                    </p>
+                    <code class="fs-12">text-truncate</code>
+                  </div>
+                  <div
+                    class="overflow-auto border rounded p-3"
+                    style="max-height: 100px"
+                  >
+                    <p class="fs-13 mb-2">
+                      Scrollable content stays within its container.
+                    </p>
+                    <p class="text-muted fs-13 mb-2">
+                      Project notes, shared documents, and team feedback.
+                    </p>
+                    <p class="text-muted fs-13 mb-0">
+                      Additional information is available by scrolling.
+                    </p>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xl-6">
+              <section id="helpers" class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Layout helpers</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Stacks, separators, ratios, and accessible labels.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="hstack gap-3 border rounded p-3 mb-3 fs-13">
+                    <span>Draft</span>
+                    <div class="vr"></div>
+                    <span>Review</span
+                    ><span class="ms-auto badge bg-secondary-transparent"
+                      >Next</span
+                    >
+                  </div>
+                  <div class="ratio ratio-21x9 bg-light rounded">
+                    <div
+                      class="d-flex align-items-center justify-content-center text-muted fs-13"
+                    >
+                      Responsive 21:9 container
+                    </div>
+                  </div>
+                  <p class="text-muted fs-12 mt-3 mb-0">
+                    <code>visually-hidden</code> keeps supporting text available
+                    to screen readers.
+                  </p>
+                </div>
+              </section>
+            </div>
+            <div class="col-xl-6">
+              <section id="additional" class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Additional utilities</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Opacity, selection, and readable text treatment.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex flex-wrap gap-2 mb-3">
+                    <span
+                      class="bg-secondary text-fixed-white rounded p-2 opacity-25 fs-12"
+                      >25%</span
+                    ><span
+                      class="bg-secondary text-fixed-white rounded p-2 opacity-50 fs-12"
+                      >50%</span
+                    ><span
+                      class="bg-secondary text-fixed-white rounded p-2 opacity-75 fs-12"
+                      >75%</span
+                    ><span
+                      class="bg-secondary text-fixed-white rounded p-2 opacity-100 fs-12"
+                      >100%</span
+                    >
+                  </div>
+                  <p class="user-select-all fs-13 border rounded p-3 mb-3">
+                    Click to select this entire sample with user-select-all.
+                  </p>
+                  <div class="d-flex flex-wrap gap-3 fs-13">
+                    <span class="text-uppercase">Uppercase</span
+                    ><span class="text-decoration-underline">Underline</span
+                    ><span class="fst-italic">Italic text</span>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xl-6">
+              <section id="z-index" class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Z-index</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Control which positioned elements appear above others.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="position-relative border rounded bg-light mb-3"
+                    style="height: 210px; isolation: isolate"
+                  >
+                    <div
+                      class="position-absolute z-1 bg-info text-fixed-white rounded p-3 fs-13"
+                      style="top: 20px; left: 20px; width: 150px; height: 90px"
+                    >
+                      Back layer<br /><code class="text-fixed-white">z-1</code>
+                    </div>
+                    <div
+                      class="position-absolute z-2 bg-primary text-fixed-white rounded p-3 fs-13"
+                      style="top: 60px; left: 60px; width: 150px; height: 90px"
+                    >
+                      Middle layer<br /><code class="text-fixed-white"
+                        >z-2</code
+                      >
+                    </div>
+                    <div
+                      class="position-absolute z-3 bg-success text-fixed-white rounded p-3 fs-13"
+                      style="
+                        top: 100px;
+                        left: 100px;
+                        width: 150px;
+                        height: 90px;
+                      "
+                    >
+                      Front layer<br /><code class="text-fixed-white">z-3</code>
+                    </div>
+                  </div>
+                  <p class="text-muted fs-12 mb-0">
+                    Combine <code>z-0</code> through <code>z-3</code> with a
+                    positioned element. Use <code>z-n1</code> for a negative
+                    layer.
+                  </p>
+                </div>
+              </section>
+            </div>
+            <div class="col-xl-6">
+              <section id="object-fit" class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Object Fit</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Compare how the same image fills a fixed-size frame.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="row g-3">
+                    <div class="col-6 col-sm-4">
+                      <figure class="mb-0">
+                        <div class="border rounded bg-light overflow-hidden">
+                          <img
+                            src="../assets/images/cards/1.jpg"
+                            alt="Mountain lake demonstrating object-fit cover"
+                            class="w-100 object-fit-cover"
+                            style="height: 100px"
+                            loading="lazy"
+                          />
+                        </div>
+                        <figcaption class="text-center fs-12 mt-2">
+                          <code>object-fit-cover</code>
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <div class="col-6 col-sm-4">
+                      <figure class="mb-0">
+                        <div class="border rounded bg-light overflow-hidden">
+                          <img
+                            src="../assets/images/cards/1.jpg"
+                            alt="Mountain lake demonstrating object-fit contain"
+                            class="w-100 object-fit-contain"
+                            style="height: 100px"
+                            loading="lazy"
+                          />
+                        </div>
+                        <figcaption class="text-center fs-12 mt-2">
+                          <code>object-fit-contain</code>
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <div class="col-6 col-sm-4">
+                      <figure class="mb-0">
+                        <div class="border rounded bg-light overflow-hidden">
+                          <img
+                            src="../assets/images/cards/1.jpg"
+                            alt="Mountain lake demonstrating object-fit fill"
+                            class="w-100 object-fit-fill"
+                            style="height: 100px"
+                            loading="lazy"
+                          />
+                        </div>
+                        <figcaption class="text-center fs-12 mt-2">
+                          <code>object-fit-fill</code>
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <div class="col-6 col-sm-4">
+                      <figure class="mb-0">
+                        <div class="border rounded bg-light overflow-hidden">
+                          <img
+                            src="../assets/images/cards/1.jpg"
+                            alt="Mountain lake demonstrating object-fit scale-down"
+                            class="w-100 object-fit-scale-down"
+                            style="height: 100px"
+                            loading="lazy"
+                          />
+                        </div>
+                        <figcaption class="text-center fs-12 mt-2">
+                          <code>object-fit-scale-down</code>
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <div class="col-6 col-sm-4">
+                      <figure class="mb-0">
+                        <div class="border rounded bg-light overflow-hidden">
+                          <img
+                            src="../assets/images/cards/1.jpg"
+                            alt="Mountain lake demonstrating object-fit none"
+                            class="w-100 object-fit-none"
+                            style="height: 100px"
+                            loading="lazy"
+                          />
+                        </div>
+                        <figcaption class="text-center fs-12 mt-2">
+                          <code>object-fit-none</code>
+                        </figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section id="background-opacity" class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Background Opacity</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Soften the background while keeping text and icons fully
+                      visible.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="row g-2">
+                    <div class="col-6 col-sm-4">
+                      <div class="bg-primary bg-opacity-10 rounded p-3">
+                        <strong class="fs-15 d-block text-default">10%</strong
+                        ><span class="fs-11 text-default">Background only</span>
+                      </div>
+                      <code class="fs-11 d-block mt-1">bg-opacity-10</code>
+                    </div>
+                    <div class="col-6 col-sm-4">
+                      <div class="bg-primary bg-opacity-25 rounded p-3">
+                        <strong class="fs-15 d-block text-default">25%</strong
+                        ><span class="fs-11 text-default">Background only</span>
+                      </div>
+                      <code class="fs-11 d-block mt-1">bg-opacity-25</code>
+                    </div>
+                    <div class="col-6 col-sm-4">
+                      <div class="bg-primary bg-opacity-50 rounded p-3">
+                        <strong class="fs-15 d-block text-default">50%</strong
+                        ><span class="fs-11 text-default">Background only</span>
+                      </div>
+                      <code class="fs-11 d-block mt-1">bg-opacity-50</code>
+                    </div>
+                    <div class="col-6 col-sm-4">
+                      <div class="bg-primary bg-opacity-75 rounded p-3">
+                        <strong class="fs-15 d-block text-default">75%</strong
+                        ><span class="fs-11 text-default">Background only</span>
+                      </div>
+                      <code class="fs-11 d-block mt-1">bg-opacity-75</code>
+                    </div>
+                    <div class="col-6 col-sm-4">
+                      <div class="bg-primary bg-opacity-100 rounded p-3">
+                        <strong class="fs-15 d-block text-default">100%</strong
+                        ><span class="fs-11 text-default">Background only</span>
+                      </div>
+                      <code class="fs-11 d-block mt-1">bg-opacity-100</code>
+                    </div>
+                  </div>
+                  <p class="text-muted fs-12 mt-3 mb-0">
+                    Use <code>bg-primary bg-opacity-25</code> for subtle
+                    emphasis. Colors follow the project's theme opacity scale.
+                  </p>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"--><!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"--><!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/js/app-interactions.js"></script>
+    <script src="../assets/libs/prismjs/prism.js"></script>
+    <script src="../assets/js/prism-custom.js"></script>
+  </body>
+</html>

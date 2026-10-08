@@ -1,0 +1,588 @@
+<!-- include document-head.html"-->
+  </head>
+
+  <body class="project-reference-overview-page">
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <div>
+            <h1 class="page-title">Project Overview</h1>
+          </div>
+          <ol class="breadcrumb mb-1">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">
+              <a href="projects-dashboard.html">Projects</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Project Overview
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid">
+          <div class="row g-0 mb-4 project-reference-layout">
+            <div class="col-xl-9 project-reference-main">
+              <section
+                class="project-reference-summary"
+                aria-labelledby="project-name"
+              >
+                <div class="project-reference-heading">
+                  <span class="project-reference-logo"
+                    ><img
+                      src="../assets/images/logos/1.png"
+                      alt="Atlas Corporation logo"
+                  /></span>
+                  <div class="project-reference-title">
+                    <span class="project-reference-updated"
+                      >PROJECT PLT-024 <span class="mx-1">·</span> Updated 5
+                      minutes ago</span
+                    >
+                    <h2 id="project-name">Atlas client portal</h2>
+                    <span class="badge project-reference-status"
+                      ><i class="ri-checkbox-circle-line me-1"></i>In
+                      progress</span
+                    >
+                  </div>
+                  <a
+                    href="projects-create.html"
+                    class="btn btn-sm btn-light project-reference-edit"
+                    ><i class="ri-pencil-line me-1"></i>Edit project</a
+                  >
+                </div>
+
+                <div class="project-reference-description">
+                  <h3>Project description</h3>
+                  <p>
+                    A secure and user-friendly self-service portal designed to
+                    simplify client onboarding, account management, and support
+                    requests. Atlas brings essential client services together in
+                    one centralized platform, making it easier for users to
+                    access information, complete required actions, and manage
+                    their accounts efficiently.
+                  </p>
+                  <p>
+                    The portal provides clear account information, guided
+                    workflows, document and profile management, and streamlined
+                    support interactions.
+                  </p>
+                </div>
+
+                <dl class="project-reference-meta">
+                  <div>
+                    <dt>Created date</dt>
+                    <dd>September 02, 2026</dd>
+                  </div>
+                  <div>
+                    <dt>Deadline</dt>
+                    <dd>October 18, 2026</dd>
+                  </div>
+                  <div>
+                    <dt>Created by</dt>
+                    <dd>Jenna Foster</dd>
+                  </div>
+                  <div>
+                    <dt>Client</dt>
+                    <dd>Atlas Corporation</dd>
+                  </div>
+                </dl>
+              </section>
+
+              <div
+                class="project-reference-tabs"
+                role="tablist"
+                aria-label="Project sections"
+              >
+                <button
+                  class="active"
+                  id="project-comments-tab"
+                  type="button"
+                  role="tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#project-comments-pane"
+                  aria-controls="project-comments-pane"
+                  aria-selected="true"
+                >
+                  <i class="ri-chat-3-line me-1"></i>Comments
+                  <span class="badge bg-light ms-1">15</span>
+                </button>
+                <button
+                  id="project-tasks-tab"
+                  type="button"
+                  role="tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#project-tasks-pane"
+                  aria-controls="project-tasks-pane"
+                  aria-selected="false"
+                >
+                  <i class="ri-list-check-3 me-1"></i>Task list
+                </button>
+                <button
+                  id="project-activity-tab"
+                  type="button"
+                  role="tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#project-activity-pane"
+                  aria-controls="project-activity-pane"
+                  aria-selected="false"
+                >
+                  <i class="ri-pulse-line me-1"></i>Activity
+                </button>
+              </div>
+              <div class="tab-content project-reference-tab-content">
+                <section
+                  class="tab-pane fade show active project-reference-section"
+                  id="project-comments-pane"
+                  role="tabpanel"
+                  aria-labelledby="project-comments-tab"
+                  tabindex="0"
+                >
+                  <div class="project-reference-section-heading">
+                    <h3>
+                      Comments <span class="text-muted fw-normal">(15)</span>
+                    </h3>
+                    <span class="text-muted fs-12">Latest discussion</span>
+                  </div>
+                  <div class="project-reference-composer">
+                    <label class="visually-hidden" for="project-comment"
+                      >Write a project comment</label
+                    ><textarea
+                      id="project-comment"
+                      class="form-control"
+                      rows="2"
+                      placeholder="Enter your message..."
+                    ></textarea>
+                    <div class="d-flex justify-content-end mt-2">
+                      <button class="btn btn-sm btn-dark" type="button">
+                        Comment<i class="ri-send-plane-line ms-1"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <article class="project-reference-comment">
+                    <span class="avatar avatar-sm avatar-rounded"
+                      ><img src="../assets/images/users/3.jpg" alt=""
+                    /></span>
+                    <div class="project-reference-comment-body">
+                      <div class="project-reference-comment-meta">
+                        <strong>Noah Bennett</strong
+                        ><time datetime="2026-10-02T09:20"
+                          >Oct 02, 2026 · 9:20 AM</time
+                        >
+                      </div>
+                      <p>
+                        The client portal checkout flow freezes after submitting
+                        payment information. Can we review the latest build?
+                      </p>
+                      <a
+                        href="#project-comment"
+                        class="project-reference-reply"
+                      >
+                        <i class="ri-reply-line me-1"></i>Reply</a
+                      >
+                      <article class="project-reference-comment is-nested">
+                        <span class="avatar avatar-sm avatar-rounded"
+                          ><img src="../assets/images/users/1.jpg" alt=""
+                        /></span>
+                        <div class="project-reference-comment-body">
+                          <div class="project-reference-comment-meta">
+                            <strong>Jenna Foster</strong
+                            ><time datetime="2026-10-02T09:45"
+                              >Oct 02, 2026 · 9:45 AM</time
+                            >
+                          </div>
+                          <p>
+                            Thanks, I’ve asked QA to reproduce this against the
+                            current staging build.
+                          </p>
+                          <a
+                            href="#project-comment"
+                            class="project-reference-reply"
+                            ><i class="ri-reply-line me-1"></i>Reply</a
+                          >
+                        </div>
+                      </article>
+                    </div>
+                  </article>
+                  <article class="project-reference-comment">
+                    <span class="avatar avatar-sm avatar-rounded"
+                      ><img src="../assets/images/users/8.jpg" alt=""
+                    /></span>
+                    <div class="project-reference-comment-body">
+                      <div class="project-reference-comment-meta">
+                        <strong>Mia Chen</strong
+                        ><time datetime="2026-10-02T08:10"
+                          >Oct 02, 2026 · 8:10 AM</time
+                        >
+                      </div>
+                      <p>
+                        I can reproduce the issue in Safari. Updated test notes
+                        are attached to the accessibility audit.
+                      </p>
+                      <a href="#project-comment" class="project-reference-reply"
+                        ><i class="ri-reply-line me-1"></i>Reply</a
+                      >
+                    </div>
+                  </article>
+                  <article class="project-reference-comment">
+                    <span class="avatar avatar-sm avatar-rounded"
+                      ><img src="../assets/images/users/5.jpg" alt=""
+                    /></span>
+                    <div class="project-reference-comment-body">
+                      <div class="project-reference-comment-meta">
+                        <strong>Ava Thompson</strong
+                        ><time datetime="2026-10-01T16:30"
+                          >Oct 01, 2026 · 4:30 PM</time
+                        >
+                      </div>
+                      <p>
+                        The latest frontend build is on staging now. The payment
+                        flow is ready for another pass.
+                      </p>
+                      <a href="#project-comment" class="project-reference-reply"
+                        ><i class="ri-reply-line me-1"></i>Reply</a
+                      >
+                    </div>
+                  </article>
+                  <article class="project-reference-comment">
+                    <span class="avatar avatar-sm avatar-rounded"
+                      ><img src="../assets/images/users/6.jpg" alt=""
+                    /></span>
+                    <div class="project-reference-comment-body">
+                      <div class="project-reference-comment-meta">
+                        <strong>Marcus Reed</strong
+                        ><time datetime="2026-10-01T14:05"
+                          >Oct 01, 2026 · 2:05 PM</time
+                        >
+                      </div>
+                      <p>
+                        API integration passed review. No changes are needed on
+                        the service side for this fix.
+                      </p>
+                      <a href="#project-comment" class="project-reference-reply"
+                        ><i class="ri-reply-line me-1"></i>Reply</a
+                      >
+                    </div>
+                  </article>
+                  <nav
+                    class="project-reference-pagination"
+                    aria-label="Comment pages"
+                  >
+                    <button type="button" aria-label="Previous page" disabled>
+                      <i class="ri-arrow-left-s-line"></i></button
+                    ><button
+                      type="button"
+                      class="is-current"
+                      aria-current="page"
+                    >
+                      1</button
+                    ><button type="button">2</button
+                    ><button type="button">3</button>
+                    <button type="button">…</button>
+                    <button type="button">5</button
+                    ><button type="button" aria-label="Next page">
+                      <i class="ri-arrow-right-s-line"></i>
+                    </button>
+                  </nav>
+                </section>
+                <section
+                  class="tab-pane fade project-reference-section"
+                  id="project-tasks-pane"
+                  role="tabpanel"
+                  aria-labelledby="project-tasks-tab"
+                  tabindex="0"
+                >
+                  <div class="project-reference-section-heading">
+                    <div>
+                      <h3>Open work items</h3>
+                      <p>Next actions for the Atlas team</p>
+                    </div>
+                    <span class="badge bg-warning-transparent text-warning"
+                      >3 open</span
+                    >
+                  </div>
+                  <div class="table-responsive">
+                    <table
+                      class="table align-middle project-reference-task-table border"
+                    >
+                      <thead>
+                        <tr>
+                          <th>Task</th>
+                          <th>Owner</th>
+                          <th>Due</th>
+                          <th>Status</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <strong>Complete accessibility audit</strong
+                            ><small>Quality assurance · High priority</small>
+                          </td>
+                          <td>Mia Chen</td>
+                          <td>Sep 29</td>
+                          <td>
+                            <span
+                              class="badge bg-warning-transparent text-warning"
+                              >In review</span
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <strong>Approve security checklist</strong
+                            ><small>Security · High priority</small>
+                          </td>
+                          <td>Owen Brooks</td>
+                          <td>Oct 02</td>
+                          <td>
+                            <span
+                              class="badge bg-warning-transparent text-warning"
+                              >Needs approval</span
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <strong>Prepare beta release notes</strong
+                            ><small>Product · Medium priority</small>
+                          </td>
+                          <td>Marcus Reed</td>
+                          <td>Oct 06</td>
+                          <td>
+                            <span class="badge bg-light text-muted"
+                              >Not started</span
+                            >
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="project-reference-task-footer">
+                    <span>12 of 18 project tasks completed</span>
+                    <div
+                      class="progress"
+                      role="progressbar"
+                      aria-label="Project task completion"
+                      aria-valuenow="67"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    >
+                      <div class="progress-bar" style="width: 67%"></div>
+                    </div>
+                  </div>
+                </section>
+                <section
+                  class="tab-pane fade project-reference-section"
+                  id="project-activity-pane"
+                  role="tabpanel"
+                  aria-labelledby="project-activity-tab"
+                  tabindex="0"
+                >
+                  <div class="project-reference-section-heading">
+                    <div>
+                      <h3>Recent activity</h3>
+                      <p>Latest changes across this project</p>
+                    </div>
+                  </div>
+                  <div class="project-reference-activity-list">
+                    <div class="project-reference-activity">
+                      <span class="project-reference-activity-icon is-success"
+                        ><i class="ri-checkbox-circle-line"></i
+                      ></span>
+                      <div>
+                        <strong>API integration passed review</strong
+                        ><span>Jenna Foster · September 25</span>
+                      </div>
+                    </div>
+                    <div class="project-reference-activity">
+                      <span class="project-reference-activity-icon is-info"
+                        ><i class="ri-file-list-3-line"></i
+                      ></span>
+                      <div>
+                        <strong>Client acceptance notes added</strong
+                        ><span>Noah Bennett · September 24</span>
+                      </div>
+                    </div>
+                    <div class="project-reference-activity">
+                      <span class="project-reference-activity-icon is-primary"
+                        ><i class="ri-user-add-line"></i
+                      ></span>
+                      <div>
+                        <strong>QA joined the beta workstream</strong
+                        ><span>Mia Chen · September 23</span>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+
+            <aside
+              class="col-xl-3 project-reference-sidebar"
+              aria-label="Project details sidebar"
+            >
+              <section
+                class="project-reference-side-section project-reference-status-panel"
+                aria-labelledby="project-status-title"
+              >
+                <h3 id="project-status-title" class="mb-3">Status</h3>
+                <label class="visually-hidden" for="project-status-select"
+                  >Project status</label
+                >
+                <select
+                  id="project-status-select"
+                  data-trigger
+                  class="form-select form-select-sm"
+                >
+                  <option selected>On track</option>
+                  <option>At risk</option>
+                  <option>Completed</option>
+                </select>
+                <div class="project-reference-completion">
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <span>Overall completion</span><strong>68%</strong>
+                  </div>
+                  <div
+                    class="progress"
+                    role="progressbar"
+                    aria-label="Project completion"
+                    aria-valuenow="68"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div class="progress-bar" style="width: 68%"></div>
+                  </div>
+                  <span>12 of 18 tasks complete</span>
+                </div>
+              </section>
+
+              <section
+                class="project-reference-side-section"
+                aria-labelledby="project-team-title"
+              >
+                <div class="project-reference-side-heading">
+                  <h3 id="project-team-title">Team members</h3>
+                  <span class="badge bg-success-transparent text-success"
+                    >7</span
+                  >
+                </div>
+                <div class="project-reference-member">
+                  <img src="../assets/images/users/1.jpg" alt="" />
+                  <div>
+                    <strong>Jenna Foster</strong><span>Project lead</span>
+                  </div>
+                  <span class="project-reference-member-role">Lead</span>
+                </div>
+                <div class="project-reference-member">
+                  <img src="../assets/images/users/3.jpg" alt="" />
+                  <div>
+                    <strong>Noah Bennett</strong><span>Product design</span>
+                  </div>
+                  <span class="project-reference-member-role">Design</span>
+                </div>
+                <div class="project-reference-member">
+                  <img src="../assets/images/users/5.jpg" alt="" />
+                  <div>
+                    <strong>Ava Thompson</strong><span>Frontend engineer</span>
+                  </div>
+                  <span class="project-reference-member-role">Dev</span>
+                </div>
+                <div class="project-reference-member">
+                  <img src="../assets/images/users/8.jpg" alt="" />
+                  <div>
+                    <strong>Mia Chen</strong><span>Quality assurance</span>
+                  </div>
+                  <span class="project-reference-member-role">QA</span>
+                </div>
+                <div class="project-reference-member">
+                  <img src="../assets/images/users/12.jpg" alt="" />
+                  <div><strong>Owen Brooks</strong><span>Security</span></div>
+                  <span class="project-reference-member-role">Security</span>
+                </div>
+                <div class="project-reference-member">
+                  <img src="../assets/images/users/6.jpg" alt="" />
+                  <div>
+                    <strong>Marcus Reed</strong><span>Engineering</span>
+                  </div>
+                  <span class="project-reference-member-role">Dev</span>
+                </div>
+                <div class="project-reference-member">
+                  <img src="../assets/images/users/10.jpg" alt="" />
+                  <div>
+                    <strong>Priya Shah</strong><span>Client success</span>
+                  </div>
+                  <span class="project-reference-member-role">Client</span>
+                </div>
+                <a
+                  href="project-team.html"
+                  class="btn btn-sm mt-3 btn-dark w-100"
+                  >Manage project team<i class="ri-arrow-right-line"></i>
+                </a>
+              </section>
+
+              <section
+                class="project-reference-side-section"
+                aria-labelledby="project-files-title"
+              >
+                <div class="project-reference-side-heading">
+                  <h3 id="project-files-title">Project files</h3>
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-white"
+                    aria-label="Add project file"
+                  >
+                    <i class="ri-add-line"></i>
+                  </button>
+                </div>
+                <a href="#project-files-title" class="project-reference-file"
+                  ><span class="project-reference-file-icon is-pdf"
+                    ><i class="ri-file-pdf-2-line"></i></span
+                  ><span
+                    ><strong>Project brief.pdf</strong
+                    ><small>2.1 MB · Sep 28</small></span
+                  ><i class="ri-download-2-line"></i
+                ></a>
+                <a href="#project-files-title" class="project-reference-file"
+                  ><span class="project-reference-file-icon is-zip"
+                    ><i class="ri-file-zip-line"></i></span
+                  ><span
+                    ><strong>Portal UI kit.zip</strong
+                    ><small>4.8 MB · Sep 25</small></span
+                  ><i class="ri-download-2-line"></i
+                ></a>
+                <a href="#project-files-title" class="project-reference-file"
+                  ><span class="project-reference-file-icon is-doc"
+                    ><i class="ri-file-text-line"></i></span
+                  ><span
+                    ><strong>QA checklist.pdf</strong
+                    ><small>840 KB · Oct 01</small></span
+                  ><i class="ri-download-2-line"></i
+                ></a>
+                <a href="#project-files-title" class="project-reference-file"
+                  ><span class="project-reference-file-icon is-image"
+                    ><i class="ri-image-line"></i></span
+                  ><span
+                    ><strong>Brand assets.zip</strong
+                    ><small>3.6 MB · Sep 19</small></span
+                  ><i class="ri-download-2-line"></i
+                ></a>
+              </section>
+            </aside>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"-->
+    <script src="../assets/js/app-interactions.js"></script>
+    <!-- include appearance-customizer-scripts.html"-->
+  </body>
+</html>

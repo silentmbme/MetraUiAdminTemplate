@@ -1,0 +1,261 @@
+<!-- include document-head.html"-->
+    <!-- Leaflet Maps CSS -->
+    <link rel="stylesheet" href="../assets/libs/leaflet/leaflet.css" />
+
+    <link rel="stylesheet" href="../assets/css/leaflet-maps.css" />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+
+      <div class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Leaflet Maps</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">Maps</li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Leaflet Maps
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid leaflet-workspace">
+          <div class="row">
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header justify-content-between gap-2">
+                  <div>
+                    <div class="card-title">Street explorer</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Explore central London with pan and zoom controls.
+                    </p>
+                  </div>
+                  <button
+                    class="btn btn-sm btn-light"
+                    type="button"
+                    data-leaflet-reset="leaflet-street"
+                    aria-label="Reset street explorer"
+                  >
+                    <i class="ri-refresh-line" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="leaflet-street"
+                    class="leaflet-demo"
+                    role="group"
+                    aria-label="Street explorer interactive map"
+                  ></div>
+                  <p
+                    class="text-muted fs-12 mt-3 mb-0"
+                    data-leaflet-status="leaflet-street"
+                    aria-live="polite"
+                  >
+                    Drag to explore. Use + and &minus; to zoom.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header justify-content-between gap-2">
+                  <div>
+                    <div class="card-title">Circles & boundaries</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Inspect a sample service radius and coverage area.
+                    </p>
+                  </div>
+                  <button
+                    class="btn btn-sm btn-light"
+                    type="button"
+                    data-leaflet-reset="leaflet-shapes"
+                    aria-label="Reset circles & boundaries"
+                  >
+                    <i class="ri-refresh-line" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="leaflet-shapes"
+                    class="leaflet-demo"
+                    role="group"
+                    aria-label="Circles & boundaries interactive map"
+                  ></div>
+                  <p
+                    class="text-muted fs-12 mt-3 mb-0"
+                    data-leaflet-status="leaflet-shapes"
+                    aria-live="polite"
+                  >
+                    Drag to explore. Use + and &minus; to zoom.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header justify-content-between gap-2">
+                  <div>
+                    <div class="card-title">Location popups</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Select a landmark or click the map to view coordinates.
+                    </p>
+                  </div>
+                  <button
+                    class="btn btn-sm btn-light"
+                    type="button"
+                    data-leaflet-reset="leaflet-popup"
+                    aria-label="Reset location popups"
+                  >
+                    <i class="ri-refresh-line" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="leaflet-popup"
+                    class="leaflet-demo"
+                    role="group"
+                    aria-label="Location popups interactive map"
+                  ></div>
+                  <p
+                    class="text-muted fs-12 mt-3 mb-0"
+                    data-leaflet-status="leaflet-popup"
+                    aria-live="polite"
+                  >
+                    Drag to explore. Use + and &minus; to zoom.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header justify-content-between gap-2">
+                  <div>
+                    <div class="card-title">Custom map pins</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Theme-colored location pins with accessible labels.
+                    </p>
+                  </div>
+                  <button
+                    class="btn btn-sm btn-light"
+                    type="button"
+                    data-leaflet-reset="leaflet-pins"
+                    aria-label="Reset custom map pins"
+                  >
+                    <i class="ri-refresh-line" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="leaflet-pins"
+                    class="leaflet-demo"
+                    role="group"
+                    aria-label="Custom map pins interactive map"
+                  ></div>
+                  <p
+                    class="text-muted fs-12 mt-3 mb-0"
+                    data-leaflet-status="leaflet-pins"
+                    aria-live="polite"
+                  >
+                    Drag to explore. Use + and &minus; to zoom.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header justify-content-between gap-2">
+                  <div>
+                    <div class="card-title">Route preview</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      A sample route connecting four London landmarks.
+                    </p>
+                  </div>
+                  <button
+                    class="btn btn-sm btn-light"
+                    type="button"
+                    data-leaflet-reset="leaflet-route"
+                    aria-label="Reset route preview"
+                  >
+                    <i class="ri-refresh-line" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="leaflet-route"
+                    class="leaflet-demo"
+                    role="group"
+                    aria-label="Route preview interactive map"
+                  ></div>
+                  <p
+                    class="text-muted fs-12 mt-3 mb-0"
+                    data-leaflet-status="leaflet-route"
+                    aria-live="polite"
+                  >
+                    Drag to explore. Use + and &minus; to zoom.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header justify-content-between gap-2">
+                  <div>
+                    <div class="card-title">Map layers</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Switch between street tiles and toggle location overlays.
+                    </p>
+                  </div>
+                  <button
+                    class="btn btn-sm btn-light"
+                    type="button"
+                    data-leaflet-reset="leaflet-layers"
+                    aria-label="Reset map layers"
+                  >
+                    <i class="ri-refresh-line" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="leaflet-layers"
+                    class="leaflet-demo"
+                    role="group"
+                    aria-label="Map layers interactive map"
+                  ></div>
+                  <p
+                    class="text-muted fs-12 mt-3 mb-0"
+                    data-leaflet-status="leaflet-layers"
+                    aria-live="polite"
+                  >
+                    Drag to explore. Use + and &minus; to zoom.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <!-- include common-scripts.html"-->
+
+    <!-- include appearance-customizer-scripts.html"-->
+
+    <!-- Leaflet Maps JS -->
+    <script src="../assets/libs/leaflet/leaflet.js"></script>
+    <script src="../assets/js/leaflet.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

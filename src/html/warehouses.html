@@ -1,0 +1,452 @@
+<!-- include document-head.html"-->
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content warehouses-page">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Warehouses</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">
+              <a href="ecommerce-dashboard.html">Ecommerce</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Warehouses
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid commerce-dashboard">
+          <div class="row orders-summary-grid">
+            <div class="col-xxl-3 col-sm-6">
+              <section class="card custom-card orders-summary-card">
+                <div class="card-body p-4">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <span class="orders-summary-icon bg-color-1 text-black"
+                      ><i class="ri-building-4-line"></i></span
+                    ><span class="badge bg-secondary-transparent">Network</span>
+                  </div>
+                  <p class="text-muted mb-1 mt-3">Warehouse locations</p>
+                  <div class="d-flex align-items-end justify-content-between">
+                    <h3 class="fw-semibold mb-0" id="warehouse-location-count">
+                      4
+                    </h3>
+                    <span class="text-muted fs-12">3 operational</span>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-3 col-sm-6">
+              <section class="card custom-card orders-summary-card">
+                <div class="card-body p-4">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <span class="orders-summary-icon bg-color-2 text-black"
+                      ><i class="ri-archive-drawer-line"></i></span
+                    ><span class="badge bg-success-transparent">Available</span>
+                  </div>
+                  <p class="text-muted mb-1 mt-3">Units on hand</p>
+                  <div class="d-flex align-items-end justify-content-between">
+                    <h3 class="fw-semibold mb-0">18,420</h3>
+                    <span class="text-muted fs-12">across locations</span>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-3 col-sm-6">
+              <section class="card custom-card orders-summary-card">
+                <div class="card-body p-4">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <span class="orders-summary-icon bg-color-3 text-black"
+                      ><i class="ri-error-warning-line"></i></span
+                    ><span class="badge bg-warning-transparent"
+                      >Restock soon</span
+                    >
+                  </div>
+                  <p class="text-muted mb-1 mt-3">Low stock items</p>
+                  <div class="d-flex align-items-end justify-content-between">
+                    <h3 class="fw-semibold mb-0">12</h3>
+                    <span class="text-muted fs-12">need attention</span>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-3 col-sm-6">
+              <section class="card custom-card orders-summary-card">
+                <div class="card-body p-4">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <span class="orders-summary-icon bg-color-4 text-black"
+                      ><i class="ri-truck-line"></i></span
+                    ><span class="badge bg-info-transparent">Moving</span>
+                  </div>
+                  <p class="text-muted mb-1 mt-3">Units in transit</p>
+                  <div class="d-flex align-items-end justify-content-between">
+                    <h3 class="fw-semibold mb-0">640</h3>
+                    <span class="text-muted fs-12">between locations</span>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <section class="warehouse-locations-section">
+            <div
+              class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+            >
+              <div>
+                <h2 class="fs-16 fw-semibold mb-1">Your locations</h2>
+                <p class="text-muted fs-12 mb-0">
+                  Capacity and availability by warehouse
+                </p>
+              </div>
+              <div>
+                <a href="product-stocks.html" class="btn btn-sm btn-light me-1"
+                  >Stock overview<i
+                    class="ri-arrow-right-line ms-1"
+                    aria-hidden="true"
+                  ></i
+                ></a>
+                <button
+                  class="btn btn-sm btn-dark"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#add-warehouse-modal"
+                >
+                  <i class="ri-add-line me-1" aria-hidden="true"></i>Add
+                  warehouse
+                </button>
+              </div>
+            </div>
+            <div class="row" id="warehouse-location-cards">
+              <div class="col-xxl-3 col-md-6">
+                <article class="card custom-card warehouse-location-card">
+                  <div class="card-body">
+                    <div
+                      class="d-flex align-items-start justify-content-between"
+                    >
+                      <span
+                        class="warehouse-location-icon bg-success-transparent text-success"
+                        ><i class="ri-building-line"></i></span
+                      ><span class="badge bg-success-transparent text-success"
+                        >Operational</span
+                      >
+                    </div>
+                    <h3>West Coast Hub</h3>
+                    <p>
+                      <i class="ri-map-pin-line me-1"></i>Portland, OR
+                      <span>&middot; WH-001</span>
+                    </p>
+                    <div class="warehouse-capacity">
+                      <div class="d-flex justify-content-between">
+                        <span>Capacity used</span><strong>72%</strong>
+                      </div>
+                      <div class="progress">
+                        <div
+                          class="progress-bar bg-success"
+                          style="width: 72%"
+                        ></div>
+                      </div>
+                      <small>3,600 of 5,000 units</small>
+                    </div>
+                    <div class="warehouse-location-footer">
+                      <span><i class="ri-box-3-line me-1"></i>1,284 SKUs</span
+                      ><span
+                        ><i class="ri-time-line me-1"></i>Updated 12 min
+                        ago</span
+                      >
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="col-xxl-3 col-md-6">
+                <article class="card custom-card warehouse-location-card">
+                  <div class="card-body">
+                    <div
+                      class="d-flex align-items-start justify-content-between"
+                    >
+                      <span
+                        class="warehouse-location-icon bg-info-transparent text-info"
+                        ><i class="ri-building-line"></i></span
+                      ><span class="badge bg-info-transparent text-info"
+                        >Operational</span
+                      >
+                    </div>
+                    <h3>East Coast Fulfillment</h3>
+                    <p>
+                      <i class="ri-map-pin-line me-1"></i>Newark, NJ
+                      <span>&middot; WH-002</span>
+                    </p>
+                    <div class="warehouse-capacity">
+                      <div class="d-flex justify-content-between">
+                        <span>Capacity used</span><strong>58%</strong>
+                      </div>
+                      <div class="progress">
+                        <div
+                          class="progress-bar bg-info"
+                          style="width: 58%"
+                        ></div>
+                      </div>
+                      <small>2,900 of 5,000 units</small>
+                    </div>
+                    <div class="warehouse-location-footer">
+                      <span><i class="ri-box-3-line me-1"></i>968 SKUs</span
+                      ><span
+                        ><i class="ri-time-line me-1"></i>Updated 28 min
+                        ago</span
+                      >
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="col-xxl-3 col-md-6">
+                <article class="card custom-card warehouse-location-card">
+                  <div class="card-body">
+                    <div
+                      class="d-flex align-items-start justify-content-between"
+                    >
+                      <span
+                        class="warehouse-location-icon bg-warning-transparent text-warning"
+                        ><i class="ri-building-line"></i></span
+                      ><span class="badge bg-warning-transparent text-warning"
+                        >Near capacity</span
+                      >
+                    </div>
+                    <h3>Central Distribution</h3>
+                    <p>
+                      <i class="ri-map-pin-line me-1"></i>Dallas, TX
+                      <span>&middot; WH-003</span>
+                    </p>
+                    <div class="warehouse-capacity">
+                      <div class="d-flex justify-content-between">
+                        <span>Capacity used</span><strong>94%</strong>
+                      </div>
+                      <div class="progress">
+                        <div
+                          class="progress-bar bg-warning"
+                          style="width: 94%"
+                        ></div>
+                      </div>
+                      <small>4,700 of 5,000 units</small>
+                    </div>
+                    <div class="warehouse-location-footer">
+                      <span><i class="ri-box-3-line me-1"></i>1,102 SKUs</span
+                      ><span
+                        ><i class="ri-time-line me-1"></i>Updated 1 hr ago</span
+                      >
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="col-xxl-3 col-md-6">
+                <article class="card custom-card warehouse-location-card">
+                  <div class="card-body">
+                    <div
+                      class="d-flex align-items-start justify-content-between"
+                    >
+                      <span
+                        class="warehouse-location-icon bg-secondary-transparent text-secondary"
+                        ><i class="ri-building-line"></i></span
+                      ><span
+                        class="badge bg-secondary-transparent text-secondary"
+                        >Maintenance</span
+                      >
+                    </div>
+                    <h3>Returns Center</h3>
+                    <p>
+                      <i class="ri-map-pin-line me-1"></i>Chicago, IL
+                      <span>&middot; WH-004</span>
+                    </p>
+                    <div class="warehouse-capacity">
+                      <div class="d-flex justify-content-between">
+                        <span>Capacity used</span><strong>36%</strong>
+                      </div>
+                      <div class="progress">
+                        <div
+                          class="progress-bar bg-secondary"
+                          style="width: 36%"
+                        ></div>
+                      </div>
+                      <small>720 of 2,000 units</small>
+                    </div>
+                    <div class="warehouse-location-footer">
+                      <span><i class="ri-box-3-line me-1"></i>412 SKUs</span
+                      ><span
+                        ><i class="ri-time-line me-1"></i>Updated
+                        yesterday</span
+                      >
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <section class="card custom-card warehouse-inventory-card">
+            <div
+              class="card-header justify-content-between align-items-start flex-wrap gap-3"
+            >
+              <div>
+                <h2 class="card-title mb-1">Inventory by location</h2>
+                <p class="text-muted fs-12 mb-0">
+                  Find stock levels and spot products that need a transfer.
+                </p>
+              </div>
+              <div class="warehouse-table-controls">
+                <div class="warehouse-search">
+                  <i class="ri-search-line" aria-hidden="true"></i
+                  ><input
+                    class="form-control"
+                    id="warehouse-stock-search"
+                    type="search"
+                    placeholder="Search product or SKU"
+                    aria-label="Search inventory"
+                  />
+                </div>
+                <select
+                  class="form-select"
+                  data-trigger
+                  id="warehouse-location-filter"
+                  aria-label="Filter by warehouse"
+                >
+                  <option value="">All locations</option>
+                  <option>West Coast Hub</option>
+                  <option>East Coast Fulfillment</option>
+                  <option>Central Distribution</option>
+                  <option>Returns Center</option></select
+                ><select
+                  class="form-select"
+                  data-trigger
+                  id="warehouse-stock-filter"
+                  aria-label="Filter by stock status"
+                >
+                  <option value="">All stock levels</option>
+                  <option value="low">Low stock</option>
+                  <option value="healthy">Healthy</option>
+                </select>
+              </div>
+            </div>
+            <div class="table-responsive">
+              <table class="table table-hover align-middle mb-0">
+                <thead>
+                  <tr>
+                    <th scope="col">Product</th>
+                    <th scope="col">SKU</th>
+                    <th scope="col">Warehouse</th>
+                    <th scope="col">On hand</th>
+                    <th scope="col">Reserved</th>
+                    <th scope="col">Available</th>
+                    <th scope="col">Stock level</th>
+                  </tr>
+                </thead>
+                <tbody id="warehouse-stock-body"></tbody>
+              </table>
+            </div>
+            <div
+              class="card-footer border-top-0 d-flex justify-content-between align-items-center flex-wrap gap-2"
+            >
+              <span class="text-muted fs-12" id="warehouse-stock-results"
+                >Showing 8 products</span
+              ><span class="text-muted fs-12"
+                ><i class="ri-refresh-line me-1"></i>Inventory synced 5 minutes
+                ago</span
+              >
+            </div>
+          </section>
+          <p
+            id="warehouse-feedback"
+            class="text-muted fs-12 mt-3 mb-0"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <div
+      class="modal fade"
+      id="add-warehouse-modal"
+      tabindex="-1"
+      aria-labelledby="add-warehouse-title"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <form class="modal-content" id="add-warehouse-form">
+          <div class="modal-header">
+            <div>
+              <h2
+                class="modal-title fs-16 fw-semibold"
+                id="add-warehouse-title"
+              >
+                Add warehouse
+              </h2>
+              <p class="text-muted fs-12 mb-0 mt-1">
+                Add a location to your inventory network.
+              </p>
+            </div>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row g-3">
+              <div class="col-12">
+                <label for="new-warehouse-name" class="form-label"
+                  >Warehouse name</label
+                ><input
+                  id="new-warehouse-name"
+                  class="form-control"
+                  required
+                  placeholder="e.g. Mountain Region Hub"
+                />
+              </div>
+              <div class="col-12">
+                <label for="new-warehouse-location" class="form-label"
+                  >City and state</label
+                ><input
+                  id="new-warehouse-location"
+                  class="form-control"
+                  required
+                  placeholder="e.g. Denver, CO"
+                />
+              </div>
+              <div class="col-12">
+                <label for="new-warehouse-capacity" class="form-label"
+                  >Storage capacity (units)</label
+                ><input
+                  id="new-warehouse-capacity"
+                  class="form-control"
+                  type="number"
+                  min="1"
+                  required
+                  placeholder="e.g. 3000"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-light" data-bs-dismiss="modal">
+              Cancel</button
+            ><button type="submit" class="btn btn-dark">
+              <i class="ri-add-line me-1"></i>Add location
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- include common-scripts.html"-->
+    <!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/js/warehouses.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

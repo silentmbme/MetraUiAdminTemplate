@@ -1,0 +1,275 @@
+<!-- include document-head.html"-->
+    <link
+      rel="stylesheet"
+      href="../assets/libs/sweetalert2/sweetalert2.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Product catalog</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">
+              <a href="ecommerce-dashboard.html">Ecommerce</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Product catalog
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid commerce-dashboard product-grid-page">
+          <div class="row product-detail-insights">
+            <div class="col-xxl-3 col-md-6">
+              <section class="card custom-card">
+                <div class="card-body d-flex align-items-center gap-3">
+                  <span class="avatar avatar-lg bg-color-1 text-black"
+                    ><i class="ri-eye-line fs-20"></i
+                  ></span>
+                  <div class="flex-fill">
+                    <span class="text-muted fs-13">Product views</span>
+                    <h4 class="fw-semibold mb-0">18,492</h4>
+                  </div>
+                  <span class="text-success fs-12"
+                    ><i class="ri-arrow-up-line"></i> 12.8%</span
+                  >
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-3 col-md-6">
+              <section class="card custom-card">
+                <div class="card-body d-flex align-items-center gap-3">
+                  <span class="avatar avatar-lg bg-color-2 text-black"
+                    ><i class="ri-shopping-bag-line fs-20"></i
+                  ></span>
+                  <div class="flex-fill">
+                    <span class="text-muted fs-13">Units sold</span>
+                    <h4 class="fw-semibold mb-0">1,248</h4>
+                  </div>
+                  <span class="text-success fs-12"
+                    ><i class="ri-arrow-up-line"></i> 8.4%</span
+                  >
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-3 col-md-6">
+              <section class="card custom-card">
+                <div class="card-body d-flex align-items-center gap-3">
+                  <span class="avatar avatar-lg bg-color-3 text-black"
+                    ><i class="ri-archive-line fs-20"></i
+                  ></span>
+                  <div class="flex-fill">
+                    <span class="text-muted fs-13">Available stock</span>
+                    <h4 class="fw-semibold mb-0">
+                      150
+                      <small class="fs-13 fw-normal text-muted">units</small>
+                    </h4>
+                  </div>
+                  <a class="fs-12 fw-medium" href="product-stocks.html"
+                    >Manage</a
+                  >
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-3 col-md-6">
+              <section class="card custom-card">
+                <div class="card-body d-flex align-items-center gap-3">
+                  <span class="avatar avatar-lg bg-color-4 text-black"
+                    ><i class="ri-star-line fs-20"></i
+                  ></span>
+                  <div class="flex-fill">
+                    <span class="text-muted fs-13">Customer rating</span>
+                    <h4 class="fw-semibold mb-0">
+                      4.5
+                      <small class="fs-13 fw-normal text-muted">/ 5.0</small>
+                    </h4>
+                  </div>
+                  <span class="text-muted fs-12">2.4k reviews</span>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <section class="card custom-card product-grid-panel">
+            <div class="card-header justify-content-between flex-wrap gap-2">
+              <div>
+                <h2 class="card-title mb-1">
+                  All products
+                  <span
+                    class="badge bg-light text-muted ms-1"
+                    id="product-result-count"
+                    >10 items</span
+                  >
+                </h2>
+                <p class="text-muted fs-12 mb-0">
+                  Browse and update your ecommerce catalog.
+                </p>
+              </div>
+              <div
+                class="btn-group product-view-toggle"
+                role="group"
+                aria-label="Product layout"
+              >
+                <button
+                  class="btn btn-light active"
+                  type="button"
+                  data-product-view="grid"
+                  aria-pressed="true"
+                  aria-label="Grid view"
+                >
+                  <i class="ri-grid-line"></i></button
+                ><button
+                  class="btn btn-light"
+                  type="button"
+                  data-product-view="list"
+                  aria-pressed="false"
+                  aria-label="List view"
+                >
+                  <i class="ri-list-check-2"></i>
+                </button>
+              </div>
+            </div>
+            <div class="card-body border-bottom pb-3">
+              <div class="row g-2 align-items-center">
+                <div class="col-xl-3 col-md-6">
+                  <input
+                    class="form-control"
+                    type="search"
+                    id="search-input"
+                    placeholder="Search product name or SKU"
+                    aria-label="Search products"
+                  />
+                </div>
+                <div class="col-xl-9 col-md-6">
+                  <div class="row g-2">
+                    <div class="col">
+                      <select
+                        class="form-select"
+                        data-trigger
+                        id="category-filter"
+                        aria-label="Filter by category"
+                      >
+                        <option value="">All categories</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="fashion">Fashion</option>
+                        <option value="home">Home</option>
+                      </select>
+                    </div>
+                    <div class="col">
+                      <select
+                        class="form-select"
+                        data-trigger
+                        id="status-filter"
+                        aria-label="Filter by listing status"
+                      >
+                        <option value="">All statuses</option>
+                        <option value="published">Published</option>
+                        <option value="draft">Draft</option>
+                        <option value="archived">Archived</option>
+                      </select>
+                    </div>
+                    <div class="col">
+                      <select
+                        class="form-select"
+                        data-trigger
+                        id="stock-filter"
+                        aria-label="Filter by inventory"
+                      >
+                        <option value="">Any stock</option>
+                        <option value="in-stock">In stock</option>
+                        <option value="low-stock">Low stock</option>
+                        <option value="out-of-stock">Out of stock</option>
+                      </select>
+                    </div>
+                    <div class="col">
+                      <select
+                        class="form-select"
+                        data-trigger
+                        id="sort-filter"
+                        aria-label="Sort products"
+                      >
+                        <option value="date">Recently added</option>
+                        <option value="price">Price: low to high</option>
+                        <option value="name">Name: A to Z</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="product-category-chips d-flex align-items-center gap-2 flex-wrap mt-3"
+                role="group"
+                aria-label="Quick category filter"
+              >
+                <button
+                  type="button"
+                  class="btn btn-sm btn-primary text-black active"
+                  data-product-category="all"
+                >
+                  All products
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-sm btn-light"
+                  data-product-category="electronics"
+                >
+                  <i class="ri-device-line me-1"></i>Electronics
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-sm btn-light"
+                  data-product-category="fashion"
+                >
+                  <i class="ri-t-shirt-line me-1"></i>Fashion
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-sm btn-light"
+                  data-product-category="home"
+                >
+                  <i class="ri-home-4-line me-1"></i>Home
+                </button>
+                <span class="text-muted fs-12 ms-auto"
+                  >Showing
+                  <strong id="product-visible-count">10</strong> products</span
+                >
+              </div>
+            </div>
+            <div class="card-body">
+              <div
+                id="products-grid"
+                class="row row-cols-xxl-4 row-cols-xl-3 row-cols-md-2 row-cols-1 g-3"
+              ></div>
+            </div>
+            <div
+              class="card-footer d-flex justify-content-between align-items-center flex-wrap gap-2"
+            >
+              <span class="text-muted fs-12"
+                >Catalog data last updated today</span
+              ><a href="products-list.html" class="fs-13 fw-medium"
+                >Open detailed product manager
+                <i class="ri-arrow-right-line ms-1"></i
+              ></a>
+            </div>
+          </section>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"-->
+    <script src="../assets/libs/sweetalert2/sweetalert2.min.js"></script>
+    <script src="../assets/js/products.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+    <!-- include appearance-customizer-scripts.html"-->
+  </body>
+</html>

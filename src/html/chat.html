@@ -1,0 +1,755 @@
+<!-- include document-head.html"-->
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page application-chat-page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Chat</h1>
+          <ol class="breadcrumb mb-1">
+            <li class="breadcrumb-item"><a href="#">Applications</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Chat</li>
+          </ol>
+        </div>
+        <div class="container-fluid">
+          <section
+            class="main-chart-wrapper app-chat-workspace mb-3"
+            aria-label="Team messages"
+          >
+            <aside
+              class="chat-info app-chat-inbox"
+              aria-label="Recent conversations"
+            >
+              <div class="app-chat-inbox-toolbar">
+                <label class="visually-hidden" for="chat-search"
+                  >Search conversations</label
+                >
+                <div class="app-chat-search">
+                  <i class="ri-search-line" aria-hidden="true"></i
+                  ><input
+                    id="chat-search"
+                    class="form-control"
+                    type="search"
+                    placeholder="Search here..."
+                    autocomplete="off"
+                  />
+                </div>
+                <button
+                  id="new-chat-button"
+                  type="button"
+                  class="btn btn-dark btn-icon app-chat-compose"
+                  data-bs-toggle="modal"
+                  data-bs-target="#composeMessageModal"
+                  aria-label="Compose a message"
+                >
+                  <i class="ri-edit-2-line"></i>
+                </button>
+              </div>
+              <ul class="list-unstyled app-chat-list mb-0" id="chat-msg-scroll">
+                <li
+                  class="checkforactive active app-chat-person"
+                  data-person-name="Maya Patel"
+                  data-search="maya patel feedback deck review active"
+                >
+                  <a href="#" aria-label="Open Maya Patel conversation">
+                    <span class="avatar avatar-md avatar-rounded online"
+                      ><img src="../assets/images/users/4.jpg" alt=""
+                    /></span>
+                    <span class="app-chat-person-copy"
+                      ><span class="app-chat-person-name"
+                        >Maya Patel <time>Just now</time></span
+                      ><span class="app-chat-person-preview"
+                        >The new deck is ready 😊 Take a look when you
+                        can!</span
+                      ></span
+                    ><span class="badge bg-secondary rounded-pill">2</span>
+                  </a>
+                </li>
+                <li
+                  class="checkforactive app-chat-person"
+                  data-person-name="Ethan Brooks"
+                  data-search="ethan brooks shared document"
+                >
+                  <a href="#" aria-label="Open Ethan Brooks conversation">
+                    <span class="avatar avatar-md avatar-rounded online"
+                      ><img src="../assets/images/users/15.jpg" alt=""
+                    /></span>
+                    <span class="app-chat-person-copy"
+                      ><span class="app-chat-person-name"
+                        >Ethan Brooks <time>5 min</time></span
+                      ><span class="app-chat-person-preview"
+                        >Shared the project brief with you 📎</span
+                      ></span
+                    ><span class="badge bg-secondary rounded-pill">1</span>
+                  </a>
+                </li>
+                <li
+                  class="checkforactive app-chat-person"
+                  data-person-name="Jordan Lee"
+                  data-search="jordan lee design approval"
+                >
+                  <a href="#" aria-label="Open Jordan Lee conversation">
+                    <span class="avatar avatar-md avatar-rounded online"
+                      ><img src="../assets/images/users/10.jpg" alt=""
+                    /></span>
+                    <span class="app-chat-person-copy"
+                      ><span class="app-chat-person-name"
+                        >Jordan Lee <time>3:45 pm</time></span
+                      ><span class="app-chat-person-preview"
+                        >The latest mockups are ready ✨</span
+                      ></span
+                    >
+                  </a>
+                </li>
+                <li
+                  class="checkforactive app-chat-person"
+                  data-person-name="Sophia Martin"
+                  data-search="sophia martin tasks complete"
+                >
+                  <a href="#" aria-label="Open Sophia Martin conversation">
+                    <span class="avatar avatar-md avatar-rounded offline"
+                      ><img src="../assets/images/users/8.jpg" alt=""
+                    /></span>
+                    <span class="app-chat-person-copy"
+                      ><span class="app-chat-person-name"
+                        >Sophia Martin <time>2 hr</time></span
+                      ><span class="app-chat-person-preview"
+                        >All set for QA 🙌</span
+                      ></span
+                    >
+                  </a>
+                </li>
+                <li
+                  class="checkforactive app-chat-person"
+                  data-person-name="Noah Davis"
+                  data-search="noah davis meeting rescheduled"
+                >
+                  <a href="#" aria-label="Open Noah Davis conversation">
+                    <span class="avatar avatar-md avatar-rounded online"
+                      ><img src="../assets/images/users/3.jpg" alt=""
+                    /></span>
+                    <span class="app-chat-person-copy"
+                      ><span class="app-chat-person-name"
+                        >Noah Davis <time>4 hr</time></span
+                      ><span class="app-chat-person-preview"
+                        >Friday at 1 works for the client 😊</span
+                      ></span
+                    >
+                  </a>
+                </li>
+                <li
+                  class="checkforactive app-chat-person"
+                  data-person-name="Liam Carter"
+                  data-search="liam carter bug fix"
+                >
+                  <a href="#" aria-label="Open Liam Carter conversation">
+                    <span class="avatar avatar-md avatar-rounded offline"
+                      ><img src="../assets/images/users/11.jpg" alt=""
+                    /></span>
+                    <span class="app-chat-person-copy"
+                      ><span class="app-chat-person-name"
+                        >Liam Carter <time>Yesterday</time></span
+                      ><span class="app-chat-person-preview"
+                        >Sign-in fix is ready to test ✅</span
+                      ></span
+                    ><span class="badge bg-secondary rounded-pill">3</span>
+                  </a>
+                </li>
+              </ul>
+            </aside>
+
+            <section
+              class="main-chat-area app-chat-conversation"
+              aria-label="Conversation with Maya Patel"
+            >
+              <header class="main-chat-head app-chat-head">
+                <div class="d-flex align-items-center min-w-0">
+                  <div
+                    class="avatar avatar-md avatar-rounded online chatstatusperson"
+                  >
+                    <img
+                      class="chatimageperson"
+                      src="../assets/images/users/4.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="ms-3 min-w-0">
+                    <h1 class="chatnameperson fs-16 fw-semibold mb-0">
+                      Maya Patel
+                    </h1>
+                    <div
+                      class="d-flex align-items-center gap-2 text-muted fs-12"
+                    >
+                      <span class="app-chat-presence-dot"></span
+                      ><span class="chatpersonstatus">Online</span
+                      ><span
+                        id="chat-muted-badge"
+                        class="badge bg-warning-transparent text-warning d-none"
+                        >Muted</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <button
+                    type="button"
+                    class="btn btn-light btn-icon responsive-chat-close"
+                    aria-label="Back to conversations"
+                  >
+                    <i class="ri-arrow-left-line"></i>
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-light d-sm-block d-none btn-icon"
+                    id="chat-video-call"
+                    aria-label="Start video call"
+                  >
+                    <i class="ri-vidicon-line"></i>
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-light d-sm-block d-none btn-icon"
+                    id="chat-phone-call"
+                    aria-label="Start phone call"
+                  >
+                    <i class="ri-phone-line"></i>
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-light btn-icon"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#contactProfileOffcanvas"
+                    aria-controls="contactProfileOffcanvas"
+                    aria-label="View contact profile"
+                  >
+                    <i class="ri-user-3-line"></i>
+                  </button>
+                  <div class="dropdown">
+                    <button
+                      type="button"
+                      class="btn btn-light btn-icon"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      aria-label="More conversation actions"
+                    >
+                      <i class="ri-more-2-fill"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                      <li>
+                        <button
+                          id="toggle-chat-mute"
+                          type="button"
+                          class="dropdown-item"
+                          aria-pressed="false"
+                        >
+                          <i class="ri-notification-off-line me-2"></i>Mute
+                          conversation
+                        </button>
+                      </li>
+                      <li>
+                        <button
+                          type="button"
+                          class="dropdown-item"
+                          data-bs-toggle="modal"
+                          data-bs-target="#clearConversationModal"
+                        >
+                          <i class="ri-delete-bin-line me-2"></i>Clear
+                          conversation
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </header>
+
+              <div
+                class="chat-content app-chat-thread-scroll"
+                id="main-chat-content"
+                aria-live="polite"
+              >
+                <ul class="list-unstyled app-chat-thread mb-0">
+                  <li class="chat-item-start">
+                    <div class="chat-list-inner">
+                      <span class="avatar avatar-sm avatar-rounded"
+                        ><img
+                          class="chatimageperson"
+                          src="../assets/images/users/4.jpg"
+                          alt=""
+                      /></span>
+                      <div class="app-chat-message-wrap">
+                        <div class="main-chat-msg">
+                          <div>
+                            <p class="mb-0">
+                              Hey! The new deck is ready 😊 I added the latest
+                              feedback too.
+                            </p>
+                          </div>
+                        </div>
+                        <time class="app-chat-time"
+                          ><i class="ri-time-line me-1"></i>12:12 pm</time
+                        >
+                      </div>
+                    </div>
+                  </li>
+                  <li class="chat-item-end">
+                    <div class="chat-list-inner">
+                      <div class="app-chat-message-wrap">
+                        <div class="main-chat-msg">
+                          <div>
+                            <p class="mb-0">
+                              Awesome! I’ll take a look after lunch and send you
+                              my notes 🍴
+                            </p>
+                          </div>
+                        </div>
+                        <time class="app-chat-time"
+                          ><i class="ri-time-line me-1"></i>12:13 pm</time
+                        >
+                      </div>
+                      <span class="avatar avatar-sm avatar-rounded"
+                        ><img src="../assets/images/users/15.jpg" alt="You"
+                      /></span>
+                    </div>
+                  </li>
+                  <li class="chat-item-start">
+                    <div class="chat-list-inner">
+                      <span class="avatar avatar-sm avatar-rounded"
+                        ><img
+                          class="chatimageperson"
+                          src="../assets/images/users/4.jpg"
+                          alt=""
+                      /></span>
+                      <div class="app-chat-message-wrap">
+                        <div class="main-chat-msg">
+                          <div>
+                            <p class="mb-0">
+                              Perfect 🙌 I highlighted the two steps customers
+                              found tricky.
+                            </p>
+                          </div>
+                        </div>
+                        <time class="app-chat-time"
+                          ><i class="ri-time-line me-1"></i>12:14 pm</time
+                        >
+                      </div>
+                    </div>
+                  </li>
+                  <li class="chat-item-end">
+                    <div class="chat-list-inner">
+                      <div class="app-chat-message-wrap">
+                        <div class="main-chat-msg">
+                          <div>
+                            <p class="mb-0">
+                              Thanks! I’ll add those to the summary and share
+                              the update ✨
+                            </p>
+                          </div>
+                        </div>
+                        <time class="app-chat-time"
+                          ><i class="ri-time-line me-1"></i>12:15 pm</time
+                        >
+                      </div>
+                      <span class="avatar avatar-sm avatar-rounded"
+                        ><img src="../assets/images/users/15.jpg" alt="You"
+                      /></span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <form
+                class="chat-footer app-chat-composer"
+                id="chat-message-form"
+              >
+                <input
+                  class="visually-hidden"
+                  type="file"
+                  id="chat-attachment-input"
+                  multiple
+                  aria-label="Choose files to attach"
+                />
+                <button
+                  type="button"
+                  class="btn btn-light btn-icon"
+                  id="chat-attachment-button"
+                  aria-label="Attach a file"
+                >
+                  <i class="ri-attachment-2"></i>
+                </button>
+                <label class="visually-hidden" for="chat-message-input"
+                  >Enter a message</label
+                >
+                <input
+                  class="form-control chat-message-space"
+                  id="chat-message-input"
+                  placeholder="Enter message..."
+                  type="text"
+                  autocomplete="off"
+                />
+                <button
+                  type="button"
+                  class="btn btn-light btn-icon emoji-picker"
+                  aria-label="Insert emoji"
+                >
+                  <i class="ri-emotion-line"></i>
+                </button>
+                <button
+                  type="submit"
+                  class="btn btn-primary text-black app-chat-send"
+                >
+                  Send <i class="ri-send-plane-line ms-1"></i>
+                </button>
+              </form>
+              <span
+                id="chat-action-status"
+                class="app-chat-action-status d-none"
+                role="status"
+                aria-live="polite"
+              ></span>
+            </section>
+          </section>
+        </div>
+      </main>
+      <div
+        class="modal fade"
+        id="composeMessageModal"
+        tabindex="-1"
+        aria-labelledby="composeMessageTitle"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content custom-card">
+            <form id="compose-chat-form">
+              <div class="modal-header">
+                <div>
+                  <span class="text-muted fs-12">Messages</span>
+                  <h2
+                    class="modal-title fs-16 fw-semibold"
+                    id="composeMessageTitle"
+                  >
+                    Start a conversation
+                  </h2>
+                </div>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div class="mb-2">
+                  <label class="form-label" for="compose-recipient">To</label>
+                  <select
+                    class="form-select mb-3"
+                    data-trigger
+                    id="compose-recipient"
+                    required
+                  >
+                    <option value="" selected disabled>
+                      Select a teammate
+                    </option>
+                    <option value="Maya Patel|4|online">Maya Patel</option>
+                    <option value="Ethan Brooks|15|online">Ethan Brooks</option>
+                    <option value="Jordan Lee|10|online">Jordan Lee</option>
+                    <option value="Sophia Martin|8|offline">
+                      Sophia Martin
+                    </option>
+                    <option value="Noah Davis|3|online">Noah Davis</option>
+                    <option value="Liam Carter|11|offline">Liam Carter</option>
+                  </select>
+                </div>
+                <label class="form-label" for="compose-first-message"
+                  >Message</label
+                >
+                <textarea
+                  class="form-control"
+                  id="compose-first-message"
+                  rows="4"
+                  placeholder="Write your first message..."
+                ></textarea>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-light"
+                  data-bs-dismiss="modal"
+                >
+                  Cancel</button
+                ><button type="submit" class="btn btn-dark">
+                  <i class="ri-send-plane-line me-1"></i>Start chat
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div
+        class="modal fade"
+        id="clearConversationModal"
+        tabindex="-1"
+        aria-labelledby="clearConversationTitle"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+          <div class="modal-content custom-card">
+            <div class="modal-header">
+              <h2
+                class="modal-title fs-16 fw-semibold"
+                id="clearConversationTitle"
+              >
+                Clear this conversation?
+              </h2>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p class="text-muted fs-13 mb-0">
+                This removes messages from this view. You can continue the
+                conversation by sending a new message.
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-light"
+                data-bs-dismiss="modal"
+              >
+                Cancel</button
+              ><button
+                type="button"
+                class="btn btn-danger"
+                id="clear-chat-confirm"
+              >
+                Clear messages
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <aside
+        class="offcanvas offcanvas-end app-chat-contact-panel"
+        tabindex="-1"
+        id="contactProfileOffcanvas"
+        aria-labelledby="contactProfileTitle"
+      >
+        <div class="offcanvas-header border-bottom">
+          <div>
+            <span class="text-muted fs-12">Team workspace</span>
+            <h2
+              class="offcanvas-title fs-16 fw-semibold"
+              id="contactProfileTitle"
+            >
+              Contact profile
+            </h2>
+          </div>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body app-chat-contact-body">
+          <section class="card custom-card app-chat-contact-hero mb-3">
+            <div class="card-body p-4">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <span
+                  class="avatar avatar-xl avatar-rounded online chatstatusperson"
+                  ><img
+                    class="chatimageperson"
+                    src="../assets/images/users/4.jpg"
+                    alt=""
+                /></span>
+                <div class="min-w-0">
+                  <h3 class="chatnameperson fs-16 fw-semibold mb-1">
+                    Maya Patel
+                  </h3>
+                  <span class="chat-contact-role text-muted fs-12"
+                    >Product Designer</span
+                  >
+                  <div class="d-flex align-items-center gap-2 mt-2">
+                    <i
+                      class="ri-checkbox-blank-circle-fill text-success fs-10 chat-contact-status-icon"
+                    ></i
+                    ><span class="chatpersonstatus text-muted fs-12"
+                      >Online</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex gap-2">
+                <button
+                  type="button"
+                  class="btn btn-dark btn-sm flex-fill"
+                  id="contact-message-action"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <i class="ri-chat-1-line me-1"></i>Message</button
+                ><a
+                  class="btn btn-light btn-sm flex-fill chat-contact-mailto"
+                  href="mailto:maya.patel@example.com"
+                  ><i class="ri-mail-line me-1"></i>Email</a
+                >
+              </div>
+            </div>
+          </section>
+          <section class="card custom-card mb-3">
+            <div class="card-header justify-content-between">
+              <h3 class="card-title mb-0">Contact information</h3>
+              <button
+                type="button"
+                class="btn btn-light btn-icon btn-sm"
+                aria-label="Copy contact email"
+                id="copy-contact-email"
+              >
+                <i class="ri-file-copy-line"></i>
+              </button>
+            </div>
+            <div class="card-body app-chat-contact-facts">
+              <div>
+                <span
+                  class="avatar avatar-sm bg-secondary-transparent text-secondary rounded-circle"
+                  ><i class="ri-mail-line fs-16"></i></span
+                ><span
+                  ><small>Email address</small
+                  ><strong class="chat-contact-email"
+                    >maya.patel@example.com</strong
+                  ></span
+                >
+              </div>
+              <div>
+                <span
+                  class="avatar avatar-sm bg-info-transparent text-info rounded-circle"
+                  ><i class="ri-team-line fs-16"></i></span
+                ><span
+                  ><small>Team</small
+                  ><strong class="chat-contact-team"
+                    >Product &amp; Customer Success</strong
+                  ></span
+                >
+              </div>
+              <div>
+                <span
+                  class="avatar avatar-sm bg-warning-transparent text-warning rounded-circle"
+                  ><i class="ri-time-line fs-16"></i></span
+                ><span
+                  ><small>Local time</small
+                  ><strong class="chat-contact-timezone"
+                    >10:15 AM · GMT-5</strong
+                  ></span
+                >
+              </div>
+            </div>
+          </section>
+          <section class="row gx-3" aria-label="Contact activity">
+            <div class="col-4">
+              <div
+                class="card custom-card app-chat-contact-stat app-chat-contact-stat-files"
+              >
+                <div class="card-body">
+                  <span
+                    class="avatar avatar-sm bg-secondary-transparent text-secondary rounded-circle"
+                    ><i class="ri-folder-shared-line"></i></span
+                  ><strong class="chat-contact-files-count">12</strong
+                  ><span class="app-chat-contact-stat-label">Shared files</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div
+                class="card custom-card app-chat-contact-stat app-chat-contact-stat-projects"
+              >
+                <div class="card-body">
+                  <span
+                    class="avatar avatar-sm bg-info-transparent text-info rounded-circle"
+                    ><i class="ri-stack-line"></i></span
+                  ><strong class="chat-contact-project-count">4</strong
+                  ><span class="app-chat-contact-stat-label">Projects</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div
+                class="card custom-card app-chat-contact-stat app-chat-contact-stat-seen"
+              >
+                <div class="card-body">
+                  <span
+                    class="avatar avatar-sm bg-success-transparent text-success rounded-circle"
+                    ><i class="ri-time-line"></i></span
+                  ><strong class="chat-contact-last-seen">Now</strong
+                  ><span class="app-chat-contact-stat-label">Last seen</span>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="card custom-card mb-3">
+            <div class="card-header">
+              <h3 class="card-title mb-0">Shared files</h3>
+              <button type="button" class="btn btn-link btn-sm p-0">
+                View all
+              </button>
+            </div>
+            <div class="list-group list-group-flush">
+              <a
+                href="javascript:void(0);"
+                class="list-group-item list-group-item-action d-flex align-items-center gap-2"
+                ><span
+                  class="avatar avatar-sm bg-danger-transparent text-danger rounded"
+                  ><i class="ri-file-pdf-line fs-16"></i></span
+                ><span class="flex-fill"
+                  ><strong class="fs-13 d-block">Onboarding-review.pdf</strong
+                  ><span class="text-muted fs-12">1.8 MB · Today</span></span
+                ><i class="ri-download-2-line text-muted"></i></a
+              ><a
+                href="javascript:void(0);"
+                class="list-group-item list-group-item-action d-flex align-items-center gap-2"
+                ><span
+                  class="avatar avatar-sm bg-success-transparent text-success rounded"
+                  ><i class="ri-file-list-3-line fs-16"></i></span
+                ><span class="flex-fill"
+                  ><strong class="fs-13 d-block">Customer-feedback.xlsx</strong
+                  ><span class="text-muted fs-12"
+                    >840 KB · Yesterday</span
+                  ></span
+                ><i class="ri-download-2-line text-muted"></i
+              ></a>
+            </div>
+          </section>
+          <section class="card custom-card">
+            <div class="card-header">
+              <h3 class="card-title mb-0">Conversation tags</h3>
+            </div>
+            <div class="card-body d-flex flex-wrap gap-2">
+              <span class="badge bg-secondary-transparent text-secondary"
+                >onboarding</span
+              ><span class="badge bg-info-transparent text-info"
+                >product feedback</span
+              ><span class="badge bg-success-transparent text-success"
+                >active project</span
+              >
+            </div>
+          </section>
+        </div>
+      </aside>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"-->
+    <script src="../assets/libs/fg-emoji-picker/fgEmojiPicker.js"></script>
+    <script src="../assets/js/chat.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+    <!-- include appearance-customizer-scripts.html"-->
+  </body>
+</html>

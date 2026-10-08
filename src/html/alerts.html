@@ -1,0 +1,703 @@
+<!-- include document-head.html"-->
+    <link
+      rel="stylesheet"
+      href="../assets/libs/prismjs/themes/prism-coy.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"--><!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"--><!-- include side-navigation.html"-->
+      <main data-markup-examples class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Alerts</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Components</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Alerts</li>
+          </ol>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Alert playground</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Choose a message type and preview a dismissible alert.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="row align-items-end">
+                    <div class="col-md-3">
+                      <label class="form-label" for="alert-type"
+                        >Message type</label
+                      ><select class="form-select" data-trigger id="alert-type">
+                        <option value="success">Success</option>
+                        <option value="info">Info</option>
+                        <option value="warning">Warning</option>
+                        <option value="danger">Danger</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label" for="alert-message"
+                        >Message</label
+                      ><input
+                        class="form-control"
+                        id="alert-message"
+                        maxlength="180"
+                        value="Your changes have been saved successfully."
+                      />
+                    </div>
+                    <div class="col-md-3 d-flex gap-2">
+                      <button
+                        class="btn btn-primary"
+                        id="liveAlertBtn"
+                        type="button"
+                      >
+                        Show alert</button
+                      ><button
+                        class="btn btn-light"
+                        id="clear-alerts"
+                        type="button"
+                      >
+                        Clear
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    id="liveAlertPlaceholder"
+                    class="mt-3"
+                    aria-live="polite"
+                  ></div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-7">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Status messages</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Clear feedback for everyday actions.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="alert alert-primary d-flex gap-3 mb-3"
+                    role="alert"
+                  >
+                    <i class="ri-information-line fs-20" aria-hidden="true"></i>
+                    <div>
+                      <h3 class="fs-14 fw-semibold mb-1">Workspace updated</h3>
+                      <p class="fs-13 mb-0">
+                        Your latest workspace settings are ready to use.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="alert alert-success d-flex gap-3 mb-3"
+                    role="alert"
+                  >
+                    <i
+                      class="ri-checkbox-circle-line fs-20"
+                      aria-hidden="true"
+                    ></i>
+                    <div>
+                      <h3 class="fs-14 fw-semibold mb-1">Changes saved</h3>
+                      <p class="fs-13 mb-0">
+                        Your profile changes have been saved successfully.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="alert alert-warning d-flex gap-3 mb-3"
+                    role="alert"
+                  >
+                    <i
+                      class="ri-error-warning-line fs-20"
+                      aria-hidden="true"
+                    ></i>
+                    <div>
+                      <h3 class="fs-14 fw-semibold mb-1">Review required</h3>
+                      <p class="fs-13 mb-0">
+                        Check the billing details before submitting your
+                        invoice.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="alert alert-danger d-flex gap-3 mb-3"
+                    role="alert"
+                  >
+                    <i
+                      class="ri-close-circle-line fs-20"
+                      aria-hidden="true"
+                    ></i>
+                    <div>
+                      <h3 class="fs-14 fw-semibold mb-1">
+                        Upload unsuccessful
+                      </h3>
+                      <p class="fs-13 mb-0">
+                        The file could not be uploaded. Please try again.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-5">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Contextual notices</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Keep helpful information close to the task.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="alert alert-info d-flex gap-3 mb-3" role="alert">
+                    <i class="ri-lightbulb-line fs-20" aria-hidden="true"></i>
+                    <div>
+                      <h3 class="fs-14 fw-semibold mb-1">A helpful tip</h3>
+                      <p class="fs-13 mb-0">
+                        Use project filters to find the tasks assigned to you.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="alert alert-secondary d-flex gap-3 mb-3"
+                    role="alert"
+                  >
+                    <i class="ri-time-line fs-20" aria-hidden="true"></i>
+                    <div>
+                      <h3 class="fs-14 fw-semibold mb-1">Request queued</h3>
+                      <p class="fs-13 mb-0">
+                        Your export is being prepared in the background.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="alert alert-light d-flex gap-3 mb-3" role="alert">
+                    <i
+                      class="ri-notification-line fs-20"
+                      aria-hidden="true"
+                    ></i>
+                    <div>
+                      <h3 class="fs-14 fw-semibold mb-1">No new updates</h3>
+                      <p class="fs-13 mb-0">
+                        Your notifications are up to date.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="alert alert-dark d-flex gap-3 mb-3" role="alert">
+                    <i
+                      class="ri-shield-check-line fs-20"
+                      aria-hidden="true"
+                    ></i>
+                    <div>
+                      <h3 class="fs-14 fw-semibold mb-1">Session protected</h3>
+                      <p class="fs-13 mb-0">
+                        Your account is connected through a secure session.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Alerts with actions</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Provide a useful next step inside the message.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="alert alert-warning" role="alert">
+                    <div class="d-flex gap-3">
+                      <i class="ri-bank-card-line fs-22" aria-hidden="true"></i>
+                      <div>
+                        <h3 class="fs-14 fw-semibold mb-1">
+                          Invoice needs your attention
+                        </h3>
+                        <p class="fs-13 mb-3">
+                          Review the client details and payment terms before
+                          preparing the invoice.
+                        </p>
+                        <a
+                          href="invoice-create.html"
+                          class="btn btn-warning btn-sm"
+                          >Review invoice</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="alert alert-info mb-0" role="alert">
+                    <h3 class="fs-14 fw-semibold mb-1">
+                      Make your profile easier to find
+                    </h3>
+                    <p class="fs-13 mb-2">
+                      Add your role, location, and a short introduction.
+                    </p>
+                    <a href="profile-settings.html" class="alert-link fs-13"
+                      >Update profile
+                      <i class="ri-arrow-right-line" aria-hidden="true"></i
+                    ></a>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Dismissible & detailed</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Close a notice when it is no longer needed.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="alert alert-success alert-dismissible fade show"
+                    role="alert"
+                  >
+                    <strong class="fs-14">Export complete</strong>
+                    <p class="fs-13 mb-0 mt-1">
+                      Your invoice records are ready for download.
+                    </p>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="alert"
+                      aria-label="Dismiss export notice"
+                    ></button>
+                  </div>
+                  <div class="alert alert-danger mb-0" role="alert">
+                    <h3 class="fs-14 fw-semibold mb-2">
+                      Please check these details
+                    </h3>
+                    <ul class="fs-13 mb-0 ps-3">
+                      <li>Enter a valid client email address.</li>
+                      <li>Add at least one invoice item.</li>
+                      <li>Choose a due date after the issue date.</li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Compact notices</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Small messages for inline feedback.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="alert alert-primary py-2 d-flex align-items-center gap-2 fs-13"
+                  >
+                    <i class="ri-information-line" aria-hidden="true"></i
+                    >Primary notice: your workspace has a new update.
+                  </div>
+                  <div
+                    class="alert alert-secondary py-2 d-flex align-items-center gap-2 fs-13"
+                  >
+                    <i class="ri-information-line" aria-hidden="true"></i
+                    >Secondary notice: your workspace has a new update.
+                  </div>
+                  <div
+                    class="alert alert-success py-2 d-flex align-items-center gap-2 fs-13"
+                  >
+                    <i class="ri-information-line" aria-hidden="true"></i
+                    >Success notice: your workspace has a new update.
+                  </div>
+                  <div
+                    class="alert alert-danger py-2 d-flex align-items-center gap-2 fs-13"
+                  >
+                    <i class="ri-information-line" aria-hidden="true"></i>Danger
+                    notice: your workspace has a new update.
+                  </div>
+                  <div
+                    class="alert alert-warning py-2 d-flex align-items-center gap-2 fs-13"
+                  >
+                    <i class="ri-information-line" aria-hidden="true"></i
+                    >Warning notice: your workspace has a new update.
+                  </div>
+                  <div
+                    class="alert alert-info py-2 d-flex align-items-center gap-2 fs-13"
+                  >
+                    <i class="ri-information-line" aria-hidden="true"></i>Info
+                    notice: your workspace has a new update.
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Outline messages</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Subtle borders with theme accents.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="border border-primary rounded p-3 mb-2 d-flex gap-2 fs-13"
+                  >
+                    <i
+                      class="ri-notification-line text-primary"
+                      aria-hidden="true"
+                    ></i
+                    ><span
+                      ><strong class="fw-medium">Primary</strong> / Review the
+                      latest account information.</span
+                    >
+                  </div>
+                  <div
+                    class="border border-secondary rounded p-3 mb-2 d-flex gap-2 fs-13"
+                  >
+                    <i
+                      class="ri-notification-line text-secondary"
+                      aria-hidden="true"
+                    ></i
+                    ><span
+                      ><strong class="fw-medium">Secondary</strong> / Review the
+                      latest account information.</span
+                    >
+                  </div>
+                  <div
+                    class="border border-success rounded p-3 mb-2 d-flex gap-2 fs-13"
+                  >
+                    <i
+                      class="ri-notification-line text-success"
+                      aria-hidden="true"
+                    ></i
+                    ><span
+                      ><strong class="fw-medium">Success</strong> / Review the
+                      latest account information.</span
+                    >
+                  </div>
+                  <div
+                    class="border border-danger rounded p-3 mb-2 d-flex gap-2 fs-13"
+                  >
+                    <i
+                      class="ri-notification-line text-danger"
+                      aria-hidden="true"
+                    ></i
+                    ><span
+                      ><strong class="fw-medium">Danger</strong> / Review the
+                      latest account information.</span
+                    >
+                  </div>
+                  <div
+                    class="border border-warning rounded p-3 mb-2 d-flex gap-2 fs-13"
+                  >
+                    <i
+                      class="ri-notification-line text-warning"
+                      aria-hidden="true"
+                    ></i
+                    ><span
+                      ><strong class="fw-medium">Warning</strong> / Review the
+                      latest account information.</span
+                    >
+                  </div>
+                  <div
+                    class="border border-info rounded p-3 mb-2 d-flex gap-2 fs-13"
+                  >
+                    <i
+                      class="ri-notification-line text-info"
+                      aria-hidden="true"
+                    ></i
+                    ><span
+                      ><strong class="fw-medium">Info</strong> / Review the
+                      latest account information.</span
+                    >
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Accent notices</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      A quiet surface with a colored edge.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="bg-light border-start border-3 border-success rounded-end p-3 mb-3"
+                  >
+                    <div class="d-flex gap-2">
+                      <i
+                        class="ri-check-line text-success fs-20"
+                        aria-hidden="true"
+                      ></i>
+                      <div>
+                        <h3 class="fs-14 fw-semibold mb-1">Backup complete</h3>
+                        <p class="text-muted fs-13 mb-0">
+                          All workspace files were backed up successfully.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="bg-light border-start border-3 border-warning rounded-end p-3 mb-3"
+                  >
+                    <div class="d-flex gap-2">
+                      <i
+                        class="ri-time-line text-warning fs-20"
+                        aria-hidden="true"
+                      ></i>
+                      <div>
+                        <h3 class="fs-14 fw-semibold mb-1">
+                          Scheduled maintenance
+                        </h3>
+                        <p class="text-muted fs-13 mb-0">
+                          Some services may pause briefly during the next
+                          update.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="bg-light border-start border-3 border-danger rounded-end p-3 mb-3"
+                  >
+                    <div class="d-flex gap-2">
+                      <i
+                        class="ri-error-warning-line text-danger fs-20"
+                        aria-hidden="true"
+                      ></i>
+                      <div>
+                        <h3 class="fs-14 fw-semibold mb-1">
+                          Connection interrupted
+                        </h3>
+                        <p class="text-muted fs-13 mb-0">
+                          Reconnect to continue syncing your latest changes.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Rich notifications</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      An avatar, context, and a clear destination.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="border rounded p-3 mb-3">
+                    <div class="d-flex gap-3">
+                      <span class="avatar avatar-sm avatar-rounded"
+                        ><img src="../assets/images/users/12.jpg" alt=""
+                      /></span>
+                      <div>
+                        <h3 class="fs-14 fw-semibold mb-1">
+                          Liam shared a project update
+                        </h3>
+                        <p class="text-muted fs-13 mb-2">
+                          The onboarding roadmap is ready for team review.
+                        </p>
+                        <a href="profile.html" class="btn btn-light btn-sm"
+                          >View profile</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="alert alert-success mb-0">
+                    <div class="d-flex justify-content-between gap-2 mb-2">
+                      <span class="badge bg-success text-white"
+                        >Release notes</span
+                      ><span class="fs-12">Version 2.4</span>
+                    </div>
+                    <h3 class="fs-14 fw-semibold">
+                      A better workspace experience
+                    </h3>
+                    <p class="fs-13 mb-0">
+                      Updated navigation, clearer reports, and improved mobile
+                      layouts are ready to explore.
+                    </p>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Progress feedback</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Show work in progress beside its status.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="alert alert-info">
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                      <span
+                        class="spinner-border spinner-border-sm"
+                        aria-hidden="true"
+                      ></span>
+                      <h3 class="fs-14 fw-semibold mb-0">
+                        Preparing your report
+                      </h3>
+                    </div>
+                    <p class="fs-13 mb-3">
+                      Collecting the latest workspace metrics.
+                    </p>
+                    <div
+                      class="progress progress-sm"
+                      role="progressbar"
+                      aria-label="Report preparation"
+                      aria-valuenow="65"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    >
+                      <div
+                        class="progress-bar bg-info"
+                        style="width: 65%"
+                      ></div>
+                    </div>
+                    <p class="fs-12 mt-2 mb-0">65% complete</p>
+                  </div>
+                  <div class="alert alert-success mb-0">
+                    <i
+                      class="ri-checkbox-circle-line me-2"
+                      aria-hidden="true"
+                    ></i
+                    ><strong class="fs-13">File validation complete</strong>
+                    <p class="fs-13 mt-1 mb-0">
+                      All 12 files passed the format and size checks.
+                    </p>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Timed notification</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Preview a message that closes automatically.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <p class="text-muted fs-13">
+                    Show a success notice for five seconds. Hover or focus on it
+                    to pause the timer.
+                  </p>
+                  <button
+                    type="button"
+                    class="btn btn-primary btn-sm"
+                    id="show-timed-alert"
+                  >
+                    Preview timed alert
+                  </button>
+                  <div
+                    id="timed-alert-slot"
+                    class="mt-3"
+                    aria-live="polite"
+                  ></div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Restore a dismissed alert</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Bring a message back after closing it.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <button
+                    type="button"
+                    class="btn btn-light btn-sm mb-3"
+                    id="restore-alert"
+                  >
+                    Restore notice
+                  </button>
+                  <div id="restore-alert-slot">
+                    <div
+                      class="alert alert-warning alert-dismissible fade show mb-0"
+                      role="alert"
+                    >
+                      Your profile is missing a contact email.<button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="alert"
+                        aria-label="Dismiss profile notice"
+                      ></button>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Checklist notice</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Group related information in one message.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="alert alert-secondary mb-0">
+                    <h3 class="fs-14 fw-semibold mb-3">Before you publish</h3>
+                    <div class="d-flex gap-2 mb-2 fs-13">
+                      <i class="ri-checkbox-circle-line" aria-hidden="true"></i
+                      >Review the project title and description.
+                    </div>
+                    <div class="d-flex gap-2 mb-2 fs-13">
+                      <i class="ri-checkbox-circle-line" aria-hidden="true"></i
+                      >Confirm the owner and due date.
+                    </div>
+                    <div class="d-flex gap-2 fs-13">
+                      <i class="ri-checkbox-circle-line" aria-hidden="true"></i
+                      >Check that the team has the right access.
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"--><!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"--><!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/js/alerts.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+    <script src="../assets/libs/prismjs/prism.js"></script>
+    <script src="../assets/js/prism-custom.js"></script>
+  </body>
+</html>

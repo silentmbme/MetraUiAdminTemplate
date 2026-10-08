@@ -1,0 +1,104 @@
+.cards-showcase-page {
+  .cards-showcase-intro {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1.25rem;
+    padding: clamp(1.25rem, 3vw, 2rem);
+    border: 1px solid var(--theme-default-border);
+    border-radius: 0.85rem;
+    background:
+      radial-gradient(circle at 90% 0%, rgba(var(--theme-primary-rgb), 0.09), transparent 34%),
+      var(--theme-custom-white);
+  }
+
+  .cards-showcase-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: rgb(var(--theme-primary-rgb));
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  .cards-showcase-intro h2 {
+    margin: 0.5rem 0 0.35rem;
+    color: var(--theme-default-text-color);
+    font-size: clamp(1.25rem, 2.2vw, 1.65rem);
+    font-weight: 650;
+    letter-spacing: -0.03em;
+  }
+
+  .cards-showcase-intro p {
+    max-width: 42rem;
+    margin: 0;
+    color: var(--theme-text-muted);
+    font-size: 0.875rem;
+  }
+
+  .cards-showcase-highlights {
+    display: flex;
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.5rem;
+  }
+
+  .cards-showcase-highlights span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.45rem 0.65rem;
+    border: 1px solid var(--theme-default-border);
+    border-radius: 999px;
+    background: var(--theme-custom-white);
+    color: var(--theme-text-muted);
+    font-size: 0.7rem;
+    white-space: nowrap;
+  }
+
+  .cards-showcase-highlights i {
+    color: rgb(var(--theme-primary-rgb));
+    font-size: 0.9rem;
+  }
+
+  .cards-showcase .container-fluid > .row {
+    --bs-gutter-y: 1.25rem;
+  }
+
+  .cards-showcase .container-fluid > .row > [class*="col-"] {
+    min-width: 0;
+  }
+
+}
+
+@media (max-width: 767.98px) {
+  .cards-showcase-page {
+    .cards-showcase-intro {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .cards-showcase-highlights {
+      justify-content: flex-start;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .cards-showcase-page {
+    .cards-showcase-intro {
+      padding: 1rem;
+      border-radius: 0.65rem;
+    }
+
+    .cards-showcase-highlights span {
+      font-size: 0.65rem;
+    }
+
+    .cards-showcase .container-fluid > .row {
+      --bs-gutter-y: 0.9rem;
+    }
+
+  }
+}

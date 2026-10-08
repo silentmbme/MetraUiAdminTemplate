@@ -1,0 +1,412 @@
+<!-- include document-head.html"-->
+    <link
+      rel="stylesheet"
+      href="../assets/libs/prismjs/themes/prism-coy.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"--><!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"--><!-- include side-navigation.html"-->
+      <main data-markup-examples class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Popovers</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Components</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Popovers</li>
+          </ol>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Placement options</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Show supporting information where space allows.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex flex-wrap gap-2">
+                    <button
+                      type="button"
+                      class="btn btn-outline-success"
+                      data-bs-toggle="popover"
+                      data-bs-title="Workspace tip"
+                      data-bs-content="Keep related files and tasks together for easier project handoff."
+                      data-bs-container="body"
+                      data-bs-placement="top"
+                    >
+                      Top</button
+                    ><button
+                      type="button"
+                      class="btn btn-outline-success"
+                      data-bs-toggle="popover"
+                      data-bs-title="Workspace tip"
+                      data-bs-content="Keep related files and tasks together for easier project handoff."
+                      data-bs-container="body"
+                      data-bs-placement="right"
+                    >
+                      Right</button
+                    ><button
+                      type="button"
+                      class="btn btn-outline-success"
+                      data-bs-toggle="popover"
+                      data-bs-title="Workspace tip"
+                      data-bs-content="Keep related files and tasks together for easier project handoff."
+                      data-bs-container="body"
+                      data-bs-placement="bottom"
+                    >
+                      Bottom</button
+                    ><button
+                      type="button"
+                      class="btn btn-outline-success"
+                      data-bs-toggle="popover"
+                      data-bs-title="Workspace tip"
+                      data-bs-content="Keep related files and tasks together for easier project handoff."
+                      data-bs-container="body"
+                      data-bs-placement="left"
+                    >
+                      Left
+                    </button>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Click to explore</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      A simple click trigger for contextual guidance.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="popover"
+                    data-bs-title="Workspace onboarding"
+                    data-bs-content="Research and design are complete. Implementation is currently underway."
+                    data-bs-container="body"
+                  >
+                    Project information
+                  </button>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Dismiss on focus change</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Move focus elsewhere to dismiss the message.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <button
+                    type="button"
+                    class="btn btn-outline-secondary"
+                    data-bs-toggle="popover"
+                    data-bs-title="Invoice payment"
+                    data-bs-content="Bank transfer is preferred. Include the invoice number in your payment reference."
+                    data-bs-container="body"
+                    data-bs-trigger="focus"
+                  >
+                    Payment details
+                  </button>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Hover & keyboard focus</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Supporting information available to pointer and keyboard
+                      users.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <button
+                    type="button"
+                    class="btn btn-outline-success"
+                    data-bs-toggle="popover"
+                    data-bs-title="Task priority"
+                    data-bs-content="High-priority tasks should be reviewed before the next delivery milestone."
+                    data-bs-container="body"
+                    data-bs-trigger="hover focus"
+                  >
+                    What does this mean?
+                  </button>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Inline field guidance</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Keep an explanation close to its input.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <label class="form-label" for="popover-invoice-ref"
+                    >Invoice reference</label
+                  >
+                  <div class="input-group">
+                    <input
+                      class="form-control"
+                      id="popover-invoice-ref"
+                      value="INV-2026-0148"
+                    /><button
+                      type="button"
+                      class="btn btn-outline-secondary"
+                      data-bs-toggle="popover"
+                      data-bs-title="Invoice reference"
+                      data-bs-content="Use a unique reference to identify this invoice in client communications."
+                      data-bs-container="body"
+                      data-bs-trigger="focus"
+                    >
+                      <i class="ri-information-line" aria-hidden="true"></i
+                      ><span class="visually-hidden"
+                        >About invoice references</span
+                      >
+                    </button>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Rich text content</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Use sanitized formatting for a concise explanation.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <button
+                    type="button"
+                    class="btn btn-outline-warning"
+                    data-bs-toggle="popover"
+                    data-bs-title="Before publishing"
+                    data-bs-content='&lt;strong&gt;Review your update&lt;/strong&gt;&lt;ul class="mb-0 mt-2 ps-3"&gt;&lt;li&gt;Confirm the title&lt;/li&gt;&lt;li&gt;Check the due date&lt;/li&gt;&lt;li&gt;Review team access&lt;/li&gt;&lt;/ul&gt;'
+                    data-bs-container="body"
+                    data-bs-html="true"
+                  >
+                    View checklist
+                  </button>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">No title</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      A short message without a separate heading.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <button
+                    type="button"
+                    class="btn btn-light"
+                    data-bs-toggle="popover"
+                    data-bs-content="Your changes are saved locally in this browser."
+                    data-bs-trigger="focus"
+                    data-bs-container="body"
+                  >
+                    Storage note
+                  </button>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Disabled action explanation</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      A focusable wrapper explains an unavailable control.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <span
+                    class="d-inline-block rounded"
+                    tabindex="0"
+                    role="button"
+                    aria-label="Why export is unavailable"
+                    data-bs-toggle="popover"
+                    data-bs-title="Export unavailable"
+                    data-bs-content="Select at least one record before exporting your data."
+                    data-bs-trigger="hover focus"
+                    data-bs-container="body"
+                    ><button
+                      type="button"
+                      class="btn btn-secondary"
+                      disabled
+                      style="pointer-events: none"
+                    >
+                      Export records
+                    </button></span
+                  >
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Profile context</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Show a compact explanation beside an identity.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex align-items-center gap-3">
+                    <span class="avatar avatar-md avatar-rounded"
+                      ><img src="../assets/images/users/12.jpg" alt=""
+                    /></span>
+                    <div>
+                      <strong class="fs-14 fw-medium d-block"
+                        >Liam Carter</strong
+                      ><span class="text-muted fs-12">Product Manager</span>
+                    </div>
+                    <button
+                      type="button"
+                      class="btn btn btn-icon btn-light btn-sm"
+                      data-bs-toggle="popover"
+                      data-bs-title="Project lead"
+                      data-bs-content="Liam leads discovery, roadmap planning, and delivery for the onboarding project."
+                      data-bs-container="body"
+                      data-bs-trigger="focus"
+                    >
+                      <i class="ri-information-line" aria-hidden="true"></i
+                      ><span class="visually-hidden">Profile details</span>
+                    </button>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Status explanation</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Add context without crowding the record.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="d-flex align-items-center justify-content-between gap-3 border rounded p-3"
+                  >
+                    <div>
+                      <strong class="fs-14 fw-medium d-block"
+                        >Invoice INV-2026-0148</strong
+                      ><span class="text-muted fs-12"
+                        >Due October 28, 2026</span
+                      >
+                    </div>
+                    <button
+                      type="button"
+                      class="btn btn-warning-light btn-sm"
+                      data-bs-toggle="popover"
+                      data-bs-title="Payment pending"
+                      data-bs-content="This invoice has an outstanding balance of $2,200.00."
+                      data-bs-container="body"
+                      data-bs-trigger="focus"
+                    >
+                      Pending
+                    </button>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Delayed hover</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Avoid opening a popover during a quick pointer pass.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <button
+                    type="button"
+                    class="btn btn-outline-success"
+                    data-bs-toggle="popover"
+                    data-bs-title="Workspace guidance"
+                    data-bs-content="Use consistent labels and clear destinations when sharing resources."
+                    data-bs-container="body"
+                    data-bs-trigger="hover focus"
+                    data-bs-delay='{"show":350,"hide":100}'
+                  >
+                    Hover for details
+                  </button>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Compact help action</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      An icon trigger for tight toolbars.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <button
+                    type="button"
+                    class="btn btn-icon btn-secondary-light"
+                    data-bs-toggle="popover"
+                    data-bs-title="Project access"
+                    data-bs-content="Team members can view shared resources. Edit permissions depend on their workspace role."
+                    data-bs-container="body"
+                    data-bs-trigger="focus"
+                  >
+                    <i class="ri-question-line" aria-hidden="true"></i
+                    ><span class="visually-hidden"
+                      >Help with project access</span
+                    >
+                  </button>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"--><!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"--><!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/js/app-interactions.js"></script>
+    <script src="../assets/libs/prismjs/prism.js"></script>
+    <script src="../assets/js/prism-custom.js"></script>
+  </body>
+</html>

@@ -1,0 +1,643 @@
+<!-- include document-head.html"-->
+    <link
+      rel="stylesheet"
+      href="../assets/libs/prismjs/themes/prism-coy.min.css"
+    />
+  </head>
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"--><!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"--><!-- include side-navigation.html"-->
+      <main data-markup-examples class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Avatars</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">
+              <a href="utilities.html">Base UI</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Avatars</li>
+          </ol>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6 col-xl-6">
+              <article class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">A size for every context</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      From compact lists to prominent profile details.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex flex-wrap gap-3 align-items-end">
+                    <div class="text-center">
+                      <span class="avatar avatar-xs avatar-rounded"
+                        ><img
+                          src="../assets/images/users/5.jpg"
+                          alt="Amelia Hart"
+                          loading="lazy"
+                          decoding="async" /></span
+                      ><span class="text-muted fs-11 d-block mt-2">XS</span>
+                    </div>
+                    <div class="text-center">
+                      <span class="avatar avatar-sm avatar-rounded"
+                        ><img
+                          src="../assets/images/users/5.jpg"
+                          alt="Amelia Hart"
+                          loading="lazy"
+                          decoding="async" /></span
+                      ><span class="text-muted fs-11 d-block mt-2">SM</span>
+                    </div>
+                    <div class="text-center">
+                      <span class="avatar avatar-md avatar-rounded"
+                        ><img
+                          src="../assets/images/users/5.jpg"
+                          alt="Amelia Hart"
+                          loading="lazy"
+                          decoding="async" /></span
+                      ><span class="text-muted fs-11 d-block mt-2">MD</span>
+                    </div>
+                    <div class="text-center">
+                      <span class="avatar avatar-lg avatar-rounded"
+                        ><img
+                          src="../assets/images/users/5.jpg"
+                          alt="Amelia Hart"
+                          loading="lazy"
+                          decoding="async" /></span
+                      ><span class="text-muted fs-11 d-block mt-2">LG</span>
+                    </div>
+                    <div class="text-center">
+                      <span class="avatar avatar-xl avatar-rounded"
+                        ><img
+                          src="../assets/images/users/5.jpg"
+                          alt="Amelia Hart"
+                          loading="lazy"
+                          decoding="async" /></span
+                      ><span class="text-muted fs-11 d-block mt-2">XL</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-6">
+              <article class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Shape variations</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Round portraits, soft corners, and square frames.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex justify-content-around flex-wrap gap-3">
+                    <div class="text-center">
+                      <span class="avatar avatar-lg avatar-rounded"
+                        ><img
+                          src="../assets/images/users/12.jpg"
+                          alt="Liam Carter"
+                          loading="lazy"
+                          decoding="async" /></span
+                      ><span class="text-muted fs-12 d-block mt-2">Circle</span>
+                    </div>
+                    <div class="text-center">
+                      <span class="avatar avatar-lg"
+                        ><img
+                          src="../assets/images/users/12.jpg"
+                          alt="Liam Carter"
+                          loading="lazy"
+                          decoding="async" /></span
+                      ><span class="text-muted fs-12 d-block mt-2"
+                        >Rounded</span
+                      >
+                    </div>
+                    <div class="text-center">
+                      <span class="avatar avatar-lg avatar-radius-0"
+                        ><img
+                          src="../assets/images/users/12.jpg"
+                          alt="Liam Carter"
+                          loading="lazy"
+                          decoding="async" /></span
+                      ><span class="text-muted fs-12 d-block mt-2">Square</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-6">
+              <article class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Initials &amp; color</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      A simple fallback when a portrait is unavailable.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex flex-wrap gap-3 mb-3">
+                    <span
+                      class="avatar avatar-lg avatar-rounded bg-primary-transparent text-primary"
+                      role="img"
+                      aria-label="AH initials"
+                      >AH</span
+                    ><span
+                      class="avatar avatar-lg avatar-rounded bg-success-transparent text-success"
+                      role="img"
+                      aria-label="LC initials"
+                      >LC</span
+                    ><span
+                      class="avatar avatar-lg avatar-rounded bg-info-transparent text-info"
+                      role="img"
+                      aria-label="NE initials"
+                      >NE</span
+                    ><span
+                      class="avatar avatar-lg avatar-rounded bg-warning-transparent text-warning"
+                      role="img"
+                      aria-label="OR initials"
+                      >OR</span
+                    >
+                  </div>
+                  <p class="text-muted fs-12 mb-0">
+                    Use semantic colors and readable initials to distinguish
+                    members.
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-6">
+              <article class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Notification badges</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Attach a count without taking over the portrait.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="d-flex flex-wrap justify-content-around gap-4 py-2"
+                  >
+                    <div class="text-center">
+                      <span class="avatar avatar-lg avatar-rounded"
+                        ><img
+                          src="../assets/images/users/5.jpg"
+                          alt="Amelia Hart"
+                          loading="lazy"
+                        /><span
+                          class="avatar-badge bg-danger"
+                          aria-label="3 new messages"
+                          >3</span
+                        ></span
+                      ><span class="text-muted fs-12 d-block mt-3"
+                        >Messages</span
+                      >
+                    </div>
+                    <div class="text-center">
+                      <span
+                        class="avatar avatar-lg avatar-rounded bg-light text-default"
+                        >LC<span
+                          class="avatar-badge bg-success text-fixed-white"
+                          aria-label="Verified member"
+                          ><i
+                            class="ri-check-line"
+                            aria-hidden="true"
+                          ></i></span></span
+                      ><span class="text-muted fs-12 d-block mt-3"
+                        >Verified</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-6">
+              <article class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Presence indicators</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Show availability with a dot and a clear label.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex flex-column gap-3">
+                    <div class="d-flex align-items-center gap-3">
+                      <span class="avatar avatar-md avatar-rounded online"
+                        ><img
+                          src="../assets/images/users/5.jpg"
+                          alt="Amelia Hart"
+                          loading="lazy"
+                          decoding="async"
+                      /></span>
+                      <div class="flex-grow-1">
+                        <h3 class="fs-13 fw-semibold mb-1">Amelia Hart</h3>
+                        <span class="text-muted fs-12">Product designer</span>
+                      </div>
+                      <span class="badge bg-success-transparent">Online</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                      <span class="avatar avatar-md avatar-rounded offline"
+                        ><img
+                          src="../assets/images/users/12.jpg"
+                          alt="Liam Carter"
+                          loading="lazy"
+                          decoding="async"
+                      /></span>
+                      <div class="flex-grow-1">
+                        <h3 class="fs-13 fw-semibold mb-1">Liam Carter</h3>
+                        <span class="text-muted fs-12">Project lead</span>
+                      </div>
+                      <span class="badge bg-light text-default">Offline</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                      <span class="avatar avatar-md avatar-rounded online"
+                        ><img
+                          src="../assets/images/users/10.jpg"
+                          alt="Noah Ellis"
+                          loading="lazy"
+                          decoding="async"
+                      /></span>
+                      <div class="flex-grow-1">
+                        <h3 class="fs-13 fw-semibold mb-1">Noah Ellis</h3>
+                        <span class="text-muted fs-12">Developer</span>
+                      </div>
+                      <span class="badge bg-success-transparent">Online</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-6">
+              <article class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Shared team</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Compact groups for projects and shared documents.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="border rounded p-3 mb-3">
+                    <h3 class="fs-14 fw-semibold mb-1">Atlas product team</h3>
+                    <p class="text-muted fs-12 mb-3">
+                      Four members working together
+                    </p>
+                    <div class="avatar-list-stacked">
+                      <span class="avatar avatar-sm avatar-rounded"
+                        ><img
+                          src="../assets/images/users/5.jpg"
+                          alt="Amelia Hart"
+                          loading="lazy"
+                          decoding="async" /></span
+                      ><span class="avatar avatar-sm avatar-rounded"
+                        ><img
+                          src="../assets/images/users/12.jpg"
+                          alt="Liam Carter"
+                          loading="lazy"
+                          decoding="async" /></span
+                      ><span class="avatar avatar-sm avatar-rounded"
+                        ><img
+                          src="../assets/images/users/10.jpg"
+                          alt="Noah Ellis"
+                          loading="lazy"
+                          decoding="async" /></span
+                      ><span class="avatar avatar-sm avatar-rounded"
+                        ><img
+                          src="../assets/images/users/3.jpg"
+                          alt="Olivia Reed"
+                          loading="lazy"
+                          decoding="async"
+                      /></span>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex align-items-center justify-content-between gap-2"
+                  >
+                    <div class="avatar-list-stacked">
+                      <span class="avatar avatar-sm avatar-rounded"
+                        ><img
+                          src="../assets/images/users/5.jpg"
+                          alt="Amelia Hart"
+                          loading="lazy"
+                          decoding="async" /></span
+                      ><span class="avatar avatar-sm avatar-rounded"
+                        ><img
+                          src="../assets/images/users/12.jpg"
+                          alt="Liam Carter"
+                          loading="lazy"
+                          decoding="async" /></span
+                      ><span class="avatar avatar-sm avatar-rounded"
+                        ><img
+                          src="../assets/images/users/10.jpg"
+                          alt="Noah Ellis"
+                          loading="lazy"
+                          decoding="async" /></span
+                      ><span
+                        class="avatar avatar-sm avatar-rounded bg-primary text-default"
+                        aria-label="6 additional members"
+                        >+6</span
+                      >
+                    </div>
+                    <span class="text-muted fs-12">9 collaborators</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-6">
+              <article class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Outlined portraits</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Subtle rings add structure to featured members.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex flex-wrap justify-content-around gap-3">
+                    <div class="text-center">
+                      <span
+                        class="d-inline-flex border border-primary rounded-circle p-1"
+                        ><span class="avatar avatar-lg avatar-rounded"
+                          ><img
+                            src="../assets/images/users/5.jpg"
+                            alt="Amelia Hart"
+                            loading="lazy"
+                            decoding="async" /></span></span
+                      ><span class="text-muted fs-12 d-block mt-2">Amelia</span>
+                    </div>
+                    <div class="text-center">
+                      <span
+                        class="d-inline-flex border border-success rounded-circle p-1"
+                        ><span class="avatar avatar-lg avatar-rounded"
+                          ><img
+                            src="../assets/images/users/12.jpg"
+                            alt="Liam Carter"
+                            loading="lazy"
+                            decoding="async" /></span></span
+                      ><span class="text-muted fs-12 d-block mt-2">Liam</span>
+                    </div>
+                    <div class="text-center">
+                      <span
+                        class="d-inline-flex border border-info rounded-circle p-1"
+                        ><span class="avatar avatar-lg avatar-rounded"
+                          ><img
+                            src="../assets/images/users/10.jpg"
+                            alt="Noah Ellis"
+                            loading="lazy"
+                            decoding="async" /></span></span
+                      ><span class="text-muted fs-12 d-block mt-2">Noah</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-6">
+              <article class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Workspace identities</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Company logos and initials for shared spaces.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex align-items-center gap-3 mb-3">
+                    <span class="avatar avatar-lg bg-light border"
+                      ><img
+                        src="../assets/images/logos/1.png"
+                        alt="Northstar company logo"
+                        loading="lazy"
+                    /></span>
+                    <div>
+                      <h3 class="fs-14 fw-semibold mb-1">
+                        Northstar collective
+                      </h3>
+                      <span class="text-muted fs-12"
+                        >Design &amp; development</span
+                      >
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center gap-3">
+                    <span class="avatar avatar-lg bg-info-transparent text-info"
+                      >AT</span
+                    >
+                    <div>
+                      <h3 class="fs-14 fw-semibold mb-1">Atlas workspace</h3>
+                      <span class="text-muted fs-12">12 active members</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-6">
+              <article class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Account preview</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      A clear identity block with one useful action.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="text-center">
+                    <span class="avatar avatar-xl avatar-rounded"
+                      ><img
+                        src="../assets/images/users/5.jpg"
+                        alt="Amelia Hart"
+                        loading="lazy"
+                        decoding="async"
+                    /></span>
+                    <h3 class="fs-16 fw-semibold mt-3 mb-1">Amelia Hart</h3>
+                    <p class="text-muted fs-13 mb-2">Senior product designer</p>
+                    <span class="badge bg-success-transparent mb-3"
+                      >Available for collaboration</span
+                    ><a
+                      href="profile.html"
+                      class="btn btn-outline-light btn-sm d-block"
+                      >View profile</a
+                    >
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-6">
+              <article class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Assigned members</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Keep names and roles visible alongside portraits.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex flex-column gap-3">
+                    <div class="d-flex align-items-center gap-3">
+                      <span class="avatar avatar-sm avatar-rounded"
+                        ><img
+                          src="../assets/images/users/5.jpg"
+                          alt="Amelia Hart"
+                          loading="lazy"
+                          decoding="async"
+                      /></span>
+                      <div class="flex-grow-1">
+                        <h3 class="fs-13 fw-medium mb-1">Amelia Hart</h3>
+                        <span class="text-muted fs-12">Product designer</span>
+                      </div>
+                      <span class="badge bg-primary-transparent">Owner</span>
+                    </div>
+                    <div
+                      class="d-flex align-items-center gap-3 border-top pt-3"
+                    >
+                      <span class="avatar avatar-sm avatar-rounded"
+                        ><img
+                          src="../assets/images/users/12.jpg"
+                          alt="Liam Carter"
+                          loading="lazy"
+                          decoding="async"
+                      /></span>
+                      <div class="flex-grow-1">
+                        <h3 class="fs-13 fw-medium mb-1">Liam Carter</h3>
+                        <span class="text-muted fs-12">Project lead</span>
+                      </div>
+                      <span class="badge bg-light text-default">Member</span>
+                    </div>
+                    <div
+                      class="d-flex align-items-center gap-3 border-top pt-3"
+                    >
+                      <span class="avatar avatar-sm avatar-rounded"
+                        ><img
+                          src="../assets/images/users/10.jpg"
+                          alt="Noah Ellis"
+                          loading="lazy"
+                          decoding="async"
+                      /></span>
+                      <div class="flex-grow-1">
+                        <h3 class="fs-13 fw-medium mb-1">Noah Ellis</h3>
+                        <span class="text-muted fs-12">Developer</span>
+                      </div>
+                      <span class="badge bg-light text-default">Member</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-6">
+              <article class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Icon avatars</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Recognizable symbols for services and system accounts.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="row g-3 text-center">
+                    <div class="col-4">
+                      <span
+                        class="avatar avatar-lg avatar-rounded bg-secondary-transparent text-secondary"
+                        ><i
+                          class="ri-customer-service-2-line fs-24"
+                          aria-hidden="true"
+                        ></i></span
+                      ><span class="text-muted fs-12 d-block mt-2"
+                        >Support</span
+                      >
+                    </div>
+                    <div class="col-4">
+                      <span
+                        class="avatar avatar-lg avatar-rounded bg-success-transparent text-success"
+                        ><i
+                          class="ri-shield-check-line fs-24"
+                          aria-hidden="true"
+                        ></i></span
+                      ><span class="text-muted fs-12 d-block mt-2"
+                        >Security</span
+                      >
+                    </div>
+                    <div class="col-4">
+                      <span
+                        class="avatar avatar-lg avatar-rounded bg-info-transparent text-info"
+                        ><i
+                          class="ri-robot-line fs-24"
+                          aria-hidden="true"
+                        ></i></span
+                      ><span class="text-muted fs-12 d-block mt-2"
+                        >Assistant</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-6">
+              <article class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Conversation preview</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Portraits provide context in compact message lists.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex gap-3 mb-3">
+                    <span class="avatar avatar-sm avatar-rounded"
+                      ><img
+                        src="../assets/images/users/12.jpg"
+                        alt="Liam Carter"
+                        loading="lazy"
+                        decoding="async"
+                    /></span>
+                    <div class="flex-grow-1">
+                      <div class="d-flex justify-content-between gap-2 mb-1">
+                        <h3 class="fs-13 fw-semibold mb-0">Liam Carter</h3>
+                        <span class="text-muted fs-11">10:24 AM</span>
+                      </div>
+                      <p class="text-muted fs-13 mb-0">
+                        The updated project files are ready for your review.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-3 border-top pt-3">
+                    <span class="avatar avatar-sm avatar-rounded"
+                      ><img
+                        src="../assets/images/users/5.jpg"
+                        alt="Amelia Hart"
+                        loading="lazy"
+                        decoding="async"
+                    /></span>
+                    <div>
+                      <h3 class="fs-13 fw-semibold mb-1">Amelia Hart</h3>
+                      <p class="text-muted fs-13 mb-0">
+                        Thanks! I will share my feedback this afternoon.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"--><!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"--><!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/js/app-interactions.js"></script>
+    <script src="../assets/libs/prismjs/prism.js"></script>
+    <script src="../assets/js/prism-custom.js"></script>
+  </body>
+</html>

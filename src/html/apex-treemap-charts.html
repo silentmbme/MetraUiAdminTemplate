@@ -1,0 +1,174 @@
+<!-- include document-head.html"-->
+    <link rel="stylesheet" href="../assets/css/apex-treemap-charts.css" />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+
+      <div class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Treemap Charts</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">Charts</li>
+            <li class="breadcrumb-item">Apex Charts</li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Treemap Charts
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid treemap-workspace">
+          <div class="row">
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Project workload</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Tile area represents planned hours for each project.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="treemap-basic"
+                    class="treemap-demo"
+                    role="group"
+                    aria-label="Project workload chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Workstream allocation</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Separate groups compare design and engineering work.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="treemap-multi"
+                    class="treemap-demo"
+                    role="group"
+                    aria-label="Workstream allocation chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Resource distribution</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Distinct colors identify allocation across workspace
+                      resources.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="treemap-distributed"
+                    class="treemap-demo"
+                    role="group"
+                    aria-label="Resource distribution chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Delivery variance</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Green marks above-plan results and red marks below-plan
+                      results.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="treemap-colorranges"
+                    class="treemap-demo"
+                    role="group"
+                    aria-label="Delivery variance chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Budget allocation</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Compare sample budget allocations across project
+                      activities.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="treemap-budget"
+                    class="treemap-demo"
+                    role="group"
+                    aria-label="Budget allocation chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Milestone readiness</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Tile size and color show milestone completion percentages.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="treemap-completion"
+                    class="treemap-demo"
+                    role="group"
+                    aria-label="Milestone readiness chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <!-- include common-scripts.html"-->
+
+    <!-- include appearance-customizer-scripts.html"-->
+
+    <!-- Apex Charts JS -->
+    <script src="../assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- Internal Apex Treemap Charts JS -->
+    <script src="../assets/js/apexcharts-treemap.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

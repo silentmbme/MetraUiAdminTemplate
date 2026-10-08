@@ -1,0 +1,1059 @@
+<!-- include document-head.html"-->
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+
+      <main class="main-content app-content crm-workspace-page">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Contacts</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">
+              <a href="crm-dashboard.html">CRM</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Contacts</li>
+          </ol>
+        </div>
+        <div class="container-fluid commerce-dashboard crm-contacts-page">
+          <section class="crm-contacts-spotlight">
+            <div class="crm-spotlight-copy">
+              <span class="crm-spotlight-kicker"
+                ><i class="ri-sparkling-2-line me-1"></i>RELATIONSHIP
+                MOMENTUM</span
+              >
+              <h2>Make every connection count.</h2>
+              <p>
+                Your contact directory brings people, companies, and
+                relationship signals into one clear workspace.
+              </p>
+              <div class="crm-spotlight-actions">
+                <a href="#contact-directory" class="btn btn-white"
+                  >Browse contacts <i class="ri-arrow-down-line ms-1"></i
+                ></a>
+                <button
+                  type="button"
+                  class="btn btn-dark"
+                  data-bs-toggle="modal"
+                  data-bs-target="#create-contact"
+                >
+                  <i class="ri-user-add-line me-1"></i>Add contact
+                </button>
+              </div>
+            </div>
+            <div class="crm-spotlight-stat">
+              <span>Average lead score</span
+              ><strong id="crm-average-score">75<small>/100</small></strong
+              ><span class="crm-score-caption"
+                ><i class="ri-arrow-up-line"></i> Healthy engagement</span
+              >
+            </div>
+            <div class="crm-spotlight-orbit" aria-hidden="true">
+              <i class="ri-user-heart-line"></i>
+            </div>
+          </section>
+
+          <div class="crm-contact-metrics">
+            <article class="crm-contact-metric">
+              <span class="crm-metric-icon metric-forest"
+                ><i class="ri-contacts-line"></i
+              ></span>
+              <div>
+                <span>Total contacts</span
+                ><strong id="crm-contact-total">10</strong>
+              </div>
+              <small>In your directory</small>
+            </article>
+            <article class="crm-contact-metric">
+              <span class="crm-metric-icon metric-lime"
+                ><i class="ri-user-follow-line"></i
+              ></span>
+              <div>
+                <span>High-intent contacts</span
+                ><strong id="crm-contact-high-score">5</strong>
+              </div>
+              <small>Score of 80 or higher</small>
+            </article>
+            <article class="crm-contact-metric">
+              <span class="crm-metric-icon metric-lavender"
+                ><i class="ri-building-2-line"></i
+              ></span>
+              <div>
+                <span>Companies</span><strong id="crm-company-total">10</strong>
+              </div>
+              <small>Across your network</small>
+            </article>
+          </div>
+
+          <section class="crm-contact-directory" id="contact-directory">
+            <div class="crm-directory-heading">
+              <div>
+                <span class="crm-directory-kicker">YOUR NETWORK</span>
+                <h2>Contact directory</h2>
+                <p>
+                  Find the right person and pick up where the last conversation
+                  left off.
+                </p>
+              </div>
+              <div class="crm-directory-controls">
+                <label class="crm-directory-search"
+                  ><i class="ri-search-line" aria-hidden="true"></i>
+                  <input
+                    id="crm-contact-search"
+                    class="form-control"
+                    type="search"
+                    placeholder="Search people or companies"
+                    aria-label="Search contacts"
+                /></label>
+                <select
+                  id="crm-contact-source"
+                  data-trigger
+                  class="form-select"
+                  aria-label="Filter by source"
+                >
+                  <option value="">Every source</option></select
+                ><select
+                  id="crm-contact-sort"
+                  data-trigger
+                  class="form-select"
+                  aria-label="Sort contacts"
+                >
+                  <option value="name">Name A to Z</option>
+                  <option value="score">Lead score</option>
+                </select>
+              </div>
+            </div>
+            <div class="crm-contact-seed" id="crm-contact-seed" hidden>
+              <article
+                class="crm-person-card"
+                data-contact-card
+                data-name="jane smith"
+                data-email="jane.smith@example.com"
+                data-company="xyz ltd"
+                data-score="70"
+                data-source="Referral"
+                data-phone="(987) 654-3210"
+                data-last-contact="Recently active"
+              >
+                <div class="crm-person-card-top">
+                  <img
+                    class="crm-person-avatar"
+                    src="../assets/images/users/4.jpg"
+                    alt="Jane Smith"
+                  /><button
+                    class="crm-contact-favorite"
+                    type="button"
+                    aria-label="Add Jane Smith to favorites"
+                    aria-pressed="false"
+                  >
+                    <i class="ri-star-line"></i>
+                  </button>
+                </div>
+                <div class="crm-person-heading">
+                  <div>
+                    <h2>Jane Smith</h2>
+                    <p>XYZ Ltd</p>
+                  </div>
+                  <span class="crm-score-pill">70<small>/100</small></span>
+                </div>
+                <div
+                  class="crm-score-track"
+                  role="img"
+                  aria-label="Lead score 70 out of 100"
+                >
+                  <span style="width: 70%"></span>
+                </div>
+                <div class="crm-person-details">
+                  <a href="mailto:jane.smith@example.com"
+                    ><i class="ri-mail-line"></i>jane.smith@example.com</a
+                  ><a href="tel:9876543210"
+                    ><i class="ri-phone-line"></i>(987) 654-3210</a
+                  >
+                </div>
+                <div class="crm-person-meta">
+                  <span><i class="ri-links-line"></i>Referral</span
+                  ><span><i class="ri-time-line"></i>Recently active</span>
+                </div>
+                <div class="crm-person-tags">
+                  <span class="crm-contact-tag">New Lead</span
+                  ><span class="crm-contact-tag">VIP</span>
+                </div>
+                <div class="crm-person-actions">
+                  <button type="button" class="btn btn-light" data-contact-view>
+                    <i class="ri-user-search-line me-1"></i>View contact</button
+                  ><button
+                    type="button"
+                    class="crm-contact-delete"
+                    data-contact-delete
+                    aria-label="Remove Jane Smith"
+                  >
+                    <i class="ri-delete-bin-line"></i>
+                  </button>
+                </div>
+              </article>
+              <article
+                class="crm-person-card"
+                data-contact-card
+                data-name="john doe"
+                data-email="john.doe@example.com"
+                data-company="abc corp"
+                data-score="85"
+                data-source="Web"
+                data-phone="(123) 456-7890"
+                data-last-contact="Recently active"
+              >
+                <div class="crm-person-card-top">
+                  <img
+                    class="crm-person-avatar"
+                    src="../assets/images/users/12.jpg"
+                    alt="John Doe"
+                  /><button
+                    class="crm-contact-favorite"
+                    type="button"
+                    aria-label="Add John Doe to favorites"
+                    aria-pressed="false"
+                  >
+                    <i class="ri-star-line"></i>
+                  </button>
+                </div>
+                <div class="crm-person-heading">
+                  <div>
+                    <h2>John Doe</h2>
+                    <p>ABC Corp</p>
+                  </div>
+                  <span class="crm-score-pill">85<small>/100</small></span>
+                </div>
+                <div
+                  class="crm-score-track"
+                  role="img"
+                  aria-label="Lead score 85 out of 100"
+                >
+                  <span style="width: 85%"></span>
+                </div>
+                <div class="crm-person-details">
+                  <a href="mailto:john.doe@example.com"
+                    ><i class="ri-mail-line"></i>john.doe@example.com</a
+                  ><a href="tel:1234567890"
+                    ><i class="ri-phone-line"></i>(123) 456-7890</a
+                  >
+                </div>
+                <div class="crm-person-meta">
+                  <span><i class="ri-links-line"></i>Web</span
+                  ><span><i class="ri-time-line"></i>Recently active</span>
+                </div>
+                <div class="crm-person-tags">
+                  <span class="crm-contact-tag">Interested</span
+                  ><span class="crm-contact-tag">VIP</span>
+                </div>
+                <div class="crm-person-actions">
+                  <button type="button" class="btn btn-light" data-contact-view>
+                    <i class="ri-user-search-line me-1"></i>View contact</button
+                  ><button
+                    type="button"
+                    class="crm-contact-delete"
+                    data-contact-delete
+                    aria-label="Remove John Doe"
+                  >
+                    <i class="ri-delete-bin-line"></i>
+                  </button>
+                </div>
+              </article>
+              <article
+                class="crm-person-card"
+                data-contact-card
+                data-name="emily johnson"
+                data-email="emily.johnson@example.com"
+                data-company="futuretech"
+                data-score="90"
+                data-source="Social Media"
+                data-phone="(555) 123-4567"
+                data-last-contact="Recently active"
+              >
+                <div class="crm-person-card-top">
+                  <img
+                    class="crm-person-avatar"
+                    src="../assets/images/users/14.jpg"
+                    alt="Emily Johnson"
+                  /><button
+                    class="crm-contact-favorite"
+                    type="button"
+                    aria-label="Add Emily Johnson to favorites"
+                    aria-pressed="false"
+                  >
+                    <i class="ri-star-line"></i>
+                  </button>
+                </div>
+                <div class="crm-person-heading">
+                  <div>
+                    <h2>Emily Johnson</h2>
+                    <p>FutureTech</p>
+                  </div>
+                  <span class="crm-score-pill">90<small>/100</small></span>
+                </div>
+                <div
+                  class="crm-score-track"
+                  role="img"
+                  aria-label="Lead score 90 out of 100"
+                >
+                  <span style="width: 90%"></span>
+                </div>
+                <div class="crm-person-details">
+                  <a href="mailto:emily.johnson@example.com"
+                    ><i class="ri-mail-line"></i>emily.johnson@example.com</a
+                  ><a href="tel:5551234567"
+                    ><i class="ri-phone-line"></i>(555) 123-4567</a
+                  >
+                </div>
+                <div class="crm-person-meta">
+                  <span><i class="ri-links-line"></i>Social Media</span
+                  ><span><i class="ri-time-line"></i>Recently active</span>
+                </div>
+                <div class="crm-person-tags">
+                  <span class="crm-contact-tag">High Priority</span
+                  ><span class="crm-contact-tag">VIP</span>
+                </div>
+                <div class="crm-person-actions">
+                  <button type="button" class="btn btn-light" data-contact-view>
+                    <i class="ri-user-search-line me-1"></i>View contact</button
+                  ><button
+                    type="button"
+                    class="crm-contact-delete"
+                    data-contact-delete
+                    aria-label="Remove Emily Johnson"
+                  >
+                    <i class="ri-delete-bin-line"></i>
+                  </button>
+                </div>
+              </article>
+              <article
+                class="crm-person-card"
+                data-contact-card
+                data-name="michael brown"
+                data-email="michael.brown@example.com"
+                data-company="innovate solutions"
+                data-score="50"
+                data-source="Web"
+                data-phone="(333) 777-8888"
+                data-last-contact="Recently active"
+              >
+                <div class="crm-person-card-top">
+                  <img
+                    class="crm-person-avatar"
+                    src="../assets/images/users/14.jpg"
+                    alt="Michael Brown"
+                  /><button
+                    class="crm-contact-favorite"
+                    type="button"
+                    aria-label="Add Michael Brown to favorites"
+                    aria-pressed="false"
+                  >
+                    <i class="ri-star-line"></i>
+                  </button>
+                </div>
+                <div class="crm-person-heading">
+                  <div>
+                    <h2>Michael Brown</h2>
+                    <p>Innovate Solutions</p>
+                  </div>
+                  <span class="crm-score-pill">50<small>/100</small></span>
+                </div>
+                <div
+                  class="crm-score-track"
+                  role="img"
+                  aria-label="Lead score 50 out of 100"
+                >
+                  <span style="width: 50%"></span>
+                </div>
+                <div class="crm-person-details">
+                  <a href="mailto:michael.brown@example.com"
+                    ><i class="ri-mail-line"></i>michael.brown@example.com</a
+                  ><a href="tel:3337778888"
+                    ><i class="ri-phone-line"></i>(333) 777-8888</a
+                  >
+                </div>
+                <div class="crm-person-meta">
+                  <span><i class="ri-links-line"></i>Web</span
+                  ><span><i class="ri-time-line"></i>Recently active</span>
+                </div>
+                <div class="crm-person-tags">
+                  <span class="crm-contact-tag">Potential</span>
+                </div>
+                <div class="crm-person-actions">
+                  <button type="button" class="btn btn-light" data-contact-view>
+                    <i class="ri-user-search-line me-1"></i>View contact</button
+                  ><button
+                    type="button"
+                    class="crm-contact-delete"
+                    data-contact-delete
+                    aria-label="Remove Michael Brown"
+                  >
+                    <i class="ri-delete-bin-line"></i>
+                  </button>
+                </div>
+              </article>
+              <article
+                class="crm-person-card"
+                data-contact-card
+                data-name="sara white"
+                data-email="sara.white@example.com"
+                data-company="designworks"
+                data-score="60"
+                data-source="Event"
+                data-phone="(222) 333-4444"
+                data-last-contact="Recently active"
+              >
+                <div class="crm-person-card-top">
+                  <img
+                    class="crm-person-avatar"
+                    src="../assets/images/users/8.jpg"
+                    alt="Sara White"
+                  /><button
+                    class="crm-contact-favorite"
+                    type="button"
+                    aria-label="Add Sara White to favorites"
+                    aria-pressed="false"
+                  >
+                    <i class="ri-star-line"></i>
+                  </button>
+                </div>
+                <div class="crm-person-heading">
+                  <div>
+                    <h2>Sara White</h2>
+                    <p>DesignWorks</p>
+                  </div>
+                  <span class="crm-score-pill">60<small>/100</small></span>
+                </div>
+                <div
+                  class="crm-score-track"
+                  role="img"
+                  aria-label="Lead score 60 out of 100"
+                >
+                  <span style="width: 60%"></span>
+                </div>
+                <div class="crm-person-details">
+                  <a href="mailto:sara.white@example.com"
+                    ><i class="ri-mail-line"></i>sara.white@example.com</a
+                  ><a href="tel:2223334444"
+                    ><i class="ri-phone-line"></i>(222) 333-4444</a
+                  >
+                </div>
+                <div class="crm-person-meta">
+                  <span><i class="ri-links-line"></i>Event</span
+                  ><span><i class="ri-time-line"></i>Recently active</span>
+                </div>
+                <div class="crm-person-tags">
+                  <span class="crm-contact-tag">Converted</span>
+                </div>
+                <div class="crm-person-actions">
+                  <button type="button" class="btn btn-light" data-contact-view>
+                    <i class="ri-user-search-line me-1"></i>View contact</button
+                  ><button
+                    type="button"
+                    class="crm-contact-delete"
+                    data-contact-delete
+                    aria-label="Remove Sara White"
+                  >
+                    <i class="ri-delete-bin-line"></i>
+                  </button>
+                </div>
+              </article>
+              <article
+                class="crm-person-card"
+                data-contact-card
+                data-name="david lee"
+                data-email="david.lee@example.com"
+                data-company="tech innovations"
+                data-score="80"
+                data-source="Referral"
+                data-phone="(444) 555-6666"
+                data-last-contact="Recently active"
+              >
+                <div class="crm-person-card-top">
+                  <img
+                    class="crm-person-avatar"
+                    src="../assets/images/users/9.jpg"
+                    alt="David Lee"
+                  /><button
+                    class="crm-contact-favorite"
+                    type="button"
+                    aria-label="Add David Lee to favorites"
+                    aria-pressed="false"
+                  >
+                    <i class="ri-star-line"></i>
+                  </button>
+                </div>
+                <div class="crm-person-heading">
+                  <div>
+                    <h2>David Lee</h2>
+                    <p>Tech Innovations</p>
+                  </div>
+                  <span class="crm-score-pill">80<small>/100</small></span>
+                </div>
+                <div
+                  class="crm-score-track"
+                  role="img"
+                  aria-label="Lead score 80 out of 100"
+                >
+                  <span style="width: 80%"></span>
+                </div>
+                <div class="crm-person-details">
+                  <a href="mailto:david.lee@example.com"
+                    ><i class="ri-mail-line"></i>david.lee@example.com</a
+                  ><a href="tel:4445556666"
+                    ><i class="ri-phone-line"></i>(444) 555-6666</a
+                  >
+                </div>
+                <div class="crm-person-meta">
+                  <span><i class="ri-links-line"></i>Referral</span
+                  ><span><i class="ri-time-line"></i>Recently active</span>
+                </div>
+                <div class="crm-person-tags">
+                  <span class="crm-contact-tag">Follow-up</span>
+                </div>
+                <div class="crm-person-actions">
+                  <button type="button" class="btn btn-light" data-contact-view>
+                    <i class="ri-user-search-line me-1"></i>View contact</button
+                  ><button
+                    type="button"
+                    class="crm-contact-delete"
+                    data-contact-delete
+                    aria-label="Remove David Lee"
+                  >
+                    <i class="ri-delete-bin-line"></i>
+                  </button>
+                </div>
+              </article>
+              <article
+                class="crm-person-card"
+                data-contact-card
+                data-name="olivia green"
+                data-email="olivia.green@example.com"
+                data-company="greentech"
+                data-score="95"
+                data-source="Web"
+                data-phone="(555) 777-8888"
+                data-last-contact="Recently active"
+              >
+                <div class="crm-person-card-top">
+                  <img
+                    class="crm-person-avatar"
+                    src="../assets/images/users/15.jpg"
+                    alt="Olivia Green"
+                  /><button
+                    class="crm-contact-favorite"
+                    type="button"
+                    aria-label="Add Olivia Green to favorites"
+                    aria-pressed="false"
+                  >
+                    <i class="ri-star-line"></i>
+                  </button>
+                </div>
+                <div class="crm-person-heading">
+                  <div>
+                    <h2>Olivia Green</h2>
+                    <p>GreenTech</p>
+                  </div>
+                  <span class="crm-score-pill">95<small>/100</small></span>
+                </div>
+                <div
+                  class="crm-score-track"
+                  role="img"
+                  aria-label="Lead score 95 out of 100"
+                >
+                  <span style="width: 95%"></span>
+                </div>
+                <div class="crm-person-details">
+                  <a href="mailto:olivia.green@example.com"
+                    ><i class="ri-mail-line"></i>olivia.green@example.com</a
+                  ><a href="tel:5557778888"
+                    ><i class="ri-phone-line"></i>(555) 777-8888</a
+                  >
+                </div>
+                <div class="crm-person-meta">
+                  <span><i class="ri-links-line"></i>Web</span
+                  ><span><i class="ri-time-line"></i>Recently active</span>
+                </div>
+                <div class="crm-person-tags">
+                  <span class="crm-contact-tag">Interested</span
+                  ><span class="crm-contact-tag">VIP</span>
+                </div>
+                <div class="crm-person-actions">
+                  <button type="button" class="btn btn-light" data-contact-view>
+                    <i class="ri-user-search-line me-1"></i>View contact</button
+                  ><button
+                    type="button"
+                    class="crm-contact-delete"
+                    data-contact-delete
+                    aria-label="Remove Olivia Green"
+                  >
+                    <i class="ri-delete-bin-line"></i>
+                  </button>
+                </div>
+              </article>
+              <article
+                class="crm-person-card"
+                data-contact-card
+                data-name="liam turner"
+                data-email="liam.turner@example.com"
+                data-company="innovators inc"
+                data-score="65"
+                data-source="Event"
+                data-phone="(888) 999-0000"
+                data-last-contact="Recently active"
+              >
+                <div class="crm-person-card-top">
+                  <img
+                    class="crm-person-avatar"
+                    src="../assets/images/users/1.jpg"
+                    alt="Liam Turner"
+                  /><button
+                    class="crm-contact-favorite"
+                    type="button"
+                    aria-label="Add Liam Turner to favorites"
+                    aria-pressed="false"
+                  >
+                    <i class="ri-star-line"></i>
+                  </button>
+                </div>
+                <div class="crm-person-heading">
+                  <div>
+                    <h2>Liam Turner</h2>
+                    <p>Innovators Inc</p>
+                  </div>
+                  <span class="crm-score-pill">65<small>/100</small></span>
+                </div>
+                <div
+                  class="crm-score-track"
+                  role="img"
+                  aria-label="Lead score 65 out of 100"
+                >
+                  <span style="width: 65%"></span>
+                </div>
+                <div class="crm-person-details">
+                  <a href="mailto:liam.turner@example.com"
+                    ><i class="ri-mail-line"></i>liam.turner@example.com</a
+                  ><a href="tel:8889990000"
+                    ><i class="ri-phone-line"></i>(888) 999-0000</a
+                  >
+                </div>
+                <div class="crm-person-meta">
+                  <span><i class="ri-links-line"></i>Event</span
+                  ><span><i class="ri-time-line"></i>Recently active</span>
+                </div>
+                <div class="crm-person-tags">
+                  <span class="crm-contact-tag">Potential</span>
+                </div>
+                <div class="crm-person-actions">
+                  <button type="button" class="btn btn-light" data-contact-view>
+                    <i class="ri-user-search-line me-1"></i>View contact</button
+                  ><button
+                    type="button"
+                    class="crm-contact-delete"
+                    data-contact-delete
+                    aria-label="Remove Liam Turner"
+                  >
+                    <i class="ri-delete-bin-line"></i>
+                  </button>
+                </div>
+              </article>
+              <article
+                class="crm-person-card"
+                data-contact-card
+                data-name="mia martinez"
+                data-email="mia.martinez@example.com"
+                data-company="creativa solutions"
+                data-score="70"
+                data-source="Social Media"
+                data-phone="(777) 888-9999"
+                data-last-contact="Recently active"
+              >
+                <div class="crm-person-card-top">
+                  <img
+                    class="crm-person-avatar"
+                    src="../assets/images/users/3.jpg"
+                    alt="Mia Martinez"
+                  /><button
+                    class="crm-contact-favorite"
+                    type="button"
+                    aria-label="Add Mia Martinez to favorites"
+                    aria-pressed="false"
+                  >
+                    <i class="ri-star-line"></i>
+                  </button>
+                </div>
+                <div class="crm-person-heading">
+                  <div>
+                    <h2>Mia Martinez</h2>
+                    <p>Creativa Solutions</p>
+                  </div>
+                  <span class="crm-score-pill">70<small>/100</small></span>
+                </div>
+                <div
+                  class="crm-score-track"
+                  role="img"
+                  aria-label="Lead score 70 out of 100"
+                >
+                  <span style="width: 70%"></span>
+                </div>
+                <div class="crm-person-details">
+                  <a href="mailto:mia.martinez@example.com"
+                    ><i class="ri-mail-line"></i>mia.martinez@example.com</a
+                  ><a href="tel:7778889999"
+                    ><i class="ri-phone-line"></i>(777) 888-9999</a
+                  >
+                </div>
+                <div class="crm-person-meta">
+                  <span><i class="ri-links-line"></i>Social Media</span
+                  ><span><i class="ri-time-line"></i>Recently active</span>
+                </div>
+                <div class="crm-person-tags">
+                  <span class="crm-contact-tag">New Lead</span
+                  ><span class="crm-contact-tag">VIP</span>
+                </div>
+                <div class="crm-person-actions">
+                  <button type="button" class="btn btn-light" data-contact-view>
+                    <i class="ri-user-search-line me-1"></i>View contact</button
+                  ><button
+                    type="button"
+                    class="crm-contact-delete"
+                    data-contact-delete
+                    aria-label="Remove Mia Martinez"
+                  >
+                    <i class="ri-delete-bin-line"></i>
+                  </button>
+                </div>
+              </article>
+              <article
+                class="crm-person-card"
+                data-contact-card
+                data-name="noah harris"
+                data-email="noah.harris@example.com"
+                data-company="greenfuture"
+                data-score="85"
+                data-source="Referral"
+                data-phone="(444) 555-6666"
+                data-last-contact="Recently active"
+              >
+                <div class="crm-person-card-top">
+                  <img
+                    class="crm-person-avatar"
+                    src="../assets/images/users/9.jpg"
+                    alt="Noah Harris"
+                  /><button
+                    class="crm-contact-favorite"
+                    type="button"
+                    aria-label="Add Noah Harris to favorites"
+                    aria-pressed="false"
+                  >
+                    <i class="ri-star-line"></i>
+                  </button>
+                </div>
+                <div class="crm-person-heading">
+                  <div>
+                    <h2>Noah Harris</h2>
+                    <p>GreenFuture</p>
+                  </div>
+                  <span class="crm-score-pill">85<small>/100</small></span>
+                </div>
+                <div
+                  class="crm-score-track"
+                  role="img"
+                  aria-label="Lead score 85 out of 100"
+                >
+                  <span style="width: 85%"></span>
+                </div>
+                <div class="crm-person-details">
+                  <a href="mailto:noah.harris@example.com"
+                    ><i class="ri-mail-line"></i>noah.harris@example.com</a
+                  ><a href="tel:4445556666"
+                    ><i class="ri-phone-line"></i>(444) 555-6666</a
+                  >
+                </div>
+                <div class="crm-person-meta">
+                  <span><i class="ri-links-line"></i>Referral</span
+                  ><span><i class="ri-time-line"></i>Recently active</span>
+                </div>
+                <div class="crm-person-tags">
+                  <span class="crm-contact-tag">Converted</span>
+                </div>
+                <div class="crm-person-actions">
+                  <button type="button" class="btn btn-light" data-contact-view>
+                    <i class="ri-user-search-line me-1"></i>View contact</button
+                  ><button
+                    type="button"
+                    class="crm-contact-delete"
+                    data-contact-delete
+                    aria-label="Remove Noah Harris"
+                  >
+                    <i class="ri-delete-bin-line"></i>
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="table-responsive crm-contact-table-wrap">
+              <table
+                class="table text-nowrap table-hover mb-0 crm-contact-table"
+              >
+                <thead>
+                  <tr>
+                    <th scope="col">Contact</th>
+                    <th scope="col">Company</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Source</th>
+                    <th scope="col">Lead score</th>
+                    <th scope="col">Last activity</th>
+                    <th scope="col" class="text-end">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="crm-contact-grid"></tbody>
+              </table>
+            </div>
+            <div class="crm-contact-empty" id="crm-contact-empty" hidden>
+              No contacts match your search. Try a different name or source.
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <div
+        class="offcanvas offcanvas-end crm-contact-drawer crm-detail-drawer"
+        tabindex="-1"
+        id="contact-details-panel"
+        aria-labelledby="contact-details-title"
+      >
+        <div class="offcanvas-header">
+          <div>
+            <span class="crm-directory-kicker">CONTACT RECORD</span>
+            <h2 class="offcanvas-title" id="contact-details-title">
+              Contact details
+            </h2>
+            <p class="text-muted fs-12 mb-0">
+              Review relationship details and recent activity.
+            </p>
+          </div>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body" id="contact-details-content">
+          <p class="text-muted">Choose a contact to see their details.</p>
+        </div>
+      </div>
+
+      <div
+        class="modal fade crm-contact-modal"
+        id="create-contact"
+        tabindex="-1"
+        aria-labelledby="create-contact-title"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable"
+        >
+          <div class="modal-content">
+            <form id="crm-contact-form">
+              <div class="modal-header">
+                <div>
+                  <span class="crm-directory-kicker">GROW YOUR NETWORK</span>
+                  <h2 class="modal-title" id="create-contact-title">
+                    Add a contact
+                  </h2>
+                  <p class="text-muted fs-12 mb-0">
+                    Save the details your team needs for a meaningful follow-up.
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div class="crm-form-section-heading">
+                  <span class="crm-form-section-icon"
+                    ><i class="ri-user-3-line"></i
+                  ></span>
+                  <div>
+                    <strong>Contact information</strong
+                    ><small
+                      >Start with the person you are building a relationship
+                      with.</small
+                    >
+                  </div>
+                </div>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="contact-name" class="form-label"
+                      >Full name <span>*</span></label
+                    ><input
+                      class="form-control"
+                      id="contact-name"
+                      name="name"
+                      placeholder="e.g. Alex Morgan"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="contact-role" class="form-label"
+                      >Job title</label
+                    ><input
+                      class="form-control"
+                      id="contact-role"
+                      name="role"
+                      placeholder="e.g. Operations Director"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="contact-mail" class="form-label"
+                      >Work email <span>*</span></label
+                    ><input
+                      class="form-control"
+                      id="contact-mail"
+                      name="email"
+                      type="email"
+                      placeholder="alex@company.com"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="contact-phone" class="form-label"
+                      >Phone number</label
+                    ><input
+                      class="form-control"
+                      id="contact-phone"
+                      name="phone"
+                      type="tel"
+                      placeholder="+1 (555) 000-0000"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="company-name" class="form-label"
+                      >Company <span>*</span></label
+                    ><input
+                      class="form-control"
+                      id="company-name"
+                      name="company"
+                      placeholder="Company name"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="contact-source" class="form-label"
+                      >How did you meet?</label
+                    ><select
+                      class="form-select"
+                      id="contact-source"
+                      name="source"
+                    >
+                      <option>Referral</option>
+                      <option>Organic search</option>
+                      <option>Social media</option>
+                      <option>Industry event</option>
+                      <option>Partner</option>
+                      <option>Direct outreach</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="crm-form-section-heading mt-4">
+                  <span class="crm-form-section-icon"
+                    ><i class="ri-line-chart-line"></i
+                  ></span>
+                  <div>
+                    <strong>Relationship context</strong
+                    ><small
+                      >Give the team a starting point for the next
+                      conversation.</small
+                    >
+                  </div>
+                </div>
+                <div class="row g-3">
+                  <div class="col-md-4">
+                    <label for="contact-lead-score" class="form-label"
+                      >Lead score</label
+                    >
+                    <div class="input-group">
+                      <input
+                        class="form-control"
+                        id="contact-lead-score"
+                        name="score"
+                        type="number"
+                        min="0"
+                        max="100"
+                        value="50"
+                      /><span class="input-group-text">/ 100</span>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="contact-status" class="form-label"
+                      >Relationship stage</label
+                    ><select
+                      class="form-select"
+                      id="contact-status"
+                      name="status"
+                    >
+                      <option>New</option>
+                      <option>Engaged</option>
+                      <option>Qualified</option>
+                      <option>Customer</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="targetDate" class="form-label"
+                      >Last contacted</label
+                    ><input
+                      class="form-control"
+                      id="targetDate"
+                      name="lastContact"
+                      placeholder="Choose date and time"
+                    />
+                  </div>
+                  <div class="col-12">
+                    <label for="contact-notes" class="form-label"
+                      >Notes for your team</label
+                    ><textarea
+                      class="form-control"
+                      id="contact-notes"
+                      name="notes"
+                      rows="3"
+                      placeholder="What should the next person on your team know?"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-light"
+                  data-bs-dismiss="modal"
+                >
+                  Cancel</button
+                ><button type="submit" class="btn crm-add-contact-button">
+                  <i class="ri-check-line me-1"></i>Save contact
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <!-- include common-scripts.html"-->
+    <!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/js/crm-contacts.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

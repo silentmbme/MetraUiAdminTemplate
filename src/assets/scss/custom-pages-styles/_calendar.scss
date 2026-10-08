@@ -1,0 +1,1538 @@
+@use "../variables";
+
+.calendar-workspace {
+  .calendar-overview-strip {
+    display: flex;
+    min-height: 4.5rem;
+    align-items: center;
+    gap: clamp(1rem, 3vw, 2.5rem);
+    margin-bottom: 1rem;
+    padding: 0.7rem 1rem;
+    border: 1px solid variables.$default-border;
+    border-radius: variables.$default-radius;
+    background: variables.$custom-white;
+  }
+
+  .calendar-overview-item {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+
+    >span:last-child {
+      display: grid;
+      gap: 0.1rem;
+    }
+
+    small {
+      color: variables.$text-muted;
+      font-size: 0.55rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+    }
+
+    strong {
+      font-size: 0.68rem;
+      font-weight: 550;
+    }
+  }
+
+  .calendar-overview-icon {
+    display: grid;
+    width: 2.25rem;
+    height: 2.25rem;
+    flex: 0 0 auto;
+    place-items: center;
+    border-radius: 0.6rem;
+    font-size: 1rem;
+  }
+
+  .calendar-overview-manage {
+    margin-inline-start: auto;
+    font-size: 0.65rem;
+  }
+
+  .calendar-workspace-grid {
+    display: grid;
+    grid-template-columns: 18rem minmax(0, 1fr);
+    align-items: start;
+    gap: 0.9rem;
+  }
+
+  .calendar-sidebar {
+    display: grid;
+    gap: 0.9rem;
+  }
+
+  .calendar-side-card {
+    margin: 0;
+
+    .card-header {
+      min-height: 3.2rem;
+      padding: 0.7rem 0.8rem;
+    }
+
+    .card-title {
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .card-body {
+      padding: 0.7rem 0.8rem;
+    }
+  }
+
+  .calendar-source-option {
+    display: flex;
+    min-height: 3.35rem;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.45rem 0.35rem;
+    border-bottom: 1px solid variables.$default-border;
+    color: variables.$default-text-color;
+    cursor: pointer;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    &:hover {
+      border-radius: variables.$default-radius;
+      background: variables.$default-body-color;
+    }
+
+    input {
+      width: 0.8rem;
+      height: 0.8rem;
+      margin: 0;
+      accent-color: variables.$primary;
+    }
+  }
+
+  .calendar-source-summary {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin-bottom: 0.35rem;
+    padding: 0.35rem 0.4rem 0.6rem;
+    border-bottom: 1px solid variables.$default-border;
+    color: variables.$text-muted;
+    font-size: 0.61rem;
+
+    i {
+      color: variables.$primary;
+      font-size: 0.85rem;
+    }
+
+    strong {
+      margin-inline-start: auto;
+      color: variables.$default-text-color;
+      font-size: 0.62rem;
+      font-weight: 600;
+    }
+  }
+
+  .calendar-source-copy {
+    display: grid;
+    min-width: 0;
+    flex: 1 1 auto;
+    gap: 0.1rem;
+
+    strong {
+      font-size: 0.64rem;
+      font-weight: 550;
+    }
+
+    small {
+      color: variables.$text-muted;
+      font-size: 0.55rem;
+    }
+  }
+
+  .calendar-source-count {
+    display: grid;
+    min-width: 1.35rem;
+    height: 1.25rem;
+    place-items: center;
+    border-radius: 0.3rem;
+    background: variables.$default-body-color;
+    color: variables.$text-muted;
+    font-size: 0.57rem;
+  }
+
+  .calendar-source-dot {
+    width: 0.45rem;
+    height: 0.45rem;
+    border-radius: 50%;
+  }
+
+  .calendar-next-card .card-body {
+    padding-top: 0.25rem;
+  }
+
+  .calendar-upcoming-item {
+    display: flex;
+    gap: 0.6rem;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid variables.$default-border;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    >time {
+      display: grid;
+      width: 2.6rem;
+      height: 2.9rem;
+      flex: 0 0 auto;
+      align-content: center;
+      justify-items: center;
+      border: 1px solid variables.$default-border;
+      border-radius: variables.$default-radius;
+
+      strong {
+        font-size: 0.9rem;
+        font-weight: 600;
+        line-height: 1.1;
+      }
+
+      span {
+        color: variables.$text-muted;
+        font-size: 0.5rem;
+        font-weight: 600;
+      }
+    }
+
+    >div {
+      min-width: 0;
+    }
+
+    h3 {
+      margin: 0.15rem 0;
+      font-size: 0.67rem;
+      font-weight: 600;
+    }
+
+    p {
+      margin: 0 0 0.3rem;
+      color: variables.$text-muted;
+      font-size: 0.59rem;
+    }
+  }
+
+  .calendar-upcoming-kind {
+    font-size: 0.5rem;
+    font-weight: 650;
+    letter-spacing: 0.045em;
+  }
+
+  .calendar-side-note {
+    display: flex;
+    gap: 0.6rem;
+    padding: 0.85rem;
+    border: 1px solid rgba(var(--theme-primary-rgb), 0.14);
+    border-radius: variables.$default-radius;
+    background: rgba(var(--theme-primary-rgb), 0.035);
+
+    strong {
+      font-size: 0.67rem;
+      font-weight: 600;
+    }
+
+    p {
+      margin: 0.2rem 0 0.45rem;
+      color: variables.$text-muted;
+      font-size: 0.6rem;
+      line-height: 1.5;
+    }
+
+    .btn {
+      font-size: 0.62rem;
+    }
+  }
+
+  .calendar-side-note-icon {
+    display: grid;
+    width: 1.8rem;
+    height: 1.8rem;
+    flex: 0 0 auto;
+    place-items: center;
+    border-radius: 0.5rem;
+    background: variables.$custom-white;
+    color: variables.$primary;
+  }
+
+  .calendar-main-card {
+    min-width: 0;
+    margin: 0;
+    overflow: hidden;
+
+    .card-header {
+      min-height: 3.6rem;
+      padding: 0.75rem 1rem;
+    }
+
+    .card-title {
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+  }
+
+  .calendar-header-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+
+    span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      color: variables.$text-muted;
+      font-size: 0.56rem;
+    }
+
+    i {
+      width: 0.4rem;
+      height: 0.4rem;
+      border-radius: 50%;
+    }
+  }
+
+  .calendar-main-body {
+    padding: 0.75rem 0.9rem 1rem;
+  }
+
+  #calendar {
+    --fc-border-color: #{variables.$default-border};
+    --fc-page-bg-color: #{variables.$custom-white};
+    --fc-neutral-bg-color: #{variables.$default-body-color};
+    --fc-today-bg-color: rgba(var(--theme-primary-rgb), 0.055);
+    font-family: variables.$default-font-family;
+    font-size: 0.68rem;
+
+    .fc-toolbar {
+      gap: 0.65rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .fc-toolbar-title {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .fc-button-primary {
+      border-color: variables.$default-border;
+      background: variables.$custom-white;
+      color: variables.$default-text-color;
+      box-shadow: none;
+      font-size: 0.65rem;
+      text-transform: capitalize;
+    }
+
+    .fc-button-primary:hover,
+    .fc-button-primary:focus,
+    .fc-button-primary:not(:disabled).fc-button-active {
+      border-color: variables.$primary;
+      background: variables.$primary;
+      color: #fff;
+      box-shadow: none;
+    }
+
+    .fc-daygrid-day-number,
+    .fc-col-header-cell-cushion {
+      padding: 0.4rem;
+      color: variables.$default-text-color;
+      font-size: 0.63rem;
+      text-decoration: none;
+    }
+
+    .fc-col-header-cell-cushion {
+      color: variables.$text-muted;
+      font-size: 0.59rem;
+      font-weight: 550;
+    }
+
+    .fc-daygrid-day-frame {
+      min-height: 5.1rem;
+    }
+
+    .fc-daygrid-day {
+      transition: background-color 0.12s ease;
+    }
+
+    .fc-daygrid-day:hover {
+      background-color: rgba(var(--theme-primary-rgb), 0.025);
+    }
+
+    .fc-daygrid-event {
+      margin: 1px 3px;
+      border: 0;
+      border-radius: 0.22rem;
+      padding: 1px 3px;
+      font-size: 0.58rem;
+    }
+
+    .calendar-event-team {
+      background: rgba(var(--theme-primary-rgb), 0.13);
+      color: variables.$primary;
+    }
+
+    .calendar-event-meeting {
+      background: rgba(var(--theme-info-rgb), 0.13);
+      color: variables.$info;
+    }
+
+    .calendar-event-deadline {
+      background: rgba(var(--theme-warning-rgb), 0.18);
+      color: variables.$warning;
+    }
+
+    .calendar-event-personal {
+      background: rgba(var(--theme-success-rgb), 0.13);
+      color: variables.$success;
+    }
+
+    .calendar-event-team .fc-event-main,
+    .calendar-event-meeting .fc-event-main,
+    .calendar-event-deadline .fc-event-main,
+    .calendar-event-personal .fc-event-main {
+      color: inherit;
+    }
+
+    .fc-list-event-title a,
+    .fc-list-day-text,
+    .fc-list-day-side-text {
+      color: variables.$default-text-color;
+      text-decoration: none;
+    }
+
+    .fc-timegrid-event {
+      border: 0;
+      border-radius: 0.3rem;
+      box-shadow: 0 1px 2px rgba(20, 35, 70, 0.1);
+    }
+
+    .fc-timegrid-slot-label {
+      color: variables.$text-muted;
+      font-size: 0.58rem;
+    }
+  }
+
+  .calendar-feedback {
+    min-height: 1.2rem;
+    margin: 0.4rem 0 0;
+    text-align: end;
+  }
+}
+
+.calendar-source-option input:checked+.calendar-source-dot {
+  box-shadow: 0 0 0 2px variables.$custom-white, 0 0 0 3px variables.$default-border;
+}
+
+.calendar-event-category-label {
+  color: variables.$primary;
+  font-size: 0.58rem;
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.calendar-event-detail-line {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 0.75rem;
+  font-size: 0.72rem;
+
+  i {
+    color: variables.$text-muted;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .calendar-workspace .calendar-workspace-grid {
+    grid-template-columns: 16rem minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 991.98px) {
+  .calendar-workspace .calendar-workspace-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .calendar-workspace .calendar-sidebar {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .calendar-workspace .calendar-side-note {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .calendar-workspace {
+    .calendar-overview-strip {
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 0.8rem 1.1rem;
+    }
+
+    .calendar-overview-item {
+      flex: 1 1 40%;
+    }
+
+    .calendar-overview-manage {
+      margin-inline-start: 0;
+    }
+
+    .calendar-sidebar {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .calendar-side-note {
+      grid-column: auto;
+    }
+
+    .calendar-main-card .card-header {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    #calendar .fc-toolbar {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    #calendar .fc-toolbar-chunk {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+    }
+
+    #calendar .fc-daygrid-day-frame {
+      min-height: 3.6rem;
+    }
+  }
+}
+
+
+.calendar-workspace.calendar-theme-page {
+  font-family: variables.$default-font-family;
+  font-size: variables.$default-font-size;
+
+  .calendar-overview-strip {
+    border-radius: variables.$default-radius;
+    box-shadow: none;
+  }
+
+  .calendar-overview-item strong {
+    font-size: 0.8125rem;
+  }
+
+  .calendar-overview-item small {
+    font-size: 0.6875rem;
+  }
+
+  .calendar-side-card,
+  .calendar-main-card {
+    border: 1px solid variables.$default-border;
+    box-shadow: none;
+    border-radius: variables.$default-radius;
+  }
+
+  .calendar-source-copy strong {
+    font-size: 0.8125rem;
+  }
+
+  .calendar-source-copy small {
+    font-size: 0.75rem;
+  }
+
+  .calendar-source-option {
+    padding-block: 0.75rem;
+  }
+
+  .calendar-source-option .form-check-input {
+    margin: 0;
+  }
+
+  .calendar-header-legend span {
+    font-size: 0.75rem;
+  }
+
+  .calendar-theme-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+
+    .form-select {
+      width: 7rem;
+    }
+  }
+
+  .calendar-upcoming-button {
+    display: block;
+    width: 100%;
+    text-align: start;
+    background: transparent;
+    color: variables.$default-text-color;
+    border: 0;
+    border-bottom: 1px solid variables.$default-border;
+    padding: 0.85rem 0;
+    font: inherit;
+
+    strong {
+      display: block;
+      font-size: 0.8125rem;
+      font-weight: 500;
+    }
+
+    span {
+      display: block;
+      font-size: 0.75rem;
+      margin-top: 0.35rem;
+      color: variables.$text-muted;
+    }
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    &:hover {
+      color: variables.$primary;
+    }
+
+    &:focus-visible {
+      outline: 2px solid variables.$primary;
+    }
+  }
+
+  #calendar {
+    font-size: 0.8125rem;
+
+    .fc-daygrid-day-number {
+      font-size: 0.8125rem;
+    }
+
+    .fc-col-header-cell-cushion {
+      font-size: 0.75rem;
+      padding: 0.7rem 0.4rem;
+    }
+
+    .fc-daygrid-event {
+      font-size: 0.75rem;
+      padding: 0.2rem 0.35rem;
+      border-radius: variables.$default-radius;
+    }
+
+    .fc-timegrid-slot-label {
+      font-size: 0.75rem;
+    }
+
+    .fc-daygrid-day-frame {
+      min-height: 6rem;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .calendar-theme-page .calendar-theme-toolbar h3 {
+    order: -1;
+    width: 100%;
+  }
+}
+
+
+/* Calendar reference layout */
+.calendar-reference {
+  font-family: variables.$default-font-family;
+  font-size: variables.$default-font-size;
+  color: variables.$default-text-color;
+  background: variables.$custom-white;
+  border: 1px solid variables.$default-border;
+  border-radius: variables.$default-radius;
+  height: max(40rem, calc(100vh - 10.5rem));
+  overflow-y: hidden;
+
+  .calendar-reference-layout {
+    display: grid;
+    grid-template-columns: 30.5% minmax(0, 1fr);
+    height: 100%;
+    min-height: 0;
+  }
+
+  .calendar-reference-sidebar {
+    padding: 1.875rem;
+    border-inline-end: 5px solid variables.$default-body-color;
+    min-height: 0;
+    overflow-y: auto;
+  }
+
+  .calendar-reference-main {
+    min-width: 0;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 1.875rem;
+  }
+  .calendar-reference-sidebar>p {
+    margin-block: 1rem 2rem !important;
+    line-height: 1.5;
+  }
+
+  #calendar-external-events {
+    margin-top: 0 !important;
+    gap: 0.55rem !important;
+  }
+
+  .calendar-drag-event {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    min-height: 3.35rem;
+    padding: 0.85rem 1.5rem;
+    border: 0;
+    border-radius: variables.$default-radius;
+    font-size: 0.875rem;
+    font-weight: 400;
+    cursor: grab;
+    white-space: normal;
+  }
+
+  .calendar-drag-event:active {
+    cursor: grabbing;
+  }
+
+  .calendar-template-dot {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    flex: 0 0 auto;
+  }
+
+  #calendar { flex: 1 1 auto; min-height: 0; }
+
+  .calendar-reference-toolbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    min-height: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .calendar-reference-toolbar h2 {
+    position: absolute;
+    inset-inline-start: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 1.125rem !important;
+    font-weight: 500 !important;
+  }
+
+  .calendar-reference-toolbar .btn {
+    font-size: 0.8125rem;
+  }
+
+  [data-calendar-view].active {
+    background: variables.$dark !important;
+    color: variables.$white !important;
+    border-color: variables.$dark !important;
+  }
+
+  #calendar {
+    font: inherit;
+    --fc-border-color: #{variables.$default-border};
+    --fc-page-bg-color: #{variables.$custom-white};
+    --fc-neutral-bg-color: #{variables.$default-body-color};
+    --fc-today-bg-color: #{rgba(var(--theme-primary-rgb), 0.05)};
+
+    .fc-col-header-cell {
+      background: variables.$default-body-color;
+    }
+
+    .fc-col-header-cell-cushion {
+      padding: 1rem 0.25rem;
+      color: variables.$default-text-color;
+      font-size: 0.875rem;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .fc-daygrid-day-frame {
+      min-height: 9.4rem;
+    }
+
+    .fc-daygrid-day-number {
+      padding: 0.65rem;
+      color: variables.$default-text-color;
+      font-size: 0.8125rem;
+      text-decoration: none;
+    }
+
+    .fc-day-today .fc-daygrid-day-number {
+      display: grid;
+      place-items: center;
+      margin: 0.25rem;
+      padding: 0;
+      width: 2.2rem;
+      height: 2.2rem;
+      background: variables.$primary;
+      color: variables.$white;
+      border-radius: 50%;
+    }
+
+    .fc-daygrid-event {
+      margin: 0.3rem 0.2rem;
+      padding: 0.65rem 0.45rem;
+      border: 0;
+      border-inline-start: 3px solid currentColor;
+      border-radius: 0.15rem;
+      font-size: 0.8125rem;
+    }
+
+    .fc-event-main {
+      color: inherit;
+    }
+
+    .fc-event-title {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      font-weight: 400;
+    }
+
+    .fc-daygrid-day-events {
+      margin-bottom: 0.2rem;
+    }
+
+    .fc-list-event-title a,
+    .fc-list-day-text,
+    .fc-list-day-side-text {
+      color: variables.$default-text-color;
+    }
+
+    @each $tone in primary, secondary, success, danger, info, warning, dark {
+      .calendar-tone-#{$tone} {
+        background: rgba(var(--theme-#{$tone}-rgb), 0.12);
+        color: rgb(var(--theme-#{$tone}-rgb));
+      }
+    }
+  }
+}
+
+@media (max-width: 1399.98px) {
+  .calendar-reference {
+
+    .calendar-reference-sidebar,
+    .calendar-reference-main {
+      padding: 1.25rem;
+    }
+
+    .calendar-reference-toolbar h2 {
+      position: static;
+      transform: none;
+      font-size: 0.875rem !important;
+    }
+
+    .calendar-reference-toolbar .btn {
+      font-size: 0.75rem;
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .calendar-reference .calendar-reference-toolbar {
+    flex-wrap: wrap;
+  }
+
+  .calendar-reference .calendar-reference-toolbar h2 {
+    order: -1;
+    width: 100%;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .calendar-reference {
+    .calendar-reference-layout {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .calendar-reference-sidebar {
+      border-inline-end: 0;
+      border-bottom: 1px solid variables.$default-border;
+    }
+
+    #calendar-external-events {
+      display: grid !important;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .calendar-drag-event {
+      padding: 0.65rem;
+      gap: 0.65rem;
+      font-size: 0.75rem;
+    }
+  }
+}
+
+
+/* Appointment week view */
+.calendar-reference.appointment-calendar {
+  .calendar-reference-layout {
+    grid-template-columns: 17rem minmax(0, 1fr);
+  }
+
+  .calendar-reference-sidebar {
+    border-inline-end: 1px solid variables.$default-border;
+    padding: 1.25rem;
+  }
+
+  .calendar-reference-main {
+    padding: 1.25rem;
+    background: variables.$default-body-color;
+  }
+
+  .appointment-agenda-day {
+    margin-bottom: 1.5rem;
+  }
+
+  .appointment-agenda-item {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 1rem 0.75rem 1rem 1.25rem;
+    text-align: start;
+    border: 0;
+    border-bottom: 1px solid variables.$default-border;
+    background: transparent;
+    color: variables.$default-text-color;
+    font: inherit;
+
+    strong {
+      display: block;
+      font-weight: 500;
+    }
+
+    span {
+      display: block;
+      color: variables.$text-muted;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset-inline-start: 0;
+      top: 1rem;
+      bottom: 1rem;
+      width: 3px;
+      border-radius: 2px;
+      background: rgb(var(--appointment-tone));
+    }
+
+    &:hover {
+      background: variables.$default-body-color;
+    }
+
+    &:focus-visible {
+      outline: 2px solid variables.$primary;
+    }
+  }
+
+  #calendar {
+    background: variables.$custom-white;
+
+    .fc-timegrid-slot {
+      height: 3.5rem;
+    }
+
+    .fc-timegrid-slot-label {
+      color: variables.$text-muted;
+      font-size: 0.75rem;
+    }
+
+    .fc-timegrid-event {
+      background: variables.$custom-white;
+      border: 1px solid variables.$default-border;
+      border-radius: variables.$default-radius;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+      padding: 0.75rem;
+    }
+
+    .fc-timegrid-event .fc-event-main {
+      position: relative;
+      padding-inline-start: 0.75rem;
+      color: variables.$default-text-color;
+    }
+
+    .fc-timegrid-event .fc-event-main::before {
+      content: '';
+      position: absolute;
+      inset-inline-start: 0;
+      top: 0;
+      width: 3px;
+      height: 2.75rem;
+      border-radius: 2px;
+      background: currentColor;
+    }
+
+    @each $tone in primary, secondary, success, danger, info, warning, dark {
+      .fc-timegrid-event.calendar-tone-#{$tone} .fc-event-main::before {
+        background: rgb(var(--theme-#{$tone}-rgb));
+      }
+    }
+
+    .appointment-event-content strong {
+      display: block;
+      font-weight: 500;
+      font-size: 0.8125rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .appointment-event-time {
+      display: block;
+      margin-top: 0.35rem;
+      color: variables.$text-muted;
+      font-size: 0.6875rem;
+    }
+
+    .fc-timegrid-col.fc-day-today {
+      background: repeating-linear-gradient(-18deg, transparent, transparent 9px, rgba(var(--theme-primary-rgb), 0.045) 10px, rgba(var(--theme-primary-rgb), 0.045) 12px);
+    }
+
+    .fc-timegrid-now-indicator-line {
+      border-color: variables.$danger;
+    }
+
+    .fc-timegrid-now-indicator-arrow {
+      border-color: variables.$danger;
+    }
+
+    .fc-col-header-cell {
+      background: variables.$custom-white;
+    }
+  }
+}
+
+@media(max-width:991.98px) {
+  .calendar-reference.appointment-calendar .calendar-reference-layout {
+    grid-template-columns: 14rem minmax(0, 1fr);
+  }
+}
+
+@media(max-width:767.98px) {
+  .calendar-reference.appointment-calendar {
+    .calendar-reference-layout {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    #appointment-agenda {
+      max-height: 20rem;
+      overflow-y: auto;
+    }
+
+    .calendar-reference-sidebar {
+      border-inline-end: 0;
+    }
+
+    #calendar .fc-timegrid-event {
+      padding: 0.35rem;
+    }
+
+    #calendar .appointment-event-content .avatar-list-stacked {
+      display: none;
+    }
+  }
+}
+/* Adapt the calendar viewport while allowing the mobile page to scroll. */
+@media (max-width: 767.98px) {
+  .calendar-reference.appointment-calendar {
+    height: auto;
+    overflow: visible;
+    .calendar-reference-layout { height: auto; min-height: 0; }
+    .calendar-reference-sidebar { height: auto; overflow: visible; }
+    .calendar-reference-main { height: clamp(30rem, 75vh, 44rem); height: clamp(30rem, 75dvh, 44rem); }
+    .calendar-reference-toolbar { flex: 0 0 auto; margin-bottom: 1rem; }
+    #appointment-agenda { max-height: 15rem; overscroll-behavior: contain; }
+  }
+}
+
+/* Final event-card overrides: FullCalendar applies its own background to
+   .fc-v-event, and the tone class sits on the same element as the event. */
+.calendar-reference.appointment-calendar #calendar {
+  .fc-timegrid-event {
+    padding: 0.5rem 0.55rem !important;
+    border: 1px solid variables.$default-border !important;
+    border-radius: 0.5rem !important;
+    background: variables.$custom-white !important;
+    color: variables.$default-text-color !important;
+    box-shadow: 0 2px 7px rgba(20, 35, 70, 0.07) !important;
+  }
+
+  .fc-timegrid-event .fc-event-main {
+    position: relative;
+    padding-inline-start: 0.65rem;
+    color: variables.$default-text-color !important;
+  }
+
+  .fc-timegrid-event .fc-event-main::before {
+    content: "";
+    position: absolute;
+    inset-block: 0.05rem;
+    inset-inline-start: 0;
+    width: 3px;
+    height: auto;
+    border-radius: 3px;
+    background: variables.$primary;
+  }
+
+  .appointment-event-content strong {
+    display: block;
+    color: variables.$default-text-color;
+    font-size: 0.8rem;
+    font-weight: 550;
+    line-height: 1.3;
+  }
+
+  .appointment-event-time {
+    display: block;
+    margin-top: 0.25rem;
+    color: variables.$text-muted;
+    font-size: 0.7rem;
+  }
+
+  @each $tone in primary, secondary, success, danger, info, warning, dark {
+    .fc-timegrid-event.calendar-tone-#{$tone} {
+      border-color: rgba(var(--theme-#{$tone}-rgb), 0.35) !important;
+    }
+
+    .fc-timegrid-event.calendar-tone-#{$tone} .fc-event-main::before {
+      background: rgb(var(--theme-#{$tone}-rgb)) !important;
+    }
+  }
+}
+
+/* Appointment planner styling based on the compact weekly reference. */
+.calendar-reference.appointment-calendar {
+  .calendar-reference-sidebar {
+    background: variables.$custom-white;
+  }
+
+  .appointment-agenda-day {
+    margin-bottom: 1rem;
+
+    > h3 {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      margin: 0 0 0.55rem;
+      padding: 0.6rem 0.8rem !important;
+      border-radius: 999px !important;
+      background: variables.$default-body-color !important;
+      color: variables.$text-muted;
+      font-size: 0.75rem !important;
+      font-weight: 500 !important;
+    }
+  }
+
+  .appointment-agenda-item {
+    padding: 0.8rem 0.5rem 0.8rem 1rem;
+    border-bottom-color: variables.$default-border;
+
+    strong {
+      color: variables.$default-text-color;
+      font-size: 0.8125rem;
+      line-height: 1.35;
+    }
+
+    .appointment-agenda-time {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 0.35rem;
+      color: variables.$text-muted;
+      font-size: 0.75rem;
+
+      i {
+        font-size: 0.85rem;
+      }
+    }
+
+    &:hover {
+      border-radius: 0.45rem;
+      background: variables.$default-body-color;
+    }
+  }
+
+  .calendar-reference-toolbar {
+    min-height: 2.75rem;
+    margin-bottom: 0.75rem;
+
+    h2 {
+      color: variables.$default-text-color;
+      font-size: 1rem !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.025em;
+    }
+  }
+
+  #calendar {
+    .fc-timegrid-axis {
+      width: 4rem !important;
+    }
+
+    .fc-timegrid-axis-cushion,
+    .fc-timegrid-slot-label-cushion {
+      color: variables.$text-muted;
+      font-size: 0.72rem;
+    }
+
+    .fc-col-header-cell {
+      position: relative;
+      background: variables.$custom-white;
+    }
+
+    .fc-col-header-cell-cushion {
+      display: block;
+      padding: 0.8rem 0.25rem;
+    }
+
+    .appointment-day-heading {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      min-height: 2.25rem;
+    }
+
+    .appointment-day-date {
+      color: variables.$text-muted;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.025em;
+    }
+
+    .appointment-day-count {
+      display: inline-grid;
+      min-width: 1.4rem;
+      height: 1.4rem;
+      place-items: center;
+      padding-inline: 0.3rem;
+      border: 1px solid variables.$default-border;
+      border-radius: 0.35rem;
+      background: variables.$custom-white;
+      color: variables.$default-text-color;
+      font-size: 0.68rem;
+      line-height: 1;
+    }
+
+    .fc-col-header-cell.fc-day-today {
+      box-shadow: inset 0 -3px 0 variables.$primary;
+
+      .appointment-day-date {
+        color: variables.$default-text-color;
+      }
+
+      .appointment-day-count {
+        border-color: variables.$primary;
+        background: variables.$primary;
+        color: #000;
+      }
+    }
+
+    .fc-timegrid-col.fc-day-today {
+      background: repeating-linear-gradient(165deg, rgba(var(--theme-primary-rgb), 0.025) 0, rgba(var(--theme-primary-rgb), 0.025) 7px, rgba(var(--theme-primary-rgb), 0.075) 8px, rgba(var(--theme-primary-rgb), 0.075) 9px);
+    }
+
+    .fc-timegrid-event {
+      margin: 0.2rem 0.15rem;
+      padding: 0.5rem 0.55rem;
+      border: 1px solid variables.$default-border;
+      border-radius: 0.5rem;
+      background: variables.$custom-white;
+      box-shadow: 0 2px 7px rgba(20, 35, 70, 0.06);
+    }
+
+    .fc-timegrid-event .fc-event-main {
+      padding-inline-start: 0.6rem;
+    }
+
+    .fc-timegrid-event .fc-event-main::before {
+      top: 0.05rem;
+      bottom: 0.05rem;
+      width: 3px;
+      height: 50%;
+      border-radius: 3px;
+    }
+
+    .appointment-event-content strong {
+      font-size: 0.8rem;
+      line-height: 1.3;
+    }
+
+    .appointment-event-time {
+      margin-top: 0.25rem;
+      font-size: 0.7rem;
+    }
+
+    .fc-timegrid-now-indicator-line {
+      border-width: 2px 0 0;
+    }
+
+    .fc-timegrid-now-indicator-arrow {
+      border-top-color: variables.$danger;
+      border-bottom-color: variables.$danger;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .calendar-reference.appointment-calendar {
+    .calendar-reference-sidebar {
+      padding: 1rem;
+    }
+
+    .appointment-agenda-day {
+      margin-bottom: 0.65rem;
+    }
+
+    .appointment-agenda-item {
+      padding-block: 0.65rem;
+    }
+
+    .calendar-reference-toolbar h2 {
+      order: -1;
+    }
+  }
+}
+
+/* Full Calendar page styling. Keep these rules last so the shared plugin
+   defaults cannot flatten the calendar's page-specific presentation. */
+.calendar-reference.appointment-calendar {
+  .calendar-reference-main {
+    min-width: 0;
+  }
+
+  #calendar {
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    flex: 1 1 auto;
+    padding: 0.75rem;
+    overflow: hidden;
+    border: 1px solid variables.$default-border;
+    border-radius: variables.$default-radius;
+    background: variables.$custom-white;
+    color: variables.$default-text-color;
+    --fc-border-color: #{variables.$default-border};
+    --fc-page-bg-color: #{variables.$custom-white};
+    --fc-neutral-bg-color: #{variables.$default-body-color};
+    --fc-today-bg-color: rgba(var(--theme-primary-rgb), 0.07);
+    --fc-now-indicator-color: #{variables.$danger};
+
+    .fc {
+      height: 100%;
+      min-height: 0;
+      font-family: variables.$default-font-family;
+      font-size: 0.8125rem;
+    }
+
+    .fc-view-harness,
+    .fc-view-harness-active,
+    .fc-scroller-harness,
+    .fc-scroller {
+      min-height: 0;
+    }
+
+    .fc-scrollgrid,
+    .fc-theme-standard td,
+    .fc-theme-standard th {
+      border-color: variables.$default-border !important;
+    }
+
+    .fc-col-header-cell {
+      background: variables.$default-body-color;
+    }
+
+    .fc-col-header-cell-cushion,
+    .fc-daygrid-day-number {
+      color: variables.$default-text-color;
+      text-decoration: none;
+    }
+
+    .fc-col-header-cell-cushion {
+      padding: 0.8rem 0.75rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .fc-daygrid-day-number {
+      padding: 0.55rem;
+      font-size: 0.75rem;
+    }
+
+    .fc-daygrid-day-frame {
+      min-height: 7rem;
+    }
+
+    .fc-day-today .fc-daygrid-day-number {
+      display: grid;
+      width: 1.9rem;
+      height: 1.9rem;
+      place-items: center;
+      margin: 0.25rem;
+      padding: 0;
+      border-radius: 50%;
+      background: variables.$primary;
+      color: variables.$white;
+    }
+
+    .fc-daygrid-event {
+      margin: 0.2rem 0.25rem;
+      padding: 0.35rem 0.45rem;
+      border: 0;
+      border-inline-start: 3px solid currentColor;
+      border-radius: 0.3rem;
+      font-size: 0.72rem;
+    }
+
+    .fc-event-main,
+    .fc-event-title,
+    .fc-event-time {
+      color: inherit;
+    }
+
+    .fc-event-title {
+      overflow: hidden;
+      font-weight: 500;
+      text-overflow: ellipsis;
+    }
+
+    .fc-timegrid-slot-label,
+    .fc-list-event-time {
+      color: variables.$text-muted;
+      font-size: 0.72rem;
+    }
+
+    .fc-timegrid-slot {
+      height: 3rem;
+    }
+
+    .fc-timegrid-event {
+      border-radius: 0.35rem;
+      box-shadow: 0 1px 3px rgba(20, 35, 70, 0.08);
+      padding: 0.45rem;
+    }
+
+    .fc-list {
+      border-color: variables.$default-border;
+    }
+
+    .fc-list-day-cushion {
+      background: variables.$default-body-color;
+    }
+
+    .fc-list-event:hover td {
+      background: rgba(var(--theme-primary-rgb), 0.04);
+    }
+
+    @each $tone in primary, secondary, success, danger, info, warning, dark {
+      .calendar-tone-#{$tone} {
+        background: rgba(var(--theme-#{$tone}-rgb), 0.12);
+        color: rgb(var(--theme-#{$tone}-rgb));
+      }
+    }
+  }
+
+  .calendar-reference-toolbar .btn {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .calendar-reference.appointment-calendar {
+    .calendar-reference-main {
+      min-width: 0;
+      padding: 0.85rem;
+    }
+
+    .calendar-reference-toolbar {
+      align-items: flex-start;
+      gap: 0.65rem;
+    }
+
+    .calendar-reference-toolbar > .btn-group:last-child {
+      max-width: 100%;
+      overflow-x: auto;
+    }
+
+    #calendar {
+      padding: 0.35rem;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    #calendar .fc {
+      min-width: 34rem;
+    }
+  }
+}
+
+/* Keep event cards consistent after all shared and calendar view rules. */
+.calendar-reference.appointment-calendar #calendar .fc-timegrid-event {
+  padding: 0.5rem 0.55rem !important;
+  border: 1px solid variables.$default-border !important;
+  border-radius: 0.5rem !important;
+  background: variables.$custom-white !important;
+  color: variables.$default-text-color !important;
+  box-shadow: 0 2px 7px rgba(20, 35, 70, 0.07) !important;
+}
+
+.calendar-reference.appointment-calendar #calendar .fc-timegrid-event .fc-event-main {
+  position: relative;
+  padding-inline-start: 0.65rem;
+  color: variables.$default-text-color !important;
+}
+
+.calendar-reference.appointment-calendar #calendar .fc-timegrid-event .fc-event-main::before {
+  content: "";
+  position: absolute;
+  inset-block: 0.05rem;
+  inset-inline-start: 0;
+  width: 3px;
+  height: 50%;
+  border-radius: 3px;
+  background: variables.$primary;
+}
+
+.calendar-reference.appointment-calendar #calendar .appointment-event-content strong {
+  display: block;
+  color: variables.$default-text-color;
+  font-size: 0.8rem;
+  font-weight: 550;
+  line-height: 1.3;
+}
+
+.calendar-reference.appointment-calendar #calendar .appointment-event-time {
+  display: block;
+  margin-top: 0.25rem;
+  color: variables.$text-muted;
+  font-size: 0.7rem;
+}
+
+@each $tone in primary, secondary, success, danger, info, warning, dark {
+  .calendar-reference.appointment-calendar #calendar .fc-timegrid-event.calendar-tone-#{$tone} {
+    border-color: rgba(var(--theme-#{$tone}-rgb), 0.35) !important;
+  }
+
+  .calendar-reference.appointment-calendar #calendar .fc-timegrid-event.calendar-tone-#{$tone} .fc-event-main::before {
+    background: rgb(var(--theme-#{$tone}-rgb)) !important;
+  }
+}

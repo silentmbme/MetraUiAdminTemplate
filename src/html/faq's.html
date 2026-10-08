@@ -1,0 +1,513 @@
+<!-- include document-head.html"-->
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+
+      <div class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Frequently Asked Questions</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">Support</li>
+            <li class="breadcrumb-item active" aria-current="page">FAQs</li>
+          </ol>
+        </div>
+        <div class="container-fluid faq-workspace">
+          <div class="card custom-card faq-intro">
+            <div class="card-body text-center py-5">
+              <span class="faq-intro-icon"
+                ><i class="ri-question-answer-line" aria-hidden="true"></i
+              ></span>
+              <h2 class="fs-24 fw-semibold mt-3 mb-2">
+                How can we help you today?
+              </h2>
+              <p class="text-muted mb-4">
+                Clear answers for your everyday workspace questions.
+              </p>
+              <div class="faq-search-wrap mx-auto">
+                <label for="faq-search" class="visually-hidden"
+                  >Search frequently asked questions</label
+                >
+                <div class="input-group">
+                  <span class="input-group-text bg-transparent"
+                    ><i class="ri-search-line" aria-hidden="true"></i></span
+                  ><input
+                    id="faq-search"
+                    class="form-control"
+                    type="search"
+                    placeholder="Find an answer..."
+                  /><button
+                    id="faq-clear"
+                    class="btn btn-light"
+                    type="button"
+                    aria-label="Clear search"
+                  >
+                    <i class="ri-close-line" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+              <p
+                class="text-muted fs-12 mt-3 mb-0"
+                id="faq-result-status"
+                role="status"
+              >
+                12 questions available
+              </p>
+            </div>
+          </div>
+          <div id="faq-empty" class="card custom-card" hidden>
+            <div class="card-body text-center py-5">
+              <h2 class="fs-16">No answers found</h2>
+              <p class="text-muted mb-0">
+                Try a shorter phrase or a different keyword.
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xl-6" data-faq-group="0">
+              <section class="card custom-card" aria-labelledby="faq-heading-0">
+                <div class="card-header">
+                  <div class="d-flex align-items-center gap-3">
+                    <span class="faq-topic-icon"
+                      ><i class="ri-layout-grid-line" aria-hidden="true"></i
+                    ></span>
+                    <div>
+                      <h2 class="card-title mb-1" id="faq-heading-0">
+                        Your workspace
+                      </h2>
+                      <span class="text-muted fs-12"
+                        >Helpful answers to common questions</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="accordion accordion-flush" id="faq-topic-0">
+                    <div class="accordion-item" data-faq-question>
+                      <h3 class="accordion-header">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#faq-answer-0-0"
+                          aria-expanded="false"
+                          aria-controls="faq-answer-0-0"
+                        >
+                          What is included in the workspace?
+                        </button>
+                      </h3>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="faq-answer-0-0"
+                        data-bs-parent="#faq-topic-0"
+                      >
+                        <div class="accordion-body">
+                          The workspace brings together project planning, task
+                          tracking, calendars, file management and reporting
+                          examples. Choose a page from the sidebar to explore
+                          its tools.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item" data-faq-question>
+                      <h3 class="accordion-header">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#faq-answer-0-1"
+                          aria-expanded="false"
+                          aria-controls="faq-answer-0-1"
+                        >
+                          How can I make the dashboard my own?
+                        </button>
+                      </h3>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="faq-answer-0-1"
+                        data-bs-parent="#faq-topic-0"
+                      >
+                        <div class="accordion-body">
+                          Start with the appearance settings, then adapt
+                          dashboard cards to your workflow. Replace sample
+                          records with your own application data before using
+                          the reports for decisions.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item" data-faq-question>
+                      <h3 class="accordion-header">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#faq-answer-0-2"
+                          aria-expanded="false"
+                          aria-controls="faq-answer-0-2"
+                        >
+                          Where do I find frequently used tools?
+                        </button>
+                      </h3>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="faq-answer-0-2"
+                        data-bs-parent="#faq-topic-0"
+                      >
+                        <div class="accordion-body">
+                          The sidebar groups related pages together. Your
+                          account menu contains profile options, while the
+                          header provides quick access to appearance and
+                          workspace controls.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xl-6" data-faq-group="1">
+              <section class="card custom-card" aria-labelledby="faq-heading-1">
+                <div class="card-header">
+                  <div class="d-flex align-items-center gap-3">
+                    <span class="faq-topic-icon"
+                      ><i class="ri-user-settings-line" aria-hidden="true"></i
+                    ></span>
+                    <div>
+                      <h2 class="card-title mb-1" id="faq-heading-1">
+                        Personal settings
+                      </h2>
+                      <span class="text-muted fs-12"
+                        >Helpful answers to common questions</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="accordion accordion-flush" id="faq-topic-1">
+                    <div class="accordion-item" data-faq-question>
+                      <h3 class="accordion-header">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#faq-answer-1-0"
+                          aria-expanded="false"
+                          aria-controls="faq-answer-1-0"
+                        >
+                          How do I edit my personal information?
+                        </button>
+                      </h3>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="faq-answer-1-0"
+                        data-bs-parent="#faq-topic-1"
+                      >
+                        <div class="accordion-body">
+                          Open Profile Settings from your account menu. Review
+                          the available fields and connect the save action to
+                          your account service when integrating the template.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item" data-faq-question>
+                      <h3 class="accordion-header">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#faq-answer-1-1"
+                          aria-expanded="false"
+                          aria-controls="faq-answer-1-1"
+                        >
+                          Can I use a different theme?
+                        </button>
+                      </h3>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="faq-answer-1-1"
+                        data-bs-parent="#faq-topic-1"
+                      >
+                        <div class="accordion-body">
+                          Use the appearance toggle or theme settings to choose
+                          your preferred look. Supported tables and charts
+                          follow the project theme automatically.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item" data-faq-question>
+                      <h3 class="accordion-header">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#faq-answer-1-2"
+                          aria-expanded="false"
+                          aria-controls="faq-answer-1-2"
+                        >
+                          Are my preferences saved permanently?
+                        </button>
+                      </h3>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="faq-answer-1-2"
+                        data-bs-parent="#faq-topic-1"
+                      >
+                        <div class="accordion-body">
+                          Persistence depends on the connected application. Some
+                          examples demonstrate local interactions; connect
+                          preferences to your account service for use across
+                          devices.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xl-6" data-faq-group="2">
+              <section class="card custom-card" aria-labelledby="faq-heading-2">
+                <div class="card-header">
+                  <div class="d-flex align-items-center gap-3">
+                    <span class="faq-topic-icon"
+                      ><i class="ri-team-line" aria-hidden="true"></i
+                    ></span>
+                    <div>
+                      <h2 class="card-title mb-1" id="faq-heading-2">
+                        Planning & teamwork
+                      </h2>
+                      <span class="text-muted fs-12"
+                        >Helpful answers to common questions</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="accordion accordion-flush" id="faq-topic-2">
+                    <div class="accordion-item" data-faq-question>
+                      <h3 class="accordion-header">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#faq-answer-2-0"
+                          aria-expanded="false"
+                          aria-controls="faq-answer-2-0"
+                        >
+                          How should I organize a new project?
+                        </button>
+                      </h3>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="faq-answer-2-0"
+                        data-bs-parent="#faq-topic-2"
+                      >
+                        <div class="accordion-body">
+                          Define the scope, assign an owner and break the work
+                          into manageable tasks. Use the project pages for an
+                          overview and the calendar for scheduled milestones.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item" data-faq-question>
+                      <h3 class="accordion-header">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#faq-answer-2-1"
+                          aria-expanded="false"
+                          aria-controls="faq-answer-2-1"
+                        >
+                          How do I keep track of upcoming work?
+                        </button>
+                      </h3>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="faq-answer-2-1"
+                        data-bs-parent="#faq-topic-2"
+                      >
+                        <div class="accordion-body">
+                          Review due dates in the task and project lists. The
+                          calendar provides a time-based view of events, while
+                          dashboard widgets summarize current progress.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item" data-faq-question>
+                      <h3 class="accordion-header">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#faq-answer-2-2"
+                          aria-expanded="false"
+                          aria-controls="faq-answer-2-2"
+                        >
+                          Can teammates access the same files?
+                        </button>
+                      </h3>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="faq-answer-2-2"
+                        data-bs-parent="#faq-topic-2"
+                      >
+                        <div class="accordion-body">
+                          The file manager includes sharing examples. Real
+                          access requires your storage service and permission
+                          rules so each teammate can see the appropriate files.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xl-6" data-faq-group="3">
+              <section class="card custom-card" aria-labelledby="faq-heading-3">
+                <div class="card-header">
+                  <div class="d-flex align-items-center gap-3">
+                    <span class="faq-topic-icon"
+                      ><i class="ri-bar-chart-line" aria-hidden="true"></i
+                    ></span>
+                    <div>
+                      <h2 class="card-title mb-1" id="faq-heading-3">
+                        Reports & troubleshooting
+                      </h2>
+                      <span class="text-muted fs-12"
+                        >Helpful answers to common questions</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="accordion accordion-flush" id="faq-topic-3">
+                    <div class="accordion-item" data-faq-question>
+                      <h3 class="accordion-header">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#faq-answer-3-0"
+                          aria-expanded="false"
+                          aria-controls="faq-answer-3-0"
+                        >
+                          Why do reports show sample figures?
+                        </button>
+                      </h3>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="faq-answer-3-0"
+                        data-bs-parent="#faq-topic-3"
+                      >
+                        <div class="accordion-body">
+                          The included charts demonstrate presentation and
+                          interactions. Supply your own records to show accurate
+                          project, financial or operational results.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item" data-faq-question>
+                      <h3 class="accordion-header">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#faq-answer-3-1"
+                          aria-expanded="false"
+                          aria-controls="faq-answer-3-1"
+                        >
+                          How can I download a table report?
+                        </button>
+                      </h3>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="faq-answer-3-1"
+                        data-bs-parent="#faq-topic-3"
+                      >
+                        <div class="accordion-body">
+                          Use the CSV export control on the Data Tables page.
+                          Search or filter the table first to export only the
+                          records relevant to your report.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item" data-faq-question>
+                      <h3 class="accordion-header">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#faq-answer-3-2"
+                          aria-expanded="false"
+                          aria-controls="faq-answer-3-2"
+                        >
+                          What should I include when reporting an issue?
+                        </button>
+                      </h3>
+                      <div
+                        class="accordion-collapse collapse"
+                        id="faq-answer-3-2"
+                        data-bs-parent="#faq-topic-3"
+                      >
+                        <div class="accordion-body">
+                          Share the page name, the steps that trigger the issue
+                          and what you expected to happen. Include the browser
+                          console error and a screenshot when the issue affects
+                          the layout.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class="card custom-card">
+            <div
+              class="card-body d-flex align-items-center justify-content-between flex-wrap gap-3"
+            >
+              <div>
+                <h2 class="fs-16 fw-semibold mb-1">
+                  Ready to explore your workspace?
+                </h2>
+                <p class="text-muted fs-13 mb-0">
+                  Put these answers into practice with your projects and
+                  profile.
+                </p>
+              </div>
+              <div class="d-flex flex-wrap gap-2">
+                <a href="profile-settings.html" class="btn btn-light"
+                  >Profile settings</a
+                ><a href="projects-list.html" class="btn btn-dark"
+                  >Explore projects<i
+                    class="ri-arrow-right-line ms-2"
+                    aria-hidden="true"
+                  ></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <!-- include common-scripts.html"-->
+
+    <!-- include appearance-customizer-scripts.html"-->
+
+    <!-- Custom JS -->
+    <script src="../assets/js/app-interactions.js"></script>
+    <script src="../assets/js/faqs.js"></script>
+  </body>
+</html>

@@ -1,0 +1,419 @@
+<html>
+  <head>
+    <!-- include document-head.html"-->
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content seller-details-page">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Seller details</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">
+              <a href="ecommerce-dashboard.html">Ecommerce</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Seller details
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid commerce-dashboard">
+          <section class="card custom-card">
+            <div class="card-body d-flex justify-content-between">
+              <div class="seller-profile-identity">
+                <img
+                  src="../assets/images/users/1.jpg"
+                  alt="Northstar Supply representative"
+                />
+                <div>
+                  <div class="d-flex align-items-center flex-wrap gap-2">
+                    <h2 class="fs-18 fw-semibold mb-0">Northstar Supply</h2>
+                    <span class="badge bg-success-transparent text-success"
+                      ><span class="seller-status-dot"></span>Active</span
+                    >
+                  </div>
+                  <p class="text-muted mb-2 mt-1">
+                    Home &amp; Living <span class="mx-1">&middot;</span> Seller
+                    ID
+                    <span class="fw-medium">SEL-2048</span>
+                  </p>
+                  <div class="seller-profile-meta">
+                    <span
+                      ><i class="ri-map-pin-line" aria-hidden="true"></i
+                      >Portland, Oregon</span
+                    ><span
+                      ><i class="ri-calendar-line" aria-hidden="true"></i>Joined
+                      January 12, 2025</span
+                    ><a href="mailto:hello@northstarsupply.com"
+                      ><i class="ri-mail-line" aria-hidden="true"></i
+                      >hello@northstarsupply.com</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="seller-profile-actions">
+                <button
+                  class="btn btn-outline-warning"
+                  type="button"
+                  id="seller-pause-button"
+                >
+                  <i class="ri-pause-circle-line me-1" aria-hidden="true"></i
+                  >Pause store</button
+                ><button
+                  class="btn btn-light"
+                  type="button"
+                  id="seller-edit-button"
+                >
+                  <i class="ri-edit-line me-1" aria-hidden="true"></i>Edit
+                  profile
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <div class="row orders-summary-grid">
+            <div class="col-xxl-3 col-sm-6">
+              <section class="card custom-card orders-summary-card">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <span class="orders-summary-icon bg-color-1 text-black"
+                      ><i class="ri-money-dollar-circle-line"></i
+                    ></span>
+                    <span class="badge bg-success-transparent">+18.6%</span>
+                  </div>
+                  <p class="text-muted mb-1 mt-3">Gross sales</p>
+                  <div class="d-flex align-items-end justify-content-between">
+                    <h3 class="fw-semibold mb-0">$12,840</h3>
+                    <span class="text-muted fs-12">vs. last month</span>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-3 col-sm-6">
+              <section class="card custom-card orders-summary-card">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <span class="orders-summary-icon bg-color-2 text-black"
+                      ><i class="ri-shopping-bag-3-line"></i
+                    ></span>
+                    <span class="badge bg-primary-transparent"
+                      >128 products</span
+                    >
+                  </div>
+                  <p class="text-muted mb-1 mt-3">Orders fulfilled</p>
+                  <div class="d-flex align-items-end justify-content-between">
+                    <h3 class="fw-semibold mb-0">326</h3>
+                    <span class="text-muted fs-12">this month</span>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-3 col-sm-6">
+              <section class="card custom-card orders-summary-card">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <span class="orders-summary-icon bg-color-3 text-black"
+                      ><i class="ri-star-line"></i
+                    ></span>
+                    <span class="badge bg-warning-transparent"
+                      >214 reviews</span
+                    >
+                  </div>
+                  <p class="text-muted mb-1 mt-3">Seller rating</p>
+                  <div class="d-flex align-items-end justify-content-between">
+                    <h3 class="fw-semibold mb-0">
+                      4.9 <small class="fs-12 fw-normal text-muted">/ 5</small>
+                    </h3>
+                    <span class="text-muted fs-12">customer score</span>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-3 col-sm-6">
+              <section class="card custom-card orders-summary-card">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <span class="orders-summary-icon bg-color-4 text-black"
+                      ><i class="ri-percent-line"></i
+                    ></span>
+                    <span class="badge bg-success-transparent"
+                      >On schedule</span
+                    >
+                  </div>
+                  <p class="text-muted mb-1 mt-3">Fulfillment rate</p>
+                  <div class="d-flex align-items-end justify-content-between">
+                    <h3 class="fw-semibold mb-0">98.2%</h3>
+                    <span class="text-muted fs-12">this month</span>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xxl-8">
+              <section class="card custom-card mb-4">
+                <div class="card-header justify-content-between">
+                  <div>
+                    <h2 class="card-title mb-1">Sales overview</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Order revenue over the last 7 days
+                    </p>
+                  </div>
+                  <span class="badge bg-success-transparent text-success"
+                    >+18.6%</span
+                  >
+                </div>
+                <div class="card-body">
+                  <div
+                    class="seller-sales-chart"
+                    role="img"
+                    aria-label="Bar chart showing seller revenue rising over the past week"
+                  >
+                    <div class="seller-chart-y-axis">
+                      <span>$2k</span><span>$1.5k</span><span>$1k</span
+                      ><span>$500</span><span>$0</span>
+                    </div>
+                    <div class="seller-chart-bars">
+                      <div class="seller-chart-grid"></div>
+                      <div class="seller-chart-column">
+                        <span style="--bar-height: 48%"></span
+                        ><small>Mon</small>
+                      </div>
+                      <div class="seller-chart-column">
+                        <span style="--bar-height: 68%"></span
+                        ><small>Tue</small>
+                      </div>
+                      <div class="seller-chart-column">
+                        <span style="--bar-height: 55%"></span
+                        ><small>Wed</small>
+                      </div>
+                      <div class="seller-chart-column">
+                        <span style="--bar-height: 76%"></span
+                        ><small>Thu</small>
+                      </div>
+                      <div class="seller-chart-column">
+                        <span style="--bar-height: 62%"></span
+                        ><small>Fri</small>
+                      </div>
+                      <div class="seller-chart-column">
+                        <span style="--bar-height: 91%"></span
+                        ><small>Sat</small>
+                      </div>
+                      <div class="seller-chart-column">
+                        <span style="--bar-height: 73%"></span
+                        ><small>Sun</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="card custom-card overflow-hidden">
+                <div class="card-header justify-content-between">
+                  <div>
+                    <h2 class="card-title mb-1">Recent orders</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Latest orders placed with this seller
+                    </p>
+                  </div>
+                  <a class="btn btn-sm btn-light" href="orders.html"
+                    >View all orders<i
+                      class="ri-arrow-right-line ms-1"
+                      aria-hidden="true"
+                    ></i
+                  ></a>
+                </div>
+                <div class="table-responsive">
+                  <table class="table table-hover align-middle mb-0">
+                    <thead>
+                      <tr>
+                        <th>Order</th>
+                        <th>Customer</th>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="fw-semibold">#ORD-8421</td>
+                        <td>Olivia Wilson</td>
+                        <td>May 18, 2025</td>
+                        <td class="fw-semibold">$248.00</td>
+                        <td>
+                          <span
+                            class="badge bg-success-transparent text-success"
+                            >Delivered</span
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="fw-semibold">#ORD-8415</td>
+                        <td>James Taylor</td>
+                        <td>May 17, 2025</td>
+                        <td class="fw-semibold">$126.50</td>
+                        <td>
+                          <span class="badge bg-info-transparent text-info"
+                            >Shipped</span
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="fw-semibold">#ORD-8408</td>
+                        <td>Ava Martinez</td>
+                        <td>May 16, 2025</td>
+                        <td class="fw-semibold">$384.00</td>
+                        <td>
+                          <span
+                            class="badge bg-warning-transparent text-warning"
+                            >Processing</span
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="fw-semibold border-bottom-0">#ORD-8396</td>
+                        <td class="border-bottom-0">Noah Thompson</td>
+                        <td class="border-bottom-0">May 15, 2025</td>
+                        <td class="fw-semibold border-bottom-0">$92.00</td>
+                        <td class="border-bottom-0">
+                          <span
+                            class="badge bg-success-transparent text-success"
+                            >Delivered</span
+                          >
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-4">
+              <section class="card custom-card mb-4">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Store profile</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Partner and payout information
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body p-0">
+                  <dl class="seller-profile-facts">
+                    <div>
+                      <dt>Storefront</dt>
+                      <dd>northstar-supply</dd>
+                    </div>
+                    <div>
+                      <dt>Contact person</dt>
+                      <dd>Jordan Mitchell</dd>
+                    </div>
+                    <div>
+                      <dt>Phone</dt>
+                      <dd>+1 (503) 555-0182</dd>
+                    </div>
+                    <div>
+                      <dt>Payout schedule</dt>
+                      <dd>Weekly &middot; Friday</dd>
+                    </div>
+                    <div>
+                      <dt>Commission rate</dt>
+                      <dd>8% per order</dd>
+                    </div>
+                    <div>
+                      <dt>Verification</dt>
+                      <dd>
+                        <span class="text-success"
+                          ><i class="ri-checkbox-circle-fill me-1"></i
+                          >Verified</span
+                        >
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
+              </section>
+              <section class="card custom-card">
+                <div class="card-header justify-content-between">
+                  <div>
+                    <h2 class="card-title mb-1">Account activity</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Store activity over the past week
+                    </p>
+                  </div>
+                  <span class="badge bg-light text-default">4 events</span>
+                </div>
+                <div class="card-body seller-activity-list">
+                  <article class="seller-activity">
+                    <span
+                      class="seller-activity-icon bg-info-transparent text-info"
+                      ><i class="ri-truck-line" aria-hidden="true"></i
+                    ></span>
+                    <div class="seller-activity-copy">
+                      <div class="seller-activity-heading">
+                        <strong>Order shipped</strong
+                        ><time datetime="2025-05-18">May 18</time>
+                      </div>
+                      <p>Order #ORD-8421 was handed to the carrier.</p>
+                    </div>
+                  </article>
+                  <article class="seller-activity">
+                    <span
+                      class="seller-activity-icon bg-success-transparent text-success"
+                      ><i class="ri-bank-card-line" aria-hidden="true"></i
+                    ></span>
+                    <div class="seller-activity-copy">
+                      <div class="seller-activity-heading">
+                        <strong>Payout processed</strong
+                        ><time datetime="2025-05-17">May 17</time>
+                      </div>
+                      <p>$1,840.00 was sent to the seller's account.</p>
+                    </div>
+                  </article>
+                  <article class="seller-activity">
+                    <span
+                      class="seller-activity-icon bg-secondary-transparent text-secondary"
+                      ><i class="ri-price-tag-3-line" aria-hidden="true"></i
+                    ></span>
+                    <div class="seller-activity-copy">
+                      <div class="seller-activity-heading">
+                        <strong>New product listed</strong
+                        ><time datetime="2025-05-15">May 15</time>
+                      </div>
+                      <p>Organic Cotton Throw was added to the catalog.</p>
+                    </div>
+                  </article>
+                  <article class="seller-activity">
+                    <span
+                      class="seller-activity-icon bg-warning-transparent text-warning"
+                      ><i class="ri-shield-check-line" aria-hidden="true"></i
+                    ></span>
+                    <div class="seller-activity-copy">
+                      <div class="seller-activity-heading">
+                        <strong>Store review completed</strong
+                        ><time datetime="2025-05-12">May 12</time>
+                      </div>
+                      <p>Compliance check passed.</p>
+                    </div>
+                  </article>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"-->
+    <!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/js/seller-details.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

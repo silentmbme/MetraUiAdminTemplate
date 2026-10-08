@@ -1,0 +1,442 @@
+<!-- include document-head.html"-->
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">AI image studio</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">
+              <a href="ai-dashboard.html">AI tools</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Image studio
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid ai-image-page">
+          <div class="image-settings-mobilebar d-xl-none">
+            <button
+              type="button"
+              class="btn btn-light"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#image-settings-panel"
+              aria-controls="image-settings-panel"
+            >
+              <i class="ri-equalizer-2-line me-1" aria-hidden="true"></i
+              >Generation settings
+            </button>
+          </div>
+          <div class="row g-0 image-workspace">
+            <aside
+              class="col-xl-3 image-settings-rail offcanvas offcanvas-xl offcanvas-start"
+              id="image-settings-panel"
+              tabindex="-1"
+              aria-labelledby="image-settings-title"
+            >
+              <div class="image-settings-heading">
+                <div>
+                  <h2 class="fs-15 fw-semibold mb-1" id="image-settings-title">
+                    Generation settings
+                  </h2>
+                  <p class="text-muted fs-11 mb-0">
+                    Tune the look and framing of your concept.
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  class="btn-close d-xl-none"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close generation settings"
+                ></button>
+              </div>
+
+              <section class="image-settings-section">
+                <label for="image-ratio-select" class="form-label fw-semibold"
+                  >Canvas ratio</label
+                >
+                <select
+                  class="form-select"
+                  data-trigger
+                  id="image-ratio-select"
+                  aria-label="Canvas ratio"
+                >
+                  <option value="4:3">Landscape · 4:3</option>
+                  <option value="1:1">Square · 1:1</option>
+                  <option value="16:9">Wide · 16:9</option>
+                </select>
+              </section>
+
+              <section class="image-settings-section">
+                <span class="form-label fw-semibold d-block">Render mode</span>
+                <div
+                  class="image-mode-switch"
+                  role="group"
+                  aria-label="Render mode"
+                >
+                  <button
+                    type="button"
+                    class="active"
+                    data-image-mode="Fast"
+                    aria-pressed="true"
+                  >
+                    Fast
+                  </button>
+                  <button
+                    type="button"
+                    data-image-mode="Quality"
+                    aria-pressed="false"
+                  >
+                    Quality
+                  </button>
+                  <button
+                    type="button"
+                    data-image-mode="Ultra"
+                    aria-pressed="false"
+                  >
+                    Ultra
+                  </button>
+                </div>
+              </section>
+
+              <section class="image-settings-section">
+                <label
+                  for="image-intensity"
+                  class="form-label fw-semibold d-flex justify-content-between"
+                  ><span>Prompt influence</span
+                  ><span id="image-intensity-value" class="text-muted fw-normal"
+                    >50%</span
+                  ></label
+                >
+                <input
+                  type="range"
+                  class="form-range"
+                  id="image-intensity"
+                  min="0"
+                  max="100"
+                  value="50"
+                  aria-label="Prompt influence"
+                />
+              </section>
+
+              <section class="image-settings-section">
+                <label for="image-lighting" class="form-label fw-semibold"
+                  >Scene lighting</label
+                >
+                <select class="form-select" data-trigger id="image-lighting">
+                  <option>No lighting preference</option>
+                  <option>Soft natural light</option>
+                  <option>Golden hour</option>
+                  <option>Dramatic studio light</option>
+                  <option>Neon glow</option>
+                </select>
+              </section>
+
+              <section class="image-settings-section">
+                <span class="form-label fw-semibold d-block"
+                  >Preview count</span
+                >
+                <div
+                  class="image-count-options"
+                  role="group"
+                  aria-label="Number of image concepts"
+                >
+                  <button
+                    type="button"
+                    class="image-count-option"
+                    data-preview-count="2"
+                    aria-pressed="false"
+                  >
+                    <span>2</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="image-count-option"
+                    data-preview-count="3"
+                    aria-pressed="false"
+                  >
+                    <span>3</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="image-count-option active"
+                    data-preview-count="4"
+                    aria-pressed="true"
+                  >
+                    <span>4</span>
+                  </button>
+                </div>
+              </section>
+
+              <section class="image-settings-section">
+                <label for="image-camera-angle" class="form-label fw-semibold"
+                  >Camera framing</label
+                >
+                <select
+                  class="form-select"
+                  data-trigger
+                  id="image-camera-angle"
+                >
+                  <option>No framing preference</option>
+                  <option>Eye level</option>
+                  <option>Wide angle</option>
+                  <option>Top down</option>
+                  <option>Low angle</option>
+                  <option>Close up</option>
+                </select>
+              </section>
+
+              <section class="image-settings-section image-style-section">
+                <div
+                  class="d-flex align-items-center justify-content-between mb-2"
+                >
+                  <span class="form-label fw-semibold mb-0"
+                    >Visual references</span
+                  >
+                  <span class="text-muted fs-11">Select a look</span>
+                </div>
+                <div
+                  class="image-style-grid"
+                  id="image-gallery"
+                  aria-label="Visual reference images"
+                >
+                  <button
+                    type="button"
+                    class="gallery-card active"
+                    data-image-src="media-20.jpg"
+                    data-image-name="Alpine morning"
+                    data-image-alt="Sample alpine river valley with mountain peaks"
+                    data-image-copy="A calm mountain landscape with soft early light."
+                    aria-pressed="true"
+                    title="Alpine morning"
+                  >
+                    <img
+                      src="../assets/images/cards/7.jpg"
+                      alt="Alpine landscape reference"
+                      loading="lazy"
+                    />
+                  </button>
+                  <button
+                    type="button"
+                    class="gallery-card"
+                    data-image-src="media-10.jpg"
+                    data-image-name="Coastal dusk"
+                    data-image-alt="Tropical beach at sunset with warm orange sky"
+                    data-image-copy="A quiet tropical shoreline in the last light of day."
+                    aria-pressed="false"
+                    title="Coastal dusk"
+                  >
+                    <img
+                      src="../assets/images/cards/2.jpg"
+                      alt="Coastal sunset reference"
+                      loading="lazy"
+                    />
+                  </button>
+                  <button
+                    type="button"
+                    class="gallery-card"
+                    data-image-src="media-14.jpg"
+                    data-image-name="Blue cove"
+                    data-image-alt="Blue water beneath a rocky coastal cliff"
+                    data-image-copy="A vivid coastal cove framed by textured cliffs."
+                    aria-pressed="false"
+                    title="Blue cove"
+                  >
+                    <img
+                      src="../assets/images/cards/3.jpg"
+                      alt="Blue cove reference"
+                      loading="lazy"
+                    />
+                  </button>
+                  <button
+                    type="button"
+                    class="gallery-card"
+                    data-image-src="media-18.jpg"
+                    data-image-name="Garden light"
+                    data-image-alt="Flower garden in golden evening light"
+                    data-image-copy="A flourishing garden in gentle golden-hour light."
+                    aria-pressed="false"
+                    title="Garden light"
+                  >
+                    <img
+                      src="../assets/images/cards/5.jpg"
+                      alt="Garden light reference"
+                      loading="lazy"
+                    />
+                  </button>
+                  <button
+                    type="button"
+                    class="gallery-card"
+                    data-image-src="media-19.jpg"
+                    data-image-name="Desert quiet"
+                    data-image-alt="Desert dunes under a pink and amber sunset"
+                    data-image-copy="Sculpted desert dunes beneath a pastel evening sky."
+                    aria-pressed="false"
+                    title="Desert quiet"
+                  >
+                    <img
+                      src="../assets/images/cards/6.jpg"
+                      alt="Desert dunes reference"
+                      loading="lazy"
+                    />
+                  </button>
+                </div>
+              </section>
+
+              <p class="image-settings-note text-muted fs-11 mb-0">
+                <i class="ri-information-line me-1"></i>Settings shape the
+                sample previews. Connect an image model to create original
+                artwork.
+              </p>
+            </aside>
+
+            <section
+              class="col-xl-9 image-canvas"
+              aria-label="Image generation canvas"
+            >
+              <div class="image-empty-state" id="image-empty-state">
+                <span class="image-empty-icon" aria-hidden="true"
+                  ><span class="image-empty-icon-tile"
+                    ><i class="ri-image-add-line"></i></span
+                  ><span class="image-empty-sparkle"
+                    ><i class="ri-sparkling-2-fill"></i></span
+                ></span>
+                <h2 class="h3 fw-semibold mb-2">Your canvas is ready</h2>
+                <p class="text-muted mb-0">
+                  Write a prompt below to create your first image concept.
+                </p>
+              </div>
+
+              <section
+                class="image-result d-none"
+                id="image-result"
+                aria-labelledby="image-results-title"
+              >
+                <div class="image-result-toolbar">
+                  <div>
+                    <span class="badge bg-success-transparent text-success mb-2"
+                      ><i class="ri-sparkling-2-line me-1"></i>Preview set</span
+                    >
+                    <h2 class="fs-16 fw-semibold mb-1" id="image-results-title">
+                      Your visual directions
+                    </h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Choose a concept to inspect or download.
+                    </p>
+                  </div>
+                  <button
+                    class="btn btn-light btn-sm"
+                    type="button"
+                    id="image-back-to-prompt"
+                  >
+                    <i class="ri-edit-line me-1"></i>Edit prompt
+                  </button>
+                </div>
+                <div
+                  class="image-results-grid"
+                  id="image-results-grid"
+                  aria-label="Image preview variations"
+                ></div>
+                <div class="image-result-prompt">
+                  <div
+                    class="d-flex align-items-center justify-content-between gap-2 mb-1"
+                  >
+                    <span class="fw-semibold fs-12">Prompt used</span>
+                    <span class="text-muted fs-11" id="preview-style-label"
+                      >Fast &middot; 4:3 &middot; 50% intensity</span
+                    >
+                  </div>
+                  <p class="text-muted fs-12 mb-0" id="preview-prompt">
+                    Your prompt will appear here.
+                  </p>
+                </div>
+                <div class="image-result-actions">
+                  <div class="d-flex align-items-center gap-2">
+                    <button
+                      class="btn btn-light btn-icon"
+                      type="button"
+                      id="image-favorite"
+                      aria-label="Add selected preview to favorites"
+                      aria-pressed="false"
+                    >
+                      <i class="ri-heart-line"></i>
+                    </button>
+                    <a
+                      class="btn btn-light"
+                      id="image-download"
+                      href="../assets/images/cards/7.jpg"
+                      download="image-concept.jpg"
+                      ><i class="ri-download-2-line me-1"></i>Download
+                      selected</a
+                    >
+                  </div>
+                  <span class="text-muted fs-11"
+                    ><i class="ri-information-line me-1"></i>Sample previews use
+                    project images.</span
+                  >
+                </div>
+              </section>
+
+              <form class="image-prompt-dock" id="image-generator-form">
+                <label for="image-prompt" class="form-label fw-semibold mb-1"
+                  >Prompt</label
+                >
+                <textarea
+                  id="image-prompt"
+                  class="form-control prompt-field"
+                  maxlength="600"
+                  placeholder="Describe the image you want to generate"
+                ></textarea>
+                <div
+                  class="d-flex align-items-center justify-content-between flex-wrap gap-2 mt-3"
+                >
+                  <div class="d-flex align-items-center gap-2">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-light"
+                      id="image-clear-prompt"
+                    >
+                      Clear
+                    </button>
+                    <span class="text-muted fs-11"
+                      ><span id="prompt-count">0</span>/600</span
+                    >
+                  </div>
+                  <div class="d-flex align-items-center gap-2">
+                    <p
+                      class="image-feedback text-muted fs-12 mb-0"
+                      id="image-feedback"
+                      role="status"
+                      aria-live="polite"
+                    ></p>
+                    <button class="btn btn-dark btn-wave" type="submit">
+                      <i class="ri-magic-line me-1"></i
+                      ><span id="image-generate-label"
+                        >Generate 4 previews</span
+                      >
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </section>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"-->
+    <script src="../assets/js/ai-image.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+    <!-- include appearance-customizer-scripts.html"-->
+  </body>
+</html>

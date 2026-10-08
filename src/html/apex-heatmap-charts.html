@@ -1,0 +1,175 @@
+<!-- include document-head.html"-->
+    <link rel="stylesheet" href="../assets/css/apex-heatmap-charts.css" />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+
+      <div class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Heatmap Charts</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">Charts</li>
+            <li class="breadcrumb-item">Apex Charts</li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Heatmap Charts
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid heatmap-workspace">
+          <div class="row">
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Weekly activity</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Cell intensity shows completed tasks across teams and
+                      days.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="heatmap-basic"
+                    class="heatmap-demo"
+                    role="group"
+                    aria-label="Weekly activity chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Workstream intensity</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Each workstream uses its own color to compare activity.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="heatmap-multiseries"
+                    class="heatmap-demo"
+                    role="group"
+                    aria-label="Workstream intensity chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Capacity bands</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Color ranges distinguish low, balanced and high
+                      utilization.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="heatmap-colorrange"
+                    class="heatmap-demo"
+                    role="group"
+                    aria-label="Capacity bands chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Status matrix</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Fixed color bands show completion percentages without
+                      shading.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="heatmap-range"
+                    class="heatmap-demo"
+                    role="group"
+                    aria-label="Status matrix chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Support demand</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Explore ticket volumes by weekday and time of day.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="heatmap-hourly"
+                    class="heatmap-demo"
+                    role="group"
+                    aria-label="Support demand chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Delivery variance</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Red shows below-plan results; green shows above-plan
+                      results.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="heatmap-variance"
+                    class="heatmap-demo"
+                    role="group"
+                    aria-label="Delivery variance chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <!-- include common-scripts.html"-->
+
+    <!-- include appearance-customizer-scripts.html"-->
+
+    <!-- Apex Charts JS -->
+    <script src="../assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- Internal Apex Heatmap Charts JS -->
+    <script src="../assets/js/apexcharts-heatmap.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

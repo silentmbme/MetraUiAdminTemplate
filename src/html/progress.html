@@ -1,0 +1,1160 @@
+<!-- include document-head.html"-->
+    <link
+      rel="stylesheet"
+      href="../assets/libs/prismjs/themes/prism-coy.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"--><!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"--><!-- include side-navigation.html"-->
+      <main data-markup-examples class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Progress</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Components</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Progress</li>
+          </ol>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Live progress control</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Adjust the value and watch the bar update.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between fs-13 mb-2">
+                    <label for="progress-range">Completion</label
+                    ><strong id="progress-live-label">45%</strong>
+                  </div>
+                  <div
+                    class="progress mb-3"
+                    id="progress-live"
+                    role="progressbar"
+                    aria-label="Live completion"
+                    aria-valuenow="45"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div class="progress-bar bg-success" style="width: 45%">
+                      45%
+                    </div>
+                  </div>
+                  <input
+                    class="form-range"
+                    id="progress-range"
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="45"
+                  />
+                  <div class="d-flex justify-content-between text-muted fs-12">
+                    <span>0%</span><span>100%</span>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Upload simulation</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Start, pause, resume, or reset a sample upload.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex align-items-center gap-3 mb-3">
+                    <span class="avatar avatar-md bg-light text-default"
+                      ><i class="ri-file-zip-line fs-22" aria-hidden="true"></i
+                    ></span>
+                    <div>
+                      <h3 class="fs-14 fw-medium mb-1">Workspace-assets.zip</h3>
+                      <span class="text-muted fs-12"
+                        >24 MB / Demonstration upload</span
+                      >
+                    </div>
+                  </div>
+                  <div
+                    class="progress progress-sm mb-2"
+                    id="upload-progress"
+                    role="progressbar"
+                    aria-label="Upload simulation"
+                    aria-valuenow="0"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div
+                      class="progress-bar bg-primary"
+                      style="width: 0%"
+                    ></div>
+                  </div>
+                  <p
+                    class="text-muted fs-12 mb-3"
+                    id="upload-feedback"
+                    role="status"
+                    aria-live="polite"
+                  >
+                    Ready to start
+                  </p>
+                  <div class="d-flex gap-2">
+                    <button
+                      type="button"
+                      class="btn btn-primary btn-sm"
+                      id="upload-start"
+                    >
+                      Start upload</button
+                    ><button
+                      type="button"
+                      class="btn btn-light btn-sm"
+                      id="upload-pause"
+                      disabled
+                    >
+                      Pause</button
+                    ><button
+                      type="button"
+                      class="btn btn-light btn-sm"
+                      id="upload-reset"
+                    >
+                      Reset
+                    </button>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Resource allocation</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Show separate categories within a shared capacity.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <p class="text-muted fs-13">64 GB of 100 GB storage used</p>
+                  <div class="progress mb-3" aria-label="Storage breakdown">
+                    <div
+                      class="progress-bar bg-secondary"
+                      role="progressbar"
+                      aria-label="Documents"
+                      aria-valuenow="28"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 28%"
+                    >
+                      28%
+                    </div>
+                    <div
+                      class="progress-bar bg-info"
+                      role="progressbar"
+                      aria-label="Media"
+                      aria-valuenow="36"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 36%"
+                    >
+                      36%
+                    </div>
+                  </div>
+                  <div class="d-flex flex-wrap gap-3 fs-12">
+                    <span
+                      ><i
+                        class="ri-circle-fill text-secondary me-1"
+                        aria-hidden="true"
+                      ></i
+                      >Documents / 28 GB</span
+                    ><span
+                      ><i
+                        class="ri-circle-fill text-info me-1"
+                        aria-hidden="true"
+                      ></i
+                      >Media / 36 GB</span
+                    ><span class="text-muted">Available / 36 GB</span>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Striped & animated</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Different treatments for ongoing activity.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between fs-13 mb-2">
+                    <span>Processing documents</span
+                    ><span class="text-muted">55%</span>
+                  </div>
+                  <div
+                    class="progress progress-sm mb-3"
+                    role="progressbar"
+                    aria-label="Processing documents"
+                    aria-valuenow="55"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div
+                      class="progress-bar bg-success progress-bar-striped"
+                      style="width: 55%"
+                    ></div>
+                  </div>
+                  <div class="d-flex justify-content-between fs-13 mb-2">
+                    <span>Preparing report</span
+                    ><span class="text-muted">70%</span>
+                  </div>
+                  <div
+                    class="progress progress-sm"
+                    role="progressbar"
+                    aria-label="Preparing report"
+                    aria-valuenow="70"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div
+                      class="progress-bar bg-info progress-bar-striped progress-bar-animated"
+                      style="width: 70%"
+                    ></div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Project delivery</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Track multiple initiatives with clear labels.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between fs-13 mb-2">
+                    <span>Workspace onboarding</span
+                    ><span class="text-muted">75%</span>
+                  </div>
+                  <div
+                    class="progress progress-sm mb-3"
+                    role="progressbar"
+                    aria-label="Workspace onboarding"
+                    aria-valuenow="75"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div
+                      class="progress-bar bg-success"
+                      style="width: 75%"
+                    ></div>
+                  </div>
+                  <div class="d-flex justify-content-between fs-13 mb-2">
+                    <span>Customer insights</span
+                    ><span class="text-muted">45%</span>
+                  </div>
+                  <div
+                    class="progress progress-sm mb-3"
+                    role="progressbar"
+                    aria-label="Customer insights"
+                    aria-valuenow="45"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div class="progress-bar bg-info" style="width: 45%"></div>
+                  </div>
+                  <div class="d-flex justify-content-between fs-13 mb-2">
+                    <span>Component library</span
+                    ><span class="text-muted">62%</span>
+                  </div>
+                  <div
+                    class="progress progress-sm mb-3"
+                    role="progressbar"
+                    aria-label="Component library"
+                    aria-valuenow="62"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div
+                      class="progress-bar bg-secondary"
+                      style="width: 62%"
+                    ></div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Bar sizes</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Use existing height variants for different contexts.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between fs-13 mb-2">
+                    <span>Compact</span><span class="text-muted">30%</span>
+                  </div>
+                  <div
+                    class="progress progress-xs mb-3"
+                    role="progressbar"
+                    aria-label="Compact"
+                    aria-valuenow="30"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div
+                      class="progress-bar bg-secondary"
+                      style="width: 30%"
+                    ></div>
+                  </div>
+                  <div class="d-flex justify-content-between fs-13 mb-2">
+                    <span>Standard</span><span class="text-muted">60%</span>
+                  </div>
+                  <div
+                    class="progress progress-sm mb-3"
+                    role="progressbar"
+                    aria-label="Standard"
+                    aria-valuenow="60"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div
+                      class="progress-bar bg-warning"
+                      style="width: 60%"
+                    ></div>
+                  </div>
+                  <div class="d-flex justify-content-between fs-13 mb-2">
+                    <span>Prominent</span><span class="text-muted">85%</span>
+                  </div>
+                  <div
+                    class="progress mb-3"
+                    role="progressbar"
+                    aria-label="Prominent"
+                    aria-valuenow="85"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div
+                      class="progress-bar bg-success"
+                      style="width: 85%"
+                    ></div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Milestone overview</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Connect completion with the delivery stages.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between fs-13 mb-2">
+                    <span>Project completion</span
+                    ><span class="text-muted">75%</span>
+                  </div>
+                  <div
+                    class="progress progress-sm mb-3"
+                    role="progressbar"
+                    aria-label="Project completion"
+                    aria-valuenow="75"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div
+                      class="progress-bar bg-success"
+                      style="width: 75%"
+                    ></div>
+                  </div>
+                  <div class="row g-2 text-center fs-12">
+                    <div class="col-3">
+                      <span
+                        class="avatar avatar-sm bg-success-transparent text-success mb-2"
+                        ><i
+                          class="ri-check-line fs-16"
+                          aria-hidden="true"
+                        ></i></span
+                      ><span class="d-block text-muted">Discovery</span>
+                    </div>
+                    <div class="col-3">
+                      <span
+                        class="avatar avatar-sm bg-success-transparent text-success mb-2"
+                        ><i
+                          class="ri-check-line fs-16"
+                          aria-hidden="true"
+                        ></i></span
+                      ><span class="d-block text-muted">Design</span>
+                    </div>
+                    <div class="col-3">
+                      <span class="avatar avatar-sm bg-light text-default mb-2"
+                        ><i
+                          class="ri-time-line fs-16"
+                          aria-hidden="true"
+                        ></i></span
+                      ><span class="d-block text-muted">Build</span>
+                    </div>
+                    <div class="col-3">
+                      <span
+                        class="avatar avatar-sm bg-secondary-transparent text-secondary mb-2"
+                        ><i
+                          class="ri-flag-line fs-16"
+                          aria-hidden="true"
+                        ></i></span
+                      ><span class="d-block text-muted">Release</span>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">State feedback</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Represent waiting, completion, and errors.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between fs-13 mb-2">
+                    <span>Completed backup</span
+                    ><span class="text-muted">100%</span>
+                  </div>
+                  <div
+                    class="progress progress-sm mb-3"
+                    role="progressbar"
+                    aria-label="Completed backup"
+                    aria-valuenow="100"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div
+                      class="progress-bar bg-success"
+                      style="width: 100%"
+                    ></div>
+                  </div>
+                  <div class="d-flex justify-content-between fs-13 mb-2">
+                    <span>Interrupted sync</span
+                    ><span class="text-muted">38%</span>
+                  </div>
+                  <div
+                    class="progress progress-sm mb-3"
+                    role="progressbar"
+                    aria-label="Interrupted sync"
+                    aria-valuenow="38"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div
+                      class="progress-bar bg-danger"
+                      style="width: 38%"
+                    ></div>
+                  </div>
+                  <div class="d-flex align-items-center gap-2 text-muted fs-13">
+                    <span
+                      class="spinner-border spinner-border-sm"
+                      aria-hidden="true"
+                    ></span
+                    ><span role="status">Waiting for a connection...</span>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Weekly goals</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Keep the task count and percentage consistent.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-3"
+                  >
+                    <div>
+                      <h3 class="fs-14 fw-semibold mb-1">Team delivery</h3>
+                      <span class="text-muted fs-12"
+                        >18 of 24 tasks completed</span
+                      >
+                    </div>
+                    <span class="badge bg-success-transparent text-success"
+                      >On track</span
+                    >
+                  </div>
+                  <div class="d-flex justify-content-between fs-13 mb-2">
+                    <span>Weekly completion</span
+                    ><span class="text-muted">75%</span>
+                  </div>
+                  <div
+                    class="progress progress-sm mb-3"
+                    role="progressbar"
+                    aria-label="Weekly completion"
+                    aria-valuenow="75"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div
+                      class="progress-bar bg-success"
+                      style="width: 75%"
+                    ></div>
+                  </div>
+                  <a href="to-do-list.html" class="text-muted fs-13"
+                    >Review tasks<i
+                      class="ri-arrow-right-line ms-1"
+                      aria-hidden="true"
+                    ></i
+                  ></a>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Account setup</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      A simple checklist linked to its overall progress.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between fs-13 mb-2">
+                    <span>Setup completion</span
+                    ><span class="text-muted">50%</span>
+                  </div>
+                  <div
+                    class="progress progress-sm mb-3"
+                    role="progressbar"
+                    aria-label="Setup completion"
+                    aria-valuenow="50"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div
+                      class="progress-bar bg-secondary"
+                      style="width: 50%"
+                    ></div>
+                  </div>
+                  <ul class="list-group list-group-flush fs-13">
+                    <li class="list-group-item px-0">
+                      <i
+                        class="ri-check-line text-success me-2"
+                        aria-hidden="true"
+                      ></i
+                      >Personal details added
+                    </li>
+                    <li class="list-group-item px-0">
+                      <i
+                        class="ri-check-line text-success me-2"
+                        aria-hidden="true"
+                      ></i
+                      >Profile photo selected
+                    </li>
+                    <li class="list-group-item px-0 text-muted">
+                      Notification preferences pending
+                    </li>
+                    <li class="list-group-item px-0 pb-0 text-muted">
+                      Security review pending
+                    </li>
+                  </ul>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Theme striped bars</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Striped treatments using existing Bootstrap variants.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between fs-13 mb-2">
+                    <span>Research</span><span class="text-muted">40%</span>
+                  </div>
+                  <div
+                    class="progress mb-3"
+                    role="progressbar"
+                    aria-label="Research"
+                    aria-valuenow="40"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div
+                      class="progress-bar bg-secondary progress-bar-striped"
+                      style="width: 40%"
+                    >
+                      40%
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between fs-13 mb-2">
+                    <span>Design</span><span class="text-muted">65%</span>
+                  </div>
+                  <div
+                    class="progress mb-3"
+                    role="progressbar"
+                    aria-label="Design"
+                    aria-valuenow="65"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div
+                      class="progress-bar bg-success progress-bar-striped"
+                      style="width: 65%"
+                    >
+                      65%
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between fs-13 mb-2">
+                    <span>Development</span><span class="text-muted">80%</span>
+                  </div>
+                  <div
+                    class="progress mb-3"
+                    role="progressbar"
+                    aria-label="Development"
+                    aria-valuenow="80"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div
+                      class="progress-bar bg-info progress-bar-striped"
+                      style="width: 80%"
+                    >
+                      80%
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Animated stripes</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Animated activity for ongoing processes.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between fs-13 mb-2">
+                    <span>Report processing</span
+                    ><span class="text-muted">60%</span>
+                  </div>
+                  <div
+                    class="progress mb-3"
+                    role="progressbar"
+                    aria-label="Report processing"
+                    aria-valuenow="60"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div
+                      class="progress-bar bg-secondary progress-bar-striped progress-bar-animated"
+                      style="width: 60%"
+                    >
+                      60%
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between fs-13 mb-2">
+                    <span>Asset preparation</span
+                    ><span class="text-muted">85%</span>
+                  </div>
+                  <div
+                    class="progress mb-3"
+                    role="progressbar"
+                    aria-label="Asset preparation"
+                    aria-valuenow="85"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div
+                      class="progress-bar bg-warning progress-bar-striped progress-bar-animated"
+                      style="width: 85%"
+                    >
+                      85%
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Rounded progress</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Pill-shaped tracks and fills.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between fs-13 mb-2">
+                    <span>Profile setup</span
+                    ><span class="text-muted">70%</span>
+                  </div>
+                  <div
+                    class="progress mb-3 rounded-pill"
+                    role="progressbar"
+                    aria-label="Profile setup"
+                    aria-valuenow="70"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div
+                      class="progress-bar bg-warning rounded-pill"
+                      style="width: 70%"
+                    >
+                      70%
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between fs-13 mb-2">
+                    <span>Review completion</span
+                    ><span class="text-muted">90%</span>
+                  </div>
+                  <div
+                    class="progress mb-3 rounded-pill"
+                    role="progressbar"
+                    aria-label="Review completion"
+                    aria-valuenow="90"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div
+                      class="progress-bar bg-success rounded-pill"
+                      style="width: 90%"
+                    >
+                      90%
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Square progress</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Straight edges for a compact technical style.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between fs-13 mb-2">
+                    <span>Data import</span><span class="text-muted">55%</span>
+                  </div>
+                  <div
+                    class="progress mb-3 rounded-0"
+                    role="progressbar"
+                    aria-label="Data import"
+                    aria-valuenow="55"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div
+                      class="progress-bar bg-info rounded-0"
+                      style="width: 55%"
+                    >
+                      55%
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between fs-13 mb-2">
+                    <span>Validation</span><span class="text-muted">80%</span>
+                  </div>
+                  <div
+                    class="progress mb-3 rounded-0"
+                    role="progressbar"
+                    aria-label="Validation"
+                    aria-valuenow="80"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div
+                      class="progress-bar bg-secondary rounded-0"
+                      style="width: 80%"
+                    >
+                      80%
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Gradient fills</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Use the shared gradient utility on progress fills.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between fs-13 mb-2">
+                    <span>Project delivery</span
+                    ><span class="text-muted">75%</span>
+                  </div>
+                  <div
+                    class="progress mb-3"
+                    role="progressbar"
+                    aria-label="Project delivery"
+                    aria-valuenow="75"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div
+                      class="progress-bar bg-secondary bg-secondary-gradient"
+                      style="width: 75%"
+                    >
+                      75%
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between fs-13 mb-2">
+                    <span>Resource allocation</span
+                    ><span class="text-muted">45%</span>
+                  </div>
+                  <div
+                    class="progress mb-3"
+                    role="progressbar"
+                    aria-label="Resource allocation"
+                    aria-valuenow="45"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div
+                      class="progress-bar bg-success bg-success-gradient"
+                      style="width: 45%"
+                    >
+                      45%
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <h2 class="card-title mb-1">Stacked striped segments</h2>
+                    <p class="text-muted fs-12 mb-0">
+                      Show separate categories within a shared total.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="progress mb-3">
+                    <div
+                      class="progress-bar bg-success progress-bar-striped"
+                      role="progressbar"
+                      aria-label="Completed tasks"
+                      aria-valuenow="40"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 40%"
+                    >
+                      40%
+                    </div>
+                    <div
+                      class="progress-bar bg-primary progress-bar-striped"
+                      role="progressbar"
+                      aria-label="In progress tasks"
+                      aria-valuenow="35"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 35%"
+                    >
+                      35%
+                    </div>
+                    <div
+                      class="progress-bar bg-warning progress-bar-striped"
+                      role="progressbar"
+                      aria-label="Review tasks"
+                      aria-valuenow="15"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 15%"
+                    >
+                      15%
+                    </div>
+                  </div>
+                  <p class="text-muted fs-12 mb-0">
+                    40% completed / 35% in progress / 15% review / 10% remaining
+                  </p>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <h2 class="card-title mb-0">Connected dots</h2>
+                </div>
+                <div class="card-body">
+                  <nav aria-label="Connected dots">
+                    <ol class="progress-stepper progress-stepper-dots">
+                      <li class="is-complete">
+                        <span class="step-marker" aria-hidden="true"></span
+                        ><span class="step-label">Plan</span
+                        ><span class="visually-hidden"> completed</span>
+                      </li>
+                      <li class="is-complete">
+                        <span class="step-marker" aria-hidden="true"></span
+                        ><span class="step-label">Account</span
+                        ><span class="visually-hidden"> completed</span>
+                      </li>
+                      <li class="is-current" aria-current="step">
+                        <span class="step-marker" aria-hidden="true"></span
+                        ><span class="step-label">Payment</span
+                        ><span class="visually-hidden"> current step</span>
+                      </li>
+                      <li class="">
+                        <span class="step-marker" aria-hidden="true"></span
+                        ><span class="step-label">Confirmation</span
+                        ><span class="visually-hidden"> upcoming</span>
+                      </li>
+                      <li class="">
+                        <span class="step-marker" aria-hidden="true"></span
+                        ><span class="step-label">Review</span
+                        ><span class="visually-hidden"> upcoming</span>
+                      </li>
+                    </ol>
+                  </nav>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <h2 class="card-title mb-0">Diamond milestones</h2>
+                </div>
+                <div class="card-body">
+                  <nav aria-label="Diamond milestones">
+                    <ol class="progress-stepper progress-stepper-diamonds">
+                      <li class="is-complete">
+                        <span class="step-marker" aria-hidden="true"></span
+                        ><span class="step-label">Plan</span
+                        ><span class="visually-hidden"> completed</span>
+                      </li>
+                      <li class="is-complete">
+                        <span class="step-marker" aria-hidden="true"></span
+                        ><span class="step-label">Account</span
+                        ><span class="visually-hidden"> completed</span>
+                      </li>
+                      <li class="is-current" aria-current="step">
+                        <span class="step-marker" aria-hidden="true"></span
+                        ><span class="step-label">Payment</span
+                        ><span class="visually-hidden"> current step</span>
+                      </li>
+                      <li class="">
+                        <span class="step-marker" aria-hidden="true"></span
+                        ><span class="step-label">Confirmation</span
+                        ><span class="visually-hidden"> upcoming</span>
+                      </li>
+                      <li class="">
+                        <span class="step-marker" aria-hidden="true"></span
+                        ><span class="step-label">Review</span
+                        ><span class="visually-hidden"> upcoming</span>
+                      </li>
+                    </ol>
+                  </nav>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <h2 class="card-title mb-0">Chevron steps</h2>
+                </div>
+                <div class="card-body">
+                  <nav aria-label="Chevron steps">
+                    <ol class="progress-stepper progress-stepper-chevrons">
+                      <li class="is-complete">
+                        <span class="step-marker" aria-hidden="true"></span
+                        ><span class="step-label">Plan</span
+                        ><span class="visually-hidden"> completed</span>
+                      </li>
+                      <li class="is-complete">
+                        <span class="step-marker" aria-hidden="true"></span
+                        ><span class="step-label">Account</span
+                        ><span class="visually-hidden"> completed</span>
+                      </li>
+                      <li class="is-current" aria-current="step">
+                        <span class="step-marker" aria-hidden="true"></span
+                        ><span class="step-label">Payment</span
+                        ><span class="visually-hidden"> current step</span>
+                      </li>
+                      <li class="">
+                        <span class="step-marker" aria-hidden="true"></span
+                        ><span class="step-label">Confirmation</span
+                        ><span class="visually-hidden"> upcoming</span>
+                      </li>
+                      <li class="">
+                        <span class="step-marker" aria-hidden="true"></span
+                        ><span class="step-label">Review</span
+                        ><span class="visually-hidden"> upcoming</span>
+                      </li>
+                    </ol>
+                  </nav>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <h2 class="card-title mb-0">
+                    Progress track with milestones
+                  </h2>
+                </div>
+                <div class="card-body">
+                  <nav aria-label="Progress track with milestones">
+                    <ol class="progress-stepper progress-stepper-track">
+                      <li class="is-complete">
+                        <span class="step-marker" aria-hidden="true"></span
+                        ><span class="step-label">Plan</span
+                        ><span class="visually-hidden"> completed</span>
+                      </li>
+                      <li class="is-complete">
+                        <span class="step-marker" aria-hidden="true"></span
+                        ><span class="step-label">Account</span
+                        ><span class="visually-hidden"> completed</span>
+                      </li>
+                      <li class="is-current" aria-current="step">
+                        <span class="step-marker" aria-hidden="true"></span
+                        ><span class="step-label">Payment</span
+                        ><span class="visually-hidden"> current step</span>
+                      </li>
+                      <li class="">
+                        <span class="step-marker" aria-hidden="true"></span
+                        ><span class="step-label">Confirmation</span
+                        ><span class="visually-hidden"> upcoming</span>
+                      </li>
+                      <li class="">
+                        <span class="step-marker" aria-hidden="true"></span
+                        ><span class="step-label">Review</span
+                        ><span class="visually-hidden"> upcoming</span>
+                      </li>
+                    </ol>
+                  </nav>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <h2 class="card-title mb-0">Segmented underline</h2>
+                </div>
+                <div class="card-body">
+                  <nav aria-label="Segmented underline">
+                    <ol class="progress-stepper progress-stepper-segments">
+                      <li class="is-complete">
+                        <span class="step-marker" aria-hidden="true"></span
+                        ><span class="step-label">Plan</span
+                        ><span class="visually-hidden"> completed</span>
+                      </li>
+                      <li class="is-complete">
+                        <span class="step-marker" aria-hidden="true"></span
+                        ><span class="step-label">Account</span
+                        ><span class="visually-hidden"> completed</span>
+                      </li>
+                      <li class="is-current" aria-current="step">
+                        <span class="step-marker" aria-hidden="true"></span
+                        ><span class="step-label">Payment</span
+                        ><span class="visually-hidden"> current step</span>
+                      </li>
+                      <li class="">
+                        <span class="step-marker" aria-hidden="true"></span
+                        ><span class="step-label">Confirmation</span
+                        ><span class="visually-hidden"> upcoming</span>
+                      </li>
+                      <li class="">
+                        <span class="step-marker" aria-hidden="true"></span
+                        ><span class="step-label">Review</span
+                        ><span class="visually-hidden"> upcoming</span>
+                      </li>
+                    </ol>
+                  </nav>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-6">
+              <section class="card custom-card">
+                <div class="card-header">
+                  <h2 class="card-title mb-0">Icon milestones</h2>
+                </div>
+                <div class="card-body">
+                  <nav aria-label="Icon milestones">
+                    <ol class="progress-stepper progress-stepper-icons">
+                      <li class="is-complete">
+                        <span class="step-marker" aria-hidden="true"
+                          ><i class="ri-file-list-line"></i></span
+                        ><span class="step-label">Plan</span
+                        ><span class="visually-hidden"> completed</span>
+                      </li>
+                      <li class="is-complete">
+                        <span class="step-marker" aria-hidden="true"
+                          ><i class="ri-user-line"></i></span
+                        ><span class="step-label">Account</span
+                        ><span class="visually-hidden"> completed</span>
+                      </li>
+                      <li class="is-current" aria-current="step">
+                        <span class="step-marker" aria-hidden="true"
+                          ><i class="ri-bank-card-line"></i></span
+                        ><span class="step-label">Payment</span
+                        ><span class="visually-hidden"> current step</span>
+                      </li>
+                      <li class="">
+                        <span class="step-marker" aria-hidden="true"
+                          ><i class="ri-checkbox-circle-line"></i></span
+                        ><span class="step-label">Confirmation</span
+                        ><span class="visually-hidden"> upcoming</span>
+                      </li>
+                      <li class="">
+                        <span class="step-marker" aria-hidden="true"
+                          ><i class="ri-team-line"></i></span
+                        ><span class="step-label">Review</span
+                        ><span class="visually-hidden"> upcoming</span>
+                      </li>
+                    </ol>
+                  </nav>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"--><!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"--><!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/js/progress.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+    <script src="../assets/libs/prismjs/prism.js"></script>
+    <script src="../assets/js/prism-custom.js"></script>
+  </body>
+</html>

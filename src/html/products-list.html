@@ -1,0 +1,296 @@
+<!-- include document-head.html"-->
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Product management</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">
+              <a href="ecommerce-dashboard.html">Ecommece</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Product management
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid commerce-dashboard product-management-page">
+          <section class="card custom-card product-feature-panel mb-3">
+            <div class="card-body p-4">
+              <div class="row align-items-center g-4">
+                <div class="col-lg-7">
+                  <span class="badge bg-success mb-3">CATALOG HEALTH</span>
+                  <h2 class="fw-semibold mb-2">
+                    Your storefront, at a glance.
+                  </h2>
+                  <p class="text-muted mb-3">
+                    Most of your catalog is ready to sell. Review low-stock
+                    items and finish the drafts waiting to go live.
+                  </p>
+                  <div class="d-flex align-items-center gap-3 flex-wrap">
+                    <div
+                      class="progress bg-white progress-animate progress-xs w-50"
+                      role="progressbar"
+                      aria-valuenow="65"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    >
+                      <div
+                        class="progress-bar progress-bar-striped bg-dark"
+                        style="width: 65%"
+                      ></div>
+                    </div>
+                    <div class="product-health-progress">
+                      <span style="width: 86%"></span>
+                    </div>
+                    <span class="fw-semibold"
+                      >86%
+                      <span class="text-muted fw-normal"
+                        >catalog health</span
+                      ></span
+                    >
+                  </div>
+                </div>
+                <div class="col-lg-5">
+                  <div class="row g-2">
+                    <div class="col-6">
+                      <a class="product-health-link" href="product-stocks.html"
+                        ><span class="avatar avatar-md bg-color-1 text-black"
+                          ><i class="ri-alert-line fs-18"></i></span
+                        ><span
+                          ><strong>28</strong
+                          ><small>Low stock items</small></span
+                        ><i class="ri-arrow-right-s-line ms-auto"></i
+                      ></a>
+                    </div>
+                    <div class="col-6">
+                      <a class="product-health-link" href="products.html"
+                        ><span class="avatar avatar-md bg-color-2 text-black"
+                          ><i class="ri-draft-line fs-18"></i></span
+                        ><span
+                          ><strong>17</strong
+                          ><small>Draft products</small></span
+                        ><i class="ri-arrow-right-s-line ms-auto"></i
+                      ></a>
+                    </div>
+                    <div class="col-6">
+                      <a
+                        class="product-health-link"
+                        href="product-categories.html"
+                        ><span class="avatar avatar-md bg-color-3 text-black"
+                          ><i class="ri-price-tag-3-line fs-18"></i></span
+                        ><span
+                          ><strong>12</strong><small>Categories</small></span
+                        ><i class="ri-arrow-right-s-line ms-auto"></i
+                      ></a>
+                    </div>
+                    <div class="col-6">
+                      <a class="product-health-link" href="add-product.html"
+                        ><span class="avatar avatar-md bg-color-4 text-black"
+                          ><i class="ri-add-circle-line fs-18"></i></span
+                        ><span
+                          ><strong>Add new</strong
+                          ><small>Catalog item</small></span
+                        ><i class="ri-arrow-right-s-line ms-auto"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="card custom-card">
+            <div class="card-header justify-content-between flex-wrap gap-2">
+              <div>
+                <h2 class="card-title mb-1">All products</h2>
+                <p class="text-muted fs-12 mb-0">
+                  A complete view of your product catalog.
+                </p>
+              </div>
+              <div class="d-flex gap-2 flex-wrap">
+                <button class="btn btn-light" type="button" id="product-export">
+                  <i class="ri-download-2-line me-1"></i>Export
+                </button>
+                <a href="add-product.html" class="btn btn-dark"
+                  ><i class="ri-add-line me-1"></i>Add product</a
+                >
+              </div>
+            </div>
+            <div class="card-body border-bottom">
+              <div class="row g-2 align-items-center">
+                <div class="col-xl-4 col-md-6">
+                  <div class="input-group">
+                    <span class="input-group-text bg-transparent"
+                      ><i class="ri-search-line"></i></span
+                    ><input
+                      id="catalog-search"
+                      class="form-control border-start-0"
+                      type="search"
+                      placeholder="Search name, SKU or category"
+                      aria-label="Search products"
+                    />
+                  </div>
+                </div>
+                <div class="col-xl-2 col-md-6">
+                  <select
+                    id="catalog-category"
+                    data-trigger
+                    class="form-select"
+                    aria-label="Filter category"
+                  >
+                    <option value="">All categories</option>
+                    <option>Electronics</option>
+                    <option>Fashion</option>
+                    <option>Home</option>
+                    <option>Accessories</option>
+                  </select>
+                </div>
+                <div class="col-xl-2 col-md-6">
+                  <select
+                    id="catalog-status"
+                    data-trigger
+                    class="form-select"
+                    aria-label="Filter status"
+                  >
+                    <option value="">All statuses</option>
+                    <option>Active</option>
+                    <option>Draft</option>
+                    <option>Archived</option>
+                  </select>
+                </div>
+                <div class="col-xl-2 col-md-6">
+                  <select
+                    id="catalog-stock"
+                    data-trigger
+                    class="form-select"
+                    aria-label="Filter stock"
+                  >
+                    <option value="">Any stock</option>
+                    <option>In stock</option>
+                    <option>Low stock</option>
+                    <option>Out of stock</option>
+                  </select>
+                </div>
+                <div class="col-xl-2 col-md-6">
+                  <select
+                    id="catalog-sort"
+                    data-trigger
+                    class="form-select"
+                    aria-label="Sort products"
+                  >
+                    <option value="newest">Newest first</option>
+                    <option value="name">Name AÃ¢â‚¬â€œZ</option>
+                    <option value="price-high">Price: high to low</option>
+                    <option value="price-low">Price: low to high</option>
+                  </select>
+                </div>
+              </div>
+              <div
+                class="d-flex gap-2 flex-wrap mt-3"
+                role="group"
+                aria-label="Quick product filters"
+              >
+                <button
+                  class="btn btn-sm btn-primary text-black product-filter-chip active"
+                  data-quick-filter="all"
+                >
+                  All products <span>1,284</span>
+                </button>
+                <button
+                  class="btn btn-sm btn-light product-filter-chip"
+                  data-quick-filter="Active"
+                >
+                  Active <span>1,106</span>
+                </button>
+                <button
+                  class="btn btn-sm btn-light product-filter-chip"
+                  data-quick-filter="Draft"
+                >
+                  Drafts <span>17</span>
+                </button>
+                <button
+                  class="btn btn-sm btn-light product-filter-chip"
+                  data-quick-filter="Low stock"
+                >
+                  Low stock <span>28</span>
+                </button>
+              </div>
+            </div>
+            <div class="table-responsive">
+              <table
+                class="table table-hover text-nowrap align-middle mb-0 product-catalog-table"
+              >
+                <thead>
+                  <tr>
+                    <th scope="col">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="catalog-select-all"
+                        aria-label="Select all products"
+                      />
+                    </th>
+                    <th scope="col">Product</th>
+                    <th scope="col">SKU</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Inventory</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Updated</th>
+                    <th scope="col">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="catalog-rows"></tbody>
+              </table>
+            </div>
+            <div
+              class="card-footer border-top-0 d-flex align-items-center justify-content-between flex-wrap gap-2"
+            >
+              <span
+                class="text-muted fs-13"
+                id="catalog-result-count"
+                aria-live="polite"
+              ></span>
+              <nav aria-label="Product list pagination">
+                <ul class="pagination pagination-sm mb-0">
+                  <li class="page-item disabled">
+                    <span class="page-link">Previous</span>
+                  </li>
+                  <li class="page-item active">
+                    <span class="page-link">1</span>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="javascript:void(0);">2</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="javascript:void(0);">3</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="javascript:void(0);">Next</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </section>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"-->
+    <script src="../assets/libs/sweetalert2/sweetalert2.min.js"></script>
+    <script src="../assets/js/products-management.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+    <!-- include appearance-customizer-scripts.html"-->
+  </body>
+</html>

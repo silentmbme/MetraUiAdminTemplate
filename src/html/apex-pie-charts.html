@@ -1,0 +1,248 @@
+<!-- include document-head.html"-->
+    <link rel="stylesheet" href="../assets/css/apex-pie-charts.css" />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+
+      <div class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Pie &amp; Donut Charts</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">Charts</li>
+            <li class="breadcrumb-item">Apex Charts</li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Pie &amp; Donut Charts
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid pie-workspace">
+          <div class="row">
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Workstream allocation</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Compare planned hours across project workstreams.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="pie-basic"
+                    class="pie-demo"
+                    role="group"
+                    aria-label="Workstream allocation chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Project status</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      A donut summary shows how work is distributed by status.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="donut-simple"
+                    class="pie-demo"
+                    role="group"
+                    aria-label="Project status chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Interactive allocation</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Adjust sample categories and values with the controls
+                      below.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="donut-update"
+                    class="pie-demo"
+                    role="group"
+                    aria-label="Interactive allocation chart"
+                  ></div>
+                  <div
+                    class="d-flex justify-content-center flex-wrap gap-2 mt-2"
+                  >
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-light"
+                      id="randomize"
+                    >
+                      Change values</button
+                    ><button
+                      type="button"
+                      class="btn btn-sm btn-light"
+                      id="add"
+                    >
+                      Add category</button
+                    ><button
+                      type="button"
+                      class="btn btn-sm btn-light"
+                      id="remove"
+                    >
+                      Remove category</button
+                    ><button
+                      type="button"
+                      class="btn btn-sm btn-light"
+                      id="reset"
+                    >
+                      Reset
+                    </button>
+                  </div>
+                  <p
+                    id="pie-update-status"
+                    class="text-muted fs-12 text-center mt-2 mb-0"
+                    aria-live="polite"
+                  >
+                    4 sample categories
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Channel contribution</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      A single theme color uses shades to distinguish channels.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="pie-monochrome"
+                    class="pie-demo"
+                    role="group"
+                    aria-label="Channel contribution chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Budget distribution</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Gradient segments compare planned spending categories.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="donut-gradient"
+                    class="pie-demo"
+                    role="group"
+                    aria-label="Budget distribution chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Image-filled segments</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Existing project imagery fills the allocation segments.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="pie-image"
+                    class="pie-demo"
+                    role="group"
+                    aria-label="Image-filled segments chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Pattern comparison</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      Distinct textures differentiate resource categories.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="donut-pattern"
+                    class="pie-demo"
+                    role="group"
+                    aria-label="Pattern comparison chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Capacity overview</div>
+                    <p class="text-muted fs-12 mt-1 mb-0">
+                      A half-donut compares allocated hours across teams.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="donut-semi"
+                    class="pie-demo"
+                    role="group"
+                    aria-label="Capacity overview chart"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <!-- include common-scripts.html"-->
+
+    <!-- include appearance-customizer-scripts.html"-->
+
+    <!-- Apex Charts JS -->
+    <script src="../assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- Internal Apex Pie Charts JS -->
+    <script src="../assets/js/apexcharts-pie.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

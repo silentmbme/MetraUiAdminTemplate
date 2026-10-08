@@ -1,0 +1,283 @@
+<!-- include document-head.html"-->
+    <!-- Jsvector Maps -->
+    <link
+      rel="stylesheet"
+      href="../assets/libs/jsvectormap/jsvectormap.min.css"
+    />
+
+    <link rel="stylesheet" href="../assets/css/vector-maps.css" />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+
+      <div class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Vector Maps</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">Maps</li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Vector Maps
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid vector-workspace">
+          <div class="row">
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">World boundaries</div>
+                    <p class="text-muted fs-13 mb-0">
+                      A minimal map with country outlines.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="world-outline"
+                    class="coverage-map"
+                    role="group"
+                    aria-label="World boundaries interactive map"
+                  ></div>
+                  <p
+                    class="text-muted fs-12 mb-0 mt-3"
+                    data-map-status="world-outline"
+                    aria-live="polite"
+                  >
+                    Hover to explore. Drag to pan or use the zoom controls.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Location markers</div>
+                    <p class="text-muted fs-13 mb-0">
+                      Hover over a marker to discover its location.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="world-markers"
+                    class="coverage-map"
+                    role="group"
+                    aria-label="Location markers interactive map"
+                  ></div>
+                  <p
+                    class="text-muted fs-12 mb-0 mt-3"
+                    data-map-status="world-markers"
+                    aria-live="polite"
+                  >
+                    Hover to explore. Drag to pan or use the zoom controls.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Connected locations</div>
+                    <p class="text-muted fs-13 mb-0">
+                      Routes between selected cities across the world.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="world-routes"
+                    class="coverage-map"
+                    role="group"
+                    aria-label="Connected locations interactive map"
+                  ></div>
+                  <p
+                    class="text-muted fs-12 mb-0 mt-3"
+                    data-map-status="world-routes"
+                    aria-live="polite"
+                  >
+                    Hover to explore. Drag to pan or use the zoom controls.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Regional intensity</div>
+                    <p class="text-muted fs-13 mb-0">
+                      Sample values displayed with a graduated color scale.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="world-density"
+                    class="coverage-map"
+                    role="group"
+                    aria-label="Regional intensity interactive map"
+                  ></div>
+                  <div
+                    class="d-flex justify-content-center align-items-center gap-2 fs-12 text-muted mt-3"
+                  >
+                    <span>Low</span
+                    ><span class="map-scale" aria-hidden="true"></span
+                    ><span>High</span>
+                  </div>
+                  <p
+                    class="text-muted fs-12 mb-0 mt-3"
+                    data-map-status="world-density"
+                    aria-live="polite"
+                  >
+                    Hover to explore. Drag to pan or use the zoom controls.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">United States</div>
+                    <p class="text-muted fs-13 mb-0">
+                      Explore individual states and their boundaries.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="us-map"
+                    class="coverage-map"
+                    role="group"
+                    aria-label="United States interactive map"
+                  ></div>
+                  <p
+                    class="text-muted fs-12 mb-0 mt-3"
+                    data-map-status="us-map"
+                    aria-live="polite"
+                  >
+                    Hover to explore. Drag to pan or use the zoom controls.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Canada</div>
+                    <p class="text-muted fs-13 mb-0">
+                      Explore provinces and territories.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="canada-map"
+                    class="coverage-map"
+                    role="group"
+                    aria-label="Canada interactive map"
+                  ></div>
+                  <p
+                    class="text-muted fs-12 mb-0 mt-3"
+                    data-map-status="canada-map"
+                    aria-live="polite"
+                  >
+                    Hover to explore. Drag to pan or use the zoom controls.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Spain</div>
+                    <p class="text-muted fs-13 mb-0">
+                      A closer look at provincial boundaries.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="spain-map"
+                    class="coverage-map"
+                    role="group"
+                    aria-label="Spain interactive map"
+                  ></div>
+                  <p
+                    class="text-muted fs-12 mb-0 mt-3"
+                    data-map-status="spain-map"
+                    aria-live="polite"
+                  >
+                    Hover to explore. Drag to pan or use the zoom controls.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="card custom-card">
+                <div class="card-header">
+                  <div>
+                    <div class="card-title">Russia</div>
+                    <p class="text-muted fs-13 mb-0">
+                      Explore the country through its regional divisions.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="russia-map"
+                    class="coverage-map"
+                    role="group"
+                    aria-label="Russia interactive map"
+                  ></div>
+                  <p
+                    class="text-muted fs-12 mb-0 mt-3"
+                    data-map-status="russia-map"
+                    aria-live="polite"
+                  >
+                    Hover to explore. Drag to pan or use the zoom controls.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <!-- include common-scripts.html"-->
+
+    <!-- include appearance-customizer-scripts.html"-->
+
+    <!-- JSVector Maps JS -->
+    <script src="../assets/libs/jsvectormap/jsvectormap.min.js"></script>
+
+    <!-- JSVector Maps MapsJS -->
+    <script src="../assets/libs/jsvectormap/maps/world-merc.js"></script>
+    <script src="../assets/js/us-merc-en.js"></script>
+    <script src="../assets/js/russia.js"></script>
+    <script src="../assets/js/spain.js"></script>
+    <script src="../assets/js/canada.js"></script>
+    <script src="../assets/js/vector-maps.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>

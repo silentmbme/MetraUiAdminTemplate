@@ -1,0 +1,949 @@
+<!-- include document-head.html"-->
+    <link rel="stylesheet" href="../assets/css/icons-library.css" />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+
+      <div class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <div>
+            <h1 class="page-title">Icons</h1>
+          </div>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">UI library</li>
+            <li class="breadcrumb-item active" aria-current="page">Icons</li>
+          </ol>
+        </div>
+        <div class="container-fluid icon-workspace">
+          <div class="card custom-card">
+            <div class="card-body">
+              <div class="row align-items-end">
+                <div class="col-md-5">
+                  <label for="icon-search" class="form-label"
+                    >Search icons</label
+                  >
+                  <div class="input-group">
+                    <span class="input-group-text"
+                      ><i class="ri-search-line" aria-hidden="true"></i></span
+                    ><input
+                      id="icon-search"
+                      class="form-control"
+                      type="search"
+                      placeholder="Search home, arrow, mail..."
+                    />
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <label for="icon-library" class="form-label"
+                    >Icon library</label
+                  ><select id="icon-library" data-trigger class="form-select">
+                    <option value="all">All libraries</option>
+                    <option value="0">Bootstrap Icons</option>
+                    <option value="1">Remix Icons</option>
+                    <option value="2">Feather Icons</option>
+                    <option value="3">Tabler Icons</option>
+                    <option value="4">Line Awesome Icons</option>
+                    <option value="5">Boxicons</option>
+                  </select>
+                </div>
+                <div class="col-md-3">
+                  <label for="icon-copy-mode" class="form-label"
+                    >Copy format</label
+                  ><select id="icon-copy-mode" data-trigger class="form-select">
+                    <option value="class">Class name</option>
+                    <option value="markup">HTML markup</option>
+                  </select>
+                </div>
+                <div class="col-md-1">
+                  <button
+                    id="icon-clear"
+                    type="button"
+                    class="btn btn-light w-100"
+                    aria-label="Clear filters"
+                  >
+                    <i class="ri-refresh-line" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+              <div
+                class="d-flex justify-content-between flex-wrap gap-2 mt-3 fs-12"
+              >
+                <span id="icon-results" class="text-muted"></span
+                ><span id="icon-copy-status" role="status"
+                  >Select an icon to copy it.</span
+                >
+              </div>
+              <input
+                id="icon-copy-fallback"
+                class="form-control mt-3"
+                aria-label="Select and copy this icon text"
+                readonly
+                hidden
+              />
+            </div>
+          </div>
+          <div id="icon-empty" class="card custom-card" hidden>
+            <div class="card-body text-center py-5">
+              <i class="ri-search-line fs-28 text-muted" aria-hidden="true"></i>
+              <h2 class="fs-16 mt-3">No matching icons</h2>
+              <p class="text-muted mb-0">
+                Try another name or choose all libraries.
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xl-12" data-icon-section="0">
+              <div class="card custom-card">
+                <div class="card-header justify-content-between">
+                  <div class="card-title">
+                    Bootstrap Icons
+                    <span class="text-muted fs-12" data-icon-count></span>
+                  </div>
+                  <a
+                    href="https://icons.getbootstrap.com/"
+                    target="_blank"
+                    class="btn btn-sm btn-light"
+                    >View All Icons</a
+                  >
+                </div>
+                <div class="card-body">
+                  <div class="icon-browser-grid">
+                    <button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="bi bi-arrow-left-circle"
+                      aria-label="Copy bi bi-arrow-left-circle"
+                      title="bi bi-arrow-left-circle"
+                    >
+                      <i class="bi bi-arrow-left-circle" aria-hidden="true"></i
+                      ><span>arrow-left-circle</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="bi bi-arrows-move"
+                      aria-label="Copy bi bi-arrows-move"
+                      title="bi bi-arrows-move"
+                    >
+                      <i class="bi bi-arrows-move" aria-hidden="true"></i
+                      ><span>arrows-move</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="bi bi-bag"
+                      aria-label="Copy bi bi-bag"
+                      title="bi bi-bag"
+                    >
+                      <i class="bi bi-bag" aria-hidden="true"></i
+                      ><span>bag</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="bi bi-bar-chart-line"
+                      aria-label="Copy bi bi-bar-chart-line"
+                      title="bi bi-bar-chart-line"
+                    >
+                      <i class="bi bi-bar-chart-line" aria-hidden="true"></i
+                      ><span>bar-chart-line</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="bi bi-basket"
+                      aria-label="Copy bi bi-basket"
+                      title="bi bi-basket"
+                    >
+                      <i class="bi bi-basket" aria-hidden="true"></i
+                      ><span>basket</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="bi bi-bell"
+                      aria-label="Copy bi bi-bell"
+                      title="bi bi-bell"
+                    >
+                      <i class="bi bi-bell" aria-hidden="true"></i
+                      ><span>bell</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="bi bi-book"
+                      aria-label="Copy bi bi-book"
+                      title="bi bi-book"
+                    >
+                      <i class="bi bi-book" aria-hidden="true"></i
+                      ><span>book</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="bi bi-box"
+                      aria-label="Copy bi bi-box"
+                      title="bi bi-box"
+                    >
+                      <i class="bi bi-box" aria-hidden="true"></i
+                      ><span>box</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="bi bi-briefcase"
+                      aria-label="Copy bi bi-briefcase"
+                      title="bi bi-briefcase"
+                    >
+                      <i class="bi bi-briefcase" aria-hidden="true"></i
+                      ><span>briefcase</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="bi bi-brightness-high"
+                      aria-label="Copy bi bi-brightness-high"
+                      title="bi bi-brightness-high"
+                    >
+                      <i class="bi bi-brightness-high" aria-hidden="true"></i
+                      ><span>brightness-high</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="bi bi-calendar"
+                      aria-label="Copy bi bi-calendar"
+                      title="bi bi-calendar"
+                    >
+                      <i class="bi bi-calendar" aria-hidden="true"></i
+                      ><span>calendar</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="bi bi-paint-bucket"
+                      aria-label="Copy bi bi-paint-bucket"
+                      title="bi bi-paint-bucket"
+                    >
+                      <i class="bi bi-paint-bucket" aria-hidden="true"></i
+                      ><span>paint-bucket</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-12" data-icon-section="1">
+              <div class="card custom-card">
+                <div class="card-header justify-content-between">
+                  <div class="card-title">
+                    Remix Icons
+                    <span class="text-muted fs-12" data-icon-count></span>
+                  </div>
+                  <a
+                    href="https://remixicon.com/"
+                    target="_blank"
+                    class="btn btn-sm btn-light"
+                    >View All Icons</a
+                  >
+                </div>
+                <div class="card-body">
+                  <div class="icon-browser-grid">
+                    <button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="ri-home-line"
+                      aria-label="Copy ri-home-line"
+                      title="ri-home-line"
+                    >
+                      <i class="ri-home-line" aria-hidden="true"></i
+                      ><span>home-line</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="ri-mail-line"
+                      aria-label="Copy ri-mail-line"
+                      title="ri-mail-line"
+                    >
+                      <i class="ri-mail-line" aria-hidden="true"></i
+                      ><span>mail-line</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="ri-briefcase-line"
+                      aria-label="Copy ri-briefcase-line"
+                      title="ri-briefcase-line"
+                    >
+                      <i class="ri-briefcase-line" aria-hidden="true"></i
+                      ><span>briefcase-line</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="ri-window-line"
+                      aria-label="Copy ri-window-line"
+                      title="ri-window-line"
+                    >
+                      <i class="ri-window-line" aria-hidden="true"></i
+                      ><span>window-line</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="ri-chat-2-line"
+                      aria-label="Copy ri-chat-2-line"
+                      title="ri-chat-2-line"
+                    >
+                      <i class="ri-chat-2-line" aria-hidden="true"></i
+                      ><span>chat-2-line</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="ri-chat-settings-line"
+                      aria-label="Copy ri-chat-settings-line"
+                      title="ri-chat-settings-line"
+                    >
+                      <i class="ri-chat-settings-line" aria-hidden="true"></i
+                      ><span>chat-settings-line</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="ri-edit-line"
+                      aria-label="Copy ri-edit-line"
+                      title="ri-edit-line"
+                    >
+                      <i class="ri-edit-line" aria-hidden="true"></i
+                      ><span>edit-line</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="ri-layout-line"
+                      aria-label="Copy ri-layout-line"
+                      title="ri-layout-line"
+                    >
+                      <i class="ri-layout-line" aria-hidden="true"></i
+                      ><span>layout-line</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="ri-code-s-slash-line"
+                      aria-label="Copy ri-code-s-slash-line"
+                      title="ri-code-s-slash-line"
+                    >
+                      <i class="ri-code-s-slash-line" aria-hidden="true"></i
+                      ><span>code-s-slash-line</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="ri-airplay-line"
+                      aria-label="Copy ri-airplay-line"
+                      title="ri-airplay-line"
+                    >
+                      <i class="ri-airplay-line" aria-hidden="true"></i
+                      ><span>airplay-line</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="ri-file-line"
+                      aria-label="Copy ri-file-line"
+                      title="ri-file-line"
+                    >
+                      <i class="ri-file-line" aria-hidden="true"></i
+                      ><span>file-line</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-12" data-icon-section="2">
+              <div class="card custom-card">
+                <div class="card-header justify-content-between">
+                  <div class="card-title">
+                    Feather Icons
+                    <span class="text-muted fs-12" data-icon-count></span>
+                  </div>
+                  <a
+                    href="https://feathericons.com/"
+                    target="_blank"
+                    class="btn btn-sm btn-light"
+                    >View All Icons</a
+                  >
+                </div>
+                <div class="card-body">
+                  <div class="icon-browser-grid">
+                    <button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="fe fe-activity"
+                      aria-label="Copy fe fe-activity"
+                      title="fe fe-activity"
+                    >
+                      <i class="fe fe-activity" aria-hidden="true"></i
+                      ><span>activity</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="fe fe-airplay"
+                      aria-label="Copy fe fe-airplay"
+                      title="fe fe-airplay"
+                    >
+                      <i class="fe fe-airplay" aria-hidden="true"></i
+                      ><span>airplay</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="fe fe-alert-circle"
+                      aria-label="Copy fe fe-alert-circle"
+                      title="fe fe-alert-circle"
+                    >
+                      <i class="fe fe-alert-circle" aria-hidden="true"></i
+                      ><span>alert-circle</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="fe fe-alert-triangle"
+                      aria-label="Copy fe fe-alert-triangle"
+                      title="fe fe-alert-triangle"
+                    >
+                      <i class="fe fe-alert-triangle" aria-hidden="true"></i
+                      ><span>alert-triangle</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="fe fe-bar-chart-2"
+                      aria-label="Copy fe fe-bar-chart-2"
+                      title="fe fe-bar-chart-2"
+                    >
+                      <i class="fe fe-bar-chart-2" aria-hidden="true"></i
+                      ><span>bar-chart-2</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="fe fe-bell"
+                      aria-label="Copy fe fe-bell"
+                      title="fe fe-bell"
+                    >
+                      <i class="fe fe-bell" aria-hidden="true"></i
+                      ><span>bell</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="fe fe-camera"
+                      aria-label="Copy fe fe-camera"
+                      title="fe fe-camera"
+                    >
+                      <i class="fe fe-camera" aria-hidden="true"></i
+                      ><span>camera</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="fe fe-copy"
+                      aria-label="Copy fe fe-copy"
+                      title="fe fe-copy"
+                    >
+                      <i class="fe fe-copy" aria-hidden="true"></i
+                      ><span>copy</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="fe fe-eye"
+                      aria-label="Copy fe fe-eye"
+                      title="fe fe-eye"
+                    >
+                      <i class="fe fe-eye" aria-hidden="true"></i
+                      ><span>eye</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="fe fe-file"
+                      aria-label="Copy fe fe-file"
+                      title="fe fe-file"
+                    >
+                      <i class="fe fe-file" aria-hidden="true"></i
+                      ><span>file</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="fe fe-layout"
+                      aria-label="Copy fe fe-layout"
+                      title="fe fe-layout"
+                    >
+                      <i class="fe fe-layout" aria-hidden="true"></i
+                      ><span>layout</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-12" data-icon-section="3">
+              <div class="card custom-card">
+                <div class="card-header justify-content-between">
+                  <div class="card-title">
+                    Tabler Icons
+                    <span class="text-muted fs-12" data-icon-count></span>
+                  </div>
+                  <a
+                    href="https://tabler.io/icons"
+                    target="_blank"
+                    class="btn btn-sm btn-light"
+                    >View All Icons</a
+                  >
+                </div>
+                <div class="card-body">
+                  <div class="icon-browser-grid">
+                    <button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="ti ti-brand-tabler"
+                      aria-label="Copy ti ti-brand-tabler"
+                      title="ti ti-brand-tabler"
+                    >
+                      <i class="ti ti-brand-tabler" aria-hidden="true"></i
+                      ><span>brand-tabler</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="ti ti-activity-heartbeat"
+                      aria-label="Copy ti ti-activity-heartbeat"
+                      title="ti ti-activity-heartbeat"
+                    >
+                      <i class="ti ti-activity-heartbeat" aria-hidden="true"></i
+                      ><span>activity-heartbeat</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="ti ti-alert-octagon"
+                      aria-label="Copy ti ti-alert-octagon"
+                      title="ti ti-alert-octagon"
+                    >
+                      <i class="ti ti-alert-octagon" aria-hidden="true"></i
+                      ><span>alert-octagon</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="ti ti-album"
+                      aria-label="Copy ti ti-album"
+                      title="ti ti-album"
+                    >
+                      <i class="ti ti-album" aria-hidden="true"></i
+                      ><span>album</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="ti ti-align-right"
+                      aria-label="Copy ti ti-align-right"
+                      title="ti ti-align-right"
+                    >
+                      <i class="ti ti-align-right" aria-hidden="true"></i
+                      ><span>align-right</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="ti ti-antenna-bars-5"
+                      aria-label="Copy ti ti-antenna-bars-5"
+                      title="ti ti-antenna-bars-5"
+                    >
+                      <i class="ti ti-antenna-bars-5" aria-hidden="true"></i
+                      ><span>antenna-bars-5</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="ti ti-armchair"
+                      aria-label="Copy ti ti-armchair"
+                      title="ti ti-armchair"
+                    >
+                      <i class="ti ti-armchair" aria-hidden="true"></i
+                      ><span>armchair</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="ti ti-arrow-big-right"
+                      aria-label="Copy ti ti-arrow-big-right"
+                      title="ti ti-arrow-big-right"
+                    >
+                      <i class="ti ti-arrow-big-right" aria-hidden="true"></i
+                      ><span>arrow-big-right</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="ti ti-arrows-shuffle-2"
+                      aria-label="Copy ti ti-arrows-shuffle-2"
+                      title="ti ti-arrows-shuffle-2"
+                    >
+                      <i class="ti ti-arrows-shuffle-2" aria-hidden="true"></i
+                      ><span>arrows-shuffle-2</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="ti ti-backspace"
+                      aria-label="Copy ti ti-backspace"
+                      title="ti ti-backspace"
+                    >
+                      <i class="ti ti-backspace" aria-hidden="true"></i
+                      ><span>backspace</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="ti ti-bell"
+                      aria-label="Copy ti ti-bell"
+                      title="ti ti-bell"
+                    >
+                      <i class="ti ti-bell" aria-hidden="true"></i
+                      ><span>bell</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="ti ti-color-picker"
+                      aria-label="Copy ti ti-color-picker"
+                      title="ti ti-color-picker"
+                    >
+                      <i class="ti ti-color-picker" aria-hidden="true"></i
+                      ><span>color-picker</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-12" data-icon-section="4">
+              <div class="card custom-card">
+                <div class="card-header justify-content-between">
+                  <div class="card-title">
+                    Line Awesome Icons
+                    <span class="text-muted fs-12" data-icon-count></span>
+                  </div>
+                  <a
+                    href="https://icons8.com/icons"
+                    target="_blank"
+                    class="btn btn-sm btn-light"
+                    >View All Icons</a
+                  >
+                </div>
+                <div class="card-body">
+                  <div class="icon-browser-grid">
+                    <button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="las la-bell"
+                      aria-label="Copy las la-bell"
+                      title="las la-bell"
+                    >
+                      <i class="las la-bell" aria-hidden="true"></i
+                      ><span>bell</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="las la-exclamation-circle"
+                      aria-label="Copy las la-exclamation-circle"
+                      title="las la-exclamation-circle"
+                    >
+                      <i
+                        class="las la-exclamation-circle"
+                        aria-hidden="true"
+                      ></i
+                      ><span>exclamation-circle</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="las la-exclamation-triangle"
+                      aria-label="Copy las la-exclamation-triangle"
+                      title="las la-exclamation-triangle"
+                    >
+                      <i
+                        class="las la-exclamation-triangle"
+                        aria-hidden="true"
+                      ></i
+                      ><span>exclamation-triangle</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="las la-arrow-alt-circle-down"
+                      aria-label="Copy las la-arrow-alt-circle-down"
+                      title="las la-arrow-alt-circle-down"
+                    >
+                      <i
+                        class="las la-arrow-alt-circle-down"
+                        aria-hidden="true"
+                      ></i
+                      ><span>arrow-alt-circle-down</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="las la-arrow-alt-circle-up"
+                      aria-label="Copy las la-arrow-alt-circle-up"
+                      title="las la-arrow-alt-circle-up"
+                    >
+                      <i
+                        class="las la-arrow-alt-circle-up"
+                        aria-hidden="true"
+                      ></i
+                      ><span>arrow-alt-circle-up</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="las la-arrow-alt-circle-left"
+                      aria-label="Copy las la-arrow-alt-circle-left"
+                      title="las la-arrow-alt-circle-left"
+                    >
+                      <i
+                        class="las la-arrow-alt-circle-left"
+                        aria-hidden="true"
+                      ></i
+                      ><span>arrow-alt-circle-left</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="las la-arrow-alt-circle-right"
+                      aria-label="Copy las la-arrow-alt-circle-right"
+                      title="las la-arrow-alt-circle-right"
+                    >
+                      <i
+                        class="las la-arrow-alt-circle-right"
+                        aria-hidden="true"
+                      ></i
+                      ><span>arrow-alt-circle-right</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="las la-history"
+                      aria-label="Copy las la-history"
+                      title="las la-history"
+                    >
+                      <i class="las la-history" aria-hidden="true"></i
+                      ><span>history</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="las la-headphones"
+                      aria-label="Copy las la-headphones"
+                      title="las la-headphones"
+                    >
+                      <i class="las la-headphones" aria-hidden="true"></i
+                      ><span>headphones</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="las la-tv"
+                      aria-label="Copy las la-tv"
+                      title="las la-tv"
+                    >
+                      <i class="las la-tv" aria-hidden="true"></i
+                      ><span>tv</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="las la-car-side"
+                      aria-label="Copy las la-car-side"
+                      title="las la-car-side"
+                    >
+                      <i class="las la-car-side" aria-hidden="true"></i
+                      ><span>car-side</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="las la-envelope"
+                      aria-label="Copy las la-envelope"
+                      title="las la-envelope"
+                    >
+                      <i class="las la-envelope" aria-hidden="true"></i
+                      ><span>envelope</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="las la-edit"
+                      aria-label="Copy las la-edit"
+                      title="las la-edit"
+                    >
+                      <i class="las la-edit" aria-hidden="true"></i
+                      ><span>edit</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="las la-map"
+                      aria-label="Copy las la-map"
+                      title="las la-map"
+                    >
+                      <i class="las la-map" aria-hidden="true"></i
+                      ><span>map</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-12" data-icon-section="5">
+              <div class="card custom-card">
+                <div class="card-header justify-content-between">
+                  <div class="card-title">
+                    Boxicons
+                    <span class="text-muted fs-12" data-icon-count></span>
+                  </div>
+                  <a
+                    href="https://boxicons.com/icons?s=rounded&w=thin"
+                    target="_blank"
+                    class="btn btn-sm btn-light"
+                    >View All Icons</a
+                  >
+                </div>
+                <div class="card-body">
+                  <div class="icon-browser-grid">
+                    <button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="bx bx-home"
+                      aria-label="Copy bx bx-home"
+                      title="bx bx-home"
+                    >
+                      <i class="bx bx-home" aria-hidden="true"></i
+                      ><span>home</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="bx bx-home-alt"
+                      aria-label="Copy bx bx-home-alt"
+                      title="bx bx-home-alt"
+                    >
+                      <i class="bx bx-home-alt" aria-hidden="true"></i
+                      ><span>home-alt</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="bx bx-box"
+                      aria-label="Copy bx bx-box"
+                      title="bx bx-box"
+                    >
+                      <i class="bx bx-box" aria-hidden="true"></i
+                      ><span>box</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="bx bx-medal"
+                      aria-label="Copy bx bx-medal"
+                      title="bx bx-medal"
+                    >
+                      <i class="bx bx-medal" aria-hidden="true"></i
+                      ><span>medal</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="bx bx-file"
+                      aria-label="Copy bx bx-file"
+                      title="bx bx-file"
+                    >
+                      <i class="bx bx-file" aria-hidden="true"></i
+                      ><span>file</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="bx bx-palette"
+                      aria-label="Copy bx bx-palette"
+                      title="bx bx-palette"
+                    >
+                      <i class="bx bx-palette" aria-hidden="true"></i
+                      ><span>palette</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="bx bx-receipt"
+                      aria-label="Copy bx bx-receipt"
+                      title="bx bx-receipt"
+                    >
+                      <i class="bx bx-receipt" aria-hidden="true"></i
+                      ><span>receipt</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="bx bx-table"
+                      aria-label="Copy bx bx-table"
+                      title="bx bx-table"
+                    >
+                      <i class="bx bx-table" aria-hidden="true"></i
+                      ><span>table</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="bx bx-bar-chart-alt"
+                      aria-label="Copy bx bx-bar-chart-alt"
+                      title="bx bx-bar-chart-alt"
+                    >
+                      <i class="bx bx-bar-chart-alt" aria-hidden="true"></i
+                      ><span>bar-chart-alt</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="bx bx-layer"
+                      aria-label="Copy bx bx-layer"
+                      title="bx bx-layer"
+                    >
+                      <i class="bx bx-layer" aria-hidden="true"></i
+                      ><span>layer</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="bx bx-map-alt"
+                      aria-label="Copy bx bx-map-alt"
+                      title="bx bx-map-alt"
+                    >
+                      <i class="bx bx-map-alt" aria-hidden="true"></i
+                      ><span>map-alt</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="bx bx-gift"
+                      aria-label="Copy bx bx-gift"
+                      title="bx bx-gift"
+                    >
+                      <i class="bx bx-gift" aria-hidden="true"></i
+                      ><span>gift</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="bx bx-file-blank"
+                      aria-label="Copy bx bx-file-blank"
+                      title="bx bx-file-blank"
+                    >
+                      <i class="bx bx-file-blank" aria-hidden="true"></i
+                      ><span>file-blank</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="bx bx-lock-alt"
+                      aria-label="Copy bx bx-lock-alt"
+                      title="bx bx-lock-alt"
+                    >
+                      <i class="bx bx-lock-alt" aria-hidden="true"></i
+                      ><span>lock-alt</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="bx bx-error"
+                      aria-label="Copy bx bx-error"
+                      title="bx bx-error"
+                    >
+                      <i class="bx bx-error" aria-hidden="true"></i
+                      ><span>error</span></button
+                    ><button
+                      type="button"
+                      class="icon-browser-item"
+                      data-icon-class="bx bx-error-circle"
+                      aria-label="Copy bx bx-error-circle"
+                      title="bx bx-error-circle"
+                    >
+                      <i class="bx bx-error-circle" aria-hidden="true"></i
+                      ><span>error-circle</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <!-- include common-scripts.html"-->
+
+    <!-- include appearance-customizer-scripts.html"-->
+
+    <!-- Custom JS -->
+    <script src="../assets/js/app-interactions.js"></script>
+    <script src="../assets/js/icons-library.js"></script>
+  </body>
+</html>

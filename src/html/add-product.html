@@ -1,0 +1,544 @@
+<!-- include document-head.html"-->
+    <link rel="stylesheet" href="../assets/libs/quill/quill.snow.css" />
+    <link rel="stylesheet" href="../assets/libs/quill/quill.bubble.css" />
+    <link rel="stylesheet" href="../assets/libs/filepond/filepond.min.css" />
+    <link
+      rel="stylesheet"
+      href="../assets/libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main class="main-content app-content">
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Create product</h1>
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">
+              <a href="ecommerce-dashboard.html">Ecommerce</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Create product
+            </li>
+          </ol>
+        </div>
+        <div class="container-fluid commerce-dashboard add-product-workspace">
+          <section class="card custom-card add-product-progress-card mb-3">
+            <div class="card-body add-product-progress-layout">
+              <div class="add-product-progress-intro">
+                <span
+                  class="avatar avatar-md avatar-rounded bg-secondary-transparent text-secondary"
+                  ><i class="ri-edit-box-line fs-20" aria-hidden="true"></i
+                ></span>
+                <div>
+                  <span class="add-product-eyebrow text-secondary"
+                    >NEW LISTING</span
+                  >
+                  <strong class="d-block fs-13">Product setup</strong>
+                  <span class="text-muted fs-12"
+                    >Add the details customers need to make a confident
+                    purchase.</span
+                  >
+                </div>
+              </div>
+              <div
+                class="add-product-completion"
+                role="group"
+                aria-label="Listing completeness"
+              >
+                <div class="add-product-completion-heading">
+                  <span>Listing completeness</span>
+                  <strong id="product-completion-value">42%</strong>
+                </div>
+                <div
+                  class="progress bg-light"
+                  role="progressbar"
+                  aria-label="Listing completeness"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  aria-valuenow="0"
+                >
+                  <div
+                    class="progress-bar bg-success"
+                    id="product-completion-bar"
+                    style="width: 0%"
+                  ></div>
+                </div>
+                <span class="add-product-completion-note"
+                  ><i class="ri-information-line" aria-hidden="true"></i>
+                  Progress updates as you complete the form.</span
+                >
+              </div>
+            </div>
+          </section>
+
+          <div class="row g-3 align-items-start">
+            <div class="col-xxl-8 col-xl-7">
+              <section class="card custom-card mb-3" id="product-basics">
+                <div class="card-header">
+                  <div class="add-product-card-heading">
+                    <div>
+                      <h2 class="card-title mb-0">Basic information</h2>
+                      <p class="text-muted fs-12 mb-0">
+                        Product name, category, and key identifiers.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="row g-3">
+                    <div class="col-12">
+                      <label for="product-name-add" class="form-label"
+                        >Product name <span class="text-danger">*</span></label
+                      ><input
+                        type="text"
+                        class="form-control"
+                        id="product-name-add"
+                        maxlength="30"
+                        placeholder="e.g. Air Max 2025 Sneakers"
+                      />
+                      <div class="form-text">
+                        Use a clear name customers will recognize. 30 characters
+                        maximum.
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="product-category-add" class="form-label"
+                        >Category <span class="text-danger">*</span></label
+                      ><select
+                        class="form-select"
+                        data-trigger
+                        name="product-category-add"
+                        id="product-category-add"
+                      >
+                        <option value="">Choose a category</option>
+                        <option value="Clothing">Clothing</option>
+                        <option value="Footwear">Footwear</option>
+                        <option value="Accessories">Accessories</option>
+                        <option value="Grooming">Grooming</option>
+                        <option value="Ethnic & Festive">
+                          Ethnic & Festive
+                        </option>
+                        <option value="Jewellery">Jewellery</option>
+                        <option value="Toys & Babycare">Toys & Babycare</option>
+                        <option value="Festive Gifts">Festive Gifts</option>
+                        <option value="Kitchen">Kitchen</option>
+                        <option value="Dining">Dining</option>
+                        <option value="Home Decor">Home Decor</option>
+                        <option value="Stationery">Stationery</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="product-brand-add" class="form-label"
+                        >Brand</label
+                      ><select
+                        class="form-select"
+                        data-trigger
+                        name="product-brand-add"
+                        id="product-brand-add"
+                      >
+                        <option value="">Select brand</option>
+                        <option>Armani</option>
+                        <option>Lacoste</option>
+                        <option>Puma</option>
+                        <option>Spykar</option>
+                        <option>Mufti</option>
+                        <option>Home Town</option>
+                        <option>Arrabi</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="product-type" class="form-label"
+                        >Product type</label
+                      ><input
+                        type="text"
+                        class="form-control"
+                        id="product-type"
+                        placeholder="e.g. Running shoe"
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="product-gender-add" class="form-label"
+                        >Audience</label
+                      ><select
+                        class="form-select"
+                        data-trigger
+                        name="product-gender-add"
+                        id="product-gender-add"
+                      >
+                        <option value="">Choose audience</option>
+                        <option value="All">All</option>
+                        <option value="Male">Men</option>
+                        <option value="Female">Women</option>
+                        <option value="Others">Unisex / other</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="product-size-add" class="form-label"
+                        >Primary size</label
+                      ><select
+                        class="form-select"
+                        data-trigger
+                        name="product-size-add"
+                        id="product-size-add"
+                      >
+                        <option value="">Select size</option>
+                        <option value="Extra Small">Extra small</option>
+                        <option value="Small">Small</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Large">Large</option>
+                        <option value="Extra Large">Extra large</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6 color-selection">
+                      <label for="product-color-add" class="form-label"
+                        >Available colors</label
+                      ><select
+                        class="form-select"
+                        name="product-color-add"
+                        id="product-color-add"
+                        multiple
+                      >
+                        <option value="White">White</option>
+                        <option value="Black">Black</option>
+                        <option value="Red">Red</option>
+                        <option value="Orange">Orange</option>
+                        <option value="Yellow">Yellow</option>
+                        <option value="Green">Green</option>
+                        <option value="Blue">Blue</option>
+                        <option value="Pink">Pink</option>
+                        <option value="Purple">Purple</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section
+                class="card custom-card mb-3"
+                id="product-description-section"
+              >
+                <div class="card-header">
+                  <div class="add-product-card-heading">
+                    <div>
+                      <h2 class="card-title mb-0">Description & features</h2>
+                      <p class="text-muted fs-12 mb-0">
+                        Tell shoppers what makes this product special.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <label for="product-description-add" class="form-label"
+                    >Short description</label
+                  ><textarea
+                    class="form-control mb-3"
+                    id="product-description-add"
+                    rows="3"
+                    maxlength="500"
+                    placeholder="Describe the product, materials, and what it is best for."
+                  ></textarea>
+                  <div class="form-text mb-3">
+                    Keep it concise and useful. 500 characters maximum.
+                  </div>
+                  <label class="form-label">Product features</label>
+                  <div id="product-features" class="add-product-editor"></div>
+                </div>
+              </section>
+            </div>
+
+            <aside class="col-xxl-4 col-xl-5">
+              <section class="card custom-card mb-3" id="product-media">
+                <div class="card-header">
+                  <div class="add-product-card-heading">
+                    <div>
+                      <h2 class="card-title mb-0">Product media</h2>
+                      <p class="text-muted fs-12 mb-0">
+                        Add up to 6 clear product images.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <input
+                    type="file"
+                    class="product-Images"
+                    name="filepond"
+                    multiple
+                    data-allow-reorder="true"
+                    data-max-file-size="3MB"
+                    data-max-files="6"
+                  />
+                  <div
+                    class="d-flex align-items-center gap-2 text-muted fs-11 mt-2"
+                  >
+                    <i class="ri-information-line" aria-hidden="true"></i> JPG,
+                    PNG, or WebP. Maximum file size: 3 MB.
+                  </div>
+                </div>
+              </section>
+
+              <section class="card custom-card mb-3" id="product-publish">
+                <div class="card-header">
+                  <div class="add-product-card-heading">
+                    <div>
+                      <h2 class="card-title mb-0">Publishing</h2>
+                      <p class="text-muted fs-12 mb-0">
+                        Choose when and where this listing appears.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="row g-3">
+                    <div class="col-12">
+                      <label for="product-status-add" class="form-label"
+                        >Listing status</label
+                      ><select
+                        class="form-select"
+                        data-trigger
+                        name="product-status-add"
+                        id="product-status-add"
+                      >
+                        <option value="">Choose status</option>
+                        <option value="Published">Publish now</option>
+                        <option value="Scheduled">Schedule publishing</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="publish-date" class="form-label"
+                        >Publish date</label
+                      ><input
+                        type="text"
+                        class="form-control"
+                        id="publish-date"
+                        placeholder="Choose date"
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="publish-time" class="form-label"
+                        >Publish time</label
+                      ><input
+                        type="text"
+                        class="form-control"
+                        id="publish-time"
+                        placeholder="Choose time"
+                      />
+                    </div>
+                    <div class="col-12">
+                      <label for="product-status-add1" class="form-label"
+                        >Availability</label
+                      ><select
+                        class="form-select"
+                        data-trigger
+                        name="product-status-add1"
+                        id="product-status-add1"
+                      >
+                        <option value="">Choose availability</option>
+                        <option value="In Stock">In stock</option>
+                        <option value="Out Of Stock">Out of stock</option>
+                      </select>
+                    </div>
+                    <div class="col-12">
+                      <label for="choices-text-preset-values" class="form-label"
+                        >Product tags</label
+                      ><input
+                        class="form-control"
+                        id="choices-text-preset-values"
+                        type="text"
+                        placeholder="Add tags, press Enter"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="card custom-card">
+                <div class="card-header">
+                  <div class="add-product-card-heading">
+                    <div>
+                      <h2 class="card-title mb-0">Warranty documents</h2>
+                      <p class="text-muted fs-12 mb-0">
+                        Attach a warranty or care guide.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <input
+                    type="file"
+                    class="product-documents"
+                    name="filepond"
+                    multiple
+                    data-allow-reorder="true"
+                    data-max-file-size="5MB"
+                    data-max-files="3"
+                  />
+                  <div class="form-text mt-2">
+                    PDF or DOC. Maximum file size: 5 MB per file.
+                  </div>
+                </div>
+              </section>
+            </aside>
+
+            <div class="col-xxl-12 col-xl-12">
+              <section class="card custom-card" id="product-pricing">
+                <div class="card-header">
+                  <div class="add-product-card-heading">
+                    <div>
+                      <h2 class="card-title mb-0">Pricing & stock</h2>
+                      <p class="text-muted fs-12 mb-0">
+                        Set your selling price and inventory details.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="row g-3">
+                    <div class="col-md-4">
+                      <label for="product-cost-add" class="form-label"
+                        >Cost price</label
+                      >
+                      <div class="input-group">
+                        <span class="input-group-text">$</span
+                        ><input
+                          type="number"
+                          min="0"
+                          step="0.01"
+                          class="form-control"
+                          id="product-cost-add"
+                          placeholder="0.00"
+                        />
+                      </div>
+                      <div class="form-text">Your purchase cost.</div>
+                    </div>
+                    <div class="col-md-4">
+                      <label for="product-actual-price" class="form-label"
+                        >Selling price</label
+                      >
+                      <div class="input-group">
+                        <span class="input-group-text">$</span
+                        ><input
+                          type="number"
+                          min="0"
+                          step="0.01"
+                          class="form-control"
+                          id="product-actual-price"
+                          placeholder="0.00"
+                        />
+                      </div>
+                      <div class="form-text">Price shown to shoppers.</div>
+                    </div>
+                    <div class="col-md-4">
+                      <label for="product-dealer-price" class="form-label"
+                        >Compare-at price</label
+                      >
+                      <div class="input-group">
+                        <span class="input-group-text">$</span
+                        ><input
+                          type="number"
+                          min="0"
+                          step="0.01"
+                          class="form-control"
+                          id="product-dealer-price"
+                          placeholder="0.00"
+                        />
+                      </div>
+                      <div class="form-text">Optional original price.</div>
+                    </div>
+                    <div class="col-md-4">
+                      <label for="product-discount" class="form-label"
+                        >Discount</label
+                      >
+                      <div class="input-group">
+                        <input
+                          type="number"
+                          min="0"
+                          max="100"
+                          class="form-control"
+                          id="product-discount"
+                          placeholder="0"
+                        /><span class="input-group-text">%</span>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <label for="product-discount1" class="form-label"
+                        >Item weight</label
+                      >
+                      <div class="input-group">
+                        <input
+                          type="number"
+                          min="0"
+                          step="1"
+                          class="form-control"
+                          id="product-discount1"
+                          placeholder="0"
+                        /><span class="input-group-text">g</span>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <label for="product-stock-quantity" class="form-label"
+                        >Initial stock</label
+                      ><input
+                        type="number"
+                        min="0"
+                        class="form-control"
+                        id="product-stock-quantity"
+                        placeholder="Enter units"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <div
+            class="add-product-submit-bar mb-4 d-flex align-items-center justify-content-between flex-wrap gap-2"
+          >
+            <span class="text-muted fs-12"
+              ><i class="ri-lock-line me-1"></i>Your product changes are saved
+              as a draft until you publish.</span
+            >
+            <div class="d-flex gap-2 flex-wrap">
+              <a href="products-list.html" class="btn btn-light">Cancel</a
+              ><button type="button" class="btn btn-secondary text-fixed-white">
+                Save draft</button
+              ><button type="button" class="btn btn-dark">
+                <i class="ri-check-line me-1"></i>Publish product
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+    <!-- include common-scripts.html"-->
+    <script src="../assets/libs/quill/quill.js"></script>
+    <script src="../assets/libs/filepond/filepond.min.js"></script>
+    <script src="../assets/libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.js"></script>
+    <script src="../assets/libs/filepond-plugin-file-validate-size/filepond-plugin-file-validate-size.min.js"></script>
+    <script src="../assets/libs/filepond-plugin-file-encode/filepond-plugin-file-encode.min.js"></script>
+    <script src="../assets/libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.js"></script>
+    <script src="../assets/libs/filepond-plugin-file-validate-type/filepond-plugin-file-validate-type.min.js"></script>
+    <script src="../assets/libs/filepond-plugin-image-crop/filepond-plugin-image-crop.min.js"></script>
+    <script src="../assets/libs/filepond-plugin-image-resize/filepond-plugin-image-resize.min.js"></script>
+    <script src="../assets/libs/filepond-plugin-image-transform/filepond-plugin-image-transform.min.js"></script>
+    <script src="../assets/js/add-products.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+    <!-- include appearance-customizer-scripts.html"-->
+  </body>
+</html>

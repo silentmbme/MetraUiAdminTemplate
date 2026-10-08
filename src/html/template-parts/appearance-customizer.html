@@ -1,0 +1,735 @@
+<!-- Start Switcher -->
+<div
+  class="offcanvas offcanvas-end"
+  tabindex="-1"
+  id="customizer-offcanvas"
+  aria-labelledby="offcanvasRightLabel"
+>
+  <div class="offcanvas-header border-bottom d-block p-0">
+    <div class="switcher-heading">
+      <div class="switcher-heading-copy">
+        <span class="switcher-heading-icon"
+          ><i class="ri-equalizer-2-line" aria-hidden="true"></i
+        ></span>
+        <div>
+          <h5 class="offcanvas-title mb-0" id="offcanvasRightLabel">
+            Workspace appearance
+          </h5>
+          <p class="text-muted">
+            Fine-tune your layout, colors, and navigation.
+          </p>
+        </div>
+      </div>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="offcanvas"
+        aria-label="Close"
+      ></button>
+    </div>
+    <nav>
+      <div
+        class="nav nav-tabs pt-0 nav-justified"
+        id="switcher-main-tab"
+        role="tablist"
+      >
+        <button
+          class="nav-link active"
+          id="switcher-home-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#switcher-home"
+          type="button"
+          role="tab"
+          aria-controls="switcher-home"
+          aria-selected="true"
+        >
+          <i class="ri-layout-4-line" aria-hidden="true"></i> Layout & style
+        </button>
+        <button
+          class="nav-link"
+          id="switcher-profile-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#switcher-profile"
+          type="button"
+          role="tab"
+          aria-controls="switcher-profile"
+          aria-selected="false"
+        >
+          <i class="ri-palette-line" aria-hidden="true"></i> Colors & surfaces
+        </button>
+      </div>
+    </nav>
+  </div>
+  <div class="offcanvas-body">
+    <div class="tab-content" id="nav-tabContent">
+      <div
+        class="tab-pane fade show active border-0"
+        id="switcher-home"
+        role="tabpanel"
+        aria-labelledby="switcher-home-tab"
+        tabindex="0"
+      >
+        <div class="">
+          <p class="switcher-style-head">
+            Appearance<span class="switcher-section-description"
+              >Choose a light or dark workspace.</span
+            >
+          </p>
+          <div class="row switcher-style gx-0">
+            <div class="col-sm-4 col-6">
+              <div class="form-check switch-select">
+                <label class="form-check-label" for="switcher-light-theme">
+                  Light
+                </label>
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="theme-style"
+                  id="switcher-light-theme"
+                  checked
+                />
+              </div>
+            </div>
+            <div class="col-sm-4 col-6">
+              <div class="form-check switch-select">
+                <label class="form-check-label" for="switcher-dark-theme">
+                  Dark
+                </label>
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="theme-style"
+                  id="switcher-dark-theme"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <p class="switcher-style-head">
+            Reading direction<span class="switcher-section-description"
+              >Set the flow of your interface.</span
+            >
+          </p>
+          <div class="row switcher-style gx-0">
+            <div class="col-sm-4 col-6">
+              <div class="form-check switch-select">
+                <label class="form-check-label" for="switcher-ltr"> LTR </label>
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="direction"
+                  id="switcher-ltr"
+                  checked
+                />
+              </div>
+            </div>
+            <div class="col-sm-4 col-6">
+              <div class="form-check switch-select">
+                <label class="form-check-label" for="switcher-rtl"> RTL </label>
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="direction"
+                  id="switcher-rtl"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sidemenu-layout-styles">
+          <p class="switcher-style-head">
+            Sidebar layout<span class="switcher-section-description"
+              >Choose how navigation appears.</span
+            >
+          </p>
+          <div class="row switcher-style gx-0 pb-2 gy-2 layout-options">
+            <div class="col-sm-6">
+              <div class="form-check switch-select">
+                <label class="form-check-label" for="switcher-layout-default"
+                  >Default</label
+                ><input
+                  class="form-check-input"
+                  type="radio"
+                  name="sidebar-layout"
+                  id="switcher-layout-default"
+                  checked
+                />
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-check switch-select">
+                <label class="form-check-label" for="switcher-layout-dual"
+                  >Dual sidebar</label
+                ><input
+                  class="form-check-input"
+                  type="radio"
+                  name="sidebar-layout"
+                  id="switcher-layout-dual"
+                />
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-check switch-select">
+                <label class="form-check-label" for="switcher-layout-header"
+                  >Header only</label
+                ><input
+                  class="form-check-input"
+                  type="radio"
+                  name="sidebar-layout"
+                  id="switcher-layout-header"
+                />
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-check switch-select">
+                <label class="form-check-label" for="switcher-layout-icons"
+                  >Icon menu</label
+                ><input
+                  class="form-check-input"
+                  type="radio"
+                  name="sidebar-layout"
+                  id="switcher-layout-icons"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <p class="switcher-style-head">Menu Positions</p>
+          <div class="row switcher-style gx-0">
+            <div class="col-sm-4 col-6">
+              <div class="form-check switch-select">
+                <label class="form-check-label" for="switcher-menu-fixed">
+                  Fixed
+                </label>
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="menu-positions"
+                  id="switcher-menu-fixed"
+                  checked
+                />
+              </div>
+            </div>
+            <div class="col-sm-4 col-6">
+              <div class="form-check switch-select">
+                <label class="form-check-label" for="switcher-menu-scroll">
+                  Scrollable
+                </label>
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="menu-positions"
+                  id="switcher-menu-scroll"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <p class="switcher-style-head">Header Positions</p>
+          <div class="row switcher-style gx-0">
+            <div class="col-sm-4 col-6">
+              <div class="form-check switch-select">
+                <label class="form-check-label" for="switcher-header-fixed">
+                  Fixed
+                </label>
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="header-positions"
+                  id="switcher-header-fixed"
+                  checked
+                />
+              </div>
+            </div>
+            <div class="col-sm-4 col-6">
+              <div class="form-check switch-select">
+                <label class="form-check-label" for="switcher-header-scroll">
+                  Scrollable
+                </label>
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="header-positions"
+                  id="switcher-header-scroll"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <p class="switcher-style-head">Loader</p>
+          <div class="row switcher-style gx-0">
+            <div class="col-sm-4 col-6">
+              <div class="form-check switch-select">
+                <label class="form-check-label" for="switcher-loader-enable">
+                  Enable
+                </label>
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="page-loader"
+                  id="switcher-loader-enable"
+                />
+              </div>
+            </div>
+            <div class="col-sm-4 col-6">
+              <div class="form-check switch-select">
+                <label class="form-check-label" for="switcher-loader-disable">
+                  Disable
+                </label>
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="page-loader"
+                  id="switcher-loader-disable"
+                  checked
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="tab-pane fade border-0"
+        id="switcher-profile"
+        role="tabpanel"
+        aria-labelledby="switcher-profile-tab"
+        tabindex="0"
+      >
+        <div>
+          <div class="theme-colors">
+            <p class="switcher-style-head">
+              Choose a palette<span class="switcher-section-description"
+                >Pick a coordinated color set for your workspace.</span
+              >
+            </p>
+            <div
+              class="theme-preset-grid mt-3"
+              role="radiogroup"
+              aria-label="Workspace color palettes"
+            >
+              <button
+                class="theme-preset-card is-active"
+                type="button"
+                data-theme-preset="original"
+                data-primary-rgb="147, 241, 38"
+                data-secondary-rgb="94, 120, 253"
+                data-success-rgb="50, 212, 132"
+                aria-pressed="true"
+                aria-label="Original project palette"
+              >
+                <span class="theme-preset-preview"
+                  ><span></span><i></i><i></i><i></i></span
+                ><span class="theme-preset-name"
+                  >Original
+                  <i class="ri-check-line" aria-hidden="true"></i></span
+                ><span class="theme-preset-description">Project colors</span>
+              </button>
+              <button
+                class="theme-preset-card"
+                type="button"
+                data-theme-preset="lagoon"
+                data-primary-rgb="21, 153, 164"
+                data-secondary-rgb="20, 124, 97"
+                data-success-rgb="224, 117, 12"
+                aria-pressed="false"
+                aria-label="Lagoon palette"
+              >
+                <span class="theme-preset-preview"
+                  ><span></span><i></i><i></i><i></i></span
+                ><span class="theme-preset-name">Lagoon</span
+                ><span class="theme-preset-description">Teal and cyan</span>
+              </button>
+              <button
+                class="theme-preset-card"
+                type="button"
+                data-theme-preset="citrus"
+                data-primary-rgb="153, 204, 24"
+                data-secondary-rgb="0, 142, 117"
+                data-success-rgb="210, 104, 0"
+                aria-pressed="false"
+                aria-label="Citrus palette"
+              >
+                <span class="theme-preset-preview"
+                  ><span></span><i></i><i></i><i></i></span
+                ><span class="theme-preset-name">Citrus</span
+                ><span class="theme-preset-description">Lime and teal</span>
+              </button>
+              <button
+                class="theme-preset-card"
+                type="button"
+                data-theme-preset="lavender"
+                data-primary-rgb="204, 182, 255"
+                data-secondary-rgb="22, 154, 100"
+                data-success-rgb="210, 113, 15"
+                aria-pressed="false"
+                aria-label="Lavender palette"
+              >
+                <span class="theme-preset-preview"
+                  ><span></span><i></i><i></i><i></i></span
+                ><span class="theme-preset-name">Lavender</span
+                ><span class="theme-preset-description">Purple and jade</span>
+              </button>
+              <button
+                class="theme-preset-card"
+                type="button"
+                data-theme-preset="spectrum"
+                data-primary-rgb="56, 232, 247"
+                data-secondary-rgb="0, 156, 111"
+                data-success-rgb="227, 116, 0"
+                aria-pressed="false"
+                aria-label="Spectrum palette"
+              >
+                <span class="theme-preset-preview"
+                  ><span></span><i></i><i></i><i></i></span
+                ><span class="theme-preset-name">Spectrum</span
+                ><span class="theme-preset-description">Violet and green</span>
+              </button>
+              <button
+                class="theme-preset-card"
+                type="button"
+                data-theme-preset="twilight"
+                data-primary-rgb="151, 160, 241"
+                data-secondary-rgb="15, 152, 91"
+                data-success-rgb="222, 112, 0"
+                aria-pressed="false"
+                aria-label="Twilight palette"
+              >
+                <span class="theme-preset-preview"
+                  ><span></span><i></i><i></i><i></i></span
+                ><span class="theme-preset-name">Twilight</span
+                ><span class="theme-preset-description">Slate and indigo</span>
+              </button>
+              <button
+                class="theme-preset-card"
+                type="button"
+                data-theme-preset="pacific"
+                data-primary-rgb="105, 169, 231"
+                data-secondary-rgb="11, 148, 117"
+                data-success-rgb="220, 108, 0"
+                aria-pressed="false"
+                aria-label="Pacific palette"
+              >
+                <span class="theme-preset-preview"
+                  ><span></span><i></i><i></i><i></i></span
+                ><span class="theme-preset-name">Pacific</span
+                ><span class="theme-preset-description"
+                  >Azure and sea green</span
+                >
+              </button>
+              <button
+                class="theme-preset-card"
+                type="button"
+                data-theme-preset="slate"
+                data-primary-rgb="206, 206, 206"
+                data-secondary-rgb="27, 144, 87"
+                data-success-rgb="198, 106, 0"
+                aria-pressed="false"
+                aria-label="Slate palette"
+              >
+                <span class="theme-preset-preview"
+                  ><span></span><i></i><i></i><i></i></span
+                ><span class="theme-preset-name">Slate</span
+                ><span class="theme-preset-description"
+                  >Charcoal and copper</span
+                >
+              </button>
+              <button
+                class="theme-preset-card"
+                type="button"
+                data-theme-preset="forest"
+                data-primary-rgb="112, 208, 180"
+                data-secondary-rgb="20, 126, 187"
+                data-success-rgb="216, 112, 0"
+                aria-pressed="false"
+                aria-label="Forest palette"
+              >
+                <span class="theme-preset-preview"
+                  ><span></span><i></i><i></i><i></i></span
+                ><span class="theme-preset-name">Forest</span
+                ><span class="theme-preset-description">Green and blue</span>
+              </button>
+            </div>
+          </div>
+          <div class="theme-colors">
+            <p class="switcher-style-head">
+              Sidebar surface<span class="switcher-section-description"
+                >Choose a surface for your navigation.</span
+              >
+            </p>
+            <div class="row switcher-style gx-0">
+              <div class="col-sm-4 col-6">
+                <div class="form-check switch-select">
+                  <label class="form-check-label" for="switcher-menu-light"
+                    >Light</label
+                  ><input
+                    class="form-check-input"
+                    type="radio"
+                    name="menu-colors"
+                    id="switcher-menu-light"
+                    checked
+                  />
+                </div>
+              </div>
+              <div class="col-sm-4 col-6">
+                <div class="form-check switch-select">
+                  <label class="form-check-label" for="switcher-menu-dark"
+                    >Dark</label
+                  ><input
+                    class="form-check-input"
+                    type="radio"
+                    name="menu-colors"
+                    id="switcher-menu-dark"
+                  />
+                </div>
+              </div>
+              <div class="col-sm-4 col-6">
+                <div class="form-check switch-select">
+                  <label
+                    class="form-check-label"
+                    for="switcher-menu-transparent"
+                    >Transparent</label
+                  ><input
+                    class="form-check-input"
+                    type="radio"
+                    name="menu-colors"
+                    id="switcher-menu-transparent"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="theme-colors">
+            <p class="switcher-style-head">
+              Header surface<span class="switcher-section-description"
+                >Give your top bar its own appearance.</span
+              >
+            </p>
+            <div class="row switcher-style gx-0">
+              <div class="col-sm-4 col-6">
+                <div class="form-check switch-select">
+                  <label class="form-check-label" for="switcher-header-light"
+                    >Light</label
+                  ><input
+                    class="form-check-input"
+                    type="radio"
+                    name="header-colors"
+                    id="switcher-header-light"
+                  />
+                </div>
+              </div>
+              <div class="col-sm-4 col-6">
+                <div class="form-check switch-select">
+                  <label class="form-check-label" for="switcher-header-dark"
+                    >Dark</label
+                  ><input
+                    class="form-check-input"
+                    type="radio"
+                    name="header-colors"
+                    id="switcher-header-dark"
+                  />
+                </div>
+              </div>
+              <div class="col-sm-4 col-6">
+                <div class="form-check switch-select">
+                  <label
+                    class="form-check-label"
+                    for="switcher-header-transparent"
+                    >Transparent</label
+                  ><input
+                    class="form-check-input"
+                    type="radio"
+                    name="header-colors"
+                    id="switcher-header-transparent"
+                    checked
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="theme-colors">
+            <p class="switcher-style-head">
+              Workspace background<span class="switcher-section-description"
+                >Choose a color for your dark workspace canvas.</span
+              >
+            </p>
+            <div class="workspace-background-grid">
+              <label
+                class="workspace-background-option workspace-bg-midnight"
+                for="switcher-background"
+              >
+                <input
+                  class="workspace-bg-input"
+                  type="radio"
+                  name="theme-background"
+                  id="switcher-background"
+                  aria-label="Midnight workspace background"
+                />
+                <span class="workspace-bg-swatch" aria-hidden="true"></span
+                ><span class="workspace-bg-name">Midnight</span>
+              </label>
+              <label
+                class="workspace-background-option workspace-bg-violet"
+                for="switcher-background1"
+              >
+                <input
+                  class="workspace-bg-input"
+                  type="radio"
+                  name="theme-background"
+                  id="switcher-background1"
+                  aria-label="Violet workspace background"
+                />
+                <span class="workspace-bg-swatch" aria-hidden="true"></span
+                ><span class="workspace-bg-name">Violet</span>
+              </label>
+              <label
+                class="workspace-background-option workspace-bg-ocean"
+                for="switcher-background2"
+              >
+                <input
+                  class="workspace-bg-input"
+                  type="radio"
+                  name="theme-background"
+                  id="switcher-background2"
+                  aria-label="Ocean workspace background"
+                />
+                <span class="workspace-bg-swatch" aria-hidden="true"></span
+                ><span class="workspace-bg-name">Ocean</span>
+              </label>
+              <label
+                class="workspace-background-option workspace-bg-cocoa"
+                for="switcher-background3"
+              >
+                <input
+                  class="workspace-bg-input"
+                  type="radio"
+                  name="theme-background"
+                  id="switcher-background3"
+                  aria-label="Cocoa workspace background"
+                />
+                <span class="workspace-bg-swatch" aria-hidden="true"></span
+                ><span class="workspace-bg-name">Cocoa</span>
+              </label>
+              <label
+                class="workspace-background-option workspace-bg-forest"
+                for="switcher-background4"
+              >
+                <input
+                  class="workspace-bg-input"
+                  type="radio"
+                  name="theme-background"
+                  id="switcher-background4"
+                  aria-label="Forest workspace background"
+                />
+                <span class="workspace-bg-swatch" aria-hidden="true"></span
+                ><span class="workspace-bg-name">Forest</span>
+              </label>
+              <div class="workspace-background-option workspace-bg-custom">
+                <span
+                  class="workspace-bg-swatch workspace-bg-custom-swatch"
+                  aria-hidden="true"
+                ></span>
+                <span class="workspace-bg-name">Custom</span>
+                <div class="theme-container-background"></div>
+                <div
+                  class="pickr-container-background"
+                  aria-label="Choose a custom workspace background"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-block canvas-footer flex-wrap">
+        <div class="switcher-reset-copy">
+          <span
+            >Want a fresh start?<small
+              >Restore the default appearance.</small
+            ></span
+          >
+        </div>
+        <a
+          href="javascript:void(0);"
+          id="reset-all"
+          class="btn switcher-reset-button"
+          ><i class="ri-restart-line" aria-hidden="true"></i> Reset defaults</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Switcher -->
+<script>
+  (() => {
+    const presets = document.querySelectorAll(".theme-preset-card");
+    if (!presets.length) return;
+
+    const html = document.documentElement;
+    const savedRgb = localStorage.getItem("primaryRGB");
+    const savedSecondary = localStorage.getItem("secondaryRGB");
+    const savedSuccess = localStorage.getItem("successRGB");
+    const defaultPreset = presets[0];
+    const applyPreset = (preset) => {
+      html.style.setProperty("--theme-primary-rgb", preset.dataset.primaryRgb);
+      html.style.setProperty(
+        "--theme-secondary-rgb",
+        preset.dataset.secondaryRgb
+      );
+      html.style.setProperty("--theme-success-rgb", preset.dataset.successRgb);
+      localStorage.setItem("primaryRGB", preset.dataset.primaryRgb);
+      localStorage.setItem("secondaryRGB", preset.dataset.secondaryRgb);
+      localStorage.setItem("successRGB", preset.dataset.successRgb);
+    };
+    const setActivePreset = (activePreset) => {
+      presets.forEach((preset) => {
+        const active = preset === activePreset;
+        preset.classList.toggle("is-active", active);
+        preset.setAttribute("aria-pressed", String(active));
+      });
+    };
+
+    presets.forEach((preset) => {
+      preset.style.setProperty(
+        "--preset-primary",
+        `rgb(${preset.dataset.primaryRgb})`
+      );
+      preset.style.setProperty(
+        "--preset-secondary",
+        `rgb(${preset.dataset.secondaryRgb})`
+      );
+      preset.style.setProperty(
+        "--preset-success",
+        `rgb(${preset.dataset.successRgb})`
+      );
+    });
+
+    const initialPreset = savedRgb
+      ? Array.from(presets).find(
+          (preset) =>
+            preset.dataset.primaryRgb === savedRgb &&
+            preset.dataset.secondaryRgb === savedSecondary &&
+            preset.dataset.successRgb === savedSuccess
+        )
+      : defaultPreset;
+    const selectedPreset = initialPreset || defaultPreset;
+    setActivePreset(selectedPreset);
+    if (!initialPreset) applyPreset(defaultPreset);
+
+    presets.forEach((preset) => {
+      preset.addEventListener("click", () => {
+        applyPreset(preset);
+        setActivePreset(preset);
+      });
+    });
+
+    document.querySelector("#reset-all")?.addEventListener("click", () => {
+      window.setTimeout(() => {
+        applyPreset(defaultPreset);
+        setActivePreset(defaultPreset);
+      }, 0);
+    });
+  })();
+</script>

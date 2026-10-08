@@ -1,0 +1,381 @@
+<!-- include document-head.html"-->
+  </head>
+
+  <body>
+    <div class="progress-top-bar"></div>
+    <!-- include appearance-customizer.html"-->
+    <!-- include page-loader.html"-->
+    <div class="page">
+      <!-- include top-navigation.html"-->
+      <!-- include side-navigation.html"-->
+      <main
+        class="main-content app-content crm-workspace-page crm-opportunities-page"
+      >
+        <div
+          class="page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
+        >
+          <h1 class="page-title">Opportunities</h1>
+          <div class="d-flex align-items-center gap-2 flex-wrap">
+            <ol class="breadcrumb mb-0">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item">
+                <a href="crm-dashboard.html">CRM</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Opportunities
+              </li>
+            </ol>
+          </div>
+        </div>
+        <div class="container-fluid commerce-dashboard">
+          <div class="row">
+            <div class="col-xxl-3 col-sm-6">
+              <section class="card custom-card crm-data-metric">
+                <div class="card-body">
+                  <span
+                    class="crm-data-icon bg-secondary-transparent text-secondary"
+                    ><i class="ri-briefcase-4-line"></i></span
+                  ><span class="text-muted fs-12">Active opportunities</span
+                  ><strong id="opportunity-count">&mdash;</strong
+                  ><small>Across all pipeline stages</small>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-3 col-sm-6">
+              <section class="card custom-card crm-data-metric">
+                <div class="card-body">
+                  <span
+                    class="crm-data-icon bg-success-transparent text-success"
+                    ><i class="ri-funds-line"></i></span
+                  ><span class="text-muted fs-12">Pipeline value</span
+                  ><strong id="opportunity-value">&mdash;</strong
+                  ><small>Potential deal revenue</small>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-3 col-sm-6">
+              <section class="card custom-card crm-data-metric">
+                <div class="card-body">
+                  <span class="crm-data-icon bg-info-transparent text-info"
+                    ><i class="ri-focus-3-line"></i></span
+                  ><span class="text-muted fs-12">Weighted forecast</span
+                  ><strong id="opportunity-weighted">&mdash;</strong
+                  ><small>Value &times; win probability</small>
+                </div>
+              </section>
+            </div>
+            <div class="col-xxl-3 col-sm-6">
+              <section class="card custom-card crm-data-metric">
+                <div class="card-body">
+                  <span
+                    class="crm-data-icon bg-warning-transparent text-warning"
+                    ><i class="ri-calendar-check-line"></i></span
+                  ><span class="text-muted fs-12">Closing in 30 days</span
+                  ><strong id="opportunity-closing">&mdash;</strong
+                  ><small>Target close date ahead</small>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <section
+            class="card custom-card crm-stage-summary-panel"
+            aria-labelledby="opportunity-stage-title"
+          >
+            <div class="card-header justify-content-between">
+              <div>
+                <h2 class="card-title" id="opportunity-stage-title">
+                  Pipeline by stage
+                </h2>
+                <p class="mb-0">
+                  Opportunity count and value by current pipeline stage.
+                </p>
+              </div>
+              <span class="crm-stage-summary-note"
+                >Current opportunity distribution</span
+              >
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-xl-3 col-lg-6">
+                  <article class="crm-stage-summary-item border">
+                    <span class="crm-stage-summary-top"
+                      ><span class="crm-stage-dot bg-info"></span
+                      ><span>Qualification</span><strong>2</strong></span
+                    >
+                    <span class="progress" aria-hidden="true"
+                      ><span
+                        class="progress-bar bg-info"
+                        style="width: 96%"
+                      ></span
+                    ></span>
+                    <span class="crm-stage-summary-value"
+                      >$45,000 <small>pipeline value</small></span
+                    >
+                  </article>
+                </div>
+                <div class="col-xl-3 col-lg-6">
+                  <article class="crm-stage-summary-item border">
+                    <span class="crm-stage-summary-top"
+                      ><span class="crm-stage-dot bg-secondary"></span
+                      ><span>Proposal</span><strong>2</strong></span
+                    >
+                    <span class="progress" aria-hidden="true"
+                      ><span
+                        class="progress-bar bg-secondary"
+                        style="width: 61%"
+                      ></span
+                    ></span>
+                    <span class="crm-stage-summary-value"
+                      >$28,350 <small>pipeline value</small></span
+                    >
+                  </article>
+                </div>
+                <div class="col-xl-3 col-lg-6">
+                  <article class="crm-stage-summary-item border">
+                    <span class="crm-stage-summary-top"
+                      ><span class="crm-stage-dot bg-warning"></span
+                      ><span>Negotiation</span><strong>2</strong></span
+                    >
+                    <span class="progress" aria-hidden="true"
+                      ><span
+                        class="progress-bar bg-warning"
+                        style="width: 100%"
+                      ></span
+                    ></span>
+                    <span class="crm-stage-summary-value"
+                      >$46,600 <small>pipeline value</small></span
+                    >
+                  </article>
+                </div>
+                <div class="col-xl-3 col-lg-6">
+                  <article class="crm-stage-summary-item border">
+                    <span class="crm-stage-summary-top"
+                      ><span class="crm-stage-dot bg-success"></span
+                      ><span>Closing</span><strong>1</strong></span
+                    >
+                    <span class="progress" aria-hidden="true"
+                      ><span
+                        class="progress-bar bg-success"
+                        style="width: 30%"
+                      ></span
+                    ></span>
+                    <span class="crm-stage-summary-value"
+                      >$14,200 <small>pipeline value</small></span
+                    >
+                  </article>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="card custom-card crm-records-card">
+            <div
+              class="card-header justify-content-between align-items-start flex-wrap gap-3"
+            >
+              <div>
+                <h2 class="card-title mb-1">
+                  Opportunity register
+                  <span
+                    id="opportunity-filtered-count"
+                    class="badge bg-light text-default ms-1"
+                    >0</span
+                  >
+                </h2>
+                <p class="text-muted fs-12 mb-0">
+                  Search deals, update stages, and keep forecast data current.
+                </p>
+              </div>
+              <div class="crm-record-controls">
+                <div class="crm-record-search">
+                  <i class="ri-search-line"></i
+                  ><input
+                    class="form-control"
+                    id="opportunity-search"
+                    type="search"
+                    placeholder="Deal or company"
+                    aria-label="Search opportunities"
+                  />
+                </div>
+                <select
+                  class="form-select"
+                  data-trigger
+                  id="opportunity-stage-filter"
+                  aria-label="Filter by opportunity stage"
+                >
+                  <option value="">All stages</option>
+                  <option>Qualification</option>
+                  <option>Proposal</option>
+                  <option>Negotiation</option>
+                  <option>Closing</option>
+                </select>
+                <button
+                  type="button"
+                  class="btn btn-dark btn-wave"
+                  id="new-opportunity-button"
+                >
+                  <i class="ri-add-line me-1" aria-hidden="true"></i>New
+                  opportunity
+                </button>
+              </div>
+            </div>
+            <div class="card-body">
+              <div
+                class="row g-3 crm-opportunity-grid"
+                id="opportunity-table-body"
+              ></div>
+            </div>
+            <div
+              class="card-footer bg-transparent d-flex justify-content-between align-items-center flex-wrap gap-2"
+            >
+              <span id="opportunity-results" class="text-muted fs-12"
+                >Showing opportunities</span
+              ><span class="text-muted fs-12"
+                ><i class="ri-refresh-line me-1"></i>Forecast updates as deal
+                stages change.</span
+              >
+            </div>
+          </section>
+          <p
+            class="text-muted fs-12 mt-3 mb-0"
+            id="opportunity-feedback"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </div>
+      </main>
+      <!-- include site-footer.html"-->
+      <!-- include responsive-search-dialog.html"-->
+    </div>
+
+    <div
+      class="modal fade"
+      id="opportunity-modal"
+      tabindex="-1"
+      aria-labelledby="opportunity-modal-title"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <form class="modal-content" id="opportunity-form">
+          <div class="modal-header">
+            <div>
+              <h2
+                class="modal-title fs-16 fw-semibold"
+                id="opportunity-modal-title"
+              >
+                New opportunity
+              </h2>
+              <p class="text-muted fs-12 mb-0 mt-1">
+                Add a deal to your sales forecast.
+              </p>
+            </div>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <input type="hidden" id="opportunity-id" />
+            <div class="row g-3">
+              <div class="col-12">
+                <label class="form-label" for="opportunity-name"
+                  >Opportunity name</label
+                ><input
+                  class="form-control"
+                  id="opportunity-name"
+                  required
+                  placeholder="e.g. Annual platform renewal"
+                />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="opportunity-company"
+                  >Company</label
+                ><input
+                  class="form-control"
+                  id="opportunity-company"
+                  required
+                  placeholder="Company name"
+                />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="opportunity-owner">Owner</label
+                ><select class="form-select" id="opportunity-owner">
+                  <option>Alex Morgan</option>
+                  <option>Jamie Lee</option>
+                  <option>Riley Chen</option>
+                  <option>Jordan Blake</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="opportunity-stage">Stage</label
+                ><select class="form-select" id="opportunity-stage">
+                  <option>Qualification</option>
+                  <option>Proposal</option>
+                  <option>Negotiation</option>
+                  <option>Closing</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="opportunity-probability"
+                  >Win probability</label
+                >
+                <div class="input-group">
+                  <input
+                    class="form-control"
+                    id="opportunity-probability"
+                    type="number"
+                    min="0"
+                    max="100"
+                    value="40"
+                    required
+                  /><span class="input-group-text">%</span>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="opportunity-close-date"
+                  >Target close date</label
+                ><input
+                  class="form-control"
+                  id="opportunity-close-date"
+                  type="date"
+                  required
+                />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="opportunity-amount"
+                  >Opportunity value</label
+                >
+                <div class="input-group">
+                  <span class="input-group-text">$</span
+                  ><input
+                    class="form-control"
+                    id="opportunity-amount"
+                    type="number"
+                    min="1"
+                    step="1"
+                    required
+                    placeholder="0"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-light" data-bs-dismiss="modal">
+              Cancel</button
+            ><button type="submit" class="btn btn-dark">
+              <i class="ri-save-line me-1"></i>Save opportunity
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- include common-scripts.html"-->
+    <!-- include appearance-customizer-scripts.html"-->
+    <script src="../assets/js/crm-opportunities.js"></script>
+    <script src="../assets/js/app-interactions.js"></script>
+  </body>
+</html>
