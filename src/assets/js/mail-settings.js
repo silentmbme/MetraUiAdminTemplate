@@ -2,7 +2,7 @@
   const page = document.querySelector(".mail-control-center");
   if (!page) return;
 
-  const storageKey = "nexora-mail-control-preferences";
+  const storageKey = "metra-mail-control-preferences";
   const controls = [...page.querySelectorAll("input:not([type='radio']), input[type='radio'], select, textarea")];
   const feedback = page.querySelector("#mail-settings-feedback");
   const getValues = () => {

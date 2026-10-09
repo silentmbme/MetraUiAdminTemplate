@@ -150,7 +150,7 @@
         };
 
         try {
-            localStorage.setItem('nexoraui-invoice-draft', JSON.stringify(draft));
+            localStorage.setItem('metraui-invoice-draft', JSON.stringify(draft));
             announce('Draft saved in this browser.', 'success');
         } catch (error) {
             announce('The draft could not be saved in this browser.', 'error');

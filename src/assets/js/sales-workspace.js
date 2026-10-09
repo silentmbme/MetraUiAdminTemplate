@@ -3,19 +3,19 @@
   const root = document.querySelector(".sales-workspace");
   if (!root) return;
   const view = root.dataset.salesView;
-  document.title = `${document.querySelector("h1")?.textContent || "Sales"} | NexoraUI`;
+  document.title = `${document.querySelector("h1")?.textContent || "Sales"} | MetraUI`;
   if (view === "starter") return;
 
   // Browser preferences and settings form.
   const defaults = {
-    workspace: "NexoraUI Sales",
+    workspace: "MetraUI Sales",
     email: "sales@example.com",
     target: 20000,
     period: "30",
   };
   let preferences = { ...defaults };
   try {
-    const saved = JSON.parse(localStorage.getItem("nexoraui.salesPreferences") || "{}");
+    const saved = JSON.parse(localStorage.getItem("metraui.salesPreferences") || "{}");
     if (typeof saved.workspace === "string" && saved.workspace.trim())
       preferences.workspace = saved.workspace.slice(0, 60);
     if (typeof saved.email === "string") preferences.email = saved.email;
@@ -31,7 +31,7 @@
   }
   function savePreferences() {
     try {
-      localStorage.setItem("nexoraui.salesPreferences", JSON.stringify(preferences));
+      localStorage.setItem("metraui.salesPreferences", JSON.stringify(preferences));
       showFeedback("Preferences saved in this browser.");
       return true;
     } catch {

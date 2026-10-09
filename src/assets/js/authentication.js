@@ -2,8 +2,8 @@
     'use strict';
     const html = document.querySelector('html');
     if(html) {
-        const savedThemeMode = localStorage.getItem("nexorauiThemeMode");
-        const savedDarkTheme = localStorage.getItem("nexorauidarktheme");
+        const savedThemeMode = localStorage.getItem("metrauiThemeMode");
+        const savedDarkTheme = localStorage.getItem("metrauidarktheme");
         if (savedThemeMode === "dark" || savedDarkTheme === "true") {
             html.setAttribute("data-theme-color", "dark")
             html.setAttribute("data-menu-color", "dark")
@@ -11,11 +11,11 @@
         } else if (savedThemeMode === "light") {
             html.setAttribute("data-theme-color", "light");
         }
-        if (localStorage.nexorauirtl) {
+        if (localStorage.metrauirtl) {
             html.setAttribute("dir", "rtl");
             document.querySelector("#style")?.setAttribute("href", "../assets/libs/bootstrap/css/bootstrap.rtl.min.css");
         }
-        if (localStorage.getItem("nexorauilayout") == "horizontal") {
+        if (localStorage.getItem("metrauilayout") == "horizontal") {
             html.setAttribute("data-sidebar-layout", "horizontal") 
         }
         function localStorageBackup() {
@@ -43,14 +43,14 @@
     
     
             }
-            if (localStorage.getItem("nexorauiThemeMode") === "dark" || localStorage.getItem("nexorauidarktheme") === "true") {
+            if (localStorage.getItem("metrauiThemeMode") === "dark" || localStorage.getItem("metrauidarktheme") === "true") {
                 html.setAttribute('data-theme-color', 'dark');
                 html.setAttribute('data-menu-color', 'dark');
                 html.setAttribute('data-header-color', 'transparent');
-            } else if (localStorage.getItem("nexorauiThemeMode") === "light") {
+            } else if (localStorage.getItem("metrauiThemeMode") === "light") {
                 html.setAttribute('data-theme-color', 'light');
             }
-            if (localStorage.nexorauirtl) {
+            if (localStorage.metrauirtl) {
                 html.setAttribute('dir', 'rtl');
                 document.querySelector("#style")?.setAttribute("href", "../assets/libs/bootstrap/css/bootstrap.rtl.min.css");
                 setTimeout(() => {

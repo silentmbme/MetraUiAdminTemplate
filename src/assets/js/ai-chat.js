@@ -90,7 +90,7 @@
       heading.className = "d-flex align-items-center gap-2 mb-2 text-default";
       const assistantName = document.createElement("strong");
       assistantName.className = "fs-13";
-      assistantName.textContent = "NexoraUI AI";
+      assistantName.textContent = "MetraUI AI";
       const sampleBadge = document.createElement("span");
       sampleBadge.className = "badge bg-light text-muted";
       sampleBadge.textContent = "Sample response";

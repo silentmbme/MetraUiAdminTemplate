@@ -1,5 +1,5 @@
 {
-  "name": "nexoraui",
+  "name": "metraui",
   "version": "1.0.0",
   "main": "esbuild.config.js",
   "type": "module",

@@ -157,16 +157,16 @@ function switcherClick() {
   /* Light Layout Start */
   let lightThemeVar = lightBtn.addEventListener("click", () => {
     lightFn();
-    localStorage.setItem("nexorauiHeader", "light");
-    localStorage.setItem("nexorauiMenu", "light");
+    localStorage.setItem("metrauiHeader", "light");
+    localStorage.setItem("metrauiMenu", "light");
   });
   /* Light Layout End */
 
   /* Dark Layout Start */
   let darkThemeVar = darkBtn.addEventListener("click", () => {
     darkFn();
-    localStorage.setItem("nexorauiMenu", "dark");
-    localStorage.setItem("nexorauiHeader", "dark");
+    localStorage.setItem("metrauiMenu", "dark");
+    localStorage.setItem("metrauiHeader", "dark");
   });
   /* Dark Layout End */
 
@@ -229,8 +229,8 @@ function switcherClick() {
 
   /* rtl start */
   let rtlVar = rtlBtn.addEventListener("click", () => {
-    localStorage.setItem("nexorauirtl", true);
-    localStorage.removeItem("nexorauiltr");
+    localStorage.setItem("metrauirtl", true);
+    localStorage.removeItem("metrauiltr");
     rtlFn();
   });
   /* rtl end */
@@ -238,8 +238,8 @@ function switcherClick() {
   /* ltr start */
   let ltrVar = ltrBtn.addEventListener("click", () => {
     //    local storage
-    localStorage.setItem("nexorauiltr", true);
-    localStorage.removeItem("nexorauirtl");
+    localStorage.setItem("metrauiltr", true);
+    localStorage.removeItem("metrauirtl");
     ltrFn();
   });
   /* ltr end */
@@ -280,7 +280,7 @@ function rtlFn() {
   checkOptions();
 }
 
-if (localStorage.nexorauirtl) {
+if (localStorage.metrauirtl) {
   rtlFn();
 }
 
@@ -289,7 +289,7 @@ function lightFn() {
   html.setAttribute("data-theme-color", "light");
   document.querySelector("#switcher-light-theme").checked = true;
   updateColors();
-  localStorage.removeItem("nexorauidarktheme");
+  localStorage.removeItem("metrauidarktheme");
   checkOptions();
 }
 
@@ -297,8 +297,8 @@ function darkFn() {
   let html = document.querySelector("html");
   html.setAttribute("data-theme-color", "dark");
   updateColors();
-  localStorage.setItem("nexorauidarktheme", true);
-  localStorage.removeItem("nexorauilighttheme");
+  localStorage.setItem("metrauidarktheme", true);
+  localStorage.removeItem("metrauilighttheme");
   checkOptions();
 }
 
@@ -328,12 +328,12 @@ function ResetAllFn() {
 
 function checkOptions() {
   // dark
-  if (localStorage.getItem("nexorauidarktheme")) {
+  if (localStorage.getItem("metrauidarktheme")) {
     document.querySelector("#switcher-dark-theme").checked = true;
   }
 
   //RTL
-  if (localStorage.getItem("nexorauirtl")) {
+  if (localStorage.getItem("metrauirtl")) {
     document.querySelector("#switcher-rtl").checked = true;
   }
 }
@@ -358,18 +358,18 @@ function localStorageBackup() {
       .querySelector("html")
       .style.setProperty("--theme-primary-rgb", localStorage.primaryRGB);
   }
-  if (localStorage.nexorauidarktheme) {
+  if (localStorage.metrauidarktheme) {
     let html = document.querySelector("html");
     html.setAttribute("data-theme-color", "dark");
   }
 
-  if (localStorage.nexorauirtl) {
+  if (localStorage.metrauirtl) {
     let html = document.querySelector("html");
     html.setAttribute("dir", "rtl");
   }
-  if (localStorage.nexorauilayout) {
+  if (localStorage.metrauilayout) {
     let html = document.querySelector("html");
-    let layoutValue = localStorage.getItem("nexorauilayout");
+    let layoutValue = localStorage.getItem("metrauilayout");
     html.setAttribute("data-sidebar-layout", "horizontal");
   }
 }

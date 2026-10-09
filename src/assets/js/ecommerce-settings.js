@@ -4,7 +4,7 @@
   const form = document.getElementById("ecommerce-settings-form");
   if (!form) return;
 
-  const storageKey = "nexoraui.ecommerceSettings";
+  const storageKey = "metraui.ecommerceSettings";
   const fields = [...form.elements].filter((element) => element.name);
   const saveButton = document.getElementById("settings-save");
   const saveState = document.getElementById("settings-save-state");

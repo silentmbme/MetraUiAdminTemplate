@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const storageKey = 'nexora-profile-settings';
+  const storageKey = 'metra-profile-settings';
   const profileForm = document.getElementById('profile-settings-form');
   const passwordForm = document.getElementById('profile-password-form');
   const notificationSave = document.getElementById('settings-save-notifications');

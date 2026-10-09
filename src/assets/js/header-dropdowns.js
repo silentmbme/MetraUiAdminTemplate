@@ -19,7 +19,7 @@
     header.querySelector("#country-status").textContent = `Selected: ${name}`;
     if (persist) {
       try {
-        localStorage.setItem("nexoraui.country", option.dataset.country);
+        localStorage.setItem("metraui.country", option.dataset.country);
       } catch {
         /* Optional preference. */
       }
@@ -27,7 +27,7 @@
   };
   let savedCountry = "us";
   try {
-    savedCountry = localStorage.getItem("nexoraui.country") || "us";
+    savedCountry = localStorage.getItem("metraui.country") || "us";
   } catch {
     /* Use default. */
   }

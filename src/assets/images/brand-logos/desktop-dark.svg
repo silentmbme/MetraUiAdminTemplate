@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 64" role="img" aria-labelledby="title">
+<title id="title">MetraUI</title>
+<g fill="#93f126"><path d="M7 21 19 5h17L24 21H7Z"/><path d="m28 41 12-16h17L45 41H28Z"/><path d="m4 59 12-16h17L21 59H4Z"/></g>
+<path d="m38 21 12-16h17L55 21H38Z" fill="#f7f9fc"/>
+<text x="72" y="46" font-family="Inter,Arial,sans-serif" font-size="39" font-weight="700" letter-spacing="-1.5" fill="#fff">Metra<tspan fill="#93f126">UI</tspan></text>
+</svg>

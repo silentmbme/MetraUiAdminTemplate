@@ -1,4 +1,4 @@
-/* NexoraUI landing page theme: align the sales page with the admin product. */
+/* MetraUI landing page theme: align the sales page with the admin product. */
 :root {
   --page: #f7f9fc;
   --surface: #fff;
@@ -80,11 +80,11 @@ textarea,
 }
 
 .footer-brand .brand-logo-light {
-  mix-blend-mode: multiply;
+
 }
 
 .footer-brand .brand-logo-dark {
-  mix-blend-mode: screen;
+
 }
 
 .site-header .brand-logo-light {
@@ -93,7 +93,7 @@ textarea,
 
 .site-header .brand-logo-dark {
   display: block;
-  mix-blend-mode: screen;
+
 }
 
 .dash-logo-mark {
@@ -1975,7 +1975,7 @@ h6,
   }
 }
 
-/* Toolkit section: NexoraUI's dark showcase surface with the lime brand accent. */
+/* Toolkit section: MetraUI's dark showcase surface with the lime brand accent. */
 .components-section,
 .dark-mode .components-section {
   position: relative;

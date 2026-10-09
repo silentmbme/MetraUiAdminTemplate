@@ -176,9 +176,9 @@
         html.setAttribute("data-theme-color", "dark");
         html.setAttribute("data-menu-color", "dark");
         html.setAttribute("data-header-color", "dark");
-        localStorage.setItem("nexorauiThemeMode", "dark");
-        localStorage.setItem("nexorauiMenu", "dark");
-        localStorage.setItem("nexorauiHeader", "dark");
+        localStorage.setItem("metrauiThemeMode", "dark");
+        localStorage.setItem("metrauiMenu", "dark");
+        localStorage.setItem("metrauiHeader", "dark");
         document.querySelector('#switcher-menu-dark').checked = true;
         document.querySelector('#switcher-header-dark').checked = true;
         document.querySelector("#switcher-dark-theme").checked = true;
@@ -225,10 +225,10 @@
       document.querySelector("#switcher-background2").checked = false;
       document.querySelector("#switcher-background1").checked = false;
       document.querySelector("#switcher-background").checked = false;
-      localStorage.removeItem("nexorauidarktheme");
-      localStorage.setItem("nexorauiThemeMode", "light");
-      localStorage.setItem("nexorauiMenu", "dark");
-      localStorage.removeItem("nexorauiHeader");
+      localStorage.removeItem("metrauidarktheme");
+      localStorage.setItem("metrauiThemeMode", "light");
+      localStorage.setItem("metrauiMenu", "dark");
+      localStorage.removeItem("metrauiHeader");
       localStorage.removeItem("bodylightRGB");
       localStorage.removeItem("bodyBgRGB");
       html.setAttribute("data-header-color", "transparent");
@@ -250,10 +250,10 @@
       document.querySelector("#switcher-background2").checked = false;
       document.querySelector("#switcher-background1").checked = false;
       document.querySelector("#switcher-background").checked = false;
-      localStorage.setItem("nexorauidarktheme", "true");
-      localStorage.setItem("nexorauiThemeMode", "dark");
-      localStorage.setItem("nexorauiMenu", "transparent");
-      localStorage.setItem("nexorauiHeader", "transparent");
+      localStorage.setItem("metrauidarktheme", "true");
+      localStorage.setItem("metrauiThemeMode", "dark");
+      localStorage.setItem("metrauiMenu", "transparent");
+      localStorage.setItem("metrauiHeader", "transparent");
       localStorage.removeItem("bodylightRGB");
       localStorage.removeItem("bodyBgRGB");
     }
@@ -292,10 +292,10 @@
         document.querySelector("#switcher-background2").checked = false;
         document.querySelector("#switcher-background1").checked = false;
         document.querySelector("#switcher-background").checked = false;
-        localStorage.removeItem("nexorauidarktheme");
-        localStorage.setItem("nexorauiThemeMode", "light");
-        localStorage.setItem("nexorauiMenu", "dark");
-        localStorage.removeItem("nexorauiHeader");
+        localStorage.removeItem("metrauidarktheme");
+        localStorage.setItem("metrauiThemeMode", "light");
+        localStorage.setItem("metrauiMenu", "dark");
+        localStorage.removeItem("metrauiHeader");
         localStorage.removeItem("bodylightRGB");
         localStorage.removeItem("bodyBgRGB");
         html.setAttribute("data-header-color", "transparent");
@@ -317,10 +317,10 @@
         document.querySelector("#switcher-background2").checked = false;
         document.querySelector("#switcher-background1").checked = false;
         document.querySelector("#switcher-background").checked = false;
-        localStorage.setItem("nexorauidarktheme", "true");
-        localStorage.setItem("nexorauiThemeMode", "dark");
-        localStorage.setItem("nexorauiMenu", "transparent");
-        localStorage.setItem("nexorauiHeader", "transparent");
+        localStorage.setItem("metrauidarktheme", "true");
+        localStorage.setItem("metrauiThemeMode", "dark");
+        localStorage.setItem("metrauiMenu", "transparent");
+        localStorage.setItem("metrauiHeader", "transparent");
         localStorage.removeItem("bodylightRGB");
         localStorage.removeItem("bodyBgRGB");
       }

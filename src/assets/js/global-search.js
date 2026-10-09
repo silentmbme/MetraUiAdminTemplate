@@ -8,7 +8,7 @@
   const status = modal.querySelector('#global-search-status');
   const empty = modal.querySelector('#global-search-empty');
   const clear = modal.querySelector('#global-search-clear');
-  const storageKey = 'nexoraui.recentPages';
+  const storageKey = 'metraui.recentPages';
   const pages = new Map();
   let scope = 'all';
   let opener;

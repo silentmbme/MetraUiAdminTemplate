@@ -1,14 +1,14 @@
 (function () {
   "use strict";
-  const savedThemeMode = localStorage.getItem("nexorauiThemeMode");
-  if (savedThemeMode === "dark" || (!savedThemeMode && localStorage.getItem("nexorauidarktheme"))) {
+  const savedThemeMode = localStorage.getItem("metrauiThemeMode");
+  if (savedThemeMode === "dark" || (!savedThemeMode && localStorage.getItem("metrauidarktheme"))) {
     document.querySelector("html").setAttribute("data-theme-color", "dark");
     document.querySelector("html").setAttribute("data-menu-color", "transparent");
     document.querySelector("html").setAttribute("data-header-color", "transparent");
   } else if (savedThemeMode === "light") {
     document.querySelector("html").setAttribute("data-theme-color", "light");
   }
-  if (localStorage.nexorauirtl) {
+  if (localStorage.metrauirtl) {
     let html = document.querySelector("html");
     html.setAttribute("dir", "rtl");
     document
@@ -18,26 +18,26 @@
         "../assets/libs/bootstrap/css/bootstrap.rtl.min.css"
       );
   }
-  if (localStorage.nexorauilayout) {
+  if (localStorage.metrauilayout) {
     let html = document.querySelector("html");
     html.setAttribute("data-sidebar-layout", "horizontal");
     document.querySelector("html").setAttribute("data-menu-color", "transparent");
   }
-  if (localStorage.getItem("nexorauilayout") == "horizontal") {
+  if (localStorage.getItem("metrauilayout") == "horizontal") {
     document
       .querySelector("html")
       .setAttribute("data-sidebar-layout", "horizontal");
   }
-  if (localStorage.nexorauilayout === "horizontal") {
-    localStorage.removeItem("nexorauiverticalstyles");
-    localStorage.removeItem("nexorauiiconmenu");
+  if (localStorage.metrauilayout === "horizontal") {
+    localStorage.removeItem("metrauiverticalstyles");
+    localStorage.removeItem("metrauiiconmenu");
   } else {
-    const oldSidebarStyle = localStorage.getItem("nexorauiverticalstyles");
+    const oldSidebarStyle = localStorage.getItem("metrauiverticalstyles");
     const sidebarStyle = oldSidebarStyle === "doublemenu" ? "dualmenu"
       : ["default", "dualmenu", "overlay"].includes(oldSidebarStyle)
         ? oldSidebarStyle
         : "default";
-    localStorage.setItem("nexorauiverticalstyles", sidebarStyle);
+    localStorage.setItem("metrauiverticalstyles", sidebarStyle);
     document.documentElement.setAttribute("data-sidebar-layout", "vertical");
     if (sidebarStyle === "dualmenu") {
       document.documentElement.removeAttribute("data-vertical-style");
@@ -46,7 +46,7 @@
       document.documentElement.removeAttribute("data-layout-style");
       document.documentElement.setAttribute("data-vertical-style", sidebarStyle);
     }
-    if (localStorage.getItem("nexorauiiconmenu") === "icon-click" && sidebarStyle === "default") {
+    if (localStorage.getItem("metrauiiconmenu") === "icon-click" && sidebarStyle === "default") {
       document.documentElement.setAttribute("data-nav-style", "icon-click");
     }
   }
@@ -102,13 +102,13 @@
       html.setAttribute("data-menu-color", "dark");
       html.setAttribute("data-header-color", "dark");
     }
-    if (localStorage.nexorauidarktheme && savedThemeMode !== "light") {
+    if (localStorage.metrauidarktheme && savedThemeMode !== "light") {
       let html = document.querySelector("html");
       html.setAttribute("data-theme-color", "dark");
     }
-    if (localStorage.nexorauilayout) {
+    if (localStorage.metrauilayout) {
       let html = document.querySelector("html");
-      let layoutValue = localStorage.getItem("nexorauilayout");
+      let layoutValue = localStorage.getItem("metrauilayout");
       html.setAttribute("data-sidebar-layout", "horizontal");
       setTimeout(() => {
         clearNavDropdown();
@@ -118,9 +118,9 @@
         checkHoriMenu();
       }, 5000);
     }
-    if (localStorage.nexorauiverticalstyles) {
+    if (localStorage.metrauiverticalstyles) {
       let html = document.querySelector("html");
-      let verticalStyles = localStorage.getItem("nexorauiverticalstyles");
+      let verticalStyles = localStorage.getItem("metrauiverticalstyles");
 
       if (verticalStyles == "default") {
         html.setAttribute("data-vertical-style", "default");
@@ -133,25 +133,25 @@
         html.setAttribute("data-layout-style", "dualmenu");
       }
     }
-    if (localStorage.nexorauiheaderfixed) {
+    if (localStorage.metrauiheaderfixed) {
       let html = document.querySelector("html");
       html.setAttribute("data-header-position", "fixed");
     }
-    if (localStorage.nexorauiheaderscrollable) {
+    if (localStorage.metrauiheaderscrollable) {
       let html = document.querySelector("html");
       html.setAttribute("data-header-position", "scrollable");
     }
-    if (localStorage.nexorauimenufixed) {
+    if (localStorage.metrauimenufixed) {
       let html = document.querySelector("html");
       html.setAttribute("data-menu-position", "fixed");
     }
-    if (localStorage.nexorauimenuscrollable) {
+    if (localStorage.metrauimenuscrollable) {
       let html = document.querySelector("html");
       html.setAttribute("data-menu-position", "scrollable");
     }
-    if (localStorage.nexorauiMenu) {
+    if (localStorage.metrauiMenu) {
       let html = document.querySelector("html");
-      let menuValue = localStorage.getItem("nexorauiMenu");
+      let menuValue = localStorage.getItem("metrauiMenu");
       switch (menuValue) {
         case "light":
           html.setAttribute("data-menu-color", "light");
@@ -163,17 +163,17 @@
           html.setAttribute("data-menu-color", "transparent");
           break;
         default:
-          localStorage.setItem("nexorauiMenu", "light");
+          localStorage.setItem("metrauiMenu", "light");
           html.setAttribute("data-menu-color", "light");
           break;
       }
     }
-    if (localStorage.nexorauiHeader) {
+    if (localStorage.metrauiHeader) {
       let html = document.querySelector("html");
-      let headerValue = localStorage.getItem("nexorauiHeader");
+      let headerValue = localStorage.getItem("metrauiHeader");
       if (!["light", "dark", "transparent"].includes(headerValue)) {
         headerValue = "transparent";
-        localStorage.setItem("nexorauiHeader", headerValue);
+        localStorage.setItem("metrauiHeader", headerValue);
       }
       html.setAttribute("data-header-color", headerValue);
     }

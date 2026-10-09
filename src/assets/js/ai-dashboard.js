@@ -92,7 +92,7 @@
   if (typeof ApexCharts !== "undefined" && modelChartElement) {
     const modelChart = new ApexCharts(modelChartElement, {
       series: [48, 32, 20],
-      labels: ["NexoraUI GPT", "Claude Sonnet", "Gemini Pro"],
+      labels: ["MetraUI GPT", "Claude Sonnet", "Gemini Pro"],
       chart: { type: "donut", height: 280, fontFamily: "inherit" },
       colors: ["rgb(10, 10, 10)", "rgb(147, 241, 38)", "rgb(94, 120, 253)"],
       dataLabels: { enabled: false },
@@ -129,7 +129,7 @@
       stroke: { show: false },
       dataLabels: { enabled: false },
       xaxis: {
-        categories: ["NexoraUI GPT", "Claude Sonnet", "Gemini Pro"],
+        categories: ["MetraUI GPT", "Claude Sonnet", "Gemini Pro"],
         min: 0,
         max: 2500,
         tickAmount: 5,

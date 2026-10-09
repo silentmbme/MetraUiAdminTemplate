@@ -14,7 +14,7 @@
 
     reminderButton?.addEventListener('click', function () {
         const subject = encodeURIComponent('Payment reminder: invoice INV-2026-0148');
-        const body = encodeURIComponent('Hello Jack,\n\nThis is a friendly reminder that invoice INV-2026-0148 for $2,200.00 is due on October 28, 2026.\n\nThank you,\nNexoraUI Technologies');
+        const body = encodeURIComponent('Hello Jack,\n\nThis is a friendly reminder that invoice INV-2026-0148 for $2,200.00 is due on October 28, 2026.\n\nThank you,\nMetraUI Technologies');
         window.location.href = `mailto:jack.miller@example.com?subject=${subject}&body=${body}`;
         feedback.textContent = 'Reminder details opened in your email app.';
     });

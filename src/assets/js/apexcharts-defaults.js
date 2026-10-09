@@ -8,9 +8,9 @@ window.Apex.chart.toolbar = {
 
 // Ensure every ApexCharts instance is registered, including charts without an
 // explicit chart.id, so live palette changes can recolor all pages uniformly.
-let nexoraApexCharts;
+let metraApexCharts;
 function trackApexCharts(Constructor) {
-  if (!Constructor?.prototype || Constructor.prototype.render?.nexoraThemeTracked) {
+  if (!Constructor?.prototype || Constructor.prototype.render?.metraThemeTracked) {
     return Constructor;
   }
 
@@ -18,12 +18,12 @@ function trackApexCharts(Constructor) {
   const trackedRender = function (...args) {
     const chartConfig = this.w?.config?.chart;
     if (chartConfig && !chartConfig.id) {
-      chartConfig.id = `nexoraui-${this.w.globals.cuid}`;
+      chartConfig.id = `metraui-${this.w.globals.cuid}`;
       this.w.globals.chartID = chartConfig.id;
     }
     return render.apply(this, args);
   };
-  trackedRender.nexoraThemeTracked = true;
+  trackedRender.metraThemeTracked = true;
   Constructor.prototype.render = trackedRender;
   return Constructor;
 }
@@ -32,10 +32,10 @@ Object.defineProperty(window, "ApexCharts", {
   configurable: true,
   enumerable: true,
   get() {
-    return nexoraApexCharts;
+    return metraApexCharts;
   },
   set(Constructor) {
-    nexoraApexCharts = trackApexCharts(Constructor);
+    metraApexCharts = trackApexCharts(Constructor);
   },
 });
 
