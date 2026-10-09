@@ -12,7 +12,7 @@
   const queryLabel = document.querySelector('.search-query-label');
   const resultItems = [...document.querySelectorAll('.search-tool-result')];
   const resultList = document.querySelector('.search-result-list');
-  const savedTools = new Set(JSON.parse(localStorage.getItem('nexora-saved-search-tools') || '[]'));
+  const savedTools = new Set(JSON.parse(localStorage.getItem('metra-saved-search-tools') || '[]'));
 
   const normalize = (value) => value.trim().toLowerCase();
 
@@ -73,7 +73,7 @@
     saveButton.addEventListener('click', () => {
       if (savedTools.has(toolUrl)) savedTools.delete(toolUrl);
       else savedTools.add(toolUrl);
-      localStorage.setItem('nexora-saved-search-tools', JSON.stringify([...savedTools]));
+      localStorage.setItem('metra-saved-search-tools', JSON.stringify([...savedTools]));
       updateSavedState();
     });
     titleRow.append(saveButton);

@@ -103,8 +103,8 @@ if (typeof FgEmojiPicker === "function" && document.querySelector(".chat-message
     const actionStatus = document.getElementById("chat-action-status");
     const attachmentInput = document.getElementById("chat-attachment-input");
     let activeName = document.querySelector(".app-chat-person.active")?.dataset.personName || "Maya Patel";
-    const threadStorageKey = "nexora-chat-conversations-v1";
-    const mutedStorageKey = "nexora-chat-muted-v1";
+    const threadStorageKey = "metra-chat-conversations-v1";
+    const mutedStorageKey = "metra-chat-muted-v1";
     const readStorage = (key, fallback) => {
         try { return JSON.parse(localStorage.getItem(key)) || fallback; }
         catch { return fallback; }

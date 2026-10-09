@@ -44,7 +44,7 @@
   }
   let preferredTheme = "light";
   try {
-    preferredTheme = localStorage.getItem("nexoraDocsTheme") || "light";
+    preferredTheme = localStorage.getItem("metraDocsTheme") || "light";
   } catch (error) {}
   setTheme(preferredTheme === "dark" ? "dark" : "light");
   themeButton?.addEventListener("click", function () {
@@ -54,7 +54,7 @@
         : "dark";
     setTheme(mode);
     try {
-      localStorage.setItem("nexoraDocsTheme", mode);
+      localStorage.setItem("metraDocsTheme", mode);
     } catch (error) {}
   });
   markActive(location.hash.slice(1) || "welcome");

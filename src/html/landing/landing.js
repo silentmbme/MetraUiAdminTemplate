@@ -7,8 +7,8 @@
   const root = document.documentElement;
 
   // Restore the visitor's preferred appearance before the page becomes interactive.
-  const storedTheme = localStorage.getItem('nexorauiThemeMode')
-    || localStorage.getItem('nexora-landing-theme');
+  const storedTheme = localStorage.getItem('metrauiThemeMode')
+    || localStorage.getItem('metra-landing-theme');
   const initialTheme = storedTheme === 'dark' ? 'dark' : 'light';
   const previewSettings = {
     theme: initialTheme,
@@ -24,13 +24,13 @@
         if (!previewDocument) return;
         const html = previewDocument.documentElement;
         const previewStorage = frame.contentWindow.localStorage;
-        previewStorage.setItem('nexorauiThemeMode', previewSettings.theme);
+        previewStorage.setItem('metrauiThemeMode', previewSettings.theme);
         if (previewSettings.theme === 'dark') {
-          previewStorage.setItem('nexorauidarktheme', 'true');
-          previewStorage.removeItem('nexorauilighttheme');
+          previewStorage.setItem('metrauidarktheme', 'true');
+          previewStorage.removeItem('metrauilighttheme');
         } else {
-          previewStorage.removeItem('nexorauidarktheme');
-          previewStorage.setItem('nexorauilighttheme', 'true');
+          previewStorage.removeItem('metrauidarktheme');
+          previewStorage.setItem('metrauilighttheme', 'true');
         }
         html.setAttribute('data-theme-color', previewSettings.theme);
         html.setAttribute('data-menu-color', previewSettings.menuSurface);
@@ -60,15 +60,15 @@
     body.classList.toggle('dark-mode', theme === 'dark');
     root.classList.toggle('dark-mode', dark);
     root.setAttribute('data-theme-color', theme);
-    localStorage.setItem('nexora-landing-theme', theme);
+    localStorage.setItem('metra-landing-theme', theme);
     // Dashboard pages read these shared preferences before their styles load.
-    localStorage.setItem('nexorauiThemeMode', theme);
+    localStorage.setItem('metrauiThemeMode', theme);
     if (dark) {
-      localStorage.setItem('nexorauidarktheme', 'true');
-      localStorage.removeItem('nexorauilighttheme');
+      localStorage.setItem('metrauidarktheme', 'true');
+      localStorage.removeItem('metrauilighttheme');
     } else {
-      localStorage.removeItem('nexorauidarktheme');
-      localStorage.setItem('nexorauilighttheme', 'true');
+      localStorage.removeItem('metrauidarktheme');
+      localStorage.setItem('metrauilighttheme', 'true');
     }
     previewSettings.theme = theme;
     previewSettings.menuSurface = theme === 'dark' ? 'transparent' : 'dark';
@@ -169,7 +169,7 @@
     $('#preview-name').textContent = page.title;
     $('#preview-url').textContent = page.url;
     projectFrame.src = page.src;
-    projectFrame.title = `Live Nexora UI ${page.label} dashboard preview`;
+    projectFrame.title = `Live MetraUI ${page.label} dashboard preview`;
     $$('.preview-tab').forEach((tab) => {
       const active = tab.dataset.preview === key;
       tab.classList.toggle('active', active);

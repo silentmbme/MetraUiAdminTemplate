@@ -1,26 +1,13 @@
-// Keep the NexoraUI wordmark and compact symbol at their natural proportions.
+// Keep the MetraUI wordmark and compact symbol crisp on transparent backgrounds.
 img[src*="brand-logos/"] {
   object-fit: contain;
-}
-
-img[src*="brand-logos/desktop-logo"] {
-  mix-blend-mode: multiply;
-}
-
-img[src*="brand-logos/desktop-dark"] {
-  mix-blend-mode: screen;
-}
-
-img[src*="brand-logos/toggle-"] {
-  background: #171717;
-  border-radius: 0.375rem;
 }
 
 .sidenav-menu .sidenav-menu-header .header-logo,
 .topbar .topbar-logo-wrap .header-logo {
   img[src*="brand-logos/desktop-"] {
-    width: 11.5rem;
-    height: 4rem;
+    width: 8.5rem;
+    height: auto;
   }
 
   img[src*="brand-logos/toggle-"] {
