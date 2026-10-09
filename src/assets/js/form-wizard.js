@@ -8,7 +8,7 @@
 * @class  Wizard
 */
 
-class Wizard1 {
+window.Wizard1 = class Wizard1 {
 
     constructor(args) {
 

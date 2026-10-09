@@ -160,6 +160,7 @@
   const grid = new gridjs.Grid({
     columns: [
       {
+        id: "select-order",
         name: "",
         width: "48px",
         formatter: (_, row) =>
@@ -261,6 +262,7 @@
         },
       },
       {
+        id: "order-actions",
         name: "",
         width: "68px",
         formatter: (cell) =>

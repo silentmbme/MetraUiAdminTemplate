@@ -4,7 +4,11 @@
     if (typeof window.Plyr === 'function') {
         ['player', 'player1', 'player2'].forEach(id => {
             if (!document.getElementById(id)) return;
-            const player = new window.Plyr('#' + id, { autoplay: false, keyboard: { focused: true, global: false } });
+            const player = new window.Plyr('#' + id, {
+                autoplay: false,
+                iconUrl: '../assets/libs/plyr/plyr.svg',
+                keyboard: { focused: true, global: false },
+            });
             players.push(player);
             player.on('play', () => players.forEach(other => { if (other !== player) other.pause(); }));
         });

@@ -18,9 +18,7 @@
     <link rel="icon" href="../../assets/images/brand-logos/favicon.ico?v=2" />
     <link rel="stylesheet" href="../../assets/css/icons.css" />
     <link rel="stylesheet" href="landing.css" />
-    <link rel="stylesheet" href="landing-customizer.css" />
     <link rel="stylesheet" href="landing-project.css" />
-    <script src="../../assets/libs/apexcharts/apexcharts.min.js" defer></script>
     <script src="landing.js" defer></script>
   </head>
   <body>
@@ -54,286 +52,52 @@
             aria-label="Switch to dark theme"
             title="Switch theme"
           >
-            <span class="theme-icon">☾</span></button
+            <span class="theme-icon"><i class="ri-moon-line" aria-hidden="true"></i></span></button
           ><a class="button button-small button-dark" href="#purchase"
-            >Buy Nexora <span>↗</span></a
+            >Buy Nexora <span>&#8599;</span></a
           >
         </div>
       </div>
     </header>
 
     <main id="main">
-      <section class="hero section-shell" id="home">
+      <section class="hero hero-banner" id="home">
         <div class="hero-copy reveal">
-          <div class="eyebrow">
-            <span class="eyebrow-dot"></span> NEXORAUI ADMIN TEMPLATE
-            <span class="eyebrow-tag">Bootstrap 5</span>
+          <div class="eyebrow hero-version">
+            <span class="eyebrow-dot"></span> NEXORA UI <i></i> BOOTSTRAP 5 ADMIN TEMPLATE
           </div>
-          <h1>Your business, clearly in view. <em>Meet NexoraUI.</em></h1>
+          <h1>Everything your admin interface needs<br /><em>starts here.</em></h1>
           <p class="hero-lead">
-            Sales, Ecommerce, CRM, Projects, Finance and everyday business apps
-            come together in one responsive admin dashboard template.
+            Explore responsive dashboards, business apps and reusable UI components
+            built with Bootstrap 5, SCSS and JavaScript. Make the NexoraUI foundation
+            your own and bring your next product to life.
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#purchase"
-              >Buy Nexora UI <span>↗</span></a
-            ><a class="button button-outline" href="#showcase"
-              ><span class="play-icon">▶</span> Explore live preview</a
-            >
+            <a class="button button-primary" href="#dashboards">
+              Explore dashboards <span aria-hidden="true"><i class="ri-arrow-down-line"></i></span>
+            </a>
+            <a class="button button-outline hero-preview-button" href="#showcase">
+              Open live preview <span aria-hidden="true">&#8599;</span>
+            </a>
           </div>
-          <div class="hero-proof">
-            <div class="proof-avatars"><b>8</b><b>190</b><b>+</b></div>
-            <span
-              ><strong>Built around real business workflows.</strong
-              ><br />Dashboards included &nbsp;&middot;&nbsp; 190+ HTML
-              pages.</span
-            >
-          </div>
-          <div class="hero-stack">
-            <span><i class="check">✓</i> Bootstrap 5</span
-            ><span><i class="check">✓</i> SCSS &amp; JavaScript</span
-            ><span><i class="check">✓</i> RTL ready</span>
-          </div>
-        </div>
-        <div
-          class="hero-visual reveal"
-          aria-label="Interactive Nexora dashboard preview"
-        >
-          <div class="hero-glow"></div>
-          <div class="float-chip chip-revenue">
-            <span class="chip-icon green">↗</span
-            ><span
-              ><small>Revenue</small
-              ><strong>+$8,420 <i>+24.8%</i></strong></span
-            >
-          </div>
-          <div class="browser-window hero-browser">
-            <div class="browser-chrome">
-              <span class="browser-dots"><i></i><i></i><i></i></span
-              ><span class="browser-address"
-                >app.nexora-ui.local / overview</span
-              ><span class="browser-controls">⌕ &nbsp; ⋮</span>
-            </div>
-            <div class="dash-shell" id="hero-dashboard">
-              <aside class="dash-sidebar">
-                <div class="dash-logo">
-                  <img
-                    src="../../assets/images/brand-logos/toggle-dark.png"
-                    alt=""
-                    class="dash-logo-mark"
-                  /><b>Nexora UI</b>
-                </div>
-                <small class="side-label">WORKSPACE</small
-                ><a class="side-link selected"><span>▦</span> Sales</a
-                ><a class="side-link"><span>◷</span> Ecommerce</a
-                ><a class="side-link"><span>▤</span> CRM</a
-                ><a class="side-link"><span>♧</span> Projects</a
-                ><small class="side-label side-lower">MANAGEMENT</small
-                ><a class="side-link"><span>⚙</span> Reports</a>
-                <div class="side-profile">
-                  <div class="profile-avatar">JD</div>
-                  <span><b>Jordan Davis</b><small>Administrator</small></span
-                  ><span class="more">···</span>
-                </div>
-              </aside>
-              <div class="dash-main">
-                <div class="dash-top">
-                  <span class="mobile-brand">Nexora</span
-                  ><span class="crumb">Overview <b>/</b> Dashboard</span>
-                  <div class="dash-user">
-                    <span class="search-mini">⌕</span
-                    ><span class="bell">♧<i></i></span>
-                    <div class="tiny-avatar">JD</div>
-                    <span class="user-name">Jordan Davis</span><span>⌄</span>
-                  </div>
-                </div>
-                <div class="dash-content">
-                  <div class="dash-heading">
-                    <div>
-                      <h3 id="dash-title">Sales Dashboard <span>✦</span></h3>
-                      <p>Here’s what’s happening with your workspace today.</p>
-                    </div>
-                    <button class="date-select" id="period-select">
-                      This month <span>⌄</span>
-                    </button>
-                  </div>
-                  <div class="metric-grid">
-                    <article class="metric-card">
-                      <div class="metric-label">
-                        Total revenue <span class="metric-icon blue">$</span>
-                      </div>
-                      <strong>$12,235</strong
-                      ><small class="positive"
-                        >? 3.21% <span>this year</span></small
-                      >
-                      <div class="spark blue-spark">
-                        <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i
-                        ><i></i><i></i>
-                      </div>
-                    </article>
-                    <article class="metric-card">
-                      <div class="metric-label">
-                        Refund requests
-                        <span class="metric-icon orange">?</span>
-                      </div>
-                      <strong>4,654</strong
-                      ><small class="negative"
-                        >? 2.56% <span>this year</span></small
-                      >
-                      <div class="spark orange-spark">
-                        <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i
-                        ><i></i><i></i>
-                      </div>
-                    </article>
-                    <article class="metric-card">
-                      <div class="metric-label">
-                        Total orders <span class="metric-icon purple">?</span>
-                      </div>
-                      <strong>25,853</strong
-                      ><small class="positive"
-                        >? 4.76% <span>this year</span></small
-                      >
-                      <div class="spark purple-spark">
-                        <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i
-                        ><i></i><i></i>
-                      </div>
-                    </article>
-                    <article class="metric-card">
-                      <div class="metric-label">
-                        Total visitors <span class="metric-icon green">?</span>
-                      </div>
-                      <strong>63,744</strong
-                      ><small class="negative"
-                        >? 43.12% <span>this year</span></small
-                      >
-                      <div class="spark green-spark">
-                        <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i
-                        ><i></i><i></i>
-                      </div>
-                    </article>
-                  </div>
-                  <div class="dash-lower">
-                    <article class="chart-card">
-                      <div class="chart-head">
-                        <span
-                          ><b>Revenue overview</b
-                          ><small>Performance through the year</small></span
-                        ><button class="chart-menu" aria-label="Chart options">
-                          ···
-                        </button>
-                      </div>
-                      <div class="chart-summary">
-                        <strong id="chart-total">$84,250</strong
-                        ><span class="positive">↗ 18.42%</span>
-                      </div>
-                      <div class="line-chart" aria-label="Revenue trend chart">
-                        <div class="chart-y">
-                          <span>$10k</span><span>$7.5k</span><span>$5k</span
-                          ><span>$2.5k</span>
-                        </div>
-                        <svg
-                          viewBox="0 0 560 150"
-                          preserveAspectRatio="none"
-                          role="img"
-                          aria-label="Revenue trending upward"
-                        >
-                          <defs>
-                            <linearGradient
-                              id="fillHero"
-                              x1="0"
-                              x2="0"
-                              y1="0"
-                              y2="1"
-                            >
-                              <stop
-                                offset="0"
-                                stop-color="#6558e8"
-                                stop-opacity=".22"
-                              />
-                              <stop
-                                offset="1"
-                                stop-color="#6558e8"
-                                stop-opacity="0"
-                              />
-                            </linearGradient>
-                          </defs>
-                          <path
-                            class="chart-fill"
-                            d="M0 124 C28 116 37 98 62 107 S94 126 124 91 S164 84 186 93 S222 75 249 82 S281 102 310 65 S349 80 372 70 S404 37 434 54 S460 78 486 48 S525 36 560 15 V150 H0Z"
-                          />
-                          <path
-                            class="chart-line"
-                            d="M0 124 C28 116 37 98 62 107 S94 126 124 91 S164 84 186 93 S222 75 249 82 S281 102 310 65 S349 80 372 70 S404 37 434 54 S460 78 486 48 S525 36 560 15"
-                          />
-                        </svg>
-                        <div class="chart-x">
-                          <span>Jan</span><span>Mar</span><span>May</span
-                          ><span>Jul</span><span>Sep</span><span>Nov</span>
-                        </div>
-                      </div>
-                    </article>
-                    <article class="activity-card">
-                      <div class="chart-head">
-                        <span
-                          ><b>Recent activity</b
-                          ><small>Latest updates</small></span
-                        ><button
-                          class="chart-menu"
-                          aria-label="Activity options"
-                        >
-                          ···
-                        </button>
-                      </div>
-                      <div class="activity-row">
-                        <span class="activity-dot violet">↗</span
-                        ><span
-                          ><b>Payment received</b
-                          ><small>Order #NX-1048</small></span
-                        ><strong>+$1,240</strong>
-                      </div>
-                      <div class="activity-row">
-                        <span class="activity-dot green">✓</span
-                        ><span
-                          ><b>New customer</b><small>Olivia Rhye</small></span
-                        ><time>12m</time>
-                      </div>
-                      <div class="activity-row">
-                        <span class="activity-dot amber">▣</span
-                        ><span
-                          ><b>New order placed</b
-                          ><small>Order #NX-1047</small></span
-                        ><time>38m</time>
-                      </div>
-                      <div class="activity-row">
-                        <span class="activity-dot blue">↗</span
-                        ><span
-                          ><b>Project updated</b
-                          ><small>Website redesign</small></span
-                        ><time>1h</time>
-                      </div>
-                    </article>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="float-chip chip-orders">
-            <span class="chip-icon blue">▣</span
-            ><span
-              ><small>Orders today</small
-              ><strong>1,284 <i>+12.8%</i></strong></span
-            >
+          <div class="hero-stats" aria-label="NexoraUI template highlights">
+            <div><span>HTML PAGES</span><strong>190+</strong></div>
+            <div><span>DASHBOARD TYPES</span><strong>9</strong></div>
+            <div><span>THEME MODES</span><strong>2</strong></div>
+            <div><span>LAYOUT SUPPORT</span><strong>RTL</strong></div>
           </div>
         </div>
       </section>
 
-      <section class="trust-strip">
+      <section class="trust-strip" aria-label="NexoraUI includes">
         <div class="section-shell trust-inner">
-          <span>INCLUDED IN THE NEXORAUI PROJECT</span>
+          <span class="trust-label">INCLUDED IN NEXORAUI</span>
           <div class="trust-items">
-            <b><span>◈</span> Bootstrap 5</b><b><span>◌</span> ApexCharts</b
-            ><b><span>◇</span> SCSS ready</b><b><span>↗</span> RTL support</b
-            ><b><span>◎</span> Vanilla JS</b>
+            <span class="trust-badge"><i class="ri-bootstrap-fill" aria-hidden="true"></i>Bootstrap 5</span>
+            <span class="trust-badge"><i class="ri-bar-chart-grouped-line" aria-hidden="true"></i>ApexCharts</span>
+            <span class="trust-badge"><i class="ri-code-s-slash-line" aria-hidden="true"></i>SCSS</span>
+            <span class="trust-badge"><i class="ri-global-line" aria-hidden="true"></i>RTL support</span>
+            <span class="trust-badge"><i class="ri-javascript-line" aria-hidden="true"></i>Vanilla JavaScript</span>
           </div>
         </div>
       </section>
@@ -344,8 +108,7 @@
             <span class="section-kicker">ONE SYSTEM, MANY WORKFLOWS</span>
             <h2>See Nexora UI <em>in action.</em></h2>
             <p>
-              Switch between product areas and explore a real, interactive
-              dashboard preview.
+              Switch between product areas and explore a real, interactive dashboard preview.
             </p>
           </div>
           <div
@@ -394,24 +157,47 @@
               aria-selected="false"
               data-preview="ai"
             >
-              AI
+              AI</button
+            ><button
+              class="preview-tab"
+              role="tab"
+              aria-selected="false"
+              data-preview="hrm"
+            >
+              HRM</button
+            ><button
+              class="preview-tab"
+              role="tab"
+              aria-selected="false"
+              data-preview="logistics"
+            >
+              Logistics</button
+            ><button
+              class="preview-tab"
+              role="tab"
+              aria-selected="false"
+              data-preview="support"
+            >
+              Support
             </button>
           </div>
-          <div class="browser-window showcase-browser reveal">
-            <div class="browser-chrome">
-              <span class="browser-dots"><i></i><i></i><i></i></span
-              ><span class="browser-address"
-                >app.nexora-ui.local /
-                <span id="preview-url">index.html</span></span
-              ><span class="browser-controls">LIVE PREVIEW</span>
+          <div class="showcase-browser reveal is-loading">
+            <div class="preview-card-header">
+              <div class="preview-card-title">
+                <span class="preview-status-dot" aria-hidden="true"></span>
+                <strong id="preview-name">Sales dashboard</strong>
+                <span class="preview-live-label">Live preview</span>
+              </div>
+              <span class="preview-card-route" id="preview-url">index.html</span>
             </div>
             <iframe
               id="project-preview"
               class="project-preview"
               src="../index.html"
-              loading="lazy"
+              loading="eager"
               title="Live Nexora UI sales dashboard preview"
             ></iframe>
+            <div class="preview-loading" role="status" aria-live="polite">Loading live dashboard…</div>
           </div>
         </div>
       </section>
@@ -421,157 +207,101 @@
           <div class="section-heading split reveal">
             <div>
               <span class="section-kicker"
-                >BUILT FROM THE NEXORAUI DASHBOARD</span
+                >LIVE NEXORAUI DASHBOARDS</span
               >
-              <h2>Eight dashboards.<br /><em>One familiar system.</em></h2>
+              <h2>Dashboards for every team.<br /><em>One familiar system.</em></h2>
             </div>
-            <p>
-              Sales, Ecommerce, CRM, Projects, Finance, HRM, Logistics and
-              Support dashboards are already part of this project.
-            </p>
+            <p>Select a dashboard card to load its actual NexoraUI page in the live preview.</p>
           </div>
           <div class="dashboard-grid">
             <article class="dashboard-card featured-card reveal">
-              <div class="mini-preview mini-analytics">
-                <div class="mini-top"><span></span><span></span></div>
-                <div class="mini-sidebar"></div>
-                <div class="mini-content">
-                  <b>AI workspace</b>
-                  <div class="mini-kpis"><i></i><i></i><i></i></div>
-                  <div class="mini-graph">
-                    <svg viewBox="0 0 300 90">
-                      <path
-                        d="M0 70 C30 62 42 40 70 51 S105 62 130 29 S175 57 201 35 S245 45 300 10"
-                        fill="none"
-                        stroke="#6658e8"
-                        stroke-width="3"
-                      />
-                    </svg>
-                  </div>
-                  <div class="mini-bottom"><i></i><i></i></div>
-                </div>
-                <button class="mini-open" data-demo="ai">
-                  View dashboard ↗
-                </button>
+              <div class="dashboard-live-preview">
+                <iframe class="dashboard-live-frame" title="AI dashboard live preview" data-live-preview="../ai-dashboard.html" loading="lazy" tabindex="-1"></iframe>
+                <button class="mini-open" type="button" data-demo="ai" aria-label="Open AI dashboard in the live preview">Open live preview &#8599;</button>
               </div>
               <div class="dashboard-info">
-                <div>
-                  <h3>AI dashboard</h3>
-                  <p>Explore the project AI dashboard.</p>
-                </div>
+                <div><h3>AI dashboard</h3><p>Explore the project AI dashboard.</p></div>
                 <span>01</span>
               </div>
             </article>
             <article class="dashboard-card reveal">
-              <div class="mini-preview mini-commerce">
-                <div class="mini-top"><span></span><span></span></div>
-                <div class="mini-sidebar"></div>
-                <div class="mini-content">
-                  <b>Sales performance</b>
-                  <div class="mini-kpis"><i></i><i></i><i></i></div>
-                  <div class="mini-bars">
-                    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-                  </div>
-                  <div class="mini-bottom"><i></i><i></i></div>
-                </div>
-                <button class="mini-open" data-demo="sales">
-                  View dashboard ↗
-                </button>
+              <div class="dashboard-live-preview">
+                <iframe class="dashboard-live-frame" title="Sales dashboard live preview" data-live-preview="../index.html" loading="lazy" tabindex="-1"></iframe>
+                <button class="mini-open" type="button" data-demo="sales" aria-label="Open Sales dashboard in the live preview">Open live preview &#8599;</button>
               </div>
               <div class="dashboard-info">
-                <div>
-                  <h3>Sales dashboard</h3>
-                  <p>Monitor orders, revenue and trends.</p>
-                </div>
+                <div><h3>Sales dashboard</h3><p>Monitor orders, revenue and trends.</p></div>
                 <span>02</span>
               </div>
             </article>
             <article class="dashboard-card reveal">
-              <div class="mini-preview mini-crm">
-                <div class="mini-top"><span></span><span></span></div>
-                <div class="mini-sidebar"></div>
-                <div class="mini-content">
-                  <b>Pipeline summary</b>
-                  <div class="mini-kpis"><i></i><i></i><i></i></div>
-                  <div class="mini-kanban"><i></i><i></i><i></i></div>
-                  <div class="mini-bottom"><i></i><i></i></div>
-                </div>
-                <button class="mini-open" data-demo="crm">
-                  View dashboard ↗
-                </button>
+              <div class="dashboard-live-preview">
+                <iframe class="dashboard-live-frame" title="CRM dashboard live preview" data-live-preview="../crm-dashboard.html" loading="lazy" tabindex="-1"></iframe>
+                <button class="mini-open" type="button" data-demo="crm" aria-label="Open CRM dashboard in the live preview">Open live preview &#8599;</button>
               </div>
               <div class="dashboard-info">
-                <div>
-                  <h3>CRM dashboard</h3>
-                  <p>Keep customers and deals in motion.</p>
-                </div>
+                <div><h3>CRM dashboard</h3><p>Keep customers and deals in motion.</p></div>
                 <span>03</span>
               </div>
             </article>
             <article class="dashboard-card reveal">
-              <div class="mini-preview mini-finance">
-                <div class="mini-top"><span></span><span></span></div>
-                <div class="mini-sidebar"></div>
-                <div class="mini-content">
-                  <b>Finance overview</b>
-                  <div class="mini-kpis"><i></i><i></i><i></i></div>
-                  <div class="mini-donut"></div>
-                  <div class="mini-bottom"><i></i><i></i></div>
-                </div>
-                <button class="mini-open" data-demo="finance">
-                  View dashboard ↗
-                </button>
+              <div class="dashboard-live-preview">
+                <iframe class="dashboard-live-frame" title="Finance dashboard live preview" data-live-preview="../finance-dashboard.html" loading="lazy" tabindex="-1"></iframe>
+                <button class="mini-open" type="button" data-demo="finance" aria-label="Open Finance dashboard in the live preview">Open live preview &#8599;</button>
               </div>
               <div class="dashboard-info">
-                <div>
-                  <h3>Finance dashboard</h3>
-                  <p>See income, expenses and cash flow.</p>
-                </div>
+                <div><h3>Finance dashboard</h3><p>See income, expenses and cash flow.</p></div>
                 <span>04</span>
               </div>
             </article>
             <article class="dashboard-card reveal">
-              <div class="mini-preview mini-projects">
-                <div class="mini-top"><span></span><span></span></div>
-                <div class="mini-sidebar"></div>
-                <div class="mini-content">
-                  <b>Project overview</b>
-                  <div class="mini-kpis"><i></i><i></i><i></i></div>
-                  <div class="mini-timeline"><i></i><i></i><i></i><i></i></div>
-                  <div class="mini-bottom"><i></i><i></i></div>
-                </div>
-                <button class="mini-open" data-demo="projects">
-                  View dashboard ↗
-                </button>
+              <div class="dashboard-live-preview">
+                <iframe class="dashboard-live-frame" title="Project dashboard live preview" data-live-preview="../projects-dashboard.html" loading="lazy" tabindex="-1"></iframe>
+                <button class="mini-open" type="button" data-demo="projects" aria-label="Open Project dashboard in the live preview">Open live preview &#8599;</button>
               </div>
               <div class="dashboard-info">
-                <div>
-                  <h3>Project dashboard</h3>
-                  <p>Give teams a clear view of the work.</p>
-                </div>
+                <div><h3>Project dashboard</h3><p>Give teams a clear view of the work.</p></div>
                 <span>05</span>
               </div>
             </article>
             <article class="dashboard-card reveal">
-              <div class="mini-preview mini-store">
-                <div class="mini-top"><span></span><span></span></div>
-                <div class="mini-sidebar"></div>
-                <div class="mini-content">
-                  <b>Store overview</b>
-                  <div class="mini-kpis"><i></i><i></i><i></i></div>
-                  <div class="mini-products"><i></i><i></i><i></i><i></i></div>
-                  <div class="mini-bottom"><i></i><i></i></div>
-                </div>
-                <button class="mini-open" data-demo="ecommerce">
-                  View dashboard ↗
-                </button>
+              <div class="dashboard-live-preview">
+                <iframe class="dashboard-live-frame" title="eCommerce dashboard live preview" data-live-preview="../ecommerce-dashboard.html" loading="lazy" tabindex="-1"></iframe>
+                <button class="mini-open" type="button" data-demo="ecommerce" aria-label="Open eCommerce dashboard in the live preview">Open live preview &#8599;</button>
               </div>
               <div class="dashboard-info">
-                <div>
-                  <h3>eCommerce dashboard</h3>
-                  <p>Connect catalog, orders and customers.</p>
-                </div>
+                <div><h3>eCommerce dashboard</h3><p>Connect catalog, orders and customers.</p></div>
                 <span>06</span>
+              </div>
+            </article>
+            <article class="dashboard-card reveal">
+              <div class="dashboard-live-preview">
+                <iframe class="dashboard-live-frame" title="HRM dashboard live preview" data-live-preview="../hrm-dashboard.html" loading="lazy" tabindex="-1"></iframe>
+                <button class="mini-open" type="button" data-demo="hrm" aria-label="Open HRM dashboard in the live preview">Open live preview &#8599;</button>
+              </div>
+              <div class="dashboard-info">
+                <div><h3>HRM dashboard</h3><p>Track workforce, attendance and leave.</p></div>
+                <span>07</span>
+              </div>
+            </article>
+            <article class="dashboard-card reveal">
+              <div class="dashboard-live-preview">
+                <iframe class="dashboard-live-frame" title="Logistics dashboard live preview" data-live-preview="../logistics-dashboard.html" loading="lazy" tabindex="-1"></iframe>
+                <button class="mini-open" type="button" data-demo="logistics" aria-label="Open Logistics dashboard in the live preview">Open live preview &#8599;</button>
+              </div>
+              <div class="dashboard-info">
+                <div><h3>Logistics dashboard</h3><p>Follow shipments, fleet and routes.</p></div>
+                <span>08</span>
+              </div>
+            </article>
+            <article class="dashboard-card reveal">
+              <div class="dashboard-live-preview">
+                <iframe class="dashboard-live-frame" title="Support dashboard live preview" data-live-preview="../support-dashboard.html" loading="lazy" tabindex="-1"></iframe>
+                <button class="mini-open" type="button" data-demo="support" aria-label="Open Support dashboard in the live preview">Open live preview &#8599;</button>
+              </div>
+              <div class="dashboard-info">
+                <div><h3>Support dashboard</h3><p>Manage ticket volume and response times.</p></div>
+                <span>09</span>
               </div>
             </article>
           </div>
@@ -582,476 +312,170 @@
         <div class="section-shell">
           <div class="section-heading centered reveal">
             <span class="section-kicker">A FLEXIBLE PRODUCT FOUNDATION</span>
-            <h2>Built for modern <em>web applications.</em></h2>
-            <p>
-              Thoughtful defaults, practical tools and the room to make the
-              interface your own.
-            </p>
+            <h2>A complete toolkit for <em>every team.</em></h2>
+            <p>Dashboards, pages and practical interface tools to take your next admin product from idea to launch.</p>
           </div>
           <div class="feature-grid">
-            <article class="feature-card feature-large reveal">
-              <span class="feature-icon purple">◈</span>
-              <h3>A dashboard for every workflow</h3>
-              <p>
-                Start with a purpose-built view for analytics, sales, commerce,
-                CRM, finance or projects.
-              </p>
-              <div class="feature-visual feature-dash">
-                <span class="f-dash-bar"></span><span class="f-dash-side"></span
-                ><span class="f-dash-card one"></span
-                ><span class="f-dash-card two"></span
-                ><span class="f-dash-chart"></span>
-              </div>
+            <article class="feature-card reveal">
+              <span class="feature-icon"><i class="ri-dashboard-3-line" aria-hidden="true"></i></span>
+              <h3>9 business dashboards</h3>
+              <p>Explore sales, commerce, CRM, finance, projects, HR, logistics, support and AI workflows.</p>
             </article>
             <article class="feature-card reveal">
-              <span class="feature-icon green">◐</span>
+              <span class="feature-icon"><i class="ri-file-list-3-line" aria-hidden="true"></i></span>
+              <h3>190+ ready-to-use pages</h3>
+              <p>Start with complete application pages, tables, forms, charts, authentication and settings.</p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="feature-icon"><i class="ri-stack-line" aria-hidden="true"></i></span>
+              <h3>Reusable UI components</h3>
+              <p>Build consistent screens with buttons, modals, kanban boards, data tables, timelines and more.</p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="feature-icon"><i class="ri-moon-line" aria-hidden="true"></i></span>
               <h3>Light and dark themes</h3>
-              <p>Give your team a comfortable workspace in either mode.</p>
-              <button class="inline-theme" id="demo-theme">
-                Try the theme switch <span>☾</span>
-              </button>
+              <p>Switch appearance and preview a comfortable workspace for different teams and environments.</p>
+              <button class="inline-theme" id="demo-theme">Preview theme <i class="ri-sun-line" aria-hidden="true"></i></button>
             </article>
             <article class="feature-card reveal">
-              <span class="feature-icon orange">⌘</span>
-              <h3>Useful applications</h3>
-              <p>
-                Bring everyday work together with chat, calendar, email, tasks
-                and more.
-              </p>
-              <div class="app-icon-row">
-                <i>▦</i><i>✉</i><i>☷</i><i>◷</i><i>♧</i>
-              </div>
+              <span class="feature-icon"><i class="ri-code-s-slash-line" aria-hidden="true"></i></span>
+              <h3>Bootstrap 5 and SCSS</h3>
+              <p>Use familiar Bootstrap utilities and organized SCSS to adapt the interface to your product.</p>
             </article>
             <article class="feature-card reveal">
-              <span class="feature-icon blue">{ }</span>
-              <h3>Made for customization</h3>
-              <p>
-                Organized SCSS, reusable patterns and familiar Bootstrap
-                utilities help you move quickly.
-              </p>
-              <div class="code-pills">
-                <code>SCSS</code><code>Bootstrap</code><code>Vanilla JS</code>
-              </div>
+              <span class="feature-icon"><i class="ri-bar-chart-box-line" aria-hidden="true"></i></span>
+              <h3>Interactive data views</h3>
+              <p>Present key metrics and trends with the project charts, widgets and analytics pages.</p>
             </article>
             <article class="feature-card reveal">
-              <span class="feature-icon pink">↔</span>
-              <h3>Responsive by design</h3>
-              <p>
-                Layouts adapt from wide screens to compact mobile workspaces.
-              </p>
-              <div class="responsive-icons">
-                <span>▣</span><span>▯</span><span>▯</span>
-              </div>
+              <span class="feature-icon"><i class="ri-device-line" aria-hidden="true"></i></span>
+              <h3>Responsive and RTL-ready</h3>
+              <p>Support desktop, tablet and mobile layouts, plus right-to-left reading direction.</p>
             </article>
-            <article class="feature-card feature-chart reveal">
-              <span class="feature-icon teal">⌁</span>
-              <h3>Data that feels clear</h3>
-              <p>
-                Present important metrics with interactive charts and readable
-                summaries.
-              </p>
-              <div class="feature-spark">
-                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i
-                ><i></i><i></i><i></i>
-              </div>
+            <article class="feature-card reveal">
+              <span class="feature-icon"><i class="ri-apps-2-line" aria-hidden="true"></i></span>
+              <h3>Business apps included</h3>
+              <p>Give everyday tasks a home with project pages for chat, calendar, email, files and task management.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section chart-section" id="charts">
-        <div class="section-shell chart-layout">
-          <div class="chart-intro reveal">
-            <span class="section-kicker">DATA, AT A GLANCE</span>
-            <h2>Make every metric <em>easy to read.</em></h2>
-            <p>
-              Explore clear visualizations that help teams spot trends and make
-              confident decisions.
-            </p>
-            <div class="chart-stat">
-              <strong id="chart-stat-value">$84,560</strong
-              ><span class="positive">↗ 18.42%</span
-              ><small>Revenue this month</small>
-            </div>
-            <div
-              class="period-switch"
-              role="group"
-              aria-label="Chart time period"
-            >
-              <button class="active" data-period="week">Week</button
-              ><button data-period="month">Month</button
-              ><button data-period="year">Year</button>
-            </div>
-          </div>
-          <div class="chart-showcase reveal">
-            <div class="chart-showcase-head">
-              <div>
-                <span class="chart-label">Revenue overview</span
-                ><small>Compared with previous period</small>
-              </div>
-              <span class="chart-dots">•••</span>
-            </div>
-            <div class="chart-showcase-legend">
-              <span><i></i> Revenue</span><span><i></i> Orders</span>
-            </div>
-            <div
-              class="revenue-bars"
-              id="revenue-bars"
-              aria-label="Revenue and orders bar chart"
-            >
-              <div><i style="--bar: 46%"></i><b>Mon</b></div>
-              <div><i style="--bar: 68%"></i><b>Tue</b></div>
-              <div><i style="--bar: 55%"></i><b>Wed</b></div>
-              <div><i style="--bar: 84%"></i><b>Thu</b></div>
-              <div><i style="--bar: 62%"></i><b>Fri</b></div>
-              <div><i style="--bar: 91%"></i><b>Sat</b></div>
-              <div><i style="--bar: 73%"></i><b>Sun</b></div>
-            </div>
-            <div
-              id="apex-sales-chart"
-              class="apex-sales-chart"
-              aria-label="Interactive ApexCharts revenue and order chart"
-            ></div>
-            <div class="chart-foot">
-              <span>0</span><span>$5k</span><span>$10k</span><span>$15k</span>
-            </div>
-            <div class="chart-summary-row">
-              <div>
-                <span class="legend-dot violet-dot"></span
-                ><small>Total revenue</small><strong>$84,560</strong>
-              </div>
-              <div>
-                <span class="legend-dot green-dot"></span><small>Orders</small
-                ><strong>12,840</strong>
-              </div>
-              <div>
-                <span class="legend-dot orange-dot"></span
-                ><small>Returning users</small><strong>68.4%</strong>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       <section class="section" id="apps">
         <div class="section-shell">
           <div class="section-heading split reveal">
             <div>
-              <span class="section-kicker">YOUR TEAM’S DAILY TOOLKIT</span>
+              <span class="section-kicker">YOUR TEAM'S DAILY TOOLKIT</span>
               <h2>Complete application <em>suite.</em></h2>
             </div>
             <p>
-              Useful app layouts give common tasks a natural home inside your
-              admin workspace.
+              Preview the actual chat, calendar, mail and task pages. Select any
+              preview to open the complete app.
             </p>
           </div>
-          <div class="app-grid">
-            <article class="app-card app-chat reveal">
-              <div class="app-card-head">
-                <span class="app-glyph violet">◉</span
-                ><span class="app-arrow">↗</span>
+          <div class="dashboard-grid app-dashboard-grid">
+            <article class="dashboard-card reveal">
+              <div class="dashboard-live-preview is-loading">
+                <iframe class="dashboard-live-frame" title="Chat app live preview" data-live-preview="../chat.html" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+                <a class="mini-open" href="../chat.html" target="_blank" rel="noopener" aria-label="Open the chat app">Open app &#8599;</a>
               </div>
-              <h3>Chat &amp; collaboration</h3>
-              <p>Keep conversations close to the work.</p>
-              <div class="chat-preview">
-                <div class="chat-person">
-                  <i>JD</i
-                  ><span><b>Jordan Davis</b><small>Online now</small></span
-                  ><button aria-label="More chat options">···</button>
-                </div>
-                <div class="bubble left">
-                  Hey! The latest dashboard update is ready.
-                </div>
-                <div class="bubble right">
-                  Looks great, thanks for sharing! <small>10:42 AM</small>
-                </div>
-              </div>
+              <div class="dashboard-info"><div><h3>Chat &amp; collaboration</h3><p>Keep conversations close to the work.</p></div><span>01</span></div>
             </article>
-            <article class="app-card app-calendar reveal">
-              <div class="app-card-head">
-                <span class="app-glyph blue">◷</span
-                ><span class="app-arrow">↗</span>
+            <article class="dashboard-card reveal">
+              <div class="dashboard-live-preview is-loading">
+                <iframe class="dashboard-live-frame" title="Calendar app live preview" data-live-preview="../full-calendar.html" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+                <a class="mini-open" href="../full-calendar.html" target="_blank" rel="noopener" aria-label="Open the calendar app">Open app &#8599;</a>
               </div>
-              <h3>Calendar</h3>
-              <p>Keep events and deadlines in view.</p>
-              <div class="calendar-preview">
-                <div class="calendar-month">
-                  <b>October 2026</b><span>‹ &nbsp; ›</span>
-                </div>
-                <div class="calendar-days">
-                  <i>M</i><i>T</i><i>W</i><i>T</i><i>F</i><i>S</i><i>S</i
-                  ><span>5</span><span>6</span><span class="event">7</span
-                  ><span>8</span><span>9</span><span>10</span><span>11</span>
-                </div>
-              </div>
+              <div class="dashboard-info"><div><h3>Calendar</h3><p>Keep events and deadlines in view.</p></div><span>02</span></div>
             </article>
-            <article class="app-card app-mail reveal">
-              <div class="app-card-head">
-                <span class="app-glyph orange">✉</span
-                ><span class="app-arrow">↗</span>
+            <article class="dashboard-card reveal">
+              <div class="dashboard-live-preview is-loading">
+                <iframe class="dashboard-live-frame" title="Mail app live preview" data-live-preview="../mail.html" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+                <a class="mini-open" href="../mail.html" target="_blank" rel="noopener" aria-label="Open the mail app">Open app &#8599;</a>
               </div>
-              <h3>Email &amp; inbox</h3>
-              <p>Stay on top of what needs a reply.</p>
-              <div class="mail-preview">
-                <div>
-                  <i class="mail-avatar violet">SC</i
-                  ><span><b>Sarah Chen</b><small>Project feedback</small></span
-                  ><time>9:42</time>
-                </div>
-                <div>
-                  <i class="mail-avatar green">MR</i
-                  ><span
-                    ><b>Marco Ruiz</b><small>Design review notes</small></span
-                  ><time>Yesterday</time>
-                </div>
-              </div>
+              <div class="dashboard-info"><div><h3>Email &amp; inbox</h3><p>Stay on top of what needs a reply.</p></div><span>03</span></div>
             </article>
-            <article class="app-card app-tasks reveal">
-              <div class="app-card-head">
-                <span class="app-glyph green">☷</span
-                ><span class="app-arrow">↗</span>
+            <article class="dashboard-card reveal">
+              <div class="dashboard-live-preview is-loading">
+                <iframe class="dashboard-live-frame" title="Task board live preview" data-live-preview="../task-kanban-board.html" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+                <a class="mini-open" href="../task-kanban-board.html" target="_blank" rel="noopener" aria-label="Open the task board">Open app &#8599;</a>
               </div>
-              <h3>Tasks &amp; projects</h3>
-              <p>Make the next step feel obvious.</p>
-              <div class="task-preview">
-                <label
-                  ><input type="checkbox" checked /> Refine analytics
-                  overview</label
-                ><label><input type="checkbox" /> Review onboarding flow</label
-                ><label><input type="checkbox" /> Share sprint progress</label>
-              </div>
+              <div class="dashboard-info"><div><h3>Tasks &amp; projects</h3><p>Make the next step feel obvious.</p></div><span>04</span></div>
             </article>
-          </div>
-          <div class="apps-more reveal">
-            <span>Also included</span><b>Contacts</b><i></i><b>File manager</b
-            ><i></i><b>Notes</b><i></i><b>Kanban</b><i></i><b>Invoice</b>
+            <article class="dashboard-card reveal">
+              <div class="dashboard-live-preview is-loading">
+                <iframe class="dashboard-live-frame" title="AI chat app live preview" data-live-preview="../ai-chat.html" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+                <a class="mini-open" href="../ai-chat.html" target="_blank" rel="noopener" aria-label="Open AI chat">Open app &#8599;</a>
+              </div>
+              <div class="dashboard-info"><div><h3>AI Chat</h3><p>Explore the AI chat workspace.</p></div><span>05</span></div>
+            </article>
+            <article class="dashboard-card reveal">
+              <div class="dashboard-live-preview is-loading">
+                <iframe class="dashboard-live-frame" title="AI image generator live preview" data-live-preview="../ai-image.html" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+                <a class="mini-open" href="../ai-image.html" target="_blank" rel="noopener" aria-label="Open AI image generator">Open app &#8599;</a>
+              </div>
+              <div class="dashboard-info"><div><h3>AI Image Generator</h3><p>Create images from the AI workspace.</p></div><span>06</span></div>
+            </article>
+            <article class="dashboard-card reveal">
+              <div class="dashboard-live-preview is-loading">
+                <iframe class="dashboard-live-frame" title="Profile page live preview" data-live-preview="../profile.html" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+                <a class="mini-open" href="../profile.html" target="_blank" rel="noopener" aria-label="Open profile page">Open app &#8599;</a>
+              </div>
+              <div class="dashboard-info"><div><h3>Profile</h3><p>Manage profile details and preferences.</p></div><span>07</span></div>
+            </article>
+            <article class="dashboard-card reveal">
+              <div class="dashboard-live-preview is-loading">
+                <iframe class="dashboard-live-frame" title="404 error page live preview" data-live-preview="../404-error.html" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+                <a class="mini-open" href="../404-error.html" target="_blank" rel="noopener" aria-label="Open the 404 error page">Open page &#8599;</a>
+              </div>
+              <div class="dashboard-info"><div><h3>Error page</h3><p>Show a helpful path when a page is missing.</p></div><span>08</span></div>
+            </article>
+            <article class="dashboard-card reveal">
+              <div class="dashboard-live-preview is-loading">
+                <iframe class="dashboard-live-frame" title="Coming soon page live preview" data-live-preview="../coming-soon.html" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+                <a class="mini-open" href="../coming-soon.html" target="_blank" rel="noopener" aria-label="Open the coming soon page">Open page &#8599;</a>
+              </div>
+              <div class="dashboard-info"><div><h3>Coming Soon</h3><p>Build anticipation for an upcoming launch.</p></div><span>09</span></div>
+            </article>
           </div>
         </div>
       </section>
 
       <section class="section components-section" id="components">
-        <div class="section-shell component-layout">
-          <div class="component-copy reveal">
-            <span class="section-kicker">A SOLID UI TOOLKIT</span>
-            <h2>Reusable pieces.<br /><em>Consistent experiences.</em></h2>
-            <p>
-              Bring common interface patterns together in a library that feels
-              cohesive and easy to adapt.
-            </p>
-            <div class="component-list">
-              <span>Buttons</span><span>Forms</span><span>Tables</span
-              ><span>Modals</span><span>Alerts</span><span>Badges</span
-              ><span>Tabs</span><span>Progress</span>
-            </div>
-            <a class="text-link" href="#purchase"
-              >Explore the template <span>→</span></a
-            >
-          </div>
-          <div class="component-demo reveal">
-            <div class="demo-window">
-              <div class="demo-window-top">
-                <span class="browser-dots"><i></i><i></i><i></i></span
-                ><small>components / buttons</small>
-              </div>
-              <div class="demo-content">
-                <div class="demo-row">
-                  <span>Buttons</span>
-                  <div>
-                    <button class="demo-btn purple-btn">Primary</button
-                    ><button class="demo-btn outline-btn">Secondary</button>
-                  </div>
-                </div>
-                <div class="demo-row">
-                  <span>Badges</span>
-                  <div>
-                    <b class="badge badge-green">Active</b
-                    ><b class="badge badge-amber">Pending</b
-                    ><b class="badge badge-blue">Review</b>
-                  </div>
-                </div>
-                <div class="demo-row">
-                  <span>Progress</span>
-                  <div class="progress-demo"><i></i></div>
-                </div>
-                <div class="demo-row">
-                  <span>Quick action</span
-                  ><button class="demo-dropdown" id="demo-dropdown">
-                    More options <span>⌄</span>
-                    <div class="dropdown-menu" id="dropdown-menu">
-                      <a href="#features">Edit details</a
-                      ><a href="#apps">View activity</a
-                      ><a href="#purchase">Share workspace</a>
-                    </div>
-                  </button>
-                </div>
-                <div class="demo-notice">
-                  <span>✓</span>
-                  <div>
-                    <b>Changes saved</b
-                    ><small>Your workspace is up to date.</small>
-                  </div>
-                  <button aria-label="Dismiss notification">×</button>
-                </div>
-              </div>
-            </div>
-            <div class="component-float">
-              <span class="float-check">✓</span
-              ><span
-                ><b>Patterns that fit</b
-                ><small>Ready to make your own</small></span
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section responsive-section" id="responsive">
         <div class="section-shell">
-          <div class="section-heading centered reveal">
-            <span class="section-kicker">READY FOR THE WAY YOU WORK</span>
-            <h2>One workspace, <em>every screen.</em></h2>
-            <p>
-              Preview how the same dashboard adapts as the available space
-              changes.
-            </p>
+          <div class="section-heading centered toolkit-heading reveal">
+            <span class="section-kicker">A SOLID UI TOOLKIT</span>
+            <h2>Everything to build a <em>complete workspace.</em></h2>
+            <p>Explore the components, data visualizations and interactions included with NexoraUI.</p>
           </div>
-          <div
-            class="device-controls"
-            role="group"
-            aria-label="Choose device preview"
-          >
-            <button class="active" data-device="desktop">
-              ▰ &nbsp; Desktop</button
-            ><button data-device="tablet">▣ &nbsp; Tablet</button
-            ><button data-device="mobile">▯ &nbsp; Mobile</button>
-          </div>
-          <div class="device-stage reveal">
-            <div class="device-frame desktop-device" id="device-frame">
-              <div class="device-camera"></div>
-              <div class="device-screen">
-                <div class="device-sidebar">
-                  <b>N</b><i></i><i></i><i></i><i></i>
-                </div>
-                <div class="device-work">
-                  <div class="device-toolbar">
-                    <b>Overview</b><span>⌕ &nbsp; ◉ &nbsp; JD</span>
-                  </div>
-                  <div class="device-welcome">
-                    <span
-                      ><b>Sales Dashboard</b
-                      ><small>Here’s your workspace at a glance.</small></span
-                    ><button>＋ New report</button>
-                  </div>
-                  <div class="device-kpis">
-                    <i
-                      ><small>Revenue</small><b>$84,250</b
-                      ><span>↗ 18.4%</span></i
-                    ><i
-                      ><small>Orders</small><b>12,840</b><span>↗ 12.8%</span></i
-                    ><i
-                      ><small>Customers</small><b>4,829</b
-                      ><span>↗ 8.6%</span></i
-                    >
-                  </div>
-                  <div class="device-report">
-                    <div>
-                      <b>Revenue overview</b><small>Monthly performance</small>
-                    </div>
-                    <svg viewBox="0 0 700 150" preserveAspectRatio="none">
-                      <path
-                        d="M0 118 C65 100 94 112 144 81 S226 104 277 69 S365 89 421 48 S499 76 552 35 S644 48 700 12"
-                        fill="none"
-                        stroke="#6558e8"
-                        stroke-width="4"
-                      />
-                    </svg>
-                  </div>
-                </div>
+          <div class="toolkit-grid">
+            <article class="toolkit-panel toolkit-ui-card reveal">
+              <span class="toolkit-eyebrow"><i aria-hidden="true"></i> UI KIT</span>
+              <h2>60+ ready-to-use components</h2>
+              <p>Explore Bootstrap components and custom interface patterns demonstrated in the NexoraUI project.</p>
+              <div class="toolkit-tags" aria-label="Included UI components">
+                <span>Buttons</span><span>Badges</span><span>Alerts</span><span>Modals</span><span>Tabs</span><span>Accordions</span><span>Dropdowns</span><span>Tooltips</span><span>Offcanvas</span><span>Toasts</span><span>Progress</span><span>Pagination</span><span>Forms</span><span>File uploads</span><span>Date pickers</span><span>Tables</span><span>Charts</span><span>Avatars</span><span>Carousel</span>
               </div>
-            </div>
-            <div class="device-shadow"></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section code-section" id="developers">
-        <div class="section-shell code-layout">
-          <div class="code-copy reveal">
-            <span class="section-kicker">A FRIENDLY STARTING POINT</span>
-            <h2>Made for developers.<br /><em>Easy to make yours.</em></h2>
-            <p>
-              Work with familiar tools, clear structure and reusable patterns
-              that fit into the way you already build.
-            </p>
-            <ul class="check-list">
-              <li>Modular SCSS organization</li>
-              <li>Bootstrap utility foundation</li>
-              <li>Reusable interface patterns</li>
-              <li>Vanilla JavaScript interactions</li>
-            </ul>
-          </div>
-          <div class="code-window reveal">
-            <div class="code-titlebar">
-              <div class="code-lights"><i></i><i></i><i></i></div>
-              <div class="code-tabs">
-                <button class="selected" data-code="html">dashboard.html</button
-                ><button data-code="scss">_dashboard.scss</button
-                ><button data-code="js">dashboard.js</button>
+            </article>
+            <article class="toolkit-panel toolkit-viz-card reveal">
+              <span class="toolkit-eyebrow"><i aria-hidden="true"></i> DATA VISUALIZATION</span>
+              <h2>Charts for business insights</h2>
+              <p>Explore ApexCharts, Chart.js and ECharts examples styled to follow the active theme.</p>
+              <div class="dashboard-live-preview toolkit-chart-preview is-loading">
+                <iframe class="dashboard-live-frame" title="Live preview of NexoraUI charts" data-live-preview="../chartjs-charts.html" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+                <a class="mini-open" href="../chartjs-charts.html" target="_blank" rel="noopener" aria-label="Open the chart examples">Explore charts &#8599;</a>
               </div>
-              <button class="copy-code" id="copy-code">Copy code</button>
-            </div>
-            <pre
-              class="code-snippet"
-            ><code id="code-content"><span class="code-line"><i>1</i><b class="syntax-tag">&lt;section</b> <b class="syntax-attr">class</b>=<b class="syntax-string">"dashboard-card"</b><b class="syntax-tag">&gt;</b></span><span class="code-line"><i>2</i>  <b class="syntax-tag">&lt;header</b> <b class="syntax-attr">class</b>=<b class="syntax-string">"card-header"</b><b class="syntax-tag">&gt;</b></span><span class="code-line"><i>3</i>    <b class="syntax-tag">&lt;h2&gt;</b>Revenue overview<b class="syntax-tag">&lt;/h2&gt;</b></span><span class="code-line"><i>4</i>    <b class="syntax-tag">&lt;span</b> <b class="syntax-attr">class</b>=<b class="syntax-string">"badge-success"</b><b class="syntax-tag">&gt;</b></span><span class="code-line"><i>5</i>      +18.42%</span><span class="code-line"><i>6</i>    <b class="syntax-tag">&lt;/span&gt;</b></span><span class="code-line"><i>7</i>  <b class="syntax-tag">&lt;/header&gt;</b></span><span class="code-line"><i>8</i>  <b class="syntax-tag">&lt;div</b> <b class="syntax-attr">data-chart</b>=<b class="syntax-string">"revenue"</b><b class="syntax-tag">&gt;&lt;/div&gt;</b></span><span class="code-line"><i>9</i><b class="syntax-tag">&lt;/section&gt;</b></span></code></pre>
-          </div>
-        </div>
-      </section>
-
-      <section class="section pages-section" id="pages">
-        <div class="section-shell pages-layout">
-          <div class="pages-copy reveal">
-            <span class="section-kicker">MORE THAN A DASHBOARD</span>
-            <h2>Thoughtful screens for the <em>whole product.</em></h2>
-            <p>
-              Build a consistent experience from sign-in to everyday work, with
-              page patterns ready to adapt.
-            </p>
-            <a class="text-link" href="#purchase"
-              >See what’s included <span>→</span></a
-            >
-          </div>
-          <div class="page-tiles reveal">
-            <div>
-              <span class="page-tile-icon purple">♙</span><b>Authentication</b
-              ><small>Login · Register · Recovery</small
-              ><span class="tile-arrow">↗</span>
-            </div>
-            <div>
-              <span class="page-tile-icon blue">▤</span
-              ><b>Profile &amp; account</b
-              ><small>Profile · Settings · Activity</small
-              ><span class="tile-arrow">↗</span>
-            </div>
-            <div>
-              <span class="page-tile-icon orange">▧</span><b>Commerce</b
-              ><small>Products · Orders · Invoice</small
-              ><span class="tile-arrow">↗</span>
-            </div>
-            <div>
-              <span class="page-tile-icon green">☷</span><b>Utility pages</b
-              ><small>FAQ · Pricing · Search</small
-              ><span class="tile-arrow">↗</span>
-            </div>
-            <div>
-              <span class="page-tile-icon pink">⚠</span><b>Error states</b
-              ><small>404 · 500 · Maintenance</small
-              ><span class="tile-arrow">↗</span>
-            </div>
-            <div>
-              <span class="page-tile-icon teal">⌕</span><b>Help &amp; support</b
-              ><small>Knowledge · Contact · FAQ</small
-              ><span class="tile-arrow">↗</span>
-            </div>
+            </article>
+            <article class="toolkit-panel toolkit-motion-card reveal">
+              <span class="toolkit-eyebrow"><i aria-hidden="true"></i> INTERACTIONS</span>
+              <h2>Motion with a clear purpose</h2>
+              <p>Small, responsive interactions help users understand what changed and where to go next.</p>
+              <div class="toolkit-tags" aria-label="Interactive patterns">
+                <span>Scroll reveal</span><span>Hover states</span><span>Theme switch</span><span>Responsive previews</span><span>Dropdown menus</span><span>Preview transitions</span><span>Offcanvas navigation</span><span>Progress feedback</span>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -1059,72 +483,36 @@
       <section class="section faq-section" id="faq">
         <div class="section-shell faq-layout">
           <div class="faq-intro reveal">
-            <span class="section-kicker">GOOD TO KNOW</span>
-            <h2>Questions, <em>answered.</em></h2>
-            <p>
-              Need more details before you dive in? Here are a few helpful
-              starting points.
-            </p>
-            <a class="text-link" href="#purchase"
-              >Get in touch <span>→</span></a
-            >
+            <span class="section-kicker">NEXORAUI HELP CENTER</span>
+            <h2>Answers for your <em>next build.</em></h2>
+            <p>Find quick guidance on the project structure, included pages, customization and getting started.</p>
+            <div class="faq-highlights" aria-label="Project support resources">
+              <span><i class="ri-book-open-line" aria-hidden="true"></i>Project documentation</span>
+              <span><i class="ri-code-s-slash-line" aria-hidden="true"></i>HTML, SCSS &amp; JavaScript</span>
+              <span><i class="ri-layout-grid-line" aria-hidden="true"></i>Dashboards and app pages</span>
+            </div>
+            <a class="button button-small button-dark" href="../documentation/documentation.html">Read the documentation <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
           </div>
           <div class="faq-list reveal">
             <details open>
-              <summary>
-                Is Nexora UI built with Bootstrap?<span>+</span>
-              </summary>
-              <p>
-                Yes. Nexora UI is an HTML admin template built on Bootstrap 5,
-                with additional SCSS styling and vanilla JavaScript
-                interactions.
-              </p>
+              <summary>What is NexoraUI built with?<span>+</span></summary>
+              <p>NexoraUI is an HTML admin template built with Bootstrap 5, SCSS and vanilla JavaScript. Its pages use a shared project structure and reusable interface patterns.</p>
             </details>
             <details>
-              <summary>
-                Does the layout adapt to mobile screens?<span>+</span>
-              </summary>
-              <p>
-                Yes. The page layouts and core interface patterns are designed
-                to respond across desktop, tablet and mobile screen sizes.
-              </p>
+              <summary>What is included in the project?<span>+</span></summary>
+              <p>The project includes business dashboards, application pages, form and UI examples, chart pages, authentication screens and documentation. Browse the live dashboard and toolkit sections for previews.</p>
             </details>
             <details>
-              <summary>
-                Can I switch between light and dark themes?<span>+</span>
-              </summary>
-              <p>
-                Yes. Theme modes are included, and this landing page remembers
-                your theme preference on this device.
-              </p>
+              <summary>How do I find a specific page or component?<span>+</span></summary>
+              <p>Use the project HTML pages as examples. The documentation page explains the project structure and where to find the included templates and assets.</p>
             </details>
             <details>
-              <summary>
-                Can I customize the colors and components?<span>+</span>
-              </summary>
-              <p>
-                SCSS variables and reusable component patterns give you a
-                starting point for adapting the interface to your product.
-              </p>
+              <summary>Can I customize themes and layouts?<span>+</span></summary>
+              <p>Yes. Adapt SCSS variables and component styles, then use the appearance controls to preview light or dark themes, RTL direction and available layouts. Pages are designed to respond across desktop, tablet and mobile sizes.</p>
             </details>
             <details>
-              <summary>What is included in the download?<span>+</span></summary>
-              <p>
-                The template includes dashboard and application layouts,
-                reusable UI components, responsive pages and documentation.
-                Please check the product package for the current complete file
-                list.
-              </p>
-            </details>
-            <details>
-              <summary>
-                Can I use Nexora UI for multiple projects?<span>+</span>
-              </summary>
-              <p>
-                License terms depend on the license you choose on the
-                marketplace. Review the current ThemeForest license details
-                before purchasing.
-              </p>
+              <summary>Where can I get setup and license information?<span>+</span></summary>
+              <p>Read the included documentation for setup guidance. License terms depend on the marketplace license you choose; check the current ThemeForest license details before purchasing.</p>
             </details>
           </div>
         </div>
@@ -1134,35 +522,18 @@
         <div class="section-shell purchase-inner">
           <div class="purchase-copy reveal">
             <span class="section-kicker">YOUR NEXT PROJECT STARTS HERE</span>
-            <h2>Build better admin interfaces <em>with Nexora UI.</em></h2>
-            <p>
-              Explore the template and find a practical foundation for your next
-              web application.
-            </p>
-            <div class="purchase-points">
-              <span>✓ Responsive layouts</span
-              ><span>✓ Dashboard collection</span
-              ><span>✓ Application pages</span
-              ><span>✓ Dark &amp; light modes</span>
+            <h2>Build your next admin experience <em>with NexoraUI.</em></h2>
+            <p>Start with a complete Bootstrap admin template: explore the live dashboards, adapt the included app pages, and shape the interface around your product.</p>
+            <div class="purchase-points" aria-label="NexoraUI features">
+              <span><i class="ri-check-line" aria-hidden="true"></i>Responsive layouts</span>
+              <span><i class="ri-check-line" aria-hidden="true"></i>Business dashboards</span>
+              <span><i class="ri-check-line" aria-hidden="true"></i>Application pages</span>
+              <span><i class="ri-check-line" aria-hidden="true"></i>Light and dark themes</span>
             </div>
-            <a class="button button-white" href="../index.html"
-              >Open live dashboard <span>↗</span></a
-            ><small class="price-note"
-              >Add your ThemeForest purchase link and current price here.</small
-            >
-          </div>
-          <div class="purchase-art reveal">
-            <div class="art-orbit orbit-one"></div>
-            <div class="art-orbit orbit-two"></div>
-            <div class="art-panel">
-              <div class="art-top"><span></span><span></span></div>
-              <div class="art-side"></div>
-              <div class="art-body">
-                <i></i><i></i><i></i><b></b><b></b><b></b>
-                <div></div>
-              </div>
+            <div class="purchase-actions">
+              <a class="button button-primary" href="../index.html">Explore live dashboard &#8599;</a>
+              <a class="button button-outline" href="../documentation/documentation.html">Read the documentation <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
             </div>
-            <div class="art-badge">✦ &nbsp; Nexora UI</div>
           </div>
         </div>
       </section>
@@ -1172,144 +543,48 @@
       <div class="section-shell">
         <div class="footer-main">
           <div class="footer-brand">
-            <a class="brand" href="#top" aria-label="Nexora UI home"
-              ><img
-                class="brand-logo-light"
-                src="../../assets/images/brand-logos/desktop-logo.png"
-                alt="Nexora UI" /><img
-                class="brand-logo-dark"
-                src="../../assets/images/brand-logos/desktop-dark.png"
-                alt=""
-            /></a>
-            <p>A considered UI foundation for powerful admin experiences.</p>
+            <a class="brand" href="#top" aria-label="NexoraUI home">
+              <img class="brand-logo-light" src="../../assets/images/brand-logos/desktop-logo.png" alt="NexoraUI">
+              <img class="brand-logo-dark" src="../../assets/images/brand-logos/desktop-dark.png" alt="">
+            </a>
+            <p>A responsive Bootstrap foundation for building polished admin experiences.</p>
+            <div class="footer-tech" aria-label="Built with Bootstrap 5, SCSS and JavaScript">
+              <span><i class="ri-bootstrap-line" aria-hidden="true"></i>Bootstrap 5</span>
+              <span><i class="ri-braces-line" aria-hidden="true"></i>SCSS</span>
+              <span><i class="ri-javascript-line" aria-hidden="true"></i>JavaScript</span>
+            </div>
           </div>
-          <div class="footer-col">
-            <b>Explore</b><a href="#features">Features</a
-            ><a href="#dashboards">Dashboards</a><a href="#apps">Applications</a
-            ><a href="#components">Components</a>
-          </div>
-          <div class="footer-col">
-            <b>Resources</b><a href="#developers">Documentation</a
-            ><a href="#faq">FAQ</a><a href="#purchase">Support</a
-            ><a href="#pages">Pages</a>
-          </div>
-          <div class="footer-note">
-            <b>Build something remarkable.</b>
-            <p>Start with a flexible foundation and make it your own.</p>
-            <a href="#purchase">Explore Nexora UI ↗</a>
-          </div>
+          <nav class="footer-col" aria-label="Explore NexoraUI">
+            <b>Explore NexoraUI</b>
+            <a href="#features">Features</a>
+            <a href="#dashboards">Live dashboards</a>
+            <a href="#apps">Applications</a>
+            <a href="#components">UI toolkit</a>
+          </nav>
+          <nav class="footer-col" aria-label="Resources and help">
+            <b>Resources &amp; help</b>
+            <a href="../documentation/documentation.html">Documentation</a>
+            <a href="#faq">FAQ</a>
+            <a href="../documentation/changelog.html">Changelog</a>
+            <a href="mailto:hello@nexoraui.com?subject=NexoraUI%20Template%20Support">Contact support</a>
+          </nav>
+          <nav class="footer-col" aria-label="Company">
+            <b>Company</b>
+            <a href="#" target="_blank" rel="noopener noreferrer">SmPixelCraft</a>
+            <a href="../documentation/documentation.html">Documentation</a>
+          </nav>
         </div>
         <div class="footer-bottom">
-          <span>© 2026 Nexora UI. Built with Bootstrap.</span>
+         <span>Copyright ©
+          <a href="#" class="text-default fw-medium">NexoraUI</a>
+          <span id="year">2026</span>. All rights reserved.</span>
           <div>
-            <a href="#top">Back to top ↑</a><span>Designed for makers</span>
+            <span>Designed for makers</span>
+            <a href="#top">Back to top <i class="ri-arrow-up-line" aria-hidden="true"></i></a>
           </div>
         </div>
       </div>
     </footer>
-
-    <button
-      class="customize-trigger"
-      id="customize-trigger"
-      aria-controls="customize-drawer"
-      aria-expanded="false"
-    >
-      <span>⚙</span> Customize
-    </button>
-    <aside
-      class="customize-drawer"
-      id="customize-drawer"
-      aria-label="Dashboard customization"
-      aria-hidden="true"
-    >
-      <div class="customize-head">
-        <div>
-          <span class="section-kicker">LIVE PREVIEW</span>
-          <h2>Make it yours</h2>
-        </div>
-        <button id="customize-close" aria-label="Close customization">×</button>
-      </div>
-      <p>Preview the settings available in the NexoraUI switcher.</p>
-      <fieldset>
-        <legend>Appearance</legend>
-        <div class="customize-options">
-          <button data-customize="theme" data-value="light" class="selected">
-            Light</button
-          ><button data-customize="theme" data-value="dark">Dark</button>
-        </div>
-      </fieldset>
-      <fieldset>
-        <legend>Reading direction</legend>
-        <div class="customize-options">
-          <button data-customize="direction" data-value="ltr" class="selected">
-            LTR</button
-          ><button data-customize="direction" data-value="rtl">RTL</button>
-        </div>
-      </fieldset>
-      <fieldset>
-        <legend>Sidebar layout</legend>
-        <div class="customize-options">
-          <button data-customize="layout" data-value="default" class="selected">
-            Default</button
-          ><button data-customize="layout" data-value="doublemenu">
-            Dual sidebar</button
-          ><button data-customize="layout" data-value="header">
-            Header only</button
-          ><button data-customize="layout" data-value="icon-menu">
-            Icon menu
-          </button>
-        </div>
-      </fieldset>
-      <fieldset>
-        <legend>Sidebar surface</legend>
-        <div class="customize-options">
-          <button data-customize="menu-surface" data-value="light">Light</button
-          ><button
-            data-customize="menu-surface"
-            data-value="dark"
-            class="selected"
-          >
-            Dark</button
-          ><button data-customize="menu-surface" data-value="transparent">
-            Transparent
-          </button>
-        </div>
-      </fieldset>
-      <fieldset>
-        <legend>Header surface</legend>
-        <div class="customize-options">
-          <button
-            data-customize="header-surface"
-            data-value="light"
-            class="selected"
-          >
-            Light</button
-          ><button data-customize="header-surface" data-value="dark">
-            Dark</button
-          ><button data-customize="header-surface" data-value="transparent">
-            Transparent
-          </button>
-        </div>
-      </fieldset>
-      <fieldset>
-        <legend>Header position</legend>
-        <div class="customize-options">
-          <button
-            data-customize="header-position"
-            data-value="fixed"
-            class="selected"
-          >
-            Fixed</button
-          ><button data-customize="header-position" data-value="scrollable">
-            Scrollable
-          </button>
-        </div>
-      </fieldset>
-      <button class="customize-reset" id="customize-reset">
-        Reset preview
-      </button>
-    </aside>
-    <div class="drawer-scrim" id="drawer-scrim"></div>
-    <button class="back-top" id="back-top" aria-label="Back to top">↑</button>
+    <button class="back-top" id="back-top" aria-label="Back to top"><i class="ri-arrow-up-line" aria-hidden="true"></i></button>
   </body>
 </html>

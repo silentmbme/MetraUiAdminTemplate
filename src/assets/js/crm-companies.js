@@ -39,12 +39,16 @@
       cards.map((card) => card.dataset.industry).filter(Boolean)
     );
 
-    document.querySelector("#crm-company-count").textContent = cards.length;
-    document.querySelector("#crm-company-deal-total").textContent =
-      dealCount.toLocaleString("en-US");
-    document.querySelector("#crm-company-opportunity-count").textContent =
-      dealCount.toLocaleString("en-US");
-    document.querySelector("#crm-industry-count").textContent = industries.size;
+    const companyCount = document.querySelector("#crm-company-count");
+    const opportunityCount = document.querySelector(
+      "#crm-company-opportunity-count"
+    );
+    const industryCount = document.querySelector("#crm-industry-count");
+
+    if (companyCount) companyCount.textContent = cards.length;
+    if (opportunityCount)
+      opportunityCount.textContent = dealCount.toLocaleString("en-US");
+    if (industryCount) industryCount.textContent = industries.size;
   }
 
   function populateIndustries() {

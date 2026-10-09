@@ -603,14 +603,18 @@
     --theme-menu-prime-color: #61748f;
   }
 
+  .sidenav-menu .sidenav-submenu.sidenav-level-1::before {
+      background-color: rgba(0,0,0, 0.1);
+  }
+
   .sidenav-menu .sidenav-icon {
     color: variables.$menu-prime-color;
     fill: variables.$menu-prime-color;
   }
 
   .sidenav-menu .sidenav-link.active .sidenav-icon {
-    color: variables.$primary;
-    fill: variables.$primary ;
+    color: variables.$dark;
+    fill: variables.$dark ;
   }
 
   &[data-sidebar-layout="vertical"] {
@@ -952,6 +956,10 @@
         }
       }
     }
+  }
+
+  .sidenav-menu .sidenav-submenu.sidenav-level-1::before {
+      background-color: rgba(0,0,0, 0.1);
   }
 
   .sidenav-menu {
@@ -1510,8 +1518,8 @@
 
       &:hover {
         .sidenav-dual-icon {
-          color: variables.$primary;
-          fill: variables.$primary;
+          color: variables.$dark;
+          fill: variables.$dark;
         }
       }
     }
@@ -1644,10 +1652,6 @@
       border-radius: 0.25rem;
     }
 
-    .sidenav-menu .sidenav-submenu.sidenav-level-1>.sidenav-item.active>.sidenav-link.active {
-      color: variables.$white !important;
-    }
-
     .sidenav-menu .sidenav-submenu.sidenav-level-2 .sidenav-link.active,
     .sidenav-menu .sidenav-submenu.sidenav-level-3 .sidenav-link.active {
       background-color: transparent !important;
@@ -1734,8 +1738,8 @@
         &:hover,
         &.active {
           .sidenav-icon {
-            color: variables.$primary;
-            fill: variables.$primary;
+            color: variables.$dark;
+            fill: variables.$dark;
           }
         }
       }
@@ -1860,7 +1864,7 @@
       display: block !important;
       font-size: 0.938rem;
       font-weight: 500;
-      color: variables.$primary;
+      color: variables.$dark;
       border-block-end: 0px solid variables.$menu-border-color;
       padding: 1.5rem 1rem !important;
       width: 12rem;
@@ -1962,16 +1966,16 @@
         }
       }
     }
-
-    &[data-sidebar-layout=vertical] .sidenav-menu .sidenav-list>.sidenav-item>.sidenav-link {
-      margin-bottom: 8px;
-    }
   }
-}
-
-@media (max-width: 991.98px) {
-  .sidenav-menu .sidenav-list .sidenav-item .custome-tooltip {
-    display: none !important;
+  &[data-menu-color="dark"]{
+    .sidenav-menu .sidenav-link.active .sidenav-icon {
+        color: rgb(var(--theme-primary-rgb));
+        fill: rgb(var(--theme-primary-rgb));
+    }
+    .sidenav-menu .sidenav-link:hover .sidenav-icon{
+        color: rgb(var(--theme-primary-rgb));
+        fill: rgb(var(--theme-primary-rgb));
+    }
   }
 }
 
