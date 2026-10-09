@@ -8,44 +8,41 @@
       name="description"
       content="Release notes and update guidance for the NexoraUI Bootstrap template."
     />
-    <link rel="icon" href="../assets/images/brand-logos/favicon.ico?v=2" />
+    <link rel="icon" href="documentation-favicon.ico" />
     <link
       rel="stylesheet"
-      href="../assets/libs/bootstrap/css/bootstrap.min.css"
+      href="../../assets/libs/bootstrap/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="../assets/css/demo.css" />
-    <link rel="stylesheet" href="../assets/css/icons.css" />
-    <link rel="stylesheet" href="../assets/css/documentation.css" />
+    <link rel="stylesheet" href="../../assets/css/demo.css" />
+    <link rel="stylesheet" href="../../assets/css/icons.css" />
+    <link rel="stylesheet" href="documentation.css" />
   </head>
   <body class="docs-standalone">
     <a class="docs-skip" href="#docs-content">Skip to release notes</a>
     <header class="docs-header">
       <a class="docs-brand" href="#welcome" aria-label="NexoraUI changelog home"
-        ><img
-          src="../assets/images/brand-logos/desktop-logo.png"
-          alt="NexoraUI"
-        /><span>Changelog</span></a
+        ><img src="documentation-logo-light.png" alt="NexoraUI" /></a
       >
       <div class="d-flex align-items-center gap-2">
-        <a class="btn btn-light btn-sm" href="documentation.html"
-          >Documentation</a
-        ><span class="docs-version">HTML / Bootstrap 5</span
+        <span class="docs-version">HTML / Bootstrap 5</span
         ><button
-          class="btn btn-light btn-sm"
+          class="btn btn-light btn-icon"
           id="docs-theme"
           type="button"
           aria-label="Switch to dark theme"
         >
           <i class="ri-moon-line" aria-hidden="true"></i></button
-        ><a
-          class="btn btn-secondary btn-sm"
-          href="index.html"
+        >
+        <a class="btn btn-secondary" href="documentation.html"
+          >Documentation</a><a
+          class="btn btn-dark"
+          href="../index.html"
           target="_blank"
           rel="noopener noreferrer"
           >View demo
           <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a
         ><button
-          class="btn btn-light btn-sm docs-menu-toggle"
+          class="btn btn-light btn-icon docs-menu-toggle"
           type="button"
           data-bs-toggle="offcanvas"
           data-bs-target="#docs-navigation"
@@ -139,9 +136,9 @@
             <div class="docs-note">
               <strong>Release history</strong>
               <p class="mb-0 mt-2">
-                The project currently declares version 1.0.0. Earlier versions
-                and release dates have not been recorded here. Add dated release
-                entries when a new package is published.
+                Version 1.0.0 is the first documented release of NexoraUI.
+                Future entries can be added below with their publication date,
+                changes, and any steps needed to update a customized project.
               </p>
             </div>
           </div>
@@ -156,71 +153,84 @@
               <h2 class="card-title mb-1" id="release-1-0-0-title">
                 Version 1.0.0
               </h2>
-              <p class="text-muted mb-0">Current release overview</p>
+              <p class="text-muted mb-0">
+                Initial release - HTML / Bootstrap 5
+              </p>
             </div>
           </div>
           <div class="card-body">
             <div class="release-heading">
-              <span class="release-version">v1.0.0</span
-              ><span class="text-muted fs-12">Current package version</span>
+              <span class="release-version">v1.0.0</span>
+              <span class="badge bg-success-transparent">Initial release</span>
+              <span class="text-muted fs-12"
+                >First documented package version</span
+              >
             </div>
             <p class="text-muted">
-              The initial package brings together the template foundations,
-              dashboard pages, application examples, and third-party
-              integrations.
+              The first NexoraUI release brings together a responsive Bootstrap
+              5 admin interface, a broad library of workflow pages, and the
+              source tools needed to customize and build the template.
             </p>
-            <h3 class="fs-14 fw-semibold mt-4">Included in this package</h3>
+            <h3 class="fs-14 fw-semibold mt-4">What's included</h3>
             <ul class="release-list">
               <li>
-                <strong>Responsive template foundations</strong>
+                <strong>Dashboards for key business teams</strong>
                 <p>
-                  Bootstrap 5 layouts, shared HTML template parts, theme colors,
-                  typography utilities, light and dark modes, and layout
-                  customization.
+                  Sales, ecommerce, CRM, finance, logistics, HR, projects,
+                  support, and AI dashboard examples, with matching workflow
+                  pages for common tasks.
                 </p>
               </li>
               <li>
-                <strong>Dashboards & application examples</strong>
+                <strong>Flexible navigation and appearance</strong>
                 <p>
-                  Dashboard variations and example pages for projects, tasks,
-                  mail, files, calendars, profiles, and invoices.
+                  Vertical and horizontal navigation, sidebar layout options, a
+                  live appearance customizer, color palettes, and light or dark
+                  theme modes.
                 </p>
               </li>
               <li>
-                <strong>Reusable UI & forms</strong>
+                <strong>Reusable interface and application pages</strong>
                 <p>
-                  Cards, navigation, alerts, tabs, modal dialogs, offcanvas
-                  panels, form controls, advanced inputs, and upload examples.
+                  Bootstrap-based cards, forms, tables, calendars,
+                  authentication screens, chat and mail views, file management,
+                  invoices, and other admin workflows.
                 </p>
               </li>
               <li>
-                <strong>Charts, tables & maps</strong>
+                <strong>Interactive plugin examples</strong>
                 <p>
-                  ApexCharts, Chart.js, ECharts, Grid.js, DataTables,
-                  jsVectorMap, Leaflet, and configurable Google Maps examples.
+                  Chart integrations including ApexCharts, Chart.js, and
+                  ECharts; data tables; maps; calendars; file uploads; editors;
+                  and other interface plugins.
                 </p>
               </li>
               <li>
-                <strong>Development workflow</strong>
+                <strong>Editable source and local build workflow</strong>
                 <p>
-                  SCSS compilation, HTML template-part assembly, dependency and
-                  asset copying, and BrowserSync preview through npm run dev.
+                  HTML pages and shared template parts, SCSS, JavaScript, and
+                  assets under <code>src/</code>. Run
+                  <code>npm install</code> and <code>npm run dev</code> to
+                  compile the styles, assemble pages, copy dependencies, and
+                  preview the generated <code>dist/</code> output.
                 </p>
               </li>
               <li>
-                <strong>Customer reference pages</strong>
+                <strong>Customer guidance</strong>
                 <p>
-                  Standalone documentation and this changelog, with responsive
-                  navigation and theme-aware styling.
+                  Setup and customization documentation, project FAQs, support
+                  contact details, and release notes to help customers get
+                  oriented.
                 </p>
               </li>
             </ul>
             <div class="docs-note">
-              <strong>Integration reminder</strong>
+              <strong>Front-end template</strong>
               <p class="mb-0 mt-2">
-                Application records and interface actions are examples.
-                Production authentication, storage, API connections, and server
-                validation are supplied by your application.
+                Sample records and interface actions demonstrate the UI.
+                Authentication, database storage, API connections, uploads, and
+                server-side validation must be connected to your own application
+                before production use.
               </p>
             </div>
           </div>
@@ -340,7 +350,7 @@
         </footer>
       </main>
     </div>
-    <script src="../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/documentation.js"></script>
+    <script src="../../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="documentation.js"></script>
   </body>
 </html>

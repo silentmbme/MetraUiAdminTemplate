@@ -43,11 +43,13 @@
 
   function updateSaveState() {
     const isDirty = JSON.stringify(readForm()) !== JSON.stringify(savedValues);
-    saveButton.disabled = !isDirty;
-    saveState.innerHTML = isDirty
-      ? '<i class="ri-edit-line me-1" aria-hidden="true"></i>Unsaved changes'
-      : '<i class="ri-checkbox-circle-line me-1" aria-hidden="true"></i>All changes saved';
-    saveState.classList.toggle("is-dirty", isDirty);
+    if (saveButton) saveButton.disabled = !isDirty;
+    if (saveState) {
+      saveState.innerHTML = isDirty
+        ? '<i class="ri-edit-line me-1" aria-hidden="true"></i>Unsaved changes'
+        : '<i class="ri-checkbox-circle-line me-1" aria-hidden="true"></i>All changes saved';
+      saveState.classList.toggle("is-dirty", isDirty);
+    }
   }
 
   form.addEventListener("input", updateSaveState);
@@ -68,7 +70,7 @@
     updateSaveState();
   });
 
-  document.getElementById("settings-reset").addEventListener("click", () => {
+  document.getElementById("settings-reset")?.addEventListener("click", () => {
     applyValues(savedValues);
     feedback.textContent = "Unsaved changes have been reset.";
     updateSaveState();

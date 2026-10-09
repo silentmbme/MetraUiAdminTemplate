@@ -65,7 +65,14 @@
       label.append(title, subtitle);
       const hint = document.createElement('span');
       hint.className = 'search-result-hint';
-      hint.textContent = page.href === location.pathname.split('/').pop() ? 'Current page' : 'Open ↗';
+      const isCurrentPage = page.href === location.pathname.split('/').pop();
+      hint.textContent = isCurrentPage ? 'Current page' : 'Open';
+      if (!isCurrentPage) {
+        const openIcon = document.createElement('i');
+        openIcon.className = 'ri-arrow-up-right-line';
+        openIcon.setAttribute('aria-hidden', 'true');
+        hint.append(' ', openIcon);
+      }
       link.append(icon, label, hint);
       link.addEventListener('click', () => {
         recent = [page.href, ...recent.filter(href => href !== page.href)].slice(0, 8);

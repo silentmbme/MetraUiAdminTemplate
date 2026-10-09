@@ -2,8 +2,8 @@
     "use strict";
 
     const primaryWizard = document.querySelector(".wizard-tab");
-    if (primaryWizard) {
-        const wizard = new Wizard1({
+    if (primaryWizard && typeof window.Wizard1 === "function") {
+        const wizard = new window.Wizard1({
             wz_class: ".wizard-tab",
             highlight: true,
             highlight_time: 1000,

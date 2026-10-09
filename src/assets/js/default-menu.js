@@ -695,57 +695,6 @@ function doubletFn() {
   html.setAttribute("data-layout-style", "dualmenu");
   html.removeAttribute("data-nav-style", "");
   toggleSidemenu();
-
-  const menuSlideItem = document.querySelectorAll(
-    ".sidenav-list > li > .sidenav-link"
-  );
-
-  // Create the tooltip element
-  const tooltip = document.createElement("div");
-  tooltip.className = "custome-tooltip";
-  // tooltip.textContent = "This is a tooltip";
-
-  // Set the CSS properties of the tooltip element
-  tooltip.style.setProperty("position", "fixed");
-  tooltip.style.setProperty("display", "none"); 
-  tooltip.style.setProperty("padding", "0.5rem"); 
-  tooltip.style.setProperty("font-weight", "500");
-  tooltip.style.setProperty("font-size", "0.75rem");
-  tooltip.style.setProperty("background-color", "rgb(15, 23 ,42)");
-  tooltip.style.setProperty("color", "rgb(255, 255 ,255)");
-  tooltip.style.setProperty("margin-inline-start", "48px");
-  tooltip.style.setProperty("border-radius", "0.25rem");
-  tooltip.style.setProperty("z-index", "99");
-
-  // If You Enable double menu remove below comments
-
-  menuSlideItem?.forEach((e) => {
-    // Add an event listener to the menu slide item to show the tooltip
-    e.addEventListener("mouseenter", () => {
-      if (window.innerWidth >= 992) {
-        if (["doublemenu", "dualmenu"].includes(localStorage.nexorauiverticalstyles)) {
-          tooltip.style.setProperty("display", "block");
-          tooltip.textContent =
-            e.querySelector(".sidenav-link-label").textContent;
-          if (
-            document
-              .querySelector("html")
-              .getAttribute("data-layout-style") == "dualmenu"
-          ) {
-            e.appendChild(tooltip);
-          }
-        }
-      }
-    });
-
-    // Add an event listener to hide the tooltip
-    e.addEventListener("mouseleave", () => {
-      tooltip.style.setProperty("display", "none");
-      tooltip.textContent =
-        e.querySelector(".sidenav-link-label").textContent;
-    });
-  });
-
 }
 function menuClickFn() {
   let html = document.querySelector("html");

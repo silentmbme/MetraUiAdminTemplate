@@ -77,7 +77,7 @@
   .sidenav-submenu.sidenav-level-1 .sidenav-link:hover,
   .sidenav-submenu.sidenav-level-2 .sidenav-link:hover,
   .sidenav-submenu.sidenav-level-3 .sidenav-link:hover {
-    color: var(--theme-primary-color);
+    color: rgb(var(--theme-dark-rgb));
   }
 
   .sidenav-category {
@@ -96,7 +96,7 @@
     &.sidenav-level-1 {
       > .sidenav-item.active {
         > .sidenav-link.active {
-          color: variables.$primary;
+          color: variables.$dark;
 
           &:before {
             position: absolute;
@@ -110,12 +110,12 @@
           }
 
           .sidenav-submenu-toggle {
-            color: variables.$primary;
+            color: variables.$dark;
           }
 
           &:hover {
             .sidenav-submenu-toggle {
-              color: variables.$primary;
+              color: variables.$dark;
             }
           }
         }
@@ -140,16 +140,16 @@
     border-radius: 50px;
 
     &.active {
-      color: variables.$primary;
-      background-color: rgba(var(--theme-primary-rgb), 0.1);
+      color: variables.$dark;
+      background-color: rgba(var(--theme-dark-rgb), 0.07);
 
       .sidenav-link-label,
       .sidenav-submenu-toggle {
-        color: variables.$primary;
+        color: variables.$dark;
       }
 
       .sidenav-icon {
-        color: variables.$primary;
+        color: variables.$dark;
       }
 
       &::before {
@@ -158,15 +158,15 @@
     }
 
     &:hover {
-      background-color: rgba(var(--theme-primary-rgb), 0.1);
+      background-color: rgba(var(--theme-dark-rgb), 0.07);
 
       .sidenav-link-label,
       .sidenav-submenu-toggle {
-        color: variables.$primary;
+        color: variables.$dark;
       }
 
       .sidenav-icon {
-        color: variables.$primary;
+        color: variables.$dark;
       }
 
       &::before {
@@ -372,8 +372,8 @@
     &:hover {
       .sidenav-submenu .sidenav-link:hover {
         .sidenav-submenu-toggle {
-          color: variables.$primary !important;
-          fill: variables.$primary !important;
+          color: variables.$dark !important;
+          fill: variables.$dark !important;
         }
       }
     }
@@ -546,6 +546,14 @@
   }
 
   .sidenav-item.has-submenu.open > .sidenav-link > .sidenav-expand-icon {
+    display: none;
+  }
+}
+
+// In dual-menu mode, keep the first-level navigation labels clean when open.
+// The menu and its toggle behavior remain intact; only the collapse glyph is hidden.
+html[data-layout-style="dualmenu"] {
+  .sidenav-list > .sidenav-item.has-submenu.open > .sidenav-link > .sidenav-collapse-icon {
     display: none;
   }
 }

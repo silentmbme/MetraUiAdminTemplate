@@ -839,6 +839,10 @@
     margin-inline-start: auto;
     white-space: nowrap;
   }
+  .search-result-hint i {
+    margin-inline-start: 0.2rem;
+    vertical-align: -1px;
+  }
   .search-empty {
     text-align: center;
     padding: 2rem 1rem;
@@ -1429,11 +1433,11 @@
   }
 
   .topbar-right > li.dropdown:not(.topbar-country-selector):not(.topbar-cart):not(.topbar-notifications) {
-    order: 6;
+    order: 7;
   }
 
   .topbar-right > .topbar-element:last-child {
-    order: 7;
+    order: 6;
   }
 
   .topbar-profile-avatar {

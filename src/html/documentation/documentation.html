@@ -3,51 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>NexoraUI Documentation ? Setup & Customization</title>
+    <title>NexoraUI Documentation | Setup & Customization</title>
     <meta
       name="description"
       content="Customer guide to installing, customizing and deploying the NexoraUI Bootstrap template."
     />
-    <link rel="icon" href="../assets/images/brand-logos/favicon.ico?v=2" />
+    <link rel="icon" href="documentation-favicon.ico" />
     <link
       rel="stylesheet"
-      href="../assets/libs/bootstrap/css/bootstrap.min.css"
+      href="../../assets/libs/bootstrap/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="../assets/css/demo.css" />
-    <link rel="stylesheet" href="../assets/css/icons.css" />
-    <link rel="stylesheet" href="../assets/css/documentation.css" />
+    <link rel="stylesheet" href="../../assets/css/demo.css" />
+    <link rel="stylesheet" href="../../assets/css/icons.css" />
+    <link rel="stylesheet" href="documentation.css" />
   </head>
-  <body class="docs-standalone">
+
+  <body class="docs-standalone docs-has-support">
     <a class="docs-skip" href="#docs-content">Skip to documentation</a>
     <header class="docs-header">
-      <a
-        class="docs-brand"
-        href="#welcome"
-        aria-label="NexoraUI documentation home"
-        ><img
-          src="../assets/images/brand-logos/desktop-logo.png"
-          alt="NexoraUI"
-        /><span>Documentation</span></a
-      >
+      <div class="d-flex gap-3 align-items-center">
+        <a
+          class="docs-brand"
+          href="#welcome"
+          aria-label="NexoraUI documentation home"
+          ><img src="documentation-logo-light.png" alt="NexoraUI"
+        /></a>
+        <div>
+          <span class="badge bg-success-transparent fs-13">Version 1.0.0</span>
+        </div>
+      </div>
       <div class="d-flex align-items-center gap-2">
-        <a class="btn btn-light btn-sm" href="changelog.html">Changelog</a
-        ><span class="docs-version">HTML / Bootstrap 5</span
-        ><button
-          class="btn btn-light btn-sm"
+        <span class="docs-version">HTML / Bootstrap 5</span>
+        <button
+          class="btn btn-light btn-icon"
           id="docs-theme"
           type="button"
           aria-label="Switch to dark theme"
         >
           <i class="ri-moon-line" aria-hidden="true"></i></button
         ><a
-          class="btn btn-secondary btn-sm"
-          href="index.html"
+          class="btn btn-secondary"
+          href="../index.html"
           target="_blank"
           rel="noopener noreferrer"
-          >View demo
-          <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a
-        ><button
-          class="btn btn-light btn-sm docs-menu-toggle"
+          >View demo <i class="ri-arrow-right-up-line" aria-hidden="true"></i
+        ></a>
+        <a class="btn btn-success" href="#support">Support</a>
+        <a class="btn btn-dark" href="changelog.html">Changelog</a>
+        <button
+          class="btn btn-light docs-menu-toggle"
           type="button"
           data-bs-toggle="offcanvas"
           data-bs-target="#docs-navigation"
@@ -126,20 +130,44 @@
               ><a class="docs-nav-link" href="#help"
                 >Troubleshooting & handover</a
               >
+              <a class="docs-nav-link" href="#support">Contact support</a>
+              <a class="docs-nav-link" href="#project-faq">Project FAQs</a>
             </div>
           </nav>
           <p class="text-muted fs-12 mt-3" id="docs-status" role="status">
-            15 guide sections
+            17 guide sections
           </p>
           <div class="docs-nav-bottom">
             NexoraUI customer guide
             <p class="mb-0 text-muted">
-              Source files ? Components ? Deployment
+              Source files | Components | Deployment
             </p>
           </div>
         </div>
       </aside>
       <main class="docs-content" id="docs-content">
+        <div
+          class="alert docs-purchase-alert alert-dismissible fade show"
+          role="status"
+        >
+          <span class="docs-purchase-icon" aria-hidden="true"
+            ><i class="ri-heart-3-fill"></i
+          ></span>
+          <div class="docs-purchase-copy">
+            <strong>Thank you for purchasing NexoraUI - Admin Dashboard Template...!</strong>
+            <p class="mb-0">
+              We are glad you are here. Use the setup guide to get started, or
+              contact support if you need help.
+            </p>
+          </div>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="alert"
+            aria-label="Dismiss purchase thank-you message"
+          ></button>
+        </div>
+
         <div class="docs-hero">
           <div class="docs-kicker">THE CUSTOMER HANDBOOK</div>
           <h1>Make NexoraUI your own.</h1>
@@ -148,25 +176,25 @@
             steps, working examples, and practical guidance in one place.
           </p>
           <div class="d-flex gap-2 flex-wrap">
-            <a href="#installation" class="btn btn-secondary"
+            <a href="#installation" class="btn btn-primary"
               >Start installation
               <i class="ri-arrow-right-line" aria-hidden="true"></i></a
-            ><a href="#folders" class="btn btn-light">Explore the source</a>
+            ><a href="#folders" class="btn btn-dark">Explore the source</a>
           </div>
         </div>
         <div class="docs-quicklinks">
-          <a href="#theme"
-            ><i class="ri-palette-line" aria-hidden="true"></i
-            ><strong>Customize the theme</strong
-            ><span>Colors, typography & layouts</span></a
-          ><a href="#plugins"
-            ><i class="ri-plug-line" aria-hidden="true"></i
-            ><strong>Explore integrations</strong
-            ><span>Charts, forms, maps & tables</span></a
-          ><a href="#deployment"
-            ><i class="ri-rocket-line" aria-hidden="true"></i
-            ><strong>Prepare for delivery</strong
-            ><span>Deployment & final checks</span></a
+          <a href="#installation"
+            ><i class="ri-play-circle-line" aria-hidden="true"></i
+            ><strong>Run the template</strong
+            ><span>Install dependencies and open the local preview</span></a
+          ><a href="#folders"
+            ><i class="ri-folder-settings-line" aria-hidden="true"></i
+            ><strong>Find and customize a page</strong
+            ><span>Locate its HTML, styles, scripts, and shared layout</span></a
+          ><a href="#data"
+            ><i class="ri-database-2-line" aria-hidden="true"></i
+            ><strong>Connect your application</strong
+            ><span>Replace sample data before you launch</span></a
           >
         </div>
         <section
@@ -185,17 +213,19 @@
           </div>
           <div class="card-body">
             <p>
-              NexoraUI is a Bootstrap 5 HTML admin template with responsive
-              dashboards, application pages, reusable components, and JavaScript
-              plugin examples.
+              NexoraUI is a responsive Bootstrap 5 admin template with
+              ready-made dashboards and workflow pages for sales, ecommerce,
+              CRM, finance, logistics, HR, projects, support, and AI. It also
+              includes reusable UI examples, forms, authentication screens, and
+              plugin demos.
             </p>
             <div class="docs-note">
               <strong>Your starting point</strong>
               <p class="mb-0 mt-2">
                 The package includes editable HTML, SCSS, JavaScript, images,
-                and a development workflow. Sample data and interface actions
-                demonstrate the design. Connect your own authentication,
-                database, uploads, and APIs before using these features in
+                and a development workflow. Treat included records and demo
+                interactions as examples: connect your own authentication,
+                database, uploads, and APIs before using these screens in
                 production.
               </p>
             </div>
@@ -376,7 +406,19 @@
                   </tr>
                   <tr>
                     <td>data-menu-color</td>
-                    <td>Controls the sidebar appearance.</td>
+                    <td>Controls the sidenav appearance.</td>
+                  </tr>
+                  <tr>
+                    <td>data-header-color</td>
+                    <td>Controls the topbar appearance.</td>
+                  </tr>
+                  <tr>
+                    <td>data-header-position</td>
+                    <td>Controls the topbar scrollable or not.</td>
+                  </tr>
+                  <tr>
+                    <td>data-maneu-position</td>
+                    <td>Controls the sidenav scrollable or not.</td>
                   </tr>
                 </tbody>
               </table>
@@ -446,25 +488,25 @@
               existing Prism integration.
             </p>
             <div class="d-flex flex-wrap gap-2 mb-3">
-              <a class="btn btn-sm btn-light" href="cards.html"
+              <a class="btn btn-sm btn-light" href="../cards.html"
                 >Cards
                 <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a
-              ><a class="btn btn-sm btn-light" href="buttons.html"
+              ><a class="btn btn-sm btn-light" href="../buttons.html"
                 >Buttons
                 <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a
-              ><a class="btn btn-sm btn-light" href="form_inputs.html"
+              ><a class="btn btn-sm btn-light" href="../form_inputs.html"
                 >Forms
                 <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a
-              ><a class="btn btn-sm btn-light" href="utilities.html"
+              ><a class="btn btn-sm btn-light" href="../utilities.html"
                 >Utilities
                 <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a
-              ><a class="btn btn-sm btn-light" href="tables.html"
+              ><a class="btn btn-sm btn-light" href="../tables.html"
                 >Tables
                 <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a
-              ><a class="btn btn-sm btn-light" href="navs_tabs.html"
+              ><a class="btn btn-sm btn-light" href="../navs_tabs.html"
                 >Tabs
                 <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a
-              ><a class="btn btn-sm btn-light" href="offcanvas.html"
+              ><a class="btn btn-sm btn-light" href="../offcanvas.html"
                 >Offcanvas
                 <i class="ri-arrow-right-up-line" aria-hidden="true"></i
               ></a>
@@ -492,7 +534,7 @@
         >
           <div class="card-header">
             <div>
-              <div class="docs-kicker">SECTION 08</div>
+              <div class="docs-kicker">SECTION 07</div>
               <h2 class="card-title mb-1" id="new-page-title">
                 Create a new page
               </h2>
@@ -546,7 +588,7 @@
         >
           <div class="card-header">
             <div>
-              <div class="docs-kicker">SECTION 07</div>
+              <div class="docs-kicker">SECTION 08</div>
               <h2 class="card-title mb-1" id="plugins-title">
                 Plugins & examples
               </h2>
@@ -566,58 +608,60 @@
                   <tr>
                     <td>Charts</td>
                     <td>
-                      <a href="apex-line-charts.html">ApexCharts</a>,
-                      <a href="chartjs-charts.html">Chart.js</a>,
-                      <a href="echarts.html">ECharts</a>.
+                      <a href="../apex-line-charts.html">ApexCharts</a>,
+                      <a href="../chartjs-charts.html">Chart.js</a>,
+                      <a href="../echarts.html">ECharts</a>.
                     </td>
                   </tr>
                   <tr>
                     <td>Tables</td>
                     <td>
-                      <a href="grid-tables.html">Grid.js</a> and
-                      <a href="data-tables.html">DataTables with Bootstrap 5</a
+                      <a href="../grid-tables.html">Grid.js</a> and
+                      <a href="../data-tables.html"
+                        >DataTables with Bootstrap 5</a
                       >.
                     </td>
                   </tr>
                   <tr>
                     <td>Maps</td>
                     <td>
-                      <a href="vector-maps.html">jsVectorMap</a>,
-                      <a href="leaflet-maps.html">Leaflet</a>,
-                      <a href="google-maps.html">Google Maps / GMaps</a>.
+                      <a href="../vector-maps.html">jsVectorMap</a>,
+                      <a href="../leaflet-maps.html">Leaflet</a>,
+                      <a href="../google-maps.html">Google Maps / GMaps</a>.
                     </td>
                   </tr>
                   <tr>
                     <td>Calendar</td>
-                    <td><a href="full-calendar.html">FullCalendar</a>.</td>
+                    <td><a href="../full-calendar.html">FullCalendar</a>.</td>
                   </tr>
                   <tr>
                     <td>Advanced forms</td>
                     <td>
-                      <a href="form_advanced.html">Choices.js and Tagify</a>;
+                      <a href="../form_advanced.html">Choices.js and Tagify</a>;
                       Flatpickr and Pickr for date and color inputs.
                     </td>
                   </tr>
                   <tr>
                     <td>Uploads</td>
                     <td>
-                      <a href="form_file_uploads.html">FilePond and Dropzone</a
+                      <a href="../form_file_uploads.html"
+                        >FilePond and Dropzone</a
                       >.
                     </td>
                   </tr>
                   <tr>
                     <td>Editor & media</td>
                     <td>
-                      <a href="quill_editor.html">Quill</a>,
-                      <a href="swiperjs.html">Swiper</a>,
-                      <a href="media-player.html">Plyr</a>.
+                      <a href="../quill_editor.html">Quill</a>,
+                      <a href="../swiperjs.html">Swiper</a>,
+                      <a href="../media-player.html">Plyr</a>.
                     </td>
                   </tr>
                   <tr>
                     <td>Interaction</td>
                     <td>
-                      <a href="sweet_alerts.html">SweetAlert2</a>,
-                      <a href="tour.html">Shepherd.js</a>, SortableJS, and
+                      <a href="../sweet_alerts.html">SweetAlert2</a>,
+                      <a href="../tour.html">Shepherd.js</a>, SortableJS, and
                       Dragula.
                     </td>
                   </tr>
@@ -718,7 +762,7 @@
             <p>
               The build copies installed dependencies into dist/assets/libs and
               source assets into dist/assets. Use the plugin paths shown in an
-              existing page rather than guessing a package?s output location.
+              existing page rather than guessing a package's output location.
             </p>
             <ol>
               <li>Load the required plugin stylesheet in the page head.</li>
@@ -954,14 +998,262 @@
                 Provide setup notes for your application-specific changes.
               </li>
             </ul>
-            <a href="faq&#39;s.html" class="btn btn-sm btn-light"
-              >Read frequently asked questions
+            <a href="#project-faq" class="btn btn-sm btn-light"
+              >Read project FAQs
               <i class="ri-arrow-right-line" aria-hidden="true"></i
             ></a>
           </div>
         </section>
+        <section
+          class="card custom-card docs-section"
+          id="support"
+          aria-labelledby="support-title"
+        >
+          <div class="card-header">
+            <div>
+              <div class="docs-kicker">CUSTOMER SUPPORT</div>
+              <h2 class="card-title mb-1" id="support-title">
+                Contact the NexoraUI team
+              </h2>
+              <p class="text-muted mb-0">
+                Get help with the template and share enough detail for us to
+                understand your question.
+              </p>
+            </div>
+          </div>
+          <div class="card-body">
+            <div
+              class="docs-support-hero"
+              aria-label="Contact NexoraUI support by email"
+            >
+              <div class="docs-support-hero-copy">
+                <span class="docs-kicker">WE ARE HERE TO HELP</span>
+                <h3>Tell us what you need help with.</h3>
+                <p>
+                  Describe the page or feature, what you expected to happen, and
+                  what happened instead. Include a screenshot or browser console
+                  error when useful.
+                </p>
+              </div>
+              <div class="docs-support-contact">
+                <span class="docs-support-contact-icon"
+                  ><i class="ri-mail-send-line" aria-hidden="true"></i
+                ></span>
+                <span class="docs-kicker">SUPPORT EMAIL</span>
+                <strong>hello@nexoraui.com</strong>
+                <a
+                  class="btn btn-secondary"
+                  href="mailto:hello@nexoraui.com?subject=NexoraUI%20Template%20Support"
+                  >Email support
+                  <i class="ri-arrow-right-line ms-1" aria-hidden="true"></i
+                ></a>
+              </div>
+            </div>
+            <div class="row g-4 docs-support-grid">
+              <div class="col-lg-7">
+                <div class="card h-100" aria-labelledby="support-request-title">
+                  <div class="card-header">
+                    <div>
+                      <h3 class="card-title mb-1" id="support-request-title">
+                        What to include in your message
+                      </h3>
+                      <p class="text-muted mb-0">
+                        A few details make it easier to investigate
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <ol class="docs-steps">
+                      <li>
+                        <strong>Name the page or feature.</strong>
+                        <p>
+                          For example: Staff list, AI dashboard, theme switcher,
+                          or a specific component.
+                        </p>
+                      </li>
+                      <li>
+                        <strong>Describe the result.</strong>
+                        <p>
+                          Share what you expected, what happened, and the steps
+                          to reproduce it.
+                        </p>
+                      </li>
+                      <li>
+                        <strong>Include your environment.</strong>
+                        <p>
+                          Tell us your browser, device size, and whether you
+                          changed the source files.
+                        </p>
+                      </li>
+                      <li>
+                        <strong>Attach useful evidence.</strong>
+                        <p>
+                          Add a screenshot or exact console error when relevant.
+                          Remove passwords, private keys, and customer data
+                          first.
+                        </p>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-5">
+                <div class="card h-100" aria-labelledby="support-links-title">
+                  <div class="card-header">
+                    <div>
+                      <h3 class="card-title mb-1" id="support-links-title">
+                        Helpful links
+                      </h3>
+                      <p class="text-muted mb-0">
+                        Check these guides before you write
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-body d-grid gap-3">
+                    <a class="docs-support-link" href="#installation"
+                      ><i class="ri-book-open-line" aria-hidden="true"></i
+                      ><span
+                        ><strong>Setup and first run</strong
+                        ><small
+                          >Install dependencies and start the local
+                          preview.</small
+                        ></span
+                      ><i class="ri-arrow-right-line" aria-hidden="true"></i
+                    ></a>
+                    <a class="docs-support-link" href="#help"
+                      ><i class="ri-tools-line" aria-hidden="true"></i
+                      ><span
+                        ><strong>Troubleshooting</strong
+                        ><small
+                          >Check common build, theme, and plugin issues.</small
+                        ></span
+                      ><i class="ri-arrow-right-line" aria-hidden="true"></i
+                    ></a>
+                    <a class="docs-support-link" href="changelog.html"
+                      ><i class="ri-history-line" aria-hidden="true"></i
+                      ><span
+                        ><strong>Changelog</strong
+                        ><small
+                          >Review package updates and release notes.</small
+                        ></span
+                      ><i class="ri-arrow-right-line" aria-hidden="true"></i
+                    ></a>
+                    <a class="docs-support-link" href="#project-faq"
+                      ><i class="ri-question-line" aria-hidden="true"></i
+                      ><span
+                        ><strong>Frequently asked questions</strong
+                        ><small
+                          >Browse quick answers to common questions.</small
+                        ></span
+                      ><i class="ri-arrow-right-line" aria-hidden="true"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="docs-support-note">
+              <i class="ri-information-line" aria-hidden="true"></i>This link
+              opens your email application; it does not submit a web form or
+              send your message automatically.
+            </p>
+          </div>
+        </section>
+        <section
+          class="card custom-card docs-section"
+          id="project-faq"
+          aria-labelledby="project-faq-title"
+        >
+          <div class="card-header">
+            <div>
+              <div class="docs-kicker">PROJECT FAQ</div>
+              <h2 class="card-title mb-1" id="project-faq-title">
+                Questions about NexoraUI
+              </h2>
+              <p class="text-muted mb-0">
+                Quick answers about setup, customization, and the included demos
+              </p>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="docs-faq-list">
+              <details class="docs-faq-item">
+                <summary>What is included in this project?</summary>
+                <p>
+                  NexoraUI is a Bootstrap 5 front-end admin template. It
+                  includes ready-made dashboard and workflow pages, reusable
+                  components, SCSS styles, JavaScript interactions, and plugin
+                  examples.
+                </p>
+              </details>
+              <details class="docs-faq-item">
+                <summary>How do I run the project locally?</summary>
+                <p>
+                  Install the project dependencies with
+                  <code>npm install</code>, then start the development workflow
+                  with <code>npm run dev</code>. The workflow builds the preview
+                  into <code>dist/</code> and serves it locally.
+                </p>
+              </details>
+              <details class="docs-faq-item">
+                <summary>Where should I make changes?</summary>
+                <p>
+                  Edit source files under <code>src/</code>. Page markup lives
+                  in <code>src/html/</code>, shared page parts in
+                  <code>src/html/template-parts/</code>, styles in
+                  <code>src/assets/scss/</code> or <code>src/assets/css/</code>,
+                  and page behavior in <code>src/assets/js/</code>. The
+                  generated <code>dist/</code> folder is rebuilt by the
+                  workflow.
+                </p>
+              </details>
+              <details class="docs-faq-item">
+                <summary>
+                  Does the template include a backend or real customer data?
+                </summary>
+                <p>
+                  No. The included records and interactions demonstrate the
+                  front-end experience. Connect your own authentication, APIs,
+                  database, and server-side validation before using it as an
+                  application.
+                </p>
+              </details>
+              <details class="docs-faq-item">
+                <summary>How do I change the theme or layout?</summary>
+                <p>
+                  Use the appearance customizer to preview available options.
+                  Update source theme variables and page styles for your
+                  product, and verify the result in both light and dark modes.
+                  Saved browser preferences can affect the preview.
+                </p>
+              </details>
+              <details class="docs-faq-item">
+                <summary>Why is a chart, table, or plugin empty?</summary>
+                <p>
+                  Check the browser console, confirm the page loads the required
+                  plugin assets before its initialization script, and verify the
+                  expected element IDs and data format. Many pages use
+                  demonstration data that you must replace with your own.
+                </p>
+              </details>
+              <details class="docs-faq-item">
+                <summary>How do I request help?</summary>
+                <p>
+                  Use the <a href="#support">Contact support</a> section and
+                  include the page name, steps to reproduce the issue, browser
+                  and screen size, and a screenshot or console error when
+                  useful. Do not include passwords, private keys, or customer
+                  data.
+                </p>
+              </details>
+            </div>
+            <p class="text-muted fs-12 mt-3 mb-0">
+              Looking for answers about individual interface components?
+              <a href="../faq&#39;s.html">Browse the full FAQ page</a>.
+            </p>
+          </div>
+        </section>
         <footer class="docs-footer">
-          <span>NexoraUI ? Customer documentation</span
+          <span>NexoraUI | Customer documentation</span
           ><a href="#welcome"
             >Back to the beginning
             <i class="ri-arrow-up-line" aria-hidden="true"></i
@@ -969,7 +1261,7 @@
         </footer>
       </main>
     </div>
-    <script src="../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/documentation.js"></script>
+    <script src="../../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="documentation.js"></script>
   </body>
 </html>

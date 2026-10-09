@@ -148,18 +148,23 @@
     const average =
       customers.reduce((total, customer) => total + customer.spend, 0) /
       Math.max(customers.length, 1);
-    document.getElementById("customer-count").textContent = customers.length;
-    document.getElementById("active-customer-count").textContent = active;
-    document.getElementById("blocked-customer-count").textContent = blocked;
-    document.getElementById("customer-average-spend").textContent =
-      money(average);
-    document.getElementById("customer-directory-count").textContent =
-      customers.length;
+    const metricValues = {
+      "customer-count": customers.length,
+      "active-customer-count": active,
+      "blocked-customer-count": blocked,
+      "customer-average-spend": money(average),
+      "customer-directory-count": customers.length,
+    };
+    Object.entries(metricValues).forEach(([id, value]) => {
+      const element = document.getElementById(id);
+      if (element) element.textContent = value;
+    });
   }
 
   const grid = new gridjs.Grid({
     columns: [
       {
+        id: "select-customer",
         name: "",
         width: "42px",
         sort: false,
@@ -218,6 +223,7 @@
       { name: "Joined", width: "130px" },
       { name: "Location", width: "140px" },
       {
+        id: "customer-actions",
         name: "",
         width: "56px",
         sort: false,
@@ -288,8 +294,10 @@
   function renderCustomers() {
     const filteredCustomers = getFilteredCustomers();
     grid.updateConfig({ data: gridRows(filteredCustomers) }).forceRender();
-    document.getElementById("customer-visible-count").textContent =
-      `${filteredCustomers.length} ${filteredCustomers.length === 1 ? "customer" : "customers"} shown`;
+    const visibleCount = document.getElementById("customer-visible-count");
+    if (visibleCount) {
+      visibleCount.textContent = `${filteredCustomers.length} ${filteredCustomers.length === 1 ? "customer" : "customers"} shown`;
+    }
   }
 
   searchInput.addEventListener("input", renderCustomers);
